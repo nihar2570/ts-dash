@@ -9,8 +9,33 @@ import {
   Target,
   Flame,
   Search,
-  CheckCircle
+  CheckCircle,
+  TrendingUp,
+  Maximize2
 } from 'lucide-react';
+import { SwingStudioModal } from './SwingStudioModal';
+import type { MacroSwing, PartySwing } from './SwingStudioModal';
+
+export const READABLE_COMMUNITY_NAMES: Record<string, string> = {
+  sc_madiga: 'SC Madiga',
+  sc_mala: 'SC Mala',
+  st_lambada: 'ST Lambada',
+  st_koya_gond: 'ST Koya/Gond',
+  bc_mudiraj: 'BC Mudiraj',
+  bc_munnuru_kapu: 'BC Munnuru Kapu',
+  bc_padmashali: 'BC Padmashali',
+  bc_goud: 'BC Goud',
+  bc_yadav: 'BC Yadav',
+  bc_other: 'BC Other',
+  minority_muslim: 'Muslim Minorities',
+  oc_reddy: 'OC Reddy',
+  oc_velama: 'OC Velama',
+  oc_other: 'OC Other',
+  youth_18_25: 'Youth (18-25)',
+  age_26_40: 'Working Age (26-40)',
+  age_41_60: 'Middle Age (41-60)',
+  age_60_plus: 'Seniors (60+)',
+};
 
 interface SimulationsViewProps {
   data: SeeepcDataset;
@@ -25,7 +50,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
 }) => {
   // Demographic swing offsets relative to 2023 baseline
   // Key: community id, Value: swing to party (% shift, positive = INC gain, negative = BRS/BJP gain)
-  const [swings, setSwings] = useState<Record<string, { INC: number; BRS: number; BJP: number }>>({
+  const [swings, setSwings] = useState<Record<string, PartySwing>>({
     sc_madiga: { INC: 0, BRS: 0, BJP: 0 },
     sc_mala: { INC: 0, BRS: 0, BJP: 0 },
     st_lambada: { INC: 0, BRS: 0, BJP: 0 },
@@ -35,22 +60,38 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     bc_padmashali: { INC: 0, BRS: 0, BJP: 0 },
     bc_goud: { INC: 0, BRS: 0, BJP: 0 },
     bc_yadav: { INC: 0, BRS: 0, BJP: 0 },
+    bc_other: { INC: 0, BRS: 0, BJP: 0 },
     minority_muslim: { INC: 0, BRS: 0, BJP: 0 },
     oc_reddy: { INC: 0, BRS: 0, BJP: 0 },
     oc_velama: { INC: 0, BRS: 0, BJP: 0 },
+    oc_other: { INC: 0, BRS: 0, BJP: 0 },
     youth_18_25: { INC: 0, BRS: 0, BJP: 0 },
+    age_26_40: { INC: 0, BRS: 0, BJP: 0 },
+    age_41_60: { INC: 0, BRS: 0, BJP: 0 },
+    age_60_plus: { INC: 0, BRS: 0, BJP: 0 },
   });
 
+  const [macroSwing, setMacroSwing] = useState<MacroSwing>({ INC: 0, BRS: 0, BJP: 0 });
+  const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
   const [activePreset, setActivePreset] = useState<string>('baseline');
   const [selectedBubbleAc, setSelectedBubbleAc] = useState<number | null>(null);
   const [tierFilter, setTierFilter] = useState<'ALL' | 'TOSS_UP' | 'FLIPS'>('TOSS_UP');
   const [tossUpThreshold, setTossUpThreshold] = useState<number>(5000);
   const [searchFilter, setSearchFilter] = useState<string>('');
 
+  // Count actively customized communities
+  const activeCustomizedCount = useMemo(() => {
+    let count = 0;
+    Object.values(swings).forEach((s) => {
+      if (s.INC !== 0 || s.BRS !== 0 || s.BJP !== 0) count++;
+    });
+    return count;
+  }, [swings]);
+
   // Handle Preset Scenarios
   const applyPreset = (presetKey: string) => {
     setActivePreset(presetKey);
-    const reset = {
+    const reset: Record<string, PartySwing> = {
       sc_madiga: { INC: 0, BRS: 0, BJP: 0 },
       sc_mala: { INC: 0, BRS: 0, BJP: 0 },
       st_lambada: { INC: 0, BRS: 0, BJP: 0 },
@@ -60,47 +101,64 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       bc_padmashali: { INC: 0, BRS: 0, BJP: 0 },
       bc_goud: { INC: 0, BRS: 0, BJP: 0 },
       bc_yadav: { INC: 0, BRS: 0, BJP: 0 },
+      bc_other: { INC: 0, BRS: 0, BJP: 0 },
       minority_muslim: { INC: 0, BRS: 0, BJP: 0 },
       oc_reddy: { INC: 0, BRS: 0, BJP: 0 },
       oc_velama: { INC: 0, BRS: 0, BJP: 0 },
+      oc_other: { INC: 0, BRS: 0, BJP: 0 },
       youth_18_25: { INC: 0, BRS: 0, BJP: 0 },
+      age_26_40: { INC: 0, BRS: 0, BJP: 0 },
+      age_41_60: { INC: 0, BRS: 0, BJP: 0 },
+      age_60_plus: { INC: 0, BRS: 0, BJP: 0 },
     };
 
-    if (presetKey === 'mudiraj_brs') {
+    if (presetKey === 'bjp_trs_alliance') {
+      // BJP-TRS Pre-Poll Alliance + Anti-Incumbency Scenario:
+      // 1. BJP transfers 100% of its 13.9% baseline vote (-13.9% BJP)
+      //    - 60% of BJP vote (+8.3%) transfers to TRS (BRS)
+      //    - 40% of BJP vote (+5.6%) transfers to Congress (INC)
+      // 2. Anti-Incumbency Factor against ruling Congress government:
+      //    - Congress sheds -3.0% anti-incumbency vote to the united TRS-BJP opposition (+3.0% to TRS)
+      //    - Net Statewide Macro: INC +2.6%, BRS +11.3%, BJP -13.9%
+      // 3. Demographic Muslim Backlash against TRS for allying with BJP:
+      //    - TRS loses an extra -5.0% Muslim vote, which consolidates with Congress (+5.0% INC)
+      reset.minority_muslim = {
+        INC: 5,
+        BRS: -5,
+        BJP: 0,
+      };
+
+      // Statewide Macro Swing reflects the 60/40 transfer + 3% Anti-Incumbency
+      setMacroSwing({ INC: 2.6, BRS: 11.3, BJP: -13.9 });
+    } else if (presetKey === 'mudiraj_brs') {
       // BRS consolidates North Telangana Mudiraj & BCs
       reset.bc_mudiraj = { INC: -6, BRS: 7, BJP: -1 };
       reset.bc_munnuru_kapu = { INC: -4, BRS: 5, BJP: -1 };
       reset.bc_goud = { INC: -3, BRS: 4, BJP: -1 };
+      setMacroSwing({ INC: -1, BRS: 2, BJP: -1 });
     } else if (presetKey === 'madiga_bjp') {
       // BJP consolidates Madiga SCs via sub-categorization
       reset.sc_madiga = { INC: -7, BRS: -3, BJP: 10 };
       reset.bc_mudiraj = { INC: -3, BRS: -2, BJP: 5 };
+      setMacroSwing({ INC: -1, BRS: -2, BJP: 3 });
     } else if (presetKey === 'youth_inc') {
       // Youth 18-25 & employment swing to INC
       reset.youth_18_25 = { INC: 8, BRS: -5, BJP: -3 };
       reset.bc_mudiraj = { INC: 4, BRS: -3, BJP: -1 };
       reset.sc_mala = { INC: 5, BRS: -4, BJP: -1 };
+      setMacroSwing({ INC: 2.5, BRS: -1.5, BJP: -1 });
     } else if (presetKey === 'mahalakshmi_wave') {
       // Welfare momentum
       reset.bc_padmashali = { INC: 6, BRS: -5, BJP: -1 };
       reset.st_lambada = { INC: 5, BRS: -4, BJP: -1 };
       reset.sc_mala = { INC: 4, BRS: -3, BJP: -1 };
       reset.minority_muslim = { INC: 4, BRS: -4, BJP: 0 };
+      setMacroSwing({ INC: 3, BRS: -2.5, BJP: -0.5 });
+    } else if (presetKey === 'baseline') {
+      setMacroSwing({ INC: 0, BRS: 0, BJP: 0 });
     }
 
     setSwings(reset);
-  };
-
-  // Helper to adjust a single community swing
-  const updateSwing = (communityKey: string, party: 'INC' | 'BRS' | 'BJP', val: number) => {
-    setActivePreset('custom');
-    setSwings((prev) => ({
-      ...prev,
-      [communityKey]: {
-        ...prev[communityKey],
-        [party]: val,
-      },
-    }));
   };
 
   // Run Simulation across all 119 Constituencies
@@ -122,7 +180,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       const cp = ac.caste_profile;
       const ap = ac.age_profile;
 
-      // Calculate net vote shifts
+      // Calculate net vote shifts from Demographics
       Object.entries(swings).forEach(([commKey, swingObj]) => {
         let weightPct = 0;
         if (commKey in cp) {
@@ -142,6 +200,15 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
           bjpVotes += bjpShift;
         }
       });
+
+      // Apply Statewide Uniform Macro Swing
+      const macroIncShift = totalVotes * (macroSwing.INC / 100);
+      const macroBrsShift = totalVotes * (macroSwing.BRS / 100);
+      const macroBjpShift = totalVotes * (macroSwing.BJP / 100);
+
+      incVotes += macroIncShift;
+      brsVotes += macroBrsShift;
+      bjpVotes += macroBjpShift;
 
       // Ensure positive votes
       incVotes = Math.max(100, Math.round(incVotes));
@@ -179,24 +246,6 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         }
       });
 
-      // Format readable demographic name
-      const readableCasteName: Record<string, string> = {
-        sc_madiga: 'SC Madiga',
-        sc_mala: 'SC Mala',
-        st_lambada: 'ST Lambada',
-        st_koya_gond: 'ST Koya/Gond',
-        bc_mudiraj: 'BC Mudiraj',
-        bc_munnuru_kapu: 'BC Munnuru Kapu',
-        bc_padmashali: 'BC Padmashali',
-        bc_goud: 'BC Goud',
-        bc_yadav: 'BC Yadav',
-        bc_other: 'BC Other',
-        minority_muslim: 'Muslim Minorities',
-        oc_reddy: 'OC Reddy',
-        oc_velama: 'OC Velama',
-        oc_other: 'OC Other',
-      };
-
       const tier: 'TOSS_UP' | 'LEAN' | 'SOLID' =
         margin <= tossUpThreshold ? 'TOSS_UP' : margin < 12000 ? 'LEAN' : 'SOLID';
 
@@ -227,14 +276,14 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
           is_flipped: isFlipped,
           flipped_from: isFlipped ? actualWinner : undefined,
         },
-        key_demographic: readableCasteName[maxComm] || maxComm,
+        key_demographic: READABLE_COMMUNITY_NAMES[maxComm] || maxComm,
         key_demographic_pct: maxPct,
         battleground_tier: tier,
       });
     });
 
     return list;
-  }, [data, swings, tossUpThreshold]);
+  }, [data, swings, macroSwing, tossUpThreshold]);
 
   // Aggregate Path to 60 Majority Gauge
   const tally = useMemo(() => {
@@ -317,6 +366,16 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               }`}
             >
               2023 Baseline
+            </button>
+            <button
+              onClick={() => applyPreset('bjp_trs_alliance')}
+              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                activePreset === 'bjp_trs_alliance'
+                  ? 'bg-purple-600 text-white shadow-xs'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+              }`}
+            >
+              <span>🤝 BJP+TRS Alliance (60/40 + Anti-Inc)</span>
             </button>
             <button
               onClick={() => applyPreset('mudiraj_brs')}
@@ -463,244 +522,270 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       {/* Main Grid: Left Controls (Sliders), Right Bubble Chart */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Left Column: Polling & Demographics Sliders (4 cols) */}
-        <div className="lg:col-span-4 bg-white rounded-2xl p-5 shadow-sm border border-slate-200 space-y-5">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-            <div className="flex items-center gap-2">
-              <Sliders className="w-4 h-4 text-indigo-600" />
-              <h3 className="font-extrabold text-slate-900 text-sm">
-                Poll Swing Sliders by Caste &amp; Group
-              </h3>
+        <div className="lg:col-span-4 bg-white rounded-2xl p-5 shadow-sm border border-slate-200 space-y-4">
+          {/* Hero Launcher Button for Large Overlay Window */}
+          <button
+            onClick={() => setIsStudioOpen(true)}
+            className="w-full flex items-center justify-between p-3.5 bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-900 hover:from-indigo-900 hover:to-slate-800 text-white rounded-xl border border-indigo-500/40 shadow-md shadow-indigo-950/30 transition-all cursor-pointer group"
+          >
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 bg-indigo-500/30 text-indigo-300 rounded-lg group-hover:scale-110 transition-transform">
+                <Maximize2 className="w-4 h-4 text-indigo-300" />
+              </div>
+              <div className="text-left">
+                <div className="text-xs font-black flex items-center gap-1.5 text-white">
+                  <span>Demographic Swing Studio</span>
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                </div>
+                <p className="text-[10px] text-indigo-200">
+                  Open 18-Group Multi-Party Balancer (Pattern C)
+                </p>
+              </div>
             </div>
-            <span className="text-[10px] bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-mono">
-              Live Engine
+            <span className="text-[10px] font-mono font-bold bg-indigo-600 group-hover:bg-indigo-500 text-white px-2 py-1 rounded-lg">
+              {activeCustomizedCount > 0 ? `${activeCustomizedCount} Active` : 'Open Studio'}
             </span>
+          </button>
+
+          {/* Statewide Macro Swing Quick Card */}
+          <div className="bg-slate-50 rounded-xl p-3 border border-slate-200 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-1.5">
+                <TrendingUp className="w-3.5 h-3.5 text-indigo-600" />
+                <span className="text-xs font-bold text-slate-900">Statewide Macro Swing</span>
+              </div>
+              {(macroSwing.INC !== 0 || macroSwing.BRS !== 0 || macroSwing.BJP !== 0) && (
+                <button
+                  onClick={() => setMacroSwing({ INC: 0, BRS: 0, BJP: 0 })}
+                  className="text-[10px] text-slate-500 hover:text-slate-800 flex items-center gap-0.5 cursor-pointer font-semibold"
+                >
+                  <RotateCcw className="w-2.5 h-2.5" />
+                  <span>Reset</span>
+                </button>
+              )}
+            </div>
+
+            {/* Visual Pattern C Stacked Bar for Statewide projected shares */}
+            {(() => {
+              const incS = Math.max(0, Math.min(100, Math.round((39.4 + macroSwing.INC) * 10) / 10));
+              const brsS = Math.max(0, Math.min(100, Math.round((37.4 + macroSwing.BRS) * 10) / 10));
+              const bjpS = Math.max(0, Math.min(100, Math.round((13.9 + macroSwing.BJP) * 10) / 10));
+              const othS = 9.3;
+
+              return (
+                <div className="space-y-1.5">
+                  <div className="w-full h-6 rounded-lg overflow-hidden flex bg-slate-900 p-0.5 border border-slate-300 shadow-2xs">
+                    <div
+                      style={{ width: `${incS}%` }}
+                      className="bg-[#0284c7] h-full flex items-center justify-center text-[9px] font-black text-white px-1 overflow-hidden"
+                      title={`INC: ${incS}%`}
+                    >
+                      <span className="truncate">{incS}%</span>
+                    </div>
+                    <div
+                      style={{ width: `${brsS}%` }}
+                      className="bg-[#ec4899] h-full flex items-center justify-center text-[9px] font-black text-white px-1 overflow-hidden"
+                      title={`BRS: ${brsS}%`}
+                    >
+                      <span className="truncate">{brsS}%</span>
+                    </div>
+                    <div
+                      style={{ width: `${bjpS}%` }}
+                      className="bg-[#f97316] h-full flex items-center justify-center text-[9px] font-black text-white px-1 overflow-hidden"
+                      title={`BJP: ${bjpS}%`}
+                    >
+                      <span className="truncate">{bjpS}%</span>
+                    </div>
+                    <div
+                      style={{ width: `${othS}%` }}
+                      className="bg-slate-600 h-full flex items-center justify-center text-[8px] font-bold text-slate-200 px-1 overflow-hidden"
+                      title={`OTH: ${othS}%`}
+                    >
+                      <span className="truncate">OTH</span>
+                    </div>
+                  </div>
+
+                  {/* Micro Steppers for Macro */}
+                  <div className="grid grid-cols-3 gap-1.5 pt-0.5">
+                    {/* INC */}
+                    <div className="bg-white p-1.5 rounded-lg border border-sky-100 flex items-center justify-between shadow-2xs">
+                      <div>
+                        <div className="text-[10px] font-bold text-sky-700">INC</div>
+                        <div className="text-[10px] font-mono font-black text-slate-800">
+                          {macroSwing.INC >= 0 ? `+${macroSwing.INC}%` : `${macroSwing.INC}%`}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-0.5">
+                        <button
+                          onClick={() => setMacroSwing(prev => ({ ...prev, INC: Math.min(15, prev.INC + 1) }))}
+                          className="w-4 h-3.5 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                        >
+                          +
+                        </button>
+                        <button
+                          onClick={() => setMacroSwing(prev => ({ ...prev, INC: Math.max(-15, prev.INC - 1) }))}
+                          className="w-4 h-3.5 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                        >
+                          -
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* BRS */}
+                    <div className="bg-white p-1.5 rounded-lg border border-pink-100 flex items-center justify-between shadow-2xs">
+                      <div>
+                        <div className="text-[10px] font-bold text-pink-700">BRS</div>
+                        <div className="text-[10px] font-mono font-black text-slate-800">
+                          {macroSwing.BRS >= 0 ? `+${macroSwing.BRS}%` : `${macroSwing.BRS}%`}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-0.5">
+                        <button
+                          onClick={() => setMacroSwing(prev => ({ ...prev, BRS: Math.min(15, prev.BRS + 1) }))}
+                          className="w-4 h-3.5 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                        >
+                          +
+                        </button>
+                        <button
+                          onClick={() => setMacroSwing(prev => ({ ...prev, BRS: Math.max(-15, prev.BRS - 1) }))}
+                          className="w-4 h-3.5 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                        >
+                          -
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* BJP */}
+                    <div className="bg-white p-1.5 rounded-lg border border-amber-100 flex items-center justify-between shadow-2xs">
+                      <div>
+                        <div className="text-[10px] font-bold text-amber-700">BJP</div>
+                        <div className="text-[10px] font-mono font-black text-slate-800">
+                          {macroSwing.BJP >= 0 ? `+${macroSwing.BJP}%` : `${macroSwing.BJP}%`}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-0.5">
+                        <button
+                          onClick={() => setMacroSwing(prev => ({ ...prev, BJP: Math.min(15, prev.BJP + 1) }))}
+                          className="w-4 h-3.5 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                        >
+                          +
+                        </button>
+                        <button
+                          onClick={() => setMacroSwing(prev => ({ ...prev, BJP: Math.max(-15, prev.BJP - 1) }))}
+                          className="w-4 h-3.5 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                        >
+                          -
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
           </div>
 
-          <div className="space-y-4 text-xs">
-            {/* Backward Classes (BCs) */}
-            <div>
-              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2.5">
-                Backward Classes (BCs ~50% of TS)
+          {/* Demographic Castes & Blocs Status Card */}
+          <div className="bg-slate-50 rounded-xl p-3.5 border border-slate-200 space-y-3">
+            <div className="flex items-center justify-between border-b border-slate-200/80 pb-2">
+              <div className="flex items-center gap-1.5">
+                <Sliders className="w-3.5 h-3.5 text-indigo-600" />
+                <h4 className="font-extrabold text-slate-900 text-xs">
+                  Demographic Castes &amp; Blocs
+                </h4>
               </div>
-              <div className="space-y-3">
-                {/* Mudiraj */}
-                <div className="space-y-1">
-                  <div className="flex justify-between items-center text-slate-700">
-                    <span className="font-bold">Mudiraj (BC-D ~12%)</span>
-                    <span className={`font-mono font-bold text-[11px] ${swings.bc_mudiraj.INC > 0 ? 'text-sky-600' : swings.bc_mudiraj.BRS > 0 ? 'text-pink-600' : 'text-slate-500'}`}>
-                      {swings.bc_mudiraj.INC > 0 ? `+${swings.bc_mudiraj.INC}% INC` : swings.bc_mudiraj.BRS > 0 ? `+${swings.bc_mudiraj.BRS}% BRS` : 'Neutral'}
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="-12"
-                    max="12"
-                    step="1"
-                    value={swings.bc_mudiraj.INC - swings.bc_mudiraj.BRS}
-                    onChange={(e) => {
-                      const v = Number(e.target.value);
-                      if (v >= 0) {
-                        updateSwing('bc_mudiraj', 'INC', v);
-                        updateSwing('bc_mudiraj', 'BRS', 0);
-                      } else {
-                        updateSwing('bc_mudiraj', 'INC', 0);
-                        updateSwing('bc_mudiraj', 'BRS', Math.abs(v));
-                      }
-                    }}
-                    className="w-full accent-indigo-600 cursor-pointer"
-                  />
-                  <div className="flex justify-between text-[10px] text-slate-400">
-                    <span>← BRS Favored</span>
-                    <span>INC Favored →</span>
-                  </div>
-                </div>
-
-                {/* Munnuru Kapu */}
-                <div className="space-y-1">
-                  <div className="flex justify-between items-center text-slate-700">
-                    <span className="font-bold">Munnuru Kapu (BC-D ~10%)</span>
-                    <span className={`font-mono font-bold text-[11px] ${swings.bc_munnuru_kapu.INC > 0 ? 'text-sky-600' : swings.bc_munnuru_kapu.BRS > 0 ? 'text-pink-600' : 'text-slate-500'}`}>
-                      {swings.bc_munnuru_kapu.INC > 0 ? `+${swings.bc_munnuru_kapu.INC}% INC` : swings.bc_munnuru_kapu.BRS > 0 ? `+${swings.bc_munnuru_kapu.BRS}% BRS` : 'Neutral'}
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="-12"
-                    max="12"
-                    step="1"
-                    value={swings.bc_munnuru_kapu.INC - swings.bc_munnuru_kapu.BRS}
-                    onChange={(e) => {
-                      const v = Number(e.target.value);
-                      if (v >= 0) {
-                        updateSwing('bc_munnuru_kapu', 'INC', v);
-                        updateSwing('bc_munnuru_kapu', 'BRS', 0);
-                      } else {
-                        updateSwing('bc_munnuru_kapu', 'INC', 0);
-                        updateSwing('bc_munnuru_kapu', 'BRS', Math.abs(v));
-                      }
-                    }}
-                    className="w-full accent-indigo-600 cursor-pointer"
-                  />
-                </div>
-
-                {/* Padmashali */}
-                <div className="space-y-1">
-                  <div className="flex justify-between items-center text-slate-700">
-                    <span className="font-bold">Padmashali (Weavers ~6%)</span>
-                    <span className={`font-mono font-bold text-[11px] ${swings.bc_padmashali.INC > 0 ? 'text-sky-600' : swings.bc_padmashali.BRS > 0 ? 'text-pink-600' : 'text-slate-500'}`}>
-                      {swings.bc_padmashali.INC > 0 ? `+${swings.bc_padmashali.INC}% INC` : swings.bc_padmashali.BRS > 0 ? `+${swings.bc_padmashali.BRS}% BRS` : 'Neutral'}
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="-12"
-                    max="12"
-                    step="1"
-                    value={swings.bc_padmashali.INC - swings.bc_padmashali.BRS}
-                    onChange={(e) => {
-                      const v = Number(e.target.value);
-                      if (v >= 0) {
-                        updateSwing('bc_padmashali', 'INC', v);
-                        updateSwing('bc_padmashali', 'BRS', 0);
-                      } else {
-                        updateSwing('bc_padmashali', 'INC', 0);
-                        updateSwing('bc_padmashali', 'BRS', Math.abs(v));
-                      }
-                    }}
-                    className="w-full accent-indigo-600 cursor-pointer"
-                  />
-                </div>
-
-                {/* Goud */}
-                <div className="space-y-1">
-                  <div className="flex justify-between items-center text-slate-700">
-                    <span className="font-bold">Goud / Ediga (BC-B ~7%)</span>
-                    <span className={`font-mono font-bold text-[11px] ${swings.bc_goud.INC > 0 ? 'text-sky-600' : swings.bc_goud.BRS > 0 ? 'text-pink-600' : 'text-slate-500'}`}>
-                      {swings.bc_goud.INC > 0 ? `+${swings.bc_goud.INC}% INC` : swings.bc_goud.BRS > 0 ? `+${swings.bc_goud.BRS}% BRS` : 'Neutral'}
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="-12"
-                    max="12"
-                    step="1"
-                    value={swings.bc_goud.INC - swings.bc_goud.BRS}
-                    onChange={(e) => {
-                      const v = Number(e.target.value);
-                      if (v >= 0) {
-                        updateSwing('bc_goud', 'INC', v);
-                        updateSwing('bc_goud', 'BRS', 0);
-                      } else {
-                        updateSwing('bc_goud', 'INC', 0);
-                        updateSwing('bc_goud', 'BRS', Math.abs(v));
-                      }
-                    }}
-                    className="w-full accent-indigo-600 cursor-pointer"
-                  />
-                </div>
-              </div>
+              <button
+                onClick={() => setIsStudioOpen(true)}
+                className="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-0.5 cursor-pointer"
+              >
+                <span>Open Studio</span>
+                <ChevronRight className="w-3 h-3" />
+              </button>
             </div>
 
-            {/* Scheduled Castes & Tribes (SC/ST) */}
-            <div className="pt-2 border-t border-slate-100">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2.5">
-                SC &amp; ST Communities (~28% of TS)
-              </div>
-              <div className="space-y-3">
-                {/* Madiga SC */}
-                <div className="space-y-1">
-                  <div className="flex justify-between items-center text-slate-700">
-                    <span className="font-bold">SC Madiga (~11%)</span>
-                    <span className={`font-mono font-bold text-[11px] ${swings.sc_madiga.BJP > 0 ? 'text-amber-600' : swings.sc_madiga.INC > 0 ? 'text-sky-600' : 'text-slate-500'}`}>
-                      {swings.sc_madiga.BJP > 0 ? `+${swings.sc_madiga.BJP}% BJP` : swings.sc_madiga.INC > 0 ? `+${swings.sc_madiga.INC}% INC` : 'Neutral'}
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="-12"
-                    max="12"
-                    step="1"
-                    value={swings.sc_madiga.BJP - swings.sc_madiga.INC}
-                    onChange={(e) => {
-                      const v = Number(e.target.value);
-                      if (v >= 0) {
-                        updateSwing('sc_madiga', 'BJP', v);
-                        updateSwing('sc_madiga', 'INC', 0);
-                      } else {
-                        updateSwing('sc_madiga', 'BJP', 0);
-                        updateSwing('sc_madiga', 'INC', Math.abs(v));
-                      }
-                    }}
-                    className="w-full accent-amber-500 cursor-pointer"
-                  />
-                  <div className="flex justify-between text-[10px] text-slate-400">
-                    <span>← INC Favored</span>
-                    <span>BJP Favored →</span>
-                  </div>
-                </div>
-
-                {/* Lambada ST */}
-                <div className="space-y-1">
-                  <div className="flex justify-between items-center text-slate-700">
-                    <span className="font-bold">ST Lambada (~7%)</span>
-                    <span className={`font-mono font-bold text-[11px] ${swings.st_lambada.INC > 0 ? 'text-sky-600' : swings.st_lambada.BRS > 0 ? 'text-pink-600' : 'text-slate-500'}`}>
-                      {swings.st_lambada.INC > 0 ? `+${swings.st_lambada.INC}% INC` : swings.st_lambada.BRS > 0 ? `+${swings.st_lambada.BRS}% BRS` : 'Neutral'}
-                    </span>
-                  </div>
-                  <input
-                    type="range"
-                    min="-10"
-                    max="10"
-                    step="1"
-                    value={swings.st_lambada.INC - swings.st_lambada.BRS}
-                    onChange={(e) => {
-                      const v = Number(e.target.value);
-                      if (v >= 0) {
-                        updateSwing('st_lambada', 'INC', v);
-                        updateSwing('st_lambada', 'BRS', 0);
-                      } else {
-                        updateSwing('st_lambada', 'INC', 0);
-                        updateSwing('st_lambada', 'BRS', Math.abs(v));
-                      }
-                    }}
-                    className="w-full accent-indigo-600 cursor-pointer"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Youth & Age Cohort */}
-            <div className="pt-2 border-t border-slate-100">
-              <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2.5">
-                Demographic Cohorts
-              </div>
-              <div className="space-y-1">
-                <div className="flex justify-between items-center text-slate-700">
-                  <span className="font-bold">Youth 18-25 (~18% of TS)</span>
-                  <span className={`font-mono font-bold text-[11px] ${swings.youth_18_25.INC > 0 ? 'text-sky-600' : swings.youth_18_25.BRS > 0 ? 'text-pink-600' : 'text-slate-500'}`}>
-                    {swings.youth_18_25.INC > 0 ? `+${swings.youth_18_25.INC}% INC` : swings.youth_18_25.BRS > 0 ? `+${swings.youth_18_25.BRS}% BRS` : 'Neutral'}
+            {activeCustomizedCount === 0 ? (
+              <div className="space-y-2 text-xs text-slate-500">
+                <p className="leading-relaxed">
+                  All 18 demographic groups (Mudiraj, Madiga, Mala, Lambada, Munnuru Kapu, Youth, etc.) are tuned inside the <strong className="text-slate-700">Demographic Swing Studio</strong> overlay.
+                </p>
+                <div className="flex flex-wrap gap-1 text-[10px]">
+                  <span className="bg-white border border-slate-200 px-2 py-0.5 rounded-md font-mono text-slate-600 font-semibold">
+                    14 Castes
+                  </span>
+                  <span className="bg-white border border-slate-200 px-2 py-0.5 rounded-md font-mono text-slate-600 font-semibold">
+                    4 Age Cohorts
+                  </span>
+                  <span className="bg-white border border-slate-200 px-2 py-0.5 rounded-md font-mono text-slate-600 font-semibold">
+                    Pattern C Balancers
                   </span>
                 </div>
-                <input
-                  type="range"
-                  min="-15"
-                  max="15"
-                  step="1"
-                  value={swings.youth_18_25.INC - swings.youth_18_25.BRS}
-                  onChange={(e) => {
-                    const v = Number(e.target.value);
-                    if (v >= 0) {
-                      updateSwing('youth_18_25', 'INC', v);
-                      updateSwing('youth_18_25', 'BRS', 0);
-                    } else {
-                      updateSwing('youth_18_25', 'INC', 0);
-                      updateSwing('youth_18_25', 'BRS', Math.abs(v));
-                    }
-                  }}
-                  className="w-full accent-sky-500 cursor-pointer"
-                />
+                <button
+                  onClick={() => setIsStudioOpen(true)}
+                  className="w-full mt-1 py-2 px-3 bg-white hover:bg-slate-100 text-indigo-700 font-bold text-xs rounded-lg border border-indigo-200 flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
+                >
+                  <Maximize2 className="w-3.5 h-3.5" />
+                  <span>Configure Sliders in Overlay</span>
+                </button>
               </div>
-            </div>
+            ) : (
+              <div className="space-y-2.5">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-indigo-700 font-mono">
+                    {activeCustomizedCount} of 18 Groups Active
+                  </span>
+                  <button
+                    onClick={() => {
+                      const reset: Record<string, PartySwing> = {};
+                      Object.keys(swings).forEach(k => { reset[k] = { INC: 0, BRS: 0, BJP: 0 }; });
+                      setSwings(reset);
+                    }}
+                    className="text-[10px] text-slate-400 hover:text-rose-600 font-semibold flex items-center gap-0.5 cursor-pointer"
+                  >
+                    <RotateCcw className="w-2.5 h-2.5" />
+                    <span>Reset</span>
+                  </button>
+                </div>
+
+                <div className="max-h-56 overflow-y-auto space-y-1.5 pr-1 text-[11px]">
+                  {Object.entries(swings)
+                    .filter(([_, s]) => s.INC !== 0 || s.BRS !== 0 || s.BJP !== 0)
+                    .map(([k, s]) => {
+                      const readable = READABLE_COMMUNITY_NAMES[k] || k;
+                      return (
+                        <div key={k} className="bg-white p-2 rounded-lg border border-slate-200 flex items-center justify-between shadow-2xs">
+                          <span className="font-semibold text-slate-700 truncate max-w-[125px]" title={readable}>
+                            {readable}
+                          </span>
+                          <div className="flex items-center gap-1 text-[10px] font-mono font-bold">
+                            {s.INC !== 0 && (
+                              <span className={s.INC > 0 ? 'text-sky-600 font-black' : 'text-slate-400'}>
+                                {s.INC > 0 ? `+${s.INC}% INC` : `${s.INC}%`}
+                              </span>
+                            )}
+                            {s.BRS !== 0 && (
+                              <span className={s.BRS > 0 ? 'text-pink-600 font-black' : 'text-slate-400'}>
+                                {s.BRS > 0 ? `+${s.BRS}% BRS` : `${s.BRS}%`}
+                              </span>
+                            )}
+                            {s.BJP !== 0 && (
+                              <span className={s.BJP > 0 ? 'text-amber-600 font-black' : 'text-slate-400'}>
+                                {s.BJP > 0 ? `+${s.BJP}% BJP` : `${s.BJP}%`}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      );
+                    })}
+                </div>
+
+                <button
+                  onClick={() => setIsStudioOpen(true)}
+                  className="w-full py-2 px-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs rounded-lg border border-indigo-200 flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
+                >
+                  <Maximize2 className="w-3.5 h-3.5" />
+                  <span>Modify in Overlay Studio</span>
+                </button>
+              </div>
+            )}
           </div>
 
           {/* Action Callout */}
@@ -1051,6 +1136,20 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Demographic Swing Studio (Pattern C Large Overlay Window) */}
+      <SwingStudioModal
+        isOpen={isStudioOpen}
+        onClose={() => setIsStudioOpen(false)}
+        data={data}
+        swings={swings}
+        setSwings={setSwings}
+        macroSwing={macroSwing}
+        setMacroSwing={setMacroSwing}
+        tally={tally}
+        onApplyPreset={applyPreset}
+        activePreset={activePreset}
+      />
     </div>
   );
 };
