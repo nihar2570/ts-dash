@@ -1,0 +1,5886 @@
+{
+  "metadata": {
+    "source": "Government of Telangana - Directorate of Economics and Statistics (DES), SEEEPC Volume-IV",
+    "document": "SEEEPC Volume-04.pdf (Caste-wise Population Data Tables)",
+    "description": "Constituency & District demographic model combining official door-to-door SEEEPC survey tables with 2023 Election ballots",
+    "state_total_population": 35550759,
+    "state_total_households": 11239878
+  },
+  "state_demographics": {
+    "sc_pct": 17.42,
+    "st_pct": 10.43,
+    "bc_pct": 46.27,
+    "minority_pct": 11.84,
+    "oc_pct": 15.79
+  },
+  "districts": {
+    "Adilabad": {
+      "district": "Adilabad",
+      "sc_pct": 14.9,
+      "st_pct": 33.44,
+      "bc_pct": 32.99,
+      "minority_pct": 10.41,
+      "oc_pct": 8.26
+    },
+    "Bhadradri Kothagudem": {
+      "district": "Bhadradri Kothagudem",
+      "sc_pct": 14.75,
+      "st_pct": 40.35,
+      "bc_pct": 30.01,
+      "minority_pct": 4.96,
+      "oc_pct": 9.93
+    },
+    "Hyderabad": {
+      "district": "Hyderabad",
+      "sc_pct": 10.78,
+      "st_pct": 2.66,
+      "bc_pct": 29.82,
+      "minority_pct": 20.79,
+      "oc_pct": 35.95
+    },
+    "Hanumakonda": {
+      "district": "Hanumakonda",
+      "sc_pct": 22.98,
+      "st_pct": 3.65,
+      "bc_pct": 56.33,
+      "minority_pct": 5.85,
+      "oc_pct": 11.19
+    },
+    "Jagitial": {
+      "district": "Jagitial",
+      "sc_pct": 17.39,
+      "st_pct": 2.96,
+      "bc_pct": 63.09,
+      "minority_pct": 8.04,
+      "oc_pct": 8.52
+    },
+    "Jangaon": {
+      "district": "Jangaon",
+      "sc_pct": 21.96,
+      "st_pct": 12.44,
+      "bc_pct": 54.97,
+      "minority_pct": 3.16,
+      "oc_pct": 7.47
+    },
+    "Jayashankar Bhupalpally": {
+      "district": "Jayashankar Bhupalpally",
+      "sc_pct": 23.34,
+      "st_pct": 10.7,
+      "bc_pct": 55.4,
+      "minority_pct": 2.71,
+      "oc_pct": 7.85
+    },
+    "Jogulamba Gadwal": {
+      "district": "Jogulamba Gadwal",
+      "sc_pct": 22.67,
+      "st_pct": 1.82,
+      "bc_pct": 61.75,
+      "minority_pct": 7.5,
+      "oc_pct": 6.26
+    },
+    "Kamareddy": {
+      "district": "Kamareddy",
+      "sc_pct": 16.59,
+      "st_pct": 9.77,
+      "bc_pct": 55.36,
+      "minority_pct": 9.67,
+      "oc_pct": 8.61
+    },
+    "Karimnagar": {
+      "district": "Karimnagar",
+      "sc_pct": 20.65,
+      "st_pct": 1.31,
+      "bc_pct": 55.54,
+      "minority_pct": 8.16,
+      "oc_pct": 14.34
+    },
+    "Khammam": {
+      "district": "Khammam",
+      "sc_pct": 22.32,
+      "st_pct": 15.25,
+      "bc_pct": 39.86,
+      "minority_pct": 6.56,
+      "oc_pct": 16.01
+    },
+    "Kumuram Bheem Asifabad": {
+      "district": "Kumuram Bheem Asifabad",
+      "sc_pct": 15.46,
+      "st_pct": 30.08,
+      "bc_pct": 40.1,
+      "minority_pct": 6.27,
+      "oc_pct": 8.08
+    },
+    "Mahabubabad": {
+      "district": "Mahabubabad",
+      "sc_pct": 14.63,
+      "st_pct": 40.06,
+      "bc_pct": 36.51,
+      "minority_pct": 3.01,
+      "oc_pct": 5.8
+    },
+    "Mahabubnagar": {
+      "district": "Mahabubnagar",
+      "sc_pct": 15.45,
+      "st_pct": 12.99,
+      "bc_pct": 50.65,
+      "minority_pct": 11.82,
+      "oc_pct": 9.09
+    },
+    "Mancherial": {
+      "district": "Mancherial",
+      "sc_pct": 26.51,
+      "st_pct": 9.67,
+      "bc_pct": 52.52,
+      "minority_pct": 4.88,
+      "oc_pct": 6.42
+    },
+    "Medak": {
+      "district": "Medak",
+      "sc_pct": 17.6,
+      "st_pct": 11.32,
+      "bc_pct": 59.09,
+      "minority_pct": 5.76,
+      "oc_pct": 6.23
+    },
+    "Medchal Malkajgiri": {
+      "district": "Medchal Malkajgiri",
+      "sc_pct": 13.56,
+      "st_pct": 3.51,
+      "bc_pct": 46.6,
+      "minority_pct": 4.45,
+      "oc_pct": 31.88
+    },
+    "Mulugu": {
+      "district": "Mulugu",
+      "sc_pct": 16.91,
+      "st_pct": 32.9,
+      "bc_pct": 40.21,
+      "minority_pct": 2.94,
+      "oc_pct": 7.03
+    },
+    "Nagarkurnool": {
+      "district": "Nagarkurnool",
+      "sc_pct": 23.61,
+      "st_pct": 13.28,
+      "bc_pct": 48.87,
+      "minority_pct": 5.3,
+      "oc_pct": 8.93
+    },
+    "Nalgonda": {
+      "district": "Nalgonda",
+      "sc_pct": 19.62,
+      "st_pct": 14.31,
+      "bc_pct": 49.06,
+      "minority_pct": 5.5,
+      "oc_pct": 11.51
+    },
+    "Narayanpet": {
+      "district": "Narayanpet",
+      "sc_pct": 20.32,
+      "st_pct": 5.83,
+      "bc_pct": 59.28,
+      "minority_pct": 7.94,
+      "oc_pct": 6.63
+    },
+    "Nirmal": {
+      "district": "Nirmal",
+      "sc_pct": 15.7,
+      "st_pct": 13.58,
+      "bc_pct": 48.72,
+      "minority_pct": 12.08,
+      "oc_pct": 9.92
+    },
+    "Nizamabad": {
+      "district": "Nizamabad",
+      "sc_pct": 14.65,
+      "st_pct": 7.97,
+      "bc_pct": 46.91,
+      "minority_pct": 17.79,
+      "oc_pct": 12.68
+    },
+    "Peddapalli": {
+      "district": "Peddapalli",
+      "sc_pct": 21.41,
+      "st_pct": 2.32,
+      "bc_pct": 62.5,
+      "minority_pct": 5.71,
+      "oc_pct": 8.06
+    },
+    "Rajanna Sircilla": {
+      "district": "Rajanna Sircilla",
+      "sc_pct": 20.1,
+      "st_pct": 4.88,
+      "bc_pct": 61.09,
+      "minority_pct": 3.87,
+      "oc_pct": 10.06
+    },
+    "Rangareddy": {
+      "district": "Rangareddy",
+      "sc_pct": 17.65,
+      "st_pct": 8.23,
+      "bc_pct": 42.73,
+      "minority_pct": 9.13,
+      "oc_pct": 22.26
+    },
+    "Sangareddy": {
+      "district": "Sangareddy",
+      "sc_pct": 20.34,
+      "st_pct": 6.99,
+      "bc_pct": 46.26,
+      "minority_pct": 14.83,
+      "oc_pct": 11.58
+    },
+    "Siddipet": {
+      "district": "Siddipet",
+      "sc_pct": 19.47,
+      "st_pct": 3.05,
+      "bc_pct": 60.01,
+      "minority_pct": 5.5,
+      "oc_pct": 11.97
+    },
+    "Suryapet": {
+      "district": "Suryapet",
+      "sc_pct": 20.7,
+      "st_pct": 14.05,
+      "bc_pct": 46.82,
+      "minority_pct": 5.86,
+      "oc_pct": 12.57
+    },
+    "Vikarabad": {
+      "district": "Vikarabad",
+      "sc_pct": 21.17,
+      "st_pct": 12.77,
+      "bc_pct": 45.13,
+      "minority_pct": 12.31,
+      "oc_pct": 8.62
+    },
+    "Wanaparthy": {
+      "district": "Wanaparthy",
+      "sc_pct": 19.22,
+      "st_pct": 9.37,
+      "bc_pct": 57.54,
+      "minority_pct": 5.33,
+      "oc_pct": 8.54
+    },
+    "Warangal": {
+      "district": "Warangal",
+      "sc_pct": 16.86,
+      "st_pct": 13.71,
+      "bc_pct": 53.7,
+      "minority_pct": 7.97,
+      "oc_pct": 7.76
+    },
+    "Yadadri Bhuvanagiri": {
+      "district": "Yadadri Bhuvanagiri",
+      "sc_pct": 19.15,
+      "st_pct": 6.55,
+      "bc_pct": 59.82,
+      "minority_pct": 3.51,
+      "oc_pct": 10.97
+    }
+  },
+  "baseline_exit_poll": {
+    "sc_madiga": {
+      "INC": 44,
+      "BRS": 22,
+      "BJP": 31,
+      "AIMIM": 0,
+      "OTH": 3
+    },
+    "sc_mala": {
+      "INC": 62,
+      "BRS": 27,
+      "BJP": 8,
+      "AIMIM": 0,
+      "OTH": 3
+    },
+    "st_lambada": {
+      "INC": 48,
+      "BRS": 42,
+      "BJP": 8,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "st_koya_gond": {
+      "INC": 54,
+      "BRS": 33,
+      "BJP": 11,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "bc_mudiraj": {
+      "INC": 29,
+      "BRS": 43,
+      "BJP": 26,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "bc_munnuru_kapu": {
+      "INC": 37,
+      "BRS": 41,
+      "BJP": 20,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "bc_padmashali": {
+      "INC": 38,
+      "BRS": 47,
+      "BJP": 13,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "bc_goud": {
+      "INC": 42,
+      "BRS": 45,
+      "BJP": 11,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "bc_yadav": {
+      "INC": 37,
+      "BRS": 49,
+      "BJP": 12,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "bc_other": {
+      "INC": 38,
+      "BRS": 44,
+      "BJP": 16,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "minority_muslim": {
+      "INC": 65,
+      "BRS": 24,
+      "BJP": 2,
+      "AIMIM": 8,
+      "OTH": 1
+    },
+    "oc_reddy": {
+      "INC": 56,
+      "BRS": 33,
+      "BJP": 9,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "oc_velama": {
+      "INC": 28,
+      "BRS": 58,
+      "BJP": 12,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "oc_other": {
+      "INC": 42,
+      "BRS": 38,
+      "BJP": 18,
+      "AIMIM": 0,
+      "OTH": 2
+    },
+    "youth_18_25": {
+      "INC": 48,
+      "BRS": 25,
+      "BJP": 24,
+      "AIMIM": 2,
+      "OTH": 1
+    },
+    "age_26_40": {
+      "INC": 41,
+      "BRS": 39,
+      "BJP": 16,
+      "AIMIM": 2,
+      "OTH": 2
+    },
+    "age_41_60": {
+      "INC": 39,
+      "BRS": 44,
+      "BJP": 14,
+      "AIMIM": 1,
+      "OTH": 2
+    },
+    "age_60_plus": {
+      "INC": 37,
+      "BRS": 47,
+      "BJP": 13,
+      "AIMIM": 1,
+      "OTH": 2
+    }
+  },
+  "constituencies": {
+    "1": {
+      "ac_no": 1,
+      "ac_name": "Sirpur",
+      "district": "Kumuram Bheem Asifabad",
+      "pc_name": "ADILABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Dr.Palvai Harish Babu",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 63702,
+        "vote_share": 34.09
+      },
+      "runner_up_2023": {
+        "candidate": "Koneru Konappa",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 60614,
+        "vote_share": 32.43
+      },
+      "margin_2023": 3088,
+      "margin_pct_2023": 1.65,
+      "total_votes_2023": 124316,
+      "caste_profile": {
+        "sc_madiga": 10.05,
+        "sc_mala": 5.41,
+        "st_lambada": 20.45,
+        "st_koya_gond": 9.63,
+        "bc_mudiraj": 10.03,
+        "bc_munnuru_kapu": 8.82,
+        "bc_padmashali": 6.01,
+        "bc_goud": 6.42,
+        "bc_yadav": 5.61,
+        "bc_other": 3.21,
+        "minority_muslim": 6.27,
+        "oc_reddy": 3.56,
+        "oc_velama": 1.78,
+        "oc_other": 2.75
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "2": {
+      "ac_no": 2,
+      "ac_name": "Chennur (SC)",
+      "district": "Mancherial",
+      "pc_name": "PEDDAPALLE (SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Gaddam Vivekanand",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 87541,
+        "vote_share": 57.51
+      },
+      "runner_up_2023": {
+        "candidate": "Balka Suman",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 50026,
+        "vote_share": 32.86
+      },
+      "margin_2023": 37515,
+      "margin_pct_2023": 24.64,
+      "total_votes_2023": 137567,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.28,
+        "st_lambada": 6.58,
+        "st_koya_gond": 3.09,
+        "bc_mudiraj": 13.13,
+        "bc_munnuru_kapu": 11.55,
+        "bc_padmashali": 7.88,
+        "bc_goud": 8.4,
+        "bc_yadav": 7.35,
+        "bc_other": 4.2,
+        "minority_muslim": 4.88,
+        "oc_reddy": 2.82,
+        "oc_velama": 1.41,
+        "oc_other": 2.18
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "3": {
+      "ac_no": 3,
+      "ac_name": "Bellampalle (SC)",
+      "district": "Mancherial",
+      "pc_name": "PEDDAPALLE (SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Gaddam Vinod",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 82217,
+        "vote_share": 57.96
+      },
+      "runner_up_2023": {
+        "candidate": "Durgam Chinnaiah",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 45339,
+        "vote_share": 31.96
+      },
+      "margin_2023": 36878,
+      "margin_pct_2023": 26,
+      "total_votes_2023": 127556,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.28,
+        "st_lambada": 6.58,
+        "st_koya_gond": 3.09,
+        "bc_mudiraj": 13.13,
+        "bc_munnuru_kapu": 11.55,
+        "bc_padmashali": 7.88,
+        "bc_goud": 8.4,
+        "bc_yadav": 7.35,
+        "bc_other": 4.2,
+        "minority_muslim": 4.88,
+        "oc_reddy": 2.82,
+        "oc_velama": 1.41,
+        "oc_other": 2.18
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "4": {
+      "ac_no": 4,
+      "ac_name": "Mancherial",
+      "district": "Mancherial",
+      "pc_name": "PEDDAPALLE (SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Kokkirala Premsagar Rao",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 105945,
+        "vote_share": 55.03
+      },
+      "runner_up_2023": {
+        "candidate": "Raghunath Verabelli",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 39829,
+        "vote_share": 20.69
+      },
+      "margin_2023": 66116,
+      "margin_pct_2023": 34.34,
+      "total_votes_2023": 145774,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.28,
+        "st_lambada": 6.58,
+        "st_koya_gond": 3.09,
+        "bc_mudiraj": 13.13,
+        "bc_munnuru_kapu": 11.55,
+        "bc_padmashali": 7.88,
+        "bc_goud": 8.4,
+        "bc_yadav": 7.35,
+        "bc_other": 4.2,
+        "minority_muslim": 4.88,
+        "oc_reddy": 2.82,
+        "oc_velama": 1.41,
+        "oc_other": 2.18
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "5": {
+      "ac_no": 5,
+      "ac_name": "Asifabad (ST)",
+      "district": "Kumuram Bheem Asifabad",
+      "pc_name": "ADILABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kova Laxmi",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 83036,
+        "vote_share": 44.97
+      },
+      "runner_up_2023": {
+        "candidate": "Ajmera Shyam",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 60238,
+        "vote_share": 32.62
+      },
+      "margin_2023": 22798,
+      "margin_pct_2023": 12.35,
+      "total_votes_2023": 143274,
+      "caste_profile": {
+        "sc_madiga": 10.05,
+        "sc_mala": 5.41,
+        "st_lambada": 20.45,
+        "st_koya_gond": 9.63,
+        "bc_mudiraj": 10.03,
+        "bc_munnuru_kapu": 8.82,
+        "bc_padmashali": 6.01,
+        "bc_goud": 6.42,
+        "bc_yadav": 5.61,
+        "bc_other": 3.21,
+        "minority_muslim": 6.27,
+        "oc_reddy": 3.56,
+        "oc_velama": 1.78,
+        "oc_other": 2.75
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "6": {
+      "ac_no": 6,
+      "ac_name": "Khanapur (ST)",
+      "district": "Nirmal",
+      "pc_name": "ADILABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Vedma Bhojju",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 58870,
+        "vote_share": 33.79
+      },
+      "runner_up_2023": {
+        "candidate": "Johnson Naik Bhukya",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 54168,
+        "vote_share": 31.09
+      },
+      "margin_2023": 4702,
+      "margin_pct_2023": 2.7,
+      "total_votes_2023": 113038,
+      "caste_profile": {
+        "sc_madiga": 10.21,
+        "sc_mala": 5.49,
+        "st_lambada": 9.23,
+        "st_koya_gond": 4.35,
+        "bc_mudiraj": 12.18,
+        "bc_munnuru_kapu": 10.72,
+        "bc_padmashali": 7.31,
+        "bc_goud": 7.8,
+        "bc_yadav": 6.82,
+        "bc_other": 3.9,
+        "minority_muslim": 12.08,
+        "oc_reddy": 4.36,
+        "oc_velama": 2.18,
+        "oc_other": 3.37
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "7": {
+      "ac_no": 7,
+      "ac_name": "Adilabad",
+      "district": "Adilabad",
+      "pc_name": "ADILABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Payal Shanker",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 67608,
+        "vote_share": 35.84
+      },
+      "runner_up_2023": {
+        "candidate": "Jogu Ramanna",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 60916,
+        "vote_share": 32.29
+      },
+      "margin_2023": 6692,
+      "margin_pct_2023": 3.55,
+      "total_votes_2023": 128524,
+      "caste_profile": {
+        "sc_madiga": 9.69,
+        "sc_mala": 5.21,
+        "st_lambada": 22.74,
+        "st_koya_gond": 10.7,
+        "bc_mudiraj": 8.25,
+        "bc_munnuru_kapu": 7.26,
+        "bc_padmashali": 4.95,
+        "bc_goud": 5.28,
+        "bc_yadav": 4.62,
+        "bc_other": 2.64,
+        "minority_muslim": 10.41,
+        "oc_reddy": 3.63,
+        "oc_velama": 1.82,
+        "oc_other": 2.81
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "8": {
+      "ac_no": 8,
+      "ac_name": "Boath (ST)",
+      "district": "Adilabad",
+      "pc_name": "ADILABAD(ST)",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Anil Jadhav",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 76792,
+        "vote_share": 44.13
+      },
+      "runner_up_2023": {
+        "candidate": "Soyam Bapurao",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 53992,
+        "vote_share": 31.03
+      },
+      "margin_2023": 22800,
+      "margin_pct_2023": 13.1,
+      "total_votes_2023": 130784,
+      "caste_profile": {
+        "sc_madiga": 9.02,
+        "sc_mala": 4.86,
+        "st_lambada": 25.84,
+        "st_koya_gond": 12.16,
+        "bc_mudiraj": 7.68,
+        "bc_munnuru_kapu": 6.76,
+        "bc_padmashali": 4.61,
+        "bc_goud": 4.92,
+        "bc_yadav": 4.3,
+        "bc_other": 2.46,
+        "minority_muslim": 9.7,
+        "oc_reddy": 3.39,
+        "oc_velama": 1.69,
+        "oc_other": 2.62
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "9": {
+      "ac_no": 9,
+      "ac_name": "Nirmal",
+      "district": "Nirmal",
+      "pc_name": "ADILABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Alleti Maheshwar Reddy",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 106400,
+        "vote_share": 54.03
+      },
+      "runner_up_2023": {
+        "candidate": "Allola Indrakaran Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 55697,
+        "vote_share": 28.28
+      },
+      "margin_2023": 50703,
+      "margin_pct_2023": 25.75,
+      "total_votes_2023": 162097,
+      "caste_profile": {
+        "sc_madiga": 10.21,
+        "sc_mala": 5.49,
+        "st_lambada": 9.23,
+        "st_koya_gond": 4.35,
+        "bc_mudiraj": 12.18,
+        "bc_munnuru_kapu": 10.72,
+        "bc_padmashali": 7.31,
+        "bc_goud": 7.8,
+        "bc_yadav": 6.82,
+        "bc_other": 3.9,
+        "minority_muslim": 12.08,
+        "oc_reddy": 4.36,
+        "oc_velama": 2.18,
+        "oc_other": 3.37
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "10": {
+      "ac_no": 10,
+      "ac_name": "Mudhole",
+      "district": "Nirmal",
+      "pc_name": "ADILABAD(ST)",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Ram Rao Pawar",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 98252,
+        "vote_share": 48.59
+      },
+      "runner_up_2023": {
+        "candidate": "Gaddigari Vittal Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 74253,
+        "vote_share": 36.72
+      },
+      "margin_2023": 23999,
+      "margin_pct_2023": 11.87,
+      "total_votes_2023": 172505,
+      "caste_profile": {
+        "sc_madiga": 7.32,
+        "sc_mala": 3.94,
+        "st_lambada": 25.84,
+        "st_koya_gond": 12.16,
+        "bc_mudiraj": 8.74,
+        "bc_munnuru_kapu": 7.69,
+        "bc_padmashali": 5.24,
+        "bc_goud": 5.59,
+        "bc_yadav": 4.89,
+        "bc_other": 2.8,
+        "minority_muslim": 8.67,
+        "oc_reddy": 3.13,
+        "oc_velama": 1.57,
+        "oc_other": 2.42
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "11": {
+      "ac_no": 11,
+      "ac_name": "Armur",
+      "district": "Nizamabad",
+      "pc_name": "NIZAMABAD",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Paidi Rakesh Reddy",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 72658,
+        "vote_share": 44.9
+      },
+      "runner_up_2023": {
+        "candidate": "Prodduturi Vinay Kumar Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 42989,
+        "vote_share": 26.56
+      },
+      "margin_2023": 29669,
+      "margin_pct_2023": 18.33,
+      "total_votes_2023": 115647,
+      "caste_profile": {
+        "sc_madiga": 6.42,
+        "sc_mala": 3.45,
+        "st_lambada": 25.84,
+        "st_koya_gond": 12.16,
+        "bc_mudiraj": 7.9,
+        "bc_munnuru_kapu": 6.95,
+        "bc_padmashali": 4.74,
+        "bc_goud": 5.06,
+        "bc_yadav": 4.42,
+        "bc_other": 2.53,
+        "minority_muslim": 11.99,
+        "oc_reddy": 3.76,
+        "oc_velama": 1.88,
+        "oc_other": 2.9
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "12": {
+      "ac_no": 12,
+      "ac_name": "Bodhan",
+      "district": "Nizamabad",
+      "pc_name": "NIZAMABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "P. Sudarshan Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 66963,
+        "vote_share": 38.95
+      },
+      "runner_up_2023": {
+        "candidate": "Mohammed Shakil Aamir",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 63901,
+        "vote_share": 37.17
+      },
+      "margin_2023": 3062,
+      "margin_pct_2023": 1.78,
+      "total_votes_2023": 130864,
+      "caste_profile": {
+        "sc_madiga": 9.52,
+        "sc_mala": 5.13,
+        "st_lambada": 5.42,
+        "st_koya_gond": 2.55,
+        "bc_mudiraj": 11.73,
+        "bc_munnuru_kapu": 10.32,
+        "bc_padmashali": 7.04,
+        "bc_goud": 7.51,
+        "bc_yadav": 6.57,
+        "bc_other": 3.75,
+        "minority_muslim": 17.79,
+        "oc_reddy": 5.58,
+        "oc_velama": 2.79,
+        "oc_other": 4.31
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "13": {
+      "ac_no": 13,
+      "ac_name": "Jukkal (SC)",
+      "district": "Kamareddy",
+      "pc_name": "ZAHIRABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Laxmi Kantha Rao Thota",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 64489,
+        "vote_share": 39.19
+      },
+      "runner_up_2023": {
+        "candidate": "Hanmant Shinde",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 63337,
+        "vote_share": 38.49
+      },
+      "margin_2023": 1152,
+      "margin_pct_2023": 0.7,
+      "total_votes_2023": 127826,
+      "caste_profile": {
+        "sc_madiga": 10.78,
+        "sc_mala": 5.81,
+        "st_lambada": 6.64,
+        "st_koya_gond": 3.13,
+        "bc_mudiraj": 13.84,
+        "bc_munnuru_kapu": 12.18,
+        "bc_padmashali": 8.3,
+        "bc_goud": 8.86,
+        "bc_yadav": 7.75,
+        "bc_other": 4.43,
+        "minority_muslim": 9.67,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.89,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "14": {
+      "ac_no": 14,
+      "ac_name": "Banswada",
+      "district": "Kamareddy",
+      "pc_name": "ZAHIRABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Srinivas Reddy Parige (Pocharam)",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 76278,
+        "vote_share": 47.65
+      },
+      "runner_up_2023": {
+        "candidate": "Eanugu Ravinder Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 52814,
+        "vote_share": 32.99
+      },
+      "margin_2023": 23464,
+      "margin_pct_2023": 14.66,
+      "total_votes_2023": 129092,
+      "caste_profile": {
+        "sc_madiga": 10.78,
+        "sc_mala": 5.81,
+        "st_lambada": 6.64,
+        "st_koya_gond": 3.13,
+        "bc_mudiraj": 13.84,
+        "bc_munnuru_kapu": 12.18,
+        "bc_padmashali": 8.3,
+        "bc_goud": 8.86,
+        "bc_yadav": 7.75,
+        "bc_other": 4.43,
+        "minority_muslim": 9.67,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.89,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "15": {
+      "ac_no": 15,
+      "ac_name": "Yellareddy",
+      "district": "Kamareddy",
+      "pc_name": "ZAHIRABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Madan Mohan Rao. K",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 86989,
+        "vote_share": 47.07
+      },
+      "runner_up_2023": {
+        "candidate": "Surendar Jajala",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 62988,
+        "vote_share": 34.08
+      },
+      "margin_2023": 24001,
+      "margin_pct_2023": 12.99,
+      "total_votes_2023": 149977,
+      "caste_profile": {
+        "sc_madiga": 10.78,
+        "sc_mala": 5.81,
+        "st_lambada": 6.64,
+        "st_koya_gond": 3.13,
+        "bc_mudiraj": 13.84,
+        "bc_munnuru_kapu": 12.18,
+        "bc_padmashali": 8.3,
+        "bc_goud": 8.86,
+        "bc_yadav": 7.75,
+        "bc_other": 4.43,
+        "minority_muslim": 9.67,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.89,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "16": {
+      "ac_no": 16,
+      "ac_name": "Kamareddy",
+      "district": "Kamareddy",
+      "pc_name": "ZAHIRABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Katipally Venkata Ramana Reddy",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 66652,
+        "vote_share": 34.55
+      },
+      "runner_up_2023": {
+        "candidate": "Kalvakuntla Chandrashekar Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 59911,
+        "vote_share": 31.06
+      },
+      "margin_2023": 6741,
+      "margin_pct_2023": 3.49,
+      "total_votes_2023": 126563,
+      "caste_profile": {
+        "sc_madiga": 10.78,
+        "sc_mala": 5.81,
+        "st_lambada": 6.64,
+        "st_koya_gond": 3.13,
+        "bc_mudiraj": 13.84,
+        "bc_munnuru_kapu": 12.18,
+        "bc_padmashali": 8.3,
+        "bc_goud": 8.86,
+        "bc_yadav": 7.75,
+        "bc_other": 4.43,
+        "minority_muslim": 9.67,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.89,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "17": {
+      "ac_no": 17,
+      "ac_name": "Nizamabad (Urban)",
+      "district": "Nizamabad",
+      "pc_name": "NIZAMABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Dhanpal Suryanarayana",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 75240,
+        "vote_share": 40.82
+      },
+      "runner_up_2023": {
+        "candidate": "Mohammed Ali Shabbir",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 59853,
+        "vote_share": 32.47
+      },
+      "margin_2023": 15387,
+      "margin_pct_2023": 8.35,
+      "total_votes_2023": 135093,
+      "caste_profile": {
+        "sc_madiga": 9.52,
+        "sc_mala": 5.13,
+        "st_lambada": 5.42,
+        "st_koya_gond": 2.55,
+        "bc_mudiraj": 11.73,
+        "bc_munnuru_kapu": 10.32,
+        "bc_padmashali": 7.04,
+        "bc_goud": 7.51,
+        "bc_yadav": 6.57,
+        "bc_other": 3.75,
+        "minority_muslim": 17.79,
+        "oc_reddy": 5.58,
+        "oc_velama": 2.79,
+        "oc_other": 4.31
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "18": {
+      "ac_no": 18,
+      "ac_name": "Nizamabad (Rural)",
+      "district": "Nizamabad",
+      "pc_name": "NIZAMABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Bhoopathi Reddy Rekulapally",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 78378,
+        "vote_share": 40.19
+      },
+      "runner_up_2023": {
+        "candidate": "Goverdhan Bajireddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 56415,
+        "vote_share": 28.93
+      },
+      "margin_2023": 21963,
+      "margin_pct_2023": 11.26,
+      "total_votes_2023": 134793,
+      "caste_profile": {
+        "sc_madiga": 9.52,
+        "sc_mala": 5.13,
+        "st_lambada": 5.42,
+        "st_koya_gond": 2.55,
+        "bc_mudiraj": 11.73,
+        "bc_munnuru_kapu": 10.32,
+        "bc_padmashali": 7.04,
+        "bc_goud": 7.51,
+        "bc_yadav": 6.57,
+        "bc_other": 3.75,
+        "minority_muslim": 17.79,
+        "oc_reddy": 5.58,
+        "oc_velama": 2.79,
+        "oc_other": 4.31
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "19": {
+      "ac_no": 19,
+      "ac_name": "Balkonda",
+      "district": "Nizamabad",
+      "pc_name": "NIZAMABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Prashanth Reddy Vemula",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 70417,
+        "vote_share": 40.28
+      },
+      "runner_up_2023": {
+        "candidate": "Sunil Kumar Muthyala",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 65884,
+        "vote_share": 37.68
+      },
+      "margin_2023": 4533,
+      "margin_pct_2023": 2.59,
+      "total_votes_2023": 136301,
+      "caste_profile": {
+        "sc_madiga": 9.52,
+        "sc_mala": 5.13,
+        "st_lambada": 5.42,
+        "st_koya_gond": 2.55,
+        "bc_mudiraj": 11.73,
+        "bc_munnuru_kapu": 10.32,
+        "bc_padmashali": 7.04,
+        "bc_goud": 7.51,
+        "bc_yadav": 6.57,
+        "bc_other": 3.75,
+        "minority_muslim": 17.79,
+        "oc_reddy": 5.58,
+        "oc_velama": 2.79,
+        "oc_other": 4.31
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "20": {
+      "ac_no": 20,
+      "ac_name": "Koratla",
+      "district": "Hyderabad",
+      "pc_name": "NIZAMABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kalvakuntla Sanjay",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 72115,
+        "vote_share": 39.28
+      },
+      "runner_up_2023": {
+        "candidate": "Arvind Dharmapuri",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 61810,
+        "vote_share": 33.67
+      },
+      "margin_2023": 10305,
+      "margin_pct_2023": 5.61,
+      "total_votes_2023": 133925,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "21": {
+      "ac_no": 21,
+      "ac_name": "Jagtial",
+      "district": "Hyderabad",
+      "pc_name": "NIZAMABAD",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Dr. Sanjay",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 70243,
+        "vote_share": 39.83
+      },
+      "runner_up_2023": {
+        "candidate": "Jeevan Reddy. T",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 54421,
+        "vote_share": 30.86
+      },
+      "margin_2023": 15822,
+      "margin_pct_2023": 8.97,
+      "total_votes_2023": 124664,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 1.49,
+        "st_koya_gond": 0.7,
+        "bc_mudiraj": 6.14,
+        "bc_munnuru_kapu": 5.4,
+        "bc_padmashali": 3.68,
+        "bc_goud": 3.93,
+        "bc_yadav": 3.44,
+        "bc_other": 1.97,
+        "minority_muslim": 17.13,
+        "oc_reddy": 13.03,
+        "oc_velama": 6.52,
+        "oc_other": 10.07
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "22": {
+      "ac_no": 22,
+      "ac_name": "Dharmapuri (SC)",
+      "district": "Hyderabad",
+      "pc_name": "PEDDAPALLE (SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Adluri Laxman Kumar",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 91393,
+        "vote_share": 50.3
+      },
+      "runner_up_2023": {
+        "candidate": "Koppula Eshwar",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 69354,
+        "vote_share": 38.17
+      },
+      "margin_2023": 22039,
+      "margin_pct_2023": 12.13,
+      "total_votes_2023": 160747,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "23": {
+      "ac_no": 23,
+      "ac_name": "Ramagundam",
+      "district": "Peddapalli",
+      "pc_name": "PEDDAPALLE (SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Makkan Singh Raj Thakur",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 92227,
+        "vote_share": 60.28
+      },
+      "runner_up_2023": {
+        "candidate": "Korukanti Chander Patel",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 35433,
+        "vote_share": 23.16
+      },
+      "margin_2023": 56794,
+      "margin_pct_2023": 37.12,
+      "total_votes_2023": 127660,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 1.48,
+        "st_koya_gond": 0.69,
+        "bc_mudiraj": 14.61,
+        "bc_munnuru_kapu": 12.86,
+        "bc_padmashali": 8.77,
+        "bc_goud": 9.35,
+        "bc_yadav": 8.18,
+        "bc_other": 4.68,
+        "minority_muslim": 5.34,
+        "oc_reddy": 3.32,
+        "oc_velama": 1.66,
+        "oc_other": 2.56
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "24": {
+      "ac_no": 24,
+      "ac_name": "Manthani",
+      "district": "Peddapalli",
+      "pc_name": "PEDDAPALLE (SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Duddilla Sridhar Babu",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 103822,
+        "vote_share": 52.82
+      },
+      "runner_up_2023": {
+        "candidate": "Putta Madhukar",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 72442,
+        "vote_share": 36.86
+      },
+      "margin_2023": 31380,
+      "margin_pct_2023": 15.97,
+      "total_votes_2023": 176264,
+      "caste_profile": {
+        "sc_madiga": 13.92,
+        "sc_mala": 7.49,
+        "st_lambada": 1.58,
+        "st_koya_gond": 0.74,
+        "bc_mudiraj": 15.62,
+        "bc_munnuru_kapu": 13.75,
+        "bc_padmashali": 9.38,
+        "bc_goud": 10.0,
+        "bc_yadav": 8.75,
+        "bc_other": 5.0,
+        "minority_muslim": 5.71,
+        "oc_reddy": 3.55,
+        "oc_velama": 1.77,
+        "oc_other": 2.74
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "25": {
+      "ac_no": 25,
+      "ac_name": "Peddapalle",
+      "district": "Peddapalli",
+      "pc_name": "PEDDAPALLE (SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Chinthakunta Vijaya Ramana Rao",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 118888,
+        "vote_share": 57.17
+      },
+      "runner_up_2023": {
+        "candidate": "Dasari Manohar Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 63780,
+        "vote_share": 30.67
+      },
+      "margin_2023": 55108,
+      "margin_pct_2023": 26.5,
+      "total_votes_2023": 182668,
+      "caste_profile": {
+        "sc_madiga": 13.92,
+        "sc_mala": 7.49,
+        "st_lambada": 1.58,
+        "st_koya_gond": 0.74,
+        "bc_mudiraj": 15.62,
+        "bc_munnuru_kapu": 13.75,
+        "bc_padmashali": 9.38,
+        "bc_goud": 10.0,
+        "bc_yadav": 8.75,
+        "bc_other": 5.0,
+        "minority_muslim": 5.71,
+        "oc_reddy": 3.55,
+        "oc_velama": 1.77,
+        "oc_other": 2.74
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "26": {
+      "ac_no": 26,
+      "ac_name": "Karimnagar",
+      "district": "Karimnagar",
+      "pc_name": "KARIMNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Gangula Kamalakar",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 92179,
+        "vote_share": 40.12
+      },
+      "runner_up_2023": {
+        "candidate": "Bandi Sanjay Kumar",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 89016,
+        "vote_share": 38.74
+      },
+      "margin_2023": 3163,
+      "margin_pct_2023": 1.38,
+      "total_votes_2023": 181195,
+      "caste_profile": {
+        "sc_madiga": 13.42,
+        "sc_mala": 7.23,
+        "st_lambada": 0.89,
+        "st_koya_gond": 0.42,
+        "bc_mudiraj": 13.88,
+        "bc_munnuru_kapu": 12.22,
+        "bc_padmashali": 8.33,
+        "bc_goud": 8.89,
+        "bc_yadav": 7.78,
+        "bc_other": 4.44,
+        "minority_muslim": 8.16,
+        "oc_reddy": 6.31,
+        "oc_velama": 3.15,
+        "oc_other": 4.88
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "27": {
+      "ac_no": 27,
+      "ac_name": "Choppadandi (SC)",
+      "district": "Karimnagar",
+      "pc_name": "KARIMNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Medipally Sathyam",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 90395,
+        "vote_share": 49.62
+      },
+      "runner_up_2023": {
+        "candidate": "Ravi Shankar Sunke",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 52956,
+        "vote_share": 29.07
+      },
+      "margin_2023": 37439,
+      "margin_pct_2023": 20.55,
+      "total_votes_2023": 143351,
+      "caste_profile": {
+        "sc_madiga": 13.42,
+        "sc_mala": 7.23,
+        "st_lambada": 0.89,
+        "st_koya_gond": 0.42,
+        "bc_mudiraj": 13.88,
+        "bc_munnuru_kapu": 12.22,
+        "bc_padmashali": 8.33,
+        "bc_goud": 8.89,
+        "bc_yadav": 7.78,
+        "bc_other": 4.44,
+        "minority_muslim": 8.16,
+        "oc_reddy": 6.31,
+        "oc_velama": 3.15,
+        "oc_other": 4.88
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "28": {
+      "ac_no": 28,
+      "ac_name": "Vemulawada",
+      "district": "Rajanna Sircilla",
+      "pc_name": "KARIMNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Aadi Srinivas",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 71451,
+        "vote_share": 41.03
+      },
+      "runner_up_2023": {
+        "candidate": "Chalimeda Lakshmi Narasimha Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 56870,
+        "vote_share": 32.66
+      },
+      "margin_2023": 14581,
+      "margin_pct_2023": 8.37,
+      "total_votes_2023": 128321,
+      "caste_profile": {
+        "sc_madiga": 13.07,
+        "sc_mala": 7.04,
+        "st_lambada": 3.32,
+        "st_koya_gond": 1.56,
+        "bc_mudiraj": 15.27,
+        "bc_munnuru_kapu": 13.44,
+        "bc_padmashali": 9.16,
+        "bc_goud": 9.77,
+        "bc_yadav": 8.55,
+        "bc_other": 4.89,
+        "minority_muslim": 3.87,
+        "oc_reddy": 4.43,
+        "oc_velama": 2.21,
+        "oc_other": 3.42
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "29": {
+      "ac_no": 29,
+      "ac_name": "Sircilla",
+      "district": "Rajanna Sircilla",
+      "pc_name": "KARIMNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kalvakuntla Taraka Rama Rao (K.T.R)",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 89244,
+        "vote_share": 47.28
+      },
+      "runner_up_2023": {
+        "candidate": "K.K. Mahender Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 59557,
+        "vote_share": 31.56
+      },
+      "margin_2023": 29687,
+      "margin_pct_2023": 15.73,
+      "total_votes_2023": 148801,
+      "caste_profile": {
+        "sc_madiga": 13.07,
+        "sc_mala": 7.04,
+        "st_lambada": 3.32,
+        "st_koya_gond": 1.56,
+        "bc_mudiraj": 15.27,
+        "bc_munnuru_kapu": 13.44,
+        "bc_padmashali": 9.16,
+        "bc_goud": 9.77,
+        "bc_yadav": 8.55,
+        "bc_other": 4.89,
+        "minority_muslim": 3.87,
+        "oc_reddy": 4.43,
+        "oc_velama": 2.21,
+        "oc_other": 3.42
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "30": {
+      "ac_no": 30,
+      "ac_name": "Manakondur (SC)",
+      "district": "Karimnagar",
+      "pc_name": "KARIMNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Dr. Kavvampally Satyanarayana",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 96773,
+        "vote_share": 52.08
+      },
+      "runner_up_2023": {
+        "candidate": "Erupula Balakishan Rasamayi",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 64408,
+        "vote_share": 34.66
+      },
+      "margin_2023": 32365,
+      "margin_pct_2023": 17.42,
+      "total_votes_2023": 161181,
+      "caste_profile": {
+        "sc_madiga": 13.42,
+        "sc_mala": 7.23,
+        "st_lambada": 0.89,
+        "st_koya_gond": 0.42,
+        "bc_mudiraj": 13.88,
+        "bc_munnuru_kapu": 12.22,
+        "bc_padmashali": 8.33,
+        "bc_goud": 8.89,
+        "bc_yadav": 7.78,
+        "bc_other": 4.44,
+        "minority_muslim": 8.16,
+        "oc_reddy": 6.31,
+        "oc_velama": 3.15,
+        "oc_other": 4.88
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "31": {
+      "ac_no": 31,
+      "ac_name": "Huzurabad",
+      "district": "Karimnagar",
+      "pc_name": "KARIMNAGAR",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Kaushik Reddy Padi",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 80333,
+        "vote_share": 38.38
+      },
+      "runner_up_2023": {
+        "candidate": "Eatala Rajendar",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 63460,
+        "vote_share": 30.32
+      },
+      "margin_2023": 16873,
+      "margin_pct_2023": 8.06,
+      "total_votes_2023": 143793,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 0.83,
+        "st_koya_gond": 0.39,
+        "bc_mudiraj": 12.86,
+        "bc_munnuru_kapu": 11.32,
+        "bc_padmashali": 7.72,
+        "bc_goud": 8.23,
+        "bc_yadav": 7.2,
+        "bc_other": 4.12,
+        "minority_muslim": 7.56,
+        "oc_reddy": 5.84,
+        "oc_velama": 2.92,
+        "oc_other": 4.52
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "32": {
+      "ac_no": 32,
+      "ac_name": "Husnabad",
+      "district": "Siddipet",
+      "pc_name": "KARIMNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Ponnam Prabhakar",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 100955,
+        "vote_share": 48.84
+      },
+      "runner_up_2023": {
+        "candidate": "Satish Kumar Voditela",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 81611,
+        "vote_share": 39.48
+      },
+      "margin_2023": 19344,
+      "margin_pct_2023": 9.36,
+      "total_votes_2023": 182566,
+      "caste_profile": {
+        "sc_madiga": 12.66,
+        "sc_mala": 6.81,
+        "st_lambada": 2.07,
+        "st_koya_gond": 0.98,
+        "bc_mudiraj": 15.0,
+        "bc_munnuru_kapu": 13.2,
+        "bc_padmashali": 9.0,
+        "bc_goud": 9.6,
+        "bc_yadav": 8.4,
+        "bc_other": 4.8,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.27,
+        "oc_velama": 2.63,
+        "oc_other": 4.07
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "33": {
+      "ac_no": 33,
+      "ac_name": "Siddipet",
+      "district": "Siddipet",
+      "pc_name": "MEDAK",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Thanneeru Harish Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 105514,
+        "vote_share": 58.17
+      },
+      "runner_up_2023": {
+        "candidate": "Pujala Hari Krishna",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 23206,
+        "vote_share": 12.79
+      },
+      "margin_2023": 82308,
+      "margin_pct_2023": 45.37,
+      "total_votes_2023": 128720,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 1.89,
+        "st_koya_gond": 0.89,
+        "bc_mudiraj": 13.69,
+        "bc_munnuru_kapu": 12.05,
+        "bc_padmashali": 8.22,
+        "bc_goud": 8.76,
+        "bc_yadav": 7.67,
+        "bc_other": 4.38,
+        "minority_muslim": 5.02,
+        "oc_reddy": 4.81,
+        "oc_velama": 2.4,
+        "oc_other": 3.71
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "34": {
+      "ac_no": 34,
+      "ac_name": "Medak",
+      "district": "Medak",
+      "pc_name": "MEDAK",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Mynampally Rohith",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 87126,
+        "vote_share": 46.63
+      },
+      "runner_up_2023": {
+        "candidate": "Padma Devender Reddy.M",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 76969,
+        "vote_share": 41.19
+      },
+      "margin_2023": 10157,
+      "margin_pct_2023": 5.44,
+      "total_votes_2023": 164095,
+      "caste_profile": {
+        "sc_madiga": 11.44,
+        "sc_mala": 6.16,
+        "st_lambada": 7.7,
+        "st_koya_gond": 3.62,
+        "bc_mudiraj": 14.77,
+        "bc_munnuru_kapu": 13.0,
+        "bc_padmashali": 8.86,
+        "bc_goud": 9.45,
+        "bc_yadav": 8.27,
+        "bc_other": 4.73,
+        "minority_muslim": 5.76,
+        "oc_reddy": 2.74,
+        "oc_velama": 1.37,
+        "oc_other": 2.12
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "35": {
+      "ac_no": 35,
+      "ac_name": "Narayankhed",
+      "district": "Sangareddy",
+      "pc_name": "ZAHIRABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Patlolla Sanjeeva Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 91373,
+        "vote_share": 47.09
+      },
+      "runner_up_2023": {
+        "candidate": "Mahareddy Bhupal Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 84826,
+        "vote_share": 43.72
+      },
+      "margin_2023": 6547,
+      "margin_pct_2023": 3.37,
+      "total_votes_2023": 176199,
+      "caste_profile": {
+        "sc_madiga": 13.22,
+        "sc_mala": 7.12,
+        "st_lambada": 4.75,
+        "st_koya_gond": 2.24,
+        "bc_mudiraj": 11.56,
+        "bc_munnuru_kapu": 10.18,
+        "bc_padmashali": 6.94,
+        "bc_goud": 7.4,
+        "bc_yadav": 6.48,
+        "bc_other": 3.7,
+        "minority_muslim": 14.83,
+        "oc_reddy": 5.1,
+        "oc_velama": 2.55,
+        "oc_other": 3.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "36": {
+      "ac_no": 36,
+      "ac_name": "Andole (SC)",
+      "district": "Sangareddy",
+      "pc_name": "ZAHIRABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "C. Damodar Rajanarsimha",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 114147,
+        "vote_share": 53.65
+      },
+      "runner_up_2023": {
+        "candidate": "Chanti Kranthi Kiran",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 85954,
+        "vote_share": 40.4
+      },
+      "margin_2023": 28193,
+      "margin_pct_2023": 13.25,
+      "total_votes_2023": 200101,
+      "caste_profile": {
+        "sc_madiga": 13.22,
+        "sc_mala": 7.12,
+        "st_lambada": 4.75,
+        "st_koya_gond": 2.24,
+        "bc_mudiraj": 11.56,
+        "bc_munnuru_kapu": 10.18,
+        "bc_padmashali": 6.94,
+        "bc_goud": 7.4,
+        "bc_yadav": 6.48,
+        "bc_other": 3.7,
+        "minority_muslim": 14.83,
+        "oc_reddy": 5.1,
+        "oc_velama": 2.55,
+        "oc_other": 3.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "37": {
+      "ac_no": 37,
+      "ac_name": "Narsapur",
+      "district": "Medak",
+      "pc_name": "MEDAK",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Vakiti Sunitha Laxma Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 88410,
+        "vote_share": 44.64
+      },
+      "runner_up_2023": {
+        "candidate": "Aavula Raji Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 79555,
+        "vote_share": 40.17
+      },
+      "margin_2023": 8855,
+      "margin_pct_2023": 4.47,
+      "total_votes_2023": 167965,
+      "caste_profile": {
+        "sc_madiga": 11.44,
+        "sc_mala": 6.16,
+        "st_lambada": 7.7,
+        "st_koya_gond": 3.62,
+        "bc_mudiraj": 14.77,
+        "bc_munnuru_kapu": 13.0,
+        "bc_padmashali": 8.86,
+        "bc_goud": 9.45,
+        "bc_yadav": 8.27,
+        "bc_other": 4.73,
+        "minority_muslim": 5.76,
+        "oc_reddy": 2.74,
+        "oc_velama": 1.37,
+        "oc_other": 2.12
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "38": {
+      "ac_no": 38,
+      "ac_name": "Zahirabad (SC)",
+      "district": "Sangareddy",
+      "pc_name": "ZAHIRABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Koninty Manik Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 97205,
+        "vote_share": 46.49
+      },
+      "runner_up_2023": {
+        "candidate": "A.Chandrasekhar",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 84415,
+        "vote_share": 40.37
+      },
+      "margin_2023": 12790,
+      "margin_pct_2023": 6.12,
+      "total_votes_2023": 181620,
+      "caste_profile": {
+        "sc_madiga": 13.22,
+        "sc_mala": 7.12,
+        "st_lambada": 4.75,
+        "st_koya_gond": 2.24,
+        "bc_mudiraj": 11.56,
+        "bc_munnuru_kapu": 10.18,
+        "bc_padmashali": 6.94,
+        "bc_goud": 7.4,
+        "bc_yadav": 6.48,
+        "bc_other": 3.7,
+        "minority_muslim": 14.83,
+        "oc_reddy": 5.1,
+        "oc_velama": 2.55,
+        "oc_other": 3.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "39": {
+      "ac_no": 39,
+      "ac_name": "Sangareddy",
+      "district": "Sangareddy",
+      "pc_name": "MEDAK",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Chinta Prabhakar",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 83112,
+        "vote_share": 44.32
+      },
+      "runner_up_2023": {
+        "candidate": "T. Jayaprakash Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 74895,
+        "vote_share": 39.94
+      },
+      "margin_2023": 8217,
+      "margin_pct_2023": 4.38,
+      "total_votes_2023": 158007,
+      "caste_profile": {
+        "sc_madiga": 13.22,
+        "sc_mala": 7.12,
+        "st_lambada": 4.75,
+        "st_koya_gond": 2.24,
+        "bc_mudiraj": 11.56,
+        "bc_munnuru_kapu": 10.18,
+        "bc_padmashali": 6.94,
+        "bc_goud": 7.4,
+        "bc_yadav": 6.48,
+        "bc_other": 3.7,
+        "minority_muslim": 14.83,
+        "oc_reddy": 5.1,
+        "oc_velama": 2.55,
+        "oc_other": 3.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "40": {
+      "ac_no": 40,
+      "ac_name": "Patancheru",
+      "district": "Sangareddy",
+      "pc_name": "MEDAK",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Gudem Mahipal Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 105387,
+        "vote_share": 38.06
+      },
+      "runner_up_2023": {
+        "candidate": "Kata Srinivas Goud",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 98296,
+        "vote_share": 35.5
+      },
+      "margin_2023": 7091,
+      "margin_pct_2023": 2.56,
+      "total_votes_2023": 203683,
+      "caste_profile": {
+        "sc_madiga": 13.22,
+        "sc_mala": 7.12,
+        "st_lambada": 4.75,
+        "st_koya_gond": 2.24,
+        "bc_mudiraj": 11.56,
+        "bc_munnuru_kapu": 10.18,
+        "bc_padmashali": 6.94,
+        "bc_goud": 7.4,
+        "bc_yadav": 6.48,
+        "bc_other": 3.7,
+        "minority_muslim": 14.83,
+        "oc_reddy": 5.1,
+        "oc_velama": 2.55,
+        "oc_other": 3.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "41": {
+      "ac_no": 41,
+      "ac_name": "Dubbak",
+      "district": "Siddipet",
+      "pc_name": "MEDAK",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kotta Prabhakar Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 97879,
+        "vote_share": 56.01
+      },
+      "runner_up_2023": {
+        "candidate": "M Raghunandan Rao",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 44366,
+        "vote_share": 25.39
+      },
+      "margin_2023": 53513,
+      "margin_pct_2023": 30.62,
+      "total_votes_2023": 142245,
+      "caste_profile": {
+        "sc_madiga": 12.66,
+        "sc_mala": 6.81,
+        "st_lambada": 2.07,
+        "st_koya_gond": 0.98,
+        "bc_mudiraj": 15.0,
+        "bc_munnuru_kapu": 13.2,
+        "bc_padmashali": 9.0,
+        "bc_goud": 9.6,
+        "bc_yadav": 8.4,
+        "bc_other": 4.8,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.27,
+        "oc_velama": 2.63,
+        "oc_other": 4.07
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "42": {
+      "ac_no": 42,
+      "ac_name": "Gajwel",
+      "district": "Siddipet",
+      "pc_name": "MEDAK",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kalvakuntla Chandrashekar Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 111684,
+        "vote_share": 48.05
+      },
+      "runner_up_2023": {
+        "candidate": "Eatala Rajender",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 66653,
+        "vote_share": 28.68
+      },
+      "margin_2023": 45031,
+      "margin_pct_2023": 19.38,
+      "total_votes_2023": 178337,
+      "caste_profile": {
+        "sc_madiga": 12.66,
+        "sc_mala": 6.81,
+        "st_lambada": 2.07,
+        "st_koya_gond": 0.98,
+        "bc_mudiraj": 15.0,
+        "bc_munnuru_kapu": 13.2,
+        "bc_padmashali": 9.0,
+        "bc_goud": 9.6,
+        "bc_yadav": 8.4,
+        "bc_other": 4.8,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.27,
+        "oc_velama": 2.63,
+        "oc_other": 4.07
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "43": {
+      "ac_no": 43,
+      "ac_name": "Medchal",
+      "district": "Medchal Malkajgiri",
+      "pc_name": "MALKAJGIRI",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Chamakura Malla Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 186017,
+        "vote_share": 46.44
+      },
+      "runner_up_2023": {
+        "candidate": "Thotakura Vajresh Yadav (Jangaiah Yadav)",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 152598,
+        "vote_share": 38.1
+      },
+      "margin_2023": 33419,
+      "margin_pct_2023": 8.34,
+      "total_votes_2023": 338615,
+      "caste_profile": {
+        "sc_madiga": 8.81,
+        "sc_mala": 4.75,
+        "st_lambada": 2.39,
+        "st_koya_gond": 1.12,
+        "bc_mudiraj": 11.65,
+        "bc_munnuru_kapu": 10.25,
+        "bc_padmashali": 6.99,
+        "bc_goud": 7.46,
+        "bc_yadav": 6.52,
+        "bc_other": 3.73,
+        "minority_muslim": 4.45,
+        "oc_reddy": 14.03,
+        "oc_velama": 7.01,
+        "oc_other": 10.84
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "44": {
+      "ac_no": 44,
+      "ac_name": "Malkajgiri",
+      "district": "Medchal Malkajgiri",
+      "pc_name": "MALKAJGIRI",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Marri Rajashekar Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 125049,
+        "vote_share": 47.12
+      },
+      "runner_up_2023": {
+        "candidate": "Mynampally Hanumanth Rao",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 75519,
+        "vote_share": 28.45
+      },
+      "margin_2023": 49530,
+      "margin_pct_2023": 18.66,
+      "total_votes_2023": 200568,
+      "caste_profile": {
+        "sc_madiga": 8.81,
+        "sc_mala": 4.75,
+        "st_lambada": 2.39,
+        "st_koya_gond": 1.12,
+        "bc_mudiraj": 11.65,
+        "bc_munnuru_kapu": 10.25,
+        "bc_padmashali": 6.99,
+        "bc_goud": 7.46,
+        "bc_yadav": 6.52,
+        "bc_other": 3.73,
+        "minority_muslim": 4.45,
+        "oc_reddy": 14.03,
+        "oc_velama": 7.01,
+        "oc_other": 10.84
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "45": {
+      "ac_no": 45,
+      "ac_name": "Quthbullapur",
+      "district": "Medchal Malkajgiri",
+      "pc_name": "MALKAJGIRI",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "K.P. Vivekanand",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 187999,
+        "vote_share": 46.8
+      },
+      "runner_up_2023": {
+        "candidate": "Kuna Srisailam Goud",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 102423,
+        "vote_share": 25.5
+      },
+      "margin_2023": 85576,
+      "margin_pct_2023": 21.31,
+      "total_votes_2023": 290422,
+      "caste_profile": {
+        "sc_madiga": 8.81,
+        "sc_mala": 4.75,
+        "st_lambada": 2.39,
+        "st_koya_gond": 1.12,
+        "bc_mudiraj": 11.65,
+        "bc_munnuru_kapu": 10.25,
+        "bc_padmashali": 6.99,
+        "bc_goud": 7.46,
+        "bc_yadav": 6.52,
+        "bc_other": 3.73,
+        "minority_muslim": 4.45,
+        "oc_reddy": 14.03,
+        "oc_velama": 7.01,
+        "oc_other": 10.84
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "46": {
+      "ac_no": 46,
+      "ac_name": "Kukatpalle",
+      "district": "Medchal Malkajgiri",
+      "pc_name": "MALKAJGIRI",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Madhavaram Krishna Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 135635,
+        "vote_share": 54.08
+      },
+      "runner_up_2023": {
+        "candidate": "Bandi Ramesh",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 65248,
+        "vote_share": 26.02
+      },
+      "margin_2023": 70387,
+      "margin_pct_2023": 28.07,
+      "total_votes_2023": 200883,
+      "caste_profile": {
+        "sc_madiga": 8.81,
+        "sc_mala": 4.75,
+        "st_lambada": 2.39,
+        "st_koya_gond": 1.12,
+        "bc_mudiraj": 11.65,
+        "bc_munnuru_kapu": 10.25,
+        "bc_padmashali": 6.99,
+        "bc_goud": 7.46,
+        "bc_yadav": 6.52,
+        "bc_other": 3.73,
+        "minority_muslim": 4.45,
+        "oc_reddy": 14.03,
+        "oc_velama": 7.01,
+        "oc_other": 10.84
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "47": {
+      "ac_no": 47,
+      "ac_name": "Uppal",
+      "district": "Medchal Malkajgiri",
+      "pc_name": "MALKAJGIRI",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Bandari Lakshma Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 132927,
+        "vote_share": 48.33
+      },
+      "runner_up_2023": {
+        "candidate": "Parameshwar Reddy Mandumula",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 83897,
+        "vote_share": 30.51
+      },
+      "margin_2023": 49030,
+      "margin_pct_2023": 17.83,
+      "total_votes_2023": 216824,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 2.03,
+        "st_koya_gond": 0.96,
+        "bc_mudiraj": 9.91,
+        "bc_munnuru_kapu": 8.72,
+        "bc_padmashali": 5.94,
+        "bc_goud": 6.34,
+        "bc_yadav": 5.55,
+        "bc_other": 3.17,
+        "minority_muslim": 3.78,
+        "oc_reddy": 11.93,
+        "oc_velama": 5.96,
+        "oc_other": 9.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "48": {
+      "ac_no": 48,
+      "ac_name": "Ibrahimpatnam",
+      "district": "Hyderabad",
+      "pc_name": "BHONGIR",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Malreddy Ranga Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 126506,
+        "vote_share": 50.92
+      },
+      "runner_up_2023": {
+        "candidate": "Manchireddy Kishan Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 89806,
+        "vote_share": 36.14
+      },
+      "margin_2023": 36700,
+      "margin_pct_2023": 14.77,
+      "total_votes_2023": 216312,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 1.49,
+        "st_koya_gond": 0.7,
+        "bc_mudiraj": 6.14,
+        "bc_munnuru_kapu": 5.4,
+        "bc_padmashali": 3.68,
+        "bc_goud": 3.93,
+        "bc_yadav": 3.44,
+        "bc_other": 1.97,
+        "minority_muslim": 17.13,
+        "oc_reddy": 13.03,
+        "oc_velama": 6.52,
+        "oc_other": 10.07
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "49": {
+      "ac_no": 49,
+      "ac_name": "Lal Bahadur Nagar",
+      "district": "Hyderabad",
+      "pc_name": "MALKAJGIRI",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Devireddy Sudhir Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 111380,
+        "vote_share": 37.74
+      },
+      "runner_up_2023": {
+        "candidate": "Sama Ranga Reddy",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 89075,
+        "vote_share": 30.18
+      },
+      "margin_2023": 22305,
+      "margin_pct_2023": 7.56,
+      "total_votes_2023": 200455,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "50": {
+      "ac_no": 50,
+      "ac_name": "Maheswaram",
+      "district": "Hyderabad",
+      "pc_name": "CHEVELLA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Patlolla Sabitha Indra Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 125578,
+        "vote_share": 40.99
+      },
+      "runner_up_2023": {
+        "candidate": "Andela Sriramulu Yadav",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 99391,
+        "vote_share": 32.45
+      },
+      "margin_2023": 26187,
+      "margin_pct_2023": 8.55,
+      "total_votes_2023": 224969,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "51": {
+      "ac_no": 51,
+      "ac_name": "Rajendranagar",
+      "district": "Hyderabad",
+      "pc_name": "CHEVELLA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "T. Prakash Goud",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 121734,
+        "vote_share": 37.09
+      },
+      "runner_up_2023": {
+        "candidate": "Thokala Srinivas Reddy",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 89638,
+        "vote_share": 27.31
+      },
+      "margin_2023": 32096,
+      "margin_pct_2023": 9.78,
+      "total_votes_2023": 211372,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "52": {
+      "ac_no": 52,
+      "ac_name": "Serilingampally",
+      "district": "Hyderabad",
+      "pc_name": "CHEVELLA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Arekapudi Gandhi",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 157332,
+        "vote_share": 43.97
+      },
+      "runner_up_2023": {
+        "candidate": "Jagadeeswar Goud",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 110780,
+        "vote_share": 30.96
+      },
+      "margin_2023": 46552,
+      "margin_pct_2023": 13.01,
+      "total_votes_2023": 268112,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "53": {
+      "ac_no": 53,
+      "ac_name": "Chevella (SC)",
+      "district": "Hyderabad",
+      "pc_name": "CHEVELLA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kale Yadaiah",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 76218,
+        "vote_share": 38.73
+      },
+      "runner_up_2023": {
+        "candidate": "Beem Bharath Pamena",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 75950,
+        "vote_share": 38.59
+      },
+      "margin_2023": 268,
+      "margin_pct_2023": 0.14,
+      "total_votes_2023": 152168,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "54": {
+      "ac_no": 54,
+      "ac_name": "Pargi",
+      "district": "Vikarabad",
+      "pc_name": "CHEVELLA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Tammannagari Ram Mohan Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 98536,
+        "vote_share": 48.93
+      },
+      "runner_up_2023": {
+        "candidate": "K. Mahesh Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 74523,
+        "vote_share": 37.01
+      },
+      "margin_2023": 24013,
+      "margin_pct_2023": 11.92,
+      "total_votes_2023": 173059,
+      "caste_profile": {
+        "sc_madiga": 13.76,
+        "sc_mala": 7.41,
+        "st_lambada": 8.68,
+        "st_koya_gond": 4.09,
+        "bc_mudiraj": 11.28,
+        "bc_munnuru_kapu": 9.93,
+        "bc_padmashali": 6.77,
+        "bc_goud": 7.22,
+        "bc_yadav": 6.32,
+        "bc_other": 3.61,
+        "minority_muslim": 12.31,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.9,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "55": {
+      "ac_no": 55,
+      "ac_name": "Vicarabad (SC)",
+      "district": "Vikarabad",
+      "pc_name": "CHEVELLA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Gaddam Prasad Kumar",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 86885,
+        "vote_share": 49.85
+      },
+      "runner_up_2023": {
+        "candidate": "Dr. Anand Methuku",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 73992,
+        "vote_share": 42.46
+      },
+      "margin_2023": 12893,
+      "margin_pct_2023": 7.4,
+      "total_votes_2023": 160877,
+      "caste_profile": {
+        "sc_madiga": 13.76,
+        "sc_mala": 7.41,
+        "st_lambada": 8.68,
+        "st_koya_gond": 4.09,
+        "bc_mudiraj": 11.28,
+        "bc_munnuru_kapu": 9.93,
+        "bc_padmashali": 6.77,
+        "bc_goud": 7.22,
+        "bc_yadav": 6.32,
+        "bc_other": 3.61,
+        "minority_muslim": 12.31,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.9,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "56": {
+      "ac_no": 56,
+      "ac_name": "Tandur",
+      "district": "Vikarabad",
+      "pc_name": "CHEVELLA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "B. Manohar Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 84662,
+        "vote_share": 48.32
+      },
+      "runner_up_2023": {
+        "candidate": "Pilot Rohith Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 78079,
+        "vote_share": 44.56
+      },
+      "margin_2023": 6583,
+      "margin_pct_2023": 3.76,
+      "total_votes_2023": 162741,
+      "caste_profile": {
+        "sc_madiga": 13.76,
+        "sc_mala": 7.41,
+        "st_lambada": 8.68,
+        "st_koya_gond": 4.09,
+        "bc_mudiraj": 11.28,
+        "bc_munnuru_kapu": 9.93,
+        "bc_padmashali": 6.77,
+        "bc_goud": 7.22,
+        "bc_yadav": 6.32,
+        "bc_other": 3.61,
+        "minority_muslim": 12.31,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.9,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "57": {
+      "ac_no": 57,
+      "ac_name": "Musheerabad",
+      "district": "Hyderabad",
+      "pc_name": "SECUNDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Muta Gopal",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 75207,
+        "vote_share": 49.07
+      },
+      "runner_up_2023": {
+        "candidate": "Anjan Kumar Yadav Mandadi",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 37410,
+        "vote_share": 24.41
+      },
+      "margin_2023": 37797,
+      "margin_pct_2023": 24.66,
+      "total_votes_2023": 112617,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "58": {
+      "ac_no": 58,
+      "ac_name": "Malakpet",
+      "district": "Hyderabad",
+      "pc_name": "HYDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Ahmed Bin Abdullah Balala",
+        "party": "AIMIM",
+        "raw_party": "All India Majlis-E-Ittehadul Muslimeen",
+        "votes": 55805,
+        "vote_share": 42.27
+      },
+      "runner_up_2023": {
+        "candidate": "Shaik Akbar",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 29699,
+        "vote_share": 22.5
+      },
+      "margin_2023": 26106,
+      "margin_pct_2023": 19.77,
+      "total_votes_2023": 85504,
+      "caste_profile": {
+        "sc_madiga": 3.98,
+        "sc_mala": 2.14,
+        "st_lambada": 1.03,
+        "st_koya_gond": 0.48,
+        "bc_mudiraj": 4.24,
+        "bc_munnuru_kapu": 3.73,
+        "bc_padmashali": 2.54,
+        "bc_goud": 2.71,
+        "bc_yadav": 2.37,
+        "bc_other": 1.36,
+        "minority_muslim": 55.0,
+        "oc_reddy": 8.99,
+        "oc_velama": 4.49,
+        "oc_other": 6.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "59": {
+      "ac_no": 59,
+      "ac_name": "Amberpet",
+      "district": "Hyderabad",
+      "pc_name": "SECUNDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kaleru Venkatesh",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 74416,
+        "vote_share": 50.8
+      },
+      "runner_up_2023": {
+        "candidate": "Chenaboyanna Krishna Yadav",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 49879,
+        "vote_share": 34.05
+      },
+      "margin_2023": 24537,
+      "margin_pct_2023": 16.75,
+      "total_votes_2023": 124295,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "60": {
+      "ac_no": 60,
+      "ac_name": "Khairatabad",
+      "district": "Hyderabad",
+      "pc_name": "SECUNDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Danam Nagender",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 67368,
+        "vote_share": 43.48
+      },
+      "runner_up_2023": {
+        "candidate": "P Vijaya Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 45358,
+        "vote_share": 29.28
+      },
+      "margin_2023": 22010,
+      "margin_pct_2023": 14.21,
+      "total_votes_2023": 112726,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "61": {
+      "ac_no": 61,
+      "ac_name": "Jubilee Hills",
+      "district": "Hyderabad",
+      "pc_name": "SECUNDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Maganti Gopinath",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 80549,
+        "vote_share": 43.94
+      },
+      "runner_up_2023": {
+        "candidate": "Mohammed Azharuddin",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 64212,
+        "vote_share": 35.03
+      },
+      "margin_2023": 16337,
+      "margin_pct_2023": 8.91,
+      "total_votes_2023": 144761,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "62": {
+      "ac_no": 62,
+      "ac_name": "Sanathnagar",
+      "district": "Hyderabad",
+      "pc_name": "SECUNDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Talasani Srinivas Yadav",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 72557,
+        "vote_share": 56.57
+      },
+      "runner_up_2023": {
+        "candidate": "Marri Shashidhar Reddy",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 30730,
+        "vote_share": 23.96
+      },
+      "margin_2023": 41827,
+      "margin_pct_2023": 32.61,
+      "total_votes_2023": 103287,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "63": {
+      "ac_no": 63,
+      "ac_name": "Nampally",
+      "district": "Hyderabad",
+      "pc_name": "SECUNDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Mohammed Majid Hussain",
+        "party": "AIMIM",
+        "raw_party": "All India Majlis-E-Ittehadul Muslimeen",
+        "votes": 62185,
+        "vote_share": 40.83
+      },
+      "runner_up_2023": {
+        "candidate": "Mohammed Feroz Khan",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 60148,
+        "vote_share": 39.49
+      },
+      "margin_2023": 2037,
+      "margin_pct_2023": 1.34,
+      "total_votes_2023": 122333,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "64": {
+      "ac_no": 64,
+      "ac_name": "Karwan",
+      "district": "Hyderabad",
+      "pc_name": "HYDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kausar Mohiuddin",
+        "party": "AIMIM",
+        "raw_party": "All India Majlis-E-Ittehadul Muslimeen",
+        "votes": 83388,
+        "vote_share": 47.42
+      },
+      "runner_up_2023": {
+        "candidate": "Amar Singh",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 41402,
+        "vote_share": 23.55
+      },
+      "margin_2023": 41986,
+      "margin_pct_2023": 23.88,
+      "total_votes_2023": 124790,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "65": {
+      "ac_no": 65,
+      "ac_name": "Goshamahal",
+      "district": "Hyderabad",
+      "pc_name": "HYDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "T. Raja Singh",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 80182,
+        "vote_share": 54.08
+      },
+      "runner_up_2023": {
+        "candidate": "Nand Kishore Vyas",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 58725,
+        "vote_share": 39.61
+      },
+      "margin_2023": 21457,
+      "margin_pct_2023": 14.47,
+      "total_votes_2023": 138907,
+      "caste_profile": {
+        "sc_madiga": 3.98,
+        "sc_mala": 2.14,
+        "st_lambada": 1.03,
+        "st_koya_gond": 0.48,
+        "bc_mudiraj": 4.24,
+        "bc_munnuru_kapu": 3.73,
+        "bc_padmashali": 2.54,
+        "bc_goud": 2.71,
+        "bc_yadav": 2.37,
+        "bc_other": 1.36,
+        "minority_muslim": 55.0,
+        "oc_reddy": 8.99,
+        "oc_velama": 4.49,
+        "oc_other": 6.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "66": {
+      "ac_no": 66,
+      "ac_name": "Charminar",
+      "district": "Hyderabad",
+      "pc_name": "HYDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Mir Zulfeqar Ali",
+        "party": "AIMIM",
+        "raw_party": "All India Majlis-E-Ittehadul Muslimeen",
+        "votes": 49103,
+        "vote_share": 50.05
+      },
+      "runner_up_2023": {
+        "candidate": "Megha Rani Agarwal",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 26250,
+        "vote_share": 26.76
+      },
+      "margin_2023": 22853,
+      "margin_pct_2023": 23.29,
+      "total_votes_2023": 75353,
+      "caste_profile": {
+        "sc_madiga": 3.98,
+        "sc_mala": 2.14,
+        "st_lambada": 1.03,
+        "st_koya_gond": 0.48,
+        "bc_mudiraj": 4.24,
+        "bc_munnuru_kapu": 3.73,
+        "bc_padmashali": 2.54,
+        "bc_goud": 2.71,
+        "bc_yadav": 2.37,
+        "bc_other": 1.36,
+        "minority_muslim": 55.0,
+        "oc_reddy": 8.99,
+        "oc_velama": 4.49,
+        "oc_other": 6.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "67": {
+      "ac_no": 67,
+      "ac_name": "Chandrayangutta",
+      "district": "Hyderabad",
+      "pc_name": "HYDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Akbar Uddin Owaisi",
+        "party": "AIMIM",
+        "raw_party": "All India Majlis-E-Ittehadul Muslimeen",
+        "votes": 99776,
+        "vote_share": 64.89
+      },
+      "runner_up_2023": {
+        "candidate": "Muppi Seetharam Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 18116,
+        "vote_share": 11.78
+      },
+      "margin_2023": 81660,
+      "margin_pct_2023": 53.1,
+      "total_votes_2023": 117892,
+      "caste_profile": {
+        "sc_madiga": 3.98,
+        "sc_mala": 2.14,
+        "st_lambada": 1.03,
+        "st_koya_gond": 0.48,
+        "bc_mudiraj": 4.24,
+        "bc_munnuru_kapu": 3.73,
+        "bc_padmashali": 2.54,
+        "bc_goud": 2.71,
+        "bc_yadav": 2.37,
+        "bc_other": 1.36,
+        "minority_muslim": 55.0,
+        "oc_reddy": 8.99,
+        "oc_velama": 4.49,
+        "oc_other": 6.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "68": {
+      "ac_no": 68,
+      "ac_name": "Yakutpura",
+      "district": "Hyderabad",
+      "pc_name": "HYDERABAD",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Jaffar Hussain",
+        "party": "AIMIM",
+        "raw_party": "All India Majlis-E-Ittehadul Muslimeen",
+        "votes": 46153,
+        "vote_share": 32.86
+      },
+      "runner_up_2023": {
+        "candidate": "Amjed Ullah Khan",
+        "party": "OTH",
+        "raw_party": "Majlis Bachao Tahreek",
+        "votes": 45275,
+        "vote_share": 32.24
+      },
+      "margin_2023": 878,
+      "margin_pct_2023": 0.63,
+      "total_votes_2023": 91428,
+      "caste_profile": {
+        "sc_madiga": 9.35,
+        "sc_mala": 5.04,
+        "st_lambada": 0.81,
+        "st_koya_gond": 0.38,
+        "bc_mudiraj": 3.33,
+        "bc_munnuru_kapu": 2.93,
+        "bc_padmashali": 2.0,
+        "bc_goud": 2.13,
+        "bc_yadav": 1.87,
+        "bc_other": 1.07,
+        "minority_muslim": 55.0,
+        "oc_reddy": 7.08,
+        "oc_velama": 3.54,
+        "oc_other": 5.47
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "69": {
+      "ac_no": 69,
+      "ac_name": "Bahadurpura",
+      "district": "Hyderabad",
+      "pc_name": "HYDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Mohammed Mubeen",
+        "party": "AIMIM",
+        "raw_party": "All India Majlis-E-Ittehadul Muslimeen",
+        "votes": 89451,
+        "vote_share": 62.24
+      },
+      "runner_up_2023": {
+        "candidate": "Mir Inayath Ali Baqri",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 22426,
+        "vote_share": 15.6
+      },
+      "margin_2023": 67025,
+      "margin_pct_2023": 46.63,
+      "total_votes_2023": 111877,
+      "caste_profile": {
+        "sc_madiga": 3.98,
+        "sc_mala": 2.14,
+        "st_lambada": 1.03,
+        "st_koya_gond": 0.48,
+        "bc_mudiraj": 4.24,
+        "bc_munnuru_kapu": 3.73,
+        "bc_padmashali": 2.54,
+        "bc_goud": 2.71,
+        "bc_yadav": 2.37,
+        "bc_other": 1.36,
+        "minority_muslim": 55.0,
+        "oc_reddy": 8.99,
+        "oc_velama": 4.49,
+        "oc_other": 6.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "70": {
+      "ac_no": 70,
+      "ac_name": "Secunderabad",
+      "district": "Hyderabad",
+      "pc_name": "SECUNDERABAD",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Padma Rao. T",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 78223,
+        "vote_share": 55.42
+      },
+      "runner_up_2023": {
+        "candidate": "Adam Santhosh Kumar",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 32983,
+        "vote_share": 23.37
+      },
+      "margin_2023": 45240,
+      "margin_pct_2023": 32.05,
+      "total_votes_2023": 111206,
+      "caste_profile": {
+        "sc_madiga": 3.98,
+        "sc_mala": 2.14,
+        "st_lambada": 1.03,
+        "st_koya_gond": 0.48,
+        "bc_mudiraj": 4.24,
+        "bc_munnuru_kapu": 3.73,
+        "bc_padmashali": 2.54,
+        "bc_goud": 2.71,
+        "bc_yadav": 2.37,
+        "bc_other": 1.36,
+        "minority_muslim": 55.0,
+        "oc_reddy": 8.99,
+        "oc_velama": 4.49,
+        "oc_other": 6.94
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "71": {
+      "ac_no": 71,
+      "ac_name": "Secunderabad Cantt. (SC",
+      "district": "Hyderabad",
+      "pc_name": "MALKAJGIRI",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Lasya Nanditha Sayanna",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 59057,
+        "vote_share": 47.43
+      },
+      "runner_up_2023": {
+        "candidate": "Sriganesh. N",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 41888,
+        "vote_share": 33.64
+      },
+      "margin_2023": 17169,
+      "margin_pct_2023": 13.79,
+      "total_votes_2023": 100945,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "72": {
+      "ac_no": 72,
+      "ac_name": "Kodangal",
+      "district": "Vikarabad",
+      "pc_name": "MAHBUBNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Anumula Revanth Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 107429,
+        "vote_share": 55.05
+      },
+      "runner_up_2023": {
+        "candidate": "Patnam Narender Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 74897,
+        "vote_share": 38.38
+      },
+      "margin_2023": 32532,
+      "margin_pct_2023": 16.67,
+      "total_votes_2023": 182326,
+      "caste_profile": {
+        "sc_madiga": 13.76,
+        "sc_mala": 7.41,
+        "st_lambada": 8.68,
+        "st_koya_gond": 4.09,
+        "bc_mudiraj": 11.28,
+        "bc_munnuru_kapu": 9.93,
+        "bc_padmashali": 6.77,
+        "bc_goud": 7.22,
+        "bc_yadav": 6.32,
+        "bc_other": 3.61,
+        "minority_muslim": 12.31,
+        "oc_reddy": 3.79,
+        "oc_velama": 1.9,
+        "oc_other": 2.93
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "73": {
+      "ac_no": 73,
+      "ac_name": "Narayanpet",
+      "district": "Narayanpet",
+      "pc_name": "MAHBUBNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Chittem Parnika Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 84708,
+        "vote_share": 46.31
+      },
+      "runner_up_2023": {
+        "candidate": "S.Rajender Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 76757,
+        "vote_share": 41.97
+      },
+      "margin_2023": 7951,
+      "margin_pct_2023": 4.35,
+      "total_votes_2023": 161465,
+      "caste_profile": {
+        "sc_madiga": 13.21,
+        "sc_mala": 7.11,
+        "st_lambada": 3.96,
+        "st_koya_gond": 1.87,
+        "bc_mudiraj": 14.82,
+        "bc_munnuru_kapu": 13.04,
+        "bc_padmashali": 8.89,
+        "bc_goud": 9.48,
+        "bc_yadav": 8.3,
+        "bc_other": 4.74,
+        "minority_muslim": 7.94,
+        "oc_reddy": 2.92,
+        "oc_velama": 1.46,
+        "oc_other": 2.25
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "74": {
+      "ac_no": 74,
+      "ac_name": "Mahbubnagar",
+      "district": "Mahabubnagar",
+      "pc_name": "MAHBUBNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Yennam Srinivas Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 87227,
+        "vote_share": 48.04
+      },
+      "runner_up_2023": {
+        "candidate": "V. Srinivas Goud",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 68489,
+        "vote_share": 37.72
+      },
+      "margin_2023": 18738,
+      "margin_pct_2023": 10.32,
+      "total_votes_2023": 155716,
+      "caste_profile": {
+        "sc_madiga": 10.04,
+        "sc_mala": 5.41,
+        "st_lambada": 8.83,
+        "st_koya_gond": 4.16,
+        "bc_mudiraj": 12.66,
+        "bc_munnuru_kapu": 11.14,
+        "bc_padmashali": 7.6,
+        "bc_goud": 8.1,
+        "bc_yadav": 7.09,
+        "bc_other": 4.05,
+        "minority_muslim": 11.82,
+        "oc_reddy": 4.0,
+        "oc_velama": 2.0,
+        "oc_other": 3.09
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "75": {
+      "ac_no": 75,
+      "ac_name": "Jadcherla",
+      "district": "Mahabubnagar",
+      "pc_name": "MAHBUBNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Anirudh Reddy Janampalli",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 90865,
+        "vote_share": 50.3
+      },
+      "runner_up_2023": {
+        "candidate": "Charlakola Laxma Rreddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 75694,
+        "vote_share": 41.9
+      },
+      "margin_2023": 15171,
+      "margin_pct_2023": 8.4,
+      "total_votes_2023": 166559,
+      "caste_profile": {
+        "sc_madiga": 10.04,
+        "sc_mala": 5.41,
+        "st_lambada": 8.83,
+        "st_koya_gond": 4.16,
+        "bc_mudiraj": 12.66,
+        "bc_munnuru_kapu": 11.14,
+        "bc_padmashali": 7.6,
+        "bc_goud": 8.1,
+        "bc_yadav": 7.09,
+        "bc_other": 4.05,
+        "minority_muslim": 11.82,
+        "oc_reddy": 4.0,
+        "oc_velama": 2.0,
+        "oc_other": 3.09
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "76": {
+      "ac_no": 76,
+      "ac_name": "Devarkadra",
+      "district": "Mahabubnagar",
+      "pc_name": "MAHBUBNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Gavinolla Madhusudan Reddy (Gmr)",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 88551,
+        "vote_share": 45.31
+      },
+      "runner_up_2023": {
+        "candidate": "Alla Venkateswar Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 87159,
+        "vote_share": 44.6
+      },
+      "margin_2023": 1392,
+      "margin_pct_2023": 0.71,
+      "total_votes_2023": 175710,
+      "caste_profile": {
+        "sc_madiga": 10.04,
+        "sc_mala": 5.41,
+        "st_lambada": 8.83,
+        "st_koya_gond": 4.16,
+        "bc_mudiraj": 12.66,
+        "bc_munnuru_kapu": 11.14,
+        "bc_padmashali": 7.6,
+        "bc_goud": 8.1,
+        "bc_yadav": 7.09,
+        "bc_other": 4.05,
+        "minority_muslim": 11.82,
+        "oc_reddy": 4.0,
+        "oc_velama": 2.0,
+        "oc_other": 3.09
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "77": {
+      "ac_no": 77,
+      "ac_name": "Makthal",
+      "district": "Narayanpet",
+      "pc_name": "MAHBUBNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Vakiti Srihari",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 74917,
+        "vote_share": 39.88
+      },
+      "runner_up_2023": {
+        "candidate": "Chittem Ram Mohan Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 57392,
+        "vote_share": 30.55
+      },
+      "margin_2023": 17525,
+      "margin_pct_2023": 9.33,
+      "total_votes_2023": 132309,
+      "caste_profile": {
+        "sc_madiga": 13.21,
+        "sc_mala": 7.11,
+        "st_lambada": 3.96,
+        "st_koya_gond": 1.87,
+        "bc_mudiraj": 14.82,
+        "bc_munnuru_kapu": 13.04,
+        "bc_padmashali": 8.89,
+        "bc_goud": 9.48,
+        "bc_yadav": 8.3,
+        "bc_other": 4.74,
+        "minority_muslim": 7.94,
+        "oc_reddy": 2.92,
+        "oc_velama": 1.46,
+        "oc_other": 2.25
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "78": {
+      "ac_no": 78,
+      "ac_name": "Wanaparthy",
+      "district": "Wanaparthy",
+      "pc_name": "NAGARKURNOOL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Megha Reddy Tudi",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 107115,
+        "vote_share": 50.25
+      },
+      "runner_up_2023": {
+        "candidate": "Singireddy Niranjan Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 81795,
+        "vote_share": 38.37
+      },
+      "margin_2023": 25320,
+      "margin_pct_2023": 11.88,
+      "total_votes_2023": 188910,
+      "caste_profile": {
+        "sc_madiga": 12.49,
+        "sc_mala": 6.73,
+        "st_lambada": 6.37,
+        "st_koya_gond": 3.0,
+        "bc_mudiraj": 14.38,
+        "bc_munnuru_kapu": 12.66,
+        "bc_padmashali": 8.63,
+        "bc_goud": 9.21,
+        "bc_yadav": 8.06,
+        "bc_other": 4.6,
+        "minority_muslim": 5.33,
+        "oc_reddy": 3.76,
+        "oc_velama": 1.88,
+        "oc_other": 2.9
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "79": {
+      "ac_no": 79,
+      "ac_name": "Gadwal",
+      "district": "Jogulamba Gadwal",
+      "pc_name": "NAGARKURNOOL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Bandla Krishna Mohan Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 94097,
+        "vote_share": 43.79
+      },
+      "runner_up_2023": {
+        "candidate": "Saritha W/O Thirupataiah",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 87061,
+        "vote_share": 40.52
+      },
+      "margin_2023": 7036,
+      "margin_pct_2023": 3.27,
+      "total_votes_2023": 181158,
+      "caste_profile": {
+        "sc_madiga": 14.74,
+        "sc_mala": 7.93,
+        "st_lambada": 1.24,
+        "st_koya_gond": 0.58,
+        "bc_mudiraj": 15.44,
+        "bc_munnuru_kapu": 13.59,
+        "bc_padmashali": 9.26,
+        "bc_goud": 9.88,
+        "bc_yadav": 8.65,
+        "bc_other": 4.94,
+        "minority_muslim": 7.5,
+        "oc_reddy": 2.75,
+        "oc_velama": 1.38,
+        "oc_other": 2.13
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "80": {
+      "ac_no": 80,
+      "ac_name": "Alampur (SC)",
+      "district": "Jogulamba Gadwal",
+      "pc_name": "NAGARKURNOOL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Vijayudu",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 104060,
+        "vote_share": 52.88
+      },
+      "runner_up_2023": {
+        "candidate": "Dr. S.A.Sampath Kumar",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 73487,
+        "vote_share": 37.34
+      },
+      "margin_2023": 30573,
+      "margin_pct_2023": 15.54,
+      "total_votes_2023": 177547,
+      "caste_profile": {
+        "sc_madiga": 14.74,
+        "sc_mala": 7.93,
+        "st_lambada": 1.24,
+        "st_koya_gond": 0.58,
+        "bc_mudiraj": 15.44,
+        "bc_munnuru_kapu": 13.59,
+        "bc_padmashali": 9.26,
+        "bc_goud": 9.88,
+        "bc_yadav": 8.65,
+        "bc_other": 4.94,
+        "minority_muslim": 7.5,
+        "oc_reddy": 2.75,
+        "oc_velama": 1.38,
+        "oc_other": 2.13
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "81": {
+      "ac_no": 81,
+      "ac_name": "Nagarkurnool",
+      "district": "Nagarkurnool",
+      "pc_name": "NAGARKURNOOL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Dr. Kuchkulla Rajesh  Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 87161,
+        "vote_share": 47.21
+      },
+      "runner_up_2023": {
+        "candidate": "Marri Janardhan Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 81913,
+        "vote_share": 44.37
+      },
+      "margin_2023": 5248,
+      "margin_pct_2023": 2.84,
+      "total_votes_2023": 169074,
+      "caste_profile": {
+        "sc_madiga": 15.35,
+        "sc_mala": 8.26,
+        "st_lambada": 9.03,
+        "st_koya_gond": 4.25,
+        "bc_mudiraj": 12.22,
+        "bc_munnuru_kapu": 10.75,
+        "bc_padmashali": 7.33,
+        "bc_goud": 7.82,
+        "bc_yadav": 6.84,
+        "bc_other": 3.91,
+        "minority_muslim": 5.3,
+        "oc_reddy": 3.93,
+        "oc_velama": 1.96,
+        "oc_other": 3.04
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "82": {
+      "ac_no": 82,
+      "ac_name": "Achampet (SC)",
+      "district": "Nagarkurnool",
+      "pc_name": "NAGARKURNOOL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Chikkudu Vamshi Krishna",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 115337,
+        "vote_share": 58.96
+      },
+      "runner_up_2023": {
+        "candidate": "Guvvala Balaraju",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 66011,
+        "vote_share": 33.74
+      },
+      "margin_2023": 49326,
+      "margin_pct_2023": 25.22,
+      "total_votes_2023": 181348,
+      "caste_profile": {
+        "sc_madiga": 15.35,
+        "sc_mala": 8.26,
+        "st_lambada": 9.03,
+        "st_koya_gond": 4.25,
+        "bc_mudiraj": 12.22,
+        "bc_munnuru_kapu": 10.75,
+        "bc_padmashali": 7.33,
+        "bc_goud": 7.82,
+        "bc_yadav": 6.84,
+        "bc_other": 3.91,
+        "minority_muslim": 5.3,
+        "oc_reddy": 3.93,
+        "oc_velama": 1.96,
+        "oc_other": 3.04
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "83": {
+      "ac_no": 83,
+      "ac_name": "Kalwakurthy",
+      "district": "Nagarkurnool",
+      "pc_name": "NAGARKURNOOL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Narayan Reddy Kasireddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 75858,
+        "vote_share": 37.41
+      },
+      "runner_up_2023": {
+        "candidate": "Thalloju Achari",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 70448,
+        "vote_share": 34.75
+      },
+      "margin_2023": 5410,
+      "margin_pct_2023": 2.67,
+      "total_votes_2023": 146306,
+      "caste_profile": {
+        "sc_madiga": 15.35,
+        "sc_mala": 8.26,
+        "st_lambada": 9.03,
+        "st_koya_gond": 4.25,
+        "bc_mudiraj": 12.22,
+        "bc_munnuru_kapu": 10.75,
+        "bc_padmashali": 7.33,
+        "bc_goud": 7.82,
+        "bc_yadav": 6.84,
+        "bc_other": 3.91,
+        "minority_muslim": 5.3,
+        "oc_reddy": 3.93,
+        "oc_velama": 1.96,
+        "oc_other": 3.04
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "84": {
+      "ac_no": 84,
+      "ac_name": "Shadnagar",
+      "district": "Hyderabad",
+      "pc_name": "MAHBUBNAGAR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "K Shankaraiah",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 77817,
+        "vote_share": 39.79
+      },
+      "runner_up_2023": {
+        "candidate": "Anjaiah Yelganamoni",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 70689,
+        "vote_share": 36.15
+      },
+      "margin_2023": 7128,
+      "margin_pct_2023": 3.65,
+      "total_votes_2023": 148506,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "85": {
+      "ac_no": 85,
+      "ac_name": "Kollapur",
+      "district": "Nagarkurnool",
+      "pc_name": "NAGARKURNOOL(SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Jupally Krishna Rao",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 93609,
+        "vote_share": 48.7
+      },
+      "runner_up_2023": {
+        "candidate": "Beeram Harshavardhan Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 63678,
+        "vote_share": 33.13
+      },
+      "margin_2023": 29931,
+      "margin_pct_2023": 15.57,
+      "total_votes_2023": 157287,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 8.69,
+        "st_koya_gond": 4.09,
+        "bc_mudiraj": 11.76,
+        "bc_munnuru_kapu": 10.35,
+        "bc_padmashali": 7.05,
+        "bc_goud": 7.52,
+        "bc_yadav": 6.58,
+        "bc_other": 3.76,
+        "minority_muslim": 5.1,
+        "oc_reddy": 3.78,
+        "oc_velama": 1.89,
+        "oc_other": 2.92
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "86": {
+      "ac_no": 86,
+      "ac_name": "Devarakonda (ST)",
+      "district": "Nalgonda",
+      "pc_name": "NALGONDA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Balu Naik Nenavath",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 111344,
+        "vote_share": 52.06
+      },
+      "runner_up_2023": {
+        "candidate": "Ravindra Kumar Ramavath",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 81323,
+        "vote_share": 38.02
+      },
+      "margin_2023": 30021,
+      "margin_pct_2023": 14.04,
+      "total_votes_2023": 192667,
+      "caste_profile": {
+        "sc_madiga": 12.75,
+        "sc_mala": 6.87,
+        "st_lambada": 9.73,
+        "st_koya_gond": 4.58,
+        "bc_mudiraj": 12.27,
+        "bc_munnuru_kapu": 10.79,
+        "bc_padmashali": 7.36,
+        "bc_goud": 7.85,
+        "bc_yadav": 6.87,
+        "bc_other": 3.92,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.06,
+        "oc_velama": 2.53,
+        "oc_other": 3.91
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "87": {
+      "ac_no": 87,
+      "ac_name": "Nagarjuna Sagar",
+      "district": "Nalgonda",
+      "pc_name": "NALGONDA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kunduru Jayaveer",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 119831,
+        "vote_share": 59.3
+      },
+      "runner_up_2023": {
+        "candidate": "Nomula Bhagath Kumar",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 63982,
+        "vote_share": 31.66
+      },
+      "margin_2023": 55849,
+      "margin_pct_2023": 27.64,
+      "total_votes_2023": 183813,
+      "caste_profile": {
+        "sc_madiga": 12.75,
+        "sc_mala": 6.87,
+        "st_lambada": 9.73,
+        "st_koya_gond": 4.58,
+        "bc_mudiraj": 12.27,
+        "bc_munnuru_kapu": 10.79,
+        "bc_padmashali": 7.36,
+        "bc_goud": 7.85,
+        "bc_yadav": 6.87,
+        "bc_other": 3.92,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.06,
+        "oc_velama": 2.53,
+        "oc_other": 3.91
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "88": {
+      "ac_no": 88,
+      "ac_name": "Miryalaguda",
+      "district": "Nalgonda",
+      "pc_name": "NALGONDA",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Bathula Laxma Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 114462,
+        "vote_share": 59.08
+      },
+      "runner_up_2023": {
+        "candidate": "Nallamothu Bhaskar Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 65680,
+        "vote_share": 33.9
+      },
+      "margin_2023": 48782,
+      "margin_pct_2023": 25.18,
+      "total_votes_2023": 180142,
+      "caste_profile": {
+        "sc_madiga": 9.23,
+        "sc_mala": 4.97,
+        "st_lambada": 25.84,
+        "st_koya_gond": 12.16,
+        "bc_mudiraj": 8.87,
+        "bc_munnuru_kapu": 7.81,
+        "bc_padmashali": 5.32,
+        "bc_goud": 5.68,
+        "bc_yadav": 4.97,
+        "bc_other": 2.84,
+        "minority_muslim": 3.98,
+        "oc_reddy": 3.66,
+        "oc_velama": 1.83,
+        "oc_other": 2.83
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "89": {
+      "ac_no": 89,
+      "ac_name": "Huzurnagar",
+      "district": "Suryapet",
+      "pc_name": "NALGONDA",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Uttam Kumar Reddy Nalamada",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 116707,
+        "vote_share": 54.21
+      },
+      "runner_up_2023": {
+        "candidate": "Saidi Reddy Shanampudi",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 71819,
+        "vote_share": 33.36
+      },
+      "margin_2023": 44888,
+      "margin_pct_2023": 20.85,
+      "total_votes_2023": 188526,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 8.86,
+        "st_koya_gond": 4.17,
+        "bc_mudiraj": 10.85,
+        "bc_munnuru_kapu": 9.55,
+        "bc_padmashali": 6.51,
+        "bc_goud": 6.94,
+        "bc_yadav": 6.08,
+        "bc_other": 3.47,
+        "minority_muslim": 5.43,
+        "oc_reddy": 5.13,
+        "oc_velama": 2.56,
+        "oc_other": 3.96
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "90": {
+      "ac_no": 90,
+      "ac_name": "Kodad",
+      "district": "Suryapet",
+      "pc_name": "NALGONDA",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Nalamada Padmavathi Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 125783,
+        "vote_share": 60.19
+      },
+      "runner_up_2023": {
+        "candidate": "Bollam. Mallaiah Yadav",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 67611,
+        "vote_share": 32.35
+      },
+      "margin_2023": 58172,
+      "margin_pct_2023": 27.83,
+      "total_votes_2023": 193394,
+      "caste_profile": {
+        "sc_madiga": 9.71,
+        "sc_mala": 5.23,
+        "st_lambada": 25.84,
+        "st_koya_gond": 12.16,
+        "bc_mudiraj": 8.44,
+        "bc_munnuru_kapu": 7.43,
+        "bc_padmashali": 5.07,
+        "bc_goud": 5.4,
+        "bc_yadav": 4.73,
+        "bc_other": 2.7,
+        "minority_muslim": 4.23,
+        "oc_reddy": 3.99,
+        "oc_velama": 1.99,
+        "oc_other": 3.08
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "91": {
+      "ac_no": 91,
+      "ac_name": "Suryapet",
+      "district": "Suryapet",
+      "pc_name": "NALGONDA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Guntakandla Jagadish Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 75143,
+        "vote_share": 36.36
+      },
+      "runner_up_2023": {
+        "candidate": "Damodar Reddy Ramreddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 70537,
+        "vote_share": 34.13
+      },
+      "margin_2023": 4606,
+      "margin_pct_2023": 2.23,
+      "total_votes_2023": 145680,
+      "caste_profile": {
+        "sc_madiga": 13.46,
+        "sc_mala": 7.24,
+        "st_lambada": 9.55,
+        "st_koya_gond": 4.5,
+        "bc_mudiraj": 11.71,
+        "bc_munnuru_kapu": 10.3,
+        "bc_padmashali": 7.02,
+        "bc_goud": 7.49,
+        "bc_yadav": 6.55,
+        "bc_other": 3.75,
+        "minority_muslim": 5.86,
+        "oc_reddy": 5.53,
+        "oc_velama": 2.77,
+        "oc_other": 4.27
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "92": {
+      "ac_no": 92,
+      "ac_name": "Nalgonda",
+      "district": "Nalgonda",
+      "pc_name": "NALGONDA",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Komati Reddy Venkat Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 107405,
+        "vote_share": 52.64
+      },
+      "runner_up_2023": {
+        "candidate": "Kancharla. Bhupal Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 53073,
+        "vote_share": 26.01
+      },
+      "margin_2023": 54332,
+      "margin_pct_2023": 26.63,
+      "total_votes_2023": 160478,
+      "caste_profile": {
+        "sc_madiga": 12.75,
+        "sc_mala": 6.87,
+        "st_lambada": 9.73,
+        "st_koya_gond": 4.58,
+        "bc_mudiraj": 12.27,
+        "bc_munnuru_kapu": 10.79,
+        "bc_padmashali": 7.36,
+        "bc_goud": 7.85,
+        "bc_yadav": 6.87,
+        "bc_other": 3.92,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.06,
+        "oc_velama": 2.53,
+        "oc_other": 3.91
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "93": {
+      "ac_no": 93,
+      "ac_name": "Munugode",
+      "district": "Nalgonda",
+      "pc_name": "BHONGIR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Komatireddy Raj Gopal Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 119624,
+        "vote_share": 51.21
+      },
+      "runner_up_2023": {
+        "candidate": "Koosukuntla Prabhakar Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 79034,
+        "vote_share": 33.83
+      },
+      "margin_2023": 40590,
+      "margin_pct_2023": 17.38,
+      "total_votes_2023": 198658,
+      "caste_profile": {
+        "sc_madiga": 12.75,
+        "sc_mala": 6.87,
+        "st_lambada": 9.73,
+        "st_koya_gond": 4.58,
+        "bc_mudiraj": 12.27,
+        "bc_munnuru_kapu": 10.79,
+        "bc_padmashali": 7.36,
+        "bc_goud": 7.85,
+        "bc_yadav": 6.87,
+        "bc_other": 3.92,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.06,
+        "oc_velama": 2.53,
+        "oc_other": 3.91
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "94": {
+      "ac_no": 94,
+      "ac_name": "Bhongir",
+      "district": "Yadadri Bhuvanagiri",
+      "pc_name": "BHONGIR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Kumbam Anil Kumar Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 102742,
+        "vote_share": 52.4
+      },
+      "runner_up_2023": {
+        "candidate": "Pailla Shekar Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 76541,
+        "vote_share": 39.04
+      },
+      "margin_2023": 26201,
+      "margin_pct_2023": 13.36,
+      "total_votes_2023": 179283,
+      "caste_profile": {
+        "sc_madiga": 12.45,
+        "sc_mala": 6.7,
+        "st_lambada": 4.45,
+        "st_koya_gond": 2.1,
+        "bc_mudiraj": 14.96,
+        "bc_munnuru_kapu": 13.16,
+        "bc_padmashali": 8.97,
+        "bc_goud": 9.57,
+        "bc_yadav": 8.37,
+        "bc_other": 4.79,
+        "minority_muslim": 3.51,
+        "oc_reddy": 4.83,
+        "oc_velama": 2.41,
+        "oc_other": 3.73
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "95": {
+      "ac_no": 95,
+      "ac_name": "Nakrekal (SC)",
+      "district": "Nalgonda",
+      "pc_name": "BHONGIR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Vemula Veeresham",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 133540,
+        "vote_share": 60.97
+      },
+      "runner_up_2023": {
+        "candidate": "Chirumarthy Lingaiah",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 64701,
+        "vote_share": 29.54
+      },
+      "margin_2023": 68839,
+      "margin_pct_2023": 31.43,
+      "total_votes_2023": 198241,
+      "caste_profile": {
+        "sc_madiga": 12.75,
+        "sc_mala": 6.87,
+        "st_lambada": 9.73,
+        "st_koya_gond": 4.58,
+        "bc_mudiraj": 12.27,
+        "bc_munnuru_kapu": 10.79,
+        "bc_padmashali": 7.36,
+        "bc_goud": 7.85,
+        "bc_yadav": 6.87,
+        "bc_other": 3.92,
+        "minority_muslim": 5.5,
+        "oc_reddy": 5.06,
+        "oc_velama": 2.53,
+        "oc_other": 3.91
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "96": {
+      "ac_no": 96,
+      "ac_name": "Thungathurthi (SC)",
+      "district": "Suryapet",
+      "pc_name": "BHONGIR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Mandula Samel",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 129535,
+        "vote_share": 57.53
+      },
+      "runner_up_2023": {
+        "candidate": "Gadari Kishore Kumar",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 78441,
+        "vote_share": 34.84
+      },
+      "margin_2023": 51094,
+      "margin_pct_2023": 22.69,
+      "total_votes_2023": 207976,
+      "caste_profile": {
+        "sc_madiga": 13.46,
+        "sc_mala": 7.24,
+        "st_lambada": 9.55,
+        "st_koya_gond": 4.5,
+        "bc_mudiraj": 11.71,
+        "bc_munnuru_kapu": 10.3,
+        "bc_padmashali": 7.02,
+        "bc_goud": 7.49,
+        "bc_yadav": 6.55,
+        "bc_other": 3.75,
+        "minority_muslim": 5.86,
+        "oc_reddy": 5.53,
+        "oc_velama": 2.77,
+        "oc_other": 4.27
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "97": {
+      "ac_no": 97,
+      "ac_name": "Alair",
+      "district": "Yadadri Bhuvanagiri",
+      "pc_name": "BHONGIR",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Ilaiah Beerla",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 122140,
+        "vote_share": 57.41
+      },
+      "runner_up_2023": {
+        "candidate": "Gongidi Sunitha",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 72504,
+        "vote_share": 34.08
+      },
+      "margin_2023": 49636,
+      "margin_pct_2023": 23.33,
+      "total_votes_2023": 194644,
+      "caste_profile": {
+        "sc_madiga": 12.45,
+        "sc_mala": 6.7,
+        "st_lambada": 4.45,
+        "st_koya_gond": 2.1,
+        "bc_mudiraj": 14.96,
+        "bc_munnuru_kapu": 13.16,
+        "bc_padmashali": 8.97,
+        "bc_goud": 9.57,
+        "bc_yadav": 8.37,
+        "bc_other": 4.79,
+        "minority_muslim": 3.51,
+        "oc_reddy": 4.83,
+        "oc_velama": 2.41,
+        "oc_other": 3.73
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "98": {
+      "ac_no": 98,
+      "ac_name": "Jangoan",
+      "district": "Jangaon",
+      "pc_name": "BHONGIR",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Palla Rajeshwar Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 98975,
+        "vote_share": 48.61
+      },
+      "runner_up_2023": {
+        "candidate": "Kommuri Pratap Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 83192,
+        "vote_share": 40.86
+      },
+      "margin_2023": 15783,
+      "margin_pct_2023": 7.75,
+      "total_votes_2023": 182167,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 7.97,
+        "st_koya_gond": 3.75,
+        "bc_mudiraj": 12.94,
+        "bc_munnuru_kapu": 11.39,
+        "bc_padmashali": 7.77,
+        "bc_goud": 8.28,
+        "bc_yadav": 7.25,
+        "bc_other": 4.14,
+        "minority_muslim": 2.98,
+        "oc_reddy": 3.1,
+        "oc_velama": 1.55,
+        "oc_other": 2.39
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "99": {
+      "ac_no": 99,
+      "ac_name": "Ghanpur (Station) (SC)",
+      "district": "Jangaon",
+      "pc_name": "WARANGAL(SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Kadiyam Srihari",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 101696,
+        "vote_share": 47.13
+      },
+      "runner_up_2023": {
+        "candidate": "Indira Singapuram",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 93917,
+        "vote_share": 43.53
+      },
+      "margin_2023": 7779,
+      "margin_pct_2023": 3.61,
+      "total_votes_2023": 195613,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 7.97,
+        "st_koya_gond": 3.75,
+        "bc_mudiraj": 12.94,
+        "bc_munnuru_kapu": 11.39,
+        "bc_padmashali": 7.77,
+        "bc_goud": 8.28,
+        "bc_yadav": 7.25,
+        "bc_other": 4.14,
+        "minority_muslim": 2.98,
+        "oc_reddy": 3.1,
+        "oc_velama": 1.55,
+        "oc_other": 2.39
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "100": {
+      "ac_no": 100,
+      "ac_name": "Palakurthi",
+      "district": "Jangaon",
+      "pc_name": "WARANGAL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Yashaswini Mamidala",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 126848,
+        "vote_share": 57.62
+      },
+      "runner_up_2023": {
+        "candidate": "Dayakar Rao Errabelli",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 79214,
+        "vote_share": 35.98
+      },
+      "margin_2023": 47634,
+      "margin_pct_2023": 21.64,
+      "total_votes_2023": 206062,
+      "caste_profile": {
+        "sc_madiga": 14.27,
+        "sc_mala": 7.69,
+        "st_lambada": 8.46,
+        "st_koya_gond": 3.98,
+        "bc_mudiraj": 13.74,
+        "bc_munnuru_kapu": 12.09,
+        "bc_padmashali": 8.25,
+        "bc_goud": 8.8,
+        "bc_yadav": 7.7,
+        "bc_other": 4.4,
+        "minority_muslim": 3.16,
+        "oc_reddy": 3.29,
+        "oc_velama": 1.64,
+        "oc_other": 2.54
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "101": {
+      "ac_no": 101,
+      "ac_name": "Dornakal (ST)",
+      "district": "Mahabubabad",
+      "pc_name": "MAHABUBABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Jatoth Ram Chander Naik",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 115587,
+        "vote_share": 60.01
+      },
+      "runner_up_2023": {
+        "candidate": "Dharamsoth Redya Naik",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 62456,
+        "vote_share": 32.42
+      },
+      "margin_2023": 53131,
+      "margin_pct_2023": 27.58,
+      "total_votes_2023": 178043,
+      "caste_profile": {
+        "sc_madiga": 9.51,
+        "sc_mala": 5.12,
+        "st_lambada": 27.24,
+        "st_koya_gond": 12.82,
+        "bc_mudiraj": 9.13,
+        "bc_munnuru_kapu": 8.03,
+        "bc_padmashali": 5.48,
+        "bc_goud": 5.84,
+        "bc_yadav": 5.11,
+        "bc_other": 2.92,
+        "minority_muslim": 3.01,
+        "oc_reddy": 2.55,
+        "oc_velama": 1.28,
+        "oc_other": 1.97
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "102": {
+      "ac_no": 102,
+      "ac_name": "Mahabubabad (ST)",
+      "district": "Mahabubabad",
+      "pc_name": "MAHABUBABAD(ST)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Dr. Murali Naik Bhukya",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 116644,
+        "vote_share": 55.46
+      },
+      "runner_up_2023": {
+        "candidate": "Banoth Shankar Naik",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 66473,
+        "vote_share": 31.6
+      },
+      "margin_2023": 50171,
+      "margin_pct_2023": 23.85,
+      "total_votes_2023": 183117,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 23.45,
+        "st_koya_gond": 11.04,
+        "bc_mudiraj": 7.86,
+        "bc_munnuru_kapu": 6.91,
+        "bc_padmashali": 4.71,
+        "bc_goud": 5.03,
+        "bc_yadav": 4.4,
+        "bc_other": 2.51,
+        "minority_muslim": 2.59,
+        "oc_reddy": 2.2,
+        "oc_velama": 1.1,
+        "oc_other": 1.7
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "103": {
+      "ac_no": 103,
+      "ac_name": "Narsampet",
+      "district": "Warangal",
+      "pc_name": "MAHABUBABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Donthi Madhava Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 104185,
+        "vote_share": 50.73
+      },
+      "runner_up_2023": {
+        "candidate": "Peddi Sudarshan Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 85296,
+        "vote_share": 41.53
+      },
+      "margin_2023": 18889,
+      "margin_pct_2023": 9.2,
+      "total_votes_2023": 189481,
+      "caste_profile": {
+        "sc_madiga": 10.96,
+        "sc_mala": 5.9,
+        "st_lambada": 9.32,
+        "st_koya_gond": 4.39,
+        "bc_mudiraj": 13.43,
+        "bc_munnuru_kapu": 11.81,
+        "bc_padmashali": 8.05,
+        "bc_goud": 8.59,
+        "bc_yadav": 7.52,
+        "bc_other": 4.3,
+        "minority_muslim": 7.97,
+        "oc_reddy": 3.41,
+        "oc_velama": 1.71,
+        "oc_other": 2.64
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "104": {
+      "ac_no": 104,
+      "ac_name": "Parkal",
+      "district": "Hyderabad",
+      "pc_name": "WARANGAL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Revuri Prakash Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 72573,
+        "vote_share": 38.46
+      },
+      "runner_up_2023": {
+        "candidate": "Challa. Dharma Reddy.",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 64632,
+        "vote_share": 34.25
+      },
+      "margin_2023": 7941,
+      "margin_pct_2023": 4.21,
+      "total_votes_2023": 137205,
+      "caste_profile": {
+        "sc_madiga": 7.01,
+        "sc_mala": 3.77,
+        "st_lambada": 1.81,
+        "st_koya_gond": 0.85,
+        "bc_mudiraj": 7.46,
+        "bc_munnuru_kapu": 6.56,
+        "bc_padmashali": 4.47,
+        "bc_goud": 4.77,
+        "bc_yadav": 4.17,
+        "bc_other": 2.39,
+        "minority_muslim": 20.79,
+        "oc_reddy": 15.82,
+        "oc_velama": 7.91,
+        "oc_other": 12.22
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "105": {
+      "ac_no": 105,
+      "ac_name": "Warangal West",
+      "district": "Hyderabad",
+      "pc_name": "WARANGAL(SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Naini Rajender Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 72649,
+        "vote_share": 43.5
+      },
+      "runner_up_2023": {
+        "candidate": "Dasyam Vinay Bhasker",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 57318,
+        "vote_share": 34.32
+      },
+      "margin_2023": 15331,
+      "margin_pct_2023": 9.18,
+      "total_votes_2023": 129967,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 1.49,
+        "st_koya_gond": 0.7,
+        "bc_mudiraj": 6.14,
+        "bc_munnuru_kapu": 5.4,
+        "bc_padmashali": 3.68,
+        "bc_goud": 3.93,
+        "bc_yadav": 3.44,
+        "bc_other": 1.97,
+        "minority_muslim": 17.13,
+        "oc_reddy": 13.03,
+        "oc_velama": 6.52,
+        "oc_other": 10.07
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "106": {
+      "ac_no": 106,
+      "ac_name": "Warangal East",
+      "district": "Hyderabad",
+      "pc_name": "WARANGAL(SC)",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Konda Surekha",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 67757,
+        "vote_share": 39.47
+      },
+      "runner_up_2023": {
+        "candidate": "Errabelli Pradeep Kumar Rao",
+        "party": "BJP",
+        "raw_party": "Bharatiya Janata Party",
+        "votes": 52105,
+        "vote_share": 30.35
+      },
+      "margin_2023": 15652,
+      "margin_pct_2023": 9.12,
+      "total_votes_2023": 119862,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 1.49,
+        "st_koya_gond": 0.7,
+        "bc_mudiraj": 6.14,
+        "bc_munnuru_kapu": 5.4,
+        "bc_padmashali": 3.68,
+        "bc_goud": 3.93,
+        "bc_yadav": 3.44,
+        "bc_other": 1.97,
+        "minority_muslim": 17.13,
+        "oc_reddy": 13.03,
+        "oc_velama": 6.52,
+        "oc_other": 10.07
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "107": {
+      "ac_no": 107,
+      "ac_name": "Waradhanapet (SC)",
+      "district": "Warangal",
+      "pc_name": "WARANGAL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "K.R.Nagaraj.K",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 106696,
+        "vote_share": 48.77
+      },
+      "runner_up_2023": {
+        "candidate": "Aroori Ramesh",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 87238,
+        "vote_share": 39.88
+      },
+      "margin_2023": 19458,
+      "margin_pct_2023": 8.89,
+      "total_votes_2023": 193934,
+      "caste_profile": {
+        "sc_madiga": 10.96,
+        "sc_mala": 5.9,
+        "st_lambada": 9.32,
+        "st_koya_gond": 4.39,
+        "bc_mudiraj": 13.43,
+        "bc_munnuru_kapu": 11.81,
+        "bc_padmashali": 8.05,
+        "bc_goud": 8.59,
+        "bc_yadav": 7.52,
+        "bc_other": 4.3,
+        "minority_muslim": 7.97,
+        "oc_reddy": 3.41,
+        "oc_velama": 1.71,
+        "oc_other": 2.64
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "108": {
+      "ac_no": 108,
+      "ac_name": "Bhupalpalle",
+      "district": "Jayashankar Bhupalpally",
+      "pc_name": "WARANGAL(SC)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Gandra Satyanarayana Rao",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 123116,
+        "vote_share": 54.55
+      },
+      "runner_up_2023": {
+        "candidate": "Gandra Venkata Ramana Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 70417,
+        "vote_share": 31.2
+      },
+      "margin_2023": 52699,
+      "margin_pct_2023": 23.35,
+      "total_votes_2023": 193533,
+      "caste_profile": {
+        "sc_madiga": 15.17,
+        "sc_mala": 8.17,
+        "st_lambada": 7.28,
+        "st_koya_gond": 3.42,
+        "bc_mudiraj": 13.85,
+        "bc_munnuru_kapu": 12.19,
+        "bc_padmashali": 8.31,
+        "bc_goud": 8.86,
+        "bc_yadav": 7.76,
+        "bc_other": 4.43,
+        "minority_muslim": 2.71,
+        "oc_reddy": 3.45,
+        "oc_velama": 1.73,
+        "oc_other": 2.67
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "109": {
+      "ac_no": 109,
+      "ac_name": "Mulug (ST)",
+      "district": "Mulugu",
+      "pc_name": "MAHABUBABAD(ST)",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Danasari Anasuya Seethakka",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 102267,
+        "vote_share": 54.52
+      },
+      "runner_up_2023": {
+        "candidate": "Nagajyothi Bade",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 68567,
+        "vote_share": 36.55
+      },
+      "margin_2023": 33700,
+      "margin_pct_2023": 17.97,
+      "total_votes_2023": 170834,
+      "caste_profile": {
+        "sc_madiga": 10.99,
+        "sc_mala": 5.92,
+        "st_lambada": 22.37,
+        "st_koya_gond": 10.53,
+        "bc_mudiraj": 10.05,
+        "bc_munnuru_kapu": 8.85,
+        "bc_padmashali": 6.03,
+        "bc_goud": 6.43,
+        "bc_yadav": 5.63,
+        "bc_other": 3.22,
+        "minority_muslim": 2.94,
+        "oc_reddy": 3.09,
+        "oc_velama": 1.55,
+        "oc_other": 2.39
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "110": {
+      "ac_no": 110,
+      "ac_name": "Pinapaka (ST)",
+      "district": "Bhadradri Kothagudem",
+      "pc_name": "MAHABUBABAD(ST)",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Payam Venkateswarlu",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 90510,
+        "vote_share": 56.61
+      },
+      "runner_up_2023": {
+        "candidate": "Kantha Rao Rega",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 56004,
+        "vote_share": 35.03
+      },
+      "margin_2023": 34506,
+      "margin_pct_2023": 21.58,
+      "total_votes_2023": 146514,
+      "caste_profile": {
+        "sc_madiga": 9.59,
+        "sc_mala": 5.16,
+        "st_lambada": 27.44,
+        "st_koya_gond": 12.91,
+        "bc_mudiraj": 7.5,
+        "bc_munnuru_kapu": 6.6,
+        "bc_padmashali": 4.5,
+        "bc_goud": 4.8,
+        "bc_yadav": 4.2,
+        "bc_other": 2.4,
+        "minority_muslim": 4.96,
+        "oc_reddy": 4.37,
+        "oc_velama": 2.18,
+        "oc_other": 3.38
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "111": {
+      "ac_no": 111,
+      "ac_name": "Yellandu (ST)",
+      "district": "Bhadradri Kothagudem",
+      "pc_name": "MAHABUBABAD(ST)",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Koram Kanakaiah",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 109171,
+        "vote_share": 61.22
+      },
+      "runner_up_2023": {
+        "candidate": "Banoth Hari Priya",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 51862,
+        "vote_share": 29.08
+      },
+      "margin_2023": 57309,
+      "margin_pct_2023": 32.13,
+      "total_votes_2023": 161033,
+      "caste_profile": {
+        "sc_madiga": 9.59,
+        "sc_mala": 5.16,
+        "st_lambada": 27.44,
+        "st_koya_gond": 12.91,
+        "bc_mudiraj": 7.5,
+        "bc_munnuru_kapu": 6.6,
+        "bc_padmashali": 4.5,
+        "bc_goud": 4.8,
+        "bc_yadav": 4.2,
+        "bc_other": 2.4,
+        "minority_muslim": 4.96,
+        "oc_reddy": 4.37,
+        "oc_velama": 2.18,
+        "oc_other": 3.38
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "112": {
+      "ac_no": 112,
+      "ac_name": "Khammam",
+      "district": "Khammam",
+      "pc_name": "KHAMMAM",
+      "reservation": "GEN",
+      "winner_2023": {
+        "candidate": "Tummala Nageswara Rao",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 136016,
+        "vote_share": 57.58
+      },
+      "runner_up_2023": {
+        "candidate": "Ajay Kumar Puvvada",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 86635,
+        "vote_share": 36.67
+      },
+      "margin_2023": 49381,
+      "margin_pct_2023": 20.9,
+      "total_votes_2023": 222651,
+      "caste_profile": {
+        "sc_madiga": 14.51,
+        "sc_mala": 7.81,
+        "st_lambada": 10.37,
+        "st_koya_gond": 4.88,
+        "bc_mudiraj": 9.96,
+        "bc_munnuru_kapu": 8.77,
+        "bc_padmashali": 5.98,
+        "bc_goud": 6.38,
+        "bc_yadav": 5.58,
+        "bc_other": 3.19,
+        "minority_muslim": 6.56,
+        "oc_reddy": 7.04,
+        "oc_velama": 3.52,
+        "oc_other": 5.44
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "113": {
+      "ac_no": 113,
+      "ac_name": "Palair",
+      "district": "Khammam",
+      "pc_name": "KHAMMAM",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Ponguleti Srinivasa Reddy",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 127820,
+        "vote_share": 58.94
+      },
+      "runner_up_2023": {
+        "candidate": "Kandala Upender Reddy",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 71170,
+        "vote_share": 32.82
+      },
+      "margin_2023": 56650,
+      "margin_pct_2023": 26.12,
+      "total_votes_2023": 198990,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 9.81,
+        "st_koya_gond": 4.62,
+        "bc_mudiraj": 9.43,
+        "bc_munnuru_kapu": 8.3,
+        "bc_padmashali": 5.66,
+        "bc_goud": 6.03,
+        "bc_yadav": 5.28,
+        "bc_other": 3.02,
+        "minority_muslim": 6.21,
+        "oc_reddy": 6.67,
+        "oc_velama": 3.33,
+        "oc_other": 5.15
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "114": {
+      "ac_no": 114,
+      "ac_name": "Madhira (SC)",
+      "district": "Khammam",
+      "pc_name": "KHAMMAM",
+      "reservation": "SC",
+      "winner_2023": {
+        "candidate": "Bhatti Vikramarka Mallu",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 108970,
+        "vote_share": 55.49
+      },
+      "runner_up_2023": {
+        "candidate": "Kamal Raju Lingala",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 73518,
+        "vote_share": 37.44
+      },
+      "margin_2023": 35452,
+      "margin_pct_2023": 18.05,
+      "total_votes_2023": 182488,
+      "caste_profile": {
+        "sc_madiga": 17.23,
+        "sc_mala": 9.27,
+        "st_lambada": 9.81,
+        "st_koya_gond": 4.62,
+        "bc_mudiraj": 9.43,
+        "bc_munnuru_kapu": 8.3,
+        "bc_padmashali": 5.66,
+        "bc_goud": 6.03,
+        "bc_yadav": 5.28,
+        "bc_other": 3.02,
+        "minority_muslim": 6.21,
+        "oc_reddy": 6.67,
+        "oc_velama": 3.33,
+        "oc_other": 5.15
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "115": {
+      "ac_no": 115,
+      "ac_name": "Wyra (ST)",
+      "district": "Khammam",
+      "pc_name": "KHAMMAM",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Ramdas Maloth",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 93913,
+        "vote_share": 55.44
+      },
+      "runner_up_2023": {
+        "candidate": "Madanlal Banoth",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 60868,
+        "vote_share": 35.93
+      },
+      "margin_2023": 33045,
+      "margin_pct_2023": 19.51,
+      "total_votes_2023": 154781,
+      "caste_profile": {
+        "sc_madiga": 10.61,
+        "sc_mala": 5.71,
+        "st_lambada": 25.84,
+        "st_koya_gond": 12.16,
+        "bc_mudiraj": 7.29,
+        "bc_munnuru_kapu": 6.42,
+        "bc_padmashali": 4.37,
+        "bc_goud": 4.67,
+        "bc_yadav": 4.08,
+        "bc_other": 2.33,
+        "minority_muslim": 4.8,
+        "oc_reddy": 5.15,
+        "oc_velama": 2.58,
+        "oc_other": 3.98
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "116": {
+      "ac_no": 116,
+      "ac_name": "Sathupalle (SC)",
+      "district": "Khammam",
+      "pc_name": "KHAMMAM",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Matta Ragamayee",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 111245,
+        "vote_share": 51.66
+      },
+      "runner_up_2023": {
+        "candidate": "Sandra Venkata Veeraiah",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 91805,
+        "vote_share": 42.63
+      },
+      "margin_2023": 19440,
+      "margin_pct_2023": 9.03,
+      "total_votes_2023": 203050,
+      "caste_profile": {
+        "sc_madiga": 10.61,
+        "sc_mala": 5.71,
+        "st_lambada": 25.84,
+        "st_koya_gond": 12.16,
+        "bc_mudiraj": 7.29,
+        "bc_munnuru_kapu": 6.42,
+        "bc_padmashali": 4.37,
+        "bc_goud": 4.67,
+        "bc_yadav": 4.08,
+        "bc_other": 2.33,
+        "minority_muslim": 4.8,
+        "oc_reddy": 5.15,
+        "oc_velama": 2.58,
+        "oc_other": 3.98
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "117": {
+      "ac_no": 117,
+      "ac_name": "Kothagudem",
+      "district": "Bhadradri Kothagudem",
+      "pc_name": "KHAMMAM",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Kunamneni Sambasiva Rao",
+        "party": "CPI",
+        "raw_party": "Communist Party of India",
+        "votes": 80336,
+        "vote_share": 42.75
+      },
+      "runner_up_2023": {
+        "candidate": "Jalagam Venkat Rao",
+        "party": "AIFB",
+        "raw_party": "All India Forward Bloc",
+        "votes": 53789,
+        "vote_share": 28.62
+      },
+      "margin_2023": 26547,
+      "margin_pct_2023": 14.13,
+      "total_votes_2023": 134125,
+      "caste_profile": {
+        "sc_madiga": 9.59,
+        "sc_mala": 5.16,
+        "st_lambada": 27.44,
+        "st_koya_gond": 12.91,
+        "bc_mudiraj": 7.5,
+        "bc_munnuru_kapu": 6.6,
+        "bc_padmashali": 4.5,
+        "bc_goud": 4.8,
+        "bc_yadav": 4.2,
+        "bc_other": 2.4,
+        "minority_muslim": 4.96,
+        "oc_reddy": 4.37,
+        "oc_velama": 2.18,
+        "oc_other": 3.38
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "118": {
+      "ac_no": 118,
+      "ac_name": "Aswaraopeta (ST)",
+      "district": "Bhadradri Kothagudem",
+      "pc_name": "KHAMMAM",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Adinarayana. Jare",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 74993,
+        "vote_share": 55.05
+      },
+      "runner_up_2023": {
+        "candidate": "Mecha Nageswara Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 46088,
+        "vote_share": 33.83
+      },
+      "margin_2023": 28905,
+      "margin_pct_2023": 21.22,
+      "total_votes_2023": 121081,
+      "caste_profile": {
+        "sc_madiga": 9.59,
+        "sc_mala": 5.16,
+        "st_lambada": 27.44,
+        "st_koya_gond": 12.91,
+        "bc_mudiraj": 7.5,
+        "bc_munnuru_kapu": 6.6,
+        "bc_padmashali": 4.5,
+        "bc_goud": 4.8,
+        "bc_yadav": 4.2,
+        "bc_other": 2.4,
+        "minority_muslim": 4.96,
+        "oc_reddy": 4.37,
+        "oc_velama": 2.18,
+        "oc_other": 3.38
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    },
+    "119": {
+      "ac_no": 119,
+      "ac_name": "Bhadrachalam (ST)",
+      "district": "Bhadradri Kothagudem",
+      "pc_name": "MAHABUBABAD(ST)",
+      "reservation": "ST",
+      "winner_2023": {
+        "candidate": "Dr. Tellam Venkata Rao",
+        "party": "BRS",
+        "raw_party": "Bharat Rashtra Samithi",
+        "votes": 53252,
+        "vote_share": 45.08
+      },
+      "runner_up_2023": {
+        "candidate": "Podem Veeraiah",
+        "party": "INC",
+        "raw_party": "Indian National Congress",
+        "votes": 47533,
+        "vote_share": 40.24
+      },
+      "margin_2023": 5719,
+      "margin_pct_2023": 4.84,
+      "total_votes_2023": 100785,
+      "caste_profile": {
+        "sc_madiga": 9.59,
+        "sc_mala": 5.16,
+        "st_lambada": 27.44,
+        "st_koya_gond": 12.91,
+        "bc_mudiraj": 7.5,
+        "bc_munnuru_kapu": 6.6,
+        "bc_padmashali": 4.5,
+        "bc_goud": 4.8,
+        "bc_yadav": 4.2,
+        "bc_other": 2.4,
+        "minority_muslim": 4.96,
+        "oc_reddy": 4.37,
+        "oc_velama": 2.18,
+        "oc_other": 3.38
+      },
+      "age_profile": {
+        "youth_18_25": 18.5,
+        "age_26_40": 37.8,
+        "age_41_60": 28.5,
+        "age_60_plus": 15.2
+      }
+    }
+  }
+}
