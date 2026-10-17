@@ -12,8 +12,14 @@ import {
   CheckCircle,
   TrendingUp,
   Copy,
-  Check
+  Check,
+  FileText,
+  Star,
+  AlertTriangle,
 } from 'lucide-react';
+import { StarCampaignerAllocator } from './StarCampaignerAllocator';
+import { DefectionRebelModeler } from './DefectionRebelModeler';
+import { ExecutiveBriefingModal } from './ExecutiveBriefingModal';
 
 interface ActionsViewProps {
   data: SeeepcDataset;
@@ -35,6 +41,8 @@ export const ActionsView: React.FC<ActionsViewProps> = ({
   const [targetParty, setTargetParty] = useState<'INC' | 'BRS' | 'BJP'>('INC');
   const [copiedMemo, setCopiedMemo] = useState(false);
   const [focusedAc] = useState<number | null>(initialSelectedAc || null);
+  const [actionSubTab, setActionSubTab] = useState<'tactical' | 'star_campaigners' | 'defections'>('tactical');
+  const [isExecutiveModalOpen, setIsExecutiveModalOpen] = useState(false);
 
   // Per-AC action allocations
   const [allocations, setAllocations] = useState<Record<number, ActionAllocation>>(() => {
@@ -255,9 +263,73 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
 
   return (
     <div className="space-y-6">
-      {/* Executive Command Header */}
-      <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-xl border border-slate-800 space-y-5">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+      {/* Top Playbook Sub-Navigation & Feature #11 Executive Briefing Trigger */}
+      <div className="flex flex-wrap items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-slate-200 shadow-xs">
+        <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
+          <button
+            onClick={() => setActionSubTab('tactical')}
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all cursor-pointer ${
+              actionSubTab === 'tactical'
+                ? 'bg-white text-indigo-700 shadow-xs font-black'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Target className="w-3.5 h-3.5 text-indigo-600" />
+            <span>Resource Points Allocator</span>
+          </button>
+
+          <button
+            onClick={() => setActionSubTab('star_campaigners')}
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all cursor-pointer ${
+              actionSubTab === 'star_campaigners'
+                ? 'bg-white text-amber-700 shadow-xs font-black'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <Star className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+            <span>Star Campaigners (#10)</span>
+          </button>
+
+          <button
+            onClick={() => setActionSubTab('defections')}
+            className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all cursor-pointer ${
+              actionSubTab === 'defections'
+                ? 'bg-white text-rose-700 shadow-xs font-black'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            <AlertTriangle className="w-3.5 h-3.5 text-rose-600" />
+            <span>Defections &amp; Rebels (#4)</span>
+          </button>
+        </div>
+
+        {/* 1-Click Executive Intelligence Briefing (#11) */}
+        <button
+          onClick={() => setIsExecutiveModalOpen(true)}
+          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-indigo-700 via-indigo-600 to-indigo-800 hover:from-indigo-600 hover:to-indigo-700 text-white font-black text-xs rounded-xl shadow-md transition-all cursor-pointer border border-indigo-500/30 group"
+          title="Open printable C-Suite Executive Intelligence Briefing Dossier"
+        >
+          <FileText className="w-4 h-4 text-indigo-200 group-hover:scale-110 transition-transform" />
+          <span>1-Click Executive Briefing (#11)</span>
+          <span className="text-[10px] bg-indigo-500/40 text-indigo-100 font-mono px-1.5 py-0.2 rounded border border-indigo-400/40">
+            Dossier &amp; Print
+          </span>
+        </button>
+      </div>
+
+      {actionSubTab === 'star_campaigners' && (
+        <StarCampaignerAllocator data={data} onOpenDossier={onOpenDossier} />
+      )}
+
+      {actionSubTab === 'defections' && (
+        <DefectionRebelModeler data={data} onOpenDossier={onOpenDossier} />
+      )}
+
+      {actionSubTab === 'tactical' && (
+        <div className="space-y-6">
+          {/* Executive Command Header */}
+          <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-xl border border-slate-800 space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="bg-emerald-600 text-white font-mono text-xs font-black px-2.5 py-0.5 rounded-md flex items-center gap-1">
@@ -562,5 +634,15 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
         </div>
       </div>
     </div>
-  );
+  )}
+
+  {/* Feature #11: 1-Click Executive Intelligence Briefing Modal */}
+  <ExecutiveBriefingModal
+    isOpen={isExecutiveModalOpen}
+    onClose={() => setIsExecutiveModalOpen(false)}
+    data={data}
+    targetParty={targetParty}
+  />
+</div>
+);
 };

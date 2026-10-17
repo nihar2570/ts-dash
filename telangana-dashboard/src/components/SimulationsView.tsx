@@ -15,6 +15,8 @@ import {
 } from 'lucide-react';
 import { SwingStudioModal } from './SwingStudioModal';
 import type { MacroSwing, PartySwing } from './SwingStudioModal';
+import { AdvancedSimulationSuite, URBAN_AC_NOS } from './AdvancedSimulationSuite';
+import type { TurnoutSettings } from './AdvancedSimulationSuite';
 
 export const READABLE_COMMUNITY_NAMES: Record<string, string> = {
   sc_madiga: 'SC Madiga',
@@ -72,6 +74,11 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
   });
 
   const [macroSwing, setMacroSwing] = useState<MacroSwing>({ INC: 0, BRS: 0, BJP: 0 });
+  const [turnoutSettings, setTurnoutSettings] = useState<TurnoutSettings>({
+    urbanShift: 0,
+    ruralShift: 0,
+    femaleShift: 0,
+  });
   const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
   const [activePreset, setActivePreset] = useState<string>('baseline');
   const [selectedBubbleAc, setSelectedBubbleAc] = useState<number | null>(null);
@@ -156,6 +163,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       setMacroSwing({ INC: 3, BRS: -2.5, BJP: -0.5 });
     } else if (presetKey === 'baseline') {
       setMacroSwing({ INC: 0, BRS: 0, BJP: 0 });
+      setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
     }
 
     setSwings(reset);
@@ -175,6 +183,25 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       let brsVotes = actualWinner === 'BRS' ? ac.winner_2023.votes : actualRunner === 'BRS' ? ac.runner_up_2023.votes : totalVotes * 0.28;
       let bjpVotes = actualWinner === 'BJP' ? ac.winner_2023.votes : actualRunner === 'BJP' ? ac.runner_up_2023.votes : totalVotes * 0.12;
       let aimimVotes = actualWinner === 'AIMIM' ? ac.winner_2023.votes : actualRunner === 'AIMIM' ? ac.runner_up_2023.votes : (ac.ac_no >= 58 && ac.ac_no <= 70 ? totalVotes * 0.40 : 0);
+
+      // Feature #3: Voter Turnout & Mobilization Modeler (Urban vs Rural Differential)
+      const isUrban = URBAN_AC_NOS.has(ac.ac_no);
+      const turnoutDiffPct = isUrban ? turnoutSettings.urbanShift : turnoutSettings.ruralShift;
+      if (turnoutDiffPct !== 0) {
+        const turnoutMultiplier = 1 + turnoutDiffPct / 100;
+        incVotes *= turnoutMultiplier;
+        brsVotes *= turnoutMultiplier;
+        bjpVotes *= turnoutMultiplier;
+        aimimVotes *= turnoutMultiplier;
+      }
+
+      // Feature #3: Mahalakshmi Female Voter Welfare Mobilization
+      if (turnoutSettings.femaleShift !== 0) {
+        const femaleVoteShift = totalVotes * (turnoutSettings.femaleShift * 0.005);
+        incVotes += femaleVoteShift;
+        brsVotes -= femaleVoteShift * 0.6;
+        bjpVotes -= femaleVoteShift * 0.4;
+      }
 
       // Apply community-weighted demographic swings from SEEEPC
       const cp = ac.caste_profile;
@@ -283,7 +310,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     });
 
     return list;
-  }, [data, swings, macroSwing, tossUpThreshold]);
+  }, [data, swings, macroSwing, turnoutSettings, tossUpThreshold]);
 
   // Aggregate Path to 60 Majority Gauge
   const tally = useMemo(() => {
@@ -518,6 +545,20 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
           </div>
         </div>
       </div>
+
+      {/* Milestone 1: Advanced Simulation Suite (#2 Monte Carlo, #3 Turnout, #5 Alliances, #9 Target 60, #14 Diff Mode) */}
+      <AdvancedSimulationSuite
+        data={data}
+        simulatedResults={simulatedResults}
+        swings={swings}
+        setSwings={setSwings}
+        macroSwing={macroSwing}
+        setMacroSwing={setMacroSwing}
+        turnoutSettings={turnoutSettings}
+        setTurnoutSettings={setTurnoutSettings}
+        onApplyPreset={applyPreset}
+        onNavigateToActions={onNavigateToActions}
+      />
 
       {/* Main Grid: Left Controls (Sliders), Right Bubble Chart */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">

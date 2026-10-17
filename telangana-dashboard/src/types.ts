@@ -185,6 +185,31 @@ export function getPartyBg(partyCode: string): string {
   return PARTY_CONFIG[partyCode]?.bgLight || PARTY_CONFIG.OTH.bgLight;
 }
 
+export interface PastelPartyScheme {
+  fill: string;
+  stroke: string;
+  text: string;
+}
+
+export const PASTEL_PARTY_CONFIG: Record<string, PastelPartyScheme> = {
+  INC: { fill: '#bae6fd', stroke: '#38bdf8', text: '#0369a1' },     // Sky-200 / Sky-400 / Sky-700
+  BRS: { fill: '#fbcfe8', stroke: '#f472b6', text: '#be185d' },     // Pink-200 / Pink-400 / Pink-700
+  BJP: { fill: '#fed7aa', stroke: '#fb923c', text: '#c2410c' },     // Orange-200 / Orange-400 / Orange-700
+  AIMIM: { fill: '#bbf7d0', stroke: '#4ade80', text: '#15803d' },   // Green-200 / Green-400 / Green-700
+  CPI: { fill: '#fecaca', stroke: '#f87171', text: '#b91c1c' },     // Red-200 / Red-400 / Red-700
+  CPM: { fill: '#fecaca', stroke: '#f87171', text: '#b91c1c' },
+  TDP: { fill: '#fef08a', stroke: '#facc15', text: '#a16207' },     // Yellow-200 / Yellow-400 / Yellow-700
+  BSP: { fill: '#c7d2fe', stroke: '#818cf8', text: '#4338ca' },     // Indigo-200 / Indigo-400 / Indigo-700
+  YSRCP: { fill: '#bfdbfe', stroke: '#60a5fa', text: '#1d4ed8' },   // Blue-200 / Blue-400 / Blue-700
+  AIFB: { fill: '#fed7aa', stroke: '#fb923c', text: '#c2410c' },
+  IND: { fill: '#e2e8f0', stroke: '#94a3b8', text: '#334155' },     // Slate-200 / Slate-400 / Slate-700
+  OTH: { fill: '#f1f5f9', stroke: '#cbd5e1', text: '#475569' },
+};
+
+export function getPastelPartyColor(partyCode: string): PastelPartyScheme {
+  return PASTEL_PARTY_CONFIG[partyCode] || PASTEL_PARTY_CONFIG.OTH;
+}
+
 export type ViewMode = 'winner' | 'margin' | 'swing' | 'district';
 
 // 33 Districts of Telangana with distinct harmonious shades of grey for fills and borders
