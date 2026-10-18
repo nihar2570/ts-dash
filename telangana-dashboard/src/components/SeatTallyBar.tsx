@@ -13,25 +13,22 @@ export const SeatTallyBar: React.FC<SeatTallyBarProps> = ({ summary, year }) => 
   const entries = Object.entries(summary.seat_tally);
 
   return (
-    <div className="bg-white rounded-xl p-4 shadow-sm border border-slate-200">
-      <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-bold text-slate-800 tracking-wide uppercase">
-            {year} Assembly Seat Tally
-          </span>
-          <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full font-medium">
-            Majority mark: {majorityMark} seats
-          </span>
-        </div>
-        <div className="text-xs text-slate-500">
-          Average Victory Margin: <strong className="text-slate-700">{summary.avg_margin.toLocaleString()} votes</strong>
-        </div>
+    <div className="bg-white rounded-xl px-4 py-3 shadow-xs border border-slate-200 space-y-2">
+      {/* Header Info */}
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-xs font-black text-slate-900 tracking-wider uppercase">
+          {year} Assembly Seat Tally
+        </span>
+        <span className="text-[11px] bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full font-bold">
+          Majority mark: {majorityMark} / {totalSeats} seats
+        </span>
       </div>
 
-      {/* Stacked Progress Bar */}
-      <div className="relative w-full h-5 bg-slate-100 rounded-full overflow-hidden flex shadow-inner mb-3">
+      {/* Primary Stacked Progress Bar */}
+      <div className="relative w-full h-6 bg-slate-100 rounded-lg overflow-hidden flex shadow-inner">
         {entries.map(([party, seats]) => {
           const widthPct = (seats / totalSeats) * 100;
+          const isMajority = seats >= majorityMark;
           return (
             <div
               key={party}
@@ -39,49 +36,27 @@ export const SeatTallyBar: React.FC<SeatTallyBarProps> = ({ summary, year }) => 
                 width: `${widthPct}%`,
                 backgroundColor: getPartyColor(party),
               }}
-              className="h-full relative group transition-all duration-300 hover:opacity-90 flex items-center justify-center text-[11px] font-bold text-white overflow-hidden"
-              title={`${party}: ${seats} seats (${widthPct.toFixed(1)}%)`}
+              className="h-full relative group transition-all duration-300 hover:brightness-105 flex items-center justify-center text-white overflow-hidden px-1 select-none"
+              title={`${party}: ${seats} seats (${widthPct.toFixed(1)}%)${isMajority ? ' • Majority / Govt' : ''}`}
             >
-              {seats >= 4 && <span>{party} {seats}</span>}
+              {seats >= 4 ? (
+                <div className="flex items-center gap-1 font-bold text-xs tracking-tight drop-shadow-xs">
+                  <span>{party}</span>
+                  <span className="font-mono font-black">{seats}</span>
+                </div>
+              ) : (
+                <span className="font-bold text-[11px] font-mono">{seats}</span>
+              )}
             </div>
           );
         })}
 
         {/* Majority threshold line marker at ~50.4% */}
         <div
-          className="absolute top-0 bottom-0 w-[2px] bg-slate-900 z-10"
+          className="absolute top-0 bottom-0 w-[2.5px] bg-slate-950 z-10 shadow-md"
           style={{ left: `${(majorityMark / totalSeats) * 100}%` }}
-          title="Majority Threshold: 60 Seats"
+          title={`Majority Threshold: ${majorityMark} Seats (Halfway mark)`}
         />
-      </div>
-
-      {/* Party Badges Grid */}
-      <div className="flex flex-wrap items-center gap-2">
-        {entries.map(([party, seats]) => {
-          const isMajority = seats >= majorityMark;
-          return (
-            <div
-              key={party}
-              className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-medium transition-all ${
-                isMajority
-                  ? 'border-emerald-300 bg-emerald-50 text-emerald-950 shadow-sm'
-                  : 'border-slate-200 bg-slate-50 text-slate-700'
-              }`}
-            >
-              <span
-                className="w-3 h-3 rounded-full flex-shrink-0"
-                style={{ backgroundColor: getPartyColor(party) }}
-              />
-              <span className="font-bold">{party}</span>
-              <span className="font-extrabold text-slate-900 text-sm">{seats}</span>
-              {isMajority && (
-                <span className="text-[10px] bg-emerald-600 text-white px-1.5 py-0.2 rounded font-bold uppercase">
-                  Govt
-                </span>
-              )}
-            </div>
-          );
-        })}
       </div>
     </div>
   );

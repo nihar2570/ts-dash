@@ -69,10 +69,10 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
                 type="button"
                 onClick={onOpenDossier}
                 className="flex items-center gap-1 text-[11px] font-bold text-indigo-700 hover:text-indigo-900 bg-indigo-50 hover:bg-indigo-100 px-2.5 py-1 rounded-lg border border-indigo-200 transition-all shadow-2xs cursor-pointer"
-                title="Open full interactive AC dossier"
+                title="Open full interactive constituency dossier modal"
               >
                 <FileText className="w-3.5 h-3.5 text-indigo-600" />
-                Dossier
+                Full Dossier ↗
               </button>
             )}
             <a
@@ -80,10 +80,10 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 text-[11px] font-bold text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200 px-2 py-1 rounded-lg border border-slate-200 transition-all cursor-pointer"
-              title="Open dossier in a new browser tab"
+              title="Open dossier in a standalone browser tab"
             >
               <ExternalLink className="w-3 h-3 text-slate-500" />
-              New Tab
+              Pop-out ↗
             </a>
           </div>
         </div>

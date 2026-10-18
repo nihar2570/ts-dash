@@ -711,30 +711,140 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            {/* Alliance 1: BJP + TRS */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-purple-800/60 space-y-2 flex flex-col justify-between">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+            {/* Historical Mandate: 2018/19 TRS Landslide */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-pink-800/60 space-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-purple-300">BJP + TRS (BRS) Alliance</span>
-                  <span className="text-[10px] bg-purple-500/20 text-purple-300 px-1.5 py-0.2 rounded font-mono">
-                    60/40 Split
+                  <span className="font-bold text-pink-300">2018/19 TRS Landslide</span>
+                  <span className="text-[10px] bg-pink-500/20 text-pink-300 px-1.5 py-0.2 rounded font-mono font-bold">
+                    88 Seats (46.9%)
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-300 mt-1">
-                  60% of BJP vote transfers to TRS, 40% to Congress. TRS loses -5% Muslim vote due to secular backlash.
+                  Rythu Bandhu &amp; 24x7 power agrarian wave + Prajakootami backfire. Swept rural BCs and women.
+                </p>
+              </div>
+              <button
+                onClick={() => onApplyPreset('trs_2018_landslide')}
+                className="w-full py-1.5 bg-pink-600 hover:bg-pink-500 text-white font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Simulate 2018/19</span>
+              </button>
+            </div>
+
+            {/* Historical Mandate: 2014 Inaugural Mandate */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-rose-800/60 space-y-2 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-rose-300">2014 Inaugural Mandate</span>
+                  <span className="text-[10px] bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono font-bold">
+                    63 Seats (34.0%)
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-300 mt-1">
+                  Statehood agitation wave in North TS + student movement. Congress collapsed to 21 seats; TDP-BJP won 20.
+                </p>
+              </div>
+              <button
+                onClick={() => onApplyPreset('trs_2014_mandate')}
+                className="w-full py-1.5 bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Simulate 2014</span>
+              </button>
+            </div>
+
+            {/* Alliance 1: BJP + TRS Coalition */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-purple-800/60 space-y-2 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-purple-300">BJP + TRS Coalition</span>
+                  <span className="text-[10px] bg-purple-500/20 text-purple-300 px-1.5 py-0.2 rounded font-mono font-bold">
+                    74:45 Seat Pact
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-300 mt-1">
+                  BJP contests 45 seats (GHMC &amp; North TS); BRS contests 74. Models 65/25 cadre friction, anti-KCR rebel leakage &amp; Muslim/BC split.
                 </p>
               </div>
               <button
                 onClick={() => onApplyPreset('bjp_trs_alliance')}
-                className="w-full py-1.5 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5"
+                className="w-full py-1.5 bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
               >
                 <Handshake className="w-3.5 h-3.5" />
-                <span>Simulate BJP+TRS Alliance</span>
+                <span>Simulate BJP+TRS Coalition</span>
               </button>
             </div>
 
-            {/* Alliance 2: Congress + Left (CPI/CPM) */}
+            {/* Alliance 2: TRS-BJP Full Merger */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-amber-800/60 space-y-2 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-amber-300">TRS-BJP Full Merger</span>
+                  <span className="text-[10px] bg-amber-500/20 text-amber-300 px-1.5 py-0.2 rounded font-mono font-bold">
+                    KTR CM Face
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-300 mt-1">
+                  BRS dissolves &amp; merges into BJP under Lotus symbol. 88% cadre consolidates; KTR CM Face, Harish Rao Union Cabinet. 12% defect to INC.
+                </p>
+              </div>
+              <button
+                onClick={() => onApplyPreset('bjp_trs_merger')}
+                className="w-full py-1.5 bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Simulate TRS-BJP Merger</span>
+              </button>
+            </div>
+
+            {/* Alliance 3: 2028 Triangular Anti-Incumbency */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-indigo-800/60 space-y-2 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-indigo-300">2028 Triangular (Anti-Inc)</span>
+                  <span className="text-[10px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.2 rounded font-mono font-bold">
+                    3-Way Contest
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-300 mt-1">
+                  INC, BRS, BJP fight independently. 5-year anti-incumbency (-7.0% INC vote shed); BRS (+3.2%) and BJP (+3.8%) surge into a hung balance.
+                </p>
+              </div>
+              <button
+                onClick={() => onApplyPreset('triangular_2028_anti_inc')}
+                className="w-full py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <Users className="w-3.5 h-3.5" />
+                <span>Simulate 2028 Triangular</span>
+              </button>
+            </div>
+
+            {/* Alliance 4: Kavitha Jagruthi Spoiler Front */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-teal-800/60 space-y-2 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between text-xs">
+                  <span className="font-bold text-teal-300">Kavitha Jagruthi Spoiler</span>
+                  <span className="text-[10px] bg-teal-500/20 text-teal-300 px-1.5 py-0.2 rounded font-mono font-bold">
+                    14 North TS ACs
+                  </span>
+                </div>
+                <p className="text-[11px] text-slate-300 mt-1">
+                  Telangana Jagruthi acts as targeted vote-cutter in Nizamabad, Jagtial &amp; Karimnagar (-4.2% BRS votes), flipping close seats to INC/BJP.
+                </p>
+              </div>
+              <button
+                onClick={() => onApplyPreset('kavitha_spoiler_front')}
+                className="w-full py-1.5 bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs rounded-lg transition-colors cursor-pointer flex items-center justify-center gap-1.5 shadow-xs"
+              >
+                <Crosshair className="w-3.5 h-3.5" />
+                <span>Simulate Kavitha Spoiler</span>
+              </button>
+            </div>
+
+            {/* Alliance 5: Congress + Left (CPI/CPM) */}
             <div className="bg-slate-800/80 p-3.5 rounded-xl border border-red-800/60 space-y-2 flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between text-xs">

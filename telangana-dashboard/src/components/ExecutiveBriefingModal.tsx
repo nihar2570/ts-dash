@@ -106,7 +106,7 @@ export const ExecutiveBriefingModal: React.FC<ExecutiveBriefingModalProps> = ({
             </span>
             <div>
               <h3 className="text-sm font-bold flex items-center gap-2">
-                <span>Executive Intelligence Dossier</span>
+                <span>Executive Intelligence Briefing</span>
                 <span className="text-[10px] bg-rose-500/20 text-rose-300 border border-rose-500/30 px-2 py-0.2 rounded-full font-mono">
                   CONFIDENTIAL
                 </span>

@@ -423,7 +423,7 @@ export const SwingStudioModal: React.FC<SwingStudioModalProps> = ({
   const currMacroOTH = Math.round((statewideBaseline.AIMIM + statewideBaseline.OTH) * 10) / 10;
 
   return (
-    <div className="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 md:p-6 animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-[2000] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-2 sm:p-4 md:p-6 animate-in fade-in duration-200">
       <div className="bg-slate-900 border border-slate-700/80 rounded-2xl sm:rounded-3xl shadow-2xl w-full max-w-6xl h-[92vh] flex flex-col text-slate-100 overflow-hidden">
         {/* Sticky Header: War Room Barometer & Controls */}
         <div className="bg-slate-900/95 border-b border-slate-800 p-4 sm:p-5 flex flex-col gap-3 shrink-0">
@@ -435,7 +435,7 @@ export const SwingStudioModal: React.FC<SwingStudioModalProps> = ({
               <div>
                 <div className="flex items-center gap-2">
                   <h2 className="text-lg sm:text-xl font-black text-white tracking-tight">
-                    Demographic Swing Studio (Pattern C)
+                    Demographic Swing Studio
                   </h2>
                   <span className="text-[11px] font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full">
                     100% Simplex Balancer
@@ -588,16 +588,74 @@ export const SwingStudioModal: React.FC<SwingStudioModalProps> = ({
                   BJP +5% Push
                 </button>
                 {onApplyPreset && (
-                  <button
-                    onClick={() => onApplyPreset('bjp_trs_alliance')}
-                    className={`px-2.5 py-0.5 text-xs rounded-md font-semibold transition-all cursor-pointer flex items-center gap-1 ${
-                      activePreset === 'bjp_trs_alliance'
-                        ? 'bg-purple-600 text-white shadow-xs'
-                        : 'bg-purple-950/60 hover:bg-purple-900/80 text-purple-200 border border-purple-800/60'
-                    }`}
-                  >
-                    <span>🤝 BJP+TRS Alliance (60/40 + Anti-Inc)</span>
-                  </button>
+                  <>
+                    <button
+                      onClick={() => onApplyPreset('trs_2018_landslide')}
+                      className={`px-2.5 py-0.5 text-xs rounded-md font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                        activePreset === 'trs_2018_landslide'
+                          ? 'bg-pink-600 text-white shadow-xs font-black'
+                          : 'bg-pink-950/60 hover:bg-pink-900/80 text-pink-200 border border-pink-800/60'
+                      }`}
+                      title="2018/19 TRS Landslide: 88 seats, 46.9% vote share, Rythu Bandhu & Prajakootami backfire"
+                    >
+                      <span>🌸 2018/19 TRS Landslide (88 Seats)</span>
+                    </button>
+                    <button
+                      onClick={() => onApplyPreset('trs_2014_mandate')}
+                      className={`px-2.5 py-0.5 text-xs rounded-md font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                        activePreset === 'trs_2014_mandate'
+                          ? 'bg-rose-600 text-white shadow-xs font-black'
+                          : 'bg-rose-950/60 hover:bg-rose-900/80 text-rose-200 border border-rose-800/60'
+                      }`}
+                      title="2014 Inaugural Mandate: TRS 63 seats, 34% vote share, Statehood movement surge"
+                    >
+                      <span>🏛️ 2014 Mandate (63 Seats)</span>
+                    </button>
+                    <button
+                      onClick={() => onApplyPreset('bjp_trs_alliance')}
+                      className={`px-2.5 py-0.5 text-xs rounded-md font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                        activePreset === 'bjp_trs_alliance'
+                          ? 'bg-purple-600 text-white shadow-xs font-black'
+                          : 'bg-purple-950/60 hover:bg-purple-900/80 text-purple-200 border border-purple-800/60'
+                      }`}
+                      title="Pre-poll coalition: 74 BRS : 45 BJP seat sharing, 65/25 transfer friction, anti-KCR rebel leakage & Muslim/BC split"
+                    >
+                      <span>🤝 BJP+TRS Coalition (74:45 Pact)</span>
+                    </button>
+                    <button
+                      onClick={() => onApplyPreset('bjp_trs_merger')}
+                      className={`px-2.5 py-0.5 text-xs rounded-md font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                        activePreset === 'bjp_trs_merger'
+                          ? 'bg-amber-600 text-white shadow-xs font-black'
+                          : 'bg-amber-950/60 hover:bg-amber-900/80 text-amber-200 border border-amber-800/60'
+                      }`}
+                      title="Full Merger: TRS merges into BJP under Lotus symbol, KTR Chief Minister Face, Harish Rao Union Cabinet"
+                    >
+                      <span>🪷 TRS-BJP Merger (KTR CM / Harish Union Cabinet)</span>
+                    </button>
+                    <button
+                      onClick={() => onApplyPreset('triangular_2028_anti_inc')}
+                      className={`px-2.5 py-0.5 text-xs rounded-md font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                        activePreset === 'triangular_2028_anti_inc'
+                          ? 'bg-indigo-600 text-white shadow-xs font-black'
+                          : 'bg-indigo-950/60 hover:bg-indigo-900/80 text-indigo-200 border border-indigo-800/60'
+                      }`}
+                      title="2028 3-Way Independent Contest: -7.0% anti-incumbency against ruling Congress, BRS & BJP surge, tight hung race"
+                    >
+                      <span>⚔️ 2028 Triangular (Anti-Inc vs INC)</span>
+                    </button>
+                    <button
+                      onClick={() => onApplyPreset('kavitha_spoiler_front')}
+                      className={`px-2.5 py-0.5 text-xs rounded-md font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                        activePreset === 'kavitha_spoiler_front'
+                          ? 'bg-teal-600 text-white shadow-xs font-black'
+                          : 'bg-teal-950/60 hover:bg-teal-900/80 text-teal-200 border border-teal-800/60'
+                      }`}
+                      title="Kavitha's Telangana Jagruthi splinter peels 4.2% BRS votes in 14 North TS constituencies, acting as a targeted vote-cutter"
+                    >
+                      <span>🎭 Kavitha Jagruthi (North TS Spoiler)</span>
+                    </button>
+                  </>
                 )}
               </div>
             </div>

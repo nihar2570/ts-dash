@@ -58,7 +58,7 @@ const PRESET_SCENARIOS: Omit<DefectionEvent, 'id'>[] = [
     toParty: 'IND',
     cadreTransferPct: 7.5,
     backlashPct: 1.5,
-    notes: 'Denied ticket aspirant enters frey as Independent, siphoning rural party workers.',
+    notes: 'Denied ticket aspirant enters fray as Independent, siphoning rural party workers.',
     enabled: true,
   },
   {
@@ -99,7 +99,7 @@ export const DefectionRebelModeler: React.FC<DefectionRebelModelerProps> = ({
   );
 
   // New Event Form State
-  const [formAcNo, setFormAcNo] = useState<number>(40); // Default to Amberpet
+  const [formAcNo, setFormAcNo] = useState<number>(40); // Default to Gajwel (#40)
   const [formType, setFormType] = useState<'defection' | 'rebel_spoiler'>('defection');
   const [formLeaderName, setFormLeaderName] = useState('Senior Constituency Heavyweight');
   const [formFromParty, setFormFromParty] = useState<'INC' | 'BRS' | 'BJP'>('BRS');
@@ -280,7 +280,7 @@ export const DefectionRebelModeler: React.FC<DefectionRebelModelerProps> = ({
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="bg-rose-500 text-white font-mono text-xs font-black px-2.5 py-0.5 rounded-md flex items-center gap-1 shadow-xs">
-                <AlertTriangle className="w-3.5 h-3.5" /> FEATURE #4
+                <AlertTriangle className="w-3.5 h-3.5" /> DEFECTION ENGINE
               </span>
               <span className="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-md border border-slate-700">
                 Defection &amp; Rebel Spoiler Engine

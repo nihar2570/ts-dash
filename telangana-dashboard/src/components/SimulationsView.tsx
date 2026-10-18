@@ -11,12 +11,32 @@ import {
   Search,
   CheckCircle,
   TrendingUp,
-  Maximize2
+  Maximize2,
+  Handshake,
 } from 'lucide-react';
 import { SwingStudioModal } from './SwingStudioModal';
 import type { MacroSwing, PartySwing } from './SwingStudioModal';
 import { AdvancedSimulationSuite, URBAN_AC_NOS } from './AdvancedSimulationSuite';
 import type { TurnoutSettings } from './AdvancedSimulationSuite';
+
+// 44 Constituencies Contested by BJP in BJP+TRS Coalition (Urban GHMC, Ranga Reddy, North TS core, Kamareddy)
+export const BJP_ALLIANCE_SEATS = new Set([
+  // Hyderabad District Core (9 seats)
+  57, 59, 60, 61, 62, 64, 65, 70, 71, // Musheerabad, Amberpet, Khairatabad, Jubilee Hills, Sanathnagar, Karwan, Goshamahal, Secunderabad, Cantt
+  // Medchal & Ranga Reddy Urban Belt (11 seats)
+  43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, // Quthbullapur, Malkajgiri, Medchal, Kukatpally, Uppal, LB Nagar, Maheshwaram, Rajendranagar, Serilingampally, Chevella, Shadnagar
+  // North Telangana Core (16 seats)
+  1, 5, 6, 7, 8, 9, 10, // Sirpur, Asifabad, Khanapur, Adilabad, Boath, Nirmal, Mudhole
+  16, 17, 18, 19, 20, 21, // Kamareddy, Nizamabad Urban, Nizamabad Rural, Armur, Bodhan, Balkonda
+  23, 24, 26, 31, // Koratla, Jagtial, Karimnagar, Huzurabad
+  // South & Central Strongholds (8 seats)
+  74, 77, 82, 85, 93, 106, 107, 112 // Mahabubnagar, Makthal, Kalwakurthy, Kollapur, Munugode, Warangal West, Warangal East, Khammam
+]);
+
+// 14 North Telangana Constituencies targeted by Kavitha's Telangana Jagruthi outfit
+export const KAVITHA_SPOILER_SEATS = new Set([
+  15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 26, 27, 28, 29
+]);
 
 export const READABLE_COMMUNITY_NAMES: Record<string, string> = {
   sc_madiga: 'SC Madiga',
@@ -119,41 +139,104 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       age_60_plus: { INC: 0, BRS: 0, BJP: 0 },
     };
 
-    if (presetKey === 'bjp_trs_alliance') {
-      // BJP-TRS Pre-Poll Alliance + Anti-Incumbency Scenario:
-      // 1. BJP transfers 100% of its 13.9% baseline vote (-13.9% BJP)
-      //    - 60% of BJP vote (+8.3%) transfers to TRS (BRS)
-      //    - 40% of BJP vote (+5.6%) transfers to Congress (INC)
-      // 2. Anti-Incumbency Factor against ruling Congress government:
-      //    - Congress sheds -3.0% anti-incumbency vote to the united TRS-BJP opposition (+3.0% to TRS)
-      //    - Net Statewide Macro: INC +2.6%, BRS +11.3%, BJP -13.9%
-      // 3. Demographic Muslim Backlash against TRS for allying with BJP:
-      //    - TRS loses an extra -5.0% Muslim vote, which consolidates with Congress (+5.0% INC)
-      reset.minority_muslim = {
-        INC: 5,
-        BRS: -5,
-        BJP: 0,
-      };
+    if (presetKey === 'trs_2018_landslide') {
+      // 2018/2019 TRS Landslide Mandate (88 Seats, 46.9% Vote Share)
+      // 1. Rythu Bandhu & 24x7 Free Agriculture Power: Agrarian wave across rural Telangana
+      // 2. Prajakootami Backfire: TDP alliance triggered Telangana regional self-respect against Andhra control
+      // 3. BC Welfare Consolidation: Mudiraj, Munnuru Kapu, Yadav (sheep distribution), Goud, Padmashali
+      // 4. Welfare Architecture: Aasara pensions + Kalyana Lakshmi/Shaadi Mubarak + KCR Kit
+      // 5. Muslim minority strategic alignment with TRS (via AIMIM friendship)
+      reset.bc_mudiraj = { INC: -7, BRS: 8, BJP: -1 };
+      reset.bc_munnuru_kapu = { INC: -6, BRS: 7, BJP: -1 };
+      reset.bc_yadav = { INC: -6, BRS: 8, BJP: -2 };
+      reset.bc_goud = { INC: -5, BRS: 6, BJP: -1 };
+      reset.bc_padmashali = { INC: -5, BRS: 6, BJP: -1 };
+      reset.oc_velama = { INC: -7, BRS: 9, BJP: -2 };
+      reset.minority_muslim = { INC: -6, BRS: 7, BJP: -1 };
+      reset.age_60_plus = { INC: -5, BRS: 6, BJP: -1 };
+      reset.sc_madiga = { INC: -4, BRS: 5, BJP: -1 };
 
-      // Statewide Macro Swing reflects the 60/40 transfer + 3% Anti-Incumbency
-      setMacroSwing({ INC: 2.6, BRS: 11.3, BJP: -13.9 });
-    } else if (presetKey === 'mudiraj_brs') {
-      // BRS consolidates North Telangana Mudiraj & BCs
-      reset.bc_mudiraj = { INC: -6, BRS: 7, BJP: -1 };
-      reset.bc_munnuru_kapu = { INC: -4, BRS: 5, BJP: -1 };
-      reset.bc_goud = { INC: -3, BRS: 4, BJP: -1 };
-      setMacroSwing({ INC: -1, BRS: 2, BJP: -1 });
-    } else if (presetKey === 'madiga_bjp') {
-      // BJP consolidates Madiga SCs via sub-categorization
-      reset.sc_madiga = { INC: -7, BRS: -3, BJP: 10 };
-      reset.bc_mudiraj = { INC: -3, BRS: -2, BJP: 5 };
-      setMacroSwing({ INC: -1, BRS: -2, BJP: 3 });
-    } else if (presetKey === 'youth_inc') {
-      // Youth 18-25 & employment swing to INC
-      reset.youth_18_25 = { INC: 8, BRS: -5, BJP: -3 };
-      reset.bc_mudiraj = { INC: 4, BRS: -3, BJP: -1 };
-      reset.sc_mala = { INC: 5, BRS: -4, BJP: -1 };
-      setMacroSwing({ INC: 2.5, BRS: -1.5, BJP: -1 });
+      // Statewide Macro Swing: BRS surges by +9.5% (reproducing 46.9% statewide vote share),
+      // INC drops by -8.5%, BJP drops by -3.5%
+      setMacroSwing({ INC: -8.5, BRS: 9.5, BJP: -3.5 });
+      setTurnoutSettings({ urbanShift: 0, ruralShift: 4, femaleShift: 3 });
+    } else if (presetKey === 'trs_2014_mandate') {
+      // 2014 Telangana Inaugural Assembly Election (TRS 63 Seats, 34.0% Vote Share)
+      // 1. Statehood Agitation Wave: Sweeps North Telangana (Karimnagar, Medak, Nizamabad, Warangal)
+      // 2. Congress Bifurcation Backlash: Crushed to 21 seats (25.2% vote share)
+      // 3. TDP-BJP Alliance Surge: Dominates GHMC / Ranga Reddy urban corridor (TDP 15 + BJP 5 seats)
+      // 4. Student & Youth Agitation Movement: Youth 18-25 consolidates behind TRS (+7%)
+      reset.youth_18_25 = { INC: -6, BRS: 7, BJP: -1 };
+      reset.oc_velama = { INC: -8, BRS: 9, BJP: -1 };
+      reset.bc_munnuru_kapu = { INC: -5, BRS: 6, BJP: -1 };
+      reset.bc_mudiraj = { INC: -5, BRS: 6, BJP: -1 };
+      reset.oc_reddy = { INC: 4, BRS: -3, BJP: -1 };
+      reset.minority_muslim = { INC: -3, BRS: 4, BJP: -1 };
+
+      // Statewide Macro Swing:
+      // INC drops by -15.0%, BRS at -4.5%, BJP at -6.5%
+      setMacroSwing({ INC: -15.0, BRS: -4.5, BJP: -6.5 });
+      setTurnoutSettings({ urbanShift: 3, ruralShift: 0, femaleShift: 0 });
+    } else if (presetKey === 'bjp_trs_alliance') {
+      // BJP-TRS Pre-Poll Coalition (74 BRS : 45 BJP Seat-Sharing Formula)
+      // 1. Seat Sharing Architecture:
+      //    - BJP contests 45 seats: Greater Hyderabad/GHMC, Ranga Reddy urban IT belt, North TS urban/semi-urban cores (Kamareddy, Nizamabad, Karimnagar, Adilabad), Mahabubnagar.
+      //    - BRS contests 74 seats: Rural Medak, Warangal, Nalgonda, Khammam, and North TS rural belts.
+      // 2. Cadre Transfer Friction Matrix:
+      //    - When BRS contests: 65% BJP vote transfers to BRS, 25% hardcore anti-KCR voters rebel to Congress, 10% sit out.
+      //    - When BJP contests: 75% BRS vote transfers to BJP, 15% rebel to Congress, 10% sit out.
+      // 3. Demographic & Caste Fracture:
+      //    - Muslim Minority Revolt: BRS loses -10% Muslim vote entirely to Congress & AIMIM.
+      //    - SC Madiga (MRPS) Surge: +6% to Coalition on Modi sub-categorization commitment.
+      //    - SC Mala Consolidation: +6% to Congress.
+      //    - BC Mudiraj & Munnuru Kapu Surge: +8% Coalition consolidation.
+      //    - Velama leadership loyalty: +8% to Coalition.
+      reset.minority_muslim = { INC: 10, BRS: -10, BJP: 0 };
+      reset.sc_madiga = { INC: -6, BRS: 4, BJP: 2 };
+      reset.sc_mala = { INC: 6, BRS: -4, BJP: -2 };
+      reset.bc_mudiraj = { INC: -8, BRS: 5, BJP: 3 };
+      reset.bc_munnuru_kapu = { INC: -7, BRS: 4, BJP: 3 };
+      reset.bc_padmashali = { INC: -5, BRS: 3, BJP: 2 };
+      reset.oc_reddy = { INC: 4, BRS: -2, BJP: -2 };
+      reset.oc_velama = { INC: -8, BRS: 6, BJP: 2 };
+
+      // Statewide Macro Swing: Ruling Congress sheds -3.0% anti-incumbency
+      setMacroSwing({ INC: -3.0, BRS: 1.5, BJP: 1.5 });
+      setTurnoutSettings({ urbanShift: 2, ruralShift: 0, femaleShift: 0 });
+    } else if (presetKey === 'bjp_trs_merger') {
+      // 1. Full Merger: BRS Merges into BJP (KTR CM Face / Harish Union Cabinet)
+      // Unified Lotus symbol on all 119 ballots; 88% BRS cadre merges, 12% old agitation cadre defect to INC.
+      reset.minority_muslim = { INC: 15, BRS: 0, BJP: -15 };
+      reset.sc_madiga = { INC: -8, BRS: 0, BJP: 8 };
+      reset.sc_mala = { INC: 8, BRS: 0, BJP: -8 };
+      reset.bc_mudiraj = { INC: -10, BRS: 0, BJP: 10 };
+      reset.bc_munnuru_kapu = { INC: -9, BRS: 0, BJP: 9 };
+      reset.youth_18_25 = { INC: -7, BRS: 0, BJP: 7 };
+      reset.oc_velama = { INC: -10, BRS: 0, BJP: 10 };
+      reset.oc_reddy = { INC: 6, BRS: 0, BJP: -6 };
+
+      // Statewide Macro: Ruling Congress sheds -4.0% anti-incumbency
+      setMacroSwing({ INC: -4.0, BRS: 0, BJP: 4.0 });
+      setTurnoutSettings({ urbanShift: 4, ruralShift: 0, femaleShift: 0 });
+    } else if (presetKey === 'triangular_2028_anti_inc') {
+      // 2. 2028 3-Way Independent Contest: Sharp Anti-Incumbency against Ruling Congress
+      // Congress sheds -7.0% vote due to farm loan & TSPSC controversy; BRS gains +3.2%, BJP gains +3.8%
+      reset.youth_18_25 = { INC: -8, BRS: 3, BJP: 5 };
+      reset.bc_mudiraj = { INC: -6, BRS: 3, BJP: 3 };
+      reset.bc_munnuru_kapu = { INC: -6, BRS: 2, BJP: 4 };
+      reset.sc_madiga = { INC: -5, BRS: 1, BJP: 4 };
+      reset.minority_muslim = { INC: 4, BRS: -2, BJP: -2 };
+      reset.oc_reddy = { INC: 3, BRS: -2, BJP: -1 };
+
+      setMacroSwing({ INC: -7.0, BRS: 3.2, BJP: 3.8 });
+      setTurnoutSettings({ urbanShift: 2, ruralShift: 0, femaleShift: 0 });
+    } else if (presetKey === 'kavitha_spoiler_front') {
+      // 3. Kavitha's Jagruthi Front: North TS Spoiler Effect
+      // Slices 4.2% traditional BRS votes in 14 Nizamabad, Jagtial, and Karimnagar constituencies
+      reset.bc_goud = { INC: 2, BRS: -4, BJP: 2 };
+      reset.bc_padmashali = { INC: 1, BRS: -3, BJP: 2 };
+      setMacroSwing({ INC: 0, BRS: -1.0, BJP: 1.0 });
+      setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
     } else if (presetKey === 'mahalakshmi_wave') {
       // Welfare momentum
       reset.bc_padmashali = { INC: 6, BRS: -5, BJP: -1 };
@@ -161,6 +244,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       reset.sc_mala = { INC: 4, BRS: -3, BJP: -1 };
       reset.minority_muslim = { INC: 4, BRS: -4, BJP: 0 };
       setMacroSwing({ INC: 3, BRS: -2.5, BJP: -0.5 });
+      setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
     } else if (presetKey === 'baseline') {
       setMacroSwing({ INC: 0, BRS: 0, BJP: 0 });
       setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
@@ -179,9 +263,33 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       const totalVotes = ac.total_votes_2023;
 
       // Base vote calculation using 2023 Form-20 votes as anchor
-      let incVotes = actualWinner === 'INC' ? ac.winner_2023.votes : actualRunner === 'INC' ? ac.runner_up_2023.votes : totalVotes * 0.25;
-      let brsVotes = actualWinner === 'BRS' ? ac.winner_2023.votes : actualRunner === 'BRS' ? ac.runner_up_2023.votes : totalVotes * 0.28;
-      let bjpVotes = actualWinner === 'BJP' ? ac.winner_2023.votes : actualRunner === 'BJP' ? ac.runner_up_2023.votes : totalVotes * 0.12;
+      // For each major party, use actual votes if winner/runner, else a fallback share.
+      // When the actual winner/runner is a non-major party (e.g. CPI, AIFB),
+      // track their votes separately as "Others" so the simulation respects the real baseline.
+      const majorParties = ['INC', 'BRS', 'BJP', 'AIMIM'];
+      const winnerIsMajor = majorParties.includes(actualWinner);
+      const runnerIsMajor = majorParties.includes(actualRunner);
+
+      // Determine non-major parties (e.g. CPI, AIFB) if winner or runner-up is not in INC/BRS/BJP/AIMIM
+      const partyPairs: [string, number][] = [];
+
+      if (!winnerIsMajor) {
+        partyPairs.push([actualWinner, ac.winner_2023.votes]);
+      }
+      if (!runnerIsMajor) {
+        partyPairs.push([actualRunner, ac.runner_up_2023.votes]);
+      }
+
+      // If winner or runner-up was a non-major party, scale down the default fallback estimates
+      const nonMajorVotes = (!winnerIsMajor ? ac.winner_2023.votes : 0) + (!runnerIsMajor ? ac.runner_up_2023.votes : 0);
+      const remainingShare = Math.max(0.05, 1 - (nonMajorVotes / totalVotes));
+      const fallbackInc = totalVotes * 0.25 * remainingShare;
+      const fallbackBrs = totalVotes * 0.28 * remainingShare;
+      const fallbackBjp = totalVotes * 0.12 * remainingShare;
+
+      let incVotes = actualWinner === 'INC' ? ac.winner_2023.votes : actualRunner === 'INC' ? ac.runner_up_2023.votes : fallbackInc;
+      let brsVotes = actualWinner === 'BRS' ? ac.winner_2023.votes : actualRunner === 'BRS' ? ac.runner_up_2023.votes : fallbackBrs;
+      let bjpVotes = actualWinner === 'BJP' ? ac.winner_2023.votes : actualRunner === 'BJP' ? ac.runner_up_2023.votes : fallbackBjp;
       let aimimVotes = actualWinner === 'AIMIM' ? ac.winner_2023.votes : actualRunner === 'AIMIM' ? ac.runner_up_2023.votes : (ac.ac_no >= 58 && ac.ac_no <= 70 ? totalVotes * 0.40 : 0);
 
       // Feature #3: Voter Turnout & Mobilization Modeler (Urban vs Rural Differential)
@@ -201,6 +309,18 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         incVotes += femaleVoteShift;
         brsVotes -= femaleVoteShift * 0.6;
         bjpVotes -= femaleVoteShift * 0.4;
+      }
+
+      // Historical 2014 Mandate Calibration: TDP-BJP Urban Alliance & Settler Vote Realignment
+      // In 2014, the TDP-BJP alliance won 20 seats (TDP 15 + BJP 5) in Greater Hyderabad & Ranga Reddy.
+      // Since TDP and YSRCP are not standalone contenders in today's baseline, their 2014 urban anti-TRS bloc
+      // is absorbed by the NDA/BJP urban partner. Without this realignment, naive extrapolation defaults those
+      // 15 urban seats to BRS as 2023 runner-up, erroneously inflating BRS to 71+ seats instead of its actual 63.
+      if (activePreset === 'trs_2014_mandate' && isUrban) {
+        const tdpAllianceUrbanShift = totalVotes * 0.25;
+        bjpVotes += tdpAllianceUrbanShift;
+        brsVotes -= tdpAllianceUrbanShift * 0.55;
+        incVotes -= tdpAllianceUrbanShift * 0.45;
       }
 
       // Apply community-weighted demographic swings from SEEEPC
@@ -237,18 +357,49 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       brsVotes += macroBrsShift;
       bjpVotes += macroBjpShift;
 
+      // Feature #5A: BJP + TRS Full Merger (KTR CM Face / Harish Union Cabinet)
+      if (activePreset === 'bjp_trs_merger') {
+        const brsPool = Math.max(0, brsVotes);
+        bjpVotes += brsPool * 0.88;
+        incVotes += brsPool * 0.12; // 12% old agitation cadre defect to INC
+        brsVotes = 0; // Merged under Lotus symbol
+      }
+
+      // Feature #5B: BJP + TRS Pre-Poll Coalition Seat-Sharing & Transfer Matrix Realignment
+      if (activePreset === 'bjp_trs_alliance') {
+        const isBjpContested = BJP_ALLIANCE_SEATS.has(ac.ac_no);
+        if (isBjpContested) {
+          // BJP is candidate. BRS transfers: 75% to BJP, 15% rebel to INC, 10% sit out
+          const brsPool = Math.max(0, brsVotes);
+          bjpVotes += brsPool * 0.75;
+          incVotes += brsPool * 0.15;
+          brsVotes = 0; // BRS candidate stands down
+        } else {
+          // BRS is candidate. BJP transfers: 65% to BRS, 25% anti-KCR rebel to INC, 10% sit out
+          const bjpPool = Math.max(0, bjpVotes);
+          brsVotes += bjpPool * 0.65;
+          incVotes += bjpPool * 0.25;
+          bjpVotes = 0; // BJP candidate stands down
+        }
+      }
+
+      // Feature #5C: Kavitha Jagruthi Splinter (North TS Spoiler Effect in 14 ACs)
+      if (activePreset === 'kavitha_spoiler_front' && KAVITHA_SPOILER_SEATS.has(ac.ac_no)) {
+        const spoilerCut = totalVotes * 0.042;
+        brsVotes = Math.max(0, brsVotes - spoilerCut);
+        incVotes = Math.max(0, incVotes - (totalVotes * 0.005));
+      }
+
       // Ensure positive votes
       incVotes = Math.max(100, Math.round(incVotes));
-      brsVotes = Math.max(100, Math.round(brsVotes));
-      bjpVotes = Math.max(100, Math.round(bjpVotes));
+      brsVotes = Math.max(0, Math.round(brsVotes));
+      bjpVotes = Math.max(0, Math.round(bjpVotes));
       aimimVotes = Math.max(0, Math.round(aimimVotes));
 
-      // Rank parties
-      const partyPairs: [string, number][] = [
-        ['INC', incVotes],
-        ['BRS', brsVotes],
-        ['BJP', bjpVotes],
-      ];
+      // Add major parties to ranking list
+      partyPairs.push(['INC', incVotes]);
+      if (brsVotes > 0) partyPairs.push(['BRS', brsVotes]);
+      if (bjpVotes > 0) partyPairs.push(['BJP', bjpVotes]);
       if (aimimVotes > 0) {
         partyPairs.push(['AIMIM', aimimVotes]);
       }
@@ -310,7 +461,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     });
 
     return list;
-  }, [data, swings, macroSwing, turnoutSettings, tossUpThreshold]);
+  }, [data, swings, macroSwing, turnoutSettings, tossUpThreshold, activePreset]);
 
   // Aggregate Path to 60 Majority Gauge
   const tally = useMemo(() => {
@@ -395,44 +546,70 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               2023 Baseline
             </button>
             <button
+              onClick={() => applyPreset('trs_2018_landslide')}
+              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                activePreset === 'trs_2018_landslide'
+                  ? 'bg-pink-600 text-white shadow-xs font-black'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+              }`}
+              title="2018/19 TRS Landslide: 88 seats, 46.9% vote share, Rythu Bandhu wave & Prajakootami backfire"
+            >
+              <span>🌸 2018/19 TRS Landslide (88 Seats)</span>
+            </button>
+            <button
+              onClick={() => applyPreset('trs_2014_mandate')}
+              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                activePreset === 'trs_2014_mandate'
+                  ? 'bg-rose-600 text-white shadow-xs font-black'
+                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+              }`}
+              title="2014 Inaugural Mandate: TRS 63 seats, 34% vote share, Statehood movement surge"
+            >
+              <span>🏛️ 2014 Mandate (63 Seats)</span>
+            </button>
+            <button
               onClick={() => applyPreset('bjp_trs_alliance')}
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                 activePreset === 'bjp_trs_alliance'
-                  ? 'bg-purple-600 text-white shadow-xs'
+                  ? 'bg-purple-600 text-white shadow-xs font-black'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
+              title="Pre-poll coalition: 74 BRS : 45 BJP seat sharing, 65/25 transfer friction, anti-KCR rebel leakage & Muslim/BC split"
             >
-              <span>🤝 BJP+TRS Alliance (60/40 + Anti-Inc)</span>
+              <span>🤝 BJP+TRS Coalition (74:45 Pact)</span>
             </button>
             <button
-              onClick={() => applyPreset('mudiraj_brs')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer ${
-                activePreset === 'mudiraj_brs'
-                  ? 'bg-pink-600 text-white shadow-xs'
+              onClick={() => applyPreset('bjp_trs_merger')}
+              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                activePreset === 'bjp_trs_merger'
+                  ? 'bg-amber-600 text-white shadow-xs font-black'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
+              title="Full merger of TRS into BJP under Lotus symbol: KTR as Chief Minister face, Harish Rao in Union Cabinet"
             >
-              BC Mudiraj + BRS (+7%)
+              <span>🪷 TRS-BJP Merger (KTR CM / Harish Union Cabinet)</span>
             </button>
             <button
-              onClick={() => applyPreset('madiga_bjp')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer ${
-                activePreset === 'madiga_bjp'
-                  ? 'bg-amber-600 text-white shadow-xs'
+              onClick={() => applyPreset('triangular_2028_anti_inc')}
+              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                activePreset === 'triangular_2028_anti_inc'
+                  ? 'bg-rose-600 text-white shadow-xs font-black'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
+              title="2028 Triangular Contest: All 3 parties go alone, ruling Congress faces 5-year anti-incumbency (-7%)"
             >
-              Madiga + BJP (+10%)
+              <span>⚔️ 2028 Triangular (Anti-Inc vs INC)</span>
             </button>
             <button
-              onClick={() => applyPreset('youth_inc')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer ${
-                activePreset === 'youth_inc'
-                  ? 'bg-sky-600 text-white shadow-xs'
+              onClick={() => applyPreset('kavitha_spoiler_front')}
+              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                activePreset === 'kavitha_spoiler_front'
+                  ? 'bg-teal-600 text-white shadow-xs font-black'
                   : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
               }`}
+              title="Kavitha's Telangana Jagruthi splinter peels 4.2% BRS votes in 14 North TS constituencies, acting as a targeted vote-cutter"
             >
-              Youth + INC (+8%)
+              <span>🎭 Kavitha Jagruthi (North TS Spoiler)</span>
             </button>
             <button
               onClick={() => applyPreset('baseline')}
@@ -445,105 +622,374 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         </div>
 
         {/* Real-time "Path to 60" Seat Barometer Cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-4">
-          {/* INC */}
-          <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-            <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-              <span className="font-bold flex items-center gap-1.5 text-sky-400">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#19AAED]" />
-                INC (Congress)
-              </span>
-              <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-                {tally.incDiff >= 0 ? `+${tally.incDiff}` : tally.incDiff} vs 2023
-              </span>
-            </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-black text-white">{tally.counts.INC}</span>
-              <span className="text-xs text-slate-400">
-                {tally.counts.INC >= 60 ? (
-                  <span className="text-emerald-400 font-bold flex items-center gap-0.5">
-                    <CheckCircle className="w-3 h-3" /> Majority
-                  </span>
-                ) : (
-                  <span className="text-amber-400 font-bold">-{60 - tally.counts.INC} to Majority</span>
-                )}
-              </span>
-            </div>
+        {activePreset === 'bjp_trs_merger' && (
+          <div className="mt-3 px-3.5 py-2 bg-gradient-to-r from-amber-950/60 via-purple-950/50 to-slate-900 rounded-xl border border-amber-500/40 text-xs text-amber-200 flex items-center justify-between">
+            <span className="font-semibold flex items-center gap-1.5">
+              <Sparkles className="w-4 h-4 text-amber-400" />
+              <strong>Merger Scenario:</strong> TRS dissolves and merges into BJP under Lotus symbol. KTR projected as NDA Chief Minister; Harish Rao takes Union Cabinet portfolio.
+            </span>
+            <span className="text-[10px] bg-amber-500/20 text-amber-300 font-mono px-2 py-0.5 rounded border border-amber-500/30">
+              88% Cadre Transfer | 12% Defect to INC
+            </span>
           </div>
+        )}
 
-          {/* BRS */}
-          <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-            <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-              <span className="font-bold flex items-center gap-1.5 text-pink-400">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FF1493]" />
-                BRS
-              </span>
-              <span className={`text-[10px] font-bold font-mono ${tally.brsDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-                {tally.brsDiff >= 0 ? `+${tally.brsDiff}` : tally.brsDiff} vs 2023
-              </span>
-            </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-black text-white">{tally.counts.BRS}</span>
-              <span className="text-xs text-slate-400">
-                {tally.counts.BRS >= 60 ? (
-                  <span className="text-emerald-400 font-bold">Majority</span>
-                ) : (
-                  <span className="text-slate-400">Seats</span>
-                )}
-              </span>
-            </div>
+        {activePreset === 'triangular_2028_anti_inc' && (
+          <div className="mt-3 px-3.5 py-2 bg-gradient-to-r from-sky-950/60 via-indigo-950/50 to-slate-900 rounded-xl border border-sky-500/40 text-xs text-sky-200 flex items-center justify-between">
+            <span className="font-semibold flex items-center gap-1.5">
+              <TrendingUp className="w-4 h-4 text-sky-400" />
+              <strong>2028 Triangular Contest:</strong> 5-Year anti-incumbency (-7.0% INC vote shed) triggers a fractured 3-way race. BJP holds the kingmaker balance of power.
+            </span>
+            <span className="text-[10px] bg-sky-500/20 text-sky-300 font-mono px-2 py-0.5 rounded border border-sky-500/30">
+              3-Way Independent Battle
+            </span>
           </div>
+        )}
 
-          {/* BJP */}
-          <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-            <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-              <span className="font-bold flex items-center gap-1.5 text-amber-400">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#FF9933]" />
-                BJP
-              </span>
-              <span className={`text-[10px] font-bold font-mono ${tally.bjpDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
-                {tally.bjpDiff >= 0 ? `+${tally.bjpDiff}` : tally.bjpDiff} vs 2023
-              </span>
-            </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-black text-white">{tally.counts.BJP}</span>
-              <span className="text-xs text-slate-400">Kingmaker Zone</span>
-            </div>
+        {activePreset === 'kavitha_spoiler_front' && (
+          <div className="mt-3 px-3.5 py-2 bg-gradient-to-r from-teal-950/60 via-slate-900 to-slate-950 rounded-xl border border-teal-500/40 text-xs text-teal-200 flex items-center justify-between">
+            <span className="font-semibold flex items-center gap-1.5">
+              <Target className="w-4 h-4 text-teal-400" />
+              <strong>Kavitha Spoiler Front:</strong> Telangana Jagruthi acts as targeted vote-cutter in 14 North TS constituencies, shaving 4.2% BRS votes and flipping key seats.
+            </span>
+            <span className="text-[10px] bg-teal-500/20 text-teal-300 font-mono px-2 py-0.5 rounded border border-teal-500/30">
+              14 North TS ACs
+            </span>
           </div>
+        )}
 
-          {/* AIMIM */}
-          <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-            <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-              <span className="font-bold flex items-center gap-1.5 text-emerald-400">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#006600]" />
-                AIMIM
-              </span>
-              <span className="text-[10px] text-slate-400 font-mono">Hyderabad</span>
+        {activePreset === 'bjp_trs_merger' ? (
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-4">
+            {/* Merged Front (Lotus) - KTR CM */}
+            <div className="bg-gradient-to-br from-amber-950 via-pink-950 to-slate-900 p-3.5 rounded-xl border border-amber-500/60 shadow-lg col-span-2 sm:col-span-1">
+              <div className="flex items-center justify-between text-xs text-amber-300 mb-1">
+                <span className="font-black flex items-center gap-1.5 text-white">
+                  <Sparkles className="w-4 h-4 text-amber-400" />
+                  Merged BJP (Lotus)
+                </span>
+                <span className="text-[10px] font-bold font-mono text-amber-200 bg-amber-500/30 px-1.5 py-0.2 rounded border border-amber-400/40">
+                  KTR CM Face
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.BJP}</span>
+                <span className="text-xs">
+                  {tally.counts.BJP >= 60 ? (
+                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3" /> Majority (+{tally.counts.BJP - 60})
+                    </span>
+                  ) : (
+                    <span className="text-amber-400 font-bold">Short of 60</span>
+                  )}
+                </span>
+              </div>
+              <div className="text-[11px] text-amber-200/90 font-mono mt-1">
+                Harish Rao: <span className="font-bold text-pink-300">Union Cabinet</span>
+              </div>
             </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-black text-white">{tally.counts.AIMIM}</span>
-              <span className="text-xs text-slate-400">Old City Base</span>
-            </div>
-          </div>
 
-          {/* Triage & Flips Alert */}
-          <div className="bg-gradient-to-br from-indigo-950/60 to-purple-950/60 p-3.5 rounded-xl border border-indigo-700/40">
-            <div className="flex items-center justify-between text-xs text-indigo-300 mb-1 font-semibold">
-              <span className="flex items-center gap-1">
-                <Flame className="w-3.5 h-3.5 text-rose-400" /> Triage Alarms
-              </span>
-              <span className="bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono text-[10px]">
-                {tally.flippedCount} Flips
-              </span>
+            {/* BRS Integration Card */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-pink-900/40">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-pink-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF1493]" />
+                  BRS Integration
+                </span>
+                <span className="text-[10px] text-pink-300 font-mono font-bold">
+                  88% Merged
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-black text-white">0</span>
+                <span className="text-xs text-pink-300 font-medium">Contested on Lotus</span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                12% dissident cadre defected to INC
+              </div>
             </div>
-            <div className="flex items-baseline gap-2">
-              <span className="text-3xl font-black text-rose-300">{tally.tossUpCount}</span>
-              <span className="text-xs text-slate-300">
-                Toss-ups (&le; {tossUpThreshold >= 1000 ? `${(tossUpThreshold / 1000).toFixed(1).replace('.0', '')}k` : tossUpThreshold} votes)
-              </span>
+
+            {/* INC (Congress) Card */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-sky-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#19AAED]" />
+                  INC (Opposition)
+                </span>
+                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {tally.incDiff >= 0 ? `+${tally.incDiff}` : tally.incDiff} vs 2023
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.INC}</span>
+                <span className="text-xs text-slate-400">
+                  {tally.counts.INC >= 60 ? 'Majority' : 'Seats'}
+                </span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                South TS, Khammam, Nalgonda
+              </div>
+            </div>
+
+            {/* AIMIM */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-emerald-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#006600]" />
+                  AIMIM
+                </span>
+                <span className="text-[10px] text-slate-400 font-mono">Hyderabad</span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.AIMIM}</span>
+                <span className="text-xs text-slate-400">Old City Base</span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                Hyderabad Core Unchanged
+              </div>
+            </div>
+
+            {/* Flips & Triage */}
+            <div className="bg-gradient-to-br from-indigo-950/60 to-purple-950/60 p-3.5 rounded-xl border border-indigo-700/40">
+              <div className="flex items-center justify-between text-xs text-indigo-300 mb-1 font-semibold">
+                <span className="flex items-center gap-1">
+                  <Flame className="w-3.5 h-3.5 text-rose-400" /> Triage Alarms
+                </span>
+                <span className="bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono text-[10px]">
+                  {tally.flippedCount} Flips
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-rose-300">{tally.tossUpCount}</span>
+                <span className="text-xs text-slate-300">Toss-ups</span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                Consolidated Lotus Wave
+              </div>
             </div>
           </div>
-        </div>
+        ) : activePreset === 'bjp_trs_alliance' ? (
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-4">
+            {/* Joint Coalition Total Card */}
+            <div className="bg-gradient-to-br from-purple-950 via-indigo-950 to-slate-900 p-3.5 rounded-xl border border-purple-500/50 shadow-lg col-span-2 sm:col-span-1">
+              <div className="flex items-center justify-between text-xs text-purple-300 mb-1">
+                <span className="font-black flex items-center gap-1.5 text-white">
+                  <Handshake className="w-4 h-4 text-purple-400" />
+                  BRS + BJP Coalition
+                </span>
+                <span className="text-[10px] font-bold font-mono text-purple-200 bg-purple-500/30 px-1.5 py-0.2 rounded border border-purple-400/40">
+                  74:45 Pact
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.BRS + tally.counts.BJP}</span>
+                <span className="text-xs">
+                  {tally.counts.BRS + tally.counts.BJP >= 60 ? (
+                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3" /> Majority (+{tally.counts.BRS + tally.counts.BJP - 60})
+                    </span>
+                  ) : (
+                    <span className="text-amber-400 font-bold">Short of 60</span>
+                  )}
+                </span>
+              </div>
+              <div className="text-[11px] text-purple-300 font-mono mt-1">
+                BRS: <span className="font-bold text-pink-400">{tally.counts.BRS}</span> | BJP: <span className="font-bold text-amber-400">{tally.counts.BJP}</span>
+              </div>
+            </div>
+
+            {/* BRS Partner Card */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-pink-900/40">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-pink-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF1493]" />
+                  BRS (74 Seats)
+                </span>
+                <span className="text-[10px] text-pink-300 font-mono font-bold">
+                  {tally.brsDiff >= 0 ? `+${tally.brsDiff}` : tally.brsDiff} vs 2023
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.BRS}</span>
+                <span className="text-xs text-slate-400">Seats Won</span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                Rural TS, Medak, Warangal
+              </div>
+            </div>
+
+            {/* BJP Partner Card */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-amber-900/40">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-amber-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF9933]" />
+                  BJP (45 Seats)
+                </span>
+                <span className="text-[10px] text-amber-300 font-mono font-bold">
+                  {tally.bjpDiff >= 0 ? `+${tally.bjpDiff}` : tally.bjpDiff} vs 2023
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.BJP}</span>
+                <span className="text-xs text-slate-400">Seats Won</span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                GHMC Urban, North TS Core
+              </div>
+            </div>
+
+            {/* INC (Congress) Card */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-sky-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#19AAED]" />
+                  INC (Opposition)
+                </span>
+                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {tally.incDiff >= 0 ? `+${tally.incDiff}` : tally.incDiff} vs 2023
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.INC}</span>
+                <span className="text-xs text-slate-400">
+                  {tally.counts.INC >= 60 ? 'Majority' : 'Seats'}
+                </span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                South TS, Khammam, Nalgonda
+              </div>
+            </div>
+
+            {/* AIMIM & Flips */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-emerald-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#006600]" />
+                  AIMIM &amp; Close
+                </span>
+                <span className="bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono text-[10px]">
+                  {tally.flippedCount} Flips
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.AIMIM}</span>
+                <span className="text-xs text-slate-400">Old City Base</span>
+              </div>
+              <div className="text-[10px] text-slate-400 mt-0.5">
+                {tally.tossUpCount} Close Toss-ups
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-4">
+            {/* INC */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-sky-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#19AAED]" />
+                  INC (Congress)
+                </span>
+                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {tally.incDiff >= 0 ? `+${tally.incDiff}` : tally.incDiff} vs 2023
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.INC}</span>
+                <span className="text-xs text-slate-400">
+                  {tally.counts.INC >= 60 ? (
+                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3" /> Majority
+                    </span>
+                  ) : (
+                    <span className="text-amber-400 font-bold">-{60 - tally.counts.INC} to Majority</span>
+                  )}
+                </span>
+              </div>
+            </div>
+
+            {/* BRS */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-pink-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF1493]" />
+                  BRS
+                </span>
+                <span className={`text-[10px] font-bold font-mono ${tally.brsDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {tally.brsDiff >= 0 ? `+${tally.brsDiff}` : tally.brsDiff} vs 2023
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.BRS}</span>
+                <span className="text-xs text-slate-400">
+                  {tally.counts.BRS >= 60 ? (
+                    <span className="text-emerald-400 font-bold">Majority</span>
+                  ) : (
+                    <span className="text-slate-400">Seats</span>
+                  )}
+                </span>
+              </div>
+            </div>
+
+            {/* BJP */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-amber-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#FF9933]" />
+                  BJP
+                </span>
+                <span className={`text-[10px] font-bold font-mono ${tally.bjpDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                  {tally.bjpDiff >= 0 ? `+${tally.bjpDiff}` : tally.bjpDiff} vs 2023
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.BJP}</span>
+                <span className="text-xs text-slate-400">
+                  {tally.counts.BJP >= 60 ? (
+                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3" /> Majority
+                    </span>
+                  ) : tally.counts.BJP >= 10 ? (
+                    <span className="text-amber-400 font-bold">Kingmaker Zone</span>
+                  ) : (
+                    'Seats'
+                  )}
+                </span>
+              </div>
+            </div>
+
+            {/* AIMIM */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
+              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-emerald-400">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#006600]" />
+                  AIMIM
+                </span>
+                <span className="text-[10px] text-slate-400 font-mono">Hyderabad</span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-white">{tally.counts.AIMIM}</span>
+                <span className="text-xs text-slate-400">Old City Base</span>
+              </div>
+            </div>
+
+            {/* Triage & Flips Alert */}
+            <div className="bg-gradient-to-br from-indigo-950/60 to-purple-950/60 p-3.5 rounded-xl border border-indigo-700/40">
+              <div className="flex items-center justify-between text-xs text-indigo-300 mb-1 font-semibold">
+                <span className="flex items-center gap-1">
+                  <Flame className="w-3.5 h-3.5 text-rose-400" /> Triage Alarms
+                </span>
+                <span className="bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono text-[10px]">
+                  {tally.flippedCount} Flips
+                </span>
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-3xl font-black text-rose-300">{tally.tossUpCount}</span>
+                <span className="text-xs text-slate-300">
+                  Toss-ups (&le; {tossUpThreshold >= 1000 ? `${(tossUpThreshold / 1000).toFixed(1).replace('.0', '')}k` : tossUpThreshold} votes)
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Milestone 1: Advanced Simulation Suite (#2 Monte Carlo, #3 Turnout, #5 Alliances, #9 Target 60, #14 Diff Mode) */}
@@ -579,7 +1025,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                   <Sparkles className="w-3.5 h-3.5 text-amber-400" />
                 </div>
                 <p className="text-[10px] text-indigo-200">
-                  Open 18-Group Multi-Party Balancer (Pattern C)
+                  Open 18-Group Multi-Party Balancer
                 </p>
               </div>
             </div>
@@ -756,7 +1202,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                     4 Age Cohorts
                   </span>
                   <span className="bg-white border border-slate-200 px-2 py-0.5 rounded-md font-mono text-slate-600 font-semibold">
-                    Pattern C Balancers
+                    100% Simplex Balancers
                   </span>
                 </div>
                 <button
@@ -915,43 +1361,60 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             {/* Interactive SVG Bubble Chart Canvas */}
             <div className="relative w-full h-[380px] bg-slate-50/70 rounded-xl border border-slate-200/80 overflow-hidden select-none">
               <svg className="w-full h-full" viewBox="0 0 800 380">
-                {/* Grid guidelines */}
-                <line x1="50" y1="190" x2="780" y2="190" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
-                <line x1="415" y1="20" x2="415" y2="350" stroke="#e2e8f0" strokeWidth="1" />
+                {/* Background Grid guidelines */}
+                {/* Upper Guide (+Max / 2) */}
+                <line x1="75" y1="120" x2="780" y2="120" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
+                {/* Center 0-Margin Tipping Point Boundary */}
+                <line x1="75" y1="190" x2="780" y2="190" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                {/* Lower Guide (-Max / 2) */}
+                <line x1="75" y1="260" x2="780" y2="260" stroke="#f1f5f9" strokeWidth="1" strokeDasharray="2 2" />
+                {/* Vertical Central Meridian */}
+                <line x1="427" y1="25" x2="427" y2="350" stroke="#f1f5f9" strokeWidth="1" />
 
-                {/* Y-Axis Labels */}
-                <text x="55" y="40" fill="#94a3b8" fontSize="10" fontWeight="600">
-                  ▲ INC / Coalition Margin Lead
+                {/* Y-Axis Labels positioned on the left margin to prevent bubble overlap */}
+                <text x="15" y="45" fill="#0284c7" fontSize="10" fontWeight="bold">
+                  ▲ INC Lead
                 </text>
-                <text x="55" y="185" fill="#64748b" fontSize="10" fontWeight="bold">
-                  0 Margin (Tipping Point Boundary)
+                <text x="15" y="60" fill="#94a3b8" fontSize="9" fontWeight="500">
+                  +{tierFilter === 'TOSS_UP' ? (tossUpThreshold >= 1000 ? `${(tossUpThreshold/1000).toFixed(0)}k` : tossUpThreshold) : '25k'}
                 </text>
-                <text x="55" y="340" fill="#94a3b8" fontSize="10" fontWeight="600">
-                  ▼ BRS / BJP Margin Lead
+
+                <text x="15" y="187" fill="#64748b" fontSize="10" fontWeight="bold">
+                  0 Margin
+                </text>
+                <text x="15" y="198" fill="#94a3b8" fontSize="8" fontWeight="500">
+                  Tipping Point
+                </text>
+
+                <text x="15" y="325" fill="#f43f5e" fontSize="10" fontWeight="bold">
+                  ▼ BRS/BJP Lead
+                </text>
+                <text x="15" y="340" fill="#94a3b8" fontSize="9" fontWeight="500">
+                  -{tierFilter === 'TOSS_UP' ? (tossUpThreshold >= 1000 ? `${(tossUpThreshold/1000).toFixed(0)}k` : tossUpThreshold) : '25k'}
                 </text>
 
                 {/* X-Axis Labels */}
-                <text x="60" y="368" fill="#94a3b8" fontSize="10" fontWeight="500">
+                <text x="80" y="368" fill="#94a3b8" fontSize="10" fontWeight="500">
                   ← North Telangana (Adilabad, Nizamabad, Karimnagar)
                 </text>
-                <text x="620" y="368" fill="#94a3b8" fontSize="10" fontWeight="500">
+                <text x="590" y="368" fill="#94a3b8" fontSize="10" fontWeight="500">
                   South TS (Nalgonda, Khammam) →
                 </text>
 
                 {/* Render Bubbles */}
                 {filteredList.map((ac) => {
-                  // X positioned by AC number 1..119 across width 70..760
-                  const cx = 70 + (ac.ac_no / 120) * 690;
+                  // X positioned by AC number 1..119 across width 80..770
+                  const cx = 80 + (ac.ac_no / 120) * 690;
 
-                  // Y positioned by simulated margin: INC lead goes up, BRS/BJP lead goes down
+                  // Y positioned by simulated margin:
+                  // When looking at toss-ups, scale dynamically to tossUpThreshold so bubbles use full vertical range!
+                  const maxMarginScale = tierFilter === 'TOSS_UP' ? Math.max(2500, tossUpThreshold) : 25000;
                   const signedMargin = ac.simulated.winner_party === 'INC' ? ac.simulated.margin : -ac.simulated.margin;
-                  // Map signed margin -25000 to +25000 into Y: 330 to 50
-                  const clamped = Math.max(-28000, Math.min(28000, signedMargin));
-                  const cy = 190 - (clamped / 28000) * 140;
+                  const clamped = Math.max(-maxMarginScale, Math.min(maxMarginScale, signedMargin));
+                  const cy = 190 - (clamped / maxMarginScale) * 135;
 
                   // Inverse margin radius: tighter margin = bigger bubble!
-                  // Margin 500 => r=26, Margin 3000 => r=18, Margin 20000 => r=7
-                  const invRadius = Math.max(7, Math.min(28, 40000 / Math.pow(Math.max(500, ac.simulated.margin), 0.76)));
+                  const invRadius = Math.max(7, Math.min(26, 36000 / Math.pow(Math.max(500, ac.simulated.margin), 0.74)));
 
                   const partyColor = getPartyColor(ac.simulated.winner_party);
                   const isSelected = ac.ac_no === activeAcNo;

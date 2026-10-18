@@ -1201,8 +1201,8 @@ export const TelanganaMap: React.FC<MapProps> = ({
         </div>
       </div>
 
-      {/* Map Legend Overlay */}
-      <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm p-3 rounded-lg shadow-md border border-slate-200 z-[1000] text-xs">
+      {/* Map Legend Overlay (Option A: Translucent glassmorphism, reveals on hover) */}
+      <div className="absolute bottom-4 left-4 bg-white/75 hover:bg-white/98 opacity-60 hover:opacity-100 backdrop-blur-md p-3 rounded-xl shadow-xs hover:shadow-xl border border-slate-200/80 hover:border-slate-300 transition-all duration-300 z-[1000] text-xs group cursor-default select-none">
         {thematicLayer !== 'NONE' ? (
           <div className="space-y-1.5 min-w-[210px]">
             <div className="font-bold text-slate-800 flex items-center gap-1.5">
@@ -1242,7 +1242,7 @@ export const TelanganaMap: React.FC<MapProps> = ({
             <div className="font-semibold text-slate-700 mb-1.5 uppercase tracking-wider text-[11px]">
               {viewMode === 'winner' && 'Party Legend'}
               {viewMode === 'margin' && 'Victory Margin'}
-              {viewMode === 'swing' && 'Seat Status'}
+              {viewMode === 'swing' && 'Seat Swings & Holds'}
               {viewMode === 'district' && '33 Districts'}
             </div>
 
