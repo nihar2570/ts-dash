@@ -39,7 +39,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             <li><strong>Click a constituency</strong> on the map to see its battle card with historical results.</li>
             <li>Use the <strong>search bar</strong> to find a constituency by name or AC number (press Enter).</li>
             <li>Scroll down to the <strong>Constituency Table</strong> to browse all 119 seats with sortable columns.</li>
-            <li>Click <strong>"Open Dossier"</strong> on any constituency for a deep-dive modal with candidate profiles and demographics.</li>
+            <li>Click <strong>"Full Dossier ↗"</strong> on any constituency for candidate profiles, the <strong>Candidate Personal Equity Decomposer</strong> (#6), and the <strong>Form-20 Polling Station Deficit &amp; Panna Pramukh Solver</strong> (#5).</li>
           </ul>
         </section>
 

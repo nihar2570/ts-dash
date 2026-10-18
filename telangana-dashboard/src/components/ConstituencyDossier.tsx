@@ -24,16 +24,24 @@ import {
   MapPin,
   Briefcase,
   Clock,
+  Maximize2,
+  Minimize2,
+  ArrowLeft,
 } from 'lucide-react';
 import { CONSTITUENCY_MANDALS } from '../data/mandalData';
 import { FORM_20_URLS } from '../data/form20Urls';
 import { CONSTITUENCY_TOPICS } from '../data/constituencyTopics';
+import { CandidateEquityDecomposer } from './CandidateEquityDecomposer';
+import { BoothPannaDeficitSolver } from './BoothPannaDeficitSolver';
 
 interface ConstituencyDossierProps {
   data: ConstituencyCandidatesData | null;
   isOpen: boolean;
   onClose: () => void;
   seeepcData?: SeeepcDataset | null;
+  isFullPageView?: boolean;
+  onSelectAc?: (acNo: number) => void;
+  allConstituencies?: { ac_no: number; ac_name: string; district: string }[];
 }
 
 export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
@@ -41,13 +49,16 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
   isOpen,
   onClose,
   seeepcData,
+  isFullPageView = false,
+  onSelectAc,
+  allConstituencies,
 }) => {
+  const [isFullScreen, setIsFullScreen] = useState(false);
   const [dossierTab, setDossierTab] = useState<'candidates' | 'mandals' | 'demographics' | 'topics'>('candidates');
   const [minVotes, setMinVotes] = useState<number>(1000);
   const [topLimit, setTopLimit] = useState<number | 'ALL'>('ALL');
   const [filterMode, setFilterMode] = useState<'1000' | '5000' | 'all'>('1000');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [mandalSearch, setMandalSearch] = useState<string>('');
 
   // Column visibility toggles (defaulted to OFF, shown only when toggled ON individually)
   const [showAge, setShowAge] = useState<boolean>(false);
@@ -99,17 +110,6 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
     if (!data) return [];
     return CONSTITUENCY_MANDALS[data.ac_no] || [];
   }, [data]);
-
-  const filteredMandals = useMemo(() => {
-    if (!mandalSearch.trim()) return mandals;
-    const q = mandalSearch.toLowerCase().trim();
-    return mandals.filter(
-      (m) =>
-        m.name.toLowerCase().includes(q) ||
-        m.dominant_caste.toLowerCase().includes(q) ||
-        m.lead_party.toLowerCase().includes(q)
-    );
-  }, [mandals, mandalSearch]);
 
   const mandalTotals = useMemo(() => {
     const totalBooths = mandals.reduce((sum, m) => sum + (m.booths || 0), 0);
@@ -232,66 +232,14 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
   );
 
   const openInNewTab = () => {
-    const url = `${window.location.origin}${window.location.pathname}?dossier=${data.ac_no}`;
+    const url = `${window.location.origin}${window.location.pathname}?dossier=${data.ac_no}&view=full`;
     window.open(url, '_blank');
   };
 
-  return (
-    <div className="fixed inset-0 z-[2000] flex items-center justify-center p-2 sm:p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200">
-      <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 w-full max-w-5xl max-h-[92vh] flex flex-col overflow-hidden text-slate-800">
-        {/* Top Header */}
-        <div className="px-6 py-4 bg-slate-900 text-white flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
-          <div className="space-y-1">
-            <div className="flex items-center gap-2.5 flex-wrap">
-              <span className="bg-indigo-600 text-white font-mono font-bold text-xs px-2.5 py-0.5 rounded-md">
-                AC #{data.ac_no}
-              </span>
-              <h2 className="text-xl sm:text-2xl font-black tracking-tight">{data.ac_name}</h2>
-              <span className="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full border border-slate-700 font-medium">
-                {data.district} District (33 TS)
-              </span>
-              <span className="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full border border-slate-700">
-                Lok Sabha: {data.pc_name}
-              </span>
-            </div>
-            <p className="text-xs text-slate-400">
-              Constituency Election Intelligence Dossier &middot; 2023 Assembly Ballot &middot; MyNeta ADR Disclosures
-            </p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            {form20Url && (
-              <a
-                href={form20Url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700/80 hover:bg-emerald-600 text-white rounded-lg text-xs font-semibold border border-emerald-500/50 transition-all shadow-xs cursor-pointer"
-                title="View Certified Official Form-20 Polling Station PDF from CEO Telangana"
-              >
-                <FileText className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">Official</span> Form-20 PDF
-              </a>
-            )}
-            <button
-              onClick={openInNewTab}
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-lg text-xs font-semibold border border-slate-700 transition-all shadow-xs cursor-pointer"
-              title="Open full dossier in a standalone browser tab"
-            >
-              <ExternalLink className="w-3.5 h-3.5" />
-              Open in New Tab
-            </button>
-            <button
-              onClick={onClose}
-              className="p-1.5 bg-slate-800 hover:bg-rose-600 text-slate-400 hover:text-white rounded-lg transition-all cursor-pointer"
-              title="Close Dossier"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-        </div>
-
-        {/* Dossier Section Tabs */}
-        <div className="bg-slate-900 border-b border-slate-800 px-4 sm:px-6 py-2.5 flex items-center justify-between flex-wrap gap-2">
+  const dossierTabsAndContent = (
+    <>
+      {/* Dossier Section Tabs */}
+      <div className="bg-slate-900 border-b border-slate-800 px-4 sm:px-6 py-2.5 flex items-center justify-between flex-wrap gap-2">
           <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
             <button
               onClick={() => setDossierTab('candidates')}
@@ -446,6 +394,15 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
               ))}
             </div>
           </div>
+
+          {/* Feature #6: Candidate Personal Equity vs Party Symbol Decomposer */}
+          <CandidateEquityDecomposer
+            acNo={data.ac_no}
+            acName={data.ac_name}
+            winnerCandidate={data.candidates[0]}
+            runnerCandidate={data.candidates[1]}
+            totalValidVotes={data.total_valid_votes}
+          />
 
           {/* Candidate Filter & Control Bar */}
           <div className="bg-slate-50 border border-slate-200 rounded-xl p-3.5 flex flex-wrap items-center justify-between gap-3">
@@ -860,133 +817,20 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
             </div>
           </div>
 
-          {/* Mandal Comparative Bar Chart */}
-          <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-xs space-y-3">
-            <div className="flex items-center justify-between text-xs">
-              <span className="font-bold text-slate-800 uppercase tracking-wider text-[11px]">
-                Mandal Political Lead Comparison (Revenue Mandals)
-              </span>
-              <span className="text-[11px] text-slate-500">
-                Lead party and victory margin per mandal
-              </span>
-            </div>
-            <div className="space-y-2">
-              {mandals.map((m) => {
-                const partyColor = getPartyColor(m.lead_party);
-                return (
-                  <div key={m.mandal_id} className="space-y-1">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="font-semibold text-slate-800 flex items-center gap-2">
-                        <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: partyColor }} />
-                        {m.name}
-                      </span>
-                      <span className="font-mono text-slate-600">
-                        <strong style={{ color: partyColor }}>{m.lead_party}</strong> +{m.margin.toLocaleString()} votes ({m.turnout_pct}% turnout)
-                      </span>
-                    </div>
-                    <div className="w-full h-2 bg-slate-100 rounded-full overflow-hidden flex">
-                      <div
-                        style={{
-                          width: `${Math.min(100, Math.max(15, (m.margin / 4500) * 100))}%`,
-                          backgroundColor: partyColor,
-                        }}
-                        className="h-full rounded-full transition-all"
-                      />
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Mandal Roster Table */}
-          <div className="border border-slate-200 rounded-xl overflow-hidden shadow-xs">
-            <div className="bg-slate-100/90 px-4 py-2.5 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2.5 text-xs">
-              <span className="font-bold text-slate-700">
-                Mandal &amp; Polling Station Roster ({filteredMandals.length})
-              </span>
-              <div className="relative">
-                <Search className="w-3.5 h-3.5 absolute left-2.5 top-2.5 text-slate-400" />
-                <input
-                  type="text"
-                  placeholder="Search mandal, caste, party..."
-                  value={mandalSearch}
-                  onChange={(e) => setMandalSearch(e.target.value)}
-                  className="pl-8 pr-3 py-1 bg-white border border-slate-300 rounded-lg text-xs w-52 focus:outline-hidden"
-                />
-              </div>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse text-xs">
-                <thead>
-                  <tr className="bg-slate-50/80 border-b border-slate-200 text-slate-600 font-semibold uppercase tracking-wider text-[11px]">
-                    <th className="py-2.5 px-3">Mandal / Circle</th>
-                    <th className="py-2.5 px-3 text-right">Booths</th>
-                    <th className="py-2.5 px-3 text-right">Electorate</th>
-                    <th className="py-2.5 px-3">2023 Lead Party</th>
-                    <th className="py-2.5 px-3 text-right">Lead Margin</th>
-                    <th className="py-2.5 px-3">Dominant Community</th>
-                    <th className="py-2.5 px-3 text-right">Turnout %</th>
-                    <th className="py-2.5 px-3 text-center">Field Status</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-100">
-                  {filteredMandals.map((m) => {
-                    const partyColor = getPartyColor(m.lead_party);
-                    const isTossUp = m.status === 'TOSS_UP';
-
-                    return (
-                      <tr key={m.mandal_id} className="hover:bg-slate-50 transition-colors">
-                        <td className="py-2.5 px-3 font-bold text-slate-900">
-                          {m.name}
-                        </td>
-                        <td className="py-2.5 px-3 text-right font-mono font-semibold text-slate-700">
-                          {m.booths}
-                        </td>
-                        <td className="py-2.5 px-3 text-right font-mono text-slate-600">
-                          {m.electorate.toLocaleString()}
-                        </td>
-                        <td className="py-2.5 px-3">
-                          <span
-                            className="font-bold px-2 py-0.5 rounded text-[11px] inline-flex items-center gap-1"
-                            style={{ backgroundColor: `${partyColor}18`, color: partyColor }}
-                          >
-                            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: partyColor }} />
-                            {m.lead_party}
-                          </span>
-                        </td>
-                        <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-800">
-                          +{m.margin.toLocaleString()}
-                        </td>
-                        <td className="py-2.5 px-3 text-slate-700">
-                          <span className="font-medium">{m.dominant_caste}</span>{' '}
-                          <span className="text-[10px] text-slate-500 font-mono">({m.dominant_caste_pct}%)</span>
-                        </td>
-                        <td className="py-2.5 px-3 text-right font-mono text-slate-800">
-                          {m.turnout_pct}%
-                        </td>
-                        <td className="py-2.5 px-3 text-center">
-                          {isTossUp ? (
-                            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
-                              TOSS-UP
-                            </span>
-                          ) : (
-                            <span
-                              className="px-2 py-0.5 rounded text-[10px] font-bold"
-                              style={{ backgroundColor: `${partyColor}20`, color: partyColor }}
-                            >
-                              {m.status.replace('_', ' ')}
-                            </span>
-                          )}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </div>
+          {/* Feature #5: Form-20 Polling Station Deficit & Panna Pramukh Triage Solver */}
+          <BoothPannaDeficitSolver
+            acNo={data.ac_no}
+            acName={data.ac_name}
+            district={data.district}
+            mandals={mandals}
+            totalValidVotes={data.total_valid_votes}
+            winnerParty={data.candidates[0]?.party || 'INC'}
+            winnerCandidate={data.candidates[0]?.name || 'Winner'}
+            winnerVotes={data.candidates[0]?.votes || 0}
+            runnerParty={data.candidates[1]?.party || 'BRS'}
+            runnerCandidate={data.candidates[1]?.name || 'Runner-up'}
+            runnerVotes={data.candidates[1]?.votes || 0}
+          />
         </div>
       )}
 
@@ -1584,7 +1428,163 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
             Telangana Assembly Constituency Intelligence Dossier
           </div>
         </div>
+      </>
+    );
+
+    if (isFullPageView) {
+      return (
+        <div className="min-h-screen w-full bg-slate-950 text-slate-800 flex flex-col font-sans">
+          {/* Full Page Sticky Navbar */}
+          <header className="sticky top-0 z-50 bg-slate-950/95 backdrop-blur-md border-b border-slate-800 px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-3 text-white shadow-lg">
+            <div className="flex items-center gap-3">
+              <button
+                onClick={onClose}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-lg text-xs font-semibold border border-slate-700 transition-all cursor-pointer shadow-xs"
+              >
+                <ArrowLeft className="w-4 h-4 text-indigo-400" />
+                <span>Back to Dashboard Map</span>
+              </button>
+
+              <div className="h-4 w-px bg-slate-800 hidden sm:block" />
+
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="bg-indigo-600 text-white font-mono font-bold text-xs px-2.5 py-0.5 rounded-md">
+                  AC #{data.ac_no}
+                </span>
+                <h1 className="text-lg sm:text-xl font-black tracking-tight">{data.ac_name}</h1>
+                <span className="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full border border-slate-700 font-medium">
+                  {data.district} District (33 TS)
+                </span>
+                <span className="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full border border-slate-700">
+                  Lok Sabha: {data.pc_name}
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 flex-wrap">
+              {allConstituencies && allConstituencies.length > 0 && onSelectAc && (
+                <select
+                  value={data.ac_no}
+                  onChange={(e) => onSelectAc(Number(e.target.value))}
+                  className="bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-xs text-slate-200 focus:outline-hidden font-medium cursor-pointer"
+                >
+                  {allConstituencies.map((c) => (
+                    <option key={c.ac_no} value={c.ac_no}>
+                      #{c.ac_no} {c.ac_name} ({c.district})
+                    </option>
+                  ))}
+                </select>
+              )}
+
+              {form20Url && (
+                <a
+                  href={form20Url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700/80 hover:bg-emerald-600 text-white rounded-lg text-xs font-semibold border border-emerald-500/50 transition-all cursor-pointer shadow-xs"
+                  title="View Certified Official Form-20 Polling Station PDF from CEO Telangana"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>Official Form-20 PDF</span>
+                  <ExternalLink className="w-3 h-3 text-emerald-300" />
+                </a>
+              )}
+            </div>
+          </header>
+
+          {/* Full Page Body */}
+          <main className="w-full max-w-7xl mx-auto p-3 sm:p-6 lg:p-8 flex-1 flex flex-col">
+            <div className="bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col flex-1">
+              {dossierTabsAndContent}
+            </div>
+          </main>
+        </div>
+      );
+    }
+
+    return (
+      <div
+        className={`fixed inset-0 z-[2000] flex items-center justify-center bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-200 ${
+          isFullScreen ? 'p-0' : 'p-2 sm:p-4'
+        }`}
+      >
+        <div
+          className={`bg-white shadow-2xl border border-slate-200 flex flex-col overflow-hidden text-slate-800 transition-all duration-200 ${
+            isFullScreen
+              ? 'w-full h-full rounded-none max-w-none max-h-none'
+              : 'w-full max-w-5xl max-h-[92vh] rounded-2xl'
+          }`}
+        >
+          {/* Top Header */}
+          <div className="px-6 py-4 bg-slate-900 text-white flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+            <div className="space-y-1">
+              <div className="flex items-center gap-2.5 flex-wrap">
+                <span className="bg-indigo-600 text-white font-mono font-bold text-xs px-2.5 py-0.5 rounded-md">
+                  AC #{data.ac_no}
+                </span>
+                <h2 className="text-xl sm:text-2xl font-black tracking-tight">{data.ac_name}</h2>
+                <span className="text-xs bg-slate-800 text-slate-300 px-2.5 py-0.5 rounded-full border border-slate-700 font-medium">
+                  {data.district} District (33 TS)
+                </span>
+                <span className="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full border border-slate-700">
+                  Lok Sabha: {data.pc_name}
+                </span>
+              </div>
+              <p className="text-xs text-slate-400">
+                Constituency Election Intelligence Dossier &middot; 2023 Assembly Ballot &middot; MyNeta ADR Disclosures
+              </p>
+            </div>
+
+            <div className="flex items-center gap-2">
+              {form20Url && (
+                <a
+                  href={form20Url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-700/80 hover:bg-emerald-600 text-white rounded-lg text-xs font-semibold border border-emerald-500/50 transition-all shadow-xs cursor-pointer"
+                  title="View Certified Official Form-20 Polling Station PDF from CEO Telangana"
+                >
+                  <FileText className="w-3.5 h-3.5" />
+                  <span className="hidden sm:inline">Official</span> Form-20 PDF
+                </a>
+              )}
+              <button
+                onClick={() => setIsFullScreen(!isFullScreen)}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white rounded-lg text-xs font-semibold border border-slate-700 transition-all shadow-xs cursor-pointer"
+                title={isFullScreen ? 'Restore Modal Window' : 'Maximize to Full Screen'}
+              >
+                {isFullScreen ? (
+                  <>
+                    <Minimize2 className="w-3.5 h-3.5" />
+                    <span className="hidden sm:inline">Restore</span>
+                  </>
+                ) : (
+                  <>
+                    <Maximize2 className="w-3.5 h-3.5" />
+                    <span className="hidden sm:inline">Maximize</span>
+                  </>
+                )}
+              </button>
+              <button
+                onClick={openInNewTab}
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-700/80 hover:bg-indigo-600 text-white rounded-lg text-xs font-semibold border border-indigo-500/50 transition-all shadow-xs cursor-pointer"
+                title="Open full page in a new standalone tab"
+              >
+                <ExternalLink className="w-3.5 h-3.5" />
+                <span>Open in New Tab</span>
+              </button>
+              <button
+                onClick={onClose}
+                className="p-1.5 bg-slate-800 hover:bg-rose-600 text-slate-400 hover:text-white rounded-lg transition-all cursor-pointer"
+                title="Close Dossier"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          {dossierTabsAndContent}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  };

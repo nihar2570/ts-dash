@@ -9,8 +9,10 @@ import {
   ShieldAlert,
   ShieldCheck,
   Scale,
-  FileText
+  FileText,
+  Target,
 } from 'lucide-react';
+import { CONSTITUENCY_MANDALS } from '../data/mandalData';
 
 interface ConstituencyCardProps {
   selectedAcNo: number | null;
@@ -49,6 +51,10 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
   const winnerCand = candidateData?.candidates?.[0];
   const runnerCand = candidateData?.candidates?.[1];
   const candidatesAbove1k = candidateData?.candidates?.filter((c) => c.votes >= 1000) || [];
+
+  const acMandals = selectedAcNo ? CONSTITUENCY_MANDALS[selectedAcNo] || [] : [];
+  const totalBooths = acMandals.reduce((sum, m) => sum + (m.booths || 0), 0) || 240;
+  const votesPerBoothToFlip = Math.ceil((currentResult?.margin || 0) / totalBooths);
 
   return (
     <div className="bg-white rounded-xl p-5 shadow-sm border border-slate-200 space-y-4">
@@ -202,6 +208,19 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
                   {res.margin.toLocaleString()} votes ({res.margin_pct}%)
                 </span>
               </div>
+
+              {/* Feature #5 Micro-Badge: Form-20 Booth Deficit / Buffer */}
+              {isActive && y === '2023' && (
+                <div className="mt-2 pt-2 border-t border-indigo-200/40 flex items-center justify-between text-[11px] bg-white/70 p-2 rounded-lg">
+                  <span className="text-slate-600 flex items-center gap-1 font-medium">
+                    <Target className="w-3.5 h-3.5 text-indigo-600" />
+                    <strong>{totalBooths}</strong> Polling Stations
+                  </span>
+                  <span className="font-mono text-slate-800 font-bold bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded border border-indigo-200 text-[10px]">
+                    ±{votesPerBoothToFlip} votes / booth gap
+                  </span>
+                </div>
+              )}
             </div>
           );
         })}

@@ -49,6 +49,13 @@ const [helpOpen, setHelpOpen] = useState(false);
     }
     return false;
   });
+  const [isFullPageMode, setIsFullPageMode] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('view') === 'full';
+    }
+    return false;
+  });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -119,6 +126,44 @@ const [helpOpen, setHelpOpen] = useState(false);
 
   const currentYearResults = electionData.results[selectedYear] || {};
   const currentSummary = electionData.summary[selectedYear];
+
+  const allConstituenciesList = electionData
+    ? Object.values(electionData.results['2023'] || {})
+        .map((r) => ({
+          ac_no: r.ac_no,
+          ac_name: r.ac_name,
+          district: r.district,
+        }))
+        .sort((a, b) => a.ac_no - b.ac_no)
+    : [];
+
+  // Standalone Full-Page Dossier Mode (when opened in new tab with ?view=full)
+  if (isFullPageMode && candidatesData && selectedAcNo) {
+    return (
+      <ConstituencyDossier
+        data={candidatesData[String(selectedAcNo)] || null}
+        isOpen={true}
+        seeepcData={seeepcData}
+        isFullPageView={true}
+        allConstituencies={allConstituenciesList}
+        onSelectAc={(acNo) => {
+          setSelectedAcNo(acNo);
+          const url = new URL(window.location.href);
+          url.searchParams.set('dossier', String(acNo));
+          url.searchParams.set('view', 'full');
+          window.history.replaceState({}, '', url.pathname + url.search);
+        }}
+        onClose={() => {
+          setIsFullPageMode(false);
+          setIsDossierOpen(false);
+          const url = new URL(window.location.href);
+          url.searchParams.delete('view');
+          url.searchParams.delete('dossier');
+          window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
+        }}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-100/80 text-slate-900 pb-12">
@@ -236,11 +281,14 @@ const [helpOpen, setHelpOpen] = useState(false);
         data={candidatesData && selectedAcNo ? candidatesData[String(selectedAcNo)] : null}
         isOpen={isDossierOpen}
         seeepcData={seeepcData}
+        allConstituencies={allConstituenciesList}
+        onSelectAc={(acNo) => setSelectedAcNo(acNo)}
         onClose={() => {
           setIsDossierOpen(false);
           const url = new URL(window.location.href);
           if (url.searchParams.has('dossier')) {
             url.searchParams.delete('dossier');
+            url.searchParams.delete('view');
             window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
           }
         }}
