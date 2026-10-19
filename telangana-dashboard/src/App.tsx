@@ -42,20 +42,14 @@ const [helpOpen, setHelpOpen] = useState(false);
   const [districtGeoJsonData, setDistrictGeoJsonData] = useState<any | null>(null);
   const [candidatesData, setCandidatesData] = useState<Record<string, ConstituencyCandidatesData> | null>(null);
   const [seeepcData, setSeeepcData] = useState<SeeepcDataset | null>(null);
-  const [isDossierOpen, setIsDossierOpen] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      return params.has('dossier');
-    }
-    return false;
-  });
-  const [isFullPageMode, setIsFullPageMode] = useState<boolean>(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('view') === 'full';
-    }
-    return false;
-  });
+  const isDossierRoute = typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('dossier');
+
+  const handleOpenDossier = (acNo: number, tab?: string) => {
+    const url = new URL(window.location.origin + window.location.pathname);
+    url.searchParams.set('dossier', String(acNo));
+    if (tab) url.searchParams.set('tab', tab);
+    window.open(url.toString(), '_blank');
+  };
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -137,29 +131,28 @@ const [helpOpen, setHelpOpen] = useState(false);
         .sort((a, b) => a.ac_no - b.ac_no)
     : [];
 
-  // Standalone Full-Page Dossier Mode (when opened in new tab with ?view=full)
-  if (isFullPageMode && candidatesData && selectedAcNo) {
+  // Standalone Full-Page Dossier Mode (when loaded with ?dossier=<ac_no>)
+  if (isDossierRoute && candidatesData && selectedAcNo) {
     return (
       <ConstituencyDossier
         data={candidatesData[String(selectedAcNo)] || null}
         isOpen={true}
         seeepcData={seeepcData}
-        isFullPageView={true}
+        geoJsonData={geoJsonData}
         allConstituencies={allConstituenciesList}
+        electionData={electionData}
         onSelectAc={(acNo) => {
           setSelectedAcNo(acNo);
           const url = new URL(window.location.href);
           url.searchParams.set('dossier', String(acNo));
-          url.searchParams.set('view', 'full');
           window.history.replaceState({}, '', url.pathname + url.search);
         }}
         onClose={() => {
-          setIsFullPageMode(false);
-          setIsDossierOpen(false);
           const url = new URL(window.location.href);
           url.searchParams.delete('view');
           url.searchParams.delete('dossier');
-          window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
+          url.searchParams.delete('tab');
+          window.location.href = url.pathname + (url.search ? url.search : '');
         }}
       />
     );
@@ -177,7 +170,7 @@ const [helpOpen, setHelpOpen] = useState(false);
         setViewMode={setViewMode}
         electionData={electionData}
         setSelectedAcNo={setSelectedAcNo}
-        setIsDossierOpen={setIsDossierOpen}
+        onOpenDossier={(acNo) => handleOpenDossier(acNo)}
         seeepcData={seeepcData}
         setIsExecutiveBriefingOpen={setIsExecutiveBriefingOpen}
         onHelpOpen={() => setHelpOpen(true)}
@@ -227,7 +220,7 @@ const [helpOpen, setHelpOpen] = useState(false);
                   allYearsData={electionData.results}
                   activeYear={selectedYear}
                   candidateData={candidatesData && selectedAcNo ? candidatesData[String(selectedAcNo)] : null}
-                  onOpenDossier={() => setIsDossierOpen(true)}
+                  onOpenDossier={(acNo) => handleOpenDossier(acNo || selectedAcNo || 40)}
                 />
               </div>
             </div>
@@ -239,10 +232,7 @@ const [helpOpen, setHelpOpen] = useState(false);
                 selectedAcNo={selectedAcNo}
                 onSelectAc={setSelectedAcNo}
                 year={selectedYear}
-                onOpenDossier={(acNo) => {
-                  setSelectedAcNo(acNo);
-                  setIsDossierOpen(true);
-                }}
+                onOpenDossier={(acNo) => handleOpenDossier(acNo)}
               />
             </div>
           </>
@@ -256,10 +246,7 @@ const [helpOpen, setHelpOpen] = useState(false);
               if (acNo) setSelectedAcNo(acNo);
               setActiveTab('actions');
             }}
-            onSelectConstituencyDossier={(acNo) => {
-              setSelectedAcNo(acNo);
-              setIsDossierOpen(true);
-            }}
+            onSelectConstituencyDossier={(acNo) => handleOpenDossier(acNo)}
           />
         )}
 
@@ -268,31 +255,10 @@ const [helpOpen, setHelpOpen] = useState(false);
           <ActionsView
             data={seeepcData}
             initialSelectedAc={selectedAcNo}
-            onOpenDossier={(acNo) => {
-              setSelectedAcNo(acNo);
-              setIsDossierOpen(true);
-            }}
+            onOpenDossier={(acNo) => handleOpenDossier(acNo)}
           />
         )}
       </main>
-
-      {/* Interactive Constituency Dossier Modal / View */}
-      <ConstituencyDossier
-        data={candidatesData && selectedAcNo ? candidatesData[String(selectedAcNo)] : null}
-        isOpen={isDossierOpen}
-        seeepcData={seeepcData}
-        allConstituencies={allConstituenciesList}
-        onSelectAc={(acNo) => setSelectedAcNo(acNo)}
-        onClose={() => {
-          setIsDossierOpen(false);
-          const url = new URL(window.location.href);
-          if (url.searchParams.has('dossier')) {
-            url.searchParams.delete('dossier');
-            url.searchParams.delete('view');
-            window.history.replaceState({}, '', url.pathname + (url.search ? url.search : ''));
-          }
-        }}
-      />
 
       {/* Feature #11: Global Executive Intelligence Briefing Modal */}
       {seeepcData && (

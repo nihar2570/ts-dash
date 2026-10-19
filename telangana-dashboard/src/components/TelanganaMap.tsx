@@ -327,14 +327,27 @@ export const TelanganaMap: React.FC<MapProps> = ({
           }
         );
       } else {
-        // Esri World Light Gray Base: Clean, minimal canvas with zero watermark and no API key required
-        layer = L.tileLayer(
-          'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
-          {
-            maxZoom: 16,
-            attribution: 'Tiles &copy; Esri',
-          }
-        );
+        const cartoKey = import.meta.env.VITE_CARTO_API_KEY;
+        if (cartoKey) {
+          // CARTO Positron: crisp light basemap powered by official API key
+          layer = L.tileLayer(
+            `https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}{r}.png?key=${cartoKey}`,
+            {
+              maxZoom: 19,
+              subdomains: 'abcd',
+              attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            }
+          );
+        } else {
+          // Esri World Light Gray Base fallback if no CARTO API key is provided
+          layer = L.tileLayer(
+            'https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+            {
+              maxZoom: 16,
+              attribution: 'Tiles &copy; Esri',
+            }
+          );
+        }
       }
 
       layer.addTo(map);
@@ -1156,9 +1169,9 @@ export const TelanganaMap: React.FC<MapProps> = ({
                             ? 'bg-indigo-600 text-white font-bold border-indigo-600 shadow-2xs'
                             : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
                         }`}
-                        title="Esri World Light Gray Base (Minimal grayscale canvas, zero watermark)"
+                        title="Light Grayscale Canvas (CARTO Positron / Esri Light)"
                       >
-                        Esri Light
+                        Light Canvas
                       </button>
                       <button
                         type="button"

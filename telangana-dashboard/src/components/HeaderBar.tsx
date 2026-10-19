@@ -11,7 +11,7 @@ interface HeaderBarProps {
   setViewMode: (mode: ViewMode) => void;
   electionData: ElectionData | null;
   setSelectedAcNo: (acNo: number) => void;
-  setIsDossierOpen: (open: boolean) => void;
+  onOpenDossier?: (acNo: number) => void;
   seeepcData?: SeeepcDataset | null;
   setIsExecutiveBriefingOpen: (open: boolean) => void;
   onHelpOpen: () => void;
@@ -26,7 +26,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
   setViewMode,
   electionData,
   setSelectedAcNo,
-  setIsDossierOpen,
+  onOpenDossier,
   seeepcData,
   setIsExecutiveBriefingOpen,
   onHelpOpen,
@@ -46,7 +46,9 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
     if (matches) {
       const acNo = Number(matches[0]);
       setSelectedAcNo(acNo);
-      setIsDossierOpen(true);
+      if (onOpenDossier) {
+        onOpenDossier(acNo);
+      }
     }
   };
 
