@@ -11,7 +11,23 @@ import {
   AlertTriangle,
   Search,
   Sparkles,
+  ChevronDown,
+  ChevronUp,
+  ShieldCheck,
+  UserX,
+  Shuffle,
+  RefreshCw,
 } from 'lucide-react';
+import type {
+  WelfareSettings,
+  MlaFatigueSettings,
+  CannibalizationSettings,
+} from './StrategicSimulationModels';
+import {
+  DEFAULT_WELFARE_SETTINGS,
+  DEFAULT_MLA_FATIGUE_SETTINGS,
+  DEFAULT_CANNIBALIZATION_SETTINGS,
+} from './StrategicSimulationModels';
 
 export interface TurnoutSettings {
   urbanShift: number;   // -15% to +15%
@@ -28,11 +44,25 @@ interface AdvancedSimulationSuiteProps {
   setMacroSwing: React.Dispatch<React.SetStateAction<MacroSwing>>;
   turnoutSettings: TurnoutSettings;
   setTurnoutSettings: React.Dispatch<React.SetStateAction<TurnoutSettings>>;
+  welfareSettings: WelfareSettings;
+  setWelfareSettings: React.Dispatch<React.SetStateAction<WelfareSettings>>;
+  mlaFatigueSettings: MlaFatigueSettings;
+  setMlaFatigueSettings: React.Dispatch<React.SetStateAction<MlaFatigueSettings>>;
+  cannibalizationSettings: CannibalizationSettings;
+  setCannibalizationSettings: React.Dispatch<React.SetStateAction<CannibalizationSettings>>;
   onApplyPreset: (presetKey: string) => void;
   onNavigateToActions: (acNo?: number) => void;
 }
 
-type SuiteTab = 'monte_carlo' | 'turnout' | 'alliances' | 'target_60' | 'diff_mode';
+type SuiteTab =
+  | 'monte_carlo'
+  | 'turnout'
+  | 'welfare_meter'
+  | 'mla_fatigue'
+  | 'cannibalization'
+  | 'alliances'
+  | 'target_60'
+  | 'diff_mode';
 
 // Standard normal distribution generator using Box-Muller transform
 function gaussianRandom(): number {
@@ -62,10 +92,17 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
   setMacroSwing,
   turnoutSettings,
   setTurnoutSettings,
+  welfareSettings,
+  setWelfareSettings,
+  mlaFatigueSettings,
+  setMlaFatigueSettings,
+  cannibalizationSettings,
+  setCannibalizationSettings,
   onApplyPreset,
   onNavigateToActions,
 }) => {
   const [activeTab, setActiveTab] = useState<SuiteTab>('monte_carlo');
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(true);
 
   // --- Feature 2: Monte Carlo Probabilistic Forecast State ---
   const [pollingErrorSigma, setPollingErrorSigma] = useState<number>(3.0); // Polling uncertainty %
@@ -297,85 +334,182 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
   }, [simulatedResults, diffFilter, diffSearch]);
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-xl text-slate-100 space-y-5">
-      {/* Top Header & Sub-Tab Switcher */}
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-3.5">
-        <div className="flex items-center gap-2">
-          <span className="p-2 bg-indigo-600/30 text-indigo-400 border border-indigo-500/40 rounded-xl">
-            <Sparkles className="w-4 h-4" />
-          </span>
-          <div>
-            <h3 className="text-sm sm:text-base font-black text-white flex items-center gap-2">
-              <span>War Room Simulation Suite</span>
-              <span className="text-[10px] font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold">
-                Advanced Lab
-              </span>
-            </h3>
-            <p className="text-[11px] text-slate-400">
-              Probabilistic forecasting, differential mobilization, alliance builder &amp; target optimization
-            </p>
+    <div className={`bg-slate-900 border border-slate-800 rounded-2xl shadow-xl text-slate-100 transition-all ${
+      isCollapsed ? 'p-4 sm:p-4.5' : 'p-4 sm:p-5 space-y-5'
+    }`}>
+      {/* Top Header */}
+      {isCollapsed ? (
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-2.5">
+            <span className="p-2 bg-indigo-600/30 text-indigo-400 border border-indigo-500/40 rounded-xl">
+              <Sparkles className="w-4 h-4" />
+            </span>
+            <div>
+              <h3 className="text-sm sm:text-base font-black text-white flex items-center gap-2">
+                <span>War Room Simulation Suite</span>
+                <span className="text-[10px] font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold">
+                  Advanced Lab
+                </span>
+              </h3>
+              <p className="text-[11px] text-slate-400">
+                Probabilistic forecasting, differential mobilization, alliance builder &amp; target optimization
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950 text-slate-300 border border-slate-800 text-xs font-mono font-medium">
+              {activeTab === 'monte_carlo'
+                ? '🎲 Monte Carlo (1,000 Runs)'
+                : activeTab === 'turnout'
+                ? '👥 Turnout Mobilization'
+                : activeTab === 'alliances'
+                ? '🤝 Coalition Sandbox'
+                : activeTab === 'target_60'
+                ? '🎯 Target 60 Optimizer'
+                : '⚖️ Scenario Diff'}
+            </span>
+            <button
+              type="button"
+              onClick={() => setIsCollapsed(false)}
+              className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center gap-1.5 cursor-pointer"
+              title="Open and expand the Advanced Simulation Suite"
+            >
+              <ChevronDown className="w-4 h-4" />
+              <span>Open Simulation Suite</span>
+            </button>
           </div>
         </div>
+      ) : (
+        <div className="space-y-3.5 border-b border-slate-800 pb-3.5">
+          {/* Top Row: Suite Title & Collapse Button */}
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5">
+              <span className="p-2 bg-indigo-600/30 text-indigo-400 border border-indigo-500/40 rounded-xl shrink-0">
+                <Sparkles className="w-4 h-4" />
+              </span>
+              <div>
+                <h3 className="text-sm sm:text-base font-black text-white flex items-center gap-2">
+                  <span>War Room Simulation Suite</span>
+                  <span className="text-[10px] font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold">
+                    Advanced Lab
+                  </span>
+                </h3>
+                <p className="text-[11px] text-slate-400">
+                  Probabilistic forecasting, welfare delivery, ticket surgery, 3-way cannibalization &amp; target optimization
+                </p>
+              </div>
+            </div>
 
-        {/* Suite Sub-Tabs */}
-        <div className="flex items-center gap-1 bg-slate-950 p-1 rounded-xl border border-slate-800 overflow-x-auto max-w-full">
-          <button
-            onClick={() => setActiveTab('monte_carlo')}
-            className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-              activeTab === 'monte_carlo'
-                ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <Dices className="w-3.5 h-3.5" />
-            <span>Monte Carlo (1,000 Runs)</span>
-          </button>
-          <button
-            onClick={() => setActiveTab('turnout')}
-            className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-              activeTab === 'turnout'
-                ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <Users className="w-3.5 h-3.5" />
-            <span>Turnout Mobilization</span>
-          </button>
-          <button
-            onClick={() => setActiveTab('alliances')}
-            className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-              activeTab === 'alliances'
-                ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <Handshake className="w-3.5 h-3.5" />
-            <span>Coalition Sandbox</span>
-          </button>
-          <button
-            onClick={() => setActiveTab('target_60')}
-            className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-              activeTab === 'target_60'
-                ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <Crosshair className="w-3.5 h-3.5" />
-            <span>Target 60 Optimizer</span>
-          </button>
-          <button
-            onClick={() => setActiveTab('diff_mode')}
-            className={`px-3 py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
-              activeTab === 'diff_mode'
-                ? 'bg-indigo-600 text-white shadow-xs'
-                : 'text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <GitCompare className="w-3.5 h-3.5" />
-            <span>Scenario Diff</span>
-          </button>
+            {/* Collapse Button */}
+            <button
+              type="button"
+              onClick={() => setIsCollapsed(true)}
+              className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl transition-colors cursor-pointer border border-slate-700 shrink-0 flex items-center gap-1.5 px-3 text-xs font-semibold shadow-xs"
+              title="Collapse Simulation Suite"
+            >
+              <ChevronUp className="w-4 h-4" />
+              <span className="hidden sm:inline">Collapse</span>
+            </button>
+          </div>
+
+          {/* Sub-Tabs: 2-Line Structured Grid with Sized-Up Typography */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 bg-slate-950 p-2 rounded-2xl border border-slate-800/90 shadow-inner">
+            <button
+              onClick={() => setActiveTab('monte_carlo')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'monte_carlo'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <Dices className="w-4 h-4 text-indigo-400 shrink-0" />
+              <span className="truncate">Monte Carlo (1,000 Runs)</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('turnout')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'turnout'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <Users className="w-4 h-4 text-sky-400 shrink-0" />
+              <span className="truncate">Turnout Mobilization</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('welfare_meter')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'welfare_meter'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+              <span className="truncate">Welfare Guarantee Meter</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('mla_fatigue')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'mla_fatigue'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <UserX className="w-4 h-4 text-amber-400 shrink-0" />
+              <span className="truncate">MLA Fatigue Surgery</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('cannibalization')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'cannibalization'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <Shuffle className="w-4 h-4 text-pink-400 shrink-0" />
+              <span className="truncate">3-Way Cannibalization</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('alliances')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'alliances'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <Handshake className="w-4 h-4 text-purple-400 shrink-0" />
+              <span className="truncate">Coalition Sandbox</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('target_60')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'target_60'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <Crosshair className="w-4 h-4 text-rose-400 shrink-0" />
+              <span className="truncate">Target 60 Optimizer</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('diff_mode')}
+              className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-xl transition-all cursor-pointer flex items-center justify-center sm:justify-start gap-2 ${
+                activeTab === 'diff_mode'
+                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-900/40'
+                  : 'bg-slate-900/70 text-slate-300 hover:text-white hover:bg-slate-850 border border-slate-800'
+              }`}
+            >
+              <GitCompare className="w-4 h-4 text-teal-400 shrink-0" />
+              <span className="truncate">Scenario Diff</span>
+            </button>
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Expanded Suite Body */}
+      {!isCollapsed && (
+        <div className="space-y-5 animate-in fade-in duration-150">
 
       {/* ------------------------------------------------------------- */}
       {/* TAB 1: MONTE CARLO PROBABILISTIC FORECAST (#2)                */}
@@ -688,6 +822,641 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
               <div className="flex justify-between text-[10px] text-slate-500 font-mono">
                 <span>-8%</span>
                 <span>+8% (Female Wave)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ------------------------------------------------------------- */}
+      {/* FEATURE 2: WELFARE GUARANTEE DELIVERY INDEX ("LABHARTHI METER") */}
+      {/* ------------------------------------------------------------- */}
+      {activeTab === 'welfare_meter' && (
+        <div className="space-y-4 animate-in fade-in duration-150">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800">
+            <div>
+              <div className="text-xs font-bold text-white flex items-center gap-2">
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <span>The Welfare Delivery Barometer ("Labharthi Meter")</span>
+                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded font-mono font-bold">
+                  Flagship Guarantee Levers
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-400 mt-0.5">
+                Simulate voter retention and swing based on operational rollout of direct welfare transfers
+              </p>
+            </div>
+
+            {/* Presets */}
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-[11px] text-slate-400 font-semibold mr-1">Presets:</span>
+              <button
+                onClick={() =>
+                  setWelfareSettings({
+                    mahalakshmiPct: 95,
+                    rythuBharosaPct: 90,
+                    loanWaiverPct: 90,
+                    gruhaJyothiPct: 95,
+                    indirammaIndluPct: 75,
+                  })
+                }
+                className="px-2 py-1 text-xs rounded-md font-semibold bg-emerald-950/60 hover:bg-emerald-900 text-emerald-200 border border-emerald-800/60 cursor-pointer"
+              >
+                100% Saturation Wave
+              </button>
+              <button
+                onClick={() =>
+                  setWelfareSettings({
+                    mahalakshmiPct: 45,
+                    rythuBharosaPct: 35,
+                    loanWaiverPct: 30,
+                    gruhaJyothiPct: 60,
+                    indirammaIndluPct: 15,
+                  })
+                }
+                className="px-2 py-1 text-xs rounded-md font-semibold bg-rose-950/60 hover:bg-rose-900 text-rose-200 border border-rose-800/60 cursor-pointer"
+              >
+                Fiscal Bottleneck (-40%)
+              </button>
+              <button
+                onClick={() => setWelfareSettings(DEFAULT_WELFARE_SETTINGS)}
+                className="px-2 py-1 text-xs rounded-md font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 cursor-pointer flex items-center gap-1"
+              >
+                <RefreshCw className="w-3 h-3" />
+                <span>Reset (Current Reality)</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {/* Mahalakshmi */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-pink-300 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-pink-400" />
+                  Mahalakshmi (Free Bus &amp; ₹2,500/mo)
+                </span>
+                <span className="text-[10px] text-slate-400 font-mono">Target: Women</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-white font-mono">
+                  {welfareSettings.mahalakshmiPct}%
+                </span>
+                <span className="text-[11px] font-semibold text-pink-300">
+                  {welfareSettings.mahalakshmiPct >= 75
+                    ? `+${(((welfareSettings.mahalakshmiPct - 75) * 0.038)).toFixed(1)}% INC Women Edge`
+                    : `${(((welfareSettings.mahalakshmiPct - 75) * 0.038)).toFixed(1)}% Deficit`}
+                </span>
+              </div>
+              <input
+                type="range"
+                min="20"
+                max="100"
+                step="5"
+                value={welfareSettings.mahalakshmiPct}
+                onChange={(e) =>
+                  setWelfareSettings((prev) => ({ ...prev, mahalakshmiPct: Number(e.target.value) }))
+                }
+                className="w-full accent-pink-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>20% (Distress)</span>
+                <span>Baseline (75%)</span>
+                <span>100% (Universal)</span>
+              </div>
+            </div>
+
+            {/* Rythu Bharosa */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-emerald-300 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                  Rythu Bharosa (₹15,000/acre)
+                </span>
+                <span className="text-[10px] text-slate-400 font-mono">Agrarian Belts</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-white font-mono">
+                  {welfareSettings.rythuBharosaPct}%
+                </span>
+                <span className="text-[11px] font-semibold text-emerald-300">
+                  {welfareSettings.rythuBharosaPct >= 70
+                    ? `+${(((welfareSettings.rythuBharosaPct - 70) * 0.042)).toFixed(1)}% Rural Swing`
+                    : `${(((welfareSettings.rythuBharosaPct - 70) * 0.042)).toFixed(1)}% Agrarian Backlash`}
+                </span>
+              </div>
+              <input
+                type="range"
+                min="20"
+                max="100"
+                step="5"
+                value={welfareSettings.rythuBharosaPct}
+                onChange={(e) =>
+                  setWelfareSettings((prev) => ({ ...prev, rythuBharosaPct: Number(e.target.value) }))
+                }
+                className="w-full accent-emerald-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>20% (Tenant Anger)</span>
+                <span>Baseline (70%)</span>
+                <span>100%</span>
+              </div>
+            </div>
+
+            {/* Farm Loan Waiver */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-amber-300 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-amber-400" />
+                  Crop Loan Waiver (₹2 Lakh)
+                </span>
+                <span className="text-[10px] text-slate-400 font-mono">North/South TS</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-white font-mono">
+                  {welfareSettings.loanWaiverPct}%
+                </span>
+                <span className="text-[11px] font-semibold text-amber-300">
+                  {welfareSettings.loanWaiverPct >= 65
+                    ? `+${(((welfareSettings.loanWaiverPct - 65) * 0.045)).toFixed(1)}% Farmer Lock`
+                    : `${(((welfareSettings.loanWaiverPct - 65) * 0.045)).toFixed(1)}% Unfulfilled Anger`}
+                </span>
+              </div>
+              <input
+                type="range"
+                min="10"
+                max="100"
+                step="5"
+                value={welfareSettings.loanWaiverPct}
+                onChange={(e) =>
+                  setWelfareSettings((prev) => ({ ...prev, loanWaiverPct: Number(e.target.value) }))
+                }
+                className="w-full accent-amber-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>10%</span>
+                <span>Baseline (65%)</span>
+                <span>100% Full Waiver</span>
+              </div>
+            </div>
+
+            {/* Gruha Jyothi */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-cyan-300 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-cyan-400" />
+                  Gruha Jyothi (200 Units Free)
+                </span>
+                <span className="text-[10px] text-slate-400 font-mono">Urban Slums &amp; Rural</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-white font-mono">
+                  {welfareSettings.gruhaJyothiPct}%
+                </span>
+                <span className="text-[11px] font-semibold text-cyan-300">
+                  {welfareSettings.gruhaJyothiPct >= 85
+                    ? 'Universal Free Power Active'
+                    : 'Disconnection Friction'}
+                </span>
+              </div>
+              <input
+                type="range"
+                min="40"
+                max="100"
+                step="5"
+                value={welfareSettings.gruhaJyothiPct}
+                onChange={(e) =>
+                  setWelfareSettings((prev) => ({ ...prev, gruhaJyothiPct: Number(e.target.value) }))
+                }
+                className="w-full accent-cyan-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>40%</span>
+                <span>Baseline (85%)</span>
+                <span>100%</span>
+              </div>
+            </div>
+
+            {/* Indiramma Indlu */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-violet-300 flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-violet-400" />
+                  Indiramma Indlu (₹5 Lakh Housing)
+                </span>
+                <span className="text-[10px] text-slate-400 font-mono">SC/ST/BC Poor</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-white font-mono">
+                  {welfareSettings.indirammaIndluPct}%
+                </span>
+                <span className="text-[11px] font-semibold text-violet-300">
+                  {welfareSettings.indirammaIndluPct >= 40
+                    ? `+${(((welfareSettings.indirammaIndluPct - 40) * 0.030)).toFixed(1)}% Dalit/OBC Loyalty`
+                    : 'Allotment Delay Penalty'}
+                </span>
+              </div>
+              <input
+                type="range"
+                min="10"
+                max="100"
+                step="5"
+                value={welfareSettings.indirammaIndluPct}
+                onChange={(e) =>
+                  setWelfareSettings((prev) => ({ ...prev, indirammaIndluPct: Number(e.target.value) }))
+                }
+                className="w-full accent-violet-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>10% (Phase 1)</span>
+                <span>Baseline (40%)</span>
+                <span>100% All Gramas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ------------------------------------------------------------- */}
+      {/* FEATURE 3: CANDIDATE FATIGUE & INCUMBENT MLA REPLACEMENT       */}
+      {/* ------------------------------------------------------------- */}
+      {activeTab === 'mla_fatigue' && (
+        <div className="space-y-4 animate-in fade-in duration-150">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800">
+            <div>
+              <div className="text-xs font-bold text-white flex items-center gap-2">
+                <UserX className="w-4 h-4 text-amber-400" />
+                <span>Incumbent MLA Fatigue &amp; Ticket Surgery Simulator</span>
+                <span className="text-[10px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-mono font-bold">
+                  Anti-Incumbency Decoupling
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-400 mt-0.5">
+                Model ticket distribution surgery: dropping vulnerable/unpopular MLAs vs retaining fatigued incumbents
+              </p>
+            </div>
+
+            {/* Target Party Picker & Reset */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-[11px] text-slate-400 font-semibold">Party Surgery:</span>
+              <div className="flex items-center bg-slate-900 p-0.5 rounded-lg border border-slate-800">
+                {(['INC', 'BRS', 'BJP'] as const).map((p) => (
+                  <button
+                    key={p}
+                    onClick={() => setMlaFatigueSettings((prev) => ({ ...prev, targetParty: p }))}
+                    className={`px-2.5 py-1 text-xs font-bold rounded-md transition-all cursor-pointer ${
+                      mlaFatigueSettings.targetParty === p
+                        ? 'bg-amber-600 text-white shadow-xs'
+                        : 'text-slate-400 hover:text-slate-200'
+                    }`}
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
+              <button
+                onClick={() => setMlaFatigueSettings(DEFAULT_MLA_FATIGUE_SETTINGS)}
+                className="px-2 py-1 text-xs rounded-md font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 cursor-pointer flex items-center gap-1"
+                title="Reset MLA surgery settings"
+              >
+                <RefreshCw className="w-3 h-3" />
+                <span>Reset</span>
+              </button>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {/* Surgery Slider: Drop Vulnerable Incumbents */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-amber-300">Drop Unpopular Sitting MLAs</span>
+                <span className="text-[10px] text-slate-400 font-mono">Ticket Distribution</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-white font-mono">
+                  {mlaFatigueSettings.replaceIncumbentPct} MLAs Replaced
+                </span>
+                <span className="text-[11px] font-semibold text-amber-400">
+                  {mlaFatigueSettings.replaceIncumbentPct > 0 ? 'Fresh Face Recovery Active' : 'All Incumbents Retained'}
+                </span>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="40"
+                step="5"
+                value={mlaFatigueSettings.replaceIncumbentPct}
+                onChange={(e) =>
+                  setMlaFatigueSettings((prev) => ({
+                    ...prev,
+                    replaceIncumbentPct: Number(e.target.value),
+                  }))
+                }
+                className="w-full accent-amber-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>0 (Repeat All)</span>
+                <span>20 MLAs (Surgical)</span>
+                <span>40 MLAs (Mass Purge)</span>
+              </div>
+            </div>
+
+            {/* Fatigue Penalty for Retaining */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-rose-300">Voter Fatigue Penalty</span>
+                <span className="text-[10px] text-slate-400 font-mono">If Incumbent Repeated</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-rose-400 font-mono">
+                  {mlaFatigueSettings.unpopularMlaPenalty}%
+                </span>
+                <span className="text-[11px] text-slate-400">
+                  Local corruption / accessibility penalty
+                </span>
+              </div>
+              <input
+                type="range"
+                min="-8"
+                max="-1"
+                step="0.5"
+                value={mlaFatigueSettings.unpopularMlaPenalty}
+                onChange={(e) =>
+                  setMlaFatigueSettings((prev) => ({
+                    ...prev,
+                    unpopularMlaPenalty: Number(e.target.value),
+                  }))
+                }
+                className="w-full accent-rose-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>-8% (Severe Rage)</span>
+                <span>-4.5% (Baseline)</span>
+                <span>-1% (Mild)</span>
+              </div>
+            </div>
+
+            {/* Fresh Face Vitality Boost */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-emerald-300">Fresh Face Vitality Boost</span>
+                <span className="text-[10px] text-slate-400 font-mono">When New Nominee Picked</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-emerald-400 font-mono">
+                  +{mlaFatigueSettings.freshFaceBoost}%
+                </span>
+                <span className="text-[11px] text-slate-400">
+                  Neutralizes anti-incumbency
+                </span>
+              </div>
+              <input
+                type="range"
+                min="1"
+                max="8"
+                step="0.5"
+                value={mlaFatigueSettings.freshFaceBoost}
+                onChange={(e) =>
+                  setMlaFatigueSettings((prev) => ({
+                    ...prev,
+                    freshFaceBoost: Number(e.target.value),
+                  }))
+                }
+                className="w-full accent-emerald-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>+1%</span>
+                <span>+4% (Benchmark)</span>
+                <span>+8% (Youth Surge)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ------------------------------------------------------------- */}
+      {/* FEATURE 4: TRI-CORNERED VOTE CANNIBALIZATION & DEFECTION MODEL */}
+      {/* ------------------------------------------------------------- */}
+      {activeTab === 'cannibalization' && (
+        <div className="space-y-4 animate-in fade-in duration-150">
+          <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-950/80 p-3.5 rounded-xl border border-slate-800">
+            <div>
+              <div className="text-xs font-bold text-white flex items-center gap-2">
+                <Shuffle className="w-4 h-4 text-pink-400" />
+                <span>Tri-Cornered Vote Cannibalization &amp; Defection Modeler</span>
+                <span className="text-[10px] bg-pink-500/20 text-pink-300 px-2 py-0.5 rounded font-mono font-bold">
+                  3-Way Transfer Friction
+                </span>
+              </div>
+              <p className="text-[11px] text-slate-400 mt-0.5">
+                Model where votes flow when a party bleeds cadre, leadership defects, or voter polarization spikes
+              </p>
+            </div>
+
+            {/* Reset */}
+            <button
+              onClick={() => setCannibalizationSettings(DEFAULT_CANNIBALIZATION_SETTINGS)}
+              className="px-2.5 py-1 text-xs rounded-lg font-semibold bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 cursor-pointer flex items-center gap-1"
+            >
+              <RefreshCw className="w-3 h-3" />
+              <span>Reset Flow</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {/* Bleeding Source Party */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="text-xs font-bold text-slate-300">1. Bleeding / Defecting Party</div>
+              <div className="grid grid-cols-3 gap-1.5 pt-1">
+                {(['BRS', 'INC', 'BJP'] as const).map((p) => (
+                  <button
+                    key={p}
+                    onClick={() =>
+                      setCannibalizationSettings((prev) => ({
+                        ...prev,
+                        sourceParty: p,
+                        destinationRatio:
+                          p === 'BRS'
+                            ? { toBjp: 60, toInc: 40, toBrs: 0 }
+                            : p === 'INC'
+                            ? { toBjp: 45, toBrs: 55, toInc: 0 }
+                            : { toBrs: 40, toInc: 60, toBjp: 0 },
+                      }))
+                    }
+                    className={`py-1.5 text-xs font-bold rounded-lg transition-all cursor-pointer ${
+                      cannibalizationSettings.sourceParty === p
+                        ? 'bg-pink-600 text-white shadow-xs'
+                        : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-700'
+                    }`}
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
+              <div className="text-[10px] text-slate-400 pt-1">
+                Simulating vote drain away from {cannibalizationSettings.sourceParty}
+              </div>
+            </div>
+
+            {/* Bleed Percentage Slider */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-slate-300">2. Vote Share Siphoned</span>
+                <span className="text-[10px] text-pink-400 font-mono font-bold">
+                  -{cannibalizationSettings.bleedPct}%
+                </span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-xl font-black text-white font-mono">
+                  {cannibalizationSettings.bleedPct}%
+                </span>
+                <span className="text-[11px] text-slate-400">
+                  {cannibalizationSettings.bleedPct === 0 ? 'No Defection' : 'Active Cadre Migration'}
+                </span>
+              </div>
+              <input
+                type="range"
+                min="0"
+                max="12"
+                step="0.5"
+                value={cannibalizationSettings.bleedPct}
+                onChange={(e) =>
+                  setCannibalizationSettings((prev) => ({
+                    ...prev,
+                    bleedPct: Number(e.target.value),
+                  }))
+                }
+                className="w-full accent-pink-500 cursor-pointer"
+              />
+              <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                <span>0%</span>
+                <span>4% (Defection)</span>
+                <span>12% (Collapse)</span>
+              </div>
+            </div>
+
+            {/* Absorption Split Slider */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="flex items-center justify-between text-xs">
+                <span className="font-bold text-slate-300">3. Absorption Ratio</span>
+                <span className="text-[10px] text-indigo-300 font-mono font-bold">Split %</span>
+              </div>
+              {cannibalizationSettings.sourceParty === 'BRS' && (
+                <div className="space-y-1.5 pt-1">
+                  <div className="flex justify-between text-xs font-mono">
+                    <span className="text-amber-400 font-bold">BJP: {cannibalizationSettings.destinationRatio.toBjp}%</span>
+                    <span className="text-sky-400 font-bold">INC: {cannibalizationSettings.destinationRatio.toInc}%</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={cannibalizationSettings.destinationRatio.toBjp}
+                    onChange={(e) => {
+                      const toBjp = Number(e.target.value);
+                      setCannibalizationSettings((prev) => ({
+                        ...prev,
+                        destinationRatio: { toBjp, toInc: 100 - toBjp, toBrs: 0 },
+                      }));
+                    }}
+                    className="w-full accent-indigo-500 cursor-pointer"
+                  />
+                  <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                    <span>100% to INC</span>
+                    <span>50:50</span>
+                    <span>100% to BJP</span>
+                  </div>
+                </div>
+              )}
+              {cannibalizationSettings.sourceParty === 'INC' && (
+                <div className="space-y-1.5 pt-1">
+                  <div className="flex justify-between text-xs font-mono">
+                    <span className="text-amber-400 font-bold">BJP: {cannibalizationSettings.destinationRatio.toBjp}%</span>
+                    <span className="text-pink-400 font-bold">BRS: {cannibalizationSettings.destinationRatio.toBrs}%</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={cannibalizationSettings.destinationRatio.toBjp}
+                    onChange={(e) => {
+                      const toBjp = Number(e.target.value);
+                      setCannibalizationSettings((prev) => ({
+                        ...prev,
+                        destinationRatio: { toBjp, toBrs: 100 - toBjp, toInc: 0 },
+                      }));
+                    }}
+                    className="w-full accent-indigo-500 cursor-pointer"
+                  />
+                  <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                    <span>100% to BRS</span>
+                    <span>50:50</span>
+                    <span>100% to BJP</span>
+                  </div>
+                </div>
+              )}
+              {cannibalizationSettings.sourceParty === 'BJP' && (
+                <div className="space-y-1.5 pt-1">
+                  <div className="flex justify-between text-xs font-mono">
+                    <span className="text-pink-400 font-bold">BRS: {cannibalizationSettings.destinationRatio.toBrs}%</span>
+                    <span className="text-sky-400 font-bold">INC: {cannibalizationSettings.destinationRatio.toInc}%</span>
+                  </div>
+                  <input
+                    type="range"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value={cannibalizationSettings.destinationRatio.toBrs}
+                    onChange={(e) => {
+                      const toBrs = Number(e.target.value);
+                      setCannibalizationSettings((prev) => ({
+                        ...prev,
+                        destinationRatio: { toBrs, toInc: 100 - toBrs, toBjp: 0 },
+                      }));
+                    }}
+                    className="w-full accent-indigo-500 cursor-pointer"
+                  />
+                  <div className="flex justify-between text-[10px] text-slate-500 font-mono">
+                    <span>100% to INC</span>
+                    <span>50:50</span>
+                    <span>100% to BRS</span>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Regional Bias */}
+            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700 space-y-2">
+              <div className="text-xs font-bold text-slate-300">4. Geographic Focus</div>
+              <div className="grid grid-cols-2 gap-1.5 pt-1">
+                {[
+                  { key: 'ALL', label: 'All 119 ACs' },
+                  { key: 'NORTH_TS', label: 'North TS' },
+                  { key: 'SOUTH_TS', label: 'South TS' },
+                  { key: 'GHMC_URBAN', label: 'GHMC/Urban' },
+                ].map((item) => (
+                  <button
+                    key={item.key}
+                    onClick={() =>
+                      setCannibalizationSettings((prev) => ({
+                        ...prev,
+                        regionBias: item.key as any,
+                      }))
+                    }
+                    className={`py-1.5 px-2 text-[11px] font-bold rounded-lg transition-all cursor-pointer ${
+                      cannibalizationSettings.regionBias === item.key
+                        ? 'bg-indigo-600 text-white shadow-xs'
+                        : 'bg-slate-900 text-slate-400 hover:text-slate-200 border border-slate-700'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+              <div className="text-[10px] text-slate-400 pt-1">
+                Concentrates transfer shifts into target geopolitical belt
               </div>
             </div>
           </div>
@@ -1169,6 +1938,8 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
               </tbody>
             </table>
           </div>
+        </div>
+      )}
         </div>
       )}
     </div>

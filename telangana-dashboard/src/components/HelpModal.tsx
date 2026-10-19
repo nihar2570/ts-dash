@@ -1,12 +1,37 @@
-import React from 'react';
-import { X, BarChart3, Sparkles, Target, FileText, HelpCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, BarChart3, Sparkles, Target, FileText, HelpCircle, Check, Type } from 'lucide-react';
 
 interface HelpModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const FONT_SIZE_OPTIONS = [
+  { key: '15px', label: 'Compact', sub: '15px', scaleText: 'A--' },
+  { key: '16.5px', label: 'Default', sub: '16.5px', scaleText: 'A-' },
+  { key: '18px', label: 'Large', sub: '18px', scaleText: 'A' },
+  { key: '19.5px', label: 'XL', sub: '19.5px', scaleText: 'A+' },
+  { key: '21px', label: '2XL', sub: '21px', scaleText: 'A++' },
+];
+
 export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
+  const [currentFontSize, setCurrentFontSize] = useState<string>('18px');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('ts_dash_font_size') || document.documentElement.style.fontSize || '18px';
+      setCurrentFontSize(saved.trim());
+    }
+  }, [isOpen]);
+
+  const handleSelectFontSize = (size: string) => {
+    setCurrentFontSize(size);
+    document.documentElement.style.fontSize = size;
+    try {
+      localStorage.setItem('ts_dash_font_size', size);
+    } catch {}
+  };
+
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-[2000] flex items-center justify-center bg-black/50" onClick={onClose}>
@@ -24,9 +49,53 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
 
         <h2 className="text-lg font-black text-slate-900 mb-1 flex items-center gap-2">
           <HelpCircle className="w-5 h-5 text-indigo-600" />
-          How to Use This App
+          Help &amp; Display Settings
         </h2>
-        <p className="text-xs text-slate-500 mb-5">Telangana Election Intelligence — Quick Reference</p>
+        <p className="text-xs text-slate-500 mb-4">Election Intelligence — Quick Reference &amp; Preferences</p>
+
+        {/* Display Text Scaling with 5 Levels & Live Selected State */}
+        <section className="mb-5 bg-slate-50/90 p-3.5 rounded-xl border border-slate-200 space-y-2.5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-1.5">
+              <Type className="w-4 h-4 text-indigo-600" />
+              <h3 className="text-xs font-bold text-slate-900">Display Text Scaling</h3>
+            </div>
+            <span className="text-[10px] font-mono font-bold text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-200">
+              Active: {FONT_SIZE_OPTIONS.find(o => o.key === currentFontSize)?.label || currentFontSize}
+            </span>
+          </div>
+
+          <p className="text-[11px] text-slate-500">
+            Choose your preferred comfort level across all maps, cards, and simulation tables:
+          </p>
+
+          <div className="grid grid-cols-5 gap-1.5 pt-1">
+            {FONT_SIZE_OPTIONS.map((opt) => {
+              const isSelected = currentFontSize === opt.key;
+              return (
+                <button
+                  key={opt.key}
+                  type="button"
+                  onClick={() => handleSelectFontSize(opt.key)}
+                  className={`py-2 px-1 rounded-xl transition-all cursor-pointer flex flex-col items-center justify-center gap-0.5 border ${
+                    isSelected
+                      ? 'bg-indigo-600 text-white border-indigo-700 shadow-sm shadow-indigo-600/30 font-black'
+                      : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-100'
+                  }`}
+                  title={`${opt.label} (${opt.sub})`}
+                >
+                  <span className="text-xs font-extrabold flex items-center gap-0.5">
+                    {opt.scaleText}
+                    {isSelected && <Check className="w-2.5 h-2.5" />}
+                  </span>
+                  <span className={`text-[10px] font-semibold ${isSelected ? 'text-indigo-100' : 'text-slate-500'}`}>
+                    {opt.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </section>
 
         {/* Results & Map */}
         <section className="mb-4">
@@ -35,7 +104,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
           </h3>
           <ul className="text-xs text-slate-700 space-y-1 pl-5 list-disc">
             <li>Select an <strong>election year</strong> (2014, 2018, or 2023) to view that year's data.</li>
-            <li>Switch <strong>map view modes</strong>: Party Colors, Margins, Swings, or 33 Districts.</li>
+            <li>Switch <strong>map view modes</strong>: Party Colors, Margins, or Seat Swings.</li>
             <li><strong>Click a constituency</strong> on the map to see its battle card with historical results.</li>
             <li>Use the <strong>search bar</strong> to find a constituency by name or AC number (press Enter).</li>
             <li>Scroll down to the <strong>Constituency Table</strong> to browse all 119 seats with sortable columns.</li>

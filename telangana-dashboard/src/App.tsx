@@ -54,6 +54,14 @@ const [helpOpen, setHelpOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    // Restore user preferred font size or apply default comfortable scale (17.5px)
+    try {
+      const saved = localStorage.getItem('ts_dash_font_size');
+      if (saved) {
+        document.documentElement.style.fontSize = saved;
+      }
+    } catch {}
+
     async function loadData() {
       try {
         setLoading(true);

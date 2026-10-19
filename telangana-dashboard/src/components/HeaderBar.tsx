@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, HelpCircle, FileText } from 'lucide-react';
+import { Search, HelpCircle } from 'lucide-react';
 import type { Year, ViewMode, SeeepcDataset, ElectionData, ActiveTab } from '../types';
 
 interface HeaderBarProps {
@@ -13,7 +13,7 @@ interface HeaderBarProps {
   setSelectedAcNo: (acNo: number) => void;
   onOpenDossier?: (acNo: number) => void;
   seeepcData?: SeeepcDataset | null;
-  setIsExecutiveBriefingOpen: (open: boolean) => void;
+  setIsExecutiveBriefingOpen?: (open: boolean) => void;
   onHelpOpen: () => void;
 }
 
@@ -27,8 +27,8 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
   electionData,
   setSelectedAcNo,
   onOpenDossier,
-  seeepcData,
-  setIsExecutiveBriefingOpen,
+  seeepcData: _seeepcData,
+  setIsExecutiveBriefingOpen: _setIsExecutiveBriefingOpen,
   onHelpOpen,
 }) => {
   const [search, setSearch] = useState('');
@@ -64,16 +64,16 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-2.5">
         <div className="flex flex-wrap items-center justify-between gap-3">
           {/* Brand */}
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-gradient-to-tr from-indigo-600 to-pink-500 rounded-lg flex items-center justify-center text-white font-black text-base shadow-xs">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 bg-gradient-to-tr from-indigo-600 to-pink-500 rounded-lg flex items-center justify-center text-white font-black text-sm shadow-xs shrink-0">
               TS
             </div>
             <div>
-              <h1 className="text-base sm:text-lg font-black text-slate-900 tracking-tight flex items-center gap-1.5">
-                Telangana Election Intelligence
+              <h1 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-tight">
+                Election Intelligence
               </h1>
-              <p className="text-[11px] text-slate-500 hidden sm:block">
-                Interactive Historical Map &amp; Analytics across 119 Constituencies
+              <p className="text-xs text-slate-500 hidden sm:block">
+                119 Constituencies Analytics
               </p>
             </div>
           </div>
@@ -118,24 +118,15 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
             </button>
           </div>
 
-          {/* Right side: Executive Briefing, Help */}
-          <div className="flex items-center gap-3">
-            {seeepcData && (
-              <button
-                onClick={() => setIsExecutiveBriefingOpen(true)}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl shadow-xs border border-slate-700 transition-all cursor-pointer"
-                title="Open 1-Click Executive Strategy Briefing"
-              >
-                <FileText className="w-3.5 h-3.5 text-indigo-400" />
-                <span>Executive Briefing</span>
-              </button>
-            )}
+          {/* Right side: Help & Preferences */}
+          <div className="flex items-center gap-2">
             <button
               onClick={onHelpOpen}
-              className="p-2 rounded-full hover:bg-slate-200 focus:outline-none"
-              title="Help &amp; Usage Guide"
+              className="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 transition-colors flex items-center gap-1.5 text-xs font-bold cursor-pointer shadow-2xs"
+              title="Help, Guides & Display Scaling"
             >
-              <HelpCircle className="w-5 h-5 text-slate-600" />
+              <HelpCircle className="w-4 h-4 text-indigo-600" />
+              <span className="hidden sm:inline">Help &amp; Settings</span>
             </button>
           </div>
         </div>
@@ -198,17 +189,6 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
                   title={selectedYear === '2014' ? 'No prior election in state history' : 'Seat flip comparison'}
                 >
                   Seat Swings
-                </button>
-                <button
-                  onClick={() => setViewMode('district')}
-                  className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
-                    viewMode === 'district'
-                      ? 'bg-white text-slate-900 shadow-xs font-bold'
-                      : 'text-slate-600 hover:text-slate-900'
-                  }`}
-                  title="View 33 districts in shades of grey"
-                >
-                  33 Districts
                 </button>
               </div>
             </div>

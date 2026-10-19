@@ -18,6 +18,19 @@ import { SwingStudioModal } from './SwingStudioModal';
 import type { MacroSwing, PartySwing } from './SwingStudioModal';
 import { AdvancedSimulationSuite, URBAN_AC_NOS } from './AdvancedSimulationSuite';
 import type { TurnoutSettings } from './AdvancedSimulationSuite';
+import {
+  DEFAULT_WELFARE_SETTINGS,
+  DEFAULT_MLA_FATIGUE_SETTINGS,
+  DEFAULT_CANNIBALIZATION_SETTINGS,
+  NORTH_TS_DISTRICTS,
+  SOUTH_TS_DISTRICTS,
+  GHMC_URBAN_DISTRICTS,
+} from './StrategicSimulationModels';
+import type {
+  WelfareSettings,
+  MlaFatigueSettings,
+  CannibalizationSettings,
+} from './StrategicSimulationModels';
 
 // 44 Constituencies Contested by BJP in BJP+TRS Coalition (Urban GHMC, Ranga Reddy, North TS core, Kamareddy)
 export const BJP_ALLIANCE_SEATS = new Set([
@@ -99,6 +112,9 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     ruralShift: 0,
     femaleShift: 0,
   });
+  const [welfareSettings, setWelfareSettings] = useState<WelfareSettings>(DEFAULT_WELFARE_SETTINGS);
+  const [mlaFatigueSettings, setMlaFatigueSettings] = useState<MlaFatigueSettings>(DEFAULT_MLA_FATIGUE_SETTINGS);
+  const [cannibalizationSettings, setCannibalizationSettings] = useState<CannibalizationSettings>(DEFAULT_CANNIBALIZATION_SETTINGS);
   const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
   const [activePreset, setActivePreset] = useState<string>('baseline');
   const [selectedBubbleAc, setSelectedBubbleAc] = useState<number | null>(null);
@@ -248,6 +264,9 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     } else if (presetKey === 'baseline') {
       setMacroSwing({ INC: 0, BRS: 0, BJP: 0 });
       setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
+      setWelfareSettings(DEFAULT_WELFARE_SETTINGS);
+      setMlaFatigueSettings(DEFAULT_MLA_FATIGUE_SETTINGS);
+      setCannibalizationSettings(DEFAULT_CANNIBALIZATION_SETTINGS);
     }
 
     setSwings(reset);
@@ -390,6 +409,140 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         incVotes = Math.max(0, incVotes - (totalVotes * 0.005));
       }
 
+      // --------------------------------------------------------------------
+      // FEATURE 2: Welfare Guarantee Delivery Index ("The Labharthi Meter")
+      // --------------------------------------------------------------------
+      // Mahalakshmi: Free RTC bus & ₹2,500 cash transfer (execution baseline 75%)
+      const mahaDiff = (welfareSettings.mahalakshmiPct - 75) / 100;
+      if (mahaDiff !== 0) {
+        const mahaShift = totalVotes * (mahaDiff * 0.038); // +/- up to 3.8% shift
+        incVotes += mahaShift;
+        brsVotes -= mahaShift * 0.65;
+        bjpVotes -= mahaShift * 0.35;
+      }
+
+      // Rythu Bharosa: Agrarian cash assistance ₹15,000/acre (execution baseline 70%)
+      const rythuDiff = (welfareSettings.rythuBharosaPct - 70) / 100;
+      if (rythuDiff !== 0) {
+        const rythuShift = totalVotes * (rythuDiff * (isUrban ? 0.008 : 0.042));
+        incVotes += rythuShift;
+        brsVotes -= rythuShift * 0.70;
+        bjpVotes -= rythuShift * 0.30;
+      }
+
+      // Farm Loan Waiver: Up to ₹2 Lakh agrarian debt clearance (execution baseline 65%)
+      const loanDiff = (welfareSettings.loanWaiverPct - 65) / 100;
+      if (loanDiff !== 0) {
+        const isFarmerBelt = SOUTH_TS_DISTRICTS.has(ac.district) || NORTH_TS_DISTRICTS.has(ac.district);
+        const loanShift = totalVotes * (loanDiff * (isFarmerBelt ? 0.045 : 0.015));
+        incVotes += loanShift;
+        brsVotes -= loanShift * 0.60;
+        bjpVotes -= loanShift * 0.40;
+      }
+
+      // Gruha Jyothi: 200 units free power zero-bill (execution baseline 85%)
+      const gruhaDiff = (welfareSettings.gruhaJyothiPct - 85) / 100;
+      if (gruhaDiff !== 0) {
+        const gruhaShift = totalVotes * (gruhaDiff * 0.025);
+        incVotes += gruhaShift;
+        brsVotes -= gruhaShift * 0.50;
+        bjpVotes -= gruhaShift * 0.50;
+      }
+
+      // Indiramma Indlu: Housing scheme for rural/peri-urban homeless (execution baseline 40%)
+      const indirammaDiff = (welfareSettings.indirammaIndluPct - 40) / 100;
+      if (indirammaDiff !== 0) {
+        const indirammaShift = totalVotes * (indirammaDiff * 0.030);
+        incVotes += indirammaShift;
+        brsVotes -= indirammaShift * 0.60;
+        bjpVotes -= indirammaShift * 0.40;
+      }
+
+      // --------------------------------------------------------------------
+      // FEATURE 3: Candidate Fatigue & Incumbent MLA Replacement Simulator
+      // --------------------------------------------------------------------
+      // Simulates ticket distribution strategy: dropping anti-incumbent sitting MLAs vs retaining them
+      const isTargetWinner = actualWinner === mlaFatigueSettings.targetParty;
+      if (isTargetWinner) {
+        const isNarrowWin = ac.margin_2023 < 8000;
+        const isUnpopular = isNarrowWin || ac.margin_pct_2023 < 5.0;
+
+        if (mlaFatigueSettings.replaceIncumbentPct > 0) {
+          // Fraction of seats where incumbent is dropped for a fresh face
+          const replacementChance = mlaFatigueSettings.replaceIncumbentPct / 50; // up to 1.0
+          if (isUnpopular && ((ac.ac_no * 7 + 13) % 100) / 100 <= replacementChance) {
+            // Fresh face nominated: removes anti-incumbency and grants vitality boost
+            const boost = totalVotes * (mlaFatigueSettings.freshFaceBoost / 100);
+            if (actualWinner === 'INC') {
+              incVotes += boost;
+              brsVotes -= boost * 0.6;
+              bjpVotes -= boost * 0.4;
+            } else if (actualWinner === 'BRS') {
+              brsVotes += boost;
+              incVotes -= boost * 0.6;
+              bjpVotes -= boost * 0.4;
+            } else if (actualWinner === 'BJP') {
+              bjpVotes += boost;
+              incVotes -= boost * 0.5;
+              brsVotes -= boost * 0.5;
+            }
+          } else {
+            // Incumbent retained with local voter fatigue penalty
+            const penalty = totalVotes * (Math.abs(mlaFatigueSettings.unpopularMlaPenalty) / 100);
+            if (actualWinner === 'INC') {
+              incVotes -= penalty;
+              brsVotes += penalty * 0.6;
+              bjpVotes += penalty * 0.4;
+            } else if (actualWinner === 'BRS') {
+              brsVotes -= penalty;
+              incVotes += penalty * 0.6;
+              bjpVotes += penalty * 0.4;
+            } else if (actualWinner === 'BJP') {
+              bjpVotes -= penalty;
+              incVotes += penalty * 0.5;
+              brsVotes += penalty * 0.5;
+            }
+          }
+        }
+      }
+
+      // --------------------------------------------------------------------
+      // FEATURE 4: Tri-Cornered Vote Cannibalization / Defection Flow Modeler
+      // --------------------------------------------------------------------
+      if (cannibalizationSettings.bleedPct > 0) {
+        let appliesRegion = true;
+        if (cannibalizationSettings.regionBias === 'NORTH_TS') {
+          appliesRegion = NORTH_TS_DISTRICTS.has(ac.district);
+        } else if (cannibalizationSettings.regionBias === 'SOUTH_TS') {
+          appliesRegion = SOUTH_TS_DISTRICTS.has(ac.district);
+        } else if (cannibalizationSettings.regionBias === 'GHMC_URBAN') {
+          appliesRegion = GHMC_URBAN_DISTRICTS.has(ac.district) || URBAN_AC_NOS.has(ac.ac_no);
+        }
+
+        if (appliesRegion) {
+          const bleedVotes = totalVotes * (cannibalizationSettings.bleedPct / 100);
+          const ratio = cannibalizationSettings.destinationRatio;
+          const totalRatio = (ratio.toBjp || 0) + (ratio.toInc || 0) + (ratio.toBrs || 0) || 100;
+
+          if (cannibalizationSettings.sourceParty === 'BRS') {
+            const actualBleed = Math.min(brsVotes * 0.8, bleedVotes);
+            brsVotes -= actualBleed;
+            bjpVotes += actualBleed * ((ratio.toBjp || 0) / totalRatio);
+            incVotes += actualBleed * ((ratio.toInc || 0) / totalRatio);
+          } else if (cannibalizationSettings.sourceParty === 'INC') {
+            const actualBleed = Math.min(incVotes * 0.8, bleedVotes);
+            incVotes -= actualBleed;
+            bjpVotes += actualBleed * ((ratio.toBjp || 0) / totalRatio);
+            brsVotes += actualBleed * ((ratio.toBrs || 0) / totalRatio);
+          } else if (cannibalizationSettings.sourceParty === 'BJP') {
+            const actualBleed = Math.min(bjpVotes * 0.8, bleedVotes);
+            bjpVotes -= actualBleed;
+            brsVotes += actualBleed * ((ratio.toBrs || 0) / totalRatio);
+            incVotes += actualBleed * ((ratio.toInc || 0) / totalRatio);
+          }
+        }
+      }
+
       // Ensure positive votes
       incVotes = Math.max(100, Math.round(incVotes));
       brsVotes = Math.max(0, Math.round(brsVotes));
@@ -461,7 +614,17 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     });
 
     return list;
-  }, [data, swings, macroSwing, turnoutSettings, tossUpThreshold, activePreset]);
+  }, [
+    data,
+    swings,
+    macroSwing,
+    turnoutSettings,
+    welfareSettings,
+    mlaFatigueSettings,
+    cannibalizationSettings,
+    tossUpThreshold,
+    activePreset,
+  ]);
 
   // Aggregate Path to 60 Majority Gauge
   const tally = useMemo(() => {
@@ -516,31 +679,31 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
   return (
     <div className="space-y-6">
       {/* Top Banner: CM Advisor War Room Barometer */}
-      <div className="bg-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-xl border border-slate-800">
-        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-800 pb-4">
+      <div className="bg-white text-slate-900 rounded-2xl p-5 sm:p-6 shadow-sm border border-slate-200">
+        <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="bg-indigo-600 text-white font-mono text-xs font-black px-2.5 py-0.5 rounded-md flex items-center gap-1">
+              <span className="bg-indigo-600 text-white font-mono text-xs font-black px-2.5 py-0.5 rounded-md flex items-center gap-1 shadow-2xs">
                 <Sparkles className="w-3 h-3" /> CM STRATEGIC WAR ROOM
               </span>
-              <span className="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded-md border border-slate-700">
+              <span className="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded-md border border-slate-200 font-medium">
                 SEEEPC Vol-4 Demographics + Dynamic Polling
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white">
+            <h2 className="text-xl sm:text-2xl font-black tracking-tight text-slate-900">
               Assembly Majority Barometer &amp; Battleground Simulator
             </h2>
           </div>
 
           {/* Quick Scenario Presets */}
           <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-xs text-slate-400 font-semibold mr-1">Scenarios:</span>
+            <span className="text-xs text-slate-500 font-bold mr-1">Scenarios:</span>
             <button
               onClick={() => applyPreset('baseline')}
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer ${
                 activePreset === 'baseline'
                   ? 'bg-indigo-600 text-white shadow-xs'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
               }`}
             >
               2023 Baseline
@@ -550,7 +713,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                 activePreset === 'trs_2018_landslide'
                   ? 'bg-pink-600 text-white shadow-xs font-black'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
               }`}
               title="2018/19 TRS Landslide: 88 seats, 46.9% vote share, Rythu Bandhu wave & Prajakootami backfire"
             >
@@ -561,7 +724,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                 activePreset === 'trs_2014_mandate'
                   ? 'bg-rose-600 text-white shadow-xs font-black'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
               }`}
               title="2014 Inaugural Mandate: TRS 63 seats, 34% vote share, Statehood movement surge"
             >
@@ -572,7 +735,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                 activePreset === 'bjp_trs_alliance'
                   ? 'bg-purple-600 text-white shadow-xs font-black'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
               }`}
               title="Pre-poll coalition: 74 BRS : 45 BJP seat sharing, 65/25 transfer friction, anti-KCR rebel leakage & Muslim/BC split"
             >
@@ -583,7 +746,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                 activePreset === 'bjp_trs_merger'
                   ? 'bg-amber-600 text-white shadow-xs font-black'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
               }`}
               title="Full merger of TRS into BJP under Lotus symbol: KTR as Chief Minister face, Harish Rao in Union Cabinet"
             >
@@ -594,7 +757,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                 activePreset === 'triangular_2028_anti_inc'
                   ? 'bg-rose-600 text-white shadow-xs font-black'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
               }`}
               title="2028 Triangular Contest: All 3 parties go alone, ruling Congress faces 5-year anti-incumbency (-7%)"
             >
@@ -605,7 +768,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
                 activePreset === 'kavitha_spoiler_front'
                   ? 'bg-teal-600 text-white shadow-xs font-black'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
               }`}
               title="Kavitha's Telangana Jagruthi splinter peels 4.2% BRS votes in 14 North TS constituencies, acting as a targeted vote-cutter"
             >
@@ -614,7 +777,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             <button
               onClick={() => applyPreset('baseline')}
               title="Reset all swings to 0"
-              className="p-1.5 bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white rounded-lg transition-colors cursor-pointer"
+              className="p-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 border border-slate-200 rounded-lg transition-colors cursor-pointer"
             >
               <RotateCcw className="w-3.5 h-3.5" />
             </button>
@@ -623,36 +786,36 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
 
         {/* Real-time "Path to 60" Seat Barometer Cards */}
         {activePreset === 'bjp_trs_merger' && (
-          <div className="mt-3 px-3.5 py-2 bg-gradient-to-r from-amber-950/60 via-purple-950/50 to-slate-900 rounded-xl border border-amber-500/40 text-xs text-amber-200 flex items-center justify-between">
+          <div className="mt-3 px-3.5 py-2 bg-amber-50 rounded-xl border border-amber-200 text-xs text-amber-900 flex items-center justify-between">
             <span className="font-semibold flex items-center gap-1.5">
-              <Sparkles className="w-4 h-4 text-amber-400" />
+              <Sparkles className="w-4 h-4 text-amber-600" />
               <strong>Merger Scenario:</strong> TRS dissolves and merges into BJP under Lotus symbol. KTR projected as NDA Chief Minister; Harish Rao takes Union Cabinet portfolio.
             </span>
-            <span className="text-[10px] bg-amber-500/20 text-amber-300 font-mono px-2 py-0.5 rounded border border-amber-500/30">
+            <span className="text-[10px] bg-amber-100 text-amber-800 font-mono px-2 py-0.5 rounded border border-amber-200 font-bold">
               88% Cadre Transfer | 12% Defect to INC
             </span>
           </div>
         )}
 
         {activePreset === 'triangular_2028_anti_inc' && (
-          <div className="mt-3 px-3.5 py-2 bg-gradient-to-r from-sky-950/60 via-indigo-950/50 to-slate-900 rounded-xl border border-sky-500/40 text-xs text-sky-200 flex items-center justify-between">
+          <div className="mt-3 px-3.5 py-2 bg-sky-50 rounded-xl border border-sky-200 text-xs text-sky-900 flex items-center justify-between">
             <span className="font-semibold flex items-center gap-1.5">
-              <TrendingUp className="w-4 h-4 text-sky-400" />
+              <TrendingUp className="w-4 h-4 text-sky-600" />
               <strong>2028 Triangular Contest:</strong> 5-Year anti-incumbency (-7.0% INC vote shed) triggers a fractured 3-way race. BJP holds the kingmaker balance of power.
             </span>
-            <span className="text-[10px] bg-sky-500/20 text-sky-300 font-mono px-2 py-0.5 rounded border border-sky-500/30">
+            <span className="text-[10px] bg-sky-100 text-sky-800 font-mono px-2 py-0.5 rounded border border-sky-200 font-bold">
               3-Way Independent Battle
             </span>
           </div>
         )}
 
         {activePreset === 'kavitha_spoiler_front' && (
-          <div className="mt-3 px-3.5 py-2 bg-gradient-to-r from-teal-950/60 via-slate-900 to-slate-950 rounded-xl border border-teal-500/40 text-xs text-teal-200 flex items-center justify-between">
+          <div className="mt-3 px-3.5 py-2 bg-teal-50 rounded-xl border border-teal-200 text-xs text-teal-900 flex items-center justify-between">
             <span className="font-semibold flex items-center gap-1.5">
-              <Target className="w-4 h-4 text-teal-400" />
+              <Target className="w-4 h-4 text-teal-600" />
               <strong>Kavitha Spoiler Front:</strong> Telangana Jagruthi acts as targeted vote-cutter in 14 North TS constituencies, shaving 4.2% BRS votes and flipping key seats.
             </span>
-            <span className="text-[10px] bg-teal-500/20 text-teal-300 font-mono px-2 py-0.5 rounded border border-teal-500/30">
+            <span className="text-[10px] bg-teal-100 text-teal-800 font-mono px-2 py-0.5 rounded border border-teal-200 font-bold">
               14 North TS ACs
             </span>
           </div>
@@ -661,108 +824,108 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         {activePreset === 'bjp_trs_merger' ? (
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-4">
             {/* Merged Front (Lotus) - KTR CM */}
-            <div className="bg-gradient-to-br from-amber-950 via-pink-950 to-slate-900 p-3.5 rounded-xl border border-amber-500/60 shadow-lg col-span-2 sm:col-span-1">
-              <div className="flex items-center justify-between text-xs text-amber-300 mb-1">
-                <span className="font-black flex items-center gap-1.5 text-white">
-                  <Sparkles className="w-4 h-4 text-amber-400" />
+            <div className="bg-gradient-to-br from-amber-50 via-pink-50 to-slate-50 p-3.5 rounded-xl border border-amber-300 shadow-xs col-span-2 sm:col-span-1">
+              <div className="flex items-center justify-between text-xs text-amber-800 mb-1">
+                <span className="font-black flex items-center gap-1.5 text-slate-900">
+                  <Sparkles className="w-4 h-4 text-amber-600" />
                   Merged BJP (Lotus)
                 </span>
-                <span className="text-[10px] font-bold font-mono text-amber-200 bg-amber-500/30 px-1.5 py-0.2 rounded border border-amber-400/40">
+                <span className="text-[10px] font-bold font-mono text-amber-800 bg-amber-100 px-1.5 py-0.2 rounded border border-amber-300">
                   KTR CM Face
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.BJP}</span>
+                <span className="text-3xl font-black text-slate-900">{tally.counts.BJP}</span>
                 <span className="text-xs">
                   {tally.counts.BJP >= 60 ? (
-                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
-                      <CheckCircle className="w-3 h-3" /> Majority (+{tally.counts.BJP - 60})
+                    <span className="text-emerald-700 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3 text-emerald-600" /> Majority (+{tally.counts.BJP - 60})
                     </span>
                   ) : (
-                    <span className="text-amber-400 font-bold">Short of 60</span>
+                    <span className="text-amber-700 font-bold">Short of 60</span>
                   )}
                 </span>
               </div>
-              <div className="text-[11px] text-amber-200/90 font-mono mt-1">
-                Harish Rao: <span className="font-bold text-pink-300">Union Cabinet</span>
+              <div className="text-[11px] text-amber-900 font-mono mt-1">
+                Harish Rao: <span className="font-bold text-pink-700">Union Cabinet</span>
               </div>
             </div>
 
             {/* BRS Integration Card */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-pink-900/40">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-pink-400">
+            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-pink-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF1493]" />
                   BRS Integration
                 </span>
-                <span className="text-[10px] text-pink-300 font-mono font-bold">
+                <span className="text-[10px] text-pink-700 font-mono font-bold bg-pink-50 px-1.5 py-0.2 rounded border border-pink-200">
                   88% Merged
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-black text-white">0</span>
-                <span className="text-xs text-pink-300 font-medium">Contested on Lotus</span>
+                <span className="text-2xl font-black text-slate-900">0</span>
+                <span className="text-xs text-pink-700 font-medium">Contested on Lotus</span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 12% dissident cadre defected to INC
               </div>
             </div>
 
             {/* INC (Congress) Card */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-sky-400">
+            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-sky-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#19AAED]" />
                   INC (Opposition)
                 </span>
-                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-700' : 'text-rose-700'}`}>
                   {tally.incDiff >= 0 ? `+${tally.incDiff}` : tally.incDiff} vs 2023
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.INC}</span>
-                <span className="text-xs text-slate-400">
+                <span className="text-3xl font-black text-slate-900">{tally.counts.INC}</span>
+                <span className="text-xs text-slate-500">
                   {tally.counts.INC >= 60 ? 'Majority' : 'Seats'}
                 </span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 South TS, Khammam, Nalgonda
               </div>
             </div>
 
             {/* AIMIM */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-emerald-400">
+            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-emerald-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#006600]" />
                   AIMIM
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono">Hyderabad</span>
+                <span className="text-[10px] text-slate-500 font-mono">Hyderabad</span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.AIMIM}</span>
-                <span className="text-xs text-slate-400">Old City Base</span>
+                <span className="text-3xl font-black text-slate-900">{tally.counts.AIMIM}</span>
+                <span className="text-xs text-slate-500">Old City Base</span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 Hyderabad Core Unchanged
               </div>
             </div>
 
             {/* Flips & Triage */}
-            <div className="bg-gradient-to-br from-indigo-950/60 to-purple-950/60 p-3.5 rounded-xl border border-indigo-700/40">
-              <div className="flex items-center justify-between text-xs text-indigo-300 mb-1 font-semibold">
+            <div className="bg-rose-50/80 p-3.5 rounded-xl border border-rose-200">
+              <div className="flex items-center justify-between text-xs text-rose-800 mb-1 font-semibold">
                 <span className="flex items-center gap-1">
-                  <Flame className="w-3.5 h-3.5 text-rose-400" /> Triage Alarms
+                  <Flame className="w-3.5 h-3.5 text-rose-600" /> Triage Alarms
                 </span>
-                <span className="bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono text-[10px]">
+                <span className="bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded font-mono text-[10px] font-bold border border-rose-200">
                   {tally.flippedCount} Flips
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-rose-300">{tally.tossUpCount}</span>
-                <span className="text-xs text-slate-300">Toss-ups</span>
+                <span className="text-3xl font-black text-rose-700">{tally.tossUpCount}</span>
+                <span className="text-xs text-slate-600">Toss-ups</span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 Consolidated Lotus Wave
               </div>
             </div>
@@ -770,111 +933,111 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         ) : activePreset === 'bjp_trs_alliance' ? (
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-4">
             {/* Joint Coalition Total Card */}
-            <div className="bg-gradient-to-br from-purple-950 via-indigo-950 to-slate-900 p-3.5 rounded-xl border border-purple-500/50 shadow-lg col-span-2 sm:col-span-1">
-              <div className="flex items-center justify-between text-xs text-purple-300 mb-1">
-                <span className="font-black flex items-center gap-1.5 text-white">
-                  <Handshake className="w-4 h-4 text-purple-400" />
+            <div className="bg-gradient-to-br from-purple-50 via-indigo-50 to-slate-50 p-3.5 rounded-xl border border-purple-300 shadow-xs col-span-2 sm:col-span-1">
+              <div className="flex items-center justify-between text-xs text-purple-800 mb-1">
+                <span className="font-black flex items-center gap-1.5 text-purple-900">
+                  <Handshake className="w-4 h-4 text-purple-600" />
                   BRS + BJP Coalition
                 </span>
-                <span className="text-[10px] font-bold font-mono text-purple-200 bg-purple-500/30 px-1.5 py-0.2 rounded border border-purple-400/40">
+                <span className="text-[10px] font-bold font-mono text-purple-800 bg-purple-100 px-1.5 py-0.2 rounded border border-purple-300">
                   74:45 Pact
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.BRS + tally.counts.BJP}</span>
+                <span className="text-3xl font-black text-slate-900">{tally.counts.BRS + tally.counts.BJP}</span>
                 <span className="text-xs">
                   {tally.counts.BRS + tally.counts.BJP >= 60 ? (
-                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
-                      <CheckCircle className="w-3 h-3" /> Majority (+{tally.counts.BRS + tally.counts.BJP - 60})
+                    <span className="text-emerald-700 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3 text-emerald-600" /> Majority (+{tally.counts.BRS + tally.counts.BJP - 60})
                     </span>
                   ) : (
-                    <span className="text-amber-400 font-bold">Short of 60</span>
+                    <span className="text-amber-700 font-bold">Short of 60</span>
                   )}
                 </span>
               </div>
-              <div className="text-[11px] text-purple-300 font-mono mt-1">
-                BRS: <span className="font-bold text-pink-400">{tally.counts.BRS}</span> | BJP: <span className="font-bold text-amber-400">{tally.counts.BJP}</span>
+              <div className="text-[11px] text-purple-800 font-mono mt-1">
+                BRS: <span className="font-bold text-pink-700">{tally.counts.BRS}</span> | BJP: <span className="font-bold text-amber-700">{tally.counts.BJP}</span>
               </div>
             </div>
 
             {/* BRS Partner Card */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-pink-900/40">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-pink-400">
+            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-pink-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF1493]" />
                   BRS (74 Seats)
                 </span>
-                <span className="text-[10px] text-pink-300 font-mono font-bold">
+                <span className="text-[10px] text-pink-700 font-mono font-bold bg-pink-50 px-1.5 py-0.2 rounded border border-pink-200">
                   {tally.brsDiff >= 0 ? `+${tally.brsDiff}` : tally.brsDiff} vs 2023
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.BRS}</span>
-                <span className="text-xs text-slate-400">Seats Won</span>
+                <span className="text-3xl font-black text-slate-900">{tally.counts.BRS}</span>
+                <span className="text-xs text-slate-500">Seats Won</span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 Rural TS, Medak, Warangal
               </div>
             </div>
 
             {/* BJP Partner Card */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-amber-900/40">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-amber-400">
+            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-amber-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF9933]" />
                   BJP (45 Seats)
                 </span>
-                <span className="text-[10px] text-amber-300 font-mono font-bold">
+                <span className="text-[10px] text-amber-700 font-mono font-bold bg-amber-50 px-1.5 py-0.2 rounded border border-amber-200">
                   {tally.bjpDiff >= 0 ? `+${tally.bjpDiff}` : tally.bjpDiff} vs 2023
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.BJP}</span>
-                <span className="text-xs text-slate-400">Seats Won</span>
+                <span className="text-3xl font-black text-slate-900">{tally.counts.BJP}</span>
+                <span className="text-xs text-slate-500">Seats Won</span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 GHMC Urban, North TS Core
               </div>
             </div>
 
             {/* INC (Congress) Card */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-sky-400">
+            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-sky-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#19AAED]" />
                   INC (Opposition)
                 </span>
-                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-700' : 'text-rose-700'}`}>
                   {tally.incDiff >= 0 ? `+${tally.incDiff}` : tally.incDiff} vs 2023
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.INC}</span>
-                <span className="text-xs text-slate-400">
+                <span className="text-3xl font-black text-slate-900">{tally.counts.INC}</span>
+                <span className="text-xs text-slate-500">
                   {tally.counts.INC >= 60 ? 'Majority' : 'Seats'}
                 </span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 South TS, Khammam, Nalgonda
               </div>
             </div>
 
             {/* AIMIM & Flips */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-emerald-400">
+            <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-emerald-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#006600]" />
                   AIMIM &amp; Close
                 </span>
-                <span className="bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono text-[10px]">
+                <span className="bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded font-mono text-[10px] font-bold border border-rose-200">
                   {tally.flippedCount} Flips
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.AIMIM}</span>
-                <span className="text-xs text-slate-400">Old City Base</span>
+                <span className="text-3xl font-black text-slate-900">{tally.counts.AIMIM}</span>
+                <span className="text-xs text-slate-500">Old City Base</span>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
+              <div className="text-[10px] text-slate-500 mt-0.5">
                 {tally.tossUpCount} Close Toss-ups
               </div>
             </div>
@@ -882,73 +1045,73 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         ) : (
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 pt-4">
             {/* INC */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-sky-400">
+            <div className="bg-slate-50 hover:bg-sky-50/60 transition-colors p-3.5 rounded-xl border border-slate-200/90 shadow-2xs">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-sky-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#19AAED]" />
                   INC (Congress)
                 </span>
-                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                <span className={`text-[10px] font-bold font-mono ${tally.incDiff >= 0 ? 'text-emerald-700' : 'text-rose-700'}`}>
                   {tally.incDiff >= 0 ? `+${tally.incDiff}` : tally.incDiff} vs 2023
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.INC}</span>
-                <span className="text-xs text-slate-400">
+                <span className="text-3xl font-black text-slate-900">{tally.counts.INC}</span>
+                <span className="text-xs text-slate-500">
                   {tally.counts.INC >= 60 ? (
-                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
-                      <CheckCircle className="w-3 h-3" /> Majority
+                    <span className="text-emerald-700 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3 text-emerald-600" /> Majority
                     </span>
                   ) : (
-                    <span className="text-amber-400 font-bold">-{60 - tally.counts.INC} to Majority</span>
+                    <span className="text-amber-700 font-bold">-{60 - tally.counts.INC} to Majority</span>
                   )}
                 </span>
               </div>
             </div>
 
             {/* BRS */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-pink-400">
+            <div className="bg-slate-50 hover:bg-pink-50/60 transition-colors p-3.5 rounded-xl border border-slate-200/90 shadow-2xs">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-pink-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF1493]" />
                   BRS
                 </span>
-                <span className={`text-[10px] font-bold font-mono ${tally.brsDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                <span className={`text-[10px] font-bold font-mono ${tally.brsDiff >= 0 ? 'text-emerald-700' : 'text-rose-700'}`}>
                   {tally.brsDiff >= 0 ? `+${tally.brsDiff}` : tally.brsDiff} vs 2023
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.BRS}</span>
-                <span className="text-xs text-slate-400">
+                <span className="text-3xl font-black text-slate-900">{tally.counts.BRS}</span>
+                <span className="text-xs text-slate-500">
                   {tally.counts.BRS >= 60 ? (
-                    <span className="text-emerald-400 font-bold">Majority</span>
+                    <span className="text-emerald-700 font-bold">Majority</span>
                   ) : (
-                    <span className="text-slate-400">Seats</span>
+                    <span className="text-slate-500">Seats</span>
                   )}
                 </span>
               </div>
             </div>
 
             {/* BJP */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-amber-400">
+            <div className="bg-slate-50 hover:bg-amber-50/60 transition-colors p-3.5 rounded-xl border border-slate-200/90 shadow-2xs">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-amber-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#FF9933]" />
                   BJP
                 </span>
-                <span className={`text-[10px] font-bold font-mono ${tally.bjpDiff >= 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                <span className={`text-[10px] font-bold font-mono ${tally.bjpDiff >= 0 ? 'text-emerald-700' : 'text-rose-700'}`}>
                   {tally.bjpDiff >= 0 ? `+${tally.bjpDiff}` : tally.bjpDiff} vs 2023
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.BJP}</span>
-                <span className="text-xs text-slate-400">
+                <span className="text-3xl font-black text-slate-900">{tally.counts.BJP}</span>
+                <span className="text-xs text-slate-500">
                   {tally.counts.BJP >= 60 ? (
-                    <span className="text-emerald-400 font-bold flex items-center gap-0.5">
-                      <CheckCircle className="w-3 h-3" /> Majority
+                    <span className="text-emerald-700 font-bold flex items-center gap-0.5">
+                      <CheckCircle className="w-3 h-3 text-emerald-600" /> Majority
                     </span>
                   ) : tally.counts.BJP >= 10 ? (
-                    <span className="text-amber-400 font-bold">Kingmaker Zone</span>
+                    <span className="text-amber-700 font-bold">Kingmaker Zone</span>
                   ) : (
                     'Seats'
                   )}
@@ -957,33 +1120,33 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             </div>
 
             {/* AIMIM */}
-            <div className="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700/80">
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                <span className="font-bold flex items-center gap-1.5 text-emerald-400">
+            <div className="bg-slate-50 hover:bg-emerald-50/60 transition-colors p-3.5 rounded-xl border border-slate-200/90 shadow-2xs">
+              <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span className="font-bold flex items-center gap-1.5 text-emerald-700">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#006600]" />
                   AIMIM
                 </span>
-                <span className="text-[10px] text-slate-400 font-mono">Hyderabad</span>
+                <span className="text-[10px] text-slate-500 font-mono">Hyderabad</span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-white">{tally.counts.AIMIM}</span>
-                <span className="text-xs text-slate-400">Old City Base</span>
+                <span className="text-3xl font-black text-slate-900">{tally.counts.AIMIM}</span>
+                <span className="text-xs text-slate-500">Old City Base</span>
               </div>
             </div>
 
             {/* Triage & Flips Alert */}
-            <div className="bg-gradient-to-br from-indigo-950/60 to-purple-950/60 p-3.5 rounded-xl border border-indigo-700/40">
-              <div className="flex items-center justify-between text-xs text-indigo-300 mb-1 font-semibold">
+            <div className="bg-rose-50/80 hover:bg-rose-100/60 transition-colors p-3.5 rounded-xl border border-rose-200 shadow-2xs">
+              <div className="flex items-center justify-between text-xs text-rose-800 mb-1 font-semibold">
                 <span className="flex items-center gap-1">
-                  <Flame className="w-3.5 h-3.5 text-rose-400" /> Triage Alarms
+                  <Flame className="w-3.5 h-3.5 text-rose-600" /> Triage Alarms
                 </span>
-                <span className="bg-rose-500/20 text-rose-300 px-1.5 py-0.2 rounded font-mono text-[10px]">
+                <span className="bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded font-mono text-[10px] font-bold border border-rose-200">
                   {tally.flippedCount} Flips
                 </span>
               </div>
               <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-black text-rose-300">{tally.tossUpCount}</span>
-                <span className="text-xs text-slate-300">
+                <span className="text-3xl font-black text-rose-700">{tally.tossUpCount}</span>
+                <span className="text-xs text-slate-600">
                   Toss-ups (&le; {tossUpThreshold >= 1000 ? `${(tossUpThreshold / 1000).toFixed(1).replace('.0', '')}k` : tossUpThreshold} votes)
                 </span>
               </div>
@@ -1002,6 +1165,12 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         setMacroSwing={setMacroSwing}
         turnoutSettings={turnoutSettings}
         setTurnoutSettings={setTurnoutSettings}
+        welfareSettings={welfareSettings}
+        setWelfareSettings={setWelfareSettings}
+        mlaFatigueSettings={mlaFatigueSettings}
+        setMlaFatigueSettings={setMlaFatigueSettings}
+        cannibalizationSettings={cannibalizationSettings}
+        setCannibalizationSettings={setCannibalizationSettings}
         onApplyPreset={applyPreset}
         onNavigateToActions={onNavigateToActions}
       />
@@ -1010,43 +1179,37 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
         {/* Left Column: Polling & Demographics Sliders (4 cols) */}
         <div className="lg:col-span-4 bg-white rounded-2xl p-5 shadow-sm border border-slate-200 space-y-4">
-          {/* Hero Launcher Button for Large Overlay Window */}
-          <button
-            onClick={() => setIsStudioOpen(true)}
-            className="w-full flex items-center justify-between p-3.5 bg-gradient-to-r from-indigo-950 via-slate-900 to-indigo-900 hover:from-indigo-900 hover:to-slate-800 text-white rounded-xl border border-indigo-500/40 shadow-md shadow-indigo-950/30 transition-all cursor-pointer group"
-          >
-            <div className="flex items-center gap-2.5">
-              <div className="p-2 bg-indigo-500/30 text-indigo-300 rounded-lg group-hover:scale-110 transition-transform">
-                <Maximize2 className="w-4 h-4 text-indigo-300" />
-              </div>
-              <div className="text-left">
-                <div className="text-xs font-black flex items-center gap-1.5 text-white">
-                  <span>Demographic Swing Studio</span>
-                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-                </div>
-                <p className="text-[10px] text-indigo-200">
-                  Open 18-Group Multi-Party Balancer
-                </p>
+          {/* Section Header */}
+          <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+            <div className="flex items-center gap-2">
+              <span className="p-1.5 bg-indigo-50 text-indigo-600 rounded-lg border border-indigo-100">
+                <Sliders className="w-4 h-4" />
+              </span>
+              <div>
+                <h3 className="text-sm font-bold text-slate-900">Demographic &amp; Macro Swings</h3>
+                <p className="text-[11px] text-slate-500">Fine-tune statewide &amp; community shifts</p>
               </div>
             </div>
-            <span className="text-[10px] font-mono font-bold bg-indigo-600 group-hover:bg-indigo-500 text-white px-2 py-1 rounded-lg">
-              {activeCustomizedCount > 0 ? `${activeCustomizedCount} Active` : 'Open Studio'}
-            </span>
-          </button>
+            {activeCustomizedCount > 0 && (
+              <span className="text-[10px] font-mono font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded-full">
+                {activeCustomizedCount} Active
+              </span>
+            )}
+          </div>
 
-          {/* Statewide Macro Swing Quick Card */}
-          <div className="bg-slate-50 rounded-xl p-3 border border-slate-200 space-y-2.5">
+          {/* Statewide Macro Swing Quick Controls */}
+          <div className="bg-slate-50/80 rounded-xl p-3.5 border border-slate-200 space-y-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5">
                 <TrendingUp className="w-3.5 h-3.5 text-indigo-600" />
-                <span className="text-xs font-bold text-slate-900">Statewide Macro Swing</span>
+                <span className="text-xs font-bold text-slate-800">Statewide Macro Swing</span>
               </div>
               {(macroSwing.INC !== 0 || macroSwing.BRS !== 0 || macroSwing.BJP !== 0) && (
                 <button
                   onClick={() => setMacroSwing({ INC: 0, BRS: 0, BJP: 0 })}
-                  className="text-[10px] text-slate-500 hover:text-slate-800 flex items-center gap-0.5 cursor-pointer font-semibold"
+                  className="text-[11px] text-slate-500 hover:text-slate-800 flex items-center gap-1 cursor-pointer font-semibold"
                 >
-                  <RotateCcw className="w-2.5 h-2.5" />
+                  <RotateCcw className="w-3 h-3" />
                   <span>Reset</span>
                 </button>
               )}
@@ -1060,32 +1223,32 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
               const othS = 9.3;
 
               return (
-                <div className="space-y-1.5">
+                <div className="space-y-2">
                   <div className="w-full h-6 rounded-lg overflow-hidden flex bg-slate-900 p-0.5 border border-slate-300 shadow-2xs">
                     <div
                       style={{ width: `${incS}%` }}
-                      className="bg-[#0284c7] h-full flex items-center justify-center text-[9px] font-black text-white px-1 overflow-hidden"
+                      className="bg-[#0284c7] h-full flex items-center justify-center text-[10px] font-black text-white px-1 overflow-hidden"
                       title={`INC: ${incS}%`}
                     >
                       <span className="truncate">{incS}%</span>
                     </div>
                     <div
                       style={{ width: `${brsS}%` }}
-                      className="bg-[#ec4899] h-full flex items-center justify-center text-[9px] font-black text-white px-1 overflow-hidden"
+                      className="bg-[#ec4899] h-full flex items-center justify-center text-[10px] font-black text-white px-1 overflow-hidden"
                       title={`BRS: ${brsS}%`}
                     >
                       <span className="truncate">{brsS}%</span>
                     </div>
                     <div
                       style={{ width: `${bjpS}%` }}
-                      className="bg-[#f97316] h-full flex items-center justify-center text-[9px] font-black text-white px-1 overflow-hidden"
+                      className="bg-[#f97316] h-full flex items-center justify-center text-[10px] font-black text-white px-1 overflow-hidden"
                       title={`BJP: ${bjpS}%`}
                     >
                       <span className="truncate">{bjpS}%</span>
                     </div>
                     <div
                       style={{ width: `${othS}%` }}
-                      className="bg-slate-600 h-full flex items-center justify-center text-[8px] font-bold text-slate-200 px-1 overflow-hidden"
+                      className="bg-slate-600 h-full flex items-center justify-center text-[9px] font-bold text-slate-200 px-1 overflow-hidden"
                       title={`OTH: ${othS}%`}
                     >
                       <span className="truncate">OTH</span>
@@ -1093,25 +1256,25 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                   </div>
 
                   {/* Micro Steppers for Macro */}
-                  <div className="grid grid-cols-3 gap-1.5 pt-0.5">
+                  <div className="grid grid-cols-3 gap-2">
                     {/* INC */}
-                    <div className="bg-white p-1.5 rounded-lg border border-sky-100 flex items-center justify-between shadow-2xs">
+                    <div className="bg-white p-2 rounded-xl border border-sky-100 flex items-center justify-between shadow-2xs">
                       <div>
-                        <div className="text-[10px] font-bold text-sky-700">INC</div>
-                        <div className="text-[10px] font-mono font-black text-slate-800">
+                        <div className="text-[11px] font-bold text-sky-700">INC</div>
+                        <div className="text-xs font-mono font-black text-slate-900">
                           {macroSwing.INC >= 0 ? `+${macroSwing.INC}%` : `${macroSwing.INC}%`}
                         </div>
                       </div>
                       <div className="flex flex-col gap-0.5">
                         <button
                           onClick={() => setMacroSwing(prev => ({ ...prev, INC: Math.min(15, prev.INC + 1) }))}
-                          className="w-4 h-3.5 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                          className="w-5 h-4 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
                         >
                           +
                         </button>
                         <button
                           onClick={() => setMacroSwing(prev => ({ ...prev, INC: Math.max(-15, prev.INC - 1) }))}
-                          className="w-4 h-3.5 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                          className="w-5 h-4 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
                         >
                           -
                         </button>
@@ -1119,23 +1282,23 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                     </div>
 
                     {/* BRS */}
-                    <div className="bg-white p-1.5 rounded-lg border border-pink-100 flex items-center justify-between shadow-2xs">
+                    <div className="bg-white p-2 rounded-xl border border-pink-100 flex items-center justify-between shadow-2xs">
                       <div>
-                        <div className="text-[10px] font-bold text-pink-700">BRS</div>
-                        <div className="text-[10px] font-mono font-black text-slate-800">
+                        <div className="text-[11px] font-bold text-pink-700">BRS</div>
+                        <div className="text-xs font-mono font-black text-slate-900">
                           {macroSwing.BRS >= 0 ? `+${macroSwing.BRS}%` : `${macroSwing.BRS}%`}
                         </div>
                       </div>
                       <div className="flex flex-col gap-0.5">
                         <button
                           onClick={() => setMacroSwing(prev => ({ ...prev, BRS: Math.min(15, prev.BRS + 1) }))}
-                          className="w-4 h-3.5 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                          className="w-5 h-4 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
                         >
                           +
                         </button>
                         <button
                           onClick={() => setMacroSwing(prev => ({ ...prev, BRS: Math.max(-15, prev.BRS - 1) }))}
-                          className="w-4 h-3.5 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                          className="w-5 h-4 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
                         >
                           -
                         </button>
@@ -1143,23 +1306,23 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                     </div>
 
                     {/* BJP */}
-                    <div className="bg-white p-1.5 rounded-lg border border-amber-100 flex items-center justify-between shadow-2xs">
+                    <div className="bg-white p-2 rounded-xl border border-amber-100 flex items-center justify-between shadow-2xs">
                       <div>
-                        <div className="text-[10px] font-bold text-amber-700">BJP</div>
-                        <div className="text-[10px] font-mono font-black text-slate-800">
+                        <div className="text-[11px] font-bold text-amber-700">BJP</div>
+                        <div className="text-xs font-mono font-black text-slate-900">
                           {macroSwing.BJP >= 0 ? `+${macroSwing.BJP}%` : `${macroSwing.BJP}%`}
                         </div>
                       </div>
                       <div className="flex flex-col gap-0.5">
                         <button
                           onClick={() => setMacroSwing(prev => ({ ...prev, BJP: Math.min(15, prev.BJP + 1) }))}
-                          className="w-4 h-3.5 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                          className="w-5 h-4 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
                         >
                           +
                         </button>
                         <button
                           onClick={() => setMacroSwing(prev => ({ ...prev, BJP: Math.max(-15, prev.BJP - 1) }))}
-                          className="w-4 h-3.5 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[9px] font-bold flex items-center justify-center cursor-pointer"
+                          className="w-5 h-4 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
                         >
                           -
                         </button>
@@ -1171,78 +1334,46 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             })()}
           </div>
 
-          {/* Demographic Castes & Blocs Status Card */}
-          <div className="bg-slate-50 rounded-xl p-3.5 border border-slate-200 space-y-3">
-            <div className="flex items-center justify-between border-b border-slate-200/80 pb-2">
-              <div className="flex items-center gap-1.5">
-                <Sliders className="w-3.5 h-3.5 text-indigo-600" />
-                <h4 className="font-extrabold text-slate-900 text-xs">
-                  Demographic Castes &amp; Blocs
-                </h4>
-              </div>
-              <button
-                onClick={() => setIsStudioOpen(true)}
-                className="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-0.5 cursor-pointer"
-              >
-                <span>Open Studio</span>
-                <ChevronRight className="w-3 h-3" />
-              </button>
+          {/* Unified Demographic Studio Launcher Card */}
+          <div className="bg-slate-50/80 rounded-xl p-3.5 border border-slate-200 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-bold text-slate-800">18 Demographic Castes &amp; Cohorts</span>
+              <span className="text-[10px] font-mono bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-600 font-semibold">
+                SEEEPC Vol-4
+              </span>
             </div>
 
             {activeCustomizedCount === 0 ? (
-              <div className="space-y-2 text-xs text-slate-500">
-                <p className="leading-relaxed">
-                  All 18 demographic groups (Mudiraj, Madiga, Mala, Lambada, Munnuru Kapu, Youth, etc.) are tuned inside the <strong className="text-slate-700">Demographic Swing Studio</strong> overlay.
-                </p>
-                <div className="flex flex-wrap gap-1 text-[10px]">
-                  <span className="bg-white border border-slate-200 px-2 py-0.5 rounded-md font-mono text-slate-600 font-semibold">
-                    14 Castes
-                  </span>
-                  <span className="bg-white border border-slate-200 px-2 py-0.5 rounded-md font-mono text-slate-600 font-semibold">
-                    4 Age Cohorts
-                  </span>
-                  <span className="bg-white border border-slate-200 px-2 py-0.5 rounded-md font-mono text-slate-600 font-semibold">
-                    100% Simplex Balancers
-                  </span>
-                </div>
-                <button
-                  onClick={() => setIsStudioOpen(true)}
-                  className="w-full mt-1 py-2 px-3 bg-white hover:bg-slate-100 text-indigo-700 font-bold text-xs rounded-lg border border-indigo-200 flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
-                >
-                  <Maximize2 className="w-3.5 h-3.5" />
-                  <span>Configure Sliders in Overlay</span>
-                </button>
-              </div>
+              <p className="text-xs text-slate-500 leading-relaxed">
+                Tune all 18 caste and age cohorts (Mudiraj, Madiga, Mala, Munnuru Kapu, Youth, etc.) with 100% simplex mathematical balancers.
+              </p>
             ) : (
-              <div className="space-y-2.5">
-                <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-indigo-700 font-mono">
-                    {activeCustomizedCount} of 18 Groups Active
-                  </span>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-xs font-semibold text-indigo-700">
+                  <span>{activeCustomizedCount} custom community shifts active</span>
                   <button
                     onClick={() => {
                       const reset: Record<string, PartySwing> = {};
                       Object.keys(swings).forEach(k => { reset[k] = { INC: 0, BRS: 0, BJP: 0 }; });
                       setSwings(reset);
                     }}
-                    className="text-[10px] text-slate-400 hover:text-rose-600 font-semibold flex items-center gap-0.5 cursor-pointer"
+                    className="text-[11px] text-slate-400 hover:text-rose-600 flex items-center gap-0.5 cursor-pointer"
                   >
-                    <RotateCcw className="w-2.5 h-2.5" />
-                    <span>Reset</span>
+                    <RotateCcw className="w-3 h-3" />
+                    <span>Clear</span>
                   </button>
                 </div>
-
-                <div className="max-h-56 overflow-y-auto space-y-1.5 pr-1 text-[11px]">
+                <div className="max-h-36 overflow-y-auto space-y-1 pr-1 text-[11px]">
                   {Object.entries(swings)
                     .filter(([_, s]) => s.INC !== 0 || s.BRS !== 0 || s.BJP !== 0)
                     .map(([k, s]) => {
                       const readable = READABLE_COMMUNITY_NAMES[k] || k;
                       return (
-                        <div key={k} className="bg-white p-2 rounded-lg border border-slate-200 flex items-center justify-between shadow-2xs">
-                          <span className="font-semibold text-slate-700 truncate max-w-[125px]" title={readable}>
+                        <div key={k} className="bg-white px-2 py-1.5 rounded-lg border border-slate-200 flex items-center justify-between shadow-2xs">
+                          <span className="font-semibold text-slate-700 truncate max-w-[130px]" title={readable}>
                             {readable}
                           </span>
-                          <div className="flex items-center gap-1 text-[10px] font-mono font-bold">
+                          <div className="flex items-center gap-1.5 text-[10px] font-mono font-bold">
                             {s.INC !== 0 && (
                               <span className={s.INC > 0 ? 'text-sky-600 font-black' : 'text-slate-400'}>
                                 {s.INC > 0 ? `+${s.INC}% INC` : `${s.INC}%`}
@@ -1263,29 +1394,29 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                       );
                     })}
                 </div>
-
-                <button
-                  onClick={() => setIsStudioOpen(true)}
-                  className="w-full py-2 px-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-bold text-xs rounded-lg border border-indigo-200 flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-2xs"
-                >
-                  <Maximize2 className="w-3.5 h-3.5" />
-                  <span>Modify in Overlay Studio</span>
-                </button>
               </div>
             )}
+
+            {/* Single Clear Launcher Button */}
+            <button
+              onClick={() => setIsStudioOpen(true)}
+              className="w-full py-2.5 px-3 bg-gradient-to-r from-indigo-900 to-slate-900 hover:from-indigo-800 hover:to-slate-800 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm group"
+            >
+              <Maximize2 className="w-4 h-4 text-indigo-300 group-hover:scale-110 transition-transform" />
+              <span>Configure Demographic Studio</span>
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            </button>
           </div>
 
           {/* Action Callout */}
-          <div className="pt-2">
-            <button
-              onClick={() => onNavigateToActions()}
-              className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-xs transition-all cursor-pointer group"
-            >
-              <Target className="w-4 h-4 text-indigo-200 group-hover:scale-110 transition-transform" />
-              <span>Export Scenario to Actions Playbook</span>
-              <ChevronRight className="w-3.5 h-3.5 text-indigo-300" />
-            </button>
-          </div>
+          <button
+            onClick={() => onNavigateToActions()}
+            className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-xs transition-all cursor-pointer group"
+          >
+            <Target className="w-4 h-4 text-indigo-200 group-hover:scale-110 transition-transform" />
+            <span>Export Scenario to Actions Playbook</span>
+            <ChevronRight className="w-3.5 h-3.5 text-indigo-300" />
+          </button>
         </div>
 
         {/* Right Column: Inverse-Margin Bubble Chart (8 cols) */}

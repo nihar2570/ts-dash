@@ -25,7 +25,9 @@ import {
   List,
   Sun,
   Moon,
+  Users,
 } from 'lucide-react';
+import { BoothVoterRollModal } from './BoothVoterRollModal';
 
 export interface BoothDetail {
   boothNo: number;
@@ -142,6 +144,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
   const [boothSearch, setBoothSearch] = useState<string>('');
   const [selectedMandalFilter, setSelectedMandalFilter] = useState<string>('all');
   const [visibleBoothCount, setVisibleBoothCount] = useState<number>(standaloneMapOnly ? 50 : 25);
+  const [inspectedVoterBooth, setInspectedVoterBooth] = useState<BoothDetail | null>(null);
 
   // Mandal Master Table Search
   const [mandalTableSearch, setMandalTableSearch] = useState<string>('');
@@ -942,7 +945,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
 
             {/* Polling Station Map / List Content Display */}
             {explorerViewMode === 'map' ? (
-              <div className={standaloneMapOnly ? 'pt-1 flex-1 flex flex-col min-h-0 h-full' : 'pt-1'}>
+              <div id="booth-triage-map-container" className={standaloneMapOnly ? 'pt-1 flex-1 flex flex-col min-h-0 h-full' : 'pt-1'}>
                 <BoothTriageMap
                   acNo={acNo}
                   acName={acName}
@@ -954,6 +957,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                   onSelectTriageCategory={handleSelectTriage}
                   selectedBoothNo={selectedMapBoothNo}
                   onSelectBooth={(b) => setSelectedMapBoothNo(b ? b.boothNo : null)}
+                  onViewVoterRoll={(b) => setInspectedVoterBooth(b)}
                   theme={theme}
                   onThemeChange={setTheme}
                   isFullPageMap={standaloneMapOnly}
@@ -1033,16 +1037,35 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                             <div className="flex items-center gap-2">
                               <button
                                 type="button"
+                                onClick={() => setInspectedVoterBooth(b)}
+                                className={`px-2 py-0.5 rounded border text-[10px] font-medium flex items-center gap-1 cursor-pointer transition-colors ${
+                                  theme === 'light'
+                                    ? 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200'
+                                    : 'bg-indigo-950/80 hover:bg-indigo-900 text-indigo-300 border-indigo-700'
+                                }`}
+                                title="Inspect individual voter names, EPIC IDs, and Panna pages"
+                              >
+                                <Users className="w-3 h-3 text-indigo-500" />
+                                <span>Voters ({b.electorate})</span>
+                              </button>
+                              <button
+                                type="button"
                                 onClick={() => {
                                   setSelectedMapBoothNo(b.boothNo);
                                   setExplorerViewMode('map');
+                                  setTimeout(() => {
+                                    const mapElem = document.getElementById('booth-triage-map-container');
+                                    if (mapElem) {
+                                      mapElem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                                    }
+                                  }, 80);
                                 }}
                                 className={`px-2 py-0.5 rounded border text-[10px] font-medium flex items-center gap-1 cursor-pointer transition-colors ${
                                   theme === 'light'
                                     ? 'bg-white hover:bg-slate-100 text-indigo-700 border-slate-300'
                                     : 'bg-slate-800 hover:bg-indigo-900/60 text-indigo-300 hover:text-white border-slate-700'
                                 }`}
-                                title="Locate this booth on the Geospatial Map"
+                                title="Locate and fly into this booth on the Geospatial Map"
                               >
                                 <MapIcon className="w-3 h-3 text-amber-500" />
                                 <span>Locate on Map</span>
@@ -1442,6 +1465,30 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
         </div>
       </div>
         </>
+      )}
+
+      {/* Booth E-Roll & Panna Register Modal */}
+      {inspectedVoterBooth && (
+        <BoothVoterRollModal
+          isOpen={!!inspectedVoterBooth}
+          onClose={() => setInspectedVoterBooth(null)}
+          acNo={acNo}
+          acName={acName}
+          district={district}
+          boothNo={inspectedVoterBooth.boothNo}
+          boothName={inspectedVoterBooth.name}
+          mandalName={inspectedVoterBooth.mandalName}
+          electorateCount={inspectedVoterBooth.electorate}
+          form20Margin={inspectedVoterBooth.margin}
+          leadParty={
+            inspectedVoterBooth.margin >= 0
+              ? targetParty
+              : winnerParty === targetParty
+              ? runnerParty
+              : winnerParty
+          }
+          triage={inspectedVoterBooth.triage}
+        />
       )}
     </div>
   );

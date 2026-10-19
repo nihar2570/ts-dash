@@ -23,6 +23,7 @@ export interface BoothTriageMapProps {
   onSelectTriageCategory?: (cat: 'battleground' | 'fortress' | 'vulnerable' | 'hostile' | 'all') => void;
   selectedBoothNo?: number | null;
   onSelectBooth?: (booth: BoothDetail | null) => void;
+  onViewVoterRoll?: (booth: BoothDetail) => void;
   theme?: 'dark' | 'light';
   onThemeChange?: (theme: 'dark' | 'light') => void;
   isFullPageMap?: boolean;
@@ -35,6 +36,7 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
   geoJsonData,
   selectedBoothNo,
   onSelectBooth,
+  onViewVoterRoll,
   theme: controlledTheme,
   isFullPageMap = false,
 }) => {
@@ -44,6 +46,8 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
   const boundaryLayerRef = useRef<L.GeoJSON | null>(null);
   const mandalLayerGroupRef = useRef<L.LayerGroup | null>(null);
   const markersLayerGroupRef = useRef<L.LayerGroup | null>(null);
+  const beaconLayerGroupRef = useRef<L.LayerGroup | null>(null);
+  const markersByBoothRef = useRef<Map<number, L.CircleMarker>>(new Map());
 
   const isLight = controlledTheme === 'light';
 
@@ -179,6 +183,7 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
 
     mandalLayerGroupRef.current = L.layerGroup().addTo(map);
     markersLayerGroupRef.current = L.layerGroup().addTo(map);
+    beaconLayerGroupRef.current = L.layerGroup().addTo(map);
     mapInstanceRef.current = map;
 
     return () => {
@@ -354,6 +359,7 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
     if (!map || !markersGroup) return;
 
     markersGroup.clearLayers();
+    markersByBoothRef.current.clear();
 
     booths.forEach((b) => {
       if (isNaN(b.lat) || isNaN(b.lng) || (b.lat === 0 && b.lng === 0)) return;
@@ -363,14 +369,14 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
       const color = getTriageColor(b.triage);
 
       const marker = L.circleMarker([b.lat, b.lng], {
-        radius: isSelected ? 9 : isBattleground ? 7 : 5.5,
+        radius: isSelected ? 9.5 : isBattleground ? 7 : 5.5,
         fillColor: color,
         color: isSelected
           ? (isLight ? '#1e1b4b' : '#ffffff')
           : isBattleground
           ? (isLight ? '#b45309' : '#fef3c7')
           : (isLight ? '#ffffff' : '#0f172a'),
-        weight: isSelected ? 2.5 : isBattleground ? 1.8 : 1,
+        weight: isSelected ? 3 : isBattleground ? 1.8 : 1,
         fillOpacity: isSelected ? 1 : isLight ? 0.95 : 0.88,
         pane: isBattleground || isSelected ? 'markerPane' : 'overlayPane',
       });
@@ -413,9 +419,95 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
         if (onSelectBooth) onSelectBooth(b);
       });
 
+      markersByBoothRef.current.set(b.boothNo, marker);
       marker.addTo(markersGroup);
     });
   }, [booths, activeBooth, targetParty, onSelectBooth, isLight]);
+
+  // 6. Smooth Camera Fly-To & Pulsing Beacon Reticle for Active / Located Booth
+  useEffect(() => {
+    const map = mapInstanceRef.current;
+    const beaconGroup = beaconLayerGroupRef.current;
+    if (!map || !beaconGroup) return;
+
+    beaconGroup.clearLayers();
+
+    if (!activeBooth || isNaN(activeBooth.lat) || isNaN(activeBooth.lng) || activeBooth.lat === 0) {
+      return;
+    }
+
+    // Refresh map bounds in case container just transitioned from list view to map
+    map.invalidateSize();
+
+    // Smoothly fly camera directly to the booth coordinates with high zoom level (zoom 15)
+    const currentZoom = map.getZoom();
+    const targetZoom = Math.max(currentZoom, 15);
+    map.flyTo([activeBooth.lat, activeBooth.lng], targetZoom, {
+      animate: true,
+      duration: 1.2,
+      easeLinearity: 0.25,
+    });
+
+    // Add High-Visibility Animated Pulsing Radar Beacon
+    const color = getTriageColor(activeBooth.triage);
+    const beaconHtml = `
+      <div style="position: relative; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; pointer-events: none;">
+        <div style="
+          position: absolute;
+          width: 56px;
+          height: 56px;
+          border-radius: 9999px;
+          background: ${color};
+          opacity: 0.55;
+          animation: ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+        "></div>
+        <div style="
+          position: absolute;
+          width: 34px;
+          height: 34px;
+          border-radius: 9999px;
+          border: 2.5px solid ${color};
+          background: rgba(255, 255, 255, 0.25);
+          box-shadow: 0 0 16px ${color};
+          animation: pulse 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        "></div>
+        <div style="
+          width: 14px;
+          height: 14px;
+          border-radius: 9999px;
+          background: #ffffff;
+          border: 3.5px solid ${color};
+          box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+        "></div>
+      </div>
+    `;
+
+    const beaconIcon = L.divIcon({
+      className: 'booth-radar-beacon',
+      html: beaconHtml,
+      iconSize: [56, 56],
+      iconAnchor: [28, 28],
+    });
+
+    const beaconMarker = L.marker([activeBooth.lat, activeBooth.lng], {
+      icon: beaconIcon,
+      interactive: false,
+      pane: 'markerPane',
+      zIndexOffset: 2500,
+    });
+
+    beaconGroup.addLayer(beaconMarker);
+
+    // Auto-open tooltip on the target booth marker once fly-to arrives
+    const timer = setTimeout(() => {
+      const marker = markersByBoothRef.current.get(activeBooth.boothNo);
+      if (marker && map) {
+        marker.openTooltip();
+      }
+    }, 600);
+
+    return () => clearTimeout(timer);
+  }, [activeBooth]);
 
   // Center / Reset View handler
   const handleResetBounds = () => {
@@ -437,6 +529,23 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
       {/* Map Canvas */}
       <div className={`relative w-full ${isFullPageMap ? 'flex-1 min-h-[450px] h-full' : 'h-[480px] sm:h-[540px]'} ${isLight ? 'bg-slate-100' : 'bg-slate-950'}`}>
         <div ref={mapContainerRef} className="w-full h-full z-10" />
+
+        {/* Top Center: Active Focused Booth Banner */}
+        {activeBooth && (
+          <div className="absolute top-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/95 text-white text-xs font-semibold shadow-2xl border border-amber-500/70 backdrop-blur-md animate-in fade-in slide-in-from-top-2 pointer-events-auto max-w-[90%] sm:max-w-md">
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-ping shrink-0" />
+            <span className="text-amber-300 font-mono font-bold shrink-0">PS #{activeBooth.boothNo}</span>
+            <span className="truncate">{activeBooth.name}</span>
+            <button
+              type="button"
+              onClick={handleResetBounds}
+              className="ml-1 px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-[10px] text-amber-200 hover:text-white transition-colors cursor-pointer border border-slate-700 shrink-0 font-mono font-bold"
+              title="Reset zoom to view all constituency polling stations"
+            >
+              Fit AC
+            </button>
+          </div>
+        )}
 
         {/* Top-Right Floating Controls (Mandals toggle & Reset bounds) */}
         <div className="absolute top-3 right-3 z-20 flex items-center gap-1.5 pointer-events-auto">
@@ -680,6 +789,23 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
                 <strong>Ground Directive:</strong> {activeBooth.actionNote}
               </span>
             </div>
+
+            {/* View E-Roll & Panna Register Button */}
+            <button
+              type="button"
+              onClick={() => {
+                if (onViewVoterRoll) onViewVoterRoll(activeBooth);
+              }}
+              className={`w-full py-2 px-3 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer mt-1 ${
+                isLight
+                  ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
+                  : 'bg-indigo-600 hover:bg-indigo-500 text-white'
+              }`}
+              title="Inspect individual voter names, EPIC IDs, and Panna pages for this booth"
+            >
+              <Users className="w-3.5 h-3.5" />
+              <span>View E-Roll &amp; Panna Register ({activeBooth.electorate} Electors)</span>
+            </button>
           </div>
         )}
       </div>

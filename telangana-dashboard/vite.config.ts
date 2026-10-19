@@ -8,4 +8,14 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  server: {
+    watch: {
+      ignored: [
+        '**/public/data/voters/**',
+        '**/dist/**',
+        '**/.git/**',
+        '**/data_archive/**',
+      ],
+    },
+  },
 })
