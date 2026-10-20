@@ -27,7 +27,7 @@ export interface DefectionEvent {
   enabled: boolean;
 }
 
-const PRESET_SCENARIOS: Omit<DefectionEvent, 'id'>[] = [
+export const PRESET_SCENARIOS: Omit<DefectionEvent, 'id'>[] = [
   {
     acNo: 60, // Khairatabad (Danam Nagender style)
     leaderName: 'Sitting MLA & BC Cadre (Khairatabad)',
@@ -85,18 +85,44 @@ const PRESET_SCENARIOS: Omit<DefectionEvent, 'id'>[] = [
   },
 ];
 
-interface DefectionRebelModelerProps {
+export interface DefectionRebelModelerProps {
   data: SeeepcDataset;
   onOpenDossier?: (acNo: number) => void;
+  events?: DefectionEvent[];
+  onEventsChange?: (events: DefectionEvent[]) => void;
+  cumulativeAcImpacts?: Record<number, {
+    resourceSwing: number;
+    starLift: number;
+    totalCumulativeSwing: number;
+    cumulativeProjectedMargin: number;
+    isCumulativelyFlipped: boolean;
+  }>;
 }
 
 export const DefectionRebelModeler: React.FC<DefectionRebelModelerProps> = ({
   data,
   onOpenDossier,
+  events: externalEvents,
+  onEventsChange,
+  cumulativeAcImpacts,
 }) => {
-  const [events, setEvents] = useState<DefectionEvent[]>(() =>
+  const [internalEvents, setInternalEvents] = useState<DefectionEvent[]>(() =>
     PRESET_SCENARIOS.map((s, idx) => ({ ...s, id: `preset_${idx + 1}` }))
   );
+
+  const events = externalEvents !== undefined ? externalEvents : internalEvents;
+  const setEvents = (updater: React.SetStateAction<DefectionEvent[]>) => {
+    if (onEventsChange) {
+      if (typeof updater === 'function') {
+        const next = updater(events);
+        onEventsChange(next);
+      } else {
+        onEventsChange(updater);
+      }
+    } else {
+      setInternalEvents(updater);
+    }
+  };
 
   // New Event Form State
   const [formAcNo, setFormAcNo] = useState<number>(40); // Default to Gajwel (#40)
@@ -676,6 +702,23 @@ export const DefectionRebelModeler: React.FC<DefectionRebelModelerProps> = ({
                   <p className="text-[10px] text-slate-500 italic border-t border-slate-100 pt-1.5">
                     "{evt.notes}"
                   </p>
+                )}
+
+                {/* Cumulative Campaign Action Compound Margin */}
+                {cumulativeAcImpacts && cumulativeAcImpacts[evt.acNo] && (cumulativeAcImpacts[evt.acNo].resourceSwing > 0 || cumulativeAcImpacts[evt.acNo].starLift > 0) && (
+                  <div className="p-2 rounded-lg bg-indigo-50/80 border border-indigo-200 text-[11px] flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 text-indigo-950 font-bold">
+                      <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                      <span>Cumulative AC Margin:</span>
+                    </div>
+                    <div className="text-right font-mono font-black">
+                      <span className={cumulativeAcImpacts[evt.acNo].cumulativeProjectedMargin > 0 ? 'text-emerald-700' : 'text-slate-800'}>
+                        {cumulativeAcImpacts[evt.acNo].cumulativeProjectedMargin > 0
+                          ? `+${cumulativeAcImpacts[evt.acNo].cumulativeProjectedMargin.toLocaleString()} (INC WIN)`
+                          : `${cumulativeAcImpacts[evt.acNo].cumulativeProjectedMargin.toLocaleString()} (Deficit)`}
+                      </span>
+                    </div>
+                  </div>
                 )}
               </div>
 

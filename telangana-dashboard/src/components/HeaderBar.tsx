@@ -98,7 +98,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              <span>🔮 Simulations (War Room)</span>
+              <span>🔮 Simulations</span>
               <span
                 className="text-[9px] bg-indigo-50 text-indigo-600 px-1.5 py-0.2 rounded-full border border-indigo-200 font-extrabold"
                 title="Socio-Economic, Educational, Employment, Population & Caste Survey (SEEEPC)"

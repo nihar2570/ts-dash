@@ -513,14 +513,26 @@ export function getConstituencySquadRecommendation(
   };
 }
 
-interface StarCampaignerAllocatorProps {
+export interface StarCampaignerAllocatorProps {
   data: SeeepcDataset;
   onOpenDossier?: (acNo: number) => void;
+  allocations?: Record<string, Record<number, number>>;
+  onAllocationsChange?: (allocations: Record<string, Record<number, number>>) => void;
+  cumulativeAcImpacts?: Record<number, {
+    resourceSwing: number;
+    defectionShift: number;
+    totalCumulativeSwing: number;
+    cumulativeProjectedMargin: number;
+    isCumulativelyFlipped: boolean;
+  }>;
 }
 
 export const StarCampaignerAllocator: React.FC<StarCampaignerAllocatorProps> = ({
   data,
   onOpenDossier,
+  allocations: externalAllocations,
+  onAllocationsChange,
+  cumulativeAcImpacts,
 }) => {
   // Party toggle: defaults to INC (Congress)
   const [selectedParty, setSelectedParty] = useState<'INC' | 'BRS' | 'BJP'>('INC');
@@ -530,7 +542,21 @@ export const StarCampaignerAllocator: React.FC<StarCampaignerAllocatorProps> = (
   const [expandedAcNo, setExpandedAcNo] = useState<number | null>(null);
 
   // Allocations store: { [campaignerId]: { [acNo]: daysCount } }
-  const [allocations, setAllocations] = useState<Record<string, Record<number, number>>>({});
+  const [internalAllocations, setInternalAllocations] = useState<Record<string, Record<number, number>>>({});
+
+  const allocations = externalAllocations !== undefined ? externalAllocations : internalAllocations;
+  const setAllocations = (updater: React.SetStateAction<Record<string, Record<number, number>>>) => {
+    if (onAllocationsChange) {
+      if (typeof updater === 'function') {
+        const next = updater(allocations);
+        onAllocationsChange(next);
+      } else {
+        onAllocationsChange(updater);
+      }
+    } else {
+      setInternalAllocations(updater);
+    }
+  };
 
   // Filter available campaigners for active party
   const partyCampaigners = useMemo(
@@ -1035,6 +1061,19 @@ export const StarCampaignerAllocator: React.FC<StarCampaignerAllocatorProps> = (
                     <span className="px-2.5 py-1 bg-rose-50 text-rose-700 border border-rose-200 rounded-lg text-xs font-bold">
                       Deficit: -{Math.abs(c.newMargin).toLocaleString()}
                     </span>
+                  )}
+
+                  {/* Cumulative Compounded Actions Badge */}
+                  {cumulativeAcImpacts && cumulativeAcImpacts[c.ac_no] && (cumulativeAcImpacts[c.ac_no].resourceSwing > 0 || cumulativeAcImpacts[c.ac_no].defectionShift !== 0) && (
+                    <div className="hidden sm:flex items-center gap-1.5 px-2 py-1 rounded-md bg-indigo-50 border border-indigo-200 text-[10px] font-bold text-indigo-950">
+                      <Sparkles className="w-3 h-3 text-indigo-600 shrink-0" />
+                      <span>Cumulative:</span>
+                      <span className={`font-mono font-black ${cumulativeAcImpacts[c.ac_no].cumulativeProjectedMargin > 0 ? 'text-emerald-700' : 'text-slate-800'}`}>
+                        {cumulativeAcImpacts[c.ac_no].cumulativeProjectedMargin > 0
+                          ? `+${cumulativeAcImpacts[c.ac_no].cumulativeProjectedMargin.toLocaleString()} (WIN)`
+                          : `${cumulativeAcImpacts[c.ac_no].cumulativeProjectedMargin.toLocaleString()}`}
+                      </span>
+                    </div>
                   )}
                 </div>
 

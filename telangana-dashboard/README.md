@@ -23,7 +23,7 @@ The app runs at `http://localhost:5173` by default.
 
 The sticky header at the top contains:
 
-- **Tab Switcher** — toggle between the three main views: Results & Map, Simulations (War Room), and Actions & Playbook.
+- **Tab Switcher** — toggle between the three main views: Results & Map, Simulations, and Actions & Playbook.
 - **Executive Dossier** — dark button that opens a global intelligence briefing across all constituencies (requires SEEEPC data).
 - **Help icon** (❓) — opens a quick-reference guide for all features.
 

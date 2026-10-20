@@ -19,6 +19,9 @@ import { ExecutiveBriefingModal } from './components/ExecutiveBriefingModal';
 import { MapPin } from 'lucide-react';
 import { HelpModal } from './components/HelpModal';
 import { HeaderBar } from './components/HeaderBar';
+import { ScenarioBridgeRibbon } from './components/ScenarioBridgeRibbon';
+import type { ActiveScenarioBridge } from './types';
+import type { WhatIfTab } from './components/AdvancedSimulationSuite';
 
 export const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>(() => {
@@ -63,6 +66,34 @@ export const App: React.FC = () => {
     }
     return 1;
   });
+
+  const [activeScenarioBridge, setActiveScenarioBridge] = useState<ActiveScenarioBridge | null>(null);
+  const [requestedWhatIfTab, setRequestedWhatIfTab] = useState<WhatIfTab | undefined>(undefined);
+
+  const handleBridgeChange = (newBridge: ActiveScenarioBridge) => {
+    setActiveScenarioBridge((prev) => ({
+      ...newBridge,
+      isExportedToActions: prev ? prev.isExportedToActions : false,
+    }));
+  };
+
+  const handleExportToActions = () => {
+    if (activeScenarioBridge) {
+      setActiveScenarioBridge((prev) => (prev ? { ...prev, isExportedToActions: true } : null));
+    }
+    setActiveTab('actions');
+  };
+
+  const handleNavigateToWhatIf = (category: WhatIfTab) => {
+    setRequestedWhatIfTab(category);
+    setActiveTab('simulations');
+  };
+
+  const handleUnlinkScenario = () => {
+    if (activeScenarioBridge) {
+      setActiveScenarioBridge((prev) => (prev ? { ...prev, isExportedToActions: false } : null));
+    }
+  };
 
   const handleNavigateToBoothData = (acNo: number, boothNo?: number, viewMode?: string) => {
     setSelectedAcNo(acNo);
@@ -237,6 +268,19 @@ export const App: React.FC = () => {
 
       <HelpModal isOpen={helpOpen} onClose={() => setHelpOpen(false)} />
 
+      {/* Persistent Sticky Scenario Carrier Bridge Ribbon (Active across Simulations & Actions) */}
+      {activeScenarioBridge &&
+        (activeTab === 'simulations' ||
+          (activeTab === 'actions' && activeScenarioBridge.isExportedToActions)) && (
+          <ScenarioBridgeRibbon
+            bridge={activeScenarioBridge}
+            activeTab={activeTab}
+            onExportToActions={handleExportToActions}
+            onNavigateToWhatIf={handleNavigateToWhatIf}
+            onUnlinkScenario={handleUnlinkScenario}
+          />
+        )}
+
       {/* Main Body */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 pt-5 space-y-5">
         {activeTab === 'results' && (
@@ -304,9 +348,12 @@ export const App: React.FC = () => {
             data={seeepcData}
             onNavigateToActions={(acNo) => {
               if (acNo) setSelectedAcNo(acNo);
-              setActiveTab('actions');
+              handleExportToActions();
             }}
             onSelectConstituencyDossier={(acNo) => handleOpenDossier(acNo)}
+            onBridgeChange={handleBridgeChange}
+            requestedWhatIfTab={requestedWhatIfTab}
+            onExportToActions={handleExportToActions}
           />
         )}
 
@@ -316,6 +363,9 @@ export const App: React.FC = () => {
             data={seeepcData}
             initialSelectedAc={selectedAcNo}
             onOpenDossier={(acNo) => handleOpenDossier(acNo)}
+            scenarioBridge={activeScenarioBridge}
+            onUnlinkScenario={handleUnlinkScenario}
+            onNavigateToWhatIf={handleNavigateToWhatIf}
           />
         )}
 

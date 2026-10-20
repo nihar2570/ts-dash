@@ -372,4 +372,29 @@ export interface CampaignActionItem {
   flipped_with_action: boolean;
 }
 
+export interface ScenarioWhatIfItem {
+  id: string;
+  label: string;
+  category: 'caste_blocs' | 'coalition' | 'turnout' | 'anti_incumbency' | 'target_60';
+  detail: string;
+}
+
+export interface ActiveScenarioBridge {
+  id: string;
+  name: string;
+  description: string;
+  isExportedToActions: boolean;
+  timestamp: number;
+  whatIfs: ScenarioWhatIfItem[];
+  simulatedResults: SimulatedConstituencyResult[];
+  tally: {
+    counts: Record<string, number>;
+    flippedCount: number;
+    tossUpCount: number;
+    incDiff: number;
+    brsDiff: number;
+    bjpDiff: number;
+  };
+}
+
 

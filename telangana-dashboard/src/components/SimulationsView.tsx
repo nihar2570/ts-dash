@@ -1,5 +1,10 @@
-import React, { useState, useMemo } from 'react';
-import type { SeeepcDataset, SimulatedConstituencyResult } from '../types';
+import React, { useState, useMemo, useEffect } from 'react';
+import type {
+  SeeepcDataset,
+  SimulatedConstituencyResult,
+  ActiveScenarioBridge,
+  ScenarioWhatIfItem,
+} from '../types';
 import { getPartyColor } from '../types';
 import {
   Sparkles,
@@ -11,25 +16,20 @@ import {
   Search,
   CheckCircle,
   TrendingUp,
-  Maximize2,
   Handshake,
+  ArrowRight,
 } from 'lucide-react';
 import { SwingStudioModal } from './SwingStudioModal';
 import type { MacroSwing, PartySwing } from './SwingStudioModal';
 import { AdvancedSimulationSuite, URBAN_AC_NOS } from './AdvancedSimulationSuite';
-import type { TurnoutSettings } from './AdvancedSimulationSuite';
+import type { TurnoutSettings, WhatIfTab } from './AdvancedSimulationSuite';
 import {
-  DEFAULT_WELFARE_SETTINGS,
+  DEFAULT_COALITION_SETTINGS,
   DEFAULT_MLA_FATIGUE_SETTINGS,
-  DEFAULT_CANNIBALIZATION_SETTINGS,
-  NORTH_TS_DISTRICTS,
-  SOUTH_TS_DISTRICTS,
-  GHMC_URBAN_DISTRICTS,
 } from './StrategicSimulationModels';
 import type {
-  WelfareSettings,
+  CoalitionSettings,
   MlaFatigueSettings,
-  CannibalizationSettings,
 } from './StrategicSimulationModels';
 
 // 44 Constituencies Contested by BJP in BJP+TRS Coalition (Urban GHMC, Ranga Reddy, North TS core, Kamareddy)
@@ -76,29 +76,34 @@ interface SimulationsViewProps {
   data: SeeepcDataset;
   onNavigateToActions: (acNo?: number) => void;
   onSelectConstituencyDossier?: (acNo: number) => void;
+  onBridgeChange?: (bridge: ActiveScenarioBridge) => void;
+  requestedWhatIfTab?: WhatIfTab;
+  onExportToActions?: () => void;
 }
 
 export const SimulationsView: React.FC<SimulationsViewProps> = ({
   data,
   onNavigateToActions,
   onSelectConstituencyDossier,
+  onBridgeChange,
+  requestedWhatIfTab,
+  onExportToActions,
 }) => {
-  // Demographic swing offsets relative to 2023 baseline
-  // Key: community id, Value: swing to party (% shift, positive = INC gain, negative = BRS/BJP gain)
+  // Demographic swing offsets relative to 2023 baseline (defaults to 2028 BRS-BJP Coalition)
   const [swings, setSwings] = useState<Record<string, PartySwing>>({
-    sc_madiga: { INC: 0, BRS: 0, BJP: 0 },
-    sc_mala: { INC: 0, BRS: 0, BJP: 0 },
+    sc_madiga: { INC: -6, BRS: 4, BJP: 2 },
+    sc_mala: { INC: 6, BRS: -4, BJP: -2 },
     st_lambada: { INC: 0, BRS: 0, BJP: 0 },
     st_koya_gond: { INC: 0, BRS: 0, BJP: 0 },
-    bc_mudiraj: { INC: 0, BRS: 0, BJP: 0 },
-    bc_munnuru_kapu: { INC: 0, BRS: 0, BJP: 0 },
-    bc_padmashali: { INC: 0, BRS: 0, BJP: 0 },
+    bc_mudiraj: { INC: -8, BRS: 5, BJP: 3 },
+    bc_munnuru_kapu: { INC: -7, BRS: 4, BJP: 3 },
+    bc_padmashali: { INC: -5, BRS: 3, BJP: 2 },
     bc_goud: { INC: 0, BRS: 0, BJP: 0 },
     bc_yadav: { INC: 0, BRS: 0, BJP: 0 },
     bc_other: { INC: 0, BRS: 0, BJP: 0 },
-    minority_muslim: { INC: 0, BRS: 0, BJP: 0 },
-    oc_reddy: { INC: 0, BRS: 0, BJP: 0 },
-    oc_velama: { INC: 0, BRS: 0, BJP: 0 },
+    minority_muslim: { INC: 10, BRS: -10, BJP: 0 },
+    oc_reddy: { INC: 4, BRS: -2, BJP: -2 },
+    oc_velama: { INC: -8, BRS: 6, BJP: 2 },
     oc_other: { INC: 0, BRS: 0, BJP: 0 },
     youth_18_25: { INC: 0, BRS: 0, BJP: 0 },
     age_26_40: { INC: 0, BRS: 0, BJP: 0 },
@@ -106,17 +111,16 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     age_60_plus: { INC: 0, BRS: 0, BJP: 0 },
   });
 
-  const [macroSwing, setMacroSwing] = useState<MacroSwing>({ INC: 0, BRS: 0, BJP: 0 });
+  const [macroSwing, setMacroSwing] = useState<MacroSwing>({ INC: -3.0, BRS: 1.5, BJP: 1.5 });
   const [turnoutSettings, setTurnoutSettings] = useState<TurnoutSettings>({
-    urbanShift: 0,
+    urbanShift: 2,
     ruralShift: 0,
     femaleShift: 0,
   });
-  const [welfareSettings, setWelfareSettings] = useState<WelfareSettings>(DEFAULT_WELFARE_SETTINGS);
+  const [coalitionSettings, setCoalitionSettings] = useState<CoalitionSettings>(DEFAULT_COALITION_SETTINGS);
   const [mlaFatigueSettings, setMlaFatigueSettings] = useState<MlaFatigueSettings>(DEFAULT_MLA_FATIGUE_SETTINGS);
-  const [cannibalizationSettings, setCannibalizationSettings] = useState<CannibalizationSettings>(DEFAULT_CANNIBALIZATION_SETTINGS);
   const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
-  const [activePreset, setActivePreset] = useState<string>('baseline');
+  const [activePreset, setActivePreset] = useState<string>('bjp_trs_alliance');
   const [selectedBubbleAc, setSelectedBubbleAc] = useState<number | null>(null);
   const [tierFilter, setTierFilter] = useState<'ALL' | 'TOSS_UP' | 'FLIPS'>('TOSS_UP');
   const [tossUpThreshold, setTossUpThreshold] = useState<number>(5000);
@@ -264,9 +268,8 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     } else if (presetKey === 'baseline') {
       setMacroSwing({ INC: 0, BRS: 0, BJP: 0 });
       setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
-      setWelfareSettings(DEFAULT_WELFARE_SETTINGS);
+      setCoalitionSettings(DEFAULT_COALITION_SETTINGS);
       setMlaFatigueSettings(DEFAULT_MLA_FATIGUE_SETTINGS);
-      setCannibalizationSettings(DEFAULT_CANNIBALIZATION_SETTINGS);
     }
 
     setSwings(reset);
@@ -384,20 +387,24 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         brsVotes = 0; // Merged under Lotus symbol
       }
 
-      // Feature #5B: BJP + TRS Pre-Poll Coalition Seat-Sharing & Transfer Matrix Realignment
+      // Feature #5B: BJP + TRS Pre-Poll Coalition Seat-Sharing & Dynamic Transfer Matrix Realignment
       if (activePreset === 'bjp_trs_alliance') {
         const isBjpContested = BJP_ALLIANCE_SEATS.has(ac.ac_no);
         if (isBjpContested) {
-          // BJP is candidate. BRS transfers: 75% to BJP, 15% rebel to INC, 10% sit out
+          // BJP is candidate. BRS transfers: dynamic transfer %, rebel leakage to INC
           const brsPool = Math.max(0, brsVotes);
-          bjpVotes += brsPool * 0.75;
-          incVotes += brsPool * 0.15;
+          const transferRatio = coalitionSettings.brsToBjpTransferPct / 100;
+          const leakRatio = coalitionSettings.rebelLeakagePct / 100;
+          bjpVotes += brsPool * transferRatio;
+          incVotes += brsPool * leakRatio;
           brsVotes = 0; // BRS candidate stands down
         } else {
-          // BRS is candidate. BJP transfers: 65% to BRS, 25% anti-KCR rebel to INC, 10% sit out
+          // BRS is candidate. BJP transfers: dynamic transfer %, rebel leakage to INC
           const bjpPool = Math.max(0, bjpVotes);
-          brsVotes += bjpPool * 0.65;
-          incVotes += bjpPool * 0.25;
+          const transferRatio = coalitionSettings.bjpToBrsTransferPct / 100;
+          const leakRatio = coalitionSettings.rebelLeakagePct / 100;
+          brsVotes += bjpPool * transferRatio;
+          incVotes += bjpPool * leakRatio;
           bjpVotes = 0; // BJP candidate stands down
         }
       }
@@ -409,54 +416,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         incVotes = Math.max(0, incVotes - (totalVotes * 0.005));
       }
 
-      // --------------------------------------------------------------------
-      // FEATURE 2: Welfare Guarantee Delivery Index ("The Labharthi Meter")
-      // --------------------------------------------------------------------
-      // Mahalakshmi: Free RTC bus & ₹2,500 cash transfer (execution baseline 75%)
-      const mahaDiff = (welfareSettings.mahalakshmiPct - 75) / 100;
-      if (mahaDiff !== 0) {
-        const mahaShift = totalVotes * (mahaDiff * 0.038); // +/- up to 3.8% shift
-        incVotes += mahaShift;
-        brsVotes -= mahaShift * 0.65;
-        bjpVotes -= mahaShift * 0.35;
-      }
 
-      // Rythu Bharosa: Agrarian cash assistance ₹15,000/acre (execution baseline 70%)
-      const rythuDiff = (welfareSettings.rythuBharosaPct - 70) / 100;
-      if (rythuDiff !== 0) {
-        const rythuShift = totalVotes * (rythuDiff * (isUrban ? 0.008 : 0.042));
-        incVotes += rythuShift;
-        brsVotes -= rythuShift * 0.70;
-        bjpVotes -= rythuShift * 0.30;
-      }
-
-      // Farm Loan Waiver: Up to ₹2 Lakh agrarian debt clearance (execution baseline 65%)
-      const loanDiff = (welfareSettings.loanWaiverPct - 65) / 100;
-      if (loanDiff !== 0) {
-        const isFarmerBelt = SOUTH_TS_DISTRICTS.has(ac.district) || NORTH_TS_DISTRICTS.has(ac.district);
-        const loanShift = totalVotes * (loanDiff * (isFarmerBelt ? 0.045 : 0.015));
-        incVotes += loanShift;
-        brsVotes -= loanShift * 0.60;
-        bjpVotes -= loanShift * 0.40;
-      }
-
-      // Gruha Jyothi: 200 units free power zero-bill (execution baseline 85%)
-      const gruhaDiff = (welfareSettings.gruhaJyothiPct - 85) / 100;
-      if (gruhaDiff !== 0) {
-        const gruhaShift = totalVotes * (gruhaDiff * 0.025);
-        incVotes += gruhaShift;
-        brsVotes -= gruhaShift * 0.50;
-        bjpVotes -= gruhaShift * 0.50;
-      }
-
-      // Indiramma Indlu: Housing scheme for rural/peri-urban homeless (execution baseline 40%)
-      const indirammaDiff = (welfareSettings.indirammaIndluPct - 40) / 100;
-      if (indirammaDiff !== 0) {
-        const indirammaShift = totalVotes * (indirammaDiff * 0.030);
-        incVotes += indirammaShift;
-        brsVotes -= indirammaShift * 0.60;
-        bjpVotes -= indirammaShift * 0.40;
-      }
 
       // --------------------------------------------------------------------
       // FEATURE 3: Candidate Fatigue & Incumbent MLA Replacement Simulator
@@ -506,42 +466,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         }
       }
 
-      // --------------------------------------------------------------------
-      // FEATURE 4: Tri-Cornered Vote Cannibalization / Defection Flow Modeler
-      // --------------------------------------------------------------------
-      if (cannibalizationSettings.bleedPct > 0) {
-        let appliesRegion = true;
-        if (cannibalizationSettings.regionBias === 'NORTH_TS') {
-          appliesRegion = NORTH_TS_DISTRICTS.has(ac.district);
-        } else if (cannibalizationSettings.regionBias === 'SOUTH_TS') {
-          appliesRegion = SOUTH_TS_DISTRICTS.has(ac.district);
-        } else if (cannibalizationSettings.regionBias === 'GHMC_URBAN') {
-          appliesRegion = GHMC_URBAN_DISTRICTS.has(ac.district) || URBAN_AC_NOS.has(ac.ac_no);
-        }
 
-        if (appliesRegion) {
-          const bleedVotes = totalVotes * (cannibalizationSettings.bleedPct / 100);
-          const ratio = cannibalizationSettings.destinationRatio;
-          const totalRatio = (ratio.toBjp || 0) + (ratio.toInc || 0) + (ratio.toBrs || 0) || 100;
-
-          if (cannibalizationSettings.sourceParty === 'BRS') {
-            const actualBleed = Math.min(brsVotes * 0.8, bleedVotes);
-            brsVotes -= actualBleed;
-            bjpVotes += actualBleed * ((ratio.toBjp || 0) / totalRatio);
-            incVotes += actualBleed * ((ratio.toInc || 0) / totalRatio);
-          } else if (cannibalizationSettings.sourceParty === 'INC') {
-            const actualBleed = Math.min(incVotes * 0.8, bleedVotes);
-            incVotes -= actualBleed;
-            bjpVotes += actualBleed * ((ratio.toBjp || 0) / totalRatio);
-            brsVotes += actualBleed * ((ratio.toBrs || 0) / totalRatio);
-          } else if (cannibalizationSettings.sourceParty === 'BJP') {
-            const actualBleed = Math.min(bjpVotes * 0.8, bleedVotes);
-            bjpVotes -= actualBleed;
-            brsVotes += actualBleed * ((ratio.toBrs || 0) / totalRatio);
-            incVotes += actualBleed * ((ratio.toInc || 0) / totalRatio);
-          }
-        }
-      }
 
       // Ensure positive votes
       incVotes = Math.max(100, Math.round(incVotes));
@@ -619,9 +544,8 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     swings,
     macroSwing,
     turnoutSettings,
-    welfareSettings,
+    coalitionSettings,
     mlaFatigueSettings,
-    cannibalizationSettings,
     tossUpThreshold,
     activePreset,
   ]);
@@ -647,6 +571,127 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       bjpDiff: counts.BJP - 8,
     };
   }, [simulatedResults]);
+
+  // Generate what-if items summary for the active scenario
+  const whatIfs = useMemo<ScenarioWhatIfItem[]>(() => {
+    const list: ScenarioWhatIfItem[] = [];
+
+    // 1. Coalition & Friction
+    if (activePreset === 'bjp_trs_alliance') {
+      list.push({
+        id: 'coalition_pact',
+        label: `🤝 74:45 Pact (${coalitionSettings.brsToBjpTransferPct}% BRS→BJP / ${coalitionSettings.bjpToBrsTransferPct}% BJP→BRS)`,
+        category: 'coalition',
+        detail: `Anti-KCR Rebel Leakage: ${coalitionSettings.rebelLeakagePct}% to INC`,
+      });
+    } else if (activePreset === 'bjp_trs_merger') {
+      list.push({
+        id: 'merger_pact',
+        label: '🪷 Full Merger (KTR CM / Harish Union Cabinet)',
+        category: 'coalition',
+        detail: '100% unified vote under Lotus symbol',
+      });
+    } else if (activePreset === 'triangular_2028_anti_inc') {
+      list.push({
+        id: 'triangular_contest',
+        label: '⚔️ 2028 Triangular Contest',
+        category: 'anti_incumbency',
+        detail: '3-way contest with 5-yr anti-incumbency against INC',
+      });
+    }
+
+    // 2. Caste Blocs
+    const modifiedCastes: string[] = [];
+    if (swings.bc_mudiraj?.BRS) modifiedCastes.push(`Mudiraj ${swings.bc_mudiraj.BRS >= 0 ? '+' : ''}${swings.bc_mudiraj.BRS}%`);
+    if (swings.sc_madiga?.BJP) modifiedCastes.push(`Madiga MRPS ${swings.sc_madiga.BJP >= 0 ? '+' : ''}${swings.sc_madiga.BJP}%`);
+    if (swings.bc_munnuru_kapu?.BRS) modifiedCastes.push(`Munnuru Kapu ${swings.bc_munnuru_kapu.BRS >= 0 ? '+' : ''}${swings.bc_munnuru_kapu.BRS}%`);
+    if (swings.youth_18_25?.BRS) modifiedCastes.push(`Youth ${swings.youth_18_25.BRS >= 0 ? '+' : ''}${swings.youth_18_25.BRS}%`);
+    if (swings.minority_muslim?.INC) modifiedCastes.push(`Muslims ${swings.minority_muslim.INC >= 0 ? '+' : ''}${swings.minority_muslim.INC}%`);
+
+    if (modifiedCastes.length > 0) {
+      list.push({
+        id: 'caste_swings',
+        label: `👥 Castes: ${modifiedCastes.slice(0, 2).join(', ')}${modifiedCastes.length > 2 ? ` +${modifiedCastes.length - 2}` : ''}`,
+        category: 'caste_blocs',
+        detail: modifiedCastes.join(' | '),
+      });
+    } else if (activeCustomizedCount > 0) {
+      list.push({
+        id: 'caste_custom',
+        label: `👥 ${activeCustomizedCount} Demographic Cohorts Tuned`,
+        category: 'caste_blocs',
+        detail: 'Fine-tuned in SEEEPC Demographic Studio',
+      });
+    }
+
+    // 3. Turnout
+    if (turnoutSettings.urbanShift !== 0 || turnoutSettings.ruralShift !== 0 || turnoutSettings.femaleShift !== 0) {
+      const parts: string[] = [];
+      if (turnoutSettings.urbanShift !== 0) parts.push(`Urban ${turnoutSettings.urbanShift >= 0 ? '+' : ''}${turnoutSettings.urbanShift}%`);
+      if (turnoutSettings.ruralShift !== 0) parts.push(`Rural ${turnoutSettings.ruralShift >= 0 ? '+' : ''}${turnoutSettings.ruralShift}%`);
+      if (turnoutSettings.femaleShift !== 0) parts.push(`Women ${turnoutSettings.femaleShift >= 0 ? '+' : ''}${turnoutSettings.femaleShift}%`);
+      list.push({
+        id: 'turnout_modifier',
+        label: `🗳️ Turnout: ${parts.join(', ')}`,
+        category: 'turnout',
+        detail: parts.join(' | '),
+      });
+    }
+
+    // 4. Macro & Anti-Incumbency
+    if (macroSwing.INC !== 0 || macroSwing.BRS !== 0 || macroSwing.BJP !== 0) {
+      list.push({
+        id: 'macro_swing',
+        label: `📉 Macro: INC ${macroSwing.INC >= 0 ? '+' : ''}${macroSwing.INC}% | BRS ${macroSwing.BRS >= 0 ? '+' : ''}${macroSwing.BRS}% | BJP ${macroSwing.BJP >= 0 ? '+' : ''}${macroSwing.BJP}%`,
+        category: 'anti_incumbency',
+        detail: 'Uniform statewide political shift',
+      });
+    }
+
+    // 5. Candidate Surgery
+    if (mlaFatigueSettings.replaceIncumbentPct > 0) {
+      list.push({
+        id: 'mla_surgery',
+        label: `✂️ MLA Surgery: ${mlaFatigueSettings.replaceIncumbentPct}% denied tickets`,
+        category: 'anti_incumbency',
+        detail: `Fresh face boost: +${mlaFatigueSettings.freshFaceBoost}%`,
+      });
+    }
+
+    return list;
+  }, [
+    activePreset,
+    coalitionSettings,
+    swings,
+    activeCustomizedCount,
+    turnoutSettings,
+    macroSwing,
+    mlaFatigueSettings,
+  ]);
+
+  // Synchronize with parent app bridge
+  useEffect(() => {
+    if (!onBridgeChange) return;
+
+    let scenarioName = '2028 BRS-BJP Coalition (74:45 Pact)';
+    if (activePreset === 'bjp_trs_merger') scenarioName = '🪷 2028 TRS-BJP Merger';
+    else if (activePreset === 'triangular_2028_anti_inc') scenarioName = '⚔️ 2028 Triangular Contest';
+    else if (activePreset === 'trs_2018_landslide') scenarioName = '🌸 2018 TRS Wave Benchmark';
+    else if (activePreset === 'trs_2014_mandate') scenarioName = '🏛️ 2014 Mandate Benchmark';
+    else if (activePreset === 'baseline') scenarioName = '📊 2023 Actual Baseline';
+    else if (activePreset === 'custom') scenarioName = '⚙️ Custom War Room Scenario';
+
+    onBridgeChange({
+      id: activePreset,
+      name: scenarioName,
+      description: 'Simulated 119-AC election projection with active what-ifs',
+      isExportedToActions: false,
+      timestamp: Date.now(),
+      whatIfs,
+      simulatedResults,
+      tally,
+    });
+  }, [activePreset, whatIfs, simulatedResults, tally, onBridgeChange]);
 
   // Filtered list for directory and bubble selection
   const filteredList = useMemo(() => {
@@ -695,92 +740,107 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             </h2>
           </div>
 
-          {/* Quick Scenario Presets */}
-          <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="text-xs text-slate-500 font-bold mr-1">Scenarios:</span>
-            <button
-              onClick={() => applyPreset('baseline')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer ${
-                activePreset === 'baseline'
-                  ? 'bg-indigo-600 text-white shadow-xs'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-            >
-              2023 Baseline
-            </button>
-            <button
-              onClick={() => applyPreset('trs_2018_landslide')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
-                activePreset === 'trs_2018_landslide'
-                  ? 'bg-pink-600 text-white shadow-xs font-black'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-              title="2018/19 TRS Landslide: 88 seats, 46.9% vote share, Rythu Bandhu wave & Prajakootami backfire"
-            >
-              <span>🌸 2018/19 TRS Landslide (88 Seats)</span>
-            </button>
-            <button
-              onClick={() => applyPreset('trs_2014_mandate')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
-                activePreset === 'trs_2014_mandate'
-                  ? 'bg-rose-600 text-white shadow-xs font-black'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-              title="2014 Inaugural Mandate: TRS 63 seats, 34% vote share, Statehood movement surge"
-            >
-              <span>🏛️ 2014 Mandate (63 Seats)</span>
-            </button>
-            <button
-              onClick={() => applyPreset('bjp_trs_alliance')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
-                activePreset === 'bjp_trs_alliance'
-                  ? 'bg-purple-600 text-white shadow-xs font-black'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-              title="Pre-poll coalition: 74 BRS : 45 BJP seat sharing, 65/25 transfer friction, anti-KCR rebel leakage & Muslim/BC split"
-            >
-              <span>🤝 BJP+TRS Coalition (74:45 Pact)</span>
-            </button>
-            <button
-              onClick={() => applyPreset('bjp_trs_merger')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
-                activePreset === 'bjp_trs_merger'
-                  ? 'bg-amber-600 text-white shadow-xs font-black'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-              title="Full merger of TRS into BJP under Lotus symbol: KTR as Chief Minister face, Harish Rao in Union Cabinet"
-            >
-              <span>🪷 TRS-BJP Merger (KTR CM / Harish Union Cabinet)</span>
-            </button>
-            <button
-              onClick={() => applyPreset('triangular_2028_anti_inc')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
-                activePreset === 'triangular_2028_anti_inc'
-                  ? 'bg-rose-600 text-white shadow-xs font-black'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-              title="2028 Triangular Contest: All 3 parties go alone, ruling Congress faces 5-year anti-incumbency (-7%)"
-            >
-              <span>⚔️ 2028 Triangular (Anti-Inc vs INC)</span>
-            </button>
-            <button
-              onClick={() => applyPreset('kavitha_spoiler_front')}
-              className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
-                activePreset === 'kavitha_spoiler_front'
-                  ? 'bg-teal-600 text-white shadow-xs font-black'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-              title="Kavitha's Telangana Jagruthi splinter peels 4.2% BRS votes in 14 North TS constituencies, acting as a targeted vote-cutter"
-            >
-              <span>🎭 Kavitha Jagruthi (North TS Spoiler)</span>
-            </button>
-            <button
-              onClick={() => applyPreset('baseline')}
-              title="Reset all swings to 0"
-              className="p-1.5 bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 border border-slate-200 rounded-lg transition-colors cursor-pointer"
-            >
-              <RotateCcw className="w-3.5 h-3.5" />
-            </button>
+          {/* Quick Scenario Presets (Structured into 2028 Forecasts & Past Benchmarks) */}
+          <div className="flex flex-col gap-2 sm:items-end">
+            {/* Row 1: 2028 Future Forecasts */}
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-xs text-indigo-950 font-black mr-1 flex items-center gap-1">
+                <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
+                <span>2028 Forecasts:</span>
+              </span>
+              <button
+                onClick={() => applyPreset('bjp_trs_alliance')}
+                className={`px-3 py-1.5 text-xs rounded-xl font-black transition-all cursor-pointer flex items-center gap-1.5 shadow-xs ${
+                  activePreset === 'bjp_trs_alliance'
+                    ? 'bg-gradient-to-r from-purple-700 to-indigo-700 text-white shadow-md ring-2 ring-purple-400/40'
+                    : 'bg-purple-50 text-purple-800 hover:bg-purple-100 border border-purple-200'
+                }`}
+                title="2028 BRS-BJP Pre-Poll Coalition: 74 BRS : 45 BJP seat formula, dynamic transfer matrix & secular/caste split"
+              >
+                <Handshake className="w-3.5 h-3.5 text-purple-300" />
+                <span>🤝 2028 BRS-BJP Coalition (74:45 Pact)</span>
+              </button>
+              <button
+                onClick={() => applyPreset('bjp_trs_merger')}
+                className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                  activePreset === 'bjp_trs_merger'
+                    ? 'bg-amber-600 text-white shadow-xs font-black'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
+                }`}
+                title="Full merger of TRS into BJP under Lotus symbol: KTR as Chief Minister face, Harish Rao in Union Cabinet"
+              >
+                <span>🪷 Full Merger</span>
+              </button>
+              <button
+                onClick={() => applyPreset('triangular_2028_anti_inc')}
+                className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                  activePreset === 'triangular_2028_anti_inc'
+                    ? 'bg-rose-600 text-white shadow-xs font-black'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200 border border-slate-200'
+                }`}
+                title="2028 Triangular Contest: All 3 parties go alone, ruling Congress faces 5-year anti-incumbency (-7%)"
+              >
+                <span>⚔️ 2028 Triangular</span>
+              </button>
+
+              {onExportToActions && (
+                <button
+                  onClick={onExportToActions}
+                  className="px-3 py-1 text-xs rounded-lg font-black bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-xs transition-all cursor-pointer flex items-center gap-1 ml-1"
+                  title="Export this simulation scenario to Actions & Playbook"
+                >
+                  <span>Export to Actions</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+
+            {/* Row 2: Past Historical Benchmarks */}
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="text-[11px] text-slate-400 font-bold uppercase tracking-wider mr-1">
+                Past Scenarios:
+              </span>
+              <button
+                onClick={() => applyPreset('baseline')}
+                className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                  activePreset === 'baseline'
+                    ? 'bg-indigo-600 text-white shadow-xs font-bold'
+                    : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 border border-slate-200'
+                }`}
+                title="2023 Actual Election Baseline (INC 64, BRS 39, BJP 8, AIMIM 7, CPI 1)"
+              >
+                <span>📊 2023 Baseline</span>
+              </button>
+              <button
+                onClick={() => applyPreset('trs_2018_landslide')}
+                className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                  activePreset === 'trs_2018_landslide'
+                    ? 'bg-pink-600 text-white shadow-xs font-black'
+                    : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 border border-slate-200'
+                }`}
+                title="2018/19 TRS Landslide: 88 seats, 46.9% vote share, Rythu Bandhu wave & Prajakootami backfire"
+              >
+                <span>🌸 2018 Wave (88)</span>
+              </button>
+              <button
+                onClick={() => applyPreset('trs_2014_mandate')}
+                className={`px-2.5 py-1 text-xs rounded-lg font-semibold transition-all cursor-pointer flex items-center gap-1 ${
+                  activePreset === 'trs_2014_mandate'
+                    ? 'bg-rose-600 text-white shadow-xs font-black'
+                    : 'bg-slate-100 text-slate-600 hover:text-slate-900 hover:bg-slate-200 border border-slate-200'
+                }`}
+                title="2014 Inaugural Mandate: TRS 63 seats, 34% vote share, Statehood movement surge"
+              >
+                <span>🏛️ 2014 Mandate (63)</span>
+              </button>
+              <button
+                onClick={() => applyPreset('baseline')}
+                title="Reset all swings to 2023 baseline"
+                className="p-1.5 bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 border border-slate-200 rounded-lg transition-colors cursor-pointer ml-0.5"
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -1155,272 +1215,66 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         )}
       </div>
 
-      {/* Milestone 1: Advanced Simulation Suite (#2 Monte Carlo, #3 Turnout, #5 Alliances, #9 Target 60, #14 Diff Mode) */}
+      {/* Step 2: Chief Advisor "What-If" War Room Modifiers */}
       <AdvancedSimulationSuite
         data={data}
         simulatedResults={simulatedResults}
+        activePreset={activePreset}
+        onApplyPreset={applyPreset}
         swings={swings}
         setSwings={setSwings}
         macroSwing={macroSwing}
         setMacroSwing={setMacroSwing}
         turnoutSettings={turnoutSettings}
         setTurnoutSettings={setTurnoutSettings}
-        welfareSettings={welfareSettings}
-        setWelfareSettings={setWelfareSettings}
+        coalitionSettings={coalitionSettings}
+        setCoalitionSettings={setCoalitionSettings}
         mlaFatigueSettings={mlaFatigueSettings}
         setMlaFatigueSettings={setMlaFatigueSettings}
-        cannibalizationSettings={cannibalizationSettings}
-        setCannibalizationSettings={setCannibalizationSettings}
-        onApplyPreset={applyPreset}
         onNavigateToActions={onNavigateToActions}
+        onOpenDemographicStudio={() => setIsStudioOpen(true)}
+        activeCustomizedCount={activeCustomizedCount}
+        requestedTab={requestedWhatIfTab}
       />
 
-      {/* Main Grid: Left Controls (Sliders), Right Bubble Chart */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-        {/* Left Column: Polling & Demographics Sliders (4 cols) */}
-        <div className="lg:col-span-4 bg-white rounded-2xl p-5 shadow-sm border border-slate-200 space-y-4">
-          {/* Section Header */}
-          <div className="flex items-center justify-between border-b border-slate-200 pb-3">
-            <div className="flex items-center gap-2">
-              <span className="p-1.5 bg-indigo-50 text-indigo-600 rounded-lg border border-indigo-100">
-                <Sliders className="w-4 h-4" />
-              </span>
-              <div>
-                <h3 className="text-sm font-bold text-slate-900">Demographic &amp; Macro Swings</h3>
-                <p className="text-[11px] text-slate-500">Fine-tune statewide &amp; community shifts</p>
-              </div>
-            </div>
-            {activeCustomizedCount > 0 && (
-              <span className="text-[10px] font-mono font-bold bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded-full">
-                {activeCustomizedCount} Active
-              </span>
-            )}
-          </div>
-
-          {/* Statewide Macro Swing Quick Controls */}
-          <div className="bg-slate-50/80 rounded-xl p-3.5 border border-slate-200 space-y-3">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-1.5">
-                <TrendingUp className="w-3.5 h-3.5 text-indigo-600" />
-                <span className="text-xs font-bold text-slate-800">Statewide Macro Swing</span>
-              </div>
-              {(macroSwing.INC !== 0 || macroSwing.BRS !== 0 || macroSwing.BJP !== 0) && (
-                <button
-                  onClick={() => setMacroSwing({ INC: 0, BRS: 0, BJP: 0 })}
-                  className="text-[11px] text-slate-500 hover:text-slate-800 flex items-center gap-1 cursor-pointer font-semibold"
-                >
-                  <RotateCcw className="w-3 h-3" />
-                  <span>Reset</span>
-                </button>
-              )}
-            </div>
-
-            {/* Visual Pattern C Stacked Bar for Statewide projected shares */}
-            {(() => {
-              const incS = Math.max(0, Math.min(100, Math.round((39.4 + macroSwing.INC) * 10) / 10));
-              const brsS = Math.max(0, Math.min(100, Math.round((37.4 + macroSwing.BRS) * 10) / 10));
-              const bjpS = Math.max(0, Math.min(100, Math.round((13.9 + macroSwing.BJP) * 10) / 10));
-              const othS = 9.3;
-
-              return (
-                <div className="space-y-2">
-                  <div className="w-full h-6 rounded-lg overflow-hidden flex bg-slate-900 p-0.5 border border-slate-300 shadow-2xs">
-                    <div
-                      style={{ width: `${incS}%` }}
-                      className="bg-[#0284c7] h-full flex items-center justify-center text-[10px] font-black text-white px-1 overflow-hidden"
-                      title={`INC: ${incS}%`}
-                    >
-                      <span className="truncate">{incS}%</span>
-                    </div>
-                    <div
-                      style={{ width: `${brsS}%` }}
-                      className="bg-[#ec4899] h-full flex items-center justify-center text-[10px] font-black text-white px-1 overflow-hidden"
-                      title={`BRS: ${brsS}%`}
-                    >
-                      <span className="truncate">{brsS}%</span>
-                    </div>
-                    <div
-                      style={{ width: `${bjpS}%` }}
-                      className="bg-[#f97316] h-full flex items-center justify-center text-[10px] font-black text-white px-1 overflow-hidden"
-                      title={`BJP: ${bjpS}%`}
-                    >
-                      <span className="truncate">{bjpS}%</span>
-                    </div>
-                    <div
-                      style={{ width: `${othS}%` }}
-                      className="bg-slate-600 h-full flex items-center justify-center text-[9px] font-bold text-slate-200 px-1 overflow-hidden"
-                      title={`OTH: ${othS}%`}
-                    >
-                      <span className="truncate">OTH</span>
-                    </div>
-                  </div>
-
-                  {/* Micro Steppers for Macro */}
-                  <div className="grid grid-cols-3 gap-2">
-                    {/* INC */}
-                    <div className="bg-white p-2 rounded-xl border border-sky-100 flex items-center justify-between shadow-2xs">
-                      <div>
-                        <div className="text-[11px] font-bold text-sky-700">INC</div>
-                        <div className="text-xs font-mono font-black text-slate-900">
-                          {macroSwing.INC >= 0 ? `+${macroSwing.INC}%` : `${macroSwing.INC}%`}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-0.5">
-                        <button
-                          onClick={() => setMacroSwing(prev => ({ ...prev, INC: Math.min(15, prev.INC + 1) }))}
-                          className="w-5 h-4 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
-                        >
-                          +
-                        </button>
-                        <button
-                          onClick={() => setMacroSwing(prev => ({ ...prev, INC: Math.max(-15, prev.INC - 1) }))}
-                          className="w-5 h-4 bg-slate-100 hover:bg-sky-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
-                        >
-                          -
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* BRS */}
-                    <div className="bg-white p-2 rounded-xl border border-pink-100 flex items-center justify-between shadow-2xs">
-                      <div>
-                        <div className="text-[11px] font-bold text-pink-700">BRS</div>
-                        <div className="text-xs font-mono font-black text-slate-900">
-                          {macroSwing.BRS >= 0 ? `+${macroSwing.BRS}%` : `${macroSwing.BRS}%`}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-0.5">
-                        <button
-                          onClick={() => setMacroSwing(prev => ({ ...prev, BRS: Math.min(15, prev.BRS + 1) }))}
-                          className="w-5 h-4 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
-                        >
-                          +
-                        </button>
-                        <button
-                          onClick={() => setMacroSwing(prev => ({ ...prev, BRS: Math.max(-15, prev.BRS - 1) }))}
-                          className="w-5 h-4 bg-slate-100 hover:bg-pink-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
-                        >
-                          -
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* BJP */}
-                    <div className="bg-white p-2 rounded-xl border border-amber-100 flex items-center justify-between shadow-2xs">
-                      <div>
-                        <div className="text-[11px] font-bold text-amber-700">BJP</div>
-                        <div className="text-xs font-mono font-black text-slate-900">
-                          {macroSwing.BJP >= 0 ? `+${macroSwing.BJP}%` : `${macroSwing.BJP}%`}
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-0.5">
-                        <button
-                          onClick={() => setMacroSwing(prev => ({ ...prev, BJP: Math.min(15, prev.BJP + 1) }))}
-                          className="w-5 h-4 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
-                        >
-                          +
-                        </button>
-                        <button
-                          onClick={() => setMacroSwing(prev => ({ ...prev, BJP: Math.max(-15, prev.BJP - 1) }))}
-                          className="w-5 h-4 bg-slate-100 hover:bg-amber-100 text-slate-700 rounded text-[10px] font-bold flex items-center justify-center cursor-pointer"
-                        >
-                          -
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              );
-            })()}
-          </div>
-
-          {/* Unified Demographic Studio Launcher Card */}
-          <div className="bg-slate-50/80 rounded-xl p-3.5 border border-slate-200 space-y-3">
-            <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-800">18 Demographic Castes &amp; Cohorts</span>
-              <span className="text-[10px] font-mono bg-white px-2 py-0.5 rounded border border-slate-200 text-slate-600 font-semibold">
-                SEEEPC Vol-4
-              </span>
-            </div>
-
-            {activeCustomizedCount === 0 ? (
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Tune all 18 caste and age cohorts (Mudiraj, Madiga, Mala, Munnuru Kapu, Youth, etc.) with 100% simplex mathematical balancers.
-              </p>
-            ) : (
-              <div className="space-y-2">
-                <div className="flex items-center justify-between text-xs font-semibold text-indigo-700">
-                  <span>{activeCustomizedCount} custom community shifts active</span>
-                  <button
-                    onClick={() => {
-                      const reset: Record<string, PartySwing> = {};
-                      Object.keys(swings).forEach(k => { reset[k] = { INC: 0, BRS: 0, BJP: 0 }; });
-                      setSwings(reset);
-                    }}
-                    className="text-[11px] text-slate-400 hover:text-rose-600 flex items-center gap-0.5 cursor-pointer"
-                  >
-                    <RotateCcw className="w-3 h-3" />
-                    <span>Clear</span>
-                  </button>
-                </div>
-                <div className="max-h-36 overflow-y-auto space-y-1 pr-1 text-[11px]">
-                  {Object.entries(swings)
-                    .filter(([_, s]) => s.INC !== 0 || s.BRS !== 0 || s.BJP !== 0)
-                    .map(([k, s]) => {
-                      const readable = READABLE_COMMUNITY_NAMES[k] || k;
-                      return (
-                        <div key={k} className="bg-white px-2 py-1.5 rounded-lg border border-slate-200 flex items-center justify-between shadow-2xs">
-                          <span className="font-semibold text-slate-700 truncate max-w-[130px]" title={readable}>
-                            {readable}
-                          </span>
-                          <div className="flex items-center gap-1.5 text-[10px] font-mono font-bold">
-                            {s.INC !== 0 && (
-                              <span className={s.INC > 0 ? 'text-sky-600 font-black' : 'text-slate-400'}>
-                                {s.INC > 0 ? `+${s.INC}% INC` : `${s.INC}%`}
-                              </span>
-                            )}
-                            {s.BRS !== 0 && (
-                              <span className={s.BRS > 0 ? 'text-pink-600 font-black' : 'text-slate-400'}>
-                                {s.BRS > 0 ? `+${s.BRS}% BRS` : `${s.BRS}%`}
-                              </span>
-                            )}
-                            {s.BJP !== 0 && (
-                              <span className={s.BJP > 0 ? 'text-amber-600 font-black' : 'text-slate-400'}>
-                                {s.BJP > 0 ? `+${s.BJP}% BJP` : `${s.BJP}%`}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                      );
-                    })}
-                </div>
-              </div>
-            )}
-
-            {/* Single Clear Launcher Button */}
-            <button
-              onClick={() => setIsStudioOpen(true)}
-              className="w-full py-2.5 px-3 bg-gradient-to-r from-indigo-900 to-slate-900 hover:from-indigo-800 hover:to-slate-800 text-white font-bold text-xs rounded-xl flex items-center justify-center gap-2 transition-all cursor-pointer shadow-sm group"
-            >
-              <Maximize2 className="w-4 h-4 text-indigo-300 group-hover:scale-110 transition-transform" />
-              <span>Configure Demographic Studio</span>
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-            </button>
-          </div>
-
-          {/* Action Callout */}
-          <button
-            onClick={() => onNavigateToActions()}
-            className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-xl shadow-xs transition-all cursor-pointer group"
-          >
-            <Target className="w-4 h-4 text-indigo-200 group-hover:scale-110 transition-transform" />
-            <span>Export Scenario to Actions Playbook</span>
-            <ChevronRight className="w-3.5 h-3.5 text-indigo-300" />
-          </button>
+      {/* Step 3: Constituency Results & Battleground Map (Full-Width Presentation) */}
+      <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+        <div>
+          <span className="text-[10px] font-black tracking-wider uppercase text-indigo-700 bg-indigo-50 border border-indigo-200 px-2.5 py-0.5 rounded font-mono">
+            Step 3: Assembly Results &amp; Constituency Battlegrounds
+          </span>
+          <h3 className="text-lg font-black text-slate-900 mt-1">
+            Constituency Triage Matrix &amp; Projected Outcomes (119 ACs)
+          </h3>
         </div>
 
-        {/* Right Column: Inverse-Margin Bubble Chart (8 cols) */}
-        <div className="lg:col-span-8 space-y-4">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setIsStudioOpen(true)}
+            className="flex items-center gap-1.5 px-3 py-1.5 bg-white hover:bg-slate-50 text-slate-700 text-xs font-bold rounded-xl border border-slate-200 transition-colors cursor-pointer shadow-2xs"
+          >
+            <Sliders className="w-3.5 h-3.5 text-indigo-600" />
+            <span>Demographic Studio</span>
+            {activeCustomizedCount > 0 && (
+              <span className="text-[10px] bg-indigo-100 text-indigo-800 px-1.5 py-0.2 rounded font-mono font-bold">
+                {activeCustomizedCount}
+              </span>
+            )}
+          </button>
+
+          <button
+            onClick={() => onNavigateToActions()}
+            className="flex items-center gap-1.5 px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow-xs transition-all cursor-pointer"
+          >
+            <Target className="w-3.5 h-3.5" />
+            <span>Export to Playbook</span>
+            <ChevronRight className="w-3.5 h-3.5 text-indigo-200" />
+          </button>
+        </div>
+      </div>
+
+      {/* Full-Width Results Chart & Directory */}
+      <div className="space-y-4">
           <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-200 space-y-4">
             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-3">
               <div>
@@ -1659,6 +1513,34 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                       Decisive Demographic: <strong className="text-slate-800">{selectedConstituency.key_demographic}</strong> ({selectedConstituency.key_demographic_pct}%)
                     </span>
                   </div>
+
+                  {/* Step-by-Step Compounded Simulation Impact Breakdown */}
+                  <div className="w-full mt-3 pt-3 border-t border-slate-200/80 grid grid-cols-2 sm:grid-cols-4 gap-2 text-[11px]">
+                    <div className="bg-white p-2 rounded-lg border border-slate-200">
+                      <span className="text-slate-400 text-[10px] uppercase font-bold block">2023 Form-20 Baseline</span>
+                      <span className="font-bold text-slate-800">
+                        {selectedConstituency.votes_2023.winner_party} +{selectedConstituency.votes_2023.margin.toLocaleString()}
+                      </span>
+                    </div>
+
+                    <div className="bg-white p-2 rounded-lg border border-slate-200">
+                      <span className="text-slate-400 text-[10px] uppercase font-bold block">Compounded Simulated</span>
+                      <span className="font-bold" style={{ color: getPartyColor(selectedConstituency.simulated.winner_party) }}>
+                        {selectedConstituency.simulated.winner_party} +{selectedConstituency.simulated.margin.toLocaleString()}
+                      </span>
+                    </div>
+
+                    <div className="bg-white p-2 rounded-lg border border-slate-200 col-span-2">
+                      <span className="text-slate-400 text-[10px] uppercase font-bold block">Compounded Simulated Votes</span>
+                      <div className="flex items-center gap-2 font-mono font-bold text-xs mt-0.5">
+                        <span className="text-sky-700">INC {selectedConstituency.simulated.party_votes.INC?.toLocaleString()}</span>
+                        <span className="text-slate-300">|</span>
+                        <span className="text-pink-700">BRS {selectedConstituency.simulated.party_votes.BRS?.toLocaleString()}</span>
+                        <span className="text-slate-300">|</span>
+                        <span className="text-amber-700">BJP {selectedConstituency.simulated.party_votes.BJP?.toLocaleString()}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-2">
@@ -1770,7 +1652,6 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             </div>
           </div>
         </div>
-      </div>
 
       {/* Demographic Swing Studio (Pattern C Large Overlay Window) */}
       <SwingStudioModal

@@ -1,10 +1,10 @@
-// AC-Wide 30/60/90 Day Padayatra Campaign Itinerary & Strategic Route Generator
+// AC-Wide 15/30/60/90 Day Padayatra Campaign Itinerary & Strategic Route Generator
 // Balances sequential door-to-door physical walking with booth-level electoral prioritization
 
 import { CONSTITUENCY_MANDALS, type MandalDetail } from './mandalData';
 import { CONSTITUENCY_TOPICS } from './constituencyTopics';
 
-export type CampaignDuration = 30 | 60 | 90;
+export type CampaignDuration = 15 | 30 | 60 | 90;
 
 export interface SessionItinerary {
   sessionType: 'Morning (7:00 AM – 10:30 AM)' | 'Evening (4:30 PM – 7:30 PM)';
@@ -181,7 +181,37 @@ export function generateAcPadayatraPlan(
   let skippedFortresses = 0;
   let avoidedHostiles = 0;
 
-  if (durationDays === 30) {
+  if (durationDays === 15) {
+    // 15 DAYS: RAPID STRIKE BLITZ (30 sessions)
+    // Emergency / final fortnight campaign mode
+    // 100% laser-focused on decisive razor-thin battlegrounds
+    rationale =
+      '15-Day Rapid Strike Blitz: High-speed final fortnight sprint. The MLA focuses exclusively on the most competitive razor-thin battleground booths. Fortresses are completely delegated to ward corporators and hostile territory is avoided.';
+
+    skippedFortresses = fortresses.length;
+    avoidedHostiles = hostiles.length;
+
+    // Phase 1 (Days 1–10): 20 sessions covering top battlegrounds
+    const phase1Booths = battlegrounds.length > 0 ? battlegrounds : [...vulnerables, ...catalog];
+    const p1Count = Math.min(20, phase1Booths.length);
+    for (let i = 0; i < p1Count; i++) {
+      selectedBoothVisits.push({
+        booth: phase1Booths[i % phase1Booths.length],
+        iteration: 1,
+        phase: 'Phase 1: Broad Ground Connect',
+      });
+    }
+
+    // Phase 2 (Days 11–15): 10 sessions final decisive battleground push
+    const p2Count = totalSessionsNeeded - selectedBoothVisits.length;
+    for (let i = 0; i < p2Count; i++) {
+      selectedBoothVisits.push({
+        booth: phase1Booths[i % phase1Booths.length],
+        iteration: 2,
+        phase: 'Phase 2: Battleground Deep Dive',
+      });
+    }
+  } else if (durationDays === 30) {
     // 30 DAYS: BATTLEGROUND BLITZ (60 sessions)
     // Avoid fortresses (leave to local cadre) & avoid deep hostile booths
     // Focus 100% on Battlegrounds (visited 2x) and Vulnerable seats (visited 1x)

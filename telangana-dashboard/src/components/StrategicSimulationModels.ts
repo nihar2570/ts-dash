@@ -1,17 +1,13 @@
-export interface WelfareSettings {
-  mahalakshmiPct: number;    // 0 to 100% execution (Default 75%). Drives women & BC Padmashali/SC Mala retention
-  rythuBharosaPct: number;   // 0 to 100% execution (Default 70%). Drives agrarian farmer swing in rural belts
-  loanWaiverPct: number;     // 0 to 100% execution (Default 65%). Drives small/marginal farmer retention (up to 2L waiver)
-  gruhaJyothiPct: number;    // 0 to 100% execution (Default 85%). Zero bill 200 units power (urban slums & rural poor)
-  indirammaIndluPct: number; // 0 to 100% execution (Default 40%). Housing grant rollout for rural homeless
+export interface CoalitionSettings {
+  brsToBjpTransferPct: number; // e.g. 75% BRS cadre transfer to BJP candidate in BJP-allotted ACs
+  bjpToBrsTransferPct: number; // e.g. 65% BJP cadre transfer to BRS candidate in BRS-allotted ACs
+  rebelLeakagePct: number;     // e.g. 15% disgruntled cadre rebel and leak to Congress
 }
 
-export const DEFAULT_WELFARE_SETTINGS: WelfareSettings = {
-  mahalakshmiPct: 75,
-  rythuBharosaPct: 70,
-  loanWaiverPct: 65,
-  gruhaJyothiPct: 85,
-  indirammaIndluPct: 40,
+export const DEFAULT_COALITION_SETTINGS: CoalitionSettings = {
+  brsToBjpTransferPct: 75,
+  bjpToBrsTransferPct: 65,
+  rebelLeakagePct: 15,
 };
 
 export interface MlaFatigueSettings {
@@ -26,28 +22,6 @@ export const DEFAULT_MLA_FATIGUE_SETTINGS: MlaFatigueSettings = {
   unpopularMlaPenalty: -4.5,
   freshFaceBoost: 4.0,
   targetParty: 'INC',
-};
-
-export interface CannibalizationSettings {
-  sourceParty: 'BRS' | 'INC' | 'BJP';
-  bleedPct: number;                // 0% to 15% vote share shed
-  destinationRatio: {             // How the bleed splits among opponents
-    toBjp: number;                 // e.g. 60%
-    toInc: number;                 // e.g. 40%
-    toBrs: number;                 // e.g. 0%
-  };
-  regionBias: 'ALL' | 'NORTH_TS' | 'SOUTH_TS' | 'GHMC_URBAN';
-}
-
-export const DEFAULT_CANNIBALIZATION_SETTINGS: CannibalizationSettings = {
-  sourceParty: 'BRS',
-  bleedPct: 0,
-  destinationRatio: {
-    toBjp: 60,
-    toInc: 40,
-    toBrs: 0,
-  },
-  regionBias: 'ALL',
 };
 
 export const NORTH_TS_DISTRICTS = new Set([
@@ -81,4 +55,3 @@ export const GHMC_URBAN_DISTRICTS = new Set([
   'Medchal-Malkajgiri',
   'Ranga Reddy',
 ]);
-

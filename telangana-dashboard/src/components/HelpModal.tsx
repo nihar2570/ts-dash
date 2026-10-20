@@ -115,7 +115,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
         {/* Simulations */}
         <section className="mb-4">
           <h3 className="text-sm font-bold text-indigo-700 mb-1.5 flex items-center gap-1.5">
-            <Sparkles className="w-4 h-4" /> Simulations (War Room)
+            <Sparkles className="w-4 h-4" /> Simulations
           </h3>
           <ul className="text-xs text-slate-700 space-y-1 pl-5 list-disc">
             <li>Adjust <strong>community swing sliders</strong> to model voter shifts across caste & demographic groups.</li>

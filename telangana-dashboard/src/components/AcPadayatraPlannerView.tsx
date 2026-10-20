@@ -1,27 +1,17 @@
 import React, { useState, useMemo } from 'react';
 import {
-  Calendar,
   Footprints,
-  Compass,
   ArrowRight,
-  Shield,
   Target,
-  Users,
-  Flame,
-  CheckCircle2,
   Clock,
-  ExternalLink,
   Printer,
   ChevronDown,
   ChevronUp,
-  MapPin,
   Sparkles,
 } from 'lucide-react';
 import {
   generateAcPadayatraPlan,
   type CampaignDuration,
-  type DayItinerary,
-  type SessionItinerary,
 } from '../data/acPadayatraPlanService';
 
 interface AcPadayatraPlannerViewProps {
@@ -90,7 +80,7 @@ export const AcPadayatraPlannerView: React.FC<AcPadayatraPlannerViewProps> = ({
               </span>
             </div>
             <h3 className="text-base sm:text-lg font-black text-slate-100">
-              MLA 30 / 60 / 90-Day Padayatra &amp; Door-to-Door Campaign Planner
+              MLA 15 / 30 / 60 / 90-Day Padayatra &amp; Door-to-Door Campaign Planner
             </h3>
             <p className="text-xs text-amber-200/90 max-w-2xl">
               Constituency-wide walking calendar. Inside every visited booth, the MLA walks sequentially door-to-door without skipping neighbors. Crucial battlegrounds are saturated with multiple visits while safe strongholds and hostile zones are optimized.
@@ -110,8 +100,33 @@ export const AcPadayatraPlannerView: React.FC<AcPadayatraPlannerViewProps> = ({
           </div>
         </div>
 
-        {/* 30 / 60 / 90 Days Master Switcher */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 pt-2 border-t border-amber-500/20">
+        {/* 15 / 30 / 60 / 90 Days Master Switcher */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 pt-2 border-t border-amber-500/20">
+          <button
+            type="button"
+            onClick={() => {
+              setDuration(15);
+              setExpandedDay(1);
+            }}
+            className={`p-3 rounded-xl border text-left transition-all cursor-pointer ${
+              duration === 15
+                ? 'bg-amber-500 text-slate-950 border-amber-300 shadow-md ring-2 ring-amber-300'
+                : 'bg-black/30 hover:bg-black/50 text-white border-amber-500/20'
+            }`}
+          >
+            <div className="flex items-center justify-between">
+              <span className="font-black text-sm font-mono">⚡ 15 Days</span>
+              <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
+                duration === 15 ? 'bg-slate-950 text-amber-400' : 'bg-amber-500/20 text-amber-300'
+              }`}>
+                Rapid Strike
+              </span>
+            </div>
+            <p className={`text-xs mt-1 font-medium ${duration === 15 ? 'text-slate-900' : 'text-slate-300'}`}>
+              Final fortnight sprint. 100% focused on razor-thin swing battlegrounds. Fortresses delegated to ward corporators; hostile turf skipped.
+            </p>
+          </button>
+
           <button
             type="button"
             onClick={() => {
@@ -284,14 +299,23 @@ export const AcPadayatraPlannerView: React.FC<AcPadayatraPlannerViewProps> = ({
         </div>
 
         {/* Quick Search */}
-        <div className="flex items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-100">
+        <div className="flex flex-wrap items-center justify-between text-xs text-slate-500 pt-2 border-t border-slate-100 gap-2">
           <span>
             Showing <strong className="text-slate-900">{filteredDays.length}</strong> of{' '}
             <strong className="text-slate-900">{plan.days.length}</strong> campaign days
           </span>
-          <span className="font-mono text-[11px] text-slate-400">
-            Consecutive street walking rule applied to every session
-          </span>
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              value={searchDayQuery}
+              onChange={(e) => setSearchDayQuery(e.target.value)}
+              placeholder="Search day, mandal, booth..."
+              className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1 text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            />
+            <span className="font-mono text-[11px] text-slate-400 hidden sm:inline">
+              Consecutive street walking rule applied
+            </span>
+          </div>
         </div>
       </div>
 
