@@ -235,29 +235,81 @@ export function predictCaste(
   // 4. Fallback to Mandal Dominant Demographic Prior if available
   if (dominantMandalCaste && dominantMandalCaste !== 'None') {
     const dLower = dominantMandalCaste.toLowerCase();
+    let recognizedCaste = '';
     let cat: CasteCategory = 'BC';
     let sub = 'BC';
-    if (dLower.includes('st') || dLower.includes('lambada') || dLower.includes('gond') || dLower.includes('koya')) {
+
+    if (dLower.includes('lambada')) {
+      recognizedCaste = 'Lambada (ST)';
       cat = 'ST';
       sub = 'ST';
-    } else if (dLower.includes('sc') || dLower.includes('madiga') || dLower.includes('mala')) {
+    } else if (dLower.includes('gond') || dLower.includes('koya') || dLower.includes('kolam') || dLower.includes('adivasi')) {
+      recognizedCaste = 'Adivasi Gond (ST)';
+      cat = 'ST';
+      sub = 'ST';
+    } else if (dLower.includes('st')) {
+      recognizedCaste = 'ST Community';
+      cat = 'ST';
+      sub = 'ST';
+    } else if (dLower.includes('madiga')) {
+      recognizedCaste = 'Madiga (SC)';
       cat = 'SC';
       sub = 'SC';
-    } else if (dLower.includes('reddy') || dLower.includes('oc')) {
+    } else if (dLower.includes('mala')) {
+      recognizedCaste = 'Mala (SC)';
+      cat = 'SC';
+      sub = 'SC';
+    } else if (dLower.includes('sc')) {
+      recognizedCaste = 'SC Community';
+      cat = 'SC';
+      sub = 'SC';
+    } else if (dLower.includes('goud')) {
+      recognizedCaste = 'Goud';
+      cat = 'BC';
+      sub = 'BC-B';
+    } else if (dLower.includes('mudiraj')) {
+      recognizedCaste = 'Mudiraj';
+      cat = 'BC';
+      sub = 'BC-D';
+    } else if (dLower.includes('munnuru') || dLower.includes('kapu')) {
+      recognizedCaste = 'Munnuru Kapu';
+      cat = 'BC';
+      sub = 'BC-D';
+    } else if (dLower.includes('yadav') || dLower.includes('golla')) {
+      recognizedCaste = 'Yadav';
+      cat = 'BC';
+      sub = 'BC-D';
+    } else if (dLower.includes('padmashali') || dLower.includes('weaver')) {
+      recognizedCaste = 'Padmashali';
+      cat = 'BC';
+      sub = 'BC-B';
+    } else if (dLower.includes('kuruma') || dLower.includes('kuruba')) {
+      recognizedCaste = 'Kuruma';
+      cat = 'BC';
+      sub = 'BC-B';
+    } else if (dLower.includes('reddy')) {
+      recognizedCaste = 'Reddy';
+      cat = 'OC';
+      sub = 'OC';
+    } else if (dLower.includes('velama')) {
+      recognizedCaste = 'Velama';
       cat = 'OC';
       sub = 'OC';
     } else if (dLower.includes('muslim') || dLower.includes('minority')) {
+      recognizedCaste = 'Muslim';
       cat = 'Minority';
       sub = 'Minority';
     }
 
-    return createPrediction(
-      dominantMandalCaste,
-      cat,
-      sub,
-      0.72,
-      `Mandal Demographic Prior (${dominantMandalCaste})`
-    );
+    if (recognizedCaste) {
+      return createPrediction(
+        recognizedCaste,
+        cat,
+        sub,
+        0.72,
+        `Mandal Demographic Prior (${recognizedCaste})`
+      );
+    }
   }
 
   // 5. Default General BC Prior

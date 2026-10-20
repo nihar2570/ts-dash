@@ -40,6 +40,7 @@ interface ConstituencyDossierProps {
   onSelectAc?: (acNo: number) => void;
   allConstituencies?: { ac_no: number; ac_name: string; district: string }[];
   electionData?: ElectionData | null;
+  onNavigateToBoothData?: (acNo: number, boothNo?: number, viewMode?: string) => void;
 }
 
 export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
@@ -51,12 +52,13 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
   onSelectAc,
   allConstituencies,
   electionData,
+  onNavigateToBoothData,
 }) => {
-  const [dossierTab, setDossierTab] = useState<'candidates' | 'mandals' | 'demographics' | 'topics'>(() => {
+  const [dossierTab, setDossierTab] = useState<'candidates' | 'mandals' | 'booths' | 'demographics' | 'topics'>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const tabParam = params.get('tab');
-      if (tabParam === 'mandals' || tabParam === 'demographics' || tabParam === 'topics') {
+      if (tabParam === 'mandals' || tabParam === 'booths' || tabParam === 'demographics' || tabParam === 'topics') {
         return tabParam;
       }
     }
@@ -72,11 +74,11 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
 
   const handleExitBoothMapOnly = () => {
     setIsBoothMapOnly(false);
-    setDossierTab('mandals');
+    setDossierTab('booths');
     if (typeof window !== 'undefined') {
       const url = new URL(window.location.href);
       url.searchParams.delete('view');
-      url.searchParams.set('tab', 'mandals');
+      url.searchParams.set('tab', 'booths');
       window.history.replaceState({}, '', url.pathname + url.search);
     }
   };
@@ -146,6 +148,18 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
         : '0.0';
     return { totalBooths, totalElectorate, avgTurnout };
   }, [mandals]);
+
+  const [mandalSearch, setMandalSearch] = useState('');
+  const filteredMandals = useMemo(() => {
+    if (!mandalSearch.trim()) return mandals;
+    const q = mandalSearch.toLowerCase();
+    return mandals.filter(
+      (m) =>
+        m.name.toLowerCase().includes(q) ||
+        m.lead_party?.toLowerCase().includes(q) ||
+        m.dominant_caste?.toLowerCase().includes(q)
+    );
+  }, [mandals, mandalSearch]);
 
   // AC Demographics & Key Topics hooks
   const acDemographics = useMemo(() => {
@@ -283,7 +297,18 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
               }`}
             >
               <Building2 className="w-3.5 h-3.5 text-amber-600" />
-              <span>Mandals &amp; Booths ({mandals.length})</span>
+              <span>Mandals &amp; Circles ({mandals.length})</span>
+            </button>
+            <button
+              onClick={() => setDossierTab('booths')}
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                dossierTab === 'booths'
+                  ? 'bg-white text-indigo-700 shadow-xs border border-slate-200/90 font-black'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+              }`}
+            >
+              <MapPin className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Polling Stations ({mandalTotals.totalBooths})</span>
             </button>
             <button
               onClick={() => setDossierTab('demographics')}
@@ -729,37 +754,6 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
       {/* TAB 2: MANDAL & POLLING BOOTH DRILLDOWN (#13) */}
       {dossierTab === 'mandals' && (
         <div className="space-y-6 animate-in fade-in duration-150">
-          {/* Form-20 Official Verification Banner */}
-          <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-xl p-4 border border-slate-700/80 shadow-xs flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider flex items-center gap-1">
-                  <ShieldCheck className="w-3 h-3 text-emerald-400" />
-                  Official CEO Telangana Source
-                </span>
-                <span className="text-xs font-semibold text-slate-200">
-                  Form-20 Polling Station Result Sheets
-                </span>
-              </div>
-              <p className="text-[11px] text-slate-400 max-w-2xl leading-relaxed">
-                Statutory Form-20 records certify individual EVM vote counts across all {mandalTotals.totalBooths} polling stations for {data.ac_name}. Mandals below represent official Delimitation 2008 &amp; TS Revenue revenue clusters with modeled booth allocations.
-              </p>
-            </div>
-            {form20Url && (
-              <a
-                href={form20Url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold transition-all shadow-md shrink-0 cursor-pointer"
-                title="Open official CEO Telangana Form-20 PDF in new tab"
-              >
-                <FileText className="w-3.5 h-3.5" />
-                View Official Form-20 PDF
-                <ExternalLink className="w-3 h-3 ml-0.5 opacity-80" />
-              </a>
-            )}
-          </div>
-
           {/* Mandal KPI Cards (1-Line Horizontal Cards) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
             <div className="bg-slate-50 hover:bg-slate-100/70 transition-colors border border-slate-200/90 rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2 shadow-2xs">
@@ -809,7 +803,166 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
             </div>
           </div>
 
-          {/* Feature #5: Form-20 Polling Station Deficit & Panna Pramukh Triage Solver */}
+          {/* Mandal Ground Roster Table */}
+          <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-2xs space-y-0">
+            <div className="bg-slate-50 px-4 py-3 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2.5 text-xs">
+              <div className="flex items-center gap-2">
+                <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                  <Building2 className="w-4 h-4 text-indigo-600" />
+                  Mandal Administrative Directory ({mandals.length} Mandals / GHMC Circles)
+                </span>
+                <span className="text-[10px] bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded-full font-mono font-bold">
+                  Delimitation 2008 &amp; TS Revenue
+                </span>
+              </div>
+
+              {/* Search Input */}
+              <div className="relative">
+                <Search className="w-3.5 h-3.5 absolute left-2.5 top-2 text-slate-400" />
+                <input
+                  type="text"
+                  placeholder="Filter by mandal, caste, party..."
+                  value={mandalSearch}
+                  onChange={(e) => setMandalSearch(e.target.value)}
+                  className="w-48 sm:w-60 bg-white border border-slate-300 rounded-lg pl-8 pr-3 py-1 text-xs text-slate-900 placeholder-slate-400 focus:outline-hidden focus:ring-1 focus:ring-indigo-500"
+                />
+              </div>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="w-full text-left text-xs border-collapse">
+                <thead>
+                  <tr className="bg-slate-100/90 text-slate-600 font-semibold uppercase tracking-wider text-[10px] border-b border-slate-200">
+                    <th className="py-2.5 px-3">Mandal / Circle</th>
+                    <th className="py-2.5 px-3 text-right">Booths</th>
+                    <th className="py-2.5 px-3 text-right">Electorate</th>
+                    <th className="py-2.5 px-3 text-right">Turnout %</th>
+                    <th className="py-2.5 px-3 text-right">2023 Lead Margin</th>
+                    <th className="py-2.5 px-3">Dominant Community</th>
+                    <th className="py-2.5 px-3 text-center">Field Status</th>
+                    <th className="py-2.5 px-3 text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100 font-mono text-[11px]">
+                  {filteredMandals.map((m) => {
+                    const mColor = getPartyColor(m.lead_party);
+                    const dotCount = Math.min(4, Math.max(1, m.margin < 1000 ? 1 : m.margin < 2000 ? 2 : m.margin < 3500 ? 3 : 4));
+                    return (
+                      <tr key={m.mandal_id} className="hover:bg-slate-50/80 transition-colors">
+                        <td className="py-2.5 px-3 font-sans font-bold text-slate-900">
+                          {m.name}
+                        </td>
+                        <td className="py-2.5 px-3 text-right font-bold text-slate-800">
+                          {m.booths}
+                        </td>
+                        <td className="py-2.5 px-3 text-right text-slate-600">
+                          {m.electorate.toLocaleString()}
+                        </td>
+                        <td className="py-2.5 px-3 text-right font-bold text-slate-800">
+                          {m.turnout_pct}%
+                        </td>
+                        <td className="py-2.5 px-3 text-right font-bold">
+                          <div className="flex items-center justify-end gap-1.5">
+                            {/* Lead Intensity Dots */}
+                            <div
+                              className="flex items-center gap-1 shrink-0"
+                              title={`Lead intensity: +${m.margin.toLocaleString()} votes (${dotCount} / 4 dots)`}
+                            >
+                              {Array.from({ length: dotCount }).map((_, dotIdx) => (
+                                <span
+                                  key={dotIdx}
+                                  className="w-1.5 h-1.5 rounded-full inline-block shadow-2xs"
+                                  style={{ backgroundColor: mColor }}
+                                />
+                              ))}
+                            </div>
+                            <span
+                              className="px-2 py-0.5 rounded text-[10px]"
+                              style={{
+                                backgroundColor: `${mColor}15`,
+                                color: mColor,
+                              }}
+                            >
+                              {m.lead_party} +{m.margin.toLocaleString()}
+                            </span>
+                          </div>
+                        </td>
+                        <td className="py-2.5 px-3 font-sans">
+                          <span className="font-medium text-slate-900">{m.dominant_caste}</span>{' '}
+                          <span className="text-[10px] text-slate-400 font-mono">({m.dominant_caste_pct}%)</span>
+                        </td>
+                        <td className="py-2.5 px-3 text-center">
+                          <span
+                            className="px-2 py-0.5 rounded text-[10px] font-bold border"
+                            style={{
+                              backgroundColor: `${mColor}15`,
+                              color: mColor,
+                              borderColor: `${mColor}35`,
+                            }}
+                          >
+                            {m.status.replace('_', ' ')}
+                          </span>
+                        </td>
+                        <td className="py-2.5 px-3 text-center font-sans">
+                          <button
+                            type="button"
+                            onClick={() => setDossierTab('booths')}
+                            className="px-2 py-0.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 rounded text-[10px] font-bold cursor-pointer transition-colors"
+                          >
+                            Booths Map ➔
+                          </button>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Quick Transition Banner to Booths Tab */}
+          <div className="bg-gradient-to-r from-indigo-50 via-slate-50 to-indigo-50 border border-indigo-200/70 rounded-xl p-3.5 flex flex-wrap items-center justify-between gap-3 text-xs">
+            <div className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-indigo-600 shrink-0" />
+              <span className="text-slate-700">
+                Want to inspect individual EVM booth margins, coordinates &amp; Panna Pramukh quotas?
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  if (onNavigateToBoothData) {
+                    onNavigateToBoothData(data.ac_no, 1, 'ac-plan');
+                  } else {
+                    const url = new URL(window.location.origin + window.location.pathname);
+                    url.searchParams.set('tab', 'booth-data');
+                    url.searchParams.set('ac', String(data.ac_no));
+                    url.searchParams.set('view', 'ac-plan');
+                    window.open(url.toString(), '_blank');
+                  }
+                }}
+                className="px-3.5 py-1.5 bg-amber-500 hover:bg-amber-600 text-slate-950 rounded-lg font-black text-xs cursor-pointer shadow-2xs flex items-center gap-1.5 transition-all"
+              >
+                <span>🚶 AC Padayatra (30/60/90d)</span>
+                <span>➔</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setDossierTab('booths')}
+                className="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-bold text-xs cursor-pointer shadow-2xs flex items-center gap-1.5 transition-all"
+              >
+                <span>Explore All {mandalTotals.totalBooths} Polling Stations &amp; Map</span>
+                <span>➔</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* TAB 3: POLLING STATIONS & FORM-20 TRIAGE */}
+      {dossierTab === 'booths' && (
+        <div className="space-y-6 animate-in fade-in duration-150">
           <BoothPannaDeficitSolver
             acNo={data.ac_no}
             acName={data.ac_name}
@@ -823,6 +976,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
             runnerCandidate={data.candidates[1]?.name || 'Runner-up'}
             runnerVotes={data.candidates[1]?.votes || 0}
             geoJsonData={geoJsonData}
+            onNavigateToBoothData={onNavigateToBoothData}
           />
         </div>
       )}
@@ -1513,6 +1667,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
               runnerVotes={data.candidates[1]?.votes || 0}
               geoJsonData={geoJsonData}
               standaloneMapOnly={true}
+              onNavigateToBoothData={onNavigateToBoothData}
             />
           </main>
         </div>

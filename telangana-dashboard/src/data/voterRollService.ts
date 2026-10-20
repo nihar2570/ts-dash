@@ -39,37 +39,117 @@ function pseudoHash(seed: number): number {
   return x - Math.floor(x);
 }
 
-// Regional surname lexicons by geopolitical belt
-const REGION_SURNAMES: Record<string, string[]> = {
-  NORTH: [
-    'Mesram', 'Athram', 'Todsam', 'Marsakola', 'Kanaka', 'Soyam', 'Madavi', 'Kodapa',
-    'Rathod', 'Jadhav', 'Pawar', 'Chavan', 'Banoth', 'Guguloth', 'Dharavath', 'Koneru',
-    'Palvai', 'Gundla', 'Boda', 'Durgam', 'Nallala', 'Ravula', 'Jogu', 'Kasipeta',
-    'Reddy', 'Patel', 'Gaddam', 'Manda', 'Kommu', 'Vangala', 'Thota', 'Bhatti'
-  ],
-  SOUTH: [
-    'Komatireddy', 'Gutha', 'Kunduru', 'Alimineti', 'Gavinolla', 'Marri', 'Challa',
-    'Jupally', 'Venkataram', 'Bandari', 'Chinthakunta', 'Singireddy', 'Kethireddy',
-    'Bollam', 'Ganta', 'Veldandi', 'Chunchu', 'Pendyala', 'Dasari', 'Malyala',
-    'Yadav', 'Goud', 'Mudiraj', 'Madiga', 'Mala', 'Padmashali', 'Munnuru Kapu'
-  ],
-  HYDERABAD_URBAN: [
+// Detailed surname pools categorized by community
+const COMMUNITY_SURNAMES = {
+  MUSLIM_MINORITY: [
     'Mohammed', 'Shaik', 'Syed', 'Ahmed', 'Khan', 'Mirza', 'Begum', 'Hussain',
-    'Qureshi', 'Ansari', 'Siddiqui', 'Farooqui', 'Ali', 'Owaisi', 'Danam',
-    'Talari', 'Kale', 'Singam', 'Patel', 'Reddy', 'Goud', 'Mudhiraj', 'Burra'
+    'Qureshi', 'Ansari', 'Siddiqui', 'Farooqui', 'Ali', 'Owaisi', 'Pasha', 'Baig'
   ],
-  CENTRAL: [
-    'Gangula', 'Vemula', 'Thanneeru', 'Kalvakuntla', 'Pocharam', 'Katipally',
-    'Guntakandla', 'Koppula', 'Vaddiraju', 'Kishan', 'Balka', 'Arepalli',
-    'Munnuru', 'Mudiraj', 'Goud', 'Reddy', 'Padmashali', 'Yadav', 'Kuruma', 'Errolla'
+  ST_ADIVASI_GOND: [
+    'Mesram', 'Athram', 'Todsam', 'Marsakola', 'Kanaka', 'Soyam', 'Madavi', 'Kodapa'
+  ],
+  ST_LAMBADA: [
+    'Rathod', 'Jadhav', 'Pawar', 'Chavan', 'Banoth', 'Guguloth', 'Dharavath', 'Boda'
+  ],
+  SC_MADIGA: [
+    'Durgam', 'Kommu', 'Koppula', 'Bhatti', 'Manda', 'Errolla', 'Kasipeta', 'Devarapalli'
+  ],
+  SC_MALA: [
+    'Nallala', 'Ravula', 'Jogu', 'Dasari', 'Palvai', 'Gundla', 'Bandi'
+  ],
+  BC_MUNNURU_KAPU: [
+    'Patel', 'Kasarla', 'Vangala', 'Gaddam', 'Thota', 'Burra', 'Munnuru', 'Gangula'
+  ],
+  BC_GOUD: [
+    'Goud', 'Kura', 'Bojja', 'Pendyala', 'Malyala', 'Chunchu', 'Goundla'
+  ],
+  BC_MUDIRAJ: [
+    'Mudiraj', 'Mudhiraj', 'Bollam', 'Pilli', 'Talari', 'Singam', 'Banda'
+  ],
+  BC_PADMASHALI: [
+    'Padmashali', 'Ganta', 'Konda', 'Devadas', 'Jalagam', 'Veldandi'
+  ],
+  BC_YADAV: [
+    'Yadav', 'Golla', 'Kuruma', 'Bollu', 'Alimineti'
+  ],
+  OC_REDDY: [
+    'Reddy', 'Komatireddy', 'Kunduru', 'Challa', 'Singireddy', 'Marri', 'Gavinolla'
+  ],
+  OC_VELAMA: [
+    'Rao', 'Kalvakuntla', 'Jupally', 'Pocharam', 'Katipally', 'Vemula'
   ]
 };
 
+// Returns a weighted surname pool aligned with SEEEPC Vol-4 constituency demographics
 function getRegionSurnames(acNo: number): string[] {
-  if ([53, 55, 68, 61, 71, 84].includes(acNo)) return REGION_SURNAMES.HYDERABAD_URBAN;
-  if ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24].includes(acNo)) return REGION_SURNAMES.NORTH;
-  if ([73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 112, 113, 114, 115, 116, 117, 118, 119].includes(acNo)) return REGION_SURNAMES.SOUTH;
-  return REGION_SURNAMES.CENTRAL;
+  // 1. High Muslim Minority constituencies (Hyderabad Old City & urban pockets)
+  const isHighMinority = [58, 63, 64, 66, 67, 68, 69, 12, 17, 71].includes(acNo);
+  if (isHighMinority) {
+    return [
+      ...COMMUNITY_SURNAMES.MUSLIM_MINORITY,
+      ...COMMUNITY_SURNAMES.MUSLIM_MINORITY, // 2x weight for ~60% SEEEPC
+      ...COMMUNITY_SURNAMES.BC_MUDIRAJ,
+      ...COMMUNITY_SURNAMES.BC_GOUD,
+      ...COMMUNITY_SURNAMES.OC_REDDY,
+      ...COMMUNITY_SURNAMES.SC_MADIGA
+    ];
+  }
+
+  // 2. ST Reserved / High ST Agency Belts (Boath, Asifabad, Khanapur, Pinapaka, Yellandu, Aswaraopeta, etc.)
+  const isSTBelt = [1, 5, 6, 83, 110, 111, 119].includes(acNo);
+  if (isSTBelt) {
+    return [
+      ...COMMUNITY_SURNAMES.ST_ADIVASI_GOND,
+      ...COMMUNITY_SURNAMES.ST_LAMBADA,
+      ...COMMUNITY_SURNAMES.ST_ADIVASI_GOND, // 2x weight
+      ...COMMUNITY_SURNAMES.SC_MADIGA,
+      ...COMMUNITY_SURNAMES.BC_MUNNURU_KAPU,
+      ...COMMUNITY_SURNAMES.BC_GOUD,
+      ...COMMUNITY_SURNAMES.OC_REDDY
+    ];
+  }
+
+  // 3. SC Reserved Belts (Chennur, Bellampalle, Dharmapuri, Choppadandi, Manakondur, Andole, Zahirabad, etc.)
+  const isSCBelt = [2, 3, 22, 31, 32, 33, 48, 50, 75, 82, 88, 102, 105, 114].includes(acNo);
+  if (isSCBelt) {
+    return [
+      ...COMMUNITY_SURNAMES.SC_MADIGA,
+      ...COMMUNITY_SURNAMES.SC_MALA,
+      ...COMMUNITY_SURNAMES.SC_MADIGA, // 2x weight
+      ...COMMUNITY_SURNAMES.BC_GOUD,
+      ...COMMUNITY_SURNAMES.BC_MUDIRAJ,
+      ...COMMUNITY_SURNAMES.BC_PADMASHALI,
+      ...COMMUNITY_SURNAMES.BC_MUNNURU_KAPU,
+      ...COMMUNITY_SURNAMES.OC_REDDY
+    ];
+  }
+
+  // 4. North & Central BC Belts (Karimnagar, Warangal, Sircilla, Jagtial, Nizamabad)
+  if (acNo <= 42) {
+    return [
+      ...COMMUNITY_SURNAMES.BC_MUNNURU_KAPU,
+      ...COMMUNITY_SURNAMES.BC_PADMASHALI,
+      ...COMMUNITY_SURNAMES.BC_GOUD,
+      ...COMMUNITY_SURNAMES.BC_MUDIRAJ,
+      ...COMMUNITY_SURNAMES.SC_MADIGA,
+      ...COMMUNITY_SURNAMES.SC_MALA,
+      ...COMMUNITY_SURNAMES.OC_REDDY,
+      ...COMMUNITY_SURNAMES.OC_VELAMA,
+      ...COMMUNITY_SURNAMES.MUSLIM_MINORITY
+    ];
+  }
+
+  // 5. South & Agrarian Belts (Nalgonda, Suryapet, Mahbubnagar, Khammam)
+  return [
+    ...COMMUNITY_SURNAMES.OC_REDDY,
+    ...COMMUNITY_SURNAMES.BC_YADAV,
+    ...COMMUNITY_SURNAMES.BC_GOUD,
+    ...COMMUNITY_SURNAMES.BC_MUDIRAJ,
+    ...COMMUNITY_SURNAMES.SC_MADIGA,
+    ...COMMUNITY_SURNAMES.SC_MALA,
+    ...COMMUNITY_SURNAMES.ST_LAMBADA,
+    ...COMMUNITY_SURNAMES.MUSLIM_MINORITY
+  ];
 }
 
 const MALE_FIRST_NAMES = [

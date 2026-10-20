@@ -20,6 +20,7 @@ interface ConstituencyCardProps {
   activeYear: Year;
   candidateData?: ConstituencyCandidatesData | null;
   onOpenDossier?: (acNo: number) => void;
+  onOpenBoothData?: (acNo: number) => void;
 }
 
 export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
@@ -28,6 +29,7 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
   activeYear,
   candidateData,
   onOpenDossier,
+  onOpenBoothData,
 }) => {
   if (!selectedAcNo) {
     return (
@@ -201,15 +203,28 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
 
               {/* Feature #5 Micro-Badge: Form-20 Booth Deficit / Buffer */}
               {isActive && y === '2023' && (
-                <div className="mt-2 pt-2 border-t border-indigo-200/40 flex items-center justify-between text-[11px] bg-white/70 p-2 rounded-lg">
-                  <span className="text-slate-600 flex items-center gap-1 font-medium">
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    if (onOpenBoothData && selectedAcNo) {
+                      onOpenBoothData(selectedAcNo);
+                    }
+                  }}
+                  className="mt-2 pt-2 border-t border-indigo-200/40 flex items-center justify-between text-[11px] bg-white/70 hover:bg-indigo-50/90 p-2 rounded-lg w-full text-left cursor-pointer transition-all border border-transparent hover:border-indigo-200 group/booth"
+                  title="Click to jump to dedicated E-Panna & Polling Station Rolls tab"
+                >
+                  <span className="text-slate-600 group-hover/booth:text-indigo-700 flex items-center gap-1.5 font-medium">
                     <Target className="w-3.5 h-3.5 text-indigo-600" />
-                    <strong>{totalBooths}</strong> Polling Stations
+                    <span><strong>{totalBooths}</strong> Polling Stations</span>
+                    <span className="text-[10px] text-indigo-600 font-bold bg-indigo-100/70 px-1.5 py-0.5 rounded group-hover/booth:bg-indigo-600 group-hover/booth:text-white transition-colors">
+                      E-Panna &amp; Rolls ➔
+                    </span>
                   </span>
                   <span className="font-mono text-slate-800 font-bold bg-indigo-50 text-indigo-700 px-2 py-0.5 rounded border border-indigo-200 text-[10px]">
                     ±{votesPerBoothToFlip} votes / booth gap
                   </span>
-                </div>
+                </button>
               )}
             </div>
           );

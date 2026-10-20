@@ -257,7 +257,7 @@ export function getDistrictBorderGrey(districtName: string): string {
   return DISTRICT_GREY_SHADES[districtName]?.border || '#64748b';
 }
 
-export type ActiveTab = 'results' | 'simulations' | 'actions';
+export type ActiveTab = 'results' | 'simulations' | 'actions' | 'booth-data';
 
 export interface CasteProfile {
   sc_madiga: number;

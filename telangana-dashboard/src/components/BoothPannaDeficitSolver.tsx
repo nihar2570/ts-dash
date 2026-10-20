@@ -109,6 +109,7 @@ interface BoothPannaDeficitSolverProps {
   runnerVotes: number;
   geoJsonData?: any;
   standaloneMapOnly?: boolean;
+  onNavigateToBoothData?: (acNo: number, boothNo?: number, viewMode?: string) => void;
 }
 
 export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = ({
@@ -118,13 +119,14 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
   mandals,
   totalValidVotes,
   winnerParty,
-  winnerCandidate,
+  winnerCandidate: _winnerCandidate,
   winnerVotes,
   runnerParty,
-  runnerCandidate,
+  runnerCandidate: _runnerCandidate,
   runnerVotes,
   geoJsonData,
   standaloneMapOnly = false,
+  onNavigateToBoothData,
 }) => {
   // Target Party for Strategy Planning (defaults to Challenger if winner is INC, or INC if winner is BRS/BJP)
   const [targetParty, setTargetParty] = useState<'INC' | 'BRS' | 'BJP'>(() => {
@@ -145,21 +147,6 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
   const [selectedMandalFilter, setSelectedMandalFilter] = useState<string>('all');
   const [visibleBoothCount, setVisibleBoothCount] = useState<number>(standaloneMapOnly ? 50 : 25);
   const [inspectedVoterBooth, setInspectedVoterBooth] = useState<BoothDetail | null>(null);
-
-  // Mandal Master Table Search
-  const [mandalTableSearch, setMandalTableSearch] = useState<string>('');
-
-  const filteredMandalList = useMemo(() => {
-    if (!mandalTableSearch.trim()) return mandals;
-    const q = mandalTableSearch.toLowerCase().trim();
-    return mandals.filter(
-      (m) =>
-        m.name.toLowerCase().includes(q) ||
-        m.dominant_caste.toLowerCase().includes(q) ||
-        m.lead_party.toLowerCase().includes(q) ||
-        (m.status && m.status.toLowerCase().includes(q))
-    );
-  }, [mandals, mandalTableSearch]);
 
   // Constituency Booth Aggregates
   const totalBooths = useMemo(() => {
@@ -439,115 +426,110 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
   const form20PdfUrl = FORM_20_URLS[acNo];
 
   return (
-    <div className={standaloneMapOnly ? 'w-full flex-1 flex flex-col min-h-0' : 'bg-white text-slate-800 rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-xs space-y-5'}>
+    <div className={standaloneMapOnly ? 'w-full flex-1 flex flex-col min-h-0' : 'bg-white text-slate-800 rounded-2xl p-3.5 sm:p-4 border border-slate-200 shadow-xs space-y-3.5'}>
       {!standaloneMapOnly && (
         <>
-          {/* Top Banner & Strategy Party Selector */}
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4">
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="p-1.5 bg-emerald-100 text-emerald-700 rounded-lg">
-                  <Vote className="w-4 h-4" />
-                </span>
-            <h3 className="text-sm font-black text-slate-900 flex items-center gap-2">
-              <span>Form-20 Polling Station Deficit &amp; Panna Pramukh Triage Solver</span>
-            </h3>
-          </div>
-          <p className="text-[11px] text-slate-500 mt-0.5">
-            AC #{acNo} &middot; {district} District &middot; Form-20 booth triage between <strong>{winnerCandidate} ({winnerParty})</strong> and <strong>{runnerCandidate} ({runnerParty})</strong> across all <strong>{totalBooths} polling stations</strong>.
-          </p>
-        </div>
-
-        {/* Target Party Selector */}
-        <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
-          <span className="text-[10px] text-slate-500 px-2 uppercase tracking-wider">War Room Target:</span>
-          {(['INC', 'BRS', 'BJP'] as const).map((p) => {
-            const isSelected = targetParty === p;
-            const pColor = getPartyColor(p);
-            return (
-              <button
-                key={p}
-                onClick={() => setTargetParty(p)}
-                style={isSelected ? { borderColor: targetColor } : undefined}
-                className={`px-3 py-1 rounded-lg transition-all cursor-pointer flex items-center gap-1 border ${
-                  isSelected ? 'bg-white text-slate-900 shadow-xs font-black border-slate-300' : 'border-transparent text-slate-600 hover:text-slate-900'
-                }`}
-              >
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: pColor }} />
-                <span>{p}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* KPI Cards: Polling Stations, Deficit, & Votes-per-Booth */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-        {/* Total Polling Stations */}
-        <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-2xs">
-          <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-            <span className="flex items-center gap-1.5 font-medium">
-              <Vote className="w-3.5 h-3.5 text-indigo-600" />
-              Total Polling Stations
-            </span>
-          </div>
-          <div className="text-2xl font-black text-slate-900 font-mono">{totalBooths}</div>
-          <div className="text-[10px] text-slate-500 mt-0.5 font-mono">
-            ~{avgVotersPerBooth} electors / booth (~{avgPagesPerBooth} pages)
-          </div>
-        </div>
-
-        {/* 2023 Actual Margin */}
-        <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 shadow-2xs">
-          <div className="flex items-center justify-between text-xs text-slate-500 mb-1">
-            <span className="flex items-center gap-1.5 font-medium">
-              <TrendingUp className="w-3.5 h-3.5 text-amber-600" />
-              2023 Margin Gap
-            </span>
-          </div>
-          <div className="text-2xl font-black text-slate-900 font-mono">
-            {actualMargin.toLocaleString()}
-          </div>
-          <div className="text-[10px] text-slate-500 mt-0.5">
-            {targetIsWinner ? (
-              <span className="text-emerald-700 font-bold">Defending Incumbent Lead</span>
-            ) : (
-              <span className="text-rose-700 font-bold">Challenger Net Deficit</span>
-            )}
-          </div>
-        </div>
-
-        {/* Highlight Card: Votes-per-Booth Target Metric */}
-        <div className={`p-3 rounded-xl border col-span-2 sm:col-span-2 shadow-xs flex items-center justify-between gap-3 ${
-          targetIsWinner
-            ? 'bg-gradient-to-r from-emerald-50 via-teal-50 to-indigo-50 border-emerald-300'
-            : 'bg-gradient-to-r from-rose-50 via-orange-50 to-amber-50 border-rose-300'
-        }`}>
-          <div>
-            <div className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
-              <Target className={`w-4 h-4 ${targetIsWinner ? 'text-emerald-600' : 'text-rose-600'}`} />
-              {targetIsWinner ? 'Constituency Defense Buffer' : 'Panna Pramukh Flip Target'}
+          {/* Top Header & Strategy Party Selector Inline */}
+          <div className="flex flex-wrap items-center justify-between gap-2.5 border-b border-slate-200 pb-2.5">
+            <div className="flex items-center gap-2">
+              <span className="p-1.5 bg-emerald-100 text-emerald-700 rounded-lg">
+                <Vote className="w-4 h-4" />
+              </span>
+              <h3 className="text-sm font-black text-slate-900">
+                Form-20 Polling Station Deficit &amp; Panna Pramukh Triage Solver
+              </h3>
             </div>
-            <div className="text-2xl sm:text-3xl font-black text-slate-900 font-mono mt-0.5 flex items-baseline gap-2">
-              <span>{targetIsWinner ? `+${defenseBufferPerBooth}` : `+${votesPerBoothNeeded}`}</span>
-              <span className="text-xs font-normal text-slate-600">votes / booth</span>
+
+            {/* Target Party Selector */}
+            <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
+              <span className="text-[10px] text-slate-500 px-1.5 uppercase tracking-wider">War Room Target:</span>
+              {(['INC', 'BRS', 'BJP'] as const).map((p) => {
+                const isSelected = targetParty === p;
+                const pColor = getPartyColor(p);
+                return (
+                  <button
+                    key={p}
+                    onClick={() => setTargetParty(p)}
+                    style={isSelected ? { borderColor: targetColor } : undefined}
+                    className={`px-2.5 py-0.5 rounded-lg transition-all cursor-pointer flex items-center gap-1 border ${
+                      isSelected ? 'bg-white text-slate-900 shadow-xs font-black border-slate-300' : 'border-transparent text-slate-600 hover:text-slate-900'
+                    }`}
+                  >
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: pColor }} />
+                    <span>{p}</span>
+                  </button>
+                );
+              })}
             </div>
-            <p className="text-[11px] text-slate-600 mt-0.5">
-              {targetIsWinner
-                ? `You have a comfortable buffer of ${defenseBufferPerBooth} votes ahead in every booth across ${acName}.`
-                : `Flipping just ${votesPerBoothNeeded} undecided voters per polling station wins this entire constituency!`}
-            </p>
           </div>
 
-          <div className="text-right shrink-0">
-            <span className={`text-[10px] font-mono font-bold px-2.5 py-1 rounded-full border ${
-              targetIsWinner ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-rose-100 text-rose-800 border-rose-300'
+          {/* Compact KPI Cards: Polling Stations, Deficit, & Votes-per-Booth */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+            {/* Total Polling Stations */}
+            <div className="bg-slate-50 py-2.5 px-3 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+              <div className="text-xs text-slate-500 flex items-center gap-1.5 font-medium">
+                <Vote className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                <span className="truncate">Total Polling Stations</span>
+              </div>
+              <div className="text-2xl font-black text-slate-900 font-mono leading-none my-1">
+                {totalBooths}
+              </div>
+              <div className="text-[10px] text-slate-500 font-mono truncate">
+                ~{avgVotersPerBooth} electors &middot; ~{avgPagesPerBooth} pages
+              </div>
+            </div>
+
+            {/* 2023 Actual Margin */}
+            <div className="bg-slate-50 py-2.5 px-3 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+              <div className="text-xs text-slate-500 flex items-center gap-1.5 font-medium">
+                <TrendingUp className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                <span className="truncate">2023 Margin Gap</span>
+              </div>
+              <div className="text-2xl font-black text-slate-900 font-mono leading-none my-1">
+                {actualMargin.toLocaleString()}
+              </div>
+              <div className="text-[10px] truncate">
+                {targetIsWinner ? (
+                  <span className="text-emerald-700 font-bold">Defending Incumbent Lead</span>
+                ) : (
+                  <span className="text-rose-700 font-bold">Challenger Net Deficit</span>
+                )}
+              </div>
+            </div>
+
+            {/* Highlight Card: Compact Votes-per-Booth Target Metric */}
+            <div className={`py-2 px-3.5 rounded-xl border col-span-2 sm:col-span-2 shadow-xs flex flex-col justify-between ${
+              targetIsWinner
+                ? 'bg-gradient-to-r from-emerald-50 via-teal-50 to-indigo-50 border-emerald-300'
+                : 'bg-gradient-to-r from-rose-50 via-orange-50 to-amber-50 border-rose-300'
             }`}>
-              {targetIsWinner ? 'DEFENSE ACTIVE' : 'FLIP ROADMAP'}
-            </span>
+              <div className="flex items-center justify-between gap-2">
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-700 flex items-center gap-1.5">
+                  <Target className={`w-3.5 h-3.5 ${targetIsWinner ? 'text-emerald-600' : 'text-rose-600'}`} />
+                  <span>{targetIsWinner ? 'Constituency Defense Buffer' : 'Panna Pramukh Flip Target'}</span>
+                </div>
+                <span className={`text-[9px] font-mono font-bold px-2 py-0.5 rounded-full border ${
+                  targetIsWinner ? 'bg-emerald-100 text-emerald-800 border-emerald-300' : 'bg-rose-100 text-rose-800 border-rose-300'
+                }`}>
+                  {targetIsWinner ? 'DEFENSE ACTIVE' : 'FLIP ROADMAP'}
+                </span>
+              </div>
+
+              <div className="flex items-baseline justify-between gap-3 mt-1">
+                <div className="flex items-baseline gap-1.5 shrink-0">
+                  <span className="text-2xl font-black text-slate-900 font-mono leading-none">
+                    {targetIsWinner ? `+${defenseBufferPerBooth}` : `+${votesPerBoothNeeded}`}
+                  </span>
+                  <span className="text-xs font-semibold text-slate-600">votes / booth</span>
+                </div>
+                <p className="text-[11px] text-slate-600 truncate text-right">
+                  {targetIsWinner
+                    ? `Comfortable buffer of +${defenseBufferPerBooth} votes ahead across all ${totalBooths} booths`
+                    : `Flipping ~${votesPerBoothNeeded} undecided voters per booth wins constituency!`}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
       {/* Form-20 Booth Triage Segmentation (Interactive Cards) */}
       <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
@@ -690,6 +672,28 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
               <span className="text-[10px] bg-indigo-500/20 text-indigo-400 px-2 py-0.5 rounded-full font-mono border border-indigo-500/30">
                 Target: {targetParty}
               </span>
+              <button
+                type="button"
+                onClick={() => {
+                  if (onNavigateToBoothData) {
+                    onNavigateToBoothData(acNo, 1, 'ac-plan');
+                  } else {
+                    const url = new URL(window.location.origin + window.location.pathname);
+                    url.searchParams.set('tab', 'booth-data');
+                    url.searchParams.set('ac', String(acNo));
+                    url.searchParams.set('view', 'ac-plan');
+                    window.open(url.toString(), '_blank');
+                  }
+                }}
+                className={`px-2.5 py-1 rounded-lg border text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs ${
+                  theme === 'light'
+                    ? 'bg-amber-50 hover:bg-amber-100 text-amber-900 border-amber-300'
+                    : 'bg-amber-950/80 hover:bg-amber-900 text-amber-200 border-amber-600'
+                }`}
+                title="Open 30/60/90-Day AC-Wide Padayatra Campaign Itinerary"
+              >
+                <span>🚶‍♂️ AC Padayatra Plan (30/60/90d) ↗</span>
+              </button>
             </div>
 
             <div className="flex items-center gap-2 flex-wrap">
@@ -764,25 +768,30 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                 </button>
               </div>
 
-              {/* Full Page in New Tab Button (hidden in standalone map mode) */}
+              {/* Standalone E-Panna & Rolls Tab Button */}
               {!standaloneMapOnly && (
                 <button
                   type="button"
                   onClick={() => {
-                    const url = new URL(window.location.origin + window.location.pathname);
-                    url.searchParams.set('dossier', String(acNo));
-                    url.searchParams.set('view', 'booth-map');
-                    window.open(url.toString(), '_blank');
+                    if (onNavigateToBoothData) {
+                      onNavigateToBoothData(acNo, selectedMapBoothNo || undefined);
+                    } else {
+                      const url = new URL(window.location.origin + window.location.pathname);
+                      url.searchParams.set('tab', 'booth-data');
+                      url.searchParams.set('ac', String(acNo));
+                      if (selectedMapBoothNo) url.searchParams.set('booth', String(selectedMapBoothNo));
+                      window.open(url.toString(), '_blank');
+                    }
                   }}
                   className={`flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold rounded-lg border transition-all cursor-pointer ${
                     theme === 'light'
-                      ? 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300 shadow-2xs'
-                      : 'bg-slate-800 hover:bg-indigo-900/60 text-slate-200 hover:text-white border-slate-700 shadow-xs'
+                      ? 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200 shadow-2xs'
+                      : 'bg-indigo-950/80 hover:bg-indigo-900 text-indigo-200 hover:text-white border-indigo-700 shadow-xs'
                   }`}
-                  title="Open Polling Station Triage Map Box in dedicated standalone tab"
+                  title="Open dedicated standalone tab for Polling Station Rolls & E-Panna"
                 >
-                  <ExternalLink className="w-3.5 h-3.5 text-indigo-400" />
-                  <span className="hidden sm:inline">Open Full Page Map ↗</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-indigo-500" />
+                  <span className="hidden sm:inline">Open E-Panna &amp; Rolls Standalone Tab ↗</span>
                 </button>
               )}
 
@@ -958,6 +967,17 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                   selectedBoothNo={selectedMapBoothNo}
                   onSelectBooth={(b) => setSelectedMapBoothNo(b ? b.boothNo : null)}
                   onViewVoterRoll={(b) => setInspectedVoterBooth(b)}
+                  onOpenStandaloneBooth={(b) => {
+                    if (onNavigateToBoothData) {
+                      onNavigateToBoothData(acNo, b.boothNo);
+                    } else {
+                      const url = new URL(window.location.origin + window.location.pathname);
+                      url.searchParams.set('tab', 'booth-data');
+                      url.searchParams.set('ac', String(acNo));
+                      url.searchParams.set('booth', String(b.boothNo));
+                      window.open(url.toString(), '_blank');
+                    }
+                  }}
                   theme={theme}
                   onThemeChange={setTheme}
                   isFullPageMap={standaloneMapOnly}
@@ -1037,16 +1057,49 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                             <div className="flex items-center gap-2">
                               <button
                                 type="button"
-                                onClick={() => setInspectedVoterBooth(b)}
-                                className={`px-2 py-0.5 rounded border text-[10px] font-medium flex items-center gap-1 cursor-pointer transition-colors ${
+                                onClick={() => {
+                                  if (onNavigateToBoothData) {
+                                    onNavigateToBoothData(acNo, b.boothNo);
+                                  } else {
+                                    const url = new URL(window.location.origin + window.location.pathname);
+                                    url.searchParams.set('tab', 'booth-data');
+                                    url.searchParams.set('ac', String(acNo));
+                                    url.searchParams.set('booth', String(b.boothNo));
+                                    window.open(url.toString(), '_blank');
+                                  }
+                                }}
+                                className={`px-2 py-0.5 rounded border text-[10px] font-bold flex items-center gap-1 cursor-pointer transition-colors ${
                                   theme === 'light'
                                     ? 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200'
                                     : 'bg-indigo-950/80 hover:bg-indigo-900 text-indigo-300 border-indigo-700'
                                 }`}
-                                title="Inspect individual voter names, EPIC IDs, and Panna pages"
+                                title="Open full voter roll, EPIC IDs, and Panna pages in standalone tab"
                               >
                                 <Users className="w-3 h-3 text-indigo-500" />
-                                <span>Voters ({b.electorate})</span>
+                                <span>E-Roll ({b.electorate}) ↗</span>
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => {
+                                  if (onNavigateToBoothData) {
+                                    onNavigateToBoothData(acNo, b.boothNo, 'padayatra');
+                                  } else {
+                                    const url = new URL(window.location.origin + window.location.pathname);
+                                    url.searchParams.set('tab', 'booth-data');
+                                    url.searchParams.set('ac', String(acNo));
+                                    url.searchParams.set('booth', String(b.boothNo));
+                                    url.searchParams.set('view', 'padayatra');
+                                    window.open(url.toString(), '_blank');
+                                  }
+                                }}
+                                className={`px-2 py-0.5 rounded border text-[10px] font-bold flex items-center gap-1 cursor-pointer transition-colors ${
+                                  theme === 'light'
+                                    ? 'bg-amber-50 hover:bg-amber-100 text-amber-800 border-amber-300'
+                                    : 'bg-amber-950/80 hover:bg-amber-900 text-amber-200 border-amber-700'
+                                }`}
+                                title="Generate 1-click MLA Padayatra walking route & door-to-door talking points"
+                              >
+                                <span>🚶‍♂️ Padayatra Plan ↗</span>
                               </button>
                               <button
                                 type="button"
@@ -1344,124 +1397,6 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
               +{simulatedImpact.totalSimulatedGain.toLocaleString()}
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Mandal-by-Mandal Master Ground Roster & Panna Quota Table */}
-      <div className="border border-slate-200 rounded-xl overflow-hidden bg-white shadow-2xs">
-        <div className="bg-slate-50 px-4 py-3 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2.5 text-xs">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-slate-900">
-              📋 Mandal Ground Roster &amp; Panna Pramukh Allocation ({filteredMandalList.length} Mandals)
-            </span>
-            <span className="text-[10px] bg-emerald-100 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded-full font-mono font-bold">
-              Live Field Allocation
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2.5">
-            {/* Search Input */}
-            <div className="relative">
-              <Search className="w-3.5 h-3.5 absolute left-2.5 top-2 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search mandal, caste, party..."
-                value={mandalTableSearch}
-                onChange={(e) => setMandalTableSearch(e.target.value)}
-                className="w-48 sm:w-56 bg-white border border-slate-300 rounded-lg pl-8 pr-7 py-1 text-xs text-slate-900 placeholder-slate-400 focus:outline-hidden"
-              />
-              {mandalTableSearch && (
-                <button
-                  onClick={() => setMandalTableSearch('')}
-                  className="absolute right-2 top-2 text-slate-400 hover:text-slate-700"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              )}
-            </div>
-            <span className="text-[11px] text-slate-500 font-mono hidden sm:inline">
-              Quota: {pannaConversionTarget} / booth
-            </span>
-          </div>
-        </div>
-
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs border-collapse">
-            <thead>
-              <tr className="bg-slate-100/90 text-slate-600 font-semibold uppercase tracking-wider text-[10px] border-b border-slate-200">
-                <th className="py-2.5 px-3">Mandal / Circle</th>
-                <th className="py-2.5 px-3 text-right">Booths</th>
-                <th className="py-2.5 px-3 text-right">Electorate</th>
-                <th className="py-2.5 px-3 text-right">Turnout %</th>
-                <th className="py-2.5 px-3 text-right">2023 Lead Margin</th>
-                <th className="py-2.5 px-3">Dominant Community</th>
-                <th className="py-2.5 px-3 text-center">Field Status</th>
-                <th className="py-2.5 px-3 text-right font-bold text-emerald-700">Assigned Panna Quota</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-slate-100 font-mono text-[11px]">
-              {filteredMandalList.map((m) => {
-                const pannaQuota = Math.round(m.booths * pannaConversionTarget);
-                const mColor = getPartyColor(m.lead_party);
-                const isTossUp = m.status === 'TOSS_UP';
-                const dotCount = Math.min(4, Math.max(1, m.margin < 1000 ? 1 : m.margin < 2000 ? 2 : m.margin < 3500 ? 3 : 4));
-
-                return (
-                  <tr key={m.mandal_id} className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-2.5 px-3 font-bold text-slate-900 font-sans">{m.name}</td>
-                    <td className="py-2.5 px-3 text-right text-slate-600 font-mono">{m.booths}</td>
-                    <td className="py-2.5 px-3 text-right text-slate-600 font-mono">{m.electorate ? m.electorate.toLocaleString() : '—'}</td>
-                    <td className="py-2.5 px-3 text-right text-indigo-700 font-bold font-mono">{m.turnout_pct}%</td>
-                    <td className="py-2.5 px-3 text-right font-mono font-bold">
-                      <div className="flex items-center justify-end gap-1.5">
-                        {/* Lead Intensity Dots */}
-                        <div
-                          className="flex items-center gap-1 shrink-0"
-                          title={`Lead intensity: +${m.margin.toLocaleString()} votes (${dotCount} / 4)`}
-                        >
-                          {Array.from({ length: dotCount }).map((_, dotIdx) => (
-                            <span
-                              key={dotIdx}
-                              className="w-1.5 h-1.5 rounded-full inline-block shadow-xs"
-                              style={{ backgroundColor: mColor }}
-                            />
-                          ))}
-                        </div>
-                        <span style={{ color: mColor }}>
-                          {m.lead_party} +{m.margin.toLocaleString()}
-                        </span>
-                      </div>
-                    </td>
-                    <td className="py-2.5 px-3 text-slate-700 font-sans">
-                      <span className="font-medium text-slate-900">{m.dominant_caste}</span>{' '}
-                      <span className="text-[10px] text-slate-400 font-mono">({m.dominant_caste_pct}%)</span>
-                    </td>
-                    <td className="py-2.5 px-3 text-center">
-                      {isTossUp ? (
-                        <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
-                          TOSS-UP
-                        </span>
-                      ) : (
-                        <span
-                          className="px-2 py-0.5 rounded text-[10px] font-bold border"
-                          style={{
-                            backgroundColor: `${mColor}15`,
-                            color: mColor,
-                            borderColor: `${mColor}35`,
-                          }}
-                        >
-                          {m.status.replace('_', ' ')}
-                        </span>
-                      )}
-                    </td>
-                    <td className="py-2.5 px-3 text-right font-black text-emerald-700">
-                      +{pannaQuota.toLocaleString()} votes
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
         </div>
       </div>
         </>

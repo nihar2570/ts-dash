@@ -8,6 +8,7 @@ import {
   Layers,
   Users,
   Compass,
+  FileText,
 } from 'lucide-react';
 import type { BoothDetail } from './BoothPannaDeficitSolver';
 import { getPartyColor } from '../types';
@@ -24,6 +25,7 @@ export interface BoothTriageMapProps {
   selectedBoothNo?: number | null;
   onSelectBooth?: (booth: BoothDetail | null) => void;
   onViewVoterRoll?: (booth: BoothDetail) => void;
+  onOpenStandaloneBooth?: (booth: BoothDetail) => void;
   theme?: 'dark' | 'light';
   onThemeChange?: (theme: 'dark' | 'light') => void;
   isFullPageMap?: boolean;
@@ -37,6 +39,7 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
   selectedBoothNo,
   onSelectBooth,
   onViewVoterRoll,
+  onOpenStandaloneBooth,
   theme: controlledTheme,
   isFullPageMap = false,
 }) => {
@@ -790,22 +793,43 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
               </span>
             </div>
 
-            {/* View E-Roll & Panna Register Button */}
+            {/* View in Dedicated Standalone E-Panna & Rolls Tab */}
             <button
               type="button"
               onClick={() => {
-                if (onViewVoterRoll) onViewVoterRoll(activeBooth);
+                if (onOpenStandaloneBooth) {
+                  onOpenStandaloneBooth(activeBooth);
+                } else {
+                  const url = new URL(window.location.origin + window.location.pathname);
+                  url.searchParams.set('tab', 'booth-data');
+                  url.searchParams.set('ac', String(acNo));
+                  url.searchParams.set('booth', String(activeBooth.boothNo));
+                  window.open(url.toString(), '_blank');
+                }
               }}
-              className={`w-full py-2 px-3 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer mt-1 ${
-                isLight
-                  ? 'bg-indigo-600 hover:bg-indigo-700 text-white'
-                  : 'bg-indigo-600 hover:bg-indigo-500 text-white'
-              }`}
-              title="Inspect individual voter names, EPIC IDs, and Panna pages for this booth"
+              className="w-full py-2 px-3 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer mt-1 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white group"
+              title="Open full E-Panna, voter register, and household caste intelligence in dedicated standalone tab"
             >
-              <Users className="w-3.5 h-3.5" />
-              <span>View E-Roll &amp; Panna Register ({activeBooth.electorate} Electors)</span>
+              <FileText className="w-3.5 h-3.5 text-indigo-200 group-hover:scale-110 transition-transform" />
+              <span>Open in E-Panna &amp; Rolls Standalone Tab ({activeBooth.electorate} Electors) ↗</span>
             </button>
+
+            {/* Optional Quick Overlay Modal */}
+            {onViewVoterRoll && (
+              <button
+                type="button"
+                onClick={() => onViewVoterRoll(activeBooth)}
+                className={`w-full py-1.5 px-3 rounded-lg text-[11px] font-semibold transition-all border flex items-center justify-center gap-1.5 cursor-pointer mt-1 ${
+                  isLight
+                    ? 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300'
+                    : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-600'
+                }`}
+                title="Quick preview modal"
+              >
+                <Users className="w-3.5 h-3.5 text-slate-400" />
+                <span>Quick Preview Modal</span>
+              </button>
+            )}
           </div>
         )}
       </div>

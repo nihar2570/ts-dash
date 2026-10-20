@@ -14,17 +14,30 @@ import { ConstituencyTable } from './components/ConstituencyTable';
 import { ConstituencyDossier } from './components/ConstituencyDossier';
 import { SimulationsView } from './components/SimulationsView';
 import { ActionsView } from './components/ActionsView';
+import { BoothDataView } from './components/BoothDataView';
 import { ExecutiveBriefingModal } from './components/ExecutiveBriefingModal';
 import { MapPin } from 'lucide-react';
 import { HelpModal } from './components/HelpModal';
 import { HeaderBar } from './components/HeaderBar';
 
 export const App: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<ActiveTab>('results');
+  const [activeTab, setActiveTab] = useState<ActiveTab>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get('tab');
+      if (tabParam === 'booth-data' || tabParam === 'booth' || tabParam === 'epanna') {
+        return 'booth-data';
+      }
+      if (tabParam === 'simulations' || tabParam === 'actions') {
+        return tabParam;
+      }
+    }
+    return 'results';
+  });
   const [selectedYear, setSelectedYear] = useState<Year>('2023');
   const [viewMode, setViewMode] = useState<ViewMode>('winner');
   const [isExecutiveBriefingOpen, setIsExecutiveBriefingOpen] = useState(false);
-const [helpOpen, setHelpOpen] = useState(false);
+  const [helpOpen, setHelpOpen] = useState(false);
   const [selectedAcNo, setSelectedAcNo] = useState<number | null>(() => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
@@ -33,9 +46,39 @@ const [helpOpen, setHelpOpen] = useState(false);
         const ac = parseInt(dossierParam, 10);
         if (!isNaN(ac) && ac >= 1 && ac <= 119) return ac;
       }
+      const acParam = params.get('ac');
+      if (acParam) {
+        const ac = parseInt(acParam, 10);
+        if (!isNaN(ac) && ac >= 1 && ac <= 119) return ac;
+      }
     }
     return 40; // Default to Gajwel (#40)
   });
+
+  const [selectedBoothNo, setSelectedBoothNo] = useState<number>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      const b = parseInt(params.get('booth') || '', 10);
+      if (!isNaN(b) && b >= 1) return b;
+    }
+    return 1;
+  });
+
+  const handleNavigateToBoothData = (acNo: number, boothNo?: number, viewMode?: string) => {
+    setSelectedAcNo(acNo);
+    if (boothNo && boothNo >= 1) {
+      setSelectedBoothNo(boothNo);
+    }
+    setActiveTab('booth-data');
+    if (typeof window !== 'undefined') {
+      const url = new URL(window.location.href);
+      url.searchParams.set('tab', 'booth-data');
+      url.searchParams.set('ac', String(acNo));
+      if (boothNo) url.searchParams.set('booth', String(boothNo));
+      if (viewMode) url.searchParams.set('view', viewMode);
+      window.history.pushState({}, '', url.toString());
+    }
+  };
 
   const [electionData, setElectionData] = useState<ElectionData | null>(null);
   const [geoJsonData, setGeoJsonData] = useState<any | null>(null);
@@ -162,6 +205,14 @@ const [helpOpen, setHelpOpen] = useState(false);
           url.searchParams.delete('tab');
           window.location.href = url.pathname + (url.search ? url.search : '');
         }}
+        onNavigateToBoothData={(acNo, boothNo, viewMode) => {
+          const url = new URL(window.location.origin + window.location.pathname);
+          url.searchParams.set('tab', 'booth-data');
+          url.searchParams.set('ac', String(acNo));
+          if (boothNo) url.searchParams.set('booth', String(boothNo));
+          if (viewMode) url.searchParams.set('view', viewMode);
+          window.open(url.toString(), '_blank');
+        }}
       />
     );
   }
@@ -229,6 +280,7 @@ const [helpOpen, setHelpOpen] = useState(false);
                   activeYear={selectedYear}
                   candidateData={candidatesData && selectedAcNo ? candidatesData[String(selectedAcNo)] : null}
                   onOpenDossier={(acNo) => handleOpenDossier(acNo || selectedAcNo || 40)}
+                  onOpenBoothData={handleNavigateToBoothData}
                 />
               </div>
             </div>
@@ -264,6 +316,20 @@ const [helpOpen, setHelpOpen] = useState(false);
             data={seeepcData}
             initialSelectedAc={selectedAcNo}
             onOpenDossier={(acNo) => handleOpenDossier(acNo)}
+          />
+        )}
+
+        {/* Booth Data Tab: E-Panna, Electoral Rolls & Onomastic Caste Intelligence */}
+        {activeTab === 'booth-data' && (
+          <BoothDataView
+            selectedAcNo={selectedAcNo || 40}
+            onSelectAc={(acNo) => {
+              setSelectedAcNo(acNo);
+              setSelectedBoothNo(1);
+            }}
+            initialBoothNo={selectedBoothNo}
+            onSelectBooth={setSelectedBoothNo}
+            seeepcData={seeepcData}
           />
         )}
       </main>

@@ -116,6 +116,22 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
             >
               <span>🎯 Actions &amp; Playbook</span>
             </button>
+            <button
+              onClick={() => setActiveTab('booth-data')}
+              className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer ${
+                activeTab === 'booth-data'
+                  ? 'bg-white text-indigo-700 shadow-xs font-black'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <span>📋 E-Panna &amp; Rolls</span>
+              <span
+                className="text-[9px] bg-emerald-50 text-emerald-700 px-1.5 py-0.2 rounded-full border border-emerald-200 font-extrabold"
+                title="Statewide booth rolls across all 119 constituencies"
+              >
+                119 ACs
+              </span>
+            </button>
           </div>
 
           {/* Right side: Help & Preferences */}
