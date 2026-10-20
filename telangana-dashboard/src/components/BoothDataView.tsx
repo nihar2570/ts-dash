@@ -500,7 +500,7 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
   };
 
   const handleShareWhatsApp = (stop: PadayatraHouseStop) => {
-    const text = `🚶‍♂️ *MLA Padayatra Brief - Polling Station #${activeBoothMeta?.boothNo || selectedBoothNo}*
+    const text = `🚶‍♂️ *MLA Padayatra Brief - Polling Station #${stop.boothNo || activeBoothMeta?.boothNo || selectedBoothNo}*
 *Door #${stop.doorNumber}* | ${stop.section}
 *Head:* ${stop.headOfHouse} (${stop.householdCaste.casteName} ~ ${stop.householdCaste.probabilityPercent})
 *Electors:* ${stop.voterCount} (${stop.persuadability})

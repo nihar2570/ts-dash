@@ -3,7 +3,7 @@
 
 import type { ElectorRecord } from './voterRollService';
 import { predictHouseholdCaste, type CastePrediction } from './casteClassifierService';
-import { CONSTITUENCY_TOPICS, type ACKeyIssue } from './constituencyTopics';
+import { CONSTITUENCY_TOPICS } from './constituencyTopics';
 
 export interface PadayatraVoter {
   slNo: number;
@@ -36,6 +36,7 @@ export interface PadayatraTalkingPoints {
 
 export interface PadayatraHouseStop {
   stopNumber: number;
+  boothNo: number;
   doorNumber: string;
   section: string;
   voterCount: number;
@@ -310,6 +311,7 @@ export function planPadayatraRoute(
 
     stops.push({
       stopNumber: 0, // Assigned after sorting
+      boothNo,
       doorNumber,
       section: head?.section || 'Main Grama Basti',
       voterCount: members.length,
