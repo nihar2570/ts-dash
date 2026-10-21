@@ -35,7 +35,6 @@ interface SwingStudioModalProps {
     jspDiff?: number;
     bjpDiff?: number;
     incDiff?: number;
-    brsDiff?: number;
   };
   onApplyPreset?: (presetKey: string) => void;
   activePreset?: string;

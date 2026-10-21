@@ -1,4 +1,4 @@
-// Telangana Onomastic Caste & Community Classifier Service
+// Andhra Pradesh Onomastic Caste & Community Classifier Service
 // Uses Bayesian Surname Inference + SEEEPC Vol-4 Demographic Priors + Household Clustering
 
 export type CasteCategory = 'BC' | 'SC' | 'ST' | 'OC' | 'Minority';
@@ -60,8 +60,8 @@ interface ClanRecord {
   baseProb: number;
 }
 
-// High-confidence Telangana Clan Names dictionary
-const TELANGANA_CLAN_LEXICON: Record<string, ClanRecord> = {
+// High-confidence Andhra Pradesh Clan & Community Names dictionary
+const ANDHRA_CLAN_LEXICON: Record<string, ClanRecord> = {
   // ST Adivasi / Gond / Koya clans (North & Agency belts)
   mesram: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.97 },
   athram: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.97 },
@@ -206,15 +206,21 @@ export function predictCaste(
   fullName: string,
   relativeName?: string,
   dominantMandalCaste?: string
-): CastePrediction {
+): CastePrediction | null {
   const cleanName = (fullName || '').trim().toLowerCase();
   const cleanRel = (relativeName || '').trim().toLowerCase();
+
+  // If voter data is placeholder / unextracted, do not synthesize caste predictions
+  if (!cleanName || cleanName.includes('data to be added') || cleanName === 'resident' || cleanName === 'voter') {
+    return null;
+  }
+
   const tokens = [...cleanName.split(/\s+/), ...cleanRel.split(/\s+/)].filter(Boolean);
 
   // 1. Direct Clan Lexicon Lookup (first word / surname)
   for (const token of tokens) {
-    if (TELANGANA_CLAN_LEXICON[token]) {
-      const entry = TELANGANA_CLAN_LEXICON[token];
+    if (ANDHRA_CLAN_LEXICON[token]) {
+      const entry = ANDHRA_CLAN_LEXICON[token];
       return createPrediction(entry.caste, entry.category, entry.subCategory, entry.baseProb, `Clan Name Match (${token.toUpperCase()})`);
     }
   }
@@ -324,12 +330,50 @@ export function predictHouseholdCaste(
   members: Array<{ name: string; relativeName?: string }>,
   dominantMandalCaste?: string
 ): CastePrediction {
-  if (!members || members.length === 0) {
-    return predictCaste('Voter', undefined, dominantMandalCaste);
+  const validMembers = (members || []).filter(
+    (m) => m.name && m.name !== 'Data to be added' && !m.name.includes('Data to be added')
+  );
+
+  if (validMembers.length === 0) {
+    return {
+      casteName: 'Data to be added',
+      category: 'OC',
+      subCategory: 'General',
+      probability: 0,
+      probabilityPercent: '—',
+      confidenceTier: 'MODERATE',
+      color: {
+        bg: 'bg-slate-50',
+        text: 'text-slate-400',
+        border: 'border-slate-200',
+        badge: 'bg-slate-100 text-slate-500 border-slate-200 font-mono italic',
+      },
+      sourceBasis: 'Pending official voter roll data extraction',
+    };
   }
 
   // Predict each member
-  const preds = members.map((m) => predictCaste(m.name, m.relativeName, dominantMandalCaste));
+  const preds = validMembers
+    .map((m) => predictCaste(m.name, m.relativeName, dominantMandalCaste))
+    .filter(Boolean) as CastePrediction[];
+
+  if (preds.length === 0) {
+    return {
+      casteName: 'Data to be added',
+      category: 'OC',
+      subCategory: 'General',
+      probability: 0,
+      probabilityPercent: '—',
+      confidenceTier: 'MODERATE',
+      color: {
+        bg: 'bg-slate-50',
+        text: 'text-slate-400',
+        border: 'border-slate-200',
+        badge: 'bg-slate-100 text-slate-500 border-slate-200 font-mono italic',
+      },
+      sourceBasis: 'Pending official voter roll data extraction',
+    };
+  }
 
   // Tally votes by caste name
   const tally: Record<string, { count: number; bestPred: CastePrediction }> = {};
@@ -354,7 +398,7 @@ export function predictHouseholdCaste(
   }
 
   // Boost confidence if multiple family members agree
-  const boostedProb = members.length > 1
+  const boostedProb = validMembers.length > 1
     ? Math.min(0.98, best.probability + 0.05)
     : best.probability;
 
@@ -363,7 +407,7 @@ export function predictHouseholdCaste(
     best.category,
     best.subCategory,
     boostedProb,
-    `Household Multi-Member Consensus (${maxCount}/${members.length} agree)`
+    `Household Multi-Member Consensus (${maxCount}/${validMembers.length} agree)`
   );
 }
 

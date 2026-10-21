@@ -709,7 +709,7 @@ topTargets
   )
   .join('\n\n')}
 
-Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
+Generated via Andhra Pradesh Assembly SEEEPC Strategic Decision Engine.`;
   }, [
     battlegroundList,
     targetParty,
@@ -727,7 +727,7 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `Telangana_Strategic_Campaign_Plan_${targetParty}_${new Date().toISOString().slice(0, 10)}.txt`;
+    link.download = `Andhra_Pradesh_Strategic_Campaign_Plan_${targetParty}_${new Date().toISOString().slice(0, 10)}.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

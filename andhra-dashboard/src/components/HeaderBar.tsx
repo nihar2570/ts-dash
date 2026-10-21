@@ -99,12 +99,6 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
               }`}
             >
               <span>🔮 Simulations</span>
-              <span
-                className="text-[9px] bg-indigo-50 text-indigo-600 px-1.5 py-0.2 rounded-full border border-indigo-200 font-extrabold"
-                title="Andhra Pradesh Demographic & Caste Survey"
-              >
-                AP DEMO
-              </span>
             </button>
             <button
               onClick={() => setActiveTab('actions')}

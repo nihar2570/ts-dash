@@ -809,10 +809,10 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
               <div className="flex items-center gap-2">
                 <span className="font-bold text-slate-900 flex items-center gap-1.5">
                   <Building2 className="w-4 h-4 text-indigo-600" />
-                  Mandal Administrative Directory ({mandals.length} Mandals / GHMC Circles)
+                  Mandal Administrative Directory ({mandals.length} Mandals / Revenue Circles)
                 </span>
                 <span className="text-[10px] bg-indigo-50 text-indigo-700 border border-indigo-200 px-2 py-0.5 rounded-full font-mono font-bold">
-                  Delimitation 2008 &amp; TS Revenue
+                  Delimitation 2008 &amp; AP Revenue
                 </span>
               </div>
 
@@ -969,10 +969,10 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
             district={data.district}
             mandals={mandals}
             totalValidVotes={data.total_valid_votes}
-            winnerParty={data.candidates[0]?.party || 'INC'}
+            winnerParty={data.candidates[0]?.party || 'TDP'}
             winnerCandidate={data.candidates[0]?.name || 'Winner'}
             winnerVotes={data.candidates[0]?.votes || 0}
-            runnerParty={data.candidates[1]?.party || 'BRS'}
+            runnerParty={data.candidates[1]?.party || 'YSRCP'}
             runnerCandidate={data.candidates[1]?.name || 'Runner-up'}
             runnerVotes={data.candidates[1]?.votes || 0}
             geoJsonData={geoJsonData}
@@ -1014,7 +1014,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                         </span>
                       </div>
                       <p className="text-xs text-slate-300">
-                        Door-to-door enumeration data by Directorate of Economics &amp; Statistics (DES), Government of Telangana.
+                        Door-to-door enumeration data by Directorate of Economics &amp; Statistics (DES), Government of Andhra Pradesh.
                       </p>
                     </div>
 
@@ -1329,7 +1329,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                           </div>
                         </div>
                         <div className="mt-3 pt-2 border-t border-slate-100 text-[11px] text-slate-600">
-                          <span className="font-semibold text-slate-700">Campaign Levers:</span> TSPSC recruitments, job calendar, tech allowances, free RTC bus travel.
+                          <span className="font-semibold text-slate-700">Campaign Levers:</span> APPSC recruitments, Mega DSC, job calendar, skill training, Stree Shakti free RTC bus travel.
                         </div>
                       </div>
 
@@ -1569,10 +1569,10 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
         {/* Footer */}
         <div className="px-6 py-3 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between text-xs text-slate-500">
           <div>
-            Data Sources: Election Commission of India (ECI Form 20) &middot; Association for Democratic Reforms (ADR) &middot; DES Telangana (SEEEPC Survey Vol-IV)
+            Data Sources: Election Commission of India (ECI Form 20) &middot; Association for Democratic Reforms (ADR) &middot; DES Andhra Pradesh (SEEEPC Survey Vol-IV)
           </div>
           <div className="text-slate-400">
-            Telangana Assembly Constituency Intelligence Dossier
+            Andhra Pradesh Assembly Constituency Intelligence Dossier
           </div>
         </div>
       </>
@@ -1641,7 +1641,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold transition-all cursor-pointer shadow-xs"
-                  title="View Certified Official Form-20 Polling Station PDF from CEO Telangana"
+                  title="View Certified Official Form-20 Polling Station PDF from CEO Andhra Pradesh"
                 >
                   <FileText className="w-3.5 h-3.5" />
                   <span className="hidden sm:inline">Official</span> Form-20 PDF
@@ -1659,10 +1659,10 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
               district={data.district}
               mandals={mandals}
               totalValidVotes={data.total_valid_votes}
-              winnerParty={data.candidates[0]?.party || 'INC'}
+              winnerParty={data.candidates[0]?.party || 'TDP'}
               winnerCandidate={data.candidates[0]?.name || 'Winner'}
               winnerVotes={data.candidates[0]?.votes || 0}
-              runnerParty={data.candidates[1]?.party || 'BRS'}
+              runnerParty={data.candidates[1]?.party || 'YSRCP'}
               runnerCandidate={data.candidates[1]?.name || 'Runner-up'}
               runnerVotes={data.candidates[1]?.votes || 0}
               geoJsonData={geoJsonData}
@@ -1696,7 +1696,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
               </span>
               <h1 className="text-lg sm:text-xl font-black tracking-tight text-slate-900">{data.ac_name}</h1>
               <span className="text-xs bg-slate-100 text-slate-700 px-2.5 py-0.5 rounded-full border border-slate-200 font-medium">
-                {data.district} District (33 TS)
+                {data.district} District (26 AP)
               </span>
               <span className="text-xs bg-slate-100 text-slate-700 px-2 py-0.5 rounded-full border border-slate-200">
                 Lok Sabha: {data.pc_name}
@@ -1728,7 +1728,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-semibold transition-all cursor-pointer shadow-xs"
-                title="View Certified Official Form-20 Polling Station PDF from CEO Telangana"
+                title="View Certified Official Form-20 Polling Station PDF from CEO Andhra Pradesh"
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span className="hidden sm:inline">Official</span> Form-20 PDF

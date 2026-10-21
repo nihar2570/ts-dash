@@ -19,8 +19,8 @@ export interface DefectionEvent {
   acNo: number;
   leaderName: string;
   eventType: 'defection' | 'rebel_spoiler';
-  fromParty: 'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'INC' | 'BRS';
-  toParty: 'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'IND' | 'INC' | 'BRS';
+  fromParty: 'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'INC';
+  toParty: 'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'IND' | 'INC';
   cadreTransferPct: number; // e.g. 8% of total AC votes moves to toParty
   backlashPct: number; // e.g. 2.5% lost due to anti-defection voter cynicism
   notes: string;

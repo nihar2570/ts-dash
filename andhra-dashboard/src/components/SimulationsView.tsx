@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import type {
   SeeepcDataset,
+  ElectionData,
   SimulatedConstituencyResult,
   ActiveScenarioBridge,
   ScenarioWhatIfItem,
@@ -63,8 +64,30 @@ export const READABLE_COMMUNITY_NAMES: Record<string, string> = {
   age_60_plus: 'Seniors (60+)',
 };
 
+export const DEFAULT_ZERO_SWINGS: Record<string, PartySwing> = {
+  kapu: { TDP: 0, YSRCP: 0, JSP: 0 },
+  kamma: { TDP: 0, YSRCP: 0, JSP: 0 },
+  reddy: { TDP: 0, YSRCP: 0, JSP: 0 },
+  bc_turpu_kapu: { TDP: 0, YSRCP: 0, JSP: 0 },
+  bc_yadava: { TDP: 0, YSRCP: 0, JSP: 0 },
+  bc_kuruba_boya: { TDP: 0, YSRCP: 0, JSP: 0 },
+  bc_settibalija_goud: { TDP: 0, YSRCP: 0, JSP: 0 },
+  bc_padmashali: { TDP: 0, YSRCP: 0, JSP: 0 },
+  bc_other: { TDP: 0, YSRCP: 0, JSP: 0 },
+  sc_madiga_relli: { TDP: 0, YSRCP: 0, JSP: 0 },
+  sc_mala: { TDP: 0, YSRCP: 0, JSP: 0 },
+  st_tribal: { TDP: 0, YSRCP: 0, JSP: 0 },
+  minority_muslim: { TDP: 0, YSRCP: 0, JSP: 0 },
+  minority_christian: { TDP: 0, YSRCP: 0, JSP: 0 },
+  youth_18_25: { TDP: 0, YSRCP: 0, JSP: 0 },
+  age_26_40: { TDP: 0, YSRCP: 0, JSP: 0 },
+  age_41_60: { TDP: 0, YSRCP: 0, JSP: 0 },
+  age_60_plus: { TDP: 0, YSRCP: 0, JSP: 0 },
+};
+
 interface SimulationsViewProps {
   data: SeeepcDataset;
+  electionData?: ElectionData | null;
   onNavigateToActions: (acNo?: number) => void;
   onSelectConstituencyDossier?: (acNo: number) => void;
   onBridgeChange?: (bridge: ActiveScenarioBridge) => void;
@@ -74,33 +97,28 @@ interface SimulationsViewProps {
 
 export const SimulationsView: React.FC<SimulationsViewProps> = ({
   data,
+  electionData,
   onNavigateToActions,
   onSelectConstituencyDossier,
   onBridgeChange,
   requestedWhatIfTab,
   onExportToActions,
 }) => {
-  // Demographic swing offsets relative to 2024 baseline (defaults to 2024 NDA Clean Sweep)
-  const [swings, setSwings] = useState<Record<string, PartySwing>>({
-    kapu: { TDP: 10, YSRCP: -15, JSP: 5 },
-    kamma: { TDP: 12, YSRCP: -12, JSP: 0 },
-    reddy: { TDP: -8, YSRCP: 8, JSP: 0 },
-    bc_turpu_kapu: { TDP: 6, YSRCP: -6, JSP: 0 },
-    bc_yadava: { TDP: 5, YSRCP: -5, JSP: 0 },
-    bc_kuruba_boya: { TDP: 6, YSRCP: -6, JSP: 0 },
-    bc_settibalija_goud: { TDP: 8, YSRCP: -8, JSP: 0 },
-    bc_padmashali: { TDP: 4, YSRCP: -4, JSP: 0 },
-    bc_other: { TDP: 4, YSRCP: -4, JSP: 0 },
-    sc_madiga_relli: { TDP: 4, YSRCP: -4, JSP: 0 },
-    sc_mala: { TDP: -6, YSRCP: 6, JSP: 0 },
-    st_tribal: { TDP: 2, YSRCP: -2, JSP: 0 },
-    minority_muslim: { TDP: -10, YSRCP: 10, JSP: 0 },
-    minority_christian: { TDP: -12, YSRCP: 12, JSP: 0 },
-    youth_18_25: { TDP: 8, YSRCP: -12, JSP: 4 },
-    age_26_40: { TDP: 0, YSRCP: 0, JSP: 0 },
-    age_41_60: { TDP: 0, YSRCP: 0, JSP: 0 },
-    age_60_plus: { TDP: 0, YSRCP: 0, JSP: 0 },
-  });
+  // Demographic swing offsets relative to baseline (clean zero-offset default)
+  const [swings, setSwings] = useState<Record<string, PartySwing>>(DEFAULT_ZERO_SWINGS);
+
+  const [fallbackElectionData, setFallbackElectionData] = useState<ElectionData | null>(null);
+
+  useEffect(() => {
+    if (!electionData) {
+      fetch('/data/andhra_elections.json')
+        .then((res) => res.json())
+        .then((d) => setFallbackElectionData(d))
+        .catch((err) => console.error('Failed to load fallback election data:', err));
+    }
+  }, [electionData]);
+
+  const activeElectionData = electionData || fallbackElectionData;
 
   const [macroSwing, setMacroSwing] = useState<MacroSwing>({ TDP: 0, YSRCP: 0, JSP: 0 });
   const [turnoutSettings, setTurnoutSettings] = useState<TurnoutSettings>({
@@ -158,25 +176,16 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     setGroundCrisisSettings(DEFAULT_GROUND_CRISIS_SETTINGS);
 
     if (presetKey === 'nda_2024_sweep' || presetKey === 'baseline') {
-      // 1. 2024 Actual Mandate Baseline (164 seats: TDP 135, JSP 21, BJP 8 vs YSRCP 11)
+      // 1. 2024 Actual Mandate Baseline (Official Historical Returns: 164 NDA / 11 YSRCP)
       setMacroSwing({ TDP: 0, YSRCP: 0, JSP: 0 });
     } else if (presetKey === 'ysrcp_2019_wave') {
-      // 2. 2019 YSRCP Wave Benchmark (151 seats, 49.9% Vote Share)
-      reset.reddy = { TDP: -16, YSRCP: 16, JSP: 0 };
-      reset.sc_mala = { TDP: -12, YSRCP: 12, JSP: 0 };
-      reset.minority_muslim = { TDP: -14, YSRCP: 14, JSP: 0 };
-      reset.minority_christian = { TDP: -16, YSRCP: 16, JSP: 0 };
-      reset.bc_yadava = { TDP: -8, YSRCP: 8, JSP: 0 };
-      setMacroSwing({ TDP: -9.0, YSRCP: 10.5, JSP: -1.5 });
-      setTurnoutSettings({ urbanShift: -1, ruralShift: 5, femaleShift: 3 });
+      // 2. 2019 YSRCP Wave Benchmark (Official Historical Returns: 151 YSRCP / 23 TDP / 1 JSP)
+      // Pure historical returns - zero synthetic demographic shifts
+      setMacroSwing({ TDP: 0, YSRCP: 0, JSP: 0 });
     } else if (presetKey === 'bifurcation_2014') {
-      // 3. 2014 Post-Bifurcation Mandate (TDP 103 + BJP 4 = 107 seats vs YSRCP 68)
-      reset.reddy = { TDP: -12, YSRCP: 14, JSP: 0 };
-      reset.sc_mala = { TDP: -8, YSRCP: 8, JSP: 0 };
-      reset.bc_turpu_kapu = { TDP: 6, YSRCP: -6, JSP: 0 };
-      reset.kamma = { TDP: 10, YSRCP: -10, JSP: 0 };
-      setMacroSwing({ TDP: -4.5, YSRCP: 4.8, JSP: 0 });
-      setTurnoutSettings({ urbanShift: 1, ruralShift: -1, femaleShift: 0 });
+      // 3. 2014 Post-Bifurcation Mandate (Official Historical Returns: 103 TDP / 68 YSRCP / 4 BJP)
+      // Pure historical returns - zero synthetic demographic shifts
+      setMacroSwing({ TDP: 0, YSRCP: 0, JSP: 0 });
     } else if (presetKey === 'nda_2029_defense') {
       // 4. 2029 NDA Defense (Alliance Holds): Natural 5-year anti-incumbency (-3.5% swing)
       reset.kapu = { TDP: -2, YSRCP: 2, JSP: 0 };
@@ -226,6 +235,71 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
   // Run Simulation across all 175 Constituencies
   const simulatedResults: SimulatedConstituencyResult[] = useMemo(() => {
     const list: SimulatedConstituencyResult[] = [];
+
+    const isHistorical = ['nda_2024_sweep', 'baseline', 'ysrcp_2019_wave', 'bifurcation_2014'].includes(activePreset);
+
+    // If viewing official historical benchmark without manual customization, show certified historical results directly
+    if (isHistorical && activeCustomizedCount === 0 && macroSwing.TDP === 0 && macroSwing.YSRCP === 0 && macroSwing.JSP === 0) {
+      const targetYear = activePreset === 'ysrcp_2019_wave' ? '2019' : activePreset === 'bifurcation_2014' ? '2014' : '2024';
+      const yearResults = activeElectionData?.results?.[targetYear];
+
+      if (yearResults) {
+        Object.values(data.constituencies).forEach((ac) => {
+          const hist = yearResults[String(ac.ac_no)];
+          if (hist) {
+            const isFlipped = targetYear === '2024' ? false : (hist.winner.party !== ac.winner_2023.party);
+            const tier: 'TOSS_UP' | 'LEAN' | 'SOLID' =
+              hist.margin <= tossUpThreshold ? 'TOSS_UP' : hist.margin < 15000 ? 'LEAN' : 'SOLID';
+
+            let maxComm = 'kapu';
+            let maxPct = 0;
+            Object.entries(ac.caste_profile).forEach(([k, v]) => {
+              if (v > maxPct) {
+                maxPct = v;
+                maxComm = k;
+              }
+            });
+
+            list.push({
+              ac_no: ac.ac_no,
+              ac_name: ac.ac_name,
+              district: ac.district,
+              reservation: ac.reservation,
+              votes_2023: {
+                winner_party: ac.winner_2023.party,
+                runner_party: ac.runner_up_2023.party,
+                margin: ac.margin_2023,
+                margin_pct: ac.margin_pct_2023,
+              },
+              simulated: {
+                winner_party: hist.winner.party,
+                runner_party: hist.runner_up.party,
+                winner_votes: hist.winner.votes,
+                runner_votes: hist.runner_up.votes,
+                margin: hist.margin,
+                margin_pct: hist.margin_pct,
+                party_votes: {
+                  TDP: hist.winner.party === 'TDP' ? hist.winner.votes : hist.runner_up.party === 'TDP' ? hist.runner_up.votes : 0,
+                  YSRCP: hist.winner.party === 'YSRCP' ? hist.winner.votes : hist.runner_up.party === 'YSRCP' ? hist.runner_up.votes : 0,
+                  JSP: hist.winner.party === 'JSP' ? hist.winner.votes : hist.runner_up.party === 'JSP' ? hist.runner_up.votes : 0,
+                  BJP: hist.winner.party === 'BJP' ? hist.winner.votes : hist.runner_up.party === 'BJP' ? hist.runner_up.votes : 0,
+                  INC: hist.winner.party === 'INC' ? hist.winner.votes : hist.runner_up.party === 'INC' ? hist.runner_up.votes : 0,
+                },
+                is_flipped: isFlipped,
+                flipped_from: isFlipped ? ac.winner_2023.party : undefined,
+              },
+              key_demographic: READABLE_COMMUNITY_NAMES[maxComm] || maxComm,
+              key_demographic_pct: maxPct,
+              battleground_tier: tier,
+            });
+          }
+        });
+
+        if (list.length === 175) {
+          return list;
+        }
+      }
+    }
 
     Object.values(data.constituencies).forEach((ac) => {
       const actualWinner = ac.winner_2023.party;
@@ -360,19 +434,6 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             ysrcpVotes = Math.max(0, ysrcpVotes - jspBase * 0.35);
             jspVotes = jspBase;
           }
-        }
-      } else if (activePreset === 'bifurcation_2014') {
-        const dist = ac.district.toLowerCase();
-        const isRayalaseema = ['kadapa', 'kurnool', 'nandyal', 'anantapur', 'sri sathya sai', 'chittoor', 'tirupati', 'annamayya', 'prakasam', 'nellore'].some((d) => dist.includes(d));
-        // In 2014, JSP supported TDP from outside
-        tdpVotes += jspVotes;
-        jspVotes = 0;
-        if (isRayalaseema) {
-          ysrcpVotes += totalVotes * 0.155;
-          tdpVotes -= totalVotes * 0.135;
-        } else {
-          tdpVotes += totalVotes * 0.015;
-          ysrcpVotes -= totalVotes * 0.025;
         }
       }
 
@@ -531,6 +592,8 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     return list;
   }, [
     data,
+    activeElectionData,
+    activeCustomizedCount,
     swings,
     macroSwing,
     turnoutSettings,
@@ -564,8 +627,6 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       ysrcpDiff: (counts.YSRCP || 0) - 11,
       jspDiff: (counts.JSP || 0) - 21,
       bjpDiff: (counts.BJP || 0) - 8,
-      incDiff: (counts.TDP || 0) - 135,
-      brsDiff: (counts.YSRCP || 0) - 11,
     };
   }, [simulatedResults]);
 
@@ -591,9 +652,9 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     } else if (activePreset === 'bifurcation_2014') {
       list.push({
         id: 'bifurcation_14',
-        label: '⚖️ 2014 Bifurcation Mandate (107 NDA / 68 YSRCP)',
+        label: '⚖️ 2014 Bifurcation Mandate (106 NDA / 67 YSRCP)',
         category: 'coalition',
-        detail: 'Post-bifurcation election: TDP+BJP Coastal sweep vs YSRCP Rayalaseema fortress',
+        detail: 'Post-bifurcation election: TDP (102) + BJP (4) = 106 seats vs YSRCP 67 & 2 OTH',
       });
     } else if (activePreset === 'nda_2029_defense') {
       list.push({
@@ -751,7 +812,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     let scenarioName = '🤝 2024 NDA Mandate (164 Seats)';
     if (activePreset === 'nda_2024_sweep' || activePreset === 'baseline') scenarioName = '🤝 2024 Actual Mandate (164 Seats)';
     else if (activePreset === 'ysrcp_2019_wave') scenarioName = '🌊 2019 YSRCP Wave Benchmark (151 Seats)';
-    else if (activePreset === 'bifurcation_2014') scenarioName = '⚖️ 2014 Post-Bifurcation Mandate (107 Seats)';
+    else if (activePreset === 'bifurcation_2014') scenarioName = '⚖️ 2014 Post-Bifurcation Mandate (106 Seats)';
     else if (activePreset === 'nda_2029_defense') scenarioName = '🛡️ 2029 NDA Defense (Alliance Holds)';
     else if (activePreset === 'triangular_2029_solo' || activePreset === 'jsp_solo_split') scenarioName = '💥 2029 Triangular: TDP vs JSP vs YSRCP';
     else if (activePreset === 'tdp_vs_jsp_bjp_2029') scenarioName = '🤝🔥 2029 Realigned: TDP Solo vs JSP+BJP vs YSRCP';
@@ -872,10 +933,10 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
                       ? 'bg-emerald-700 text-white shadow-sm ring-2 ring-emerald-400/50 font-black'
                       : 'bg-white text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200'
                   }`}
-                  title="2014 Post-Bifurcation Mandate: TDP 103 + BJP 4 = 107 seats vs YSRCP 68"
+                  title="2014 Post-Bifurcation Mandate: TDP 102 + BJP 4 = 106 seats vs YSRCP 67 (and 2 OTH)"
                 >
                   <Scale className="w-3.5 h-3.5" />
-                  <span>⚖️ 2014 Bifurcation Mandate (107)</span>
+                  <span>⚖️ 2014 Bifurcation Mandate (106)</span>
                 </button>
                 <button
                   onClick={() => applyPreset('baseline')}
@@ -1008,11 +1069,11 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             <span className="font-semibold flex items-center gap-2">
               <Scale className="w-4 h-4 text-emerald-700 shrink-0" />
               <span>
-                <strong>2014 Bifurcation Mandate (107 NDA / 68 YSRCP):</strong> Post-bifurcation election where TDP (103) & BJP (4) swept Coastal Andhra with Pawan Kalyan's JSP supporting from outside, while YSRCP dominated Rayalaseema.
+                <strong>2014 Bifurcation Mandate (106 NDA / 67 YSRCP / 2 OTH):</strong> Post-bifurcation election where TDP (102) &amp; BJP (4) won 106 seats with Pawan Kalyan's JSP supporting from outside, while YSRCP won 67 seats (and 2 seats won by Independents/Others in Chirala &amp; Pithapuram).
               </span>
             </span>
             <span className="text-[11px] bg-emerald-100 text-emerald-900 font-mono px-2.5 py-0.5 rounded border border-emerald-300 font-bold">
-              107 AC Bifurcation Mandate
+              106 AC Bifurcation Mandate
             </span>
           </div>
         )}

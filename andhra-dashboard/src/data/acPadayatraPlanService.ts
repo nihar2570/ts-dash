@@ -344,7 +344,7 @@ export function generateAcPadayatraPlan(
   const themePool = [
     'BC Artisan & Traditional Livelihoods Outreach',
     'Youth & Employment Aspirations Round',
-    'Women SHG & Mahalakshmi Saturation',
+    'Women SHG & Aadabidda Nidhi Saturation',
     'Farmers & Irrigation Canal Tail-End Grievances',
     'Urban Colony Civic Infrastructure Walk',
     'Dalit & Minority Basti Rights Assurance',

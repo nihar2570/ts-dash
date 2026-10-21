@@ -128,10 +128,10 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
   standaloneMapOnly = false,
   onNavigateToBoothData,
 }) => {
-  // Target Party for Strategy Planning (defaults to Challenger if winner is INC, or INC if winner is BRS/BJP)
-  const [targetParty, setTargetParty] = useState<'INC' | 'BRS' | 'BJP'>(() => {
-    if (winnerParty === 'INC') return (runnerParty as any) || 'BRS';
-    return 'INC';
+  // Target Party for Strategy Planning (defaults to Challenger if winner is TDP/JSP, or TDP if winner is YSRCP)
+  const [targetParty, setTargetParty] = useState<'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'INC'>(() => {
+    if (winnerParty === 'TDP' || winnerParty === 'JSP' || winnerParty === 'BJP') return (runnerParty as any) || 'YSRCP';
+    return 'TDP';
   });
 
   // Panna Pramukh Field Levers
@@ -443,7 +443,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
             {/* Target Party Selector */}
             <div className="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold">
               <span className="text-[10px] text-slate-500 px-1.5 uppercase tracking-wider">War Room Target:</span>
-              {(['INC', 'BRS', 'BJP'] as const).map((p) => {
+              {(['TDP', 'YSRCP', 'JSP', 'BJP', 'INC'] as const).map((p) => {
                 const isSelected = targetParty === p;
                 const pColor = getPartyColor(p);
                 return (
@@ -705,7 +705,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                   <span className={`text-[10px] px-1.5 uppercase font-semibold ${theme === 'light' ? 'text-slate-500' : 'text-slate-400'}`}>
                     Target:
                   </span>
-                  {(['INC', 'BRS', 'BJP'] as const).map((p) => {
+                  {(['TDP', 'YSRCP', 'JSP', 'BJP', 'INC'] as const).map((p) => {
                     const isSelected = targetParty === p;
                     const pColor = getPartyColor(p);
                     return (
@@ -820,7 +820,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                         ? 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300'
                         : 'bg-slate-800 hover:bg-indigo-900/60 text-slate-300 hover:text-white border-slate-700'
                     }`}
-                    title="Open certified Form-20 polling station result sheet from CEO Telangana"
+                    title="Open certified Form-20 polling station result sheet from CEO Andhra Pradesh"
                   >
                     <FileText className="w-3.5 h-3.5 text-rose-400" />
                     <span className="hidden md:inline">CEO Form-20 PDF</span>

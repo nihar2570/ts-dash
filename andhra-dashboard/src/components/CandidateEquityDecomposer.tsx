@@ -205,7 +205,7 @@ function getCandidatePastRecord(
     }
   }
 
-  // If not matched in this AC, check if they won anywhere else in Telangana in 2018 or 2014
+  // If not matched in this AC, check if they won anywhere else in Andhra Pradesh in 2019 or 2014
   if (!record.is2018Winner && res2018) {
     for (const [key, item] of Object.entries(res2018)) {
       if (key !== String(acNo) && matchCandidateName(candidateName, item.winner?.candidate)) {

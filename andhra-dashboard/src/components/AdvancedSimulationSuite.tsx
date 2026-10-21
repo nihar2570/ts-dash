@@ -18,6 +18,7 @@ import {
   GraduationCap,
   Car,
   Trees,
+  History,
 } from 'lucide-react';
 import type {
   CoalitionSettings,
@@ -297,6 +298,13 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
     'tdp_vs_jsp_bjp_2029',
   ].includes(activePreset);
 
+  const isHistorical = [
+    'nda_2024_sweep',
+    'baseline',
+    'ysrcp_2019_wave',
+    'bifurcation_2014',
+  ].includes(activePreset);
+
   return (
     <div className="bg-slate-900 text-white rounded-2xl border border-slate-800 shadow-xl overflow-hidden transition-all">
       {/* Header & Collapsed Summary Ribbon */}
@@ -454,7 +462,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                     )}
                   </div>
                   <p className="text-xs text-slate-300 leading-relaxed">
-                    Tune all 18 caste and age cohorts (Mudiraj, Madiga, Mala, Munnuru Kapu, Padmashali, Goud, Yadav, Velama, Reddy, Muslim, Youth 18-25) with mathematical simplex balancers.
+                    Model demographic voting swings across all 18 Andhra Pradesh community and age cohorts (Kapu/Balija, Kamma, Reddy, BC Turpu Kapu, BC Yadava, Kuruba/Boya, Settibalija, SC Madiga, SC Mala, ST Tribals, Muslim Minorities, Youth 18-25).
                   </p>
                 </div>
 
@@ -468,6 +476,29 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                   </button>
                 )}
               </div>
+
+              {/* Historical Mandate Notification Ribbon */}
+              {isHistorical && (
+                <div className="bg-amber-950/40 border border-amber-600/40 rounded-xl p-3.5 flex flex-wrap items-center justify-between gap-3 text-amber-200 text-xs">
+                  <div className="flex items-center gap-2.5">
+                    <History className="w-4 h-4 text-amber-400 shrink-0" />
+                    <span>
+                      <strong>Official Historical Results Active:</strong> Displaying certified ECI returns for{' '}
+                      <span className="font-bold underline decoration-amber-400">
+                        {activePreset === 'ysrcp_2019_wave'
+                          ? '2019 (151 YSRCP Seats)'
+                          : activePreset === 'bifurcation_2014'
+                          ? '2014 (106 NDA / 67 YSRCP / 2 OTH)'
+                          : '2024 (164 NDA / 11 YSRCP)'}
+                      </span>
+                      . Caste demographic swing sliders are set to 0.0% baseline (historical mandate).
+                    </span>
+                  </div>
+                  <span className="text-[10px] font-mono bg-amber-900/60 text-amber-300 px-2 py-0.5 rounded border border-amber-700/50 font-bold shrink-0">
+                    ECI Certified
+                  </span>
+                </div>
+              )}
 
               {/* Quick Sliders for Key Decisive Kingmaker Blocs */}
               <div className="space-y-2">
@@ -787,7 +818,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                     </span>
                   </div>
                   <p className="text-[11px] text-slate-400 leading-relaxed">
-                    GHMC, Ranga Reddy, and urban municipalities. Simulates IT corridor voter apathy vs middle-class turnout waves.
+                    Visakhapatnam, Vijayawada, Guntur, Tirupati, and urban municipalities. Simulates urban corridor voter apathy vs middle-class turnout waves.
                   </p>
                   <input
                     type="range"
@@ -837,13 +868,13 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                 {/* Female Mobilization */}
                 <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-xs text-purple-400">Mahalakshmi Female Mobilization</span>
+                    <span className="font-bold text-xs text-purple-400">Aadabidda Nidhi &amp; Super-Six Female Mobilization</span>
                     <span className="text-xs font-mono font-black text-white bg-slate-800 px-2 py-0.5 rounded">
                       {turnoutSettings.femaleShift >= 0 ? `+${turnoutSettings.femaleShift}%` : `${turnoutSettings.femaleShift}%`}
                     </span>
                   </div>
                   <p className="text-[11px] text-slate-400 leading-relaxed">
-                    Women voter mobilization driven by free RTC bus travel and cash benefits (+ shifts votes to ruling party).
+                    Women voter mobilization driven by Aadabidda Nidhi, Stree Shakti free RTC bus travel, and Deepam subsidized gas (+ shifts votes to NDA coalition).
                   </p>
                   <input
                     type="range"
@@ -898,26 +929,26 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                 {/* Statewide Macro Swing */}
                 <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-xs text-rose-400">Statewide Swing against Congress</span>
+                    <span className="font-bold text-xs text-rose-400">Statewide Swing against NDA Coalition</span>
                     <span className="text-xs font-mono font-black text-white bg-slate-800 px-2 py-0.5 rounded">
-                      {macroSwing.INC}%
+                      {macroSwing.TDP}%
                     </span>
                   </div>
                   <p className="text-[11px] text-slate-400 leading-relaxed">
-                    Models uniform statewide anti-incumbency across all 119 constituencies. Negative values shave votes from INC.
+                    Models uniform statewide anti-incumbency across all 175 constituencies. Negative values shave votes from TDP/NDA and transfer to YSRCP.
                   </p>
                   <input
                     type="range"
                     min="-12"
                     max="6"
                     step="0.5"
-                    value={macroSwing.INC}
+                    value={macroSwing.TDP}
                     onChange={(e) => {
                       const val = Number(e.target.value);
                       setMacroSwing({
-                        INC: val,
-                        BRS: Math.round(-val * 0.55 * 10) / 10,
-                        BJP: Math.round(-val * 0.45 * 10) / 10,
+                        TDP: val,
+                        YSRCP: Math.round(-val * 0.85 * 10) / 10,
+                        JSP: Math.round(val * 0.15 * 10) / 10,
                       });
                     }}
                     className="w-full accent-rose-500 cursor-pointer"
@@ -958,7 +989,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                 </div>
               </div>
 
-              {/* Row 2: Telangana Ground Realities & Crisis Stress-Testing Matrix */}
+              {/* Row 2: Andhra Pradesh Ground Realities & Crisis Stress-Testing Matrix */}
               <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 p-4 rounded-xl border border-rose-900/40 shadow-lg space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-3">
                   <div className="flex items-center gap-2">
@@ -968,7 +999,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                     <div>
                       <div className="flex items-center gap-2">
                         <h4 className="text-sm font-black text-white">
-                          Telangana Ground Realities &amp; Crisis Stress Matrix
+                          Andhra Pradesh Ground Realities &amp; Crisis Stress Matrix
                         </h4>
                         <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-bold border ${
                           activeCrisisCount > 0
@@ -979,7 +1010,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                         </span>
                       </div>
                       <p className="text-[11px] text-slate-400">
-                        Model live political fault lines: HYDRA demolitions, central agencies, minority split, youth protests &amp; land backlash.
+                        Model live political fault lines: Amaravati capital delivery, Super-Six fiscal delay, Vizag Steel Plant disinvestment, cadre clashes &amp; Rayalaseema water concerns.
                       </p>
                     </div>
                   </div>

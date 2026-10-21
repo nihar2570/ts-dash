@@ -3,7 +3,7 @@ import L from 'leaflet';
 import { Layers, Hexagon, Map as MapIcon, Crosshair, Maximize2, Minimize2, Plus, Minus, RotateCcw, Palette } from 'lucide-react';
 import type { ConstituencyResult, Year, ViewMode, SeeepcDataset } from '../types';
 import { getPartyColor, getDistrictGrey, getPastelPartyColor } from '../types';
-import { TELANGANA_HEX_COORDINATES } from '../data/hexCoordinates';
+import { ANDHRA_HEX_COORDINATES } from '../data/hexCoordinates';
 
 export type ThematicLayerKey =
   | 'NONE'
@@ -54,7 +54,7 @@ interface MapProps {
   seeepcData?: SeeepcDataset | null;
 }
 
-export const TelanganaMap: React.FC<MapProps> = ({
+export const AndhraMap: React.FC<MapProps> = ({
   geoJsonData,
   districtGeoJsonData,
   yearResults,
@@ -79,7 +79,7 @@ export const TelanganaMap: React.FC<MapProps> = ({
 
   // Basemap canvas state: 'light' (Esri World Light Gray Base, default) & 'osm' (OpenStreetMap)
   const [basemap, setBasemap] = useState<'light' | 'osm'>(() => {
-    const saved = localStorage.getItem('telangana_basemap') as 'light' | 'osm' | null;
+    const saved = (localStorage.getItem('andhra_basemap') || localStorage.getItem('telangana_basemap')) as 'light' | 'osm' | null;
     if (saved && ['light', 'osm'].includes(saved)) {
       return saved;
     }
@@ -391,7 +391,7 @@ export const TelanganaMap: React.FC<MapProps> = ({
 
   const handleBasemapChange = (type: 'light' | 'osm') => {
     setBasemap(type);
-    localStorage.setItem('telangana_basemap', type);
+    localStorage.setItem('andhra_basemap', type);
   };
 
   // Update District Boundaries and Labels Layer
@@ -651,7 +651,7 @@ export const TelanganaMap: React.FC<MapProps> = ({
     }
   }, [mapReady, geoJsonData, yearResults, selectedAcNo, viewMode, selectedYear, onSelectAc, thematicLayer, seeepcData]);
 
-  // One-click Re-center handler to reset map view directly to Telangana boundary
+  // One-click Re-center handler to reset map view directly to Andhra Pradesh boundary
   const handleRecenter = () => {
     const map = mapInstanceRef.current;
     const layer = geoJsonLayerRef.current;
@@ -663,7 +663,7 @@ export const TelanganaMap: React.FC<MapProps> = ({
 
   // Memoized 175-Constituency Hexagon Grid Items (#6 Equal-Area Hex Cartogram)
   const hexItems = useMemo(() => {
-    return Object.entries(TELANGANA_HEX_COORDINATES).map(([acNoStr, coord]) => {
+    return Object.entries(ANDHRA_HEX_COORDINATES).map(([acNoStr, coord]) => {
       const acNo = Number(acNoStr);
       const res = yearResults[String(acNo)];
       const acName = res?.ac_name || `AC #${acNo}`;
@@ -1069,7 +1069,7 @@ export const TelanganaMap: React.FC<MapProps> = ({
               type="button"
               onClick={handleRecenter}
               className="p-2 sm:px-2.5 sm:py-1.5 rounded-xl border border-slate-700/80 bg-slate-900/90 hover:bg-slate-800 text-slate-300 hover:text-white shadow-md flex items-center gap-1.5 text-xs font-semibold cursor-pointer transition-colors"
-              title="Re-center map on Telangana"
+              title="Re-center map on Andhra Pradesh"
             >
               <Crosshair className="w-3.5 h-3.5 text-indigo-400" />
               <span className="hidden md:inline">Center</span>
@@ -1124,7 +1124,7 @@ export const TelanganaMap: React.FC<MapProps> = ({
                   {/* District Boundaries & Labels */}
                   <div className="space-y-1.5">
                     <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">
-                      District Overlays (33 TS)
+                      District Overlays (26 AP)
                     </span>
                     <div className="grid grid-cols-2 gap-1.5">
                       <button
@@ -1391,4 +1391,4 @@ export const TelanganaMap: React.FC<MapProps> = ({
   );
 };
 
-export const AndhraMap = TelanganaMap;
+export const TelanganaMap = AndhraMap;

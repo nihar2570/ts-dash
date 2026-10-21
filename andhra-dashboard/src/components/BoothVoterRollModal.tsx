@@ -106,7 +106,10 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
     if (!data) return new Map<string, CastePrediction>();
     const map = new Map<string, CastePrediction>();
     for (const e of data.electors) {
-      map.set(e.epic, predictCaste(e.name, e.relativeName, mandalName));
+      const pred = predictCaste(e.name, e.relativeName, mandalName);
+      if (pred) {
+        map.set(e.epic, pred);
+      }
     }
     return map;
   }, [data, mandalName]);
@@ -271,7 +274,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
     link.setAttribute('href', encodedUri);
     link.setAttribute(
       'download',
-      `AC${acNo}_Sirpur_Booth_${boothNo}_Voter_Roll.csv`
+      `AC${acNo}_Booth_${boothNo}_Voter_Roll.csv`
     );
     document.body.appendChild(link);
     link.click();
@@ -293,7 +296,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center gap-1 font-mono">
                   <Shield className="w-3 h-3 text-emerald-400" />
-                  Electoral Roll Register &middot; CEO Telangana
+                  Electoral Roll Register &middot; CEO Andhra Pradesh
                 </span>
                 <span className="text-xs text-slate-300 font-medium">
                   AC #{acNo} {acName} &middot; {district} District
@@ -379,12 +382,9 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
             <div className="flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
               <div>
-                <span className="text-[10px] text-slate-500 block uppercase font-medium">First-Time (18-25)</span>
-                <span className="font-mono font-bold text-amber-700">
-                  {data.firstTimeCount} voters{' '}
-                  <span className="text-[10px] font-normal text-slate-500">
-                    ({((data.firstTimeCount / data.totalElectors) * 100).toFixed(1)}%)
-                  </span>
+                <span className="text-[10px] text-slate-500 block uppercase font-medium">Age Cohorts</span>
+                <span className="font-mono text-xs text-slate-400 italic">
+                  Data to be added
                 </span>
               </div>
             </div>
@@ -417,20 +417,24 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
               <Fingerprint className="w-4 h-4 text-indigo-600 shrink-0" />
               <div>
                 <span className="text-[10px] text-slate-500 block uppercase font-medium">Est. Community Mix</span>
-                <div className="flex items-center gap-1.5 text-[11px] font-mono font-bold">
-                  <span className="text-blue-700 bg-blue-50 px-1 rounded border border-blue-200" title={`BC: ${casteSummary.BC}`}>
-                    {data.totalElectors ? Math.round((casteSummary.BC / data.totalElectors) * 100) : 0}% BC
-                  </span>
-                  <span className="text-purple-700 bg-purple-50 px-1 rounded border border-purple-200" title={`SC: ${casteSummary.SC}`}>
-                    {data.totalElectors ? Math.round((casteSummary.SC / data.totalElectors) * 100) : 0}% SC
-                  </span>
-                  <span className="text-amber-700 bg-amber-50 px-1 rounded border border-amber-200" title={`ST: ${casteSummary.ST}`}>
-                    {data.totalElectors ? Math.round((casteSummary.ST / data.totalElectors) * 100) : 0}% ST
-                  </span>
-                  <span className="text-emerald-700 bg-emerald-50 px-1 rounded border border-emerald-200" title={`OC: ${casteSummary.OC}`}>
-                    {data.totalElectors ? Math.round((casteSummary.OC / data.totalElectors) * 100) : 0}% OC
-                  </span>
-                </div>
+                {casteSummary.BC + casteSummary.SC + casteSummary.ST + casteSummary.OC + casteSummary.Minority > 0 ? (
+                  <div className="flex items-center gap-1.5 text-[11px] font-mono font-bold">
+                    <span className="text-blue-700 bg-blue-50 px-1 rounded border border-blue-200" title={`BC: ${casteSummary.BC}`}>
+                      {data.totalElectors ? Math.round((casteSummary.BC / data.totalElectors) * 100) : 0}% BC
+                    </span>
+                    <span className="text-purple-700 bg-purple-50 px-1 rounded border border-purple-200" title={`SC: ${casteSummary.SC}`}>
+                      {data.totalElectors ? Math.round((casteSummary.SC / data.totalElectors) * 100) : 0}% SC
+                    </span>
+                    <span className="text-amber-700 bg-amber-50 px-1 rounded border border-amber-200" title={`ST: ${casteSummary.ST}`}>
+                      {data.totalElectors ? Math.round((casteSummary.ST / data.totalElectors) * 100) : 0}% ST
+                    </span>
+                    <span className="text-emerald-700 bg-emerald-50 px-1 rounded border border-emerald-200" title={`OC: ${casteSummary.OC}`}>
+                      {data.totalElectors ? Math.round((casteSummary.OC / data.totalElectors) * 100) : 0}% OC
+                    </span>
+                  </div>
+                ) : (
+                  <span className="text-slate-400 font-mono italic text-[11px]">Data to be added</span>
+                )}
               </div>
             </div>
           </div>
@@ -443,7 +447,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
               <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
               <input
                 type="text"
-                placeholder="Search voter name, caste/clan (e.g. Goud, Reddy), door, or EPIC..."
+                placeholder="Search EPIC, panna page..."
                 value={searchQuery}
                 onChange={(e) => {
                   setSearchQuery(e.target.value);
@@ -503,18 +507,11 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
 
             {/* Age Cohort Filter */}
             <select
-              value={ageCohort}
-              onChange={(e) => {
-                setAgeCohort(e.target.value as any);
-                setCurrentPage(1);
-              }}
-              className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 focus:outline-hidden cursor-pointer"
+              disabled
+              className="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2.5 py-1.5 text-slate-400 cursor-not-allowed"
+              title="Age data to be added from official rolls"
             >
-              <option value="ALL">All Age Cohorts</option>
-              <option value="18-25">18–25 (First-Time)</option>
-              <option value="26-40">26–40 (Youth)</option>
-              <option value="41-60">41–60 (Middle Age)</option>
-              <option value="60+">60+ (Senior Citizen)</option>
+              <option value="ALL">Age: Data to be added</option>
             </select>
 
             {/* Panna Page Selector */}
@@ -651,14 +648,11 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                           </div>
                         </td>
                         <td className="py-2 px-3 font-bold text-slate-900">
-                          <div className="flex items-center gap-1.5">
+                          {e.name === 'Data to be added' ? (
+                            <span className="text-slate-400 font-mono italic font-normal text-[11px]">Data to be added</span>
+                          ) : (
                             <span>{e.name}</span>
-                            {e.age <= 25 && (
-                              <span className="text-[9px] px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-800 border border-amber-200 font-semibold">
-                                First-Time
-                              </span>
-                            )}
-                          </div>
+                          )}
                         </td>
                         <td className="py-2 px-3">
                           {pred ? (
@@ -671,29 +665,31 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                               </span>
                             </div>
                           ) : (
-                            <span className="text-slate-400 font-mono text-[10px]">—</span>
+                            <span className="text-slate-400 font-mono text-[10px] italic">Data to be added</span>
                           )}
                         </td>
                         <td className="py-2 px-3 text-slate-600">
-                          <span className="text-[10px] text-slate-400 font-mono mr-1">
-                            ({e.relationType}/o)
-                          </span>
-                          {e.relativeName}
+                          {e.relativeName === 'Data to be added' ? (
+                            <span className="text-slate-400 font-mono italic text-[11px]">Data to be added</span>
+                          ) : (
+                            <>
+                              <span className="text-[10px] text-slate-400 font-mono mr-1">
+                                ({e.relationType}/o)
+                              </span>
+                              {e.relativeName}
+                            </>
+                          )}
                         </td>
                         <td className="py-2 px-3 font-mono font-medium text-slate-700">
-                          {e.houseNo}
+                          {e.houseNo === 'Data to be added' ? (
+                            <span className="text-slate-400 font-mono italic text-[10px]">Data to be added</span>
+                          ) : (
+                            e.houseNo
+                          )}
                         </td>
-                        <td className="py-2 px-3 text-center font-mono font-semibold">
-                          <span
-                            className={
-                              e.age <= 25
-                                ? 'text-amber-700 font-bold'
-                                : e.age > 60
-                                ? 'text-purple-700 font-bold'
-                                : 'text-slate-800'
-                            }
-                          >
-                            {e.age}
+                        <td className="py-2 px-3 text-center">
+                          <span className="text-[10px] text-slate-400 font-mono italic">
+                            Data to be added
                           </span>
                         </td>
                         <td className="py-2 px-3 text-center">
@@ -780,7 +776,11 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                                 Sl #{e.slNo} &middot; {e.epic}
                               </span>
                               <div className="font-bold text-slate-900 text-xs">
-                                {e.name}
+                                {e.name === 'Data to be added' ? (
+                                  <span className="text-slate-400 font-mono italic font-normal text-[11px]">Data to be added</span>
+                                ) : (
+                                  e.name
+                                )}
                               </div>
                             </div>
                             <span
@@ -796,14 +796,20 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                             </span>
                           </div>
                           <div className="text-[11px] text-slate-600">
-                            {e.relationType}/o {e.relativeName}
+                            {e.relativeName === 'Data to be added' ? (
+                              <span className="text-slate-400 font-mono italic">Data to be added</span>
+                            ) : (
+                              `${e.relationType}/o ${e.relativeName}`
+                            )}
                           </div>
                           <div className="flex items-center justify-between text-[10px] text-slate-500 pt-1 border-t border-slate-200">
-                            <span>Door: <strong>{e.houseNo}</strong></span>
-                            {casteMap.get(e.epic) && (
+                            <span>Door: {e.houseNo === 'Data to be added' ? <span className="text-slate-400 font-mono italic font-normal">Data to be added</span> : <strong>{e.houseNo}</strong>}</span>
+                            {casteMap.get(e.epic) ? (
                               <span className={`px-1.5 py-0.2 rounded font-bold border text-[9px] ${casteMap.get(e.epic)!.color.badge}`} title={casteMap.get(e.epic)!.sourceBasis}>
                                 {casteMap.get(e.epic)!.casteName} ({casteMap.get(e.epic)!.probabilityPercent})
                               </span>
+                            ) : (
+                              <span className="text-slate-400 font-mono text-[9px] italic">Data to be added</span>
                             )}
                           </div>
                         </div>
@@ -855,7 +861,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                       >
                         <div>
                           <div className="font-semibold text-slate-800 text-[11px] flex items-center gap-1.5">
-                            <span>{m.name}</span>
+                            <span>{m.name === 'Data to be added' ? <span className="text-slate-400 font-mono italic font-normal">Data to be added</span> : m.name}</span>
                             {casteMap.get(m.epic) && (
                               <span className={`text-[9px] px-1 py-0.2 rounded font-medium border ${casteMap.get(m.epic)!.color.badge}`}>
                                 {casteMap.get(m.epic)!.casteName}
@@ -863,12 +869,16 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                             )}
                           </div>
                           <span className="text-[10px] text-slate-400">
-                            {m.relationType}/o {m.relativeName}
+                            {m.relativeName === 'Data to be added' ? (
+                              <span className="italic">Data to be added</span>
+                            ) : (
+                              `${m.relationType}/o ${m.relativeName}`
+                            )}
                           </span>
                         </div>
                         <div className="text-right">
                           <span className="font-mono text-[10px] text-slate-600 block">
-                            {m.age}y ({m.gender})
+                            ({m.gender}) &middot; <span className="text-slate-400 italic">Data to be added</span>
                           </span>
                           <span className="font-mono text-[9px] text-slate-400">
                             {m.epic}

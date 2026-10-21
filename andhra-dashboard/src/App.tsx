@@ -7,7 +7,7 @@ import type {
   ActiveTab,
   SeeepcDataset,
 } from './types';
-import { TelanganaMap } from './components/TelanganaMap';
+import { AndhraMap } from './components/TelanganaMap';
 import { SeatTallyBar } from './components/SeatTallyBar';
 import { ConstituencyCard } from './components/ConstituencyCard';
 import { ConstituencyTable } from './components/ConstituencyTable';
@@ -149,11 +149,11 @@ export const App: React.FC = () => {
       try {
         setLoading(true);
         const [geoRes, electRes, distRes, candRes, seeepcRes] = await Promise.all([
-          fetch('/data/andhra_assembly.geojson').catch(() => fetch('/data/telangana_assembly.geojson')),
-          fetch('/data/andhra_elections.json').catch(() => fetch('/data/telangana_elections.json')),
-          fetch('/data/andhra_districts.geojson').catch(() => fetch('/data/telangana_districts.geojson')).catch(() => null),
-          fetch('/data/telangana_candidates_2023.json').catch(() => null),
-          fetch('/data/andhra_demographics.json').catch(() => fetch('/data/telangana_seeepc_demographics.json')).catch(() => null),
+          fetch('/data/andhra_assembly.geojson'),
+          fetch('/data/andhra_elections.json'),
+          fetch('/data/andhra_districts.geojson').catch(() => null),
+          fetch('/data/andhra_candidates_2024.json').catch(() => null),
+          fetch('/data/andhra_demographics.json').catch(() => null),
         ]);
 
         if (!geoRes.ok || !electRes.ok) {
@@ -313,7 +313,7 @@ export const App: React.FC = () => {
                 </div>
 
                 <div className="h-[620px]">
-                  <TelanganaMap
+                  <AndhraMap
                     geoJsonData={geoJsonData}
                     districtGeoJsonData={districtGeoJsonData}
                     yearResults={currentYearResults}
@@ -356,6 +356,7 @@ export const App: React.FC = () => {
         {activeTab === 'simulations' && seeepcData && (
           <SimulationsView
             data={seeepcData}
+            electionData={electionData}
             onNavigateToActions={(acNo) => {
               if (acNo) setSelectedAcNo(acNo);
               handleExportToActions();

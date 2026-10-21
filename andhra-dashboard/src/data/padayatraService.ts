@@ -87,9 +87,9 @@ export function generateHouseholdTalkingPoints(
     communityPitch = {
       heading: `Dalit Empowerment (${castePred.casteName})`,
       points: [
-        'Unconditional Dalit Bandhu financial grant acceleration with single-window sanction.',
+        'SC Sub-Plan direct financial assistance acceleration with single-window sanction.',
         'Dr. B.R. Ambedkar Overseas Education Vidya Nidhi scholarships for higher studies.',
-        'Gruha Jyothi free power up to 200 units and 3-acre cultivable land regularization.'
+        'Gruha Jyothi free power and cultivable land regularization for landless families.'
       ],
       schemeName: 'Ambedkar Vidya Nidhi & Gruha Jyothi'
     };
@@ -99,9 +99,9 @@ export function generateHouseholdTalkingPoints(
       points: [
         'Immediate settlement of Podu land title deeds (RoFR pattas) with zero harassment.',
         'Special tribal youth skill mission and dedicated ITDA hospital upgrade funding.',
-        '10% ST reservation operationalization and free solar agricultural pump sets.'
+        'ST reservation operationalization and free solar agricultural pump sets.'
       ],
-      schemeName: 'Podu Land Pattas & Girijan Bandhu'
+      schemeName: 'Podu Land Pattas & Girijan Vikas'
     };
   } else if (cat === 'BC') {
     if (caste.includes('goud')) {
@@ -191,15 +191,15 @@ export function generateHouseholdTalkingPoints(
   // 3. Layer 2: Demographic / Age Cohort Pitch
   const demoPoints: string[] = [];
   if (hasYouth) {
-    demoPoints.push('TSPSC annual job calendar guarantee with strict paper leak prevention.');
-    demoPoints.push('Rajiv Yuva Kiranalu skill centers and subsidized IT enterprise startup kits.');
+    demoPoints.push('APPSC annual job calendar & Mega DSC recruitment drive guarantee.');
+    demoPoints.push('Yuva Galam skill development centers and subsidized enterprise startup kits.');
   }
   if (hasWomen) {
-    demoPoints.push('Mahalakshmi ₹2,500/month financial aid and ₹500 subsidized gas cylinders.');
-    demoPoints.push('Zero-fare free travel in TSRTC Palle Velugu & Express buses statewide.');
+    demoPoints.push('Aadabidda Nidhi ₹1,500/month financial aid and Deepam 3 free subsidized gas cylinders.');
+    demoPoints.push('Zero-fare free travel in APSRTC Palle Velugu & Express buses statewide (Stree Shakti).');
   }
   if (hasSenior) {
-    demoPoints.push('Cheyutha monthly social security pension enhancement to ₹4,000/month.');
+    demoPoints.push('NTR Bharosa monthly social security pension enhancement to ₹4,000/month.');
     demoPoints.push('Free doorstep prescription medicine delivery for chronic elderly illnesses.');
   }
   if (demoPoints.length === 0) {
@@ -221,8 +221,8 @@ export function generateHouseholdTalkingPoints(
 
   // 5. Quick Elevator Pitch (10-second summary)
   const quickElevatorPitch = `${communityPitch.schemeName} support for your household, ${
-    hasYouth ? 'TSPSC job calendar for your children, ' : ''
-  }${hasWomen ? 'Mahalakshmi gas & bus savings, ' : ''}and resolving ${localConcern.toLowerCase()} in ${acName}.`;
+    hasYouth ? 'APPSC job calendar & Mega DSC for your children, ' : ''
+  }${hasWomen ? 'Aadabidda Nidhi gas & bus savings, ' : ''}and resolving ${localConcern.toLowerCase()} in ${acName}.`;
 
   return {
     openingGreeting,

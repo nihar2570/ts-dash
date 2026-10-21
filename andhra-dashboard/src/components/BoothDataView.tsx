@@ -377,7 +377,10 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
     const map = new Map<string, CastePrediction>();
     const dominantCaste = activeBoothMeta?.dominantCaste;
     for (const e of data.electors) {
-      map.set(e.epic, predictCaste(e.name, e.relativeName, dominantCaste));
+      const pred = predictCaste(e.name, e.relativeName, dominantCaste);
+      if (pred) {
+        map.set(e.epic, pred);
+      }
     }
     return map;
   }, [data, activeBoothMeta]);
@@ -674,7 +677,7 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
             <input
               type="text"
-              placeholder="Jump to AC (e.g. Sirpur, 40, Gajwel)..."
+              placeholder="Jump to AC (e.g. Kuppam, 175, Mangalagiri, Pithapuram)..."
               value={acSearchQuery}
               onChange={(e) => setAcSearchQuery(e.target.value)}
               className="w-full pl-8 pr-2.5 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:outline-hidden focus:ring-1 focus:ring-indigo-500 text-slate-900"
@@ -908,13 +911,17 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
 
                 <div className="p-2 rounded-lg bg-slate-50 border border-slate-100 col-span-2 sm:col-span-1">
                   <span className="text-[10px] text-slate-400 uppercase font-medium block">Est. Community Mix</span>
-                  <div className="flex items-center gap-1 text-[10px] font-mono font-bold truncate">
-                    <span className="text-blue-700">{data.totalElectors ? Math.round((casteSummary.BC / data.totalElectors) * 100) : 0}% BC</span>
-                    <span>·</span>
-                    <span className="text-purple-700">{data.totalElectors ? Math.round((casteSummary.SC / data.totalElectors) * 100) : 0}% SC</span>
-                    <span>·</span>
-                    <span className="text-amber-700">{data.totalElectors ? Math.round((casteSummary.ST / data.totalElectors) * 100) : 0}% ST</span>
-                  </div>
+                  {casteSummary.BC + casteSummary.SC + casteSummary.ST + casteSummary.OC + casteSummary.Minority > 0 ? (
+                    <div className="flex items-center gap-1 text-[10px] font-mono font-bold truncate">
+                      <span className="text-blue-700">{data.totalElectors ? Math.round((casteSummary.BC / data.totalElectors) * 100) : 0}% BC</span>
+                      <span>·</span>
+                      <span className="text-purple-700">{data.totalElectors ? Math.round((casteSummary.SC / data.totalElectors) * 100) : 0}% SC</span>
+                      <span>·</span>
+                      <span className="text-amber-700">{data.totalElectors ? Math.round((casteSummary.ST / data.totalElectors) * 100) : 0}% ST</span>
+                    </div>
+                  ) : (
+                    <span className="text-slate-400 font-mono italic text-[10px]">Data to be added</span>
+                  )}
                 </div>
               </div>
             </div>
@@ -993,7 +1000,7 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                     <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
                     <input
                       type="text"
-                      placeholder="Search voter, caste, door, EPIC..."
+                      placeholder="Search EPIC, panna page..."
                       value={searchQuery}
                       onChange={(e) => {
                         setSearchQuery(e.target.value);
@@ -1052,18 +1059,11 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
 
                   {/* Age */}
                   <select
-                    value={ageCohort}
-                    onChange={(e) => {
-                      setAgeCohort(e.target.value as 'ALL' | '18-25' | '26-40' | '41-60' | '60+');
-                      setCurrentPage(1);
-                    }}
-                    className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2 py-1 text-slate-700 cursor-pointer"
+                    disabled
+                    className="text-xs bg-slate-100 border border-slate-200 rounded-lg px-2 py-1 text-slate-400 cursor-not-allowed"
+                    title="Age data to be added from official rolls"
                   >
-                    <option value="ALL">All Ages</option>
-                    <option value="18-25">18–25 (First-Time)</option>
-                    <option value="26-40">26–40 (Youth)</option>
-                    <option value="41-60">41–60 (Middle)</option>
-                    <option value="60+">60+ (Senior)</option>
+                    <option value="ALL">Age: Data to be added</option>
                   </select>
                 </div>
 
@@ -1110,7 +1110,7 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                         <th className="py-2.5 px-3 w-36">Est. Community</th>
                         <th className="py-2.5 px-3">Relative Name</th>
                         <th className="py-2.5 px-3 w-20">Door</th>
-                        <th className="py-2.5 px-3 w-14 text-center">Age</th>
+                        <th className="py-2.5 px-3 w-28 text-center">Age</th>
                         <th className="py-2.5 px-3 w-14 text-center">Gender</th>
                         <th className="py-2.5 px-3 w-16 text-center">Panna</th>
                         <th className="py-2.5 px-3 w-28 text-center">Field Tag</th>
@@ -1143,14 +1143,11 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                               </div>
                             </td>
                             <td className="py-2 px-3 font-bold text-slate-900">
-                              <div className="flex items-center gap-1.5">
+                              {e.name === 'Data to be added' ? (
+                                <span className="text-slate-400 font-mono italic font-normal text-[11px]">Data to be added</span>
+                              ) : (
                                 <span>{e.name}</span>
-                                {e.age <= 25 && (
-                                  <span className="text-[9px] px-1 rounded-full bg-amber-100 text-amber-800 border border-amber-200 font-semibold">
-                                    Youth
-                                  </span>
-                                )}
-                              </div>
+                              )}
                             </td>
                             <td className="py-2 px-3">
                               {pred ? (
@@ -1163,21 +1160,31 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                                   </span>
                                 </div>
                               ) : (
-                                <span className="text-slate-400 font-mono text-[10px]">—</span>
+                                <span className="text-slate-400 font-mono text-[10px] italic">Data to be added</span>
                               )}
                             </td>
                             <td className="py-2 px-3 text-slate-600">
-                              <span className="text-[10px] text-slate-400 font-mono mr-1">
-                                ({e.relationType}/o)
-                              </span>
-                              {e.relativeName}
+                              {e.relativeName === 'Data to be added' ? (
+                                <span className="text-slate-400 font-mono italic text-[11px]">Data to be added</span>
+                              ) : (
+                                <>
+                                  <span className="text-[10px] text-slate-400 font-mono mr-1">
+                                    ({e.relationType}/o)
+                                  </span>
+                                  {e.relativeName}
+                                </>
+                              )}
                             </td>
                             <td className="py-2 px-3 font-mono font-medium text-slate-700">
-                              {e.houseNo}
+                              {e.houseNo === 'Data to be added' ? (
+                                <span className="text-slate-400 font-mono italic text-[10px]">Data to be added</span>
+                              ) : (
+                                e.houseNo
+                              )}
                             </td>
-                            <td className="py-2 px-3 text-center font-mono font-semibold">
-                              <span className={e.age <= 25 ? 'text-amber-700 font-bold' : e.age > 60 ? 'text-purple-700 font-bold' : 'text-slate-800'}>
-                                {e.age}
+                            <td className="py-2 px-3 text-center">
+                              <span className="text-[10px] text-slate-400 font-mono italic">
+                                Data to be added
                               </span>
                             </td>
                             <td className="py-2 px-3 text-center">
@@ -1243,7 +1250,11 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                                     Sl #{e.slNo} &middot; {e.epic}
                                   </span>
                                   <div className="font-bold text-slate-900 text-xs">
-                                    {e.name}
+                                    {e.name === 'Data to be added' ? (
+                                      <span className="text-slate-400 font-mono italic font-normal text-[11px]">Data to be added</span>
+                                    ) : (
+                                      e.name
+                                    )}
                                   </div>
                                 </div>
                                 <span className={`text-[9px] px-1 py-0.2 rounded font-bold ${tag === 'committed' ? 'bg-emerald-100 text-emerald-800' : tag === 'swing' ? 'bg-amber-100 text-amber-800' : 'bg-slate-200 text-slate-700'}`}>
@@ -1251,14 +1262,20 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                                 </span>
                               </div>
                               <div className="text-[10px] text-slate-500">
-                                {e.relationType}/o {e.relativeName}
+                                {e.relativeName === 'Data to be added' ? (
+                                  <span className="text-slate-400 font-mono italic">Data to be added</span>
+                                ) : (
+                                  `${e.relationType}/o ${e.relativeName}`
+                                )}
                               </div>
                               <div className="flex items-center justify-between text-[10px] text-slate-500 pt-1 border-t border-slate-200">
-                                <span>Door: <strong>{e.houseNo}</strong></span>
-                                {pred && (
+                                <span>Door: {e.houseNo === 'Data to be added' ? <span className="text-slate-400 font-mono italic font-normal">Data to be added</span> : <strong>{e.houseNo}</strong>}</span>
+                                {pred ? (
                                   <span className={`px-1 py-0.2 rounded font-bold text-[9px] border ${pred.color.badge}`} title={pred.sourceBasis}>
                                     {pred.casteName} ({pred.probabilityPercent})
                                   </span>
+                                ) : (
+                                  <span className="text-slate-400 font-mono text-[9px] italic">Data to be added</span>
                                 )}
                               </div>
                             </div>
@@ -1495,13 +1512,13 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                           </span>
                           <ul className="space-y-1 text-[11px] text-slate-700">
                             <li>
-                              <strong className="text-pink-800">Youth (18–25):</strong> TSPSC annual job calendar &amp; recruitment drive.
+                              <strong className="text-pink-800">Youth (18–25):</strong> APPSC annual job calendar &amp; Mega DSC recruitment drive.
                             </li>
                             <li>
-                              <strong className="text-pink-800">Women:</strong> Mahalakshmi ₹2,500 assistance, ₹500 cylinder &amp; free bus travel.
+                              <strong className="text-pink-800">Women:</strong> Aadabidda Nidhi ₹1,500/m aid, Deepam 3 gas cylinders &amp; free bus travel.
                             </li>
                             <li>
-                              <strong className="text-pink-800">Seniors (60+):</strong> Cheyutha monthly social security pension to ₹4,000.
+                              <strong className="text-pink-800">Seniors (60+):</strong> NTR Bharosa monthly social security pension to ₹4,000.
                             </li>
                           </ul>
                         </div>
@@ -1766,8 +1783,10 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-1 p-2 bg-slate-50 rounded-lg border border-slate-200 text-xs">
                                   {stop.voters.map((v) => (
                                     <div key={v.epic} className="p-1 rounded bg-white border border-slate-200 text-[11px]">
-                                      <span className="font-bold text-slate-800 block truncate">{v.name}</span>
-                                      <span className="font-mono text-[9px] text-slate-500">{v.age}y ({v.gender}) &middot; {v.triageTag}</span>
+                                      <span className="font-bold text-slate-800 block truncate">
+                                        {v.name === 'Data to be added' ? <span className="text-slate-400 font-mono italic font-normal">Data to be added</span> : v.name}
+                                      </span>
+                                      <span className="font-mono text-[9px] text-slate-500">({v.gender}) &middot; <span className="text-slate-400 italic">Data to be added</span> &middot; {v.triageTag}</span>
                                     </div>
                                   ))}
                                 </div>
@@ -1833,7 +1852,9 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                             return (
                               <div key={m.epic} className="flex items-center justify-between text-xs py-0.5 px-1 rounded bg-slate-50">
                                 <div className="flex items-center gap-1">
-                                  <span className="font-semibold text-slate-800 text-[11px]">{m.name}</span>
+                                  <span className="font-semibold text-slate-800 text-[11px]">
+                                    {m.name === 'Data to be added' ? <span className="text-slate-400 font-mono italic font-normal">Data to be added</span> : m.name}
+                                  </span>
                                   {pred && (
                                     <span className={`text-[8px] px-1 rounded font-medium border ${pred.color.badge}`}>
                                       {pred.casteName}
@@ -1841,7 +1862,7 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                                   )}
                                 </div>
                                 <span className="font-mono text-[9px] text-slate-500">
-                                  {m.age}y ({m.gender})
+                                  ({m.gender}) &middot; <span className="text-slate-400 italic">Data to be added</span>
                                 </span>
                               </div>
                             );

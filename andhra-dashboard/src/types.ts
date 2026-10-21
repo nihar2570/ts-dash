@@ -91,40 +91,19 @@ export interface PartyMeta {
 }
 
 export const PARTY_CONFIG: Record<string, PartyMeta> = {
-  INC: {
-    code: 'INC',
-    fullName: 'Indian National Congress',
-    color: '#0284c7', // Sky / Cyan-Blue
-    textColor: '#ffffff',
-    bgLight: '#e0f2fe'
-  },
-  BRS: {
-    code: 'BRS',
-    fullName: 'Bharat Rashtra Samithi (TRS)',
-    color: '#ec4899', // Pink
-    textColor: '#ffffff',
-    bgLight: '#fce7f3'
-  },
-  BJP: {
-    code: 'BJP',
-    fullName: 'Bharatiya Janata Party',
-    color: '#f97316', // Saffron / Orange
-    textColor: '#ffffff',
-    bgLight: '#ffedd5'
-  },
-  AIMIM: {
-    code: 'AIMIM',
-    fullName: 'All India Majlis-E-Ittehadul Muslimeen',
-    color: '#15803d', // Green
-    textColor: '#ffffff',
-    bgLight: '#dcfce7'
-  },
   TDP: {
     code: 'TDP',
     fullName: 'Telugu Desam Party',
     color: '#eab308', // Vibrant Yellow
     textColor: '#000000',
     bgLight: '#fef9c3'
+  },
+  YSRCP: {
+    code: 'YSRCP',
+    fullName: 'YSR Congress Party',
+    color: '#1d4ed8', // Royal Blue
+    textColor: '#ffffff',
+    bgLight: '#dbeafe'
   },
   JSP: {
     code: 'JSP',
@@ -133,12 +112,19 @@ export const PARTY_CONFIG: Record<string, PartyMeta> = {
     textColor: '#ffffff',
     bgLight: '#fee2e2'
   },
-  YSRCP: {
-    code: 'YSRCP',
-    fullName: 'YSR Congress Party',
-    color: '#1d4ed8', // Royal Blue
+  BJP: {
+    code: 'BJP',
+    fullName: 'Bharatiya Janata Party',
+    color: '#f97316', // Saffron / Orange
     textColor: '#ffffff',
-    bgLight: '#dbeafe'
+    bgLight: '#ffedd5'
+  },
+  INC: {
+    code: 'INC',
+    fullName: 'Indian National Congress',
+    color: '#0284c7', // Sky / Cyan-Blue
+    textColor: '#ffffff',
+    bgLight: '#e0f2fe'
   },
   BSP: {
     code: 'BSP',
@@ -375,9 +361,11 @@ export interface ActiveScenarioBridge {
     counts: Record<string, number>;
     flippedCount: number;
     tossUpCount: number;
-    incDiff: number;
-    brsDiff: number;
-    bjpDiff: number;
+    tdpDiff?: number;
+    ysrcpDiff?: number;
+    jspDiff?: number;
+    bjpDiff?: number;
+    incDiff?: number;
   };
 }
 

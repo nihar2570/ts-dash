@@ -15,7 +15,7 @@ interface ExecutiveBriefingModalProps {
   isOpen: boolean;
   onClose: () => void;
   data: SeeepcDataset;
-  targetParty: 'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'INC' | 'BRS';
+  targetParty: 'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'INC';
 }
 
 export const ExecutiveBriefingModal: React.FC<ExecutiveBriefingModalProps> = ({

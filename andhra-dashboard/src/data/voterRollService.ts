@@ -1,5 +1,5 @@
 // Voter Roll Data Model & Loading Service for Polling Stations
-// Supports fetching official CEO Telangana extracted JSON or deterministic demographic generation
+// Supports fetching official CEO Andhra Pradesh extracted JSON or placeholder demographic framework
 
 export interface ElectorRecord {
   slNo: number;
@@ -40,7 +40,7 @@ function pseudoHash(seed: number): number {
 }
 
 // Detailed surname pools categorized by Andhra Pradesh demographic communities
-const COMMUNITY_SURNAMES = {
+export const COMMUNITY_SURNAMES = {
   KAPU_TELAGA_BALIJA: [
     'Thota', 'Ambati', 'Vundavalli', 'Kandula', 'Chegondi', 'Kothapalli', 'Bolisetti',
     'Grandhi', 'Akula', 'Chalamalasetty', 'Koppisetti', 'Mudragada', 'Bandi', 'Gorantla',
@@ -99,7 +99,7 @@ const COMMUNITY_SURNAMES = {
 };
 
 // Returns a weighted surname pool aligned with Andhra Pradesh 175-constituency regional demographics
-function getRegionSurnames(acNo: number): string[] {
+export function getRegionSurnames(acNo: number): string[] {
   // 1. Uttarandhra (AC 1 to 34: Srikakulam, Vizianagaram, Manyam, ASR, Vizag, Anakapalli)
   if (acNo <= 34) {
     return [
@@ -168,21 +168,6 @@ function getRegionSurnames(acNo: number): string[] {
   ];
 }
 
-const MALE_FIRST_NAMES = [
-  'Chandra Babu', 'Jagan Mohan', 'Pawan', 'Lokesh', 'Kalyan', 'Srinivasa Rao', 'Venkat',
-  'Ramesh', 'Satyanarayana', 'Suresh', 'Babu', 'Prasad', 'Appala Naidu', 'China Appala',
-  'Subba Rao', 'Venkata Ramana', 'Sambasiva Rao', 'Nageswara Rao', 'Radha Krishna', 'Siva Kumar',
-  'Mohan Rao', 'Ravindra', 'Harikrishna', 'Prabhakar', 'Sudhakar', 'Ashok Kumar', 'Anand',
-  'Kishore', 'Nagaraju', 'Sai Kumar', 'Govinda Rao', 'Shankar', 'Ravi Kumar', 'Kiran Kumar'
-];
-
-const FEMALE_FIRST_NAMES = [
-  'Lakshmi', 'Bhuvaneswari', 'Bharathi', 'Sireesha', 'Padmavathi', 'Sandhya Rani', 'Lalitha',
-  'Sarada', 'Sailaja', 'Sujatha', 'Renuka', 'Sunitha', 'Madhavi', 'Parvathi', 'Kameswari',
-  'Venkata Lakshmi', 'Satyavathi', 'Pushpa', 'Anasuya', 'Radhika', 'Nagamani', 'Srilatha',
-  'Bhavani', 'Durga', 'Swarna', 'Kumari', 'Vanisree', 'Kalavathi', 'Pushpasreevani'
-];
-
 const SECTIONS = [
   'Section 1: Main Grama Chavadi & Bazaar Street',
   'Section 2: BC Colony / Rythu Sangham Area',
@@ -192,7 +177,7 @@ const SECTIONS = [
   'Section 6: Girijanawada & Canal Extension',
 ];
 
-// Generates a demographic-accurate voter roll for a booth
+// Generates a demographic-accurate voter roll framework for a booth
 export function generateBoothVoterRoll(
   acNo: number,
   boothNo: number,
@@ -206,19 +191,13 @@ export function generateBoothVoterRoll(
   // Determine household structures
   let currentSl = 1;
   let houseIdx = 1;
-  const surnames = getRegionSurnames(acNo);
   const epicPrefixes = ['WLM', 'XUG', 'APJ', 'HRM', 'YTF'];
   const epicPrefix = epicPrefixes[acNo % epicPrefixes.length];
 
   while (currentSl <= total) {
     const houseSeed = acNo * 100003 + boothNo * 1009 + houseIdx * 73;
-    const surnameIdx = Math.floor(pseudoHash(houseSeed + 1) * surnames.length);
-    const surname = surnames[surnameIdx];
     const sectionIdx = Math.floor(pseudoHash(houseSeed + 2) * SECTIONS.length);
     const section = SECTIONS[sectionIdx];
-
-    const wardNo = Math.floor(houseIdx / 45) + 1;
-    const doorNumber = `${wardNo}-${(houseIdx % 90) + 1}${pseudoHash(houseSeed + 3) > 0.75 ? '/A' : ''}`;
 
     // Family size: 2 to 5 voters per household
     const familySize = Math.min(
@@ -228,9 +207,6 @@ export function generateBoothVoterRoll(
 
     // Head of household (Male, 45-72)
     const headAge = 44 + Math.floor(pseudoHash(houseSeed + 5) * 26);
-    const headMaleName = MALE_FIRST_NAMES[Math.floor(pseudoHash(houseSeed + 6) * MALE_FIRST_NAMES.length)];
-    const headFatherName = MALE_FIRST_NAMES[Math.floor(pseudoHash(houseSeed + 7) * MALE_FIRST_NAMES.length)];
-
     const headEpicNum = 1000000 + Math.floor(pseudoHash(houseSeed + 8) * 8999999);
     const headEpic = `${epicPrefix}${headEpicNum}`;
 
@@ -241,10 +217,10 @@ export function generateBoothVoterRoll(
     electors.push({
       slNo: currentSl,
       epic: headEpic,
-      name: `${surname} ${headMaleName}`,
-      relativeName: `${surname} ${headFatherName}`,
+      name: 'Data to be added',
+      relativeName: 'Data to be added',
       relationType: 'F',
-      houseNo: doorNumber,
+      houseNo: 'Data to be added',
       age: headAge,
       gender: 'M',
       section,
@@ -256,17 +232,16 @@ export function generateBoothVoterRoll(
     // Spouse (Female, headAge - 5 to + 1)
     if (familySize >= 2 && currentSl <= total) {
       const spouseAge = Math.max(18, headAge - Math.floor(pseudoHash(houseSeed + 10) * 6) - 1);
-      const spouseName = FEMALE_FIRST_NAMES[Math.floor(pseudoHash(houseSeed + 11) * FEMALE_FIRST_NAMES.length)];
       const spouseEpicNum = 1000000 + Math.floor(pseudoHash(houseSeed + 12) * 8999999);
       const spouseEpic = `${epicPrefix}${spouseEpicNum}`;
 
       electors.push({
         slNo: currentSl,
         epic: spouseEpic,
-        name: `${surname} ${spouseName}`,
-        relativeName: `${surname} ${headMaleName}`,
+        name: 'Data to be added',
+        relativeName: 'Data to be added',
         relationType: 'H',
-        houseNo: doorNumber,
+        houseNo: 'Data to be added',
         age: spouseAge,
         gender: 'F',
         section,
@@ -282,9 +257,6 @@ export function generateBoothVoterRoll(
       const childSeed = houseSeed + c * 31;
       const isMaleChild = pseudoHash(childSeed + 1) > 0.48;
       const childAge = Math.max(18, Math.min(38, headAge - 20 - Math.floor(pseudoHash(childSeed + 2) * 8)));
-      const childName = isMaleChild
-        ? MALE_FIRST_NAMES[Math.floor(pseudoHash(childSeed + 3) * MALE_FIRST_NAMES.length)]
-        : FEMALE_FIRST_NAMES[Math.floor(pseudoHash(childSeed + 4) * FEMALE_FIRST_NAMES.length)];
       const childEpicNum = 1000000 + Math.floor(pseudoHash(childSeed + 5) * 8999999);
       const childEpic = `${epicPrefix}${childEpicNum}`;
 
@@ -296,10 +268,10 @@ export function generateBoothVoterRoll(
       electors.push({
         slNo: currentSl,
         epic: childEpic,
-        name: `${surname} ${childName}`,
-        relativeName: `${surname} ${headMaleName}`,
+        name: 'Data to be added',
+        relativeName: 'Data to be added',
         relationType: 'F',
-        houseNo: doorNumber,
+        houseNo: 'Data to be added',
         age: childAge,
         gender: isMaleChild ? 'M' : 'F',
         section,
