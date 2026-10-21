@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import type { SeeepcDataset, ActiveScenarioBridge } from '../types';
 import { getPartyColor } from '../types';
 import type { WhatIfTab } from './AdvancedSimulationSuite';
@@ -25,6 +25,7 @@ import {
   X,
   Sliders,
   ExternalLink,
+  Handshake,
 } from 'lucide-react';
 import { StarCampaignerAllocator, CAMPAIGNER_PROFILES } from './StarCampaignerAllocator';
 import { DefectionRebelModeler, type DefectionEvent, PRESET_SCENARIOS } from './DefectionRebelModeler';
@@ -37,6 +38,14 @@ interface ActionsViewProps {
   scenarioBridge?: ActiveScenarioBridge | null;
   onUnlinkScenario?: () => void;
   onNavigateToWhatIf?: (category: WhatIfTab) => void;
+  onActionsTallyChange?: (tally: {
+    INC: number;
+    BRS: number;
+    BJP: number;
+    AIMIM: number;
+    coalitionCombined: number;
+    flipsCount: number;
+  }) => void;
 }
 
 interface ActionAllocation {
@@ -52,14 +61,12 @@ export const ActionsView: React.FC<ActionsViewProps> = ({
   scenarioBridge,
   onUnlinkScenario,
   onNavigateToWhatIf,
+  onActionsTallyChange,
 }) => {
   const isScenarioActive = Boolean(scenarioBridge && scenarioBridge.isExportedToActions);
-  const [targetParty, setTargetParty] = useState<'INC' | 'BRS' | 'BJP'>(() => {
-    if (scenarioBridge?.isExportedToActions && (scenarioBridge.id === 'bjp_trs_alliance' || scenarioBridge.id === 'bjp_trs_merger')) {
-      return 'BRS';
-    }
-    return 'INC';
-  });
+  const isCoalition = scenarioBridge?.id === 'bjp_trs_alliance' || scenarioBridge?.id === 'bjp_trs_merger';
+  // Default to INC across the entire dashboard
+  const [targetParty, setTargetParty] = useState<'INC' | 'BRS' | 'BJP'>('INC');
   const [copiedMemo, setCopiedMemo] = useState(false);
   const [isPlanModalOpen, setIsPlanModalOpen] = useState(false);
   const [digitalYieldPerPoint, setDigitalYieldPerPoint] = useState<number>(45);
@@ -582,6 +589,79 @@ export const ActionsView: React.FC<ActionsViewProps> = ({
     ).length;
   }, [data, targetParty]);
 
+  // Post-Actions Statewide Seat Tally across all parties
+  const postActionTally = useMemo(() => {
+    let incSeats = 0;
+    let brsSeats = 0;
+    let bjpSeats = 0;
+    let aimimSeats = 0;
+    let othSeats = 0;
+
+    battlegroundList.forEach((b) => {
+      if (b.cumulativeProjectedMargin > 0) {
+        if (targetParty === 'INC') incSeats++;
+        else if (targetParty === 'BRS') brsSeats++;
+        else if (targetParty === 'BJP') bjpSeats++;
+      } else {
+        const originalWinner = b.winner_2023;
+        if (originalWinner === targetParty) {
+          const runner = b.runner_up_2023;
+          if (runner === 'INC') incSeats++;
+          else if (runner === 'BRS') brsSeats++;
+          else if (runner === 'BJP') bjpSeats++;
+          else if (runner === 'AIMIM') aimimSeats++;
+          else othSeats++;
+        } else {
+          if (originalWinner === 'INC') incSeats++;
+          else if (originalWinner === 'BRS') brsSeats++;
+          else if (originalWinner === 'BJP') bjpSeats++;
+          else if (originalWinner === 'AIMIM') aimimSeats++;
+          else othSeats++;
+        }
+      }
+    });
+
+    return {
+      INC: incSeats,
+      BRS: brsSeats,
+      BJP: bjpSeats,
+      AIMIM: aimimSeats,
+      OTH: othSeats,
+      coalitionCombined: brsSeats + bjpSeats,
+    };
+  }, [battlegroundList, targetParty]);
+
+  const baselineCoalitionSeats = useMemo(() => {
+    if (!scenarioBridge) return 0;
+    return (scenarioBridge.tally.counts.BRS || 0) + (scenarioBridge.tally.counts.BJP || 0);
+  }, [scenarioBridge]);
+
+  const postActionCoalitionSeats = postActionTally.coalitionCombined;
+  const coalitionDiff = postActionCoalitionSeats - baselineCoalitionSeats;
+
+  // 2023 Actual Combined Seats for BRS + BJP
+  const coalition2023Seats = useMemo(() => {
+    let count = 0;
+    Object.values(data.constituencies).forEach((c) => {
+      if (c.winner_2023.party === 'BRS' || c.winner_2023.party === 'BJP') count++;
+    });
+    return count;
+  }, [data]);
+
+  // Sync post-action tally with parent bridge/ribbon
+  useEffect(() => {
+    if (onActionsTallyChange) {
+      onActionsTallyChange({
+        INC: postActionTally.INC,
+        BRS: postActionTally.BRS,
+        BJP: postActionTally.BJP,
+        AIMIM: postActionTally.AIMIM,
+        coalitionCombined: postActionTally.coalitionCombined,
+        flipsCount: cumulativeMetrics.cumulativeFlipsCount,
+      });
+    }
+  }, [postActionTally, cumulativeMetrics.cumulativeFlipsCount, onActionsTallyChange]);
+
   // Generated Plan Memo content
   const generatedPlanMemo = useMemo(() => {
     const topTargets = battlegroundList.filter((b) => b.seatTotalPoints > 0);
@@ -757,6 +837,12 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
               <p className="text-[11px] text-slate-500">
                 Official Election Commission of India 2023 result
               </p>
+              {isCoalition && (
+                <div className="text-[11px] font-mono text-purple-700 font-bold mt-1.5 pt-1.5 border-t border-slate-200 flex items-center justify-between">
+                  <span>BRS + BJP 2023 Actual:</span>
+                  <span className="font-black text-purple-900">{coalition2023Seats} seats</span>
+                </div>
+              )}
             </div>
 
             {/* Stage 2: 2028 Simulation Scenario Base */}
@@ -776,6 +862,14 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
               <p className="text-[11px] text-indigo-800 font-medium line-clamp-1" title={scenarioBridge.name}>
                 {scenarioBridge.name}
               </p>
+              {isCoalition && (
+                <div className="text-[11px] font-mono text-purple-900 font-bold mt-1.5 pt-1.5 border-t border-indigo-200 flex items-center justify-between">
+                  <span>BRS + BJP Simulation Base:</span>
+                  <span className="font-black text-purple-950">
+                    {baselineCoalitionSeats} seats ({scenarioBridge.tally.counts.BRS} BRS + {scenarioBridge.tally.counts.BJP} BJP)
+                  </span>
+                </div>
+              )}
             </div>
 
             {/* Stage 3: Field Actions Final */}
@@ -797,8 +891,52 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
               <p className="text-[11px] text-emerald-800 font-medium">
                 {cumulativeMetrics.netCombinedVotes >= 0 ? '+' : ''}{cumulativeMetrics.netCombinedVotes.toLocaleString()} net votes generated from Ground Operations
               </p>
+              {isCoalition && (
+                <div className="text-[11px] font-mono font-bold mt-1.5 pt-1.5 border-t border-emerald-200 flex items-center justify-between">
+                  <span className="text-purple-950">BRS + BJP Projected:</span>
+                  <span className="font-black text-purple-900">
+                    {postActionCoalitionSeats} seats
+                    {coalitionDiff !== 0 && (
+                      <span className={`ml-1 text-[10px] px-1 py-0.2 rounded ${coalitionDiff < 0 ? 'bg-emerald-200 text-emerald-900' : 'bg-rose-200 text-rose-900'}`}>
+                        {coalitionDiff < 0 ? `${coalitionDiff}` : `+${coalitionDiff}`}
+                      </span>
+                    )}
+                  </span>
+                </div>
+              )}
             </div>
           </div>
+
+          {/* BRS + BJP Coalition Combined Majority Barometer Banner */}
+          {isCoalition && (
+            <div className="p-3 bg-purple-50/90 rounded-xl border border-purple-200 flex flex-wrap items-center justify-between gap-3 text-xs">
+              <div className="flex items-center gap-2">
+                <span className="font-black text-purple-900 flex items-center gap-1.5">
+                  <Handshake className="w-4 h-4 text-purple-600" />
+                  <span>BRS + BJP Coalition Combined Projection:</span>
+                </span>
+                <span className="text-sm font-black font-mono text-purple-950">
+                  {postActionCoalitionSeats} Seats
+                </span>
+                <span className={`text-[11px] font-mono font-bold px-2 py-0.5 rounded border ${
+                  coalitionDiff < 0
+                    ? 'bg-emerald-100 text-emerald-800 border-emerald-300'
+                    : 'bg-purple-100 text-purple-800 border-purple-300'
+                }`}>
+                  {coalitionDiff < 0 ? `${coalitionDiff} seats peeled by ${targetParty} ground operations` : 'Simulation baseline strength'}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-700 font-mono text-xs">
+                <span>Majority Mark: <strong>60 Seats</strong></span>
+                <span>•</span>
+                <span className={`font-bold ${postActionCoalitionSeats >= 60 ? 'text-amber-800' : 'text-emerald-800 font-black'}`}>
+                  {postActionCoalitionSeats >= 60
+                    ? `Coalition holds +${postActionCoalitionSeats - 60} seat majority buffer`
+                    : `Coalition dropped below 60-seat majority (-${60 - postActionCoalitionSeats} seats)!`}
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -824,8 +962,9 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
             </div>
           </div>
           <div className="flex items-center gap-3">
+            {/* INC Target Total Won */}
             <div className="bg-slate-800/80 border border-slate-700 px-3 py-1.5 rounded-xl text-right">
-              <span className="text-[10px] text-slate-400 block font-bold uppercase">Projected Total Won</span>
+              <span className="text-[10px] text-slate-400 block font-bold uppercase">{targetParty} Projected Won</span>
               <div className="flex items-baseline gap-1.5">
                 <span className="text-lg font-black text-white">{cumulativeMetrics.cumulativeSeatsWon}</span>
                 <span className="text-xs text-slate-400 font-mono">/ 119 seats</span>
@@ -836,6 +975,31 @@ Generated via Telangana Assembly SEEEPC Strategic Decision Engine.`;
                 </span>
               </div>
             </div>
+
+            {/* BRS + BJP Coalition Combined Box */}
+            {isCoalition && (
+              <div className="bg-purple-950/70 border border-purple-500/50 px-3 py-1.5 rounded-xl text-right">
+                <span className="text-[10px] text-purple-300 block font-bold uppercase tracking-wider">
+                  BRS + BJP Coalition (Combined)
+                </span>
+                <div className="flex items-baseline gap-1.5 justify-end">
+                  <span className="text-lg font-black text-purple-200 font-mono">{postActionCoalitionSeats}</span>
+                  <span className="text-xs text-purple-400 font-mono">/ 119</span>
+                  <span className={`text-[11px] font-black px-1.5 py-0.2 rounded font-mono ${
+                    postActionCoalitionSeats >= 60 ? 'bg-amber-500/20 text-amber-300' : 'bg-emerald-500/20 text-emerald-300'
+                  }`}>
+                    {postActionCoalitionSeats >= 60 ? 'MAJORITY' : 'UNDER 60'}
+                  </span>
+                  {coalitionDiff !== 0 && (
+                    <span className={`text-[10px] font-mono font-bold px-1 rounded ${
+                      coalitionDiff < 0 ? 'bg-emerald-400/20 text-emerald-300' : 'bg-rose-400/20 text-rose-300'
+                    }`}>
+                      {coalitionDiff < 0 ? `${coalitionDiff}` : `+${coalitionDiff}`}
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 

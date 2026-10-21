@@ -26,10 +26,14 @@ import type { TurnoutSettings, WhatIfTab } from './AdvancedSimulationSuite';
 import {
   DEFAULT_COALITION_SETTINGS,
   DEFAULT_MLA_FATIGUE_SETTINGS,
+  DEFAULT_GROUND_CRISIS_SETTINGS,
+  AIMIM_NORTH_EXPANSION_AC_NOS,
+  LAGACHERLA_ZONE_AC_NOS,
 } from './StrategicSimulationModels';
 import type {
   CoalitionSettings,
   MlaFatigueSettings,
+  GroundCrisisSettings,
 } from './StrategicSimulationModels';
 
 // 44 Constituencies Contested by BJP in BJP+TRS Coalition (Urban GHMC, Ranga Reddy, North TS core, Kamareddy)
@@ -119,6 +123,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
   });
   const [coalitionSettings, setCoalitionSettings] = useState<CoalitionSettings>(DEFAULT_COALITION_SETTINGS);
   const [mlaFatigueSettings, setMlaFatigueSettings] = useState<MlaFatigueSettings>(DEFAULT_MLA_FATIGUE_SETTINGS);
+  const [groundCrisisSettings, setGroundCrisisSettings] = useState<GroundCrisisSettings>(DEFAULT_GROUND_CRISIS_SETTINGS);
   const [isStudioOpen, setIsStudioOpen] = useState<boolean>(false);
   const [activePreset, setActivePreset] = useState<string>('bjp_trs_alliance');
   const [selectedBubbleAc, setSelectedBubbleAc] = useState<number | null>(null);
@@ -270,6 +275,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
       setCoalitionSettings(DEFAULT_COALITION_SETTINGS);
       setMlaFatigueSettings(DEFAULT_MLA_FATIGUE_SETTINGS);
+      setGroundCrisisSettings(DEFAULT_GROUND_CRISIS_SETTINGS);
     }
 
     setSwings(reset);
@@ -466,7 +472,57 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         }
       }
 
+      // --------------------------------------------------------------------
+      // FEATURE: Telangana Ground Realities & Crisis Stress Modifiers
+      // --------------------------------------------------------------------
+      // 1. HYDRAA & Musi Demolition Backlash in Urban GHMC / Ranga Reddy
+      if (groundCrisisSettings.hydraUrbanBacklash > 0 && URBAN_AC_NOS.has(ac.ac_no)) {
+        const hydraCut = totalVotes * (groundCrisisSettings.hydraUrbanBacklash / 100);
+        incVotes = Math.max(0, incVotes - hydraCut);
+        brsVotes += hydraCut * 0.60;
+        bjpVotes += hydraCut * 0.40;
+      }
 
+      // 2. AIMIM North Telangana & Semi-Urban 10-AC Expansion
+      if (groundCrisisSettings.aimimNorthExpansion && AIMIM_NORTH_EXPANSION_AC_NOS.has(ac.ac_no)) {
+        const aimimCut = totalVotes * 0.16;
+        incVotes = Math.max(0, incVotes - (aimimCut * 0.80));
+        brsVotes = Math.max(0, brsVotes - (aimimCut * 0.20));
+        aimimVotes += aimimCut;
+      }
+
+      // 3. ED / CBI & Funding Choke on High-Stakes Battlegrounds (<8,000 Margin)
+      if (groundCrisisSettings.edCbiFundingChoke && ac.margin_2023 < 8000) {
+        const chokeCut = totalVotes * 0.022;
+        incVotes = Math.max(0, incVotes - chokeCut);
+        brsVotes += chokeCut * 0.55;
+        bjpVotes += chokeCut * 0.45;
+      }
+
+      // 4. Ashok Nagar & Youth Aspirant Revolt (Youth 18-25 cohort shift)
+      if (groundCrisisSettings.youthUnrestShift > 0 && ap.youth_18_25) {
+        const youthVoters = totalVotes * (ap.youth_18_25 / 100);
+        const youthShift = youthVoters * (groundCrisisSettings.youthUnrestShift / 100);
+        incVotes = Math.max(0, incVotes - youthShift);
+        bjpVotes += youthShift * 0.60;
+        brsVotes += youthShift * 0.40;
+      }
+
+      // 5. Auto-Rickshaw Livelihood Discontent (-1.5% in urban/fringe ACs)
+      if (groundCrisisSettings.autoDriverDiscontent && (isUrban || ac.margin_pct_2023 < 8.0)) {
+        const autoCut = totalVotes * 0.015;
+        incVotes = Math.max(0, incVotes - autoCut);
+        brsVotes += autoCut * 0.65;
+        bjpVotes += autoCut * 0.35;
+      }
+
+      // 6. Lagacherla & Tribal Land Backlash (-4.5% in Kodangal & South TS belt)
+      if (groundCrisisSettings.lagacherlaLandBacklash && LAGACHERLA_ZONE_AC_NOS.has(ac.ac_no)) {
+        const landCut = totalVotes * 0.045;
+        incVotes = Math.max(0, incVotes - landCut);
+        brsVotes += landCut * 0.70;
+        bjpVotes += landCut * 0.30;
+      }
 
       // Ensure positive votes
       incVotes = Math.max(100, Math.round(incVotes));
@@ -546,6 +602,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     turnoutSettings,
     coalitionSettings,
     mlaFatigueSettings,
+    groundCrisisSettings,
     tossUpThreshold,
     activePreset,
   ]);
@@ -658,6 +715,56 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       });
     }
 
+    // 6. Ground Realities & Crisis Modifiers
+    if (groundCrisisSettings.hydraUrbanBacklash > 0) {
+      list.push({
+        id: 'crisis_hydra',
+        label: `🏗️ HYDRAA: -${groundCrisisSettings.hydraUrbanBacklash}% GHMC`,
+        category: 'anti_incumbency',
+        detail: 'Urban lake buffer & real estate backlash in 29 ACs',
+      });
+    }
+    if (groundCrisisSettings.aimimNorthExpansion) {
+      list.push({
+        id: 'crisis_aimim',
+        label: '🛡️ AIMIM: 10 ACs North TS',
+        category: 'anti_incumbency',
+        detail: 'Multi-polar vote split outside Old City',
+      });
+    }
+    if (groundCrisisSettings.edCbiFundingChoke) {
+      list.push({
+        id: 'crisis_ed_cbi',
+        label: '⚖️ ED/CBI: Funding Choke',
+        category: 'anti_incumbency',
+        detail: '-2.2% mobilization penalty in tight ACs',
+      });
+    }
+    if (groundCrisisSettings.youthUnrestShift > 0) {
+      list.push({
+        id: 'crisis_youth',
+        label: `🎓 Youth Revolt: -${groundCrisisSettings.youthUnrestShift}% (18-25)`,
+        category: 'anti_incumbency',
+        detail: 'Ashok Nagar GO 29 & DSC aspirant agitation',
+      });
+    }
+    if (groundCrisisSettings.autoDriverDiscontent) {
+      list.push({
+        id: 'crisis_auto',
+        label: '🛺 Auto Union: -1.5% Fringe',
+        category: 'anti_incumbency',
+        detail: '6.5L auto driver families livelihood grievance',
+      });
+    }
+    if (groundCrisisSettings.lagacherlaLandBacklash) {
+      list.push({
+        id: 'crisis_lagacherla',
+        label: '🌳 Lagacherla: -4.5% Kodangal',
+        category: 'anti_incumbency',
+        detail: 'Pharma Village ST Lambada land acquisition clash',
+      });
+    }
+
     return list;
   }, [
     activePreset,
@@ -667,6 +774,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     turnoutSettings,
     macroSwing,
     mlaFatigueSettings,
+    groundCrisisSettings,
   ]);
 
   // Synchronize with parent app bridge
@@ -1231,6 +1339,8 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         setCoalitionSettings={setCoalitionSettings}
         mlaFatigueSettings={mlaFatigueSettings}
         setMlaFatigueSettings={setMlaFatigueSettings}
+        groundCrisisSettings={groundCrisisSettings}
+        setGroundCrisisSettings={setGroundCrisisSettings}
         onNavigateToActions={onNavigateToActions}
         onOpenDemographicStudio={() => setIsStudioOpen(true)}
         activeCustomizedCount={activeCustomizedCount}

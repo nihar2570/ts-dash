@@ -11,13 +11,22 @@ import {
   ChevronUp,
   AlertTriangle,
   Sliders,
+  Building2,
+  Flame,
+  ShieldAlert,
+  Scale,
+  GraduationCap,
+  Car,
+  Trees,
 } from 'lucide-react';
 import type {
   CoalitionSettings,
   MlaFatigueSettings,
+  GroundCrisisSettings,
 } from './StrategicSimulationModels';
 import {
   DEFAULT_COALITION_SETTINGS,
+  DEFAULT_GROUND_CRISIS_SETTINGS,
 } from './StrategicSimulationModels';
 
 export interface TurnoutSettings {
@@ -41,6 +50,8 @@ export interface AdvancedSimulationSuiteProps {
   setCoalitionSettings: React.Dispatch<React.SetStateAction<CoalitionSettings>>;
   mlaFatigueSettings: MlaFatigueSettings;
   setMlaFatigueSettings: React.Dispatch<React.SetStateAction<MlaFatigueSettings>>;
+  groundCrisisSettings: GroundCrisisSettings;
+  setGroundCrisisSettings: React.Dispatch<React.SetStateAction<GroundCrisisSettings>>;
   onNavigateToActions: (acNo?: number) => void;
   onOpenDemographicStudio?: () => void;
   activeCustomizedCount?: number;
@@ -89,6 +100,8 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
   setCoalitionSettings,
   mlaFatigueSettings,
   setMlaFatigueSettings,
+  groundCrisisSettings,
+  setGroundCrisisSettings,
   onNavigateToActions,
   onOpenDemographicStudio,
   activeCustomizedCount = 0,
@@ -97,6 +110,17 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
 }) => {
   const [activeTab, setActiveTab] = useState<WhatIfTab>(requestedTab || 'caste_blocs');
   const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
+
+  const activeCrisisCount = useMemo(() => {
+    let c = 0;
+    if (groundCrisisSettings.hydraUrbanBacklash > 0) c++;
+    if (groundCrisisSettings.aimimNorthExpansion) c++;
+    if (groundCrisisSettings.edCbiFundingChoke) c++;
+    if (groundCrisisSettings.youthUnrestShift > 0) c++;
+    if (groundCrisisSettings.autoDriverDiscontent) c++;
+    if (groundCrisisSettings.lagacherlaLandBacklash) c++;
+    return c;
+  }, [groundCrisisSettings]);
 
   useEffect(() => {
     if (requestedTab) {
@@ -111,7 +135,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
   };
   const [pollingErrorSigma, setPollingErrorSigma] = useState<number>(3.0);
   const [simulationSeed, setSimulationSeed] = useState<number>(1);
-  const [targetParty, setTargetParty] = useState<'INC' | 'BRS' | 'BJP'>('BRS');
+  const [targetParty, setTargetParty] = useState<'INC' | 'BRS' | 'BJP'>('INC');
 
   // Real-time seat tallies from compounded results
   const simulatedPartyTally = useMemo(() => {
@@ -373,7 +397,12 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
               }`}
             >
               <TrendingDown className="w-4 h-4 text-rose-300" />
-              <span>4. Anti-Inc &amp; Surgery</span>
+              <span>4. Anti-Inc &amp; Crises</span>
+              {activeCrisisCount > 0 && (
+                <span className="text-[10px] bg-rose-950 text-rose-300 border border-rose-500/50 px-1.5 py-0.2 rounded font-mono font-bold">
+                  {activeCrisisCount}
+                </span>
+              )}
             </button>
 
             <button
@@ -845,9 +874,10 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
             </div>
           )}
 
-          {/* TAB 4: ANTI-INCUMBENCY & MLA SURGERY */}
+          {/* TAB 4: ANTI-INCUMBENCY & GROUND REALITIES */}
           {activeTab === 'anti_incumbency' && (
             <div className="space-y-4 animate-in fade-in duration-150">
+              {/* Row 1: Statewide Macro & MLA Replacement Surgery */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 {/* Statewide Macro Swing */}
                 <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-3">
@@ -908,6 +938,335 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                   <div className="flex justify-between text-[10px] font-mono text-slate-500">
                     <span>0% (All Retained)</span>
                     <span>50% (Radical Ticket Surgery)</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Row 2: Telangana Ground Realities & Crisis Stress-Testing Matrix */}
+              <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 p-4 rounded-xl border border-rose-900/40 shadow-lg space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 rounded-lg bg-rose-500/20 text-rose-400 border border-rose-500/40">
+                      <Flame className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="flex items-center gap-2">
+                        <h4 className="text-sm font-black text-white">
+                          Telangana Ground Realities &amp; Crisis Stress Matrix
+                        </h4>
+                        <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-bold border ${
+                          activeCrisisCount > 0
+                            ? 'bg-rose-950 text-rose-300 border-rose-700/60'
+                            : 'bg-slate-800 text-slate-400 border-slate-700'
+                        }`}>
+                          {activeCrisisCount} Crises Active
+                        </span>
+                      </div>
+                      <p className="text-[11px] text-slate-400">
+                        Model live political fault lines: HYDRA demolitions, central agencies, minority split, youth protests &amp; land backlash.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Crisis Presets */}
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <button
+                      onClick={() => setGroundCrisisSettings(DEFAULT_GROUND_CRISIS_SETTINGS)}
+                      className="px-2.5 py-1 text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg font-bold cursor-pointer transition-colors border border-slate-700"
+                    >
+                      Baseline (0 Crises)
+                    </button>
+                    <button
+                      onClick={() =>
+                        setGroundCrisisSettings({
+                          hydraUrbanBacklash: 4.5,
+                          aimimNorthExpansion: false,
+                          edCbiFundingChoke: false,
+                          youthUnrestShift: 6,
+                          autoDriverDiscontent: true,
+                          lagacherlaLandBacklash: false,
+                        })
+                      }
+                      className="px-2.5 py-1 text-xs bg-amber-950/80 hover:bg-amber-900 text-amber-200 border border-amber-700/60 rounded-lg font-bold cursor-pointer transition-colors"
+                    >
+                      Urban Revolt (HYDRA + Youth)
+                    </button>
+                    <button
+                      onClick={() =>
+                        setGroundCrisisSettings({
+                          hydraUrbanBacklash: 5.0,
+                          aimimNorthExpansion: true,
+                          edCbiFundingChoke: true,
+                          youthUnrestShift: 7,
+                          autoDriverDiscontent: true,
+                          lagacherlaLandBacklash: true,
+                        })
+                      }
+                      className="px-2.5 py-1 text-xs bg-rose-950/90 hover:bg-rose-900 text-rose-200 border border-rose-600/70 rounded-lg font-bold cursor-pointer transition-colors"
+                    >
+                      Full 6-Point Siege
+                    </button>
+                  </div>
+                </div>
+
+                {/* 6 Crisis Cards Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                  {/* Card 1: HYDRAA & Musi Demolition Backlash */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-rose-900/60 transition-colors space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <Building2 className="w-4 h-4 text-rose-400" />
+                        <span className="font-bold text-xs text-white">HYDRAA &amp; Musi Backlash</span>
+                      </div>
+                      <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                        groundCrisisSettings.hydraUrbanBacklash > 0
+                          ? 'bg-rose-950 text-rose-300 border border-rose-800'
+                          : 'bg-slate-800 text-slate-400'
+                      }`}>
+                        {groundCrisisSettings.hydraUrbanBacklash > 0
+                          ? `-${groundCrisisSettings.hydraUrbanBacklash}% INC`
+                          : 'Off'}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                      <span className="bg-slate-900 px-1.5 py-0.5 rounded text-slate-300 font-mono">
+                        29 Urban ACs
+                      </span>
+                      <span>GHMC &amp; Ranga Reddy Corridor</span>
+                    </div>
+                    <p className="text-[11px] text-slate-400 leading-snug">
+                      Lake buffer demolitions, middle-class flat devaluation panic, and Musi eviction survey anger.
+                    </p>
+                    <input
+                      type="range"
+                      min="0"
+                      max="8"
+                      step="0.5"
+                      value={groundCrisisSettings.hydraUrbanBacklash}
+                      onChange={(e) =>
+                        setGroundCrisisSettings((prev) => ({
+                          ...prev,
+                          hydraUrbanBacklash: Number(e.target.value),
+                        }))
+                      }
+                      className="w-full accent-rose-500 cursor-pointer"
+                    />
+                    <div className="flex justify-between text-[10px] font-mono text-slate-500">
+                      <span>0% (Neutral)</span>
+                      <span>-4% (Moderate)</span>
+                      <span>-8% (Full Wipeout)</span>
+                    </div>
+                  </div>
+
+                  {/* Card 2: AIMIM North TS 10-AC Expansion */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-amber-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <ShieldAlert className="w-4 h-4 text-amber-400" />
+                          <span className="font-bold text-xs text-white">AIMIM North TS Expansion</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              aimimNorthExpansion: !prev.aimimNorthExpansion,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.aimimNorthExpansion
+                              ? 'bg-amber-950 text-amber-300 border-amber-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.aimimNorthExpansion ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-amber-300 font-mono">
+                          10 Battleground ACs
+                        </span>
+                        <span>Nizamabad, Bodhan, Adilabad, etc.</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        AIMIM fields independent candidates outside Old City, siphoning ~16% minority votes from Congress into 3-cornered splits.
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-amber-400/90">
+                      {groundCrisisSettings.aimimNorthExpansion
+                        ? '⚡ Splits Muslim vote: BRS/BJP wins on 38% plurality'
+                        : '○ Contesting strictly 7 Old City bastions'}
+                    </div>
+                  </div>
+
+                  {/* Card 3: ED / CBI War-Chest Choke */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-indigo-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Scale className="w-4 h-4 text-indigo-400" />
+                          <span className="font-bold text-xs text-white">ED / CBI War-Chest Choke</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              edCbiFundingChoke: !prev.edCbiFundingChoke,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.edCbiFundingChoke
+                              ? 'bg-indigo-950 text-indigo-300 border-indigo-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.edCbiFundingChoke ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-indigo-300 font-mono">
+                          Toss-Up ACs
+                        </span>
+                        <span>2023 Margin &lt; 8,000 Votes</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Central agency raids freeze candidate liquidity and contractor networks, imposing a -2.2% ground mobilization penalty.
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-indigo-300">
+                      {groundCrisisSettings.edCbiFundingChoke
+                        ? '⚡ -2.2% penalty on cash-starved INC candidates'
+                        : '○ Normal election liquidity & cadre deployment'}
+                    </div>
+                  </div>
+
+                  {/* Card 4: Ashok Nagar & Youth Unrest */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-sky-900/60 transition-colors space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <GraduationCap className="w-4 h-4 text-sky-400" />
+                        <span className="font-bold text-xs text-white">Ashok Nagar Youth Revolt</span>
+                      </div>
+                      <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                        groundCrisisSettings.youthUnrestShift > 0
+                          ? 'bg-sky-950 text-sky-300 border border-sky-800'
+                          : 'bg-slate-800 text-slate-400'
+                      }`}>
+                        {groundCrisisSettings.youthUnrestShift > 0
+                          ? `-${groundCrisisSettings.youthUnrestShift}% Youth`
+                          : 'Off'}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                      <span className="bg-slate-900 px-1.5 py-0.5 rounded text-slate-300 font-mono">
+                        Youth 18-25
+                      </span>
+                      <span>Coaching Hubs &amp; Statewide Job Aspirants</span>
+                    </div>
+                    <p className="text-[11px] text-slate-400 leading-snug">
+                      Group-1 GO 29 roster controversy, Mega DSC delays &amp; police lathi charges alienating student cadre.
+                    </p>
+                    <input
+                      type="range"
+                      min="0"
+                      max="10"
+                      step="1"
+                      value={groundCrisisSettings.youthUnrestShift}
+                      onChange={(e) =>
+                        setGroundCrisisSettings((prev) => ({
+                          ...prev,
+                          youthUnrestShift: Number(e.target.value),
+                        }))
+                      }
+                      className="w-full accent-sky-500 cursor-pointer"
+                    />
+                    <div className="flex justify-between text-[10px] font-mono text-slate-500">
+                      <span>0% (Neutral)</span>
+                      <span>-5% (Disillusioned)</span>
+                      <span>-10% (Active Revolt)</span>
+                    </div>
+                  </div>
+
+                  {/* Card 5: Auto-Rickshaw Livelihood Discontent */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-orange-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Car className="w-4 h-4 text-orange-400" />
+                          <span className="font-bold text-xs text-white">Auto Driver Union Backlash</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              autoDriverDiscontent: !prev.autoDriverDiscontent,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.autoDriverDiscontent
+                              ? 'bg-orange-950 text-orange-300 border-orange-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.autoDriverDiscontent ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-orange-300 font-mono">
+                          6.5L Families
+                        </span>
+                        <span>Urban &amp; Semi-Urban Fringe</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        40% daily income loss from Mahalakshmi free RTC bus travel turns 6.5 lakh drivers into vocal anti-INC influencers.
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-orange-400/90">
+                      {groundCrisisSettings.autoDriverDiscontent
+                        ? '⚡ -1.5% margin drag across urban & semi-urban seats'
+                        : '○ Normal urban fringe transport sentiment'}
+                    </div>
+                  </div>
+
+                  {/* Card 6: Lagacherla & Tribal Land Backlash */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-emerald-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Trees className="w-4 h-4 text-emerald-400" />
+                          <span className="font-bold text-xs text-white">Lagacherla Land Backlash</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              lagacherlaLandBacklash: !prev.lagacherlaLandBacklash,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.lagacherlaLandBacklash
+                              ? 'bg-emerald-950 text-emerald-300 border-emerald-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.lagacherlaLandBacklash ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-emerald-300 font-mono">
+                          7 Southern ACs
+                        </span>
+                        <span>Kodangal &amp; South TS Lambada Belt</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Pharma Village public hearing clash in CM's home constituency fuels Lambada/ST agitation against forced land acquisition.
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-emerald-400/90">
+                      {groundCrisisSettings.lagacherlaLandBacklash
+                        ? '⚡ -4.5% ST Lambada & smallholder penalty in Kodangal belt'
+                        : '○ Southern rural baseline preserved'}
+                    </div>
                   </div>
                 </div>
               </div>

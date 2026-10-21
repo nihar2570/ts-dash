@@ -69,6 +69,14 @@ export const App: React.FC = () => {
 
   const [activeScenarioBridge, setActiveScenarioBridge] = useState<ActiveScenarioBridge | null>(null);
   const [requestedWhatIfTab, setRequestedWhatIfTab] = useState<WhatIfTab | undefined>(undefined);
+  const [actionsTally, setActionsTally] = useState<{
+    INC: number;
+    BRS: number;
+    BJP: number;
+    AIMIM: number;
+    coalitionCombined: number;
+    flipsCount: number;
+  } | undefined>(undefined);
 
   const handleBridgeChange = (newBridge: ActiveScenarioBridge) => {
     setActiveScenarioBridge((prev) => ({
@@ -278,6 +286,7 @@ export const App: React.FC = () => {
             onExportToActions={handleExportToActions}
             onNavigateToWhatIf={handleNavigateToWhatIf}
             onUnlinkScenario={handleUnlinkScenario}
+            actionsSeats={activeTab === 'actions' ? actionsTally : undefined}
           />
         )}
 
@@ -366,6 +375,7 @@ export const App: React.FC = () => {
             scenarioBridge={activeScenarioBridge}
             onUnlinkScenario={handleUnlinkScenario}
             onNavigateToWhatIf={handleNavigateToWhatIf}
+            onActionsTallyChange={setActionsTally}
           />
         )}
 

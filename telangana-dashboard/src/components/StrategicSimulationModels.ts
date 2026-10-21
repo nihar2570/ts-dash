@@ -55,3 +55,47 @@ export const GHMC_URBAN_DISTRICTS = new Set([
   'Medchal-Malkajgiri',
   'Ranga Reddy',
 ]);
+
+export interface GroundCrisisSettings {
+  hydraUrbanBacklash: number;       // 0% to 8% vote penalty against INC in GHMC/Ranga Reddy urban ACs
+  aimimNorthExpansion: boolean;     // fields candidates in 10 minority-rich North TS ACs (splits minority vote)
+  edCbiFundingChoke: boolean;       // -2% campaign finance penalty in tight margin ACs (<8,000 votes)
+  youthUnrestShift: number;         // 0% to 10% shift of Youth (18-25) away from INC (Ashok Nagar / Group-1)
+  autoDriverDiscontent: boolean;    // -1.5% urban fringe penalty from 6.5L auto driver families
+  lagacherlaLandBacklash: boolean;  // -4% ST Lambada / rural landholder swing in Kodangal & South TS
+}
+
+export const DEFAULT_GROUND_CRISIS_SETTINGS: GroundCrisisSettings = {
+  hydraUrbanBacklash: 0,
+  aimimNorthExpansion: false,
+  edCbiFundingChoke: false,
+  youthUnrestShift: 0,
+  autoDriverDiscontent: false,
+  lagacherlaLandBacklash: false,
+};
+
+// 10 North Telangana & Semi-Urban Seats with high minority concentration targeted by AIMIM expansion
+export const AIMIM_NORTH_EXPANSION_AC_NOS = new Set([
+  7,   // Adilabad
+  9,   // Nirmal
+  10,  // Mudhole
+  12,  // Bodhan
+  17,  // Nizamabad (Urban)
+  20,  // Koratla
+  26,  // Karimnagar
+  39,  // Sangareddy
+  74,  // Mahbubnagar
+  106, // Warangal East
+]);
+
+// Kodangal & Southern Tribal / Rural Landholder belt
+export const LAGACHERLA_ZONE_AC_NOS = new Set([
+  72, // Kodangal (CM Revanth Reddy's constituency / Lagacherla village)
+  73, // Narayanpet
+  74, // Mahbubnagar
+  75, // Jadcherla
+  83, // Kalwakurthy
+  84, // Shadnagar
+  85, // Kollapur
+]);
+
