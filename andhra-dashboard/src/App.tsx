@@ -378,6 +378,7 @@ export const App: React.FC = () => {
             onUnlinkScenario={handleUnlinkScenario}
             onNavigateToWhatIf={handleNavigateToWhatIf}
             onActionsTallyChange={setActionsTally}
+            candidatesData={candidatesData}
           />
         )}
 

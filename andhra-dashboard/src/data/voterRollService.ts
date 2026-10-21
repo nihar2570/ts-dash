@@ -342,7 +342,35 @@ export async function fetchBoothVoters(
     return boothRollCache.get(cacheKey)!;
   }
 
-  // Generates calibrated demographic, household & caste profile in sub-millisecond
+  // Check for official booth dataset
+  try {
+    const res = await fetch(`/data/booths/ac_${acNo}.json`);
+    if (res.ok) {
+      const list = await res.json();
+      if (Array.isArray(list)) {
+        const b = list.find((item: any) => item.booth_no === boothNo);
+        if (b) {
+          boothName = b.building || b.name || boothName;
+          mandalName = b.mandal || mandalName;
+          electorateCount = b.electorate || electorateCount;
+        }
+      }
+    } else if (acNo === 175) {
+      const fallbackRes = await fetch('/data/rolls/ac_175_kuppam_booths.json');
+      if (fallbackRes.ok) {
+        const json = await fallbackRes.json();
+        const b = json.booths?.find((item: any) => item.boothNo === boothNo);
+        if (b) {
+          boothName = b.name;
+          mandalName = b.mandalName;
+          electorateCount = b.electorate;
+        }
+      }
+    }
+  } catch {
+    // fallback
+  }
+
   const roll = generateBoothVoterRoll(acNo, boothNo, boothName, mandalName, electorateCount);
   boothRollCache.set(cacheKey, roll);
   return roll;

@@ -20,7 +20,6 @@ import type { ElectorRecord, BoothVoterRollSummary } from '../data/voterRollServ
 import { fetchBoothVoters } from '../data/voterRollService';
 import {
   predictCaste,
-  predictHouseholdCaste,
   type CasteCategory,
   type CastePrediction,
 } from '../data/casteClassifierService';
@@ -51,7 +50,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
   mandalName,
   electorateCount = 840,
   form20Margin = 0,
-  leadParty = 'BJP',
+  leadParty = 'TDP',
   triage = 'battleground',
 }) => {
   const [data, setData] = useState<BoothVoterRollSummary | null>(null);
@@ -417,24 +416,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
               <Fingerprint className="w-4 h-4 text-indigo-600 shrink-0" />
               <div>
                 <span className="text-[10px] text-slate-500 block uppercase font-medium">Est. Community Mix</span>
-                {casteSummary.BC + casteSummary.SC + casteSummary.ST + casteSummary.OC + casteSummary.Minority > 0 ? (
-                  <div className="flex items-center gap-1.5 text-[11px] font-mono font-bold">
-                    <span className="text-blue-700 bg-blue-50 px-1 rounded border border-blue-200" title={`BC: ${casteSummary.BC}`}>
-                      {data.totalElectors ? Math.round((casteSummary.BC / data.totalElectors) * 100) : 0}% BC
-                    </span>
-                    <span className="text-purple-700 bg-purple-50 px-1 rounded border border-purple-200" title={`SC: ${casteSummary.SC}`}>
-                      {data.totalElectors ? Math.round((casteSummary.SC / data.totalElectors) * 100) : 0}% SC
-                    </span>
-                    <span className="text-amber-700 bg-amber-50 px-1 rounded border border-amber-200" title={`ST: ${casteSummary.ST}`}>
-                      {data.totalElectors ? Math.round((casteSummary.ST / data.totalElectors) * 100) : 0}% ST
-                    </span>
-                    <span className="text-emerald-700 bg-emerald-50 px-1 rounded border border-emerald-200" title={`OC: ${casteSummary.OC}`}>
-                      {data.totalElectors ? Math.round((casteSummary.OC / data.totalElectors) * 100) : 0}% OC
-                    </span>
-                  </div>
-                ) : (
-                  <span className="text-slate-400 font-mono italic text-[11px]">Data to be added</span>
-                )}
+                <span className="text-slate-400 font-mono italic text-[11px]">Data to be added</span>
               </div>
             </div>
           </div>
@@ -655,7 +637,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                           )}
                         </td>
                         <td className="py-2 px-3">
-                          {pred ? (
+                          {pred && e.name !== 'Data to be added' ? (
                             <div className="flex items-center gap-1.5" title={`Source: ${pred.sourceBasis} (${pred.confidenceTier} confidence)`}>
                               <span className={`px-2 py-0.5 rounded text-[10px] font-bold border ${pred.color.badge}`}>
                                 {pred.casteName}
@@ -804,7 +786,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                           </div>
                           <div className="flex items-center justify-between text-[10px] text-slate-500 pt-1 border-t border-slate-200">
                             <span>Door: {e.houseNo === 'Data to be added' ? <span className="text-slate-400 font-mono italic font-normal">Data to be added</span> : <strong>{e.houseNo}</strong>}</span>
-                            {casteMap.get(e.epic) ? (
+                            {casteMap.get(e.epic) && e.name !== 'Data to be added' ? (
                               <span className={`px-1.5 py-0.2 rounded font-bold border text-[9px] ${casteMap.get(e.epic)!.color.badge}`} title={casteMap.get(e.epic)!.sourceBasis}>
                                 {casteMap.get(e.epic)!.casteName} ({casteMap.get(e.epic)!.probabilityPercent})
                               </span>
@@ -823,7 +805,6 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
             /* VIEW 3: Household / Door-to-Door Canvassing */
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
               {householdGroups.map((h) => {
-                const hCaste = predictHouseholdCaste(h.members, mandalName);
                 return (
                   <div
                     key={h.houseNo}
@@ -844,9 +825,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                         </div>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${hCaste.color.badge}`} title={`Household Consensus: ${hCaste.sourceBasis}`}>
-                          {hCaste.casteName} · {hCaste.probabilityPercent}
-                        </span>
+                        <span className="text-[10px] text-slate-400 font-mono italic">Data to be added</span>
                         <span className="font-mono text-xs font-bold text-slate-700 bg-slate-100 px-2 py-0.5 rounded-full border border-slate-200">
                           {h.members.length}
                         </span>
@@ -862,7 +841,7 @@ export const BoothVoterRollModal: React.FC<BoothVoterRollModalProps> = ({
                         <div>
                           <div className="font-semibold text-slate-800 text-[11px] flex items-center gap-1.5">
                             <span>{m.name === 'Data to be added' ? <span className="text-slate-400 font-mono italic font-normal">Data to be added</span> : m.name}</span>
-                            {casteMap.get(m.epic) && (
+                            {casteMap.get(m.epic) && m.name !== 'Data to be added' && (
                               <span className={`text-[9px] px-1 py-0.2 rounded font-medium border ${casteMap.get(m.epic)!.color.badge}`}>
                                 {casteMap.get(m.epic)!.casteName}
                               </span>

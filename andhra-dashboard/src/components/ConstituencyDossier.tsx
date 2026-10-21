@@ -88,11 +88,11 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
   const [filterMode, setFilterMode] = useState<'1000' | '5000' | 'all'>('1000');
   const [searchQuery, setSearchQuery] = useState<string>('');
 
-  // Column visibility toggles (defaulted to OFF, shown only when toggled ON individually)
-  const [showAge, setShowAge] = useState<boolean>(false);
-  const [showEducation, setShowEducation] = useState<boolean>(false);
-  const [showCriminalCases, setShowCriminalCases] = useState<boolean>(false);
-  const [showNetWorth, setShowNetWorth] = useState<boolean>(false);
+  // Column visibility toggles (defaulted to ON per user preference)
+  const [showAge, setShowAge] = useState<boolean>(true);
+  const [showEducation, setShowEducation] = useState<boolean>(true);
+  const [showCriminalCases, setShowCriminalCases] = useState<boolean>(true);
+  const [showNetWorth, setShowNetWorth] = useState<boolean>(true);
 
   // Handle filter preset change
   const handleFilterPreset = (preset: '1000' | '5000' | 'all') => {
@@ -385,7 +385,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                     <span className="text-sm font-black text-slate-900">
                       {data.total_candidates}
                     </span>
-                    <span className="text-[10px] text-slate-400">({data.candidates_above_1000} &ge; 1k)</span>
+                    <span className="text-[10px] text-slate-400">({data.candidates_above_1000} ≥ 1k)</span>
                   </div>
                 </div>
 
@@ -432,7 +432,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                 }`}
                 title="Show candidates with at least 1,000 votes"
               >
-                &ge; 1,000 Votes (Default)
+                ≥ 1,000 Votes (Default)
               </button>
 
               <button
@@ -445,7 +445,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                 }`}
                 title="Show major candidates with at least 5,000 votes"
               >
-                &ge; 5,000 Votes
+                ≥ 5,000 Votes
               </button>
 
               <button
@@ -502,8 +502,8 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
             <div className="bg-slate-100/90 px-4 py-2.5 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2.5 text-xs">
               <span className="font-bold text-slate-700">
                 Displaying {filteredCandidates.length} Candidates{' '}
-                {filterMode === '1000' && '(polling &ge; 1,000 votes)'}
-                {filterMode === '5000' && '(polling &ge; 5,000 votes)'}
+                {filterMode === '1000' && '(polling ≥ 1,000 votes)'}
+                {filterMode === '5000' && '(polling ≥ 5,000 votes)'}
               </span>
 
               {/* Individual Column Toggles */}
@@ -511,6 +511,25 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                 <span className="text-[11px] font-semibold text-slate-500 mr-0.5">
                   Show Columns:
                 </span>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    const allActive = showAge && showEducation && showCriminalCases && showNetWorth;
+                    setShowAge(!allActive);
+                    setShowEducation(!allActive);
+                    setShowCriminalCases(!allActive);
+                    setShowNetWorth(!allActive);
+                  }}
+                  className={`px-2 py-1 rounded-lg text-xs font-semibold border transition-all cursor-pointer ${
+                    showAge && showEducation && showCriminalCases && showNetWorth
+                      ? 'bg-indigo-50 text-indigo-700 border-indigo-200 hover:bg-indigo-100'
+                      : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-50'
+                  }`}
+                  title="Toggle all disclosure columns"
+                >
+                  {showAge && showEducation && showCriminalCases && showNetWorth ? 'Hide All' : 'Select All'}
+                </button>
 
                 <button
                   type="button"

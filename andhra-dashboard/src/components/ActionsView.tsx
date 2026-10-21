@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import type { SeeepcDataset, ActiveScenarioBridge } from '../types';
-import { getPartyColor } from '../types';
+import type { SeeepcDataset, ActiveScenarioBridge, ConstituencyCandidatesData } from '../types';
+import { getPartyColor, getPartyBg } from '../types';
 import type { WhatIfTab } from './AdvancedSimulationSuite';
 import {
   Target,
@@ -26,6 +26,10 @@ import {
   Sliders,
   ExternalLink,
   Handshake,
+  ShieldCheck,
+  ShieldAlert,
+  Coins,
+  GraduationCap,
 } from 'lucide-react';
 import { StarCampaignerAllocator, CAMPAIGNER_PROFILES } from './StarCampaignerAllocator';
 import { DefectionRebelModeler, type DefectionEvent, PRESET_SCENARIOS } from './DefectionRebelModeler';
@@ -47,6 +51,7 @@ interface ActionsViewProps {
     coalitionCombined: number;
     flipsCount: number;
   }) => void;
+  candidatesData?: Record<string, ConstituencyCandidatesData> | null;
 }
 
 interface ActionAllocation {
@@ -63,6 +68,7 @@ export const ActionsView: React.FC<ActionsViewProps> = ({
   onUnlinkScenario,
   onNavigateToWhatIf,
   onActionsTallyChange,
+  candidatesData,
 }) => {
   const isScenarioActive = Boolean(scenarioBridge && scenarioBridge.isExportedToActions);
   const isCoalition = scenarioBridge?.id === 'nda_2024_sweep' || true; // NDA alliance is the governing coalition
@@ -233,7 +239,7 @@ export const ActionsView: React.FC<ActionsViewProps> = ({
       const margin = sim ? sim.simulated.margin : ac.margin_2023;
 
       // Find primary decisive community
-      let maxComm = 'bc_mudiraj';
+      let maxComm = 'kapu';
       let maxPct = 0;
       Object.entries(ac.caste_profile).forEach(([k, v]) => {
         if (v > maxPct) {
@@ -1568,6 +1574,136 @@ Generated via Andhra Pradesh Assembly SEEEPC Strategic Decision Engine.`;
                       </div>
                     </div>
                   </div>
+
+                  {/* Candidate Equity & ADR Matchup Box */}
+                  {candidatesData && candidatesData[String(b.ac_no)] && (() => {
+                    const acCands = candidatesData[String(b.ac_no)].candidates || [];
+                    const targetCand = acCands.find((c) => c.party === targetParty) || acCands[0];
+                    const oppCand = acCands.find((c) => c.party !== targetParty && !c.is_nota) || acCands[1];
+
+                    if (!targetCand) return null;
+
+                    const tCases = targetCand.myneta?.criminal_cases ?? 0;
+                    const oCases = oppCand?.myneta?.criminal_cases ?? 0;
+                    const hasLegalEdge = oppCand && tCases < oCases;
+                    const hasAssetEdge = oppCand && (targetCand.myneta?.total_assets || 0) > (oppCand.myneta?.total_assets || 0);
+
+                    return (
+                      <div className="bg-white p-3 rounded-lg border border-slate-200 space-y-2">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-1.5 font-bold text-slate-800 text-xs">
+                            <Award className="w-4 h-4 text-amber-500" />
+                            <span>Candidate Equity &amp; ADR Matchup ({b.ac_name})</span>
+                          </div>
+                          {onOpenDossier && (
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                onOpenDossier(b.ac_no);
+                              }}
+                              className="text-[11px] font-bold text-indigo-600 hover:text-indigo-800 flex items-center gap-1 cursor-pointer"
+                            >
+                              <span>View Full Dossier</span>
+                              <ExternalLink className="w-3 h-3" />
+                            </button>
+                          )}
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                          {/* Target Party Candidate */}
+                          <div className="p-2.5 rounded-lg border border-indigo-100 bg-indigo-50/40 space-y-1">
+                            <div className="flex items-center justify-between">
+                              <span className="font-bold text-indigo-950 truncate max-w-[160px]" title={targetCand.name}>
+                                {targetCand.name}
+                              </span>
+                              <span
+                                className="px-1.5 py-0.2 rounded font-bold text-[10px]"
+                                style={{ backgroundColor: getPartyBg(targetCand.party), color: getPartyColor(targetCand.party) }}
+                              >
+                                {targetCand.party}
+                              </span>
+                            </div>
+                            <div className="flex items-center justify-between text-slate-600 text-[10px] pt-1 border-t border-indigo-100">
+                              <span>Net Worth: <strong className="font-mono text-slate-900">{targetCand.myneta?.net_worth_formatted || 'N/A'}</strong></span>
+                              <span className="flex items-center gap-1">
+                                {tCases === 0 ? (
+                                  <span className="text-emerald-700 font-bold flex items-center gap-0.5"><ShieldCheck className="w-3 h-3" /> 0 Cases</span>
+                                ) : (
+                                  <span className="text-rose-700 font-bold flex items-center gap-0.5"><ShieldAlert className="w-3 h-3" /> {tCases} Cases</span>
+                                )}
+                              </span>
+                            </div>
+                            {targetCand.myneta?.education && (
+                              <div className="text-[10px] text-slate-500 flex items-center gap-1">
+                                <GraduationCap className="w-3 h-3 text-slate-400" />
+                                <span className="truncate">{targetCand.myneta.education}</span>
+                              </div>
+                            )}
+                          </div>
+
+                          {/* Opponent Candidate */}
+                          {oppCand ? (
+                            <div className="p-2.5 rounded-lg border border-slate-200 bg-slate-50/70 space-y-1">
+                              <div className="flex items-center justify-between">
+                                <span className="font-bold text-slate-900 truncate max-w-[160px]" title={oppCand.name}>
+                                  {oppCand.name}
+                                </span>
+                                <span
+                                  className="px-1.5 py-0.2 rounded font-bold text-[10px]"
+                                  style={{ backgroundColor: getPartyBg(oppCand.party), color: getPartyColor(oppCand.party) }}
+                                >
+                                  {oppCand.party}
+                                </span>
+                              </div>
+                              <div className="flex items-center justify-between text-slate-600 text-[10px] pt-1 border-t border-slate-200">
+                                <span>Net Worth: <strong className="font-mono text-slate-900">{oppCand.myneta?.net_worth_formatted || 'N/A'}</strong></span>
+                                <span className="flex items-center gap-1">
+                                  {oCases === 0 ? (
+                                    <span className="text-emerald-700 font-bold flex items-center gap-0.5"><ShieldCheck className="w-3 h-3" /> 0 Cases</span>
+                                  ) : (
+                                    <span className="text-rose-700 font-bold flex items-center gap-0.5"><ShieldAlert className="w-3 h-3" /> {oCases} Cases</span>
+                                  )}
+                                </span>
+                              </div>
+                              {oppCand.myneta?.education && (
+                                <div className="text-[10px] text-slate-500 flex items-center gap-1">
+                                  <GraduationCap className="w-3 h-3 text-slate-400" />
+                                  <span className="truncate">{oppCand.myneta.education}</span>
+                                </div>
+                              )}
+                            </div>
+                          ) : (
+                            <div className="p-2.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-400 text-center flex items-center justify-center text-[11px]">
+                              Opponent profile pending Form-20 filing
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Tactical Narrative Directive based on Candidate Matchup */}
+                        <div className="flex items-center gap-2 flex-wrap text-[10px] pt-1">
+                          {hasLegalEdge && (
+                            <span className="px-2 py-0.5 rounded bg-emerald-50 text-emerald-800 border border-emerald-200 font-bold flex items-center gap-1">
+                              <ShieldCheck className="w-3 h-3 text-emerald-600" />
+                              Legal Integrity Edge: Clean statutory record vs opponent ({oCases} cases). Hammer anti-corruption narrative in townhalls.
+                            </span>
+                          )}
+                          {!hasLegalEdge && oCases > 5 && (
+                            <span className="px-2 py-0.5 rounded bg-rose-50 text-rose-800 border border-rose-200 font-bold flex items-center gap-1">
+                              <ShieldAlert className="w-3 h-3 text-rose-600" />
+                              Opponent Legal Vulnerability: Opponent faces {oCases} pending criminal charges. Distribute Form-26 fact sheets to fence-sitters.
+                            </span>
+                          )}
+                          {hasAssetEdge && (
+                            <span className="px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-bold flex items-center gap-1">
+                              <Coins className="w-3 h-3 text-amber-600" />
+                              Resource Clout: Superior candidate financial base ({targetCand.myneta?.total_assets_formatted} vs {oppCand?.myneta?.total_assets_formatted}).
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })()}
 
                   {/* Allocation 3 Pillars Controls */}
                   <div className="bg-white rounded-lg border border-slate-200 p-3 space-y-3">

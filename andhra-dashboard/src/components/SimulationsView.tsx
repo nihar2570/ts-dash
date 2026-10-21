@@ -183,7 +183,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       // Pure historical returns - zero synthetic demographic shifts
       setMacroSwing({ TDP: 0, YSRCP: 0, JSP: 0 });
     } else if (presetKey === 'bifurcation_2014') {
-      // 3. 2014 Post-Bifurcation Mandate (Official Historical Returns: 103 TDP / 68 YSRCP / 4 BJP)
+      // 3. 2014 Post-Bifurcation Mandate (Official Historical Returns: 102 TDP / 67 YSRCP / 4 BJP / 2 OTH-IND)
       // Pure historical returns - zero synthetic demographic shifts
       setMacroSwing({ TDP: 0, YSRCP: 0, JSP: 0 });
     } else if (presetKey === 'nda_2029_defense') {
