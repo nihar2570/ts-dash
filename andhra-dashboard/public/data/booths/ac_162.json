@@ -1,0 +1,50 @@
+[
+  {
+    "booth_no": 1,
+    "name": "MANDAL PARSHED UPPER PRIMARY SCHOOL NEW BUILDING, GUDUPALLE, GUDUPALLE",
+    "building": "MANDAL PARSHED UPPER PRIMARY SCHOOL NEW BUILDING, GUDUPALLE",
+    "locality": "GUDUPALLE",
+    "sections": "1. Kanugondlavaripalli, . 2. Eguvmadigpalli, Diguvmadigapalle, . 3. Konetiwaripalli, .",
+    "mandal": "MOLAKALACHERUVU",
+    "pincode": "517418",
+    "lat": 13.87231,
+    "lng": 78.29444,
+    "is_urban": false,
+    "electorate": 1008,
+    "total_votes": 791,
+    "turnout_pct": 78.5,
+    "votes": {
+      "YSRCP": 516,
+      "TDP": 246,
+      "OTH": 29
+    },
+    "winner_party": "YSRCP",
+    "margin": 270,
+    "margin_pct": 34.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 2,
+    "name": "MANDAL PARSHED UPPER PRIMARY SCHOOL, GUDUPALLE, GUDUPALLI",
+    "building": "MANDAL PARSHED UPPER PRIMARY SCHOOL, GUDUPALLE",
+    "locality": "GUDUPALLI",
+    "sections": "1. Kanugondwaripalli, . 2. Diguvmadigpalli, . 3. Eguvmadigpalli, .",
+    "mandal": "MOLAKALACHERUVU",
+    "pincode": "517418",
+    "lat": 13.87231,
+    "lng": 78.29444,
+    "is_urban": false,
+    "electorate": 760,
+    "total_votes": 601,
+    "turnout_pct": 79.1,
+    "votes": {
+      "YSRCP": 262,
+      "TDP": 303,
+      "OTH": 36
+    },
+    "winner_party": "TDP",
+    "margin": 41,
+    "margin_pct": 6.8,
+    "tier": "LEAN"
+  }
+]

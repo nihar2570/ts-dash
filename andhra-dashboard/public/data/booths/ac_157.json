@@ -1,0 +1,50 @@
+[
+  {
+    "booth_no": 1,
+    "name": "MPUP School, Manesamudram",
+    "building": "MPUP School, Manesamudram",
+    "locality": "Manesamudram",
+    "sections": "1. Manesamudram, Manesamudram",
+    "mandal": "HINDUPURAM",
+    "pincode": "515212",
+    "lat": 13.881325,
+    "lng": 77.524969,
+    "is_urban": false,
+    "electorate": 1039,
+    "total_votes": 800,
+    "turnout_pct": 77.0,
+    "votes": {
+      "TDP": 492,
+      "YSRCP": 258,
+      "OTH": 50
+    },
+    "winner_party": "TDP",
+    "margin": 234,
+    "margin_pct": 29.2,
+    "tier": "STRONGHOLD"
+  },
+  {
+    "booth_no": 2,
+    "name": "Z P High School, Maluguru",
+    "building": "Z P High School, Maluguru",
+    "locality": "Maluguru",
+    "sections": "1. Maluguru, Maluguru Block-1 To 4",
+    "mandal": "",
+    "pincode": "",
+    "lat": 13.893437,
+    "lng": 77.554024,
+    "is_urban": false,
+    "electorate": 958,
+    "total_votes": 787,
+    "turnout_pct": 82.2,
+    "votes": {
+      "TDP": 486,
+      "YSRCP": 252,
+      "OTH": 49
+    },
+    "winner_party": "TDP",
+    "margin": 234,
+    "margin_pct": 29.7,
+    "tier": "STRONGHOLD"
+  }
+]

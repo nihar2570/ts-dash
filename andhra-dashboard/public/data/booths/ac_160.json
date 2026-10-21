@@ -1,0 +1,122 @@
+[
+  {
+    "booth_no": 1,
+    "name": "M.P.U.P SCHOOL, EKAPADAM PALLI, EKAPADAM PALLI",
+    "building": "M.P.U.P SCHOOL, EKAPADAM PALLI",
+    "locality": "EKAPADAM PALLI",
+    "sections": "1. Ekapadam Palli, Block-4",
+    "mandal": "TADIMARRI",
+    "pincode": "515631",
+    "lat": 14.602333,
+    "lng": 77.796232,
+    "is_urban": false,
+    "electorate": 934,
+    "total_votes": 733,
+    "turnout_pct": 78.5,
+    "votes": {
+      "BJP": 391,
+      "YSRCP": 309,
+      "OTH": 33
+    },
+    "winner_party": "BJP",
+    "margin": 82,
+    "margin_pct": 11.2,
+    "tier": "LEAN"
+  },
+  {
+    "booth_no": 2,
+    "name": "Z.P HIGH SCHOOL, PINNADARI, PINNADARI",
+    "building": "Z.P HIGH SCHOOL, PINNADARI",
+    "locality": "PINNADARI",
+    "sections": "1. Pinnadari, Block-1 2. Pinnadari, Block-2",
+    "mandal": "TADIMARRI",
+    "pincode": "515631",
+    "lat": 14.581525,
+    "lng": 77.817922,
+    "is_urban": false,
+    "electorate": 962,
+    "total_votes": 717,
+    "turnout_pct": 74.6,
+    "votes": {
+      "BJP": 231,
+      "YSRCP": 440,
+      "OTH": 46
+    },
+    "winner_party": "YSRCP",
+    "margin": 209,
+    "margin_pct": 29.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 3,
+    "name": "Z.P HIGH SCHOOL, PINNADARI, PINNADARI",
+    "building": "Z.P HIGH SCHOOL, PINNADARI",
+    "locality": "PINNADARI",
+    "sections": "1. Pinnadari, Block No - 2",
+    "mandal": "TADIMARRI",
+    "pincode": "515631",
+    "lat": 14.581525,
+    "lng": 77.817922,
+    "is_urban": false,
+    "electorate": 698,
+    "total_votes": 640,
+    "turnout_pct": 91.8,
+    "votes": {
+      "BJP": 327,
+      "YSRCP": 283,
+      "OTH": 30
+    },
+    "winner_party": "BJP",
+    "margin": 44,
+    "margin_pct": 6.9,
+    "tier": "LEAN"
+  },
+  {
+    "booth_no": 4,
+    "name": "M.P PRIMARY SCHOOL, POOLAOBAIAH PALLI, POOLA OBAIAH PALLI",
+    "building": "M.P PRIMARY SCHOOL, POOLAOBAIAH PALLI",
+    "locality": "POOLA OBAIAH PALLI",
+    "sections": "1. Poolaobaiah Palli, Block-2",
+    "mandal": "TADIMARRI",
+    "pincode": "515631",
+    "lat": 14.575283,
+    "lng": 77.80955,
+    "is_urban": false,
+    "electorate": 1028,
+    "total_votes": 901,
+    "turnout_pct": 87.7,
+    "votes": {
+      "BJP": 451,
+      "YSRCP": 408,
+      "OTH": 42
+    },
+    "winner_party": "BJP",
+    "margin": 43,
+    "margin_pct": 4.8,
+    "tier": "BATTLEGROUND_TOSS_UP"
+  },
+  {
+    "booth_no": 5,
+    "name": "M.P PRIMARY SCHOOL, PULLANARAYANA PALLI, PullanarayanapPalli",
+    "building": "M.P PRIMARY SCHOOL, PULLANARAYANA PALLI",
+    "locality": "PullanarayanapPalli",
+    "sections": "1. Pulla Narayana Palli, Blocks-5,6",
+    "mandal": "TADIMARRI",
+    "pincode": "515631",
+    "lat": 14.575283,
+    "lng": 77.80955,
+    "is_urban": false,
+    "electorate": 1098,
+    "total_votes": 978,
+    "turnout_pct": 89.1,
+    "votes": {
+      "BJP": 413,
+      "YSRCP": 512,
+      "OTH": 53
+    },
+    "winner_party": "YSRCP",
+    "margin": 99,
+    "margin_pct": 10.1,
+    "tier": "DEFICIT_MODERATE"
+  }
+]
