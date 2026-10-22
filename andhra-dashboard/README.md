@@ -1,132 +1,77 @@
-# Telangana Election Intelligence
+# Andhra Pradesh Election Intelligence
 
-Interactive dashboard for exploring Telangana State Assembly election results across **119 constituencies** for the 2014, 2018, and 2023 elections. Built with React, TypeScript, Leaflet, and Tailwind CSS.
+Interactive election analytics and strategic war-room platform for the **Andhra Pradesh Legislative Assembly** across all **175 constituencies**, covering the 2014, 2019, and 2024 elections.
 
-## Getting Started
+Built with React 19, TypeScript, Vite, Tailwind CSS v4, and Leaflet.
+
+---
+
+## Quickstart
 
 ```bash
 # Install dependencies
 npm install
 
-# Start development server
+# Start local development server
 npm run dev
 
-# Build for production
+# Production build
 npm run build
 ```
 
-The app runs at `http://localhost:5173` by default.
+The application runs at `http://localhost:5173` by default.
 
-## How to Use
+---
 
-### Header Bar
+## Core Capabilities
 
-The sticky header at the top contains:
+### 1. Results & Interactive Assembly Map
+- **Constituency Choropleth Map**: Dynamic interactive map of all 175 Assembly Constituencies with boundary polygons and district overlays across all 26 Andhra Pradesh districts.
+- **Electoral Trends**: Historical returns for 2014, 2019, and 2024 with party colors, victory margins, and swing analysis.
+- **Constituency Deep-Dive Dossier**: Detailed AC cards with certified winner and runner-up statistics, vote shares, postal ballot figures, and demographic profiles.
 
-- **Tab Switcher** — toggle between the three main views: Results & Map, Simulations, and Actions & Playbook.
-- **Executive Dossier** — dark button that opens a global intelligence briefing across all constituencies (requires SEEEPC data).
-- **Help icon** (❓) — opens a quick-reference guide for all features.
+### 2. Candidate ADR Disclosures & Equity Decomposer
+- **Complete 2024 Candidate Affidavits**: 100% verified MyNeta ADR records for all **2,368 candidates** across all 175 ACs (Education, Age, Criminal Cases, Assets, and Liabilities).
+- **Default Column Views**: Fast inspection table with individual and master column toggles for Age, Education, Criminal Cases, and Net Worth.
+- **Candidate Personal Equity Decomposer**: Decomposes winning margins into party base vote vs. personal candidate goodwill.
 
-### Results & Map Tab
+### 3. Polling Station GIS & Panna Pramukh Deficit Solver
+- **Official ECI GIS Coordinates**: Polling stations mapped to their actual GPS coordinates within constituency boundaries.
+- **Mandal-Level Stratification**: Polling stations clustered by constituent mandals with Voronoi sector overlays.
+- **Deficit & Defense Solver**: Calculate precise vote flips required per polling station and page-level Panna Pramukh targets to defend or flip seats.
 
-This is the primary view with the interactive constituency map.
+### 4. Simulations & War Room
+- **Scenario Modeler**: Real-time swing models adjusting community/caste sentiment (Kapu, Kamma, Reddy, BC, SC, ST, Minorities).
+- **Ground Crisis Modifiers**: Model local anti-incumbency, welfare grievance friction, and welfare delivery shifts.
+- **Turnout Sensitivity Suite**: Urban vs. rural differential turnout impact analysis.
 
-| Control | What it does |
+### 5. Actions & Strategic Playbook
+- **Resource Point Allocator**: Constrained budget allocation across Digital, Rally, and Ground Campaign levers.
+- **Star Campaigner Allocator**: Optimal strategic deployment of key leadership across frontline battlegrounds.
+- **Defection & Rebel Candidate Modeler**: Simulate vote-splitting dynamics when former MLAs or local leaders run as independents or switch allegiances.
+
+---
+
+## Dataset Architecture
+
+All production datasets reside in `public/data/`:
+
+| File / Directory | Description |
 |---|---|
-| **Election Year** (2014 / 2018 / 2023) | Switches all data to the selected year |
-| **Party Colors** | Map colored by winning party |
-| **Margins** | Map shaded by victory margin (darker = larger margin) |
-| **Swings** | Highlights seats that flipped between elections (disabled for 2014) |
-| **33 Districts** | Greyscale district-level view |
-| **Search** (AC # or name) | Type a constituency name or number, press Enter to select it |
+| `andhra_assembly.geojson` | Exact boundary polygons for all 175 Assembly Constituencies |
+| `andhra_districts.geojson` | Boundary polygons for all 26 Andhra Pradesh districts |
+| `andhra_elections.json` | Certified election results for 2014, 2019, and 2024 |
+| `andhra_candidates_2024.json` | Complete MyNeta ADR affidavits for all 2,368 candidates |
+| `andhra_demographics.json` | SEEEPC demographic estimates and community weightings |
+| `booths/ac_{acNo}.json` | Authentic ECI polling station coordinates and Form-20 returns |
+| `rolls/` | Form-20 polling station roll data |
 
-**Interacting with the map:**
-- **Click** any constituency to select it — the battle card on the right updates with historical results.
-- **Hover** over a constituency to see a quick tooltip.
-- The map supports **fullscreen mode** — use the expand button on the map controls.
-
-**Constituency Battle Card** (right panel):
-- Shows the winner, runner-up, and margin for the selected constituency across all three elections.
-- Click **"Open Dossier"** to see the deep-dive modal with candidate profiles and demographic data.
-
-**Constituency Table** (below the map):
-- Sortable leaderboard of all 119 seats.
-- Click any row to select that constituency on the map.
-- Click the dossier icon to open its full profile.
-
-### Simulations Tab (War Room)
-
-Model "what-if" scenarios by adjusting voter behavior:
-
-- **Community Swing Sliders** — shift voter sentiment by caste/community group (SC, ST, BC, OC, Muslim, age groups) and watch the projected seat tally update in real time.
-- **Swing Studio** — fine-grained party-level swing controls with macro presets (e.g., "anti-incumbency wave", "consolidation").
-- **Advanced Simulation Suite** — turnout-based modeling: adjust urban vs rural turnout and see constituency-level impact.
-- Click any constituency in the results table to navigate to its dossier.
-- Use **"Reset All"** to clear your adjustments.
-
-### Actions & Playbook Tab
-
-Campaign strategy planning tools:
-
-- **Resource Point Allocator** — distribute Digital, Rally, and Welfare points across constituencies (budget-constrained).
-- **Star Campaigner Allocator** — assign party leaders to priority seats.
-- **Defection / Rebel Modeler** — simulate what happens if a candidate defects or runs as an independent.
-- **AI Playbook Summary** — generates a strategic brief for selected constituencies.
-
-### Executive Dossier
-
-Click the dark **"Executive Dossier"** button in the header to open a full-screen modal with:
-- State-wide seat projections and vulnerability analysis.
-- Constituency-by-constituency strategic recommendations.
-- Key demographic and SEEEPC metrics at a glance.
-
-### Constituency Dossier
-
-Accessible from the battle card, the table, or the simulations view. Shows:
-- Candidate photo, party, and vote share.
-- Historical comparison across elections.
-- SEEEPC demographic breakdown (caste, age, urban/rural).
-- Deep-link support: append `?dossier=40` to the URL to open AC #40 (Gajwel) directly.
-
-## Data Files
-
-All datasets live in `public/data/`:
-
-| File | Description |
-|---|---|
-| `telangana_assembly.geojson` | 119 constituency boundaries |
-| `telangana_districts.geojson` | 33 district boundaries |
-| `telangana_elections.json` | Results & summary for 2014, 2018, 2023 |
-| `telangana_candidates_2023.json` | Candidate profiles for 2023 |
-| `telangana_seeepc_demographics.json` | SEEEPC demographic dataset |
+---
 
 ## Tech Stack
 
-- **React 19** + TypeScript
-- **Vite 8** (dev server & build)
-- **Tailwind CSS 4** (utility-first styling)
-- **Leaflet** (interactive maps)
-- **Lucide React** (icons)
-
-## Project Structure
-
-```
-src/
-├── App.tsx                      # Main app with routing & state
-├── types.ts                     # Shared TypeScript types
-├── components/
-│   ├── HeaderBar.tsx            # Sticky header with tabs, search, help
-│   ├── HelpModal.tsx            # Usage guide modal
-│   ├── TelanganaMap.tsx         # Leaflet map with 4 view modes
-│   ├── SeatTallyBar.tsx         # Party seat progress bar
-│   ├── ConstituencyCard.tsx     # Selected constituency battle card
-│   ├── ConstituencyTable.tsx    # Sortable 119-seat leaderboard
-│   ├── ConstituencyDossier.tsx  # Deep-dive constituency modal
-│   ├── SimulationsView.tsx      # War Room with swing sliders
-│   ├── SwingStudioModal.tsx     # Fine-grained swing controls
-│   ├── AdvancedSimulationSuite.tsx  # Turnout-based simulation
-│   ├── ActionsView.tsx          # Campaign playbook & allocator
-│   ├── StarCampaignerAllocator.tsx  # Leader assignment tool
-│   ├── DefectionRebelModeler.tsx    # Defection scenario modeler
-│   └── ExecutiveBriefingModal.tsx   # Global executive briefing
-```
+- **Framework**: React 19, TypeScript
+- **Bundler & Tooling**: Vite 8, Rolldown, Oxlint
+- **Styling**: Tailwind CSS v4
+- **Geospatial & Mapping**: Leaflet, @turf/turf
+- **Icons**: Lucide React
