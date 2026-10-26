@@ -1,5 +1,5 @@
 // 1-Click MLA Padayatra Route Planner & Household Talking Points Engine
-// Integrates Voter Rolls + Bayesian Caste Classifier + SEEEPC Vol-4 + AC Local Pulse
+// Integrates Voter Rolls + Bayesian Caste Classifier + AP Demographics + AC Local Pulse
 
 import type { ElectorRecord } from './voterRollService';
 import { predictHouseholdCaste, type CastePrediction } from './casteClassifierService';
@@ -134,15 +134,15 @@ export function generateHouseholdTalkingPoints(
         ],
         schemeName: 'Netanna Bima & Handloom Relief'
       };
-    } else if (caste.includes('munnuru') || caste.includes('kapu')) {
+    } else if (caste.includes('kapu') || caste.includes('balija') || caste.includes('telaga')) {
       communityPitch = {
-        heading: 'Agrarian & Munnuru Kapu Economic Growth',
+        heading: 'Kapu / Balija / Telaga Community Empowerment',
         points: [
-          '₹2 Lakh complete agricultural crop loan waiver in a single disbursement.',
-          'Comprehensive MSP procurement guarantee for chillies, cotton, and paddy.',
-          'Munnuru Kapu community bhavan sanction and professional education loans.'
+          'Direct welfare support through Kapu Welfare & Development Corporation.',
+          'Comprehensive MSP procurement guarantee for chillies, cotton, tobacco, and paddy.',
+          'Videshi Vidya Deevena foreign education scholarship saturation and youth enterprise loans.'
         ],
-        schemeName: 'Crop Loan Waiver & Rythu Bharosa'
+        schemeName: 'Kapu Nestham & Rythu Bharosa'
       };
     } else if (caste.includes('yadav') || caste.includes('kuruma')) {
       communityPitch = {

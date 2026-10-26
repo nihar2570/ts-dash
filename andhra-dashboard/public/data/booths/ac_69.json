@@ -11,17 +11,17 @@
     "lng": 80.410618,
     "is_urban": false,
     "electorate": 830,
-    "total_votes": 662,
-    "turnout_pct": 79.8,
+    "total_votes": 10,
+    "turnout_pct": 1.2,
     "votes": {
-      "TDP": 400,
-      "YSRCP": 249,
-      "OTH": 13
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 10
     },
     "winner_party": "TDP",
-    "margin": 151,
-    "margin_pct": 22.8,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 2,
@@ -35,16 +35,16 @@
     "lng": 80.396964,
     "is_urban": false,
     "electorate": 759,
-    "total_votes": 635,
-    "turnout_pct": 83.7,
+    "total_votes": 623,
+    "turnout_pct": 82.1,
     "votes": {
-      "TDP": 361,
-      "YSRCP": 260,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 623
     },
     "winner_party": "TDP",
-    "margin": 101,
-    "margin_pct": 15.9,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -59,17 +59,17 @@
     "lng": 80.396964,
     "is_urban": false,
     "electorate": 1149,
-    "total_votes": 910,
-    "turnout_pct": 79.2,
+    "total_votes": 652,
+    "turnout_pct": 56.7,
     "votes": {
-      "TDP": 547,
-      "YSRCP": 346,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 652
     },
     "winner_party": "TDP",
-    "margin": 201,
-    "margin_pct": 22.1,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 4,
@@ -83,17 +83,17 @@
     "lng": 80.403932,
     "is_urban": false,
     "electorate": 857,
-    "total_votes": 721,
-    "turnout_pct": 84.2,
+    "total_votes": 547,
+    "turnout_pct": 63.8,
     "votes": {
-      "TDP": 312,
-      "YSRCP": 389,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 547
     },
-    "winner_party": "YSRCP",
-    "margin": 77,
-    "margin_pct": 10.7,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 5,
@@ -107,17 +107,17 @@
     "lng": 80.403932,
     "is_urban": false,
     "electorate": 800,
-    "total_votes": 630,
-    "turnout_pct": 78.8,
+    "total_votes": 793,
+    "turnout_pct": 99.1,
     "votes": {
-      "TDP": 306,
-      "YSRCP": 308,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 793
     },
-    "winner_party": "YSRCP",
-    "margin": 2,
-    "margin_pct": 0.3,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 6,
@@ -131,17 +131,17 @@
     "lng": 80.404429,
     "is_urban": false,
     "electorate": 1108,
-    "total_votes": 917,
-    "turnout_pct": 82.8,
+    "total_votes": 856,
+    "turnout_pct": 77.3,
     "votes": {
-      "TDP": 371,
-      "YSRCP": 519,
-      "OTH": 27
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 856
     },
-    "winner_party": "YSRCP",
-    "margin": 148,
-    "margin_pct": 16.1,
-    "tier": "DEFICIT_CRITICAL"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 7,
@@ -155,17 +155,17 @@
     "lng": 80.43345,
     "is_urban": false,
     "electorate": 1059,
-    "total_votes": 848,
-    "turnout_pct": 80.1,
+    "total_votes": 958,
+    "turnout_pct": 90.5,
     "votes": {
-      "TDP": 432,
-      "YSRCP": 396,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 958
     },
     "winner_party": "TDP",
-    "margin": 36,
-    "margin_pct": 4.2,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 8,
@@ -179,17 +179,17 @@
     "lng": 80.43345,
     "is_urban": false,
     "electorate": 924,
-    "total_votes": 753,
-    "turnout_pct": 81.6,
+    "total_votes": 923,
+    "turnout_pct": 99.9,
     "votes": {
-      "TDP": 371,
-      "YSRCP": 363,
-      "OTH": 19
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 923
     },
     "winner_party": "TDP",
-    "margin": 8,
-    "margin_pct": 1.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 9,
@@ -203,17 +203,17 @@
     "lng": 80.436015,
     "is_urban": false,
     "electorate": 763,
-    "total_votes": 633,
-    "turnout_pct": 83.0,
+    "total_votes": 797,
+    "turnout_pct": 104.5,
     "votes": {
-      "TDP": 235,
-      "YSRCP": 379,
-      "OTH": 19
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 797
     },
-    "winner_party": "YSRCP",
-    "margin": 144,
-    "margin_pct": 22.7,
-    "tier": "DEFICIT_CRITICAL"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 10,
@@ -227,16 +227,16 @@
     "lng": 80.43337,
     "is_urban": false,
     "electorate": 887,
-    "total_votes": 727,
-    "turnout_pct": 82.0,
+    "total_votes": 749,
+    "turnout_pct": 84.4,
     "votes": {
-      "TDP": 398,
-      "YSRCP": 312,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 749
     },
     "winner_party": "TDP",
-    "margin": 86,
-    "margin_pct": 11.8,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -491,17 +491,17 @@
     "lng": 80.434388,
     "is_urban": false,
     "electorate": 858,
-    "total_votes": 797,
-    "turnout_pct": 92.9,
+    "total_votes": 670,
+    "turnout_pct": 78.1,
     "votes": {
-      "TDP": 595,
-      "YSRCP": 191,
-      "OTH": 11
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 670
     },
     "winner_party": "TDP",
-    "margin": 404,
-    "margin_pct": 50.7,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 22,
@@ -515,16 +515,16 @@
     "lng": 80.464396,
     "is_urban": false,
     "electorate": 694,
-    "total_votes": 536,
-    "turnout_pct": 77.3,
+    "total_votes": 415,
+    "turnout_pct": 59.8,
     "votes": {
-      "TDP": 308,
-      "YSRCP": 217,
-      "OTH": 11
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 415
     },
     "winner_party": "TDP",
-    "margin": 91,
-    "margin_pct": 17.0,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -539,17 +539,17 @@
     "lng": 80.464396,
     "is_urban": false,
     "electorate": 944,
-    "total_votes": 829,
-    "turnout_pct": 87.9,
+    "total_votes": 758,
+    "turnout_pct": 80.3,
     "votes": {
-      "TDP": 498,
-      "YSRCP": 315,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 758
     },
     "winner_party": "TDP",
-    "margin": 183,
-    "margin_pct": 22.1,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 24,
@@ -563,17 +563,17 @@
     "lng": 80.473118,
     "is_urban": false,
     "electorate": 1056,
-    "total_votes": 812,
-    "turnout_pct": 76.9,
+    "total_votes": 888,
+    "turnout_pct": 84.1,
     "votes": {
-      "TDP": 500,
-      "YSRCP": 297,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 888
     },
     "winner_party": "TDP",
-    "margin": 203,
-    "margin_pct": 25.0,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 25,
@@ -587,16 +587,16 @@
     "lng": 80.495464,
     "is_urban": false,
     "electorate": 1057,
-    "total_votes": 841,
-    "turnout_pct": 79.6,
+    "total_votes": 860,
+    "turnout_pct": 81.4,
     "votes": {
-      "TDP": 459,
-      "YSRCP": 363,
-      "OTH": 19
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 860
     },
     "winner_party": "TDP",
-    "margin": 96,
-    "margin_pct": 11.4,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -611,17 +611,17 @@
     "lng": 80.495464,
     "is_urban": false,
     "electorate": 1123,
-    "total_votes": 910,
-    "turnout_pct": 81.1,
+    "total_votes": 936,
+    "turnout_pct": 83.3,
     "votes": {
-      "TDP": 469,
-      "YSRCP": 419,
-      "OTH": 22
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 936
     },
     "winner_party": "TDP",
-    "margin": 50,
-    "margin_pct": 5.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 27,
@@ -635,17 +635,17 @@
     "lng": 80.48708,
     "is_urban": false,
     "electorate": 973,
-    "total_votes": 798,
-    "turnout_pct": 82.1,
+    "total_votes": 854,
+    "turnout_pct": 87.8,
     "votes": {
-      "TDP": 300,
-      "YSRCP": 474,
-      "OTH": 24
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 854
     },
-    "winner_party": "YSRCP",
-    "margin": 174,
-    "margin_pct": 21.8,
-    "tier": "DEFICIT_CRITICAL"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 28,
@@ -659,17 +659,17 @@
     "lng": 80.48373,
     "is_urban": false,
     "electorate": 990,
-    "total_votes": 817,
-    "turnout_pct": 82.6,
+    "total_votes": 682,
+    "turnout_pct": 68.9,
     "votes": {
-      "TDP": 407,
-      "YSRCP": 390,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 682
     },
     "winner_party": "TDP",
-    "margin": 17,
-    "margin_pct": 2.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 29,
@@ -683,17 +683,17 @@
     "lng": 80.48373,
     "is_urban": false,
     "electorate": 971,
-    "total_votes": 776,
-    "turnout_pct": 80.0,
+    "total_votes": 1022,
+    "turnout_pct": 105.3,
     "votes": {
-      "TDP": 495,
-      "YSRCP": 266,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1022
     },
     "winner_party": "TDP",
-    "margin": 229,
-    "margin_pct": 29.5,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 30,
@@ -707,17 +707,17 @@
     "lng": 80.516638,
     "is_urban": false,
     "electorate": 740,
-    "total_votes": 632,
-    "turnout_pct": 85.5,
+    "total_votes": 717,
+    "turnout_pct": 96.9,
     "votes": {
-      "TDP": 297,
-      "YSRCP": 319,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 717
     },
-    "winner_party": "YSRCP",
-    "margin": 22,
-    "margin_pct": 3.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 31,
@@ -731,17 +731,17 @@
     "lng": 80.502976,
     "is_urban": false,
     "electorate": 932,
-    "total_votes": 818,
-    "turnout_pct": 87.8,
+    "total_votes": 288,
+    "turnout_pct": 30.9,
     "votes": {
-      "TDP": 311,
-      "YSRCP": 482,
-      "OTH": 25
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 288
     },
-    "winner_party": "YSRCP",
-    "margin": 171,
-    "margin_pct": 20.9,
-    "tier": "DEFICIT_CRITICAL"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 32,
@@ -755,17 +755,17 @@
     "lng": 80.507015,
     "is_urban": false,
     "electorate": 710,
-    "total_votes": 564,
-    "turnout_pct": 79.5,
+    "total_votes": 755,
+    "turnout_pct": 106.3,
     "votes": {
-      "TDP": 344,
-      "YSRCP": 209,
-      "OTH": 11
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 755
     },
     "winner_party": "TDP",
-    "margin": 135,
-    "margin_pct": 23.9,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 33,
@@ -779,16 +779,16 @@
     "lng": 80.507015,
     "is_urban": false,
     "electorate": 891,
-    "total_votes": 727,
-    "turnout_pct": 81.6,
+    "total_votes": 762,
+    "turnout_pct": 85.5,
     "votes": {
-      "TDP": 383,
-      "YSRCP": 327,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 762
     },
     "winner_party": "TDP",
-    "margin": 56,
-    "margin_pct": 7.7,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1067,16 +1067,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 945,
-    "total_votes": 737,
-    "turnout_pct": 78.0,
+    "total_votes": 820,
+    "turnout_pct": 86.8,
     "votes": {
-      "TDP": 403,
-      "YSRCP": 317,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 820
     },
     "winner_party": "TDP",
-    "margin": 86,
-    "margin_pct": 11.7,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1091,16 +1091,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 898,
-    "total_votes": 769,
-    "turnout_pct": 85.7,
+    "total_votes": 920,
+    "turnout_pct": 102.4,
     "votes": {
-      "TDP": 434,
-      "YSRCP": 318,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 920
     },
     "winner_party": "TDP",
-    "margin": 116,
-    "margin_pct": 15.1,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1115,16 +1115,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 835,
-    "total_votes": 688,
-    "turnout_pct": 82.5,
+    "total_votes": 865,
+    "turnout_pct": 103.6,
     "votes": {
-      "TDP": 375,
-      "YSRCP": 297,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 865
     },
     "winner_party": "TDP",
-    "margin": 78,
-    "margin_pct": 11.3,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1139,17 +1139,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 717,
-    "total_votes": 557,
-    "turnout_pct": 77.8,
+    "total_votes": 688,
+    "turnout_pct": 96.0,
     "votes": {
-      "TDP": 329,
-      "YSRCP": 217,
-      "OTH": 11
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 688
     },
     "winner_party": "TDP",
-    "margin": 112,
-    "margin_pct": 20.1,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 49,
@@ -1163,16 +1163,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 897,
-    "total_votes": 731,
-    "turnout_pct": 81.5,
+    "total_votes": 683,
+    "turnout_pct": 76.1,
     "votes": {
-      "TDP": 407,
-      "YSRCP": 308,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 683
     },
     "winner_party": "TDP",
-    "margin": 99,
-    "margin_pct": 13.5,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1187,17 +1187,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 909,
-    "total_votes": 741,
-    "turnout_pct": 81.6,
+    "total_votes": 821,
+    "turnout_pct": 90.3,
     "votes": {
-      "TDP": 383,
-      "YSRCP": 340,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 821
     },
     "winner_party": "TDP",
-    "margin": 43,
-    "margin_pct": 5.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 51,
@@ -1211,16 +1211,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1030,
-    "total_votes": 909,
-    "turnout_pct": 88.3,
+    "total_votes": 488,
+    "turnout_pct": 47.4,
     "votes": {
-      "TDP": 529,
-      "YSRCP": 362,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 488
     },
     "winner_party": "TDP",
-    "margin": 167,
-    "margin_pct": 18.4,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1235,17 +1235,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 857,
-    "total_votes": 683,
-    "turnout_pct": 79.8,
+    "total_votes": 650,
+    "turnout_pct": 75.8,
     "votes": {
-      "TDP": 316,
-      "YSRCP": 349,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 650
     },
-    "winner_party": "YSRCP",
-    "margin": 33,
-    "margin_pct": 4.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 53,
@@ -1259,16 +1259,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 957,
-    "total_votes": 812,
-    "turnout_pct": 84.9,
+    "total_votes": 543,
+    "turnout_pct": 56.7,
     "votes": {
-      "TDP": 464,
-      "YSRCP": 331,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 543
     },
     "winner_party": "TDP",
-    "margin": 133,
-    "margin_pct": 16.4,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1283,16 +1283,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 984,
-    "total_votes": 822,
-    "turnout_pct": 83.6,
+    "total_votes": 860,
+    "turnout_pct": 87.4,
     "votes": {
-      "TDP": 478,
-      "YSRCP": 327,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 860
     },
     "winner_party": "TDP",
-    "margin": 151,
-    "margin_pct": 18.4,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1307,17 +1307,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 889,
-    "total_votes": 728,
-    "turnout_pct": 81.9,
+    "total_votes": 628,
+    "turnout_pct": 70.6,
     "votes": {
-      "TDP": 365,
-      "YSRCP": 345,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 628
     },
     "winner_party": "TDP",
-    "margin": 20,
-    "margin_pct": 2.7,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 56,
@@ -1331,16 +1331,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 885,
-    "total_votes": 715,
-    "turnout_pct": 80.8,
+    "total_votes": 800,
+    "turnout_pct": 90.4,
     "votes": {
-      "TDP": 376,
-      "YSRCP": 322,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 800
     },
     "winner_party": "TDP",
-    "margin": 54,
-    "margin_pct": 7.6,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1355,17 +1355,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 898,
-    "total_votes": 829,
-    "turnout_pct": 92.4,
+    "total_votes": 701,
+    "turnout_pct": 78.1,
     "votes": {
-      "TDP": 419,
-      "YSRCP": 390,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 701
     },
     "winner_party": "TDP",
-    "margin": 29,
-    "margin_pct": 3.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 58,
@@ -1643,17 +1643,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 933,
-    "total_votes": 700,
-    "turnout_pct": 75.1,
+    "total_votes": 926,
+    "turnout_pct": 99.2,
     "votes": {
-      "TDP": 471,
-      "YSRCP": 217,
-      "OTH": 12
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 926
     },
     "winner_party": "TDP",
-    "margin": 254,
-    "margin_pct": 36.3,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 70,
@@ -1667,17 +1667,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 748,
-    "total_votes": 623,
-    "turnout_pct": 83.3,
+    "total_votes": 631,
+    "turnout_pct": 84.4,
     "votes": {
-      "TDP": 318,
-      "YSRCP": 290,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 631
     },
     "winner_party": "TDP",
-    "margin": 28,
-    "margin_pct": 4.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 71,
@@ -1691,17 +1691,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 745,
-    "total_votes": 563,
-    "turnout_pct": 75.7,
+    "total_votes": 628,
+    "turnout_pct": 84.3,
     "votes": {
-      "TDP": 277,
-      "YSRCP": 271,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 628
     },
     "winner_party": "TDP",
-    "margin": 6,
-    "margin_pct": 1.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 72,
@@ -1715,17 +1715,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 811,
-    "total_votes": 669,
-    "turnout_pct": 82.6,
+    "total_votes": 1016,
+    "turnout_pct": 125.3,
     "votes": {
-      "TDP": 326,
-      "YSRCP": 326,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1016
     },
     "winner_party": "TDP",
     "margin": 0,
     "margin_pct": 0.0,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "tier": "LEAN"
   },
   {
     "booth_no": 73,
@@ -1739,17 +1739,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1050,
-    "total_votes": 775,
-    "turnout_pct": 73.9,
+    "total_votes": 704,
+    "turnout_pct": 67.0,
     "votes": {
-      "TDP": 400,
-      "YSRCP": 357,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 704
     },
     "winner_party": "TDP",
-    "margin": 43,
-    "margin_pct": 5.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 74,
@@ -1763,16 +1763,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 983,
-    "total_votes": 799,
-    "turnout_pct": 81.3,
+    "total_votes": 901,
+    "turnout_pct": 91.7,
     "votes": {
-      "TDP": 447,
-      "YSRCP": 335,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 901
     },
     "winner_party": "TDP",
-    "margin": 112,
-    "margin_pct": 14.0,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1787,16 +1787,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1014,
-    "total_votes": 923,
-    "turnout_pct": 91.1,
+    "total_votes": 760,
+    "turnout_pct": 75.0,
     "votes": {
-      "TDP": 485,
-      "YSRCP": 417,
-      "OTH": 21
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 760
     },
     "winner_party": "TDP",
-    "margin": 68,
-    "margin_pct": 7.4,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1811,17 +1811,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1084,
-    "total_votes": 818,
-    "turnout_pct": 75.5,
+    "total_votes": 590,
+    "turnout_pct": 54.4,
     "votes": {
-      "TDP": 548,
-      "YSRCP": 257,
-      "OTH": 13
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 590
     },
     "winner_party": "TDP",
-    "margin": 291,
-    "margin_pct": 35.6,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 77,
@@ -1835,17 +1835,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 873,
-    "total_votes": 750,
-    "turnout_pct": 86.0,
+    "total_votes": 945,
+    "turnout_pct": 108.2,
     "votes": {
-      "TDP": 500,
-      "YSRCP": 238,
-      "OTH": 12
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 945
     },
     "winner_party": "TDP",
-    "margin": 262,
-    "margin_pct": 34.9,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 78,
@@ -1859,17 +1859,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 985,
-    "total_votes": 786,
-    "turnout_pct": 79.8,
+    "total_votes": 991,
+    "turnout_pct": 100.6,
     "votes": {
-      "TDP": 531,
-      "YSRCP": 243,
-      "OTH": 12
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 991
     },
     "winner_party": "TDP",
-    "margin": 288,
-    "margin_pct": 36.6,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 79,
@@ -1883,17 +1883,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1058,
-    "total_votes": 890,
-    "turnout_pct": 84.2,
+    "total_votes": 938,
+    "turnout_pct": 88.7,
     "votes": {
-      "TDP": 550,
-      "YSRCP": 323,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 938
     },
     "winner_party": "TDP",
-    "margin": 227,
-    "margin_pct": 25.5,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 80,
@@ -1907,16 +1907,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 842,
-    "total_votes": 671,
-    "turnout_pct": 79.7,
+    "total_votes": 1013,
+    "turnout_pct": 120.3,
     "votes": {
-      "TDP": 361,
-      "YSRCP": 295,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1013
     },
     "winner_party": "TDP",
-    "margin": 66,
-    "margin_pct": 9.8,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -1931,17 +1931,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 948,
-    "total_votes": 738,
-    "turnout_pct": 77.9,
+    "total_votes": 1071,
+    "turnout_pct": 113.0,
     "votes": {
-      "TDP": 373,
-      "YSRCP": 347,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1071
     },
     "winner_party": "TDP",
-    "margin": 26,
-    "margin_pct": 3.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 82,
@@ -2219,16 +2219,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 888,
-    "total_votes": 733,
-    "turnout_pct": 82.6,
+    "total_votes": 908,
+    "turnout_pct": 102.3,
     "votes": {
-      "TDP": 382,
-      "YSRCP": 334,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 908
     },
     "winner_party": "TDP",
-    "margin": 48,
-    "margin_pct": 6.5,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2243,16 +2243,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 745,
-    "total_votes": 616,
-    "turnout_pct": 82.7,
+    "total_votes": 480,
+    "turnout_pct": 64.4,
     "votes": {
-      "TDP": 340,
-      "YSRCP": 262,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 480
     },
     "winner_party": "TDP",
-    "margin": 78,
-    "margin_pct": 12.7,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2267,16 +2267,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 987,
-    "total_votes": 784,
-    "turnout_pct": 79.5,
+    "total_votes": 478,
+    "turnout_pct": 48.4,
     "votes": {
-      "TDP": 435,
-      "YSRCP": 331,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 478
     },
     "winner_party": "TDP",
-    "margin": 104,
-    "margin_pct": 13.3,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2291,17 +2291,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 880,
-    "total_votes": 751,
-    "turnout_pct": 85.4,
+    "total_votes": 855,
+    "turnout_pct": 97.2,
     "votes": {
-      "TDP": 457,
-      "YSRCP": 279,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 855
     },
     "winner_party": "TDP",
-    "margin": 178,
-    "margin_pct": 23.7,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 97,
@@ -2315,16 +2315,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1032,
-    "total_votes": 849,
-    "turnout_pct": 82.3,
+    "total_votes": 15,
+    "turnout_pct": 1.5,
     "votes": {
-      "TDP": 440,
-      "YSRCP": 389,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 15
     },
     "winner_party": "TDP",
-    "margin": 51,
-    "margin_pct": 6.0,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2339,17 +2339,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 948,
-    "total_votes": 853,
-    "turnout_pct": 90.0,
+    "total_votes": 1180,
+    "turnout_pct": 124.5,
     "votes": {
-      "TDP": 401,
-      "YSRCP": 430,
-      "OTH": 22
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1180
     },
-    "winner_party": "YSRCP",
-    "margin": 29,
-    "margin_pct": 3.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 99,
@@ -2363,17 +2363,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1058,
-    "total_votes": 896,
-    "turnout_pct": 84.7,
+    "total_votes": 1219,
+    "turnout_pct": 115.2,
     "votes": {
-      "TDP": 385,
-      "YSRCP": 486,
-      "OTH": 25
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1219
     },
-    "winner_party": "YSRCP",
-    "margin": 101,
-    "margin_pct": 11.3,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 100,
@@ -2387,17 +2387,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 941,
-    "total_votes": 705,
-    "turnout_pct": 75.0,
+    "total_votes": 477,
+    "turnout_pct": 50.7,
     "votes": {
-      "TDP": 312,
-      "YSRCP": 373,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 477
     },
-    "winner_party": "YSRCP",
-    "margin": 61,
-    "margin_pct": 8.7,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 101,
@@ -2411,16 +2411,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 829,
-    "total_votes": 674,
-    "turnout_pct": 81.4,
+    "total_votes": 1009,
+    "turnout_pct": 121.7,
     "votes": {
-      "TDP": 397,
-      "YSRCP": 263,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1009
     },
     "winner_party": "TDP",
-    "margin": 134,
-    "margin_pct": 19.9,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2435,17 +2435,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 892,
-    "total_votes": 796,
-    "turnout_pct": 89.3,
+    "total_votes": 800,
+    "turnout_pct": 89.7,
     "votes": {
-      "TDP": 519,
-      "YSRCP": 263,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 800
     },
     "winner_party": "TDP",
-    "margin": 256,
-    "margin_pct": 32.2,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 103,
@@ -2459,17 +2459,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 847,
-    "total_votes": 708,
-    "turnout_pct": 83.7,
+    "total_votes": 11,
+    "turnout_pct": 1.3,
     "votes": {
-      "TDP": 468,
-      "YSRCP": 227,
-      "OTH": 13
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 11
     },
     "winner_party": "TDP",
-    "margin": 241,
-    "margin_pct": 34.0,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 104,
@@ -2483,16 +2483,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 939,
-    "total_votes": 773,
-    "turnout_pct": 82.4,
+    "total_votes": 1051,
+    "turnout_pct": 111.9,
     "votes": {
-      "TDP": 410,
-      "YSRCP": 345,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1051
     },
     "winner_party": "TDP",
-    "margin": 65,
-    "margin_pct": 8.4,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2507,17 +2507,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 933,
-    "total_votes": 780,
-    "turnout_pct": 83.7,
+    "total_votes": 828,
+    "turnout_pct": 88.7,
     "votes": {
-      "TDP": 514,
-      "YSRCP": 253,
-      "OTH": 13
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 828
     },
     "winner_party": "TDP",
-    "margin": 261,
-    "margin_pct": 33.5,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 106,
@@ -2795,16 +2795,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 911,
-    "total_votes": 749,
-    "turnout_pct": 82.3,
+    "total_votes": 14,
+    "turnout_pct": 1.5,
     "votes": {
-      "TDP": 430,
-      "YSRCP": 303,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 14
     },
     "winner_party": "TDP",
-    "margin": 127,
-    "margin_pct": 17.0,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2819,16 +2819,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 870,
-    "total_votes": 721,
-    "turnout_pct": 82.9,
+    "total_votes": 537,
+    "turnout_pct": 61.7,
     "votes": {
-      "TDP": 389,
-      "YSRCP": 315,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 537
     },
     "winner_party": "TDP",
-    "margin": 74,
-    "margin_pct": 10.3,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2843,17 +2843,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 938,
-    "total_votes": 736,
-    "turnout_pct": 78.5,
+    "total_votes": 1055,
+    "turnout_pct": 112.5,
     "votes": {
-      "TDP": 302,
-      "YSRCP": 412,
-      "OTH": 22
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1055
     },
-    "winner_party": "YSRCP",
-    "margin": 110,
-    "margin_pct": 14.9,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 120,
@@ -2867,17 +2867,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 931,
-    "total_votes": 730,
-    "turnout_pct": 78.5,
+    "total_votes": 343,
+    "turnout_pct": 36.8,
     "votes": {
-      "TDP": 431,
-      "YSRCP": 284,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 343
     },
     "winner_party": "TDP",
-    "margin": 147,
-    "margin_pct": 20.1,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 121,
@@ -2891,17 +2891,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1114,
-    "total_votes": 834,
-    "turnout_pct": 74.9,
+    "total_votes": 599,
+    "turnout_pct": 53.8,
     "votes": {
-      "TDP": 515,
-      "YSRCP": 303,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 599
     },
     "winner_party": "TDP",
-    "margin": 212,
-    "margin_pct": 25.4,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 122,
@@ -2915,16 +2915,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 798,
-    "total_votes": 588,
-    "turnout_pct": 73.8,
+    "total_votes": 671,
+    "turnout_pct": 84.1,
     "votes": {
-      "TDP": 316,
-      "YSRCP": 258,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 671
     },
     "winner_party": "TDP",
-    "margin": 58,
-    "margin_pct": 9.9,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2939,17 +2939,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 900,
-    "total_votes": 771,
-    "turnout_pct": 85.7,
+    "total_votes": 820,
+    "turnout_pct": 91.1,
     "votes": {
-      "TDP": 484,
-      "YSRCP": 273,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 820
     },
     "winner_party": "TDP",
-    "margin": 211,
-    "margin_pct": 27.4,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 124,
@@ -2963,16 +2963,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 859,
-    "total_votes": 731,
-    "turnout_pct": 85.2,
+    "total_votes": 14,
+    "turnout_pct": 1.6,
     "votes": {
-      "TDP": 382,
-      "YSRCP": 332,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 14
     },
     "winner_party": "TDP",
-    "margin": 50,
-    "margin_pct": 6.8,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -2987,17 +2987,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1155,
-    "total_votes": 945,
-    "turnout_pct": 81.9,
+    "total_votes": 895,
+    "turnout_pct": 77.5,
     "votes": {
-      "TDP": 627,
-      "YSRCP": 302,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 895
     },
     "winner_party": "TDP",
-    "margin": 325,
-    "margin_pct": 34.4,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 126,
@@ -3011,16 +3011,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 969,
-    "total_votes": 770,
-    "turnout_pct": 79.5,
+    "total_votes": 966,
+    "turnout_pct": 99.7,
     "votes": {
-      "TDP": 442,
-      "YSRCP": 312,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 966
     },
     "winner_party": "TDP",
-    "margin": 130,
-    "margin_pct": 16.9,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3035,17 +3035,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 907,
-    "total_votes": 674,
-    "turnout_pct": 74.4,
+    "total_votes": 1092,
+    "turnout_pct": 120.4,
     "votes": {
-      "TDP": 404,
-      "YSRCP": 257,
-      "OTH": 13
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1092
     },
     "winner_party": "TDP",
-    "margin": 147,
-    "margin_pct": 21.8,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 128,
@@ -3059,17 +3059,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 865,
-    "total_votes": 679,
-    "turnout_pct": 78.6,
+    "total_votes": 687,
+    "turnout_pct": 79.4,
     "votes": {
-      "TDP": 431,
-      "YSRCP": 235,
-      "OTH": 13
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 687
     },
     "winner_party": "TDP",
-    "margin": 196,
-    "margin_pct": 28.9,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 129,
@@ -3083,17 +3083,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 858,
-    "total_votes": 718,
-    "turnout_pct": 83.7,
+    "total_votes": 790,
+    "turnout_pct": 92.1,
     "votes": {
-      "TDP": 302,
-      "YSRCP": 396,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 790
     },
-    "winner_party": "YSRCP",
-    "margin": 94,
-    "margin_pct": 13.1,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 130,
@@ -3371,16 +3371,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 850,
-    "total_votes": 687,
-    "turnout_pct": 80.9,
+    "total_votes": 880,
+    "turnout_pct": 103.5,
     "votes": {
-      "TDP": 380,
-      "YSRCP": 292,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 880
     },
     "winner_party": "TDP",
-    "margin": 88,
-    "margin_pct": 12.8,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3395,17 +3395,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 814,
-    "total_votes": 655,
-    "turnout_pct": 80.5,
+    "total_votes": 819,
+    "turnout_pct": 100.6,
     "votes": {
-      "TDP": 308,
-      "YSRCP": 330,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 819
     },
-    "winner_party": "YSRCP",
-    "margin": 22,
-    "margin_pct": 3.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 143,
@@ -3443,16 +3443,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1052,
-    "total_votes": 867,
-    "turnout_pct": 82.5,
+    "total_votes": 222,
+    "turnout_pct": 21.1,
     "votes": {
-      "TDP": 501,
-      "YSRCP": 348,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 222
     },
     "winner_party": "TDP",
-    "margin": 153,
-    "margin_pct": 17.6,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3467,16 +3467,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1028,
-    "total_votes": 853,
-    "turnout_pct": 83.0,
+    "total_votes": 486,
+    "turnout_pct": 47.3,
     "votes": {
-      "TDP": 447,
-      "YSRCP": 386,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 486
     },
     "winner_party": "TDP",
-    "margin": 61,
-    "margin_pct": 7.2,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3491,17 +3491,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 837,
-    "total_votes": 737,
-    "turnout_pct": 88.1,
+    "total_votes": 636,
+    "turnout_pct": 76.0,
     "votes": {
-      "TDP": 371,
-      "YSRCP": 348,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 636
     },
     "winner_party": "TDP",
-    "margin": 23,
-    "margin_pct": 3.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 147,
@@ -3515,17 +3515,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1073,
-    "total_votes": 890,
-    "turnout_pct": 83.0,
+    "total_votes": 641,
+    "turnout_pct": 59.7,
     "votes": {
-      "TDP": 578,
-      "YSRCP": 297,
-      "OTH": 15
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 641
     },
     "winner_party": "TDP",
-    "margin": 281,
-    "margin_pct": 31.6,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 148,
@@ -3539,16 +3539,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 867,
-    "total_votes": 662,
-    "turnout_pct": 76.4,
+    "total_votes": 639,
+    "turnout_pct": 73.7,
     "votes": {
-      "TDP": 386,
-      "YSRCP": 262,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 639
     },
     "winner_party": "TDP",
-    "margin": 124,
-    "margin_pct": 18.7,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3563,16 +3563,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1030,
-    "total_votes": 879,
-    "turnout_pct": 85.4,
+    "total_votes": 925,
+    "turnout_pct": 89.8,
     "votes": {
-      "TDP": 510,
-      "YSRCP": 351,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 925
     },
     "winner_party": "TDP",
-    "margin": 159,
-    "margin_pct": 18.1,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3587,17 +3587,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 879,
-    "total_votes": 808,
-    "turnout_pct": 92.0,
+    "total_votes": 681,
+    "turnout_pct": 77.5,
     "votes": {
-      "TDP": 413,
-      "YSRCP": 375,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 681
     },
     "winner_party": "TDP",
-    "margin": 38,
-    "margin_pct": 4.7,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 151,
@@ -3611,16 +3611,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 975,
-    "total_votes": 772,
-    "turnout_pct": 79.2,
+    "total_votes": 890,
+    "turnout_pct": 91.3,
     "votes": {
-      "TDP": 408,
-      "YSRCP": 346,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 890
     },
     "winner_party": "TDP",
-    "margin": 62,
-    "margin_pct": 8.0,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3635,17 +3635,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1171,
-    "total_votes": 963,
-    "turnout_pct": 82.3,
+    "total_votes": 849,
+    "turnout_pct": 72.5,
     "votes": {
-      "TDP": 597,
-      "YSRCP": 348,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 849
     },
     "winner_party": "TDP",
-    "margin": 249,
-    "margin_pct": 25.9,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 153,
@@ -3659,16 +3659,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1061,
-    "total_votes": 916,
-    "turnout_pct": 86.4,
+    "total_votes": 659,
+    "turnout_pct": 62.1,
     "votes": {
-      "TDP": 531,
-      "YSRCP": 367,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 659
     },
     "winner_party": "TDP",
-    "margin": 164,
-    "margin_pct": 17.9,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3947,16 +3947,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 864,
-    "total_votes": 722,
-    "turnout_pct": 83.6,
+    "total_votes": 612,
+    "turnout_pct": 70.8,
     "votes": {
-      "TDP": 397,
-      "YSRCP": 309,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 612
     },
     "winner_party": "TDP",
-    "margin": 88,
-    "margin_pct": 12.2,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -3971,17 +3971,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 780,
-    "total_votes": 634,
-    "turnout_pct": 81.3,
+    "total_votes": 475,
+    "turnout_pct": 60.9,
     "votes": {
-      "TDP": 380,
-      "YSRCP": 242,
-      "OTH": 12
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 475
     },
     "winner_party": "TDP",
-    "margin": 138,
-    "margin_pct": 21.8,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 167,
@@ -3995,17 +3995,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 915,
-    "total_votes": 782,
-    "turnout_pct": 85.5,
+    "total_votes": 590,
+    "turnout_pct": 64.5,
     "votes": {
-      "TDP": 387,
-      "YSRCP": 376,
-      "OTH": 19
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 590
     },
     "winner_party": "TDP",
-    "margin": 11,
-    "margin_pct": 1.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 168,
@@ -4019,17 +4019,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 979,
-    "total_votes": 839,
-    "turnout_pct": 85.8,
+    "total_votes": 587,
+    "turnout_pct": 60.0,
     "votes": {
-      "TDP": 577,
-      "YSRCP": 249,
-      "OTH": 13
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 587
     },
     "winner_party": "TDP",
-    "margin": 328,
-    "margin_pct": 39.1,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 169,
@@ -4043,17 +4043,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 770,
-    "total_votes": 678,
-    "turnout_pct": 88.1,
+    "total_votes": 652,
+    "turnout_pct": 84.7,
     "votes": {
-      "TDP": 298,
-      "YSRCP": 361,
-      "OTH": 19
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 652
     },
-    "winner_party": "YSRCP",
-    "margin": 63,
-    "margin_pct": 9.3,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 170,
@@ -4067,16 +4067,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1258,
-    "total_votes": 1041,
-    "turnout_pct": 82.8,
+    "total_votes": 1003,
+    "turnout_pct": 79.7,
     "votes": {
-      "TDP": 557,
-      "YSRCP": 460,
-      "OTH": 24
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1003
     },
     "winner_party": "TDP",
-    "margin": 97,
-    "margin_pct": 9.3,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4091,16 +4091,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1099,
-    "total_votes": 855,
-    "turnout_pct": 77.8,
+    "total_votes": 948,
+    "turnout_pct": 86.3,
     "votes": {
-      "TDP": 452,
-      "YSRCP": 383,
-      "OTH": 20
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 948
     },
     "winner_party": "TDP",
-    "margin": 69,
-    "margin_pct": 8.1,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4115,16 +4115,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 964,
-    "total_votes": 838,
-    "turnout_pct": 87.0,
+    "total_votes": 13,
+    "turnout_pct": 1.3,
     "votes": {
-      "TDP": 489,
-      "YSRCP": 332,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 13
     },
     "winner_party": "TDP",
-    "margin": 157,
-    "margin_pct": 18.7,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4139,17 +4139,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 858,
-    "total_votes": 696,
-    "turnout_pct": 81.2,
+    "total_votes": 749,
+    "turnout_pct": 87.3,
     "votes": {
-      "TDP": 423,
-      "YSRCP": 259,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 749
     },
     "winner_party": "TDP",
-    "margin": 164,
-    "margin_pct": 23.6,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 174,
@@ -4163,16 +4163,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1039,
-    "total_votes": 946,
-    "turnout_pct": 91.1,
+    "total_votes": 589,
+    "turnout_pct": 56.7,
     "votes": {
-      "TDP": 508,
-      "YSRCP": 417,
-      "OTH": 21
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 589
     },
     "winner_party": "TDP",
-    "margin": 91,
-    "margin_pct": 9.6,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4187,17 +4187,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 863,
-    "total_votes": 679,
-    "turnout_pct": 78.7,
+    "total_votes": 720,
+    "turnout_pct": 83.4,
     "votes": {
-      "TDP": 329,
-      "YSRCP": 333,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 720
     },
-    "winner_party": "YSRCP",
-    "margin": 4,
-    "margin_pct": 0.6,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 176,
@@ -4211,16 +4211,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 951,
-    "total_votes": 772,
-    "turnout_pct": 81.2,
+    "total_votes": 811,
+    "turnout_pct": 85.3,
     "votes": {
-      "TDP": 422,
-      "YSRCP": 333,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 811
     },
     "winner_party": "TDP",
-    "margin": 89,
-    "margin_pct": 11.5,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4235,17 +4235,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 998,
-    "total_votes": 786,
-    "turnout_pct": 78.8,
+    "total_votes": 961,
+    "turnout_pct": 96.3,
     "votes": {
-      "TDP": 468,
-      "YSRCP": 302,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 961
     },
     "winner_party": "TDP",
-    "margin": 166,
-    "margin_pct": 21.1,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 178,
@@ -4523,17 +4523,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 820,
-    "total_votes": 669,
-    "turnout_pct": 81.6,
+    "total_votes": 810,
+    "turnout_pct": 98.8,
     "votes": {
-      "TDP": 409,
-      "YSRCP": 246,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 810
     },
     "winner_party": "TDP",
-    "margin": 163,
-    "margin_pct": 24.4,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 190,
@@ -4547,16 +4547,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 994,
-    "total_votes": 784,
-    "turnout_pct": 78.9,
+    "total_votes": 683,
+    "turnout_pct": 68.7,
     "votes": {
-      "TDP": 433,
-      "YSRCP": 333,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 683
     },
     "winner_party": "TDP",
-    "margin": 100,
-    "margin_pct": 12.8,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4571,17 +4571,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 870,
-    "total_votes": 748,
-    "turnout_pct": 86.0,
+    "total_votes": 777,
+    "turnout_pct": 89.3,
     "votes": {
-      "TDP": 482,
-      "YSRCP": 252,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 777
     },
     "winner_party": "TDP",
-    "margin": 230,
-    "margin_pct": 30.7,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 192,
@@ -4595,17 +4595,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 902,
-    "total_votes": 696,
-    "turnout_pct": 77.2,
+    "total_votes": 1179,
+    "turnout_pct": 130.7,
     "votes": {
-      "TDP": 339,
-      "YSRCP": 340,
-      "OTH": 17
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 1179
     },
-    "winner_party": "YSRCP",
-    "margin": 1,
-    "margin_pct": 0.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 193,
@@ -4619,17 +4619,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 763,
-    "total_votes": 589,
-    "turnout_pct": 77.2,
+    "total_votes": 982,
+    "turnout_pct": 128.7,
     "votes": {
-      "TDP": 351,
-      "YSRCP": 226,
-      "OTH": 12
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 982
     },
     "winner_party": "TDP",
-    "margin": 125,
-    "margin_pct": 21.2,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 194,
@@ -4643,17 +4643,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 934,
-    "total_votes": 734,
-    "turnout_pct": 78.6,
+    "total_votes": 922,
+    "turnout_pct": 98.7,
     "votes": {
-      "TDP": 307,
-      "YSRCP": 406,
-      "OTH": 21
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 922
     },
-    "winner_party": "YSRCP",
-    "margin": 99,
-    "margin_pct": 13.5,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 195,
@@ -4667,17 +4667,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1018,
-    "total_votes": 874,
-    "turnout_pct": 85.9,
+    "total_votes": 703,
+    "turnout_pct": 69.1,
     "votes": {
-      "TDP": 396,
-      "YSRCP": 455,
-      "OTH": 23
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 703
     },
-    "winner_party": "YSRCP",
-    "margin": 59,
-    "margin_pct": 6.8,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 196,
@@ -4691,17 +4691,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 930,
-    "total_votes": 761,
-    "turnout_pct": 81.9,
+    "total_votes": 470,
+    "turnout_pct": 50.5,
     "votes": {
-      "TDP": 474,
-      "YSRCP": 273,
-      "OTH": 14
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 470
     },
     "winner_party": "TDP",
-    "margin": 201,
-    "margin_pct": 26.4,
-    "tier": "STRONGHOLD"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 197,
@@ -4715,17 +4715,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 848,
-    "total_votes": 733,
-    "turnout_pct": 86.5,
+    "total_votes": 866,
+    "turnout_pct": 102.1,
     "votes": {
-      "TDP": 303,
-      "YSRCP": 409,
-      "OTH": 21
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 866
     },
-    "winner_party": "YSRCP",
-    "margin": 106,
-    "margin_pct": 14.5,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 198,
@@ -4739,16 +4739,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 898,
-    "total_votes": 792,
-    "turnout_pct": 88.2,
+    "total_votes": 754,
+    "turnout_pct": 84.0,
     "votes": {
-      "TDP": 442,
-      "YSRCP": 332,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 754
     },
     "winner_party": "TDP",
-    "margin": 110,
-    "margin_pct": 13.9,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4763,16 +4763,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 842,
-    "total_votes": 703,
-    "turnout_pct": 83.6,
+    "total_votes": 850,
+    "turnout_pct": 101.0,
     "votes": {
-      "TDP": 376,
-      "YSRCP": 311,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 850
     },
     "winner_party": "TDP",
-    "margin": 65,
-    "margin_pct": 9.2,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -4787,17 +4787,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 908,
-    "total_votes": 716,
-    "turnout_pct": 78.9,
+    "total_votes": 833,
+    "turnout_pct": 91.7,
     "votes": {
-      "TDP": 367,
-      "YSRCP": 331,
-      "OTH": 18
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 833
     },
     "winner_party": "TDP",
-    "margin": 36,
-    "margin_pct": 5.0,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 201,
@@ -4811,16 +4811,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 906,
-    "total_votes": 717,
-    "turnout_pct": 79.2,
+    "total_votes": 845,
+    "turnout_pct": 93.3,
     "votes": {
-      "TDP": 394,
-      "YSRCP": 307,
-      "OTH": 16
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 845
     },
     "winner_party": "TDP",
-    "margin": 87,
-    "margin_pct": 12.1,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   }
 ]

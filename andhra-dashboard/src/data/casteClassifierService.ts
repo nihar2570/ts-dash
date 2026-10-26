@@ -1,14 +1,33 @@
 // Andhra Pradesh Onomastic Caste & Community Classifier Service
-// Uses Bayesian Surname Inference + SEEEPC Vol-4 Demographic Priors + Household Clustering
+// Loads directly from castes_master.json (User-Configurable Single Source of Truth)
+// Supports Bayesian Surname Inference + Mandal Priors + Household Clustering
 
-export type CasteCategory = 'BC' | 'SC' | 'ST' | 'OC' | 'Minority';
+import defaultCastesConfig from './castes_master.json';
+
+export type CasteCategory = 'BC' | 'SC' | 'ST' | 'OC' | 'Minority' | string;
+
+export interface CasteMasterEntry {
+  id?: string;
+  caste: string;
+  broad_category: CasteCategory;
+  sub_category?: string;
+  description?: string;
+  surnames?: string[];
+}
+
+export interface CastesMasterFile {
+  version?: string;
+  description?: string;
+  categories?: Array<{ code: string; name: string; description?: string }>;
+  castes: CasteMasterEntry[];
+}
 
 export interface CastePrediction {
-  casteName: string; // e.g. "Goud", "Mudiraj", "Lambada (ST)", "Reddy", "Madiga (SC)", "Muslim"
+  casteName: string;
   category: CasteCategory;
-  subCategory?: string; // e.g. "BC-B", "BC-D", "SC", "ST", "OC", "BC-E"
+  subCategory?: string;
   probability: number; // 0.0 - 1.0
-  probabilityPercent: string; // e.g. "94%"
+  probabilityPercent: string;
   confidenceTier: 'VERY_HIGH' | 'HIGH' | 'MODERATE';
   color: {
     bg: string;
@@ -19,8 +38,8 @@ export interface CastePrediction {
   sourceBasis: string;
 }
 
-// Color schemes per community category
-export const CATEGORY_COLORS: Record<CasteCategory, CastePrediction['color']> = {
+// Fallback color scheme per community category
+export const CATEGORY_COLORS: Record<string, CastePrediction['color']> = {
   BC: {
     bg: 'bg-blue-50',
     text: 'text-blue-700',
@@ -60,144 +79,141 @@ interface ClanRecord {
   baseProb: number;
 }
 
-// High-confidence Andhra Pradesh Clan & Community Names dictionary
-const ANDHRA_CLAN_LEXICON: Record<string, ClanRecord> = {
-  // ST Adivasi / Gond / Koya clans (North & Agency belts)
-  mesram: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.97 },
-  athram: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.97 },
-  todsam: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.96 },
-  marsakola: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.96 },
-  madavi: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.95 },
-  kodapa: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.95 },
-  kanaka: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-  soyam: { caste: 'Adivasi Koya (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.95 },
-  kumra: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-  purka: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.93 },
-  gedam: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-  pendore: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.93 },
-  sedmaki: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-  arka: { caste: 'Adivasi Gond (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.92 },
-
-  // ST Lambada / Sugali / Banjara clans
-  rathod: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.96 },
-  jadhav: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.95 },
-  pawar: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-  chavan: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-  banoth: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.96 },
-  guguloth: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.96 },
-  dharavath: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.95 },
-  boda: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.93 },
-  bhukya: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.96 },
-  katroth: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-  nenavath: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.95 },
-  vadthya: { caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', baseProb: 0.94 },
-
-  // BC-B Goud
-  goud: { caste: 'Goud', category: 'BC', subCategory: 'BC-B', baseProb: 0.96 },
-  gouda: { caste: 'Goud', category: 'BC', subCategory: 'BC-B', baseProb: 0.94 },
-  goundla: { caste: 'Goud', category: 'BC', subCategory: 'BC-B', baseProb: 0.92 },
-
-  // BC-D Mudiraj / Mutrasi
-  mudiraj: { caste: 'Mudiraj', category: 'BC', subCategory: 'BC-D', baseProb: 0.96 },
-  mudhiraj: { caste: 'Mudiraj', category: 'BC', subCategory: 'BC-D', baseProb: 0.95 },
-  bantu: { caste: 'Mudiraj', category: 'BC', subCategory: 'BC-D', baseProb: 0.90 },
-  pittala: { caste: 'Mudiraj', category: 'BC', subCategory: 'BC-D', baseProb: 0.89 },
-
-  // BC-D Yadav / Golla / Kuruma
-  yadav: { caste: 'Yadav / Golla', category: 'BC', subCategory: 'BC-D', baseProb: 0.95 },
-  golla: { caste: 'Yadav / Golla', category: 'BC', subCategory: 'BC-D', baseProb: 0.94 },
-  kuruma: { caste: 'Kuruma (Shepherd)', category: 'BC', subCategory: 'BC-B', baseProb: 0.93 },
-  errolla: { caste: 'Kuruma / Yadav', category: 'BC', subCategory: 'BC-B', baseProb: 0.91 },
-
-  // BC-B Padmashali / Weavers
-  padmashali: { caste: 'Padmashali', category: 'BC', subCategory: 'BC-B', baseProb: 0.96 },
-  challa: { caste: 'Padmashali', category: 'BC', subCategory: 'BC-B', baseProb: 0.88 },
-  veldandi: { caste: 'Padmashali', category: 'BC', subCategory: 'BC-B', baseProb: 0.89 },
-  ganta: { caste: 'Padmashali', category: 'BC', subCategory: 'BC-B', baseProb: 0.87 },
-  bollam: { caste: 'Padmashali', category: 'BC', subCategory: 'BC-B', baseProb: 0.87 },
-
-  // BC-D Munnuru Kapu
-  munnuru: { caste: 'Munnuru Kapu', category: 'BC', subCategory: 'BC-D', baseProb: 0.95 },
-  katta: { caste: 'Munnuru Kapu', category: 'BC', subCategory: 'BC-D', baseProb: 0.86 },
-  vangala: { caste: 'Munnuru Kapu', category: 'BC', subCategory: 'BC-D', baseProb: 0.87 },
-  gurram: { caste: 'Munnuru Kapu', category: 'BC', subCategory: 'BC-D', baseProb: 0.86 },
-  thota: { caste: 'Munnuru Kapu', category: 'BC', subCategory: 'BC-D', baseProb: 0.85 },
-  bhatti: { caste: 'Munnuru Kapu', category: 'BC', subCategory: 'BC-D', baseProb: 0.86 },
-
-  // SC Madiga & Mala
-  madiga: { caste: 'SC Madiga', category: 'SC', subCategory: 'SC', baseProb: 0.97 },
-  mala: { caste: 'SC Mala', category: 'SC', subCategory: 'SC', baseProb: 0.96 },
-  durgam: { caste: 'SC Madiga', category: 'SC', subCategory: 'SC', baseProb: 0.91 },
-  nallala: { caste: 'SC Madiga', category: 'SC', subCategory: 'SC', baseProb: 0.90 },
-  ravula: { caste: 'SC Madiga', category: 'SC', subCategory: 'SC', baseProb: 0.89 },
-  jogu: { caste: 'SC Mala', category: 'SC', subCategory: 'SC', baseProb: 0.89 },
-  kasipeta: { caste: 'SC Madiga', category: 'SC', subCategory: 'SC', baseProb: 0.90 },
-  dasari: { caste: 'SC Mala', category: 'SC', subCategory: 'SC', baseProb: 0.88 },
-  malyala: { caste: 'SC Madiga', category: 'SC', subCategory: 'SC', baseProb: 0.89 },
-  kommu: { caste: 'SC Madiga', category: 'SC', subCategory: 'SC', baseProb: 0.88 },
-  bandari: { caste: 'SC / BC', category: 'SC', subCategory: 'SC', baseProb: 0.82 },
-
-  // OC Reddy (Forward Caste)
-  reddy: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.96 },
-  komatireddy: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.98 },
-  gutha: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.94 },
-  kunduru: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.93 },
-  alimineti: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.94 },
-  singireddy: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.96 },
-  kethireddy: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.96 },
-  marri: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.90 },
-  chinthakunta: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.90 },
-  pendyala: { caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.89 },
-
-  // Muslim (Minorities)
-  mohammed: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.99 },
-  shaik: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.98 },
-  syed: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.98 },
-  ahmed: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.97 },
-  khan: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.97 },
-  mirza: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.96 },
-  begum: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.98 },
-  hussain: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.96 },
-  qureshi: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.98 },
-  ansari: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.97 },
-  siddiqui: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.97 },
-  farooqui: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.97 },
-  owaisi: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.98 },
-  ali: { caste: 'Muslim', category: 'Minority', subCategory: 'Minority', baseProb: 0.95 },
-
-  // OC Brahmin / Vysya / Velama
-  rao: { caste: 'OC / BC General', category: 'OC', subCategory: 'OC', baseProb: 0.82 },
-  sharma: { caste: 'Brahmin (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.95 },
-  shastri: { caste: 'Brahmin (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.95 },
-  gupta: { caste: 'Arya Vysya (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.94 },
-  shetty: { caste: 'Arya Vysya (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.92 },
-  kalvakuntla: { caste: 'Velama (OC)', category: 'OC', subCategory: 'OC', baseProb: 0.96 },
-};
-
-// Suffix rules for names ending with community markers
-const SUFFIX_RULES: Array<{
+// In-memory active registry loaded from castes_master.json
+let activeMasterConfig: CastesMasterFile = (defaultCastesConfig as unknown) as CastesMasterFile;
+let activeClanLexicon: Record<string, ClanRecord> = {};
+let activeSuffixRules: Array<{
   pattern: RegExp;
   caste: string;
   category: CasteCategory;
   subCategory: string;
   prob: number;
-}> = [
-  { pattern: /reddy$/i, caste: 'Reddy (OC)', category: 'OC', subCategory: 'OC', prob: 0.96 },
-  { pattern: /goud$/i, caste: 'Goud', category: 'BC', subCategory: 'BC-B', prob: 0.95 },
-  { pattern: /gouda$/i, caste: 'Goud', category: 'BC', subCategory: 'BC-B', prob: 0.94 },
-  { pattern: /yadav$/i, caste: 'Yadav / Golla', category: 'BC', subCategory: 'BC-D', prob: 0.96 },
-  { pattern: /golla$/i, caste: 'Yadav / Golla', category: 'BC', subCategory: 'BC-D', prob: 0.95 },
-  { pattern: /mudiraj$/i, caste: 'Mudiraj', category: 'BC', subCategory: 'BC-D', prob: 0.96 },
-  { pattern: /mutrasi$/i, caste: 'Mudiraj', category: 'BC', subCategory: 'BC-D', prob: 0.94 },
-  { pattern: /padmashali$/i, caste: 'Padmashali', category: 'BC', subCategory: 'BC-B', prob: 0.96 },
-  { pattern: /rathod$/i, caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', prob: 0.96 },
-  { pattern: /chavan$/i, caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', prob: 0.95 },
-  { pattern: /jadhav$/i, caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', prob: 0.95 },
-  { pattern: /pawar$/i, caste: 'Lambada (ST)', category: 'ST', subCategory: 'ST', prob: 0.94 },
-  { pattern: /madiga$/i, caste: 'SC Madiga', category: 'SC', subCategory: 'SC', prob: 0.97 },
-  { pattern: /mala$/i, caste: 'SC Mala', category: 'SC', subCategory: 'SC', prob: 0.96 },
-  { pattern: /patel$/i, caste: 'Munnuru Kapu', category: 'BC', subCategory: 'BC-D', prob: 0.88 },
-];
+}> = [];
+
+/**
+ * Rebuilds the fast lookup dictionaries from the master castes configuration.
+ */
+function compileMasterRegistry(cfg: CastesMasterFile) {
+  const newLexicon: Record<string, ClanRecord> = {};
+  const newSuffixRules: typeof activeSuffixRules = [];
+
+  const castesList = Array.isArray(cfg?.castes) ? cfg.castes : [];
+
+  castesList.forEach((entry) => {
+    const casteName = entry.caste?.trim() || 'General';
+    const category = entry.broad_category?.trim() || 'OC';
+    const subCategory = entry.sub_category?.trim() || category;
+
+    // Process surnames associated with this caste
+    if (Array.isArray(entry.surnames)) {
+      entry.surnames.forEach((s) => {
+        const cleanS = s.trim().toLowerCase();
+        if (cleanS) {
+          newLexicon[cleanS] = {
+            caste: casteName,
+            category,
+            subCategory,
+            baseProb: 0.95,
+          };
+        }
+      });
+    }
+
+    // Generate automatic suffix rule if the caste name has an unambiguous suffix
+    const lowerCaste = casteName.toLowerCase();
+    const markers: string[] = [];
+
+    if (lowerCaste.includes('reddy')) markers.push('reddy');
+    if (lowerCaste.includes('kamma')) markers.push('chowdary', 'kamma');
+    if (lowerCaste.includes('kapu')) markers.push('kapu', 'naidu');
+    if (lowerCaste.includes('goud') || lowerCaste.includes('settibalija')) markers.push('goud', 'gouda', 'goundla');
+    if (lowerCaste.includes('yadav') || lowerCaste.includes('golla')) markers.push('yadav', 'golla');
+    if (lowerCaste.includes('boya') || lowerCaste.includes('kuruba') || lowerCaste.includes('valmiki')) markers.push('boya', 'kuruba', 'valmiki', 'naidu');
+    if (lowerCaste.includes('padmashali')) markers.push('padmashali');
+    if (lowerCaste.includes('raju') || lowerCaste.includes('kshatriya')) markers.push('raju', 'varma');
+    if (lowerCaste.includes('vysya')) markers.push('gupta', 'shetty', 'setty');
+    if (lowerCaste.includes('brahmin')) markers.push('sharma', 'shastri');
+    if (lowerCaste.includes('madiga')) markers.push('madiga');
+    if (lowerCaste.includes('mala')) markers.push('mala');
+    if (lowerCaste.includes('lambada') || lowerCaste.includes('sugali')) markers.push('rathod', 'chavan', 'jadhav', 'pawar', 'naik');
+    if (lowerCaste.includes('chenchu') || lowerCaste.includes('yanadi')) markers.push('chenchu', 'yanadi');
+    if (lowerCaste.includes('muslim')) markers.push('shaik', 'syed', 'khan', 'pasha', 'baig', 'ansari', 'qureshi');
+
+    markers.forEach((m) => {
+      newSuffixRules.push({
+        pattern: new RegExp(`${m}$`, 'i'),
+        caste: casteName,
+        category,
+        subCategory,
+        prob: 0.94,
+      });
+    });
+  });
+
+  activeMasterConfig = cfg;
+  activeClanLexicon = newLexicon;
+  activeSuffixRules = newSuffixRules;
+}
+
+// Initialize immediately with bundled JSON
+compileMasterRegistry(defaultCastesConfig as unknown as CastesMasterFile);
+
+// Dynamic browser fetch to load edited public/data/castes_master.json every time
+if (typeof window !== 'undefined') {
+  fetch('/data/castes_master.json')
+    .then((res) => (res.ok ? res.json() : null))
+    .then((data) => {
+      if (data && Array.isArray(data.castes) && data.castes.length > 0) {
+        compileMasterRegistry(data);
+      }
+    })
+    .catch(() => {
+      // Kept fallback config cleanly
+    });
+}
+
+/**
+ * Reloads the master caste configuration at runtime (e.g., when the user edits the file or triggers an update).
+ */
+export function reloadMasterCastes(customConfig?: CastesMasterFile): void {
+  if (customConfig && Array.isArray(customConfig.castes)) {
+    compileMasterRegistry(customConfig);
+    return;
+  }
+  if (typeof window !== 'undefined') {
+    fetch(`/data/castes_master.json?t=${Date.now()}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => {
+        if (data && Array.isArray(data.castes)) {
+          compileMasterRegistry(data);
+        }
+      })
+      .catch(() => {});
+  }
+}
+
+/**
+ * Returns the active master list of castes and broad categories.
+ */
+export function getMasterCastes(): CasteMasterEntry[] {
+  return activeMasterConfig.castes || [];
+}
+
+/**
+ * Returns the list of broad social categories (OC, BC, SC, ST, Minority, etc.).
+ */
+export function getMasterCategories(): Array<{ code: string; name: string; description?: string }> {
+  if (activeMasterConfig.categories && activeMasterConfig.categories.length > 0) {
+    return activeMasterConfig.categories;
+  }
+  return [
+    { code: 'OC', name: 'Open Competition / Forward Castes' },
+    { code: 'BC', name: 'Backward Classes' },
+    { code: 'SC', name: 'Scheduled Castes' },
+    { code: 'ST', name: 'Scheduled Tribes' },
+    { code: 'Minority', name: 'Religious Minorities' },
+  ];
+}
 
 /**
  * Predicts the caste & social category of an elector with calibrated probability.
@@ -217,114 +233,76 @@ export function predictCaste(
 
   const tokens = [...cleanName.split(/\s+/), ...cleanRel.split(/\s+/)].filter(Boolean);
 
-  // 1. Direct Clan Lexicon Lookup (first word / surname)
+  // 1. Direct Clan / Surname Lookup in active master registry
   for (const token of tokens) {
-    if (ANDHRA_CLAN_LEXICON[token]) {
-      const entry = ANDHRA_CLAN_LEXICON[token];
-      return createPrediction(entry.caste, entry.category, entry.subCategory, entry.baseProb, `Clan Name Match (${token.toUpperCase()})`);
+    if (activeClanLexicon[token]) {
+      const entry = activeClanLexicon[token];
+      return createPrediction(
+        entry.caste,
+        entry.category,
+        entry.subCategory,
+        entry.baseProb,
+        `Master Registry Surname Match (${token.toUpperCase()})`
+      );
     }
   }
 
-  // 2. Suffix Rules (e.g. "Harish Reddy" -> Reddy, "Srinivas Goud" -> Goud)
-  for (const rule of SUFFIX_RULES) {
+  // 2. Suffix Rules based on master registry
+  for (const rule of activeSuffixRules) {
     if (rule.pattern.test(cleanName) || (cleanRel && rule.pattern.test(cleanRel))) {
-      return createPrediction(rule.caste, rule.category, rule.subCategory, rule.prob, `Community Suffix Rule (${rule.pattern.source.replace('$', '')})`);
+      return createPrediction(
+        rule.caste,
+        rule.category,
+        rule.subCategory,
+        rule.prob,
+        `Community Suffix Rule (${rule.pattern.source.replace('$', '')})`
+      );
     }
   }
 
   // 3. Muslim Name Signatures
-  const muslimSignatures = ['mohammed', 'shaik', 'syed', 'ahmed', 'khan', 'mirza', 'begum', 'hussain', 'ansari', 'qureshi', 'fatima', 'ayesha', 'zainab', 'mariam'];
+  const muslimSignatures = [
+    'mohammed', 'shaik', 'syed', 'ahmed', 'khan', 'mirza', 'begum', 'hussain',
+    'ansari', 'qureshi', 'fatima', 'ayesha', 'zainab', 'mariam', 'dudekula', 'noorbasha'
+  ];
   if (tokens.some((t) => muslimSignatures.includes(t))) {
-    return createPrediction('Muslim', 'Minority', 'Minority', 0.96, 'Islamic First/Family Name');
+    const muslimCaste = activeMasterConfig.castes.find((c) => c.caste.toLowerCase().includes('muslim'))?.caste || 'Muslim Minority';
+    const muslimCategory = activeMasterConfig.castes.find((c) => c.caste.toLowerCase().includes('muslim'))?.broad_category || 'Minority';
+    return createPrediction(muslimCaste, muslimCategory, 'Minority', 0.96, 'Islamic First/Family Name');
   }
 
   // 4. Fallback to Mandal Dominant Demographic Prior if available
   if (dominantMandalCaste && dominantMandalCaste !== 'None') {
     const dLower = dominantMandalCaste.toLowerCase();
-    let recognizedCaste = '';
-    let cat: CasteCategory = 'BC';
-    let sub = 'BC';
+    const matched = activeMasterConfig.castes.find((c) => {
+      const cLow = c.caste.toLowerCase();
+      return dLower.includes(cLow) || cLow.includes(dLower);
+    });
 
-    if (dLower.includes('lambada')) {
-      recognizedCaste = 'Lambada (ST)';
-      cat = 'ST';
-      sub = 'ST';
-    } else if (dLower.includes('gond') || dLower.includes('koya') || dLower.includes('kolam') || dLower.includes('adivasi')) {
-      recognizedCaste = 'Adivasi Gond (ST)';
-      cat = 'ST';
-      sub = 'ST';
-    } else if (dLower.includes('st')) {
-      recognizedCaste = 'ST Community';
-      cat = 'ST';
-      sub = 'ST';
-    } else if (dLower.includes('madiga')) {
-      recognizedCaste = 'Madiga (SC)';
-      cat = 'SC';
-      sub = 'SC';
-    } else if (dLower.includes('mala')) {
-      recognizedCaste = 'Mala (SC)';
-      cat = 'SC';
-      sub = 'SC';
-    } else if (dLower.includes('sc')) {
-      recognizedCaste = 'SC Community';
-      cat = 'SC';
-      sub = 'SC';
-    } else if (dLower.includes('goud')) {
-      recognizedCaste = 'Goud';
-      cat = 'BC';
-      sub = 'BC-B';
-    } else if (dLower.includes('mudiraj')) {
-      recognizedCaste = 'Mudiraj';
-      cat = 'BC';
-      sub = 'BC-D';
-    } else if (dLower.includes('munnuru') || dLower.includes('kapu')) {
-      recognizedCaste = 'Munnuru Kapu';
-      cat = 'BC';
-      sub = 'BC-D';
-    } else if (dLower.includes('yadav') || dLower.includes('golla')) {
-      recognizedCaste = 'Yadav';
-      cat = 'BC';
-      sub = 'BC-D';
-    } else if (dLower.includes('padmashali') || dLower.includes('weaver')) {
-      recognizedCaste = 'Padmashali';
-      cat = 'BC';
-      sub = 'BC-B';
-    } else if (dLower.includes('kuruma') || dLower.includes('kuruba')) {
-      recognizedCaste = 'Kuruma';
-      cat = 'BC';
-      sub = 'BC-B';
-    } else if (dLower.includes('reddy')) {
-      recognizedCaste = 'Reddy';
-      cat = 'OC';
-      sub = 'OC';
-    } else if (dLower.includes('velama')) {
-      recognizedCaste = 'Velama';
-      cat = 'OC';
-      sub = 'OC';
-    } else if (dLower.includes('muslim') || dLower.includes('minority')) {
-      recognizedCaste = 'Muslim';
-      cat = 'Minority';
-      sub = 'Minority';
-    }
-
-    if (recognizedCaste) {
+    if (matched) {
       return createPrediction(
-        recognizedCaste,
-        cat,
-        sub,
+        matched.caste,
+        matched.broad_category,
+        matched.sub_category || matched.broad_category,
         0.72,
-        `Mandal Demographic Prior (${recognizedCaste})`
+        `Mandal Demographic Prior (${matched.caste})`
       );
     }
   }
 
-  // 5. Default General BC Prior
-  return createPrediction('BC General', 'BC', 'BC-D', 0.65, 'Regional Baseline Prior');
+  // 5. Default Regional Prior based on first configured BC or general caste
+  const defaultEntry = activeMasterConfig.castes.find((c) => c.broad_category === 'BC') || activeMasterConfig.castes[0];
+  return createPrediction(
+    defaultEntry ? defaultEntry.caste : 'BC General',
+    defaultEntry ? defaultEntry.broad_category : 'BC',
+    defaultEntry?.sub_category || 'BC',
+    0.65,
+    'Regional Baseline Prior'
+  );
 }
 
 /**
  * Predicts the consensus caste profile of an entire household.
- * Because family members share the same home and clan, consensus confidence reaches 94–98%.
  */
 export function predictHouseholdCaste(
   members: Array<{ name: string; relativeName?: string }>,
@@ -397,7 +375,6 @@ export function predictHouseholdCaste(
     }
   }
 
-  // Boost confidence if multiple family members agree
   const boostedProb = validMembers.length > 1
     ? Math.min(0.98, best.probability + 0.05)
     : best.probability;
@@ -422,6 +399,14 @@ function createPrediction(
   const tier: CastePrediction['confidenceTier'] =
     clampedProb >= 0.90 ? 'VERY_HIGH' : clampedProb >= 0.80 ? 'HIGH' : 'MODERATE';
 
+  const catKey = String(category);
+  const color = CATEGORY_COLORS[catKey] || {
+    bg: 'bg-slate-50',
+    text: 'text-slate-700',
+    border: 'border-slate-200',
+    badge: 'bg-slate-100 text-slate-800 border-slate-200',
+  };
+
   return {
     casteName,
     category,
@@ -429,8 +414,7 @@ function createPrediction(
     probability: clampedProb,
     probabilityPercent: `${Math.round(clampedProb * 100)}%`,
     confidenceTier: tier,
-    color: CATEGORY_COLORS[category],
+    color,
     sourceBasis,
   };
 }
-

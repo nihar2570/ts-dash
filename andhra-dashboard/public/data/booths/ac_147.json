@@ -11,17 +11,40 @@
     "lng": 77.057461,
     "is_urban": false,
     "electorate": 943,
-    "total_votes": 782,
-    "turnout_pct": 83.0,
+    "total_votes": 804,
+    "turnout_pct": 85.3,
     "votes": {
-      "YSRCP": 352,
-      "TDP": 380,
-      "OTH": 50
+      "YSRCP": 348,
+      "TDP": 346,
+      "OTH": 110
     },
-    "winner_party": "TDP",
-    "margin": 28,
-    "margin_pct": 3.6,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 2,
+    "margin_pct": 0.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 2,
+    "name": "Station 2",
+    "building": "Station 2",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 671,
+    "votes": {
+      "YSRCP": 323,
+      "TDP": 289,
+      "OTH": 59
+    },
+    "winner_party": "YSRCP",
+    "margin": 34,
+    "margin_pct": 5.1,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 3,
@@ -35,16 +58,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 953,
-    "total_votes": 699,
-    "turnout_pct": 73.4,
+    "total_votes": 987,
+    "turnout_pct": 103.6,
     "votes": {
-      "YSRCP": 374,
-      "TDP": 287,
-      "OTH": 38
+      "YSRCP": 455,
+      "TDP": 433,
+      "OTH": 99
     },
     "winner_party": "YSRCP",
-    "margin": 87,
-    "margin_pct": 12.4,
+    "margin": 22,
+    "margin_pct": 2.2,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -59,17 +82,17 @@
     "lng": 76.977464,
     "is_urban": false,
     "electorate": 791,
-    "total_votes": 595,
-    "turnout_pct": 75.3,
+    "total_votes": 370,
+    "turnout_pct": 46.8,
     "votes": {
-      "YSRCP": 252,
-      "TDP": 302,
-      "OTH": 41
+      "YSRCP": 216,
+      "TDP": 132,
+      "OTH": 22
     },
-    "winner_party": "TDP",
-    "margin": 50,
-    "margin_pct": 8.4,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 84,
+    "margin_pct": 22.7,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 5,
@@ -83,16 +106,16 @@
     "lng": 76.993665,
     "is_urban": false,
     "electorate": 987,
-    "total_votes": 771,
-    "turnout_pct": 78.2,
+    "total_votes": 264,
+    "turnout_pct": 26.7,
     "votes": {
-      "YSRCP": 487,
-      "TDP": 250,
-      "OTH": 34
+      "YSRCP": 186,
+      "TDP": 68,
+      "OTH": 10
     },
     "winner_party": "YSRCP",
-    "margin": 237,
-    "margin_pct": 30.7,
+    "margin": 118,
+    "margin_pct": 44.7,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -107,17 +130,17 @@
     "lng": 77.004048,
     "is_urban": false,
     "electorate": 974,
-    "total_votes": 746,
-    "turnout_pct": 76.6,
+    "total_votes": 786,
+    "turnout_pct": 80.7,
     "votes": {
-      "YSRCP": 359,
-      "TDP": 342,
-      "OTH": 45
+      "YSRCP": 383,
+      "TDP": 336,
+      "OTH": 67
     },
     "winner_party": "YSRCP",
-    "margin": 17,
-    "margin_pct": 2.3,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 47,
+    "margin_pct": 6.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 7,
@@ -131,17 +154,17 @@
     "lng": 77.02919,
     "is_urban": false,
     "electorate": 860,
-    "total_votes": 700,
-    "turnout_pct": 81.5,
+    "total_votes": 887,
+    "turnout_pct": 103.1,
     "votes": {
-      "YSRCP": 306,
-      "TDP": 347,
-      "OTH": 47
+      "YSRCP": 466,
+      "TDP": 371,
+      "OTH": 50
     },
-    "winner_party": "TDP",
-    "margin": 41,
-    "margin_pct": 5.9,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 95,
+    "margin_pct": 10.7,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 8,
@@ -155,17 +178,17 @@
     "lng": 77.044682,
     "is_urban": false,
     "electorate": 1191,
-    "total_votes": 921,
-    "turnout_pct": 77.4,
+    "total_votes": 878,
+    "turnout_pct": 73.7,
     "votes": {
-      "YSRCP": 475,
-      "TDP": 393,
-      "OTH": 53
+      "YSRCP": 506,
+      "TDP": 341,
+      "OTH": 31
     },
     "winner_party": "YSRCP",
-    "margin": 82,
-    "margin_pct": 8.9,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 165,
+    "margin_pct": 18.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 9,
@@ -179,17 +202,17 @@
     "lng": 77.044682,
     "is_urban": false,
     "electorate": 884,
-    "total_votes": 659,
-    "turnout_pct": 74.6,
+    "total_votes": 649,
+    "turnout_pct": 73.4,
     "votes": {
-      "YSRCP": 278,
-      "TDP": 336,
-      "OTH": 45
+      "YSRCP": 384,
+      "TDP": 228,
+      "OTH": 37
     },
-    "winner_party": "TDP",
-    "margin": 58,
-    "margin_pct": 8.8,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 156,
+    "margin_pct": 24.0,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 10,
@@ -203,17 +226,17 @@
     "lng": 77.033441,
     "is_urban": false,
     "electorate": 811,
-    "total_votes": 646,
-    "turnout_pct": 79.7,
+    "total_votes": 701,
+    "turnout_pct": 86.4,
     "votes": {
-      "YSRCP": 301,
-      "TDP": 304,
-      "OTH": 41
+      "YSRCP": 396,
+      "TDP": 252,
+      "OTH": 53
     },
-    "winner_party": "TDP",
-    "margin": 3,
-    "margin_pct": 0.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 144,
+    "margin_pct": 20.5,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 11,
@@ -227,17 +250,17 @@
     "lng": 77.049091,
     "is_urban": false,
     "electorate": 854,
-    "total_votes": 716,
-    "turnout_pct": 83.9,
+    "total_votes": 808,
+    "turnout_pct": 94.6,
     "votes": {
-      "YSRCP": 350,
-      "TDP": 323,
-      "OTH": 43
+      "YSRCP": 471,
+      "TDP": 471,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 27,
-    "margin_pct": 3.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 12,
@@ -251,17 +274,17 @@
     "lng": 77.051718,
     "is_urban": false,
     "electorate": 1000,
-    "total_votes": 880,
-    "turnout_pct": 88.1,
+    "total_votes": 440,
+    "turnout_pct": 44.0,
     "votes": {
-      "YSRCP": 374,
-      "TDP": 447,
-      "OTH": 59
+      "YSRCP": 285,
+      "TDP": 135,
+      "OTH": 20
     },
-    "winner_party": "TDP",
-    "margin": 73,
-    "margin_pct": 8.3,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 150,
+    "margin_pct": 34.1,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 13,
@@ -275,17 +298,17 @@
     "lng": 77.062964,
     "is_urban": false,
     "electorate": 860,
-    "total_votes": 681,
-    "turnout_pct": 79.3,
+    "total_votes": 698,
+    "turnout_pct": 81.2,
     "votes": {
-      "YSRCP": 381,
-      "TDP": 264,
-      "OTH": 36
+      "YSRCP": 350,
+      "TDP": 313,
+      "OTH": 35
     },
     "winner_party": "YSRCP",
-    "margin": 117,
-    "margin_pct": 17.2,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 37,
+    "margin_pct": 5.3,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 14,
@@ -299,17 +322,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 806,
-    "total_votes": 631,
-    "turnout_pct": 78.4,
+    "total_votes": 755,
+    "turnout_pct": 93.7,
     "votes": {
-      "YSRCP": 241,
-      "TDP": 344,
-      "OTH": 46
+      "YSRCP": 423,
+      "TDP": 303,
+      "OTH": 29
     },
-    "winner_party": "TDP",
-    "margin": 103,
-    "margin_pct": 16.3,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 120,
+    "margin_pct": 15.9,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 15,
@@ -323,17 +346,17 @@
     "lng": 77.062964,
     "is_urban": false,
     "electorate": 1138,
-    "total_votes": 909,
-    "turnout_pct": 79.9,
+    "total_votes": 555,
+    "turnout_pct": 48.8,
     "votes": {
-      "YSRCP": 485,
-      "TDP": 374,
-      "OTH": 50
+      "YSRCP": 388,
+      "TDP": 133,
+      "OTH": 34
     },
     "winner_party": "YSRCP",
-    "margin": 111,
-    "margin_pct": 12.2,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 255,
+    "margin_pct": 45.9,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 16,
@@ -347,17 +370,40 @@
     "lng": null,
     "is_urban": false,
     "electorate": 828,
-    "total_votes": 616,
-    "turnout_pct": 74.5,
+    "total_votes": 636,
+    "turnout_pct": 76.8,
     "votes": {
-      "YSRCP": 331,
-      "TDP": 251,
-      "OTH": 34
+      "YSRCP": 347,
+      "TDP": 246,
+      "OTH": 43
     },
     "winner_party": "YSRCP",
-    "margin": 80,
-    "margin_pct": 13.0,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 101,
+    "margin_pct": 15.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 17,
+    "name": "Station 17",
+    "building": "Station 17",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 794,
+    "votes": {
+      "YSRCP": 441,
+      "TDP": 304,
+      "OTH": 49
+    },
+    "winner_party": "YSRCP",
+    "margin": 137,
+    "margin_pct": 17.3,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 18,
@@ -371,17 +417,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 786,
-    "total_votes": 659,
-    "turnout_pct": 83.9,
+    "total_votes": 837,
+    "turnout_pct": 106.5,
     "votes": {
-      "YSRCP": 302,
-      "TDP": 314,
-      "OTH": 43
+      "YSRCP": 520,
+      "TDP": 269,
+      "OTH": 48
     },
-    "winner_party": "TDP",
-    "margin": 12,
-    "margin_pct": 1.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 251,
+    "margin_pct": 30.0,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 19,
@@ -395,16 +441,16 @@
     "lng": 77.06912,
     "is_urban": false,
     "electorate": 865,
-    "total_votes": 694,
-    "turnout_pct": 80.3,
+    "total_votes": 812,
+    "turnout_pct": 93.9,
     "votes": {
-      "YSRCP": 351,
-      "TDP": 302,
-      "OTH": 41
+      "YSRCP": 394,
+      "TDP": 360,
+      "OTH": 58
     },
     "winner_party": "YSRCP",
-    "margin": 49,
-    "margin_pct": 7.1,
+    "margin": 34,
+    "margin_pct": 4.2,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -419,17 +465,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 823,
-    "total_votes": 624,
-    "turnout_pct": 75.9,
+    "total_votes": 752,
+    "turnout_pct": 91.4,
     "votes": {
-      "YSRCP": 301,
-      "TDP": 285,
-      "OTH": 38
+      "YSRCP": 383,
+      "TDP": 318,
+      "OTH": 51
     },
     "winner_party": "YSRCP",
-    "margin": 16,
-    "margin_pct": 2.6,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 65,
+    "margin_pct": 8.6,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 21,
@@ -443,17 +489,17 @@
     "lng": 77.069854,
     "is_urban": false,
     "electorate": 852,
-    "total_votes": 639,
-    "turnout_pct": 75.1,
+    "total_votes": 1350,
+    "turnout_pct": 158.5,
     "votes": {
-      "YSRCP": 327,
-      "TDP": 275,
-      "OTH": 37
+      "YSRCP": 836,
+      "TDP": 479,
+      "OTH": 35
     },
     "winner_party": "YSRCP",
-    "margin": 52,
-    "margin_pct": 8.1,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 357,
+    "margin_pct": 26.4,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 22,
@@ -467,16 +513,16 @@
     "lng": 77.126575,
     "is_urban": false,
     "electorate": 893,
-    "total_votes": 673,
-    "turnout_pct": 75.4,
+    "total_votes": 537,
+    "turnout_pct": 60.1,
     "votes": {
-      "YSRCP": 345,
-      "TDP": 289,
-      "OTH": 39
+      "YSRCP": 258,
+      "TDP": 258,
+      "OTH": 21
     },
     "winner_party": "YSRCP",
-    "margin": 56,
-    "margin_pct": 8.3,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -491,17 +537,17 @@
     "lng": 77.120097,
     "is_urban": false,
     "electorate": 1002,
-    "total_votes": 764,
-    "turnout_pct": 76.3,
+    "total_votes": 554,
+    "turnout_pct": 55.3,
     "votes": {
-      "YSRCP": 342,
-      "TDP": 372,
-      "OTH": 50
+      "YSRCP": 343,
+      "TDP": 168,
+      "OTH": 43
     },
-    "winner_party": "TDP",
-    "margin": 30,
-    "margin_pct": 3.9,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 175,
+    "margin_pct": 31.6,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 24,
@@ -515,17 +561,17 @@
     "lng": 77.12463,
     "is_urban": false,
     "electorate": 942,
-    "total_votes": 763,
-    "turnout_pct": 81.1,
+    "total_votes": 414,
+    "turnout_pct": 43.9,
     "votes": {
-      "YSRCP": 401,
-      "TDP": 319,
-      "OTH": 43
+      "YSRCP": 241,
+      "TDP": 155,
+      "OTH": 18
     },
     "winner_party": "YSRCP",
-    "margin": 82,
-    "margin_pct": 10.7,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 86,
+    "margin_pct": 20.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 25,
@@ -539,17 +585,17 @@
     "lng": 77.06912,
     "is_urban": false,
     "electorate": 842,
-    "total_votes": 640,
-    "turnout_pct": 76.1,
+    "total_votes": 910,
+    "turnout_pct": 108.1,
     "votes": {
-      "YSRCP": 282,
-      "TDP": 316,
-      "OTH": 42
+      "YSRCP": 495,
+      "TDP": 356,
+      "OTH": 59
     },
-    "winner_party": "TDP",
-    "margin": 34,
-    "margin_pct": 5.3,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 139,
+    "margin_pct": 15.3,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 26,
@@ -563,17 +609,17 @@
     "lng": 77.122215,
     "is_urban": false,
     "electorate": 1035,
-    "total_votes": 939,
-    "turnout_pct": 90.8,
+    "total_votes": 836,
+    "turnout_pct": 80.8,
     "votes": {
-      "YSRCP": 323,
-      "TDP": 544,
-      "OTH": 72
+      "YSRCP": 424,
+      "TDP": 369,
+      "OTH": 43
     },
-    "winner_party": "TDP",
-    "margin": 221,
-    "margin_pct": 23.5,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 55,
+    "margin_pct": 6.6,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 27,
@@ -587,17 +633,17 @@
     "lng": 77.120723,
     "is_urban": false,
     "electorate": 849,
-    "total_votes": 688,
-    "turnout_pct": 81.1,
+    "total_votes": 182,
+    "turnout_pct": 21.4,
     "votes": {
-      "YSRCP": 337,
-      "TDP": 309,
-      "OTH": 42
+      "YSRCP": 111,
+      "TDP": 63,
+      "OTH": 8
     },
     "winner_party": "YSRCP",
-    "margin": 28,
-    "margin_pct": 4.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 48,
+    "margin_pct": 26.4,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 28,
@@ -611,16 +657,16 @@
     "lng": 77.120723,
     "is_urban": false,
     "electorate": 956,
-    "total_votes": 762,
-    "turnout_pct": 79.8,
+    "total_votes": 960,
+    "turnout_pct": 100.4,
     "votes": {
-      "YSRCP": 403,
-      "TDP": 316,
-      "OTH": 43
+      "YSRCP": 457,
+      "TDP": 448,
+      "OTH": 55
     },
     "winner_party": "YSRCP",
-    "margin": 87,
-    "margin_pct": 11.4,
+    "margin": 9,
+    "margin_pct": 0.9,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -635,17 +681,17 @@
     "lng": 77.087225,
     "is_urban": false,
     "electorate": 788,
-    "total_votes": 606,
-    "turnout_pct": 77.0,
+    "total_votes": 775,
+    "turnout_pct": 98.4,
     "votes": {
-      "YSRCP": 241,
-      "TDP": 322,
-      "OTH": 43
+      "YSRCP": 370,
+      "TDP": 346,
+      "OTH": 59
     },
-    "winner_party": "TDP",
-    "margin": 81,
-    "margin_pct": 13.4,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 24,
+    "margin_pct": 3.1,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 30,
@@ -659,17 +705,17 @@
     "lng": 77.112519,
     "is_urban": false,
     "electorate": 853,
-    "total_votes": 684,
-    "turnout_pct": 80.2,
+    "total_votes": 656,
+    "turnout_pct": 76.9,
     "votes": {
-      "YSRCP": 233,
-      "TDP": 398,
-      "OTH": 53
+      "YSRCP": 365,
+      "TDP": 263,
+      "OTH": 28
     },
-    "winner_party": "TDP",
-    "margin": 165,
-    "margin_pct": 24.1,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 102,
+    "margin_pct": 15.5,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 31,
@@ -683,16 +729,16 @@
     "lng": 77.090769,
     "is_urban": false,
     "electorate": 827,
-    "total_votes": 621,
-    "turnout_pct": 75.2,
+    "total_votes": 275,
+    "turnout_pct": 33.3,
     "votes": {
-      "YSRCP": 332,
-      "TDP": 255,
-      "OTH": 34
+      "YSRCP": 142,
+      "TDP": 112,
+      "OTH": 21
     },
     "winner_party": "YSRCP",
-    "margin": 77,
-    "margin_pct": 12.4,
+    "margin": 30,
+    "margin_pct": 10.9,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -707,17 +753,17 @@
     "lng": 77.04192,
     "is_urban": false,
     "electorate": 997,
-    "total_votes": 733,
-    "turnout_pct": 73.6,
+    "total_votes": 906,
+    "turnout_pct": 90.9,
     "votes": {
-      "YSRCP": 238,
-      "TDP": 436,
-      "OTH": 59
+      "YSRCP": 681,
+      "TDP": 170,
+      "OTH": 55
     },
-    "winner_party": "TDP",
-    "margin": 198,
-    "margin_pct": 27.0,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 511,
+    "margin_pct": 56.4,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 33,
@@ -731,17 +777,17 @@
     "lng": 77.04192,
     "is_urban": false,
     "electorate": 960,
-    "total_votes": 789,
-    "turnout_pct": 82.2,
+    "total_votes": 1088,
+    "turnout_pct": 113.3,
     "votes": {
-      "YSRCP": 235,
-      "TDP": 489,
-      "OTH": 65
+      "YSRCP": 534,
+      "TDP": 494,
+      "OTH": 60
     },
-    "winner_party": "TDP",
-    "margin": 254,
-    "margin_pct": 32.2,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 40,
+    "margin_pct": 3.7,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 34,
@@ -755,17 +801,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 892,
-    "total_votes": 709,
-    "turnout_pct": 79.5,
+    "total_votes": 566,
+    "turnout_pct": 63.5,
     "votes": {
-      "YSRCP": 333,
-      "TDP": 332,
-      "OTH": 44
+      "YSRCP": 269,
+      "TDP": 250,
+      "OTH": 47
     },
     "winner_party": "YSRCP",
-    "margin": 1,
-    "margin_pct": 0.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 19,
+    "margin_pct": 3.4,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 35,
@@ -779,17 +825,17 @@
     "lng": 77.044569,
     "is_urban": false,
     "electorate": 803,
-    "total_votes": 580,
-    "turnout_pct": 72.3,
+    "total_votes": 736,
+    "turnout_pct": 91.7,
     "votes": {
-      "YSRCP": 218,
-      "TDP": 319,
-      "OTH": 43
+      "YSRCP": 453,
+      "TDP": 210,
+      "OTH": 73
     },
-    "winner_party": "TDP",
-    "margin": 101,
-    "margin_pct": 17.4,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 243,
+    "margin_pct": 33.0,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 36,
@@ -803,16 +849,16 @@
     "lng": 77.044569,
     "is_urban": false,
     "electorate": 1012,
-    "total_votes": 756,
-    "turnout_pct": 74.8,
+    "total_votes": 704,
+    "turnout_pct": 69.6,
     "votes": {
-      "YSRCP": 418,
-      "TDP": 298,
-      "OTH": 40
+      "YSRCP": 399,
+      "TDP": 236,
+      "OTH": 69
     },
     "winner_party": "YSRCP",
-    "margin": 120,
-    "margin_pct": 15.9,
+    "margin": 163,
+    "margin_pct": 23.2,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -827,17 +873,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 824,
-    "total_votes": 633,
-    "turnout_pct": 76.9,
+    "total_votes": 564,
+    "turnout_pct": 68.4,
     "votes": {
-      "YSRCP": 309,
-      "TDP": 285,
-      "OTH": 39
+      "YSRCP": 311,
+      "TDP": 211,
+      "OTH": 42
     },
     "winner_party": "YSRCP",
-    "margin": 24,
-    "margin_pct": 3.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 100,
+    "margin_pct": 17.7,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 38,
@@ -851,17 +897,17 @@
     "lng": 77.042965,
     "is_urban": false,
     "electorate": 890,
-    "total_votes": 717,
-    "turnout_pct": 80.6,
+    "total_votes": 803,
+    "turnout_pct": 90.2,
     "votes": {
-      "YSRCP": 242,
-      "TDP": 419,
-      "OTH": 56
+      "YSRCP": 415,
+      "TDP": 315,
+      "OTH": 73
     },
-    "winner_party": "TDP",
-    "margin": 177,
-    "margin_pct": 24.7,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 100,
+    "margin_pct": 12.5,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 39,
@@ -875,17 +921,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1052,
-    "total_votes": 880,
-    "turnout_pct": 83.7,
+    "total_votes": 731,
+    "turnout_pct": 69.5,
     "votes": {
-      "YSRCP": 445,
-      "TDP": 383,
-      "OTH": 52
+      "YSRCP": 541,
+      "TDP": 131,
+      "OTH": 59
     },
     "winner_party": "YSRCP",
-    "margin": 62,
-    "margin_pct": 7.0,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 410,
+    "margin_pct": 56.1,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 40,
@@ -899,16 +945,16 @@
     "lng": 77.044569,
     "is_urban": false,
     "electorate": 714,
-    "total_votes": 544,
-    "turnout_pct": 76.3,
+    "total_votes": 669,
+    "turnout_pct": 93.7,
     "votes": {
-      "YSRCP": 282,
-      "TDP": 230,
-      "OTH": 32
+      "YSRCP": 350,
+      "TDP": 257,
+      "OTH": 62
     },
     "winner_party": "YSRCP",
-    "margin": 52,
-    "margin_pct": 9.6,
+    "margin": 93,
+    "margin_pct": 13.9,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -923,16 +969,16 @@
     "lng": 77.044569,
     "is_urban": false,
     "electorate": 957,
-    "total_votes": 740,
-    "turnout_pct": 77.4,
+    "total_votes": 739,
+    "turnout_pct": 77.2,
     "votes": {
-      "YSRCP": 402,
-      "TDP": 298,
-      "OTH": 40
+      "YSRCP": 389,
+      "TDP": 291,
+      "OTH": 59
     },
     "winner_party": "YSRCP",
-    "margin": 104,
-    "margin_pct": 14.1,
+    "margin": 98,
+    "margin_pct": 13.3,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -947,16 +993,16 @@
     "lng": 77.04192,
     "is_urban": false,
     "electorate": 946,
-    "total_votes": 767,
-    "turnout_pct": 81.1,
+    "total_votes": 695,
+    "turnout_pct": 73.5,
     "votes": {
-      "YSRCP": 389,
-      "TDP": 333,
-      "OTH": 45
+      "YSRCP": 324,
+      "TDP": 319,
+      "OTH": 52
     },
     "winner_party": "YSRCP",
-    "margin": 56,
-    "margin_pct": 7.3,
+    "margin": 5,
+    "margin_pct": 0.7,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -971,17 +1017,17 @@
     "lng": 77.048004,
     "is_urban": false,
     "electorate": 851,
-    "total_votes": 641,
-    "turnout_pct": 75.4,
+    "total_votes": 644,
+    "turnout_pct": 75.7,
     "votes": {
-      "YSRCP": 339,
-      "TDP": 266,
-      "OTH": 36
+      "YSRCP": 356,
+      "TDP": 235,
+      "OTH": 53
     },
     "winner_party": "YSRCP",
-    "margin": 73,
-    "margin_pct": 11.4,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 121,
+    "margin_pct": 18.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 44,
@@ -995,17 +1041,17 @@
     "lng": 77.08754,
     "is_urban": false,
     "electorate": 931,
-    "total_votes": 757,
-    "turnout_pct": 81.4,
+    "total_votes": 642,
+    "turnout_pct": 69.0,
     "votes": {
-      "YSRCP": 452,
-      "TDP": 268,
-      "OTH": 37
+      "YSRCP": 296,
+      "TDP": 296,
+      "OTH": 50
     },
     "winner_party": "YSRCP",
-    "margin": 184,
-    "margin_pct": 24.3,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 45,
@@ -1019,17 +1065,17 @@
     "lng": 77.085791,
     "is_urban": false,
     "electorate": 864,
-    "total_votes": 678,
-    "turnout_pct": 78.5,
+    "total_votes": 658,
+    "turnout_pct": 76.2,
     "votes": {
-      "YSRCP": 261,
-      "TDP": 368,
-      "OTH": 49
+      "YSRCP": 360,
+      "TDP": 223,
+      "OTH": 75
     },
-    "winner_party": "TDP",
-    "margin": 107,
-    "margin_pct": 15.8,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 137,
+    "margin_pct": 20.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 46,
@@ -1043,17 +1089,17 @@
     "lng": 77.085791,
     "is_urban": false,
     "electorate": 1052,
-    "total_votes": 874,
-    "turnout_pct": 83.1,
+    "total_votes": 565,
+    "turnout_pct": 53.7,
     "votes": {
-      "YSRCP": 522,
-      "TDP": 310,
-      "OTH": 42
+      "YSRCP": 276,
+      "TDP": 244,
+      "OTH": 45
     },
     "winner_party": "YSRCP",
-    "margin": 212,
-    "margin_pct": 24.3,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 32,
+    "margin_pct": 5.7,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 47,
@@ -1067,17 +1113,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 890,
-    "total_votes": 675,
-    "turnout_pct": 75.9,
+    "total_votes": 758,
+    "turnout_pct": 85.2,
     "votes": {
-      "YSRCP": 274,
-      "TDP": 353,
-      "OTH": 48
+      "YSRCP": 411,
+      "TDP": 295,
+      "OTH": 52
     },
-    "winner_party": "TDP",
-    "margin": 79,
-    "margin_pct": 11.7,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 116,
+    "margin_pct": 15.3,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 48,
@@ -1091,17 +1137,17 @@
     "lng": 77.14445,
     "is_urban": false,
     "electorate": 985,
-    "total_votes": 798,
-    "turnout_pct": 81.1,
+    "total_votes": 830,
+    "turnout_pct": 84.3,
     "votes": {
-      "YSRCP": 545,
-      "TDP": 223,
-      "OTH": 30
+      "YSRCP": 434,
+      "TDP": 343,
+      "OTH": 53
     },
     "winner_party": "YSRCP",
-    "margin": 322,
-    "margin_pct": 40.4,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 91,
+    "margin_pct": 11.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 49,
@@ -1115,17 +1161,17 @@
     "lng": 77.148804,
     "is_urban": false,
     "electorate": 826,
-    "total_votes": 614,
-    "turnout_pct": 74.4,
+    "total_votes": 768,
+    "turnout_pct": 93.0,
     "votes": {
-      "YSRCP": 242,
-      "TDP": 328,
-      "OTH": 44
+      "YSRCP": 399,
+      "TDP": 314,
+      "OTH": 55
     },
-    "winner_party": "TDP",
-    "margin": 86,
-    "margin_pct": 14.0,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 85,
+    "margin_pct": 11.1,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 50,
@@ -1139,17 +1185,17 @@
     "lng": 77.150756,
     "is_urban": false,
     "electorate": 990,
-    "total_votes": 782,
-    "turnout_pct": 79.0,
+    "total_votes": 767,
+    "turnout_pct": 77.5,
     "votes": {
-      "YSRCP": 368,
-      "TDP": 365,
-      "OTH": 49
+      "YSRCP": 418,
+      "TDP": 294,
+      "OTH": 55
     },
     "winner_party": "YSRCP",
-    "margin": 3,
-    "margin_pct": 0.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 124,
+    "margin_pct": 16.2,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 51,
@@ -1163,16 +1209,16 @@
     "lng": 77.162177,
     "is_urban": false,
     "electorate": 921,
-    "total_votes": 687,
-    "turnout_pct": 74.6,
+    "total_votes": 657,
+    "turnout_pct": 71.3,
     "votes": {
-      "YSRCP": 355,
-      "TDP": 293,
-      "OTH": 39
+      "YSRCP": 312,
+      "TDP": 295,
+      "OTH": 50
     },
     "winner_party": "YSRCP",
-    "margin": 62,
-    "margin_pct": 9.0,
+    "margin": 17,
+    "margin_pct": 2.6,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -1187,17 +1233,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 957,
-    "total_votes": 718,
-    "turnout_pct": 75.1,
+    "total_votes": 483,
+    "turnout_pct": 50.5,
     "votes": {
-      "YSRCP": 336,
-      "TDP": 337,
-      "OTH": 45
+      "YSRCP": 242,
+      "TDP": 206,
+      "OTH": 35
     },
-    "winner_party": "TDP",
-    "margin": 1,
-    "margin_pct": 0.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 36,
+    "margin_pct": 7.5,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 53,
@@ -1211,17 +1257,17 @@
     "lng": 77.162177,
     "is_urban": false,
     "electorate": 976,
-    "total_votes": 744,
-    "turnout_pct": 76.3,
+    "total_votes": 789,
+    "turnout_pct": 80.8,
     "votes": {
-      "YSRCP": 259,
-      "TDP": 428,
-      "OTH": 57
+      "YSRCP": 363,
+      "TDP": 361,
+      "OTH": 65
     },
-    "winner_party": "TDP",
-    "margin": 169,
-    "margin_pct": 22.7,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 2,
+    "margin_pct": 0.3,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 54,
@@ -1235,17 +1281,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 934,
-    "total_votes": 781,
-    "turnout_pct": 83.7,
+    "total_votes": 860,
+    "turnout_pct": 92.1,
     "votes": {
-      "YSRCP": 408,
-      "TDP": 329,
-      "OTH": 44
+      "YSRCP": 557,
+      "TDP": 258,
+      "OTH": 45
     },
     "winner_party": "YSRCP",
-    "margin": 79,
-    "margin_pct": 10.1,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 299,
+    "margin_pct": 34.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 55,
@@ -1259,17 +1305,17 @@
     "lng": 77.14498,
     "is_urban": false,
     "electorate": 786,
-    "total_votes": 617,
-    "turnout_pct": 78.5,
+    "total_votes": 689,
+    "turnout_pct": 87.7,
     "votes": {
-      "YSRCP": 294,
-      "TDP": 285,
-      "OTH": 38
+      "YSRCP": 400,
+      "TDP": 254,
+      "OTH": 35
     },
     "winner_party": "YSRCP",
-    "margin": 9,
-    "margin_pct": 1.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 146,
+    "margin_pct": 21.2,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 56,
@@ -1283,17 +1329,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 793,
-    "total_votes": 610,
-    "turnout_pct": 77.0,
+    "total_votes": 819,
+    "turnout_pct": 103.3,
     "votes": {
-      "YSRCP": 242,
-      "TDP": 325,
-      "OTH": 43
+      "YSRCP": 491,
+      "TDP": 284,
+      "OTH": 44
     },
-    "winner_party": "TDP",
-    "margin": 83,
-    "margin_pct": 13.6,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 207,
+    "margin_pct": 25.3,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 57,
@@ -1307,17 +1353,17 @@
     "lng": 77.128554,
     "is_urban": false,
     "electorate": 967,
-    "total_votes": 695,
-    "turnout_pct": 71.9,
+    "total_votes": 602,
+    "turnout_pct": 62.3,
     "votes": {
-      "YSRCP": 332,
-      "TDP": 320,
-      "OTH": 43
+      "YSRCP": 342,
+      "TDP": 218,
+      "OTH": 42
     },
     "winner_party": "YSRCP",
-    "margin": 12,
-    "margin_pct": 1.7,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 124,
+    "margin_pct": 20.6,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 58,
@@ -1331,17 +1377,40 @@
     "lng": 77.128554,
     "is_urban": false,
     "electorate": 801,
-    "total_votes": 659,
-    "turnout_pct": 82.3,
+    "total_votes": 609,
+    "turnout_pct": 76.0,
     "votes": {
-      "YSRCP": 304,
-      "TDP": 313,
-      "OTH": 42
+      "YSRCP": 302,
+      "TDP": 281,
+      "OTH": 26
     },
-    "winner_party": "TDP",
-    "margin": 9,
-    "margin_pct": 1.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 21,
+    "margin_pct": 3.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 59,
+    "name": "Station 59",
+    "building": "Station 59",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 610,
+    "votes": {
+      "YSRCP": 293,
+      "TDP": 279,
+      "OTH": 38
+    },
+    "winner_party": "YSRCP",
+    "margin": 14,
+    "margin_pct": 2.3,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 60,
@@ -1355,17 +1424,17 @@
     "lng": 77.153236,
     "is_urban": false,
     "electorate": 958,
-    "total_votes": 712,
-    "turnout_pct": 74.4,
+    "total_votes": 544,
+    "turnout_pct": 56.8,
     "votes": {
-      "YSRCP": 347,
-      "TDP": 322,
-      "OTH": 43
+      "YSRCP": 263,
+      "TDP": 240,
+      "OTH": 41
     },
     "winner_party": "YSRCP",
-    "margin": 25,
-    "margin_pct": 3.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 23,
+    "margin_pct": 4.2,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 61,
@@ -1379,16 +1448,16 @@
     "lng": 77.177286,
     "is_urban": false,
     "electorate": 934,
-    "total_votes": 755,
-    "turnout_pct": 80.9,
+    "total_votes": 953,
+    "turnout_pct": 102.0,
     "votes": {
-      "YSRCP": 397,
-      "TDP": 316,
-      "OTH": 42
+      "YSRCP": 467,
+      "TDP": 386,
+      "OTH": 100
     },
     "winner_party": "YSRCP",
     "margin": 81,
-    "margin_pct": 10.7,
+    "margin_pct": 8.5,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -1403,17 +1472,17 @@
     "lng": 77.117936,
     "is_urban": false,
     "electorate": 1001,
-    "total_votes": 742,
-    "turnout_pct": 74.2,
+    "total_votes": 893,
+    "turnout_pct": 89.2,
     "votes": {
-      "YSRCP": 338,
-      "TDP": 356,
-      "OTH": 48
+      "YSRCP": 429,
+      "TDP": 373,
+      "OTH": 91
     },
-    "winner_party": "TDP",
-    "margin": 18,
-    "margin_pct": 2.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 56,
+    "margin_pct": 6.3,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 63,
@@ -1427,17 +1496,17 @@
     "lng": 77.120781,
     "is_urban": false,
     "electorate": 808,
-    "total_votes": 627,
-    "turnout_pct": 77.6,
+    "total_votes": 747,
+    "turnout_pct": 92.5,
     "votes": {
-      "YSRCP": 313,
-      "TDP": 277,
-      "OTH": 37
+      "YSRCP": 400,
+      "TDP": 300,
+      "OTH": 47
     },
     "winner_party": "YSRCP",
-    "margin": 36,
-    "margin_pct": 5.7,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 100,
+    "margin_pct": 13.4,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 64,
@@ -1451,17 +1520,17 @@
     "lng": 77.159474,
     "is_urban": false,
     "electorate": 885,
-    "total_votes": 715,
-    "turnout_pct": 80.9,
+    "total_votes": 858,
+    "turnout_pct": 96.9,
     "votes": {
-      "YSRCP": 343,
-      "TDP": 328,
-      "OTH": 44
+      "YSRCP": 535,
+      "TDP": 268,
+      "OTH": 55
     },
     "winner_party": "YSRCP",
-    "margin": 15,
-    "margin_pct": 2.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 267,
+    "margin_pct": 31.1,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 65,
@@ -1475,17 +1544,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 809,
-    "total_votes": 598,
-    "turnout_pct": 74.0,
+    "total_votes": 1029,
+    "turnout_pct": 127.2,
     "votes": {
-      "YSRCP": 225,
-      "TDP": 329,
-      "OTH": 44
+      "YSRCP": 517,
+      "TDP": 472,
+      "OTH": 40
     },
-    "winner_party": "TDP",
-    "margin": 104,
-    "margin_pct": 17.4,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 45,
+    "margin_pct": 4.4,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 66,
@@ -1499,17 +1568,17 @@
     "lng": 77.158562,
     "is_urban": false,
     "electorate": 1085,
-    "total_votes": 838,
-    "turnout_pct": 77.3,
+    "total_votes": 492,
+    "turnout_pct": 45.3,
     "votes": {
-      "YSRCP": 471,
-      "TDP": 323,
-      "OTH": 44
+      "YSRCP": 271,
+      "TDP": 271,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 148,
-    "margin_pct": 17.7,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 67,
@@ -1523,17 +1592,17 @@
     "lng": 77.158562,
     "is_urban": false,
     "electorate": 944,
-    "total_votes": 712,
-    "turnout_pct": 75.5,
+    "total_votes": 482,
+    "turnout_pct": 51.1,
     "votes": {
-      "YSRCP": 277,
-      "TDP": 384,
-      "OTH": 51
+      "YSRCP": 260,
+      "TDP": 200,
+      "OTH": 22
     },
-    "winner_party": "TDP",
-    "margin": 107,
-    "margin_pct": 15.0,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 60,
+    "margin_pct": 12.4,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 68,
@@ -1547,17 +1616,17 @@
     "lng": 77.183727,
     "is_urban": false,
     "electorate": 926,
-    "total_votes": 693,
-    "turnout_pct": 74.9,
+    "total_votes": 833,
+    "turnout_pct": 90.0,
     "votes": {
-      "YSRCP": 286,
-      "TDP": 359,
-      "OTH": 48
+      "YSRCP": 403,
+      "TDP": 368,
+      "OTH": 62
     },
-    "winner_party": "TDP",
-    "margin": 73,
-    "margin_pct": 10.5,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 35,
+    "margin_pct": 4.2,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 69,
@@ -1571,16 +1640,16 @@
     "lng": 77.184093,
     "is_urban": false,
     "electorate": 886,
-    "total_votes": 691,
-    "turnout_pct": 78.0,
+    "total_votes": 678,
+    "turnout_pct": 76.5,
     "votes": {
-      "YSRCP": 401,
-      "TDP": 256,
-      "OTH": 34
+      "YSRCP": 451,
+      "TDP": 199,
+      "OTH": 28
     },
     "winner_party": "YSRCP",
-    "margin": 145,
-    "margin_pct": 21.0,
+    "margin": 252,
+    "margin_pct": 37.2,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -1595,16 +1664,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 824,
-    "total_votes": 620,
-    "turnout_pct": 75.3,
+    "total_votes": 645,
+    "turnout_pct": 78.3,
     "votes": {
-      "YSRCP": 343,
-      "TDP": 244,
-      "OTH": 33
+      "YSRCP": 484,
+      "TDP": 113,
+      "OTH": 48
     },
     "winner_party": "YSRCP",
-    "margin": 99,
-    "margin_pct": 16.0,
+    "margin": 371,
+    "margin_pct": 57.5,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -1619,16 +1688,16 @@
     "lng": 77.16805,
     "is_urban": false,
     "electorate": 758,
-    "total_votes": 604,
-    "turnout_pct": 79.8,
+    "total_votes": 744,
+    "turnout_pct": 98.2,
     "votes": {
-      "YSRCP": 314,
-      "TDP": 256,
-      "OTH": 34
+      "YSRCP": 370,
+      "TDP": 313,
+      "OTH": 61
     },
     "winner_party": "YSRCP",
-    "margin": 58,
-    "margin_pct": 9.6,
+    "margin": 57,
+    "margin_pct": 7.7,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -1643,16 +1712,16 @@
     "lng": 77.204332,
     "is_urban": false,
     "electorate": 722,
-    "total_votes": 545,
-    "turnout_pct": 75.6,
+    "total_votes": 456,
+    "turnout_pct": 63.2,
     "votes": {
-      "YSRCP": 292,
-      "TDP": 223,
+      "YSRCP": 220,
+      "TDP": 206,
       "OTH": 30
     },
     "winner_party": "YSRCP",
-    "margin": 69,
-    "margin_pct": 12.7,
+    "margin": 14,
+    "margin_pct": 3.1,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -1667,17 +1736,17 @@
     "lng": 77.15775,
     "is_urban": false,
     "electorate": 1058,
-    "total_votes": 801,
-    "turnout_pct": 75.8,
+    "total_votes": 526,
+    "turnout_pct": 49.7,
     "votes": {
-      "YSRCP": 351,
-      "TDP": 397,
-      "OTH": 53
+      "YSRCP": 257,
+      "TDP": 230,
+      "OTH": 39
     },
-    "winner_party": "TDP",
-    "margin": 46,
-    "margin_pct": 5.7,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 27,
+    "margin_pct": 5.1,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 74,
@@ -1691,17 +1760,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 847,
-    "total_votes": 653,
-    "turnout_pct": 77.2,
+    "total_votes": 423,
+    "turnout_pct": 49.9,
     "votes": {
-      "YSRCP": 411,
-      "TDP": 213,
-      "OTH": 29
+      "YSRCP": 218,
+      "TDP": 189,
+      "OTH": 16
     },
     "winner_party": "YSRCP",
-    "margin": 198,
-    "margin_pct": 30.3,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 29,
+    "margin_pct": 6.9,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 75,
@@ -1715,17 +1784,17 @@
     "lng": 77.15773,
     "is_urban": false,
     "electorate": 875,
-    "total_votes": 638,
-    "turnout_pct": 73.0,
+    "total_votes": 501,
+    "turnout_pct": 57.3,
     "votes": {
-      "YSRCP": 265,
-      "TDP": 329,
-      "OTH": 44
+      "YSRCP": 286,
+      "TDP": 187,
+      "OTH": 28
     },
-    "winner_party": "TDP",
-    "margin": 64,
-    "margin_pct": 10.0,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 99,
+    "margin_pct": 19.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 76,
@@ -1739,17 +1808,17 @@
     "lng": 77.15762,
     "is_urban": false,
     "electorate": 992,
-    "total_votes": 784,
-    "turnout_pct": 79.1,
+    "total_votes": 679,
+    "turnout_pct": 68.4,
     "votes": {
-      "YSRCP": 267,
-      "TDP": 457,
-      "OTH": 60
+      "YSRCP": 342,
+      "TDP": 287,
+      "OTH": 50
     },
-    "winner_party": "TDP",
-    "margin": 190,
-    "margin_pct": 24.2,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 55,
+    "margin_pct": 8.1,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 77,
@@ -1763,17 +1832,17 @@
     "lng": 77.223347,
     "is_urban": false,
     "electorate": 992,
-    "total_votes": 662,
-    "turnout_pct": 66.8,
+    "total_votes": 726,
+    "turnout_pct": 73.2,
     "votes": {
-      "YSRCP": 254,
-      "TDP": 360,
+      "YSRCP": 342,
+      "TDP": 336,
       "OTH": 48
     },
-    "winner_party": "TDP",
-    "margin": 106,
-    "margin_pct": 16.0,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 6,
+    "margin_pct": 0.8,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 78,
@@ -1787,17 +1856,17 @@
     "lng": 77.19366,
     "is_urban": false,
     "electorate": 828,
-    "total_votes": 624,
-    "turnout_pct": 75.4,
+    "total_votes": 795,
+    "turnout_pct": 96.0,
     "votes": {
-      "YSRCP": 294,
-      "TDP": 291,
-      "OTH": 39
+      "YSRCP": 406,
+      "TDP": 352,
+      "OTH": 37
     },
     "winner_party": "YSRCP",
-    "margin": 3,
-    "margin_pct": 0.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 54,
+    "margin_pct": 6.8,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 79,
@@ -1811,17 +1880,17 @@
     "lng": 77.191085,
     "is_urban": false,
     "electorate": 855,
-    "total_votes": 659,
-    "turnout_pct": 77.1,
+    "total_votes": 551,
+    "turnout_pct": 64.4,
     "votes": {
-      "YSRCP": 333,
-      "TDP": 288,
-      "OTH": 38
+      "YSRCP": 311,
+      "TDP": 219,
+      "OTH": 21
     },
     "winner_party": "YSRCP",
-    "margin": 45,
-    "margin_pct": 6.8,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 92,
+    "margin_pct": 16.7,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 80,
@@ -1835,17 +1904,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 966,
-    "total_votes": 722,
-    "turnout_pct": 74.8,
+    "total_votes": 503,
+    "turnout_pct": 52.1,
     "votes": {
-      "YSRCP": 367,
-      "TDP": 313,
-      "OTH": 42
+      "YSRCP": 323,
+      "TDP": 146,
+      "OTH": 34
     },
     "winner_party": "YSRCP",
-    "margin": 54,
-    "margin_pct": 7.5,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 177,
+    "margin_pct": 35.2,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 81,
@@ -1859,17 +1928,17 @@
     "lng": 77.198341,
     "is_urban": false,
     "electorate": 897,
-    "total_votes": 763,
-    "turnout_pct": 85.1,
+    "total_votes": 685,
+    "turnout_pct": 76.4,
     "votes": {
-      "YSRCP": 351,
-      "TDP": 364,
+      "YSRCP": 411,
+      "TDP": 226,
       "OTH": 48
     },
-    "winner_party": "TDP",
-    "margin": 13,
-    "margin_pct": 1.7,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 185,
+    "margin_pct": 27.0,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 82,
@@ -1883,17 +1952,40 @@
     "lng": 77.17652,
     "is_urban": false,
     "electorate": 851,
-    "total_votes": 735,
-    "turnout_pct": 86.4,
+    "total_votes": 692,
+    "turnout_pct": 81.3,
     "votes": {
-      "YSRCP": 305,
-      "TDP": 380,
-      "OTH": 50
+      "YSRCP": 475,
+      "TDP": 179,
+      "OTH": 38
     },
-    "winner_party": "TDP",
-    "margin": 75,
-    "margin_pct": 10.2,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 296,
+    "margin_pct": 42.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 83,
+    "name": "Station 83",
+    "building": "Station 83",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 813,
+    "votes": {
+      "YSRCP": 410,
+      "TDP": 359,
+      "OTH": 44
+    },
+    "winner_party": "YSRCP",
+    "margin": 51,
+    "margin_pct": 6.3,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 84,
@@ -1907,17 +1999,17 @@
     "lng": 77.23878,
     "is_urban": false,
     "electorate": 773,
-    "total_votes": 581,
-    "turnout_pct": 75.2,
+    "total_votes": 839,
+    "turnout_pct": 108.5,
     "votes": {
-      "YSRCP": 283,
-      "TDP": 263,
-      "OTH": 35
+      "YSRCP": 400,
+      "TDP": 396,
+      "OTH": 43
     },
     "winner_party": "YSRCP",
-    "margin": 20,
-    "margin_pct": 3.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 4,
+    "margin_pct": 0.5,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 85,
@@ -1931,17 +2023,17 @@
     "lng": 77.23878,
     "is_urban": false,
     "electorate": 884,
-    "total_votes": 693,
-    "turnout_pct": 78.5,
+    "total_votes": 752,
+    "turnout_pct": 85.1,
     "votes": {
-      "YSRCP": 291,
-      "TDP": 354,
-      "OTH": 48
+      "YSRCP": 430,
+      "TDP": 294,
+      "OTH": 28
     },
-    "winner_party": "TDP",
-    "margin": 63,
-    "margin_pct": 9.1,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 136,
+    "margin_pct": 18.1,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 86,
@@ -1955,17 +2047,17 @@
     "lng": 77.237092,
     "is_urban": false,
     "electorate": 710,
-    "total_votes": 539,
-    "turnout_pct": 76.0,
+    "total_votes": 814,
+    "turnout_pct": 114.6,
     "votes": {
-      "YSRCP": 233,
-      "TDP": 269,
-      "OTH": 37
+      "YSRCP": 406,
+      "TDP": 372,
+      "OTH": 36
     },
-    "winner_party": "TDP",
-    "margin": 36,
-    "margin_pct": 6.7,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 34,
+    "margin_pct": 4.2,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 87,
@@ -1979,16 +2071,16 @@
     "lng": 77.273281,
     "is_urban": false,
     "electorate": 974,
-    "total_votes": 788,
-    "turnout_pct": 81.0,
+    "total_votes": 580,
+    "turnout_pct": 59.5,
     "votes": {
-      "YSRCP": 398,
-      "TDP": 344,
-      "OTH": 46
+      "YSRCP": 283,
+      "TDP": 255,
+      "OTH": 42
     },
     "winner_party": "YSRCP",
-    "margin": 54,
-    "margin_pct": 6.9,
+    "margin": 28,
+    "margin_pct": 4.8,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -2003,17 +2095,17 @@
     "lng": 77.273281,
     "is_urban": false,
     "electorate": 867,
-    "total_votes": 639,
-    "turnout_pct": 73.8,
+    "total_votes": 556,
+    "turnout_pct": 64.1,
     "votes": {
-      "YSRCP": 363,
-      "TDP": 243,
-      "OTH": 33
+      "YSRCP": 291,
+      "TDP": 291,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 120,
-    "margin_pct": 18.8,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 89,
@@ -2027,17 +2119,40 @@
     "lng": 77.289279,
     "is_urban": false,
     "electorate": 921,
-    "total_votes": 827,
-    "turnout_pct": 89.9,
+    "total_votes": 660,
+    "turnout_pct": 71.7,
     "votes": {
-      "YSRCP": 316,
-      "TDP": 451,
-      "OTH": 60
+      "YSRCP": 332,
+      "TDP": 253,
+      "OTH": 75
     },
-    "winner_party": "TDP",
-    "margin": 135,
-    "margin_pct": 16.3,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 79,
+    "margin_pct": 12.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 90,
+    "name": "Station 90",
+    "building": "Station 90",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 787,
+    "votes": {
+      "YSRCP": 427,
+      "TDP": 315,
+      "OTH": 45
+    },
+    "winner_party": "YSRCP",
+    "margin": 112,
+    "margin_pct": 14.2,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 91,
@@ -2051,17 +2166,17 @@
     "lng": 77.287218,
     "is_urban": false,
     "electorate": 819,
-    "total_votes": 649,
-    "turnout_pct": 79.3,
+    "total_votes": 320,
+    "turnout_pct": 39.1,
     "votes": {
-      "YSRCP": 318,
-      "TDP": 292,
-      "OTH": 39
+      "YSRCP": 211,
+      "TDP": 82,
+      "OTH": 27
     },
     "winner_party": "YSRCP",
-    "margin": 26,
-    "margin_pct": 4.0,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 129,
+    "margin_pct": 40.3,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 92,
@@ -2075,17 +2190,17 @@
     "lng": 77.259786,
     "is_urban": false,
     "electorate": 930,
-    "total_votes": 734,
-    "turnout_pct": 79.0,
+    "total_votes": 635,
+    "turnout_pct": 68.3,
     "votes": {
-      "YSRCP": 335,
-      "TDP": 352,
-      "OTH": 47
+      "YSRCP": 357,
+      "TDP": 251,
+      "OTH": 27
     },
-    "winner_party": "TDP",
-    "margin": 17,
-    "margin_pct": 2.3,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 106,
+    "margin_pct": 16.7,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 93,
@@ -2099,17 +2214,17 @@
     "lng": 77.248188,
     "is_urban": false,
     "electorate": 767,
-    "total_votes": 589,
-    "turnout_pct": 76.9,
+    "total_votes": 172,
+    "turnout_pct": 22.4,
     "votes": {
-      "YSRCP": 297,
-      "TDP": 257,
-      "OTH": 35
+      "YSRCP": 110,
+      "TDP": 52,
+      "OTH": 10
     },
     "winner_party": "YSRCP",
-    "margin": 40,
-    "margin_pct": 6.8,
-    "tier": "DEFICIT_MODERATE"
+    "margin": 58,
+    "margin_pct": 33.7,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 94,
@@ -2123,16 +2238,16 @@
     "lng": 77.248188,
     "is_urban": false,
     "electorate": 770,
-    "total_votes": 573,
-    "turnout_pct": 74.5,
+    "total_votes": 1006,
+    "turnout_pct": 130.6,
     "votes": {
-      "YSRCP": 319,
-      "TDP": 224,
-      "OTH": 30
+      "YSRCP": 616,
+      "TDP": 321,
+      "OTH": 69
     },
     "winner_party": "YSRCP",
-    "margin": 95,
-    "margin_pct": 16.6,
+    "margin": 295,
+    "margin_pct": 29.3,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -2147,17 +2262,40 @@
     "lng": null,
     "is_urban": false,
     "electorate": 854,
-    "total_votes": 693,
-    "turnout_pct": 81.2,
+    "total_votes": 702,
+    "turnout_pct": 82.2,
     "votes": {
-      "YSRCP": 367,
-      "TDP": 287,
-      "OTH": 39
+      "YSRCP": 384,
+      "TDP": 282,
+      "OTH": 36
     },
     "winner_party": "YSRCP",
-    "margin": 80,
-    "margin_pct": 11.5,
+    "margin": 102,
+    "margin_pct": 14.5,
     "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 96,
+    "name": "Station 96",
+    "building": "Station 96",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 704,
+    "votes": {
+      "YSRCP": 383,
+      "TDP": 272,
+      "OTH": 49
+    },
+    "winner_party": "YSRCP",
+    "margin": 111,
+    "margin_pct": 15.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 97,
@@ -2171,17 +2309,17 @@
     "lng": 77.223529,
     "is_urban": false,
     "electorate": 921,
-    "total_votes": 734,
-    "turnout_pct": 79.8,
+    "total_votes": 553,
+    "turnout_pct": 60.0,
     "votes": {
-      "YSRCP": 236,
-      "TDP": 439,
-      "OTH": 59
+      "YSRCP": 293,
+      "TDP": 210,
+      "OTH": 50
     },
-    "winner_party": "TDP",
-    "margin": 203,
-    "margin_pct": 27.7,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 83,
+    "margin_pct": 15.0,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 98,
@@ -2195,16 +2333,16 @@
     "lng": 77.224858,
     "is_urban": false,
     "electorate": 953,
-    "total_votes": 735,
-    "turnout_pct": 77.2,
+    "total_votes": 650,
+    "turnout_pct": 68.2,
     "votes": {
-      "YSRCP": 389,
-      "TDP": 305,
-      "OTH": 41
+      "YSRCP": 345,
+      "TDP": 273,
+      "OTH": 32
     },
     "winner_party": "YSRCP",
-    "margin": 84,
-    "margin_pct": 11.4,
+    "margin": 72,
+    "margin_pct": 11.1,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -2219,17 +2357,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 949,
-    "total_votes": 733,
-    "turnout_pct": 77.3,
+    "total_votes": 692,
+    "turnout_pct": 72.9,
     "votes": {
-      "YSRCP": 220,
-      "TDP": 453,
-      "OTH": 60
+      "YSRCP": 359,
+      "TDP": 299,
+      "OTH": 34
     },
-    "winner_party": "TDP",
-    "margin": 233,
-    "margin_pct": 31.8,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 60,
+    "margin_pct": 8.7,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 100,
@@ -2243,17 +2381,17 @@
     "lng": 77.205558,
     "is_urban": false,
     "electorate": 856,
-    "total_votes": 673,
-    "turnout_pct": 78.7,
+    "total_votes": 385,
+    "turnout_pct": 45.0,
     "votes": {
-      "YSRCP": 301,
-      "TDP": 328,
-      "OTH": 44
+      "YSRCP": 219,
+      "TDP": 152,
+      "OTH": 14
     },
-    "winner_party": "TDP",
-    "margin": 27,
-    "margin_pct": 4.0,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 67,
+    "margin_pct": 17.4,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 101,
@@ -2267,17 +2405,17 @@
     "lng": 77.194038,
     "is_urban": false,
     "electorate": 848,
-    "total_votes": 690,
-    "turnout_pct": 81.4,
+    "total_votes": 733,
+    "turnout_pct": 86.4,
     "votes": {
-      "YSRCP": 209,
-      "TDP": 425,
-      "OTH": 56
+      "YSRCP": 366,
+      "TDP": 319,
+      "OTH": 48
     },
-    "winner_party": "TDP",
-    "margin": 216,
-    "margin_pct": 31.3,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 47,
+    "margin_pct": 6.4,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 102,
@@ -2291,17 +2429,17 @@
     "lng": 77.198436,
     "is_urban": false,
     "electorate": 852,
-    "total_votes": 605,
-    "turnout_pct": 71.1,
+    "total_votes": 835,
+    "turnout_pct": 98.0,
     "votes": {
-      "YSRCP": 270,
-      "TDP": 296,
-      "OTH": 39
+      "YSRCP": 463,
+      "TDP": 337,
+      "OTH": 35
     },
-    "winner_party": "TDP",
-    "margin": 26,
-    "margin_pct": 4.3,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 126,
+    "margin_pct": 15.1,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 103,
@@ -2315,17 +2453,40 @@
     "lng": 77.199203,
     "is_urban": false,
     "electorate": 1086,
-    "total_votes": 884,
-    "turnout_pct": 81.4,
+    "total_votes": 939,
+    "turnout_pct": 86.5,
     "votes": {
-      "YSRCP": 565,
-      "TDP": 281,
-      "OTH": 38
+      "YSRCP": 449,
+      "TDP": 408,
+      "OTH": 82
     },
     "winner_party": "YSRCP",
-    "margin": 284,
-    "margin_pct": 32.1,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 41,
+    "margin_pct": 4.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 104,
+    "name": "Station 104",
+    "building": "Station 104",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 576,
+    "votes": {
+      "YSRCP": 285,
+      "TDP": 268,
+      "OTH": 23
+    },
+    "winner_party": "YSRCP",
+    "margin": 17,
+    "margin_pct": 3.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 105,
@@ -2339,16 +2500,4363 @@
     "lng": 77.194129,
     "is_urban": false,
     "electorate": 1022,
-    "total_votes": 779,
-    "turnout_pct": 76.3,
+    "total_votes": 710,
+    "turnout_pct": 69.5,
     "votes": {
-      "YSRCP": 417,
-      "TDP": 320,
+      "YSRCP": 437,
+      "TDP": 206,
+      "OTH": 67
+    },
+    "winner_party": "YSRCP",
+    "margin": 231,
+    "margin_pct": 32.5,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 106,
+    "name": "Station 106",
+    "building": "Station 106",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 495,
+    "votes": {
+      "YSRCP": 272,
+      "TDP": 203,
+      "OTH": 20
+    },
+    "winner_party": "YSRCP",
+    "margin": 69,
+    "margin_pct": 13.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 107,
+    "name": "Station 107",
+    "building": "Station 107",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 514,
+    "votes": {
+      "YSRCP": 333,
+      "TDP": 162,
+      "OTH": 19
+    },
+    "winner_party": "YSRCP",
+    "margin": 171,
+    "margin_pct": 33.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 108,
+    "name": "Station 108",
+    "building": "Station 108",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 591,
+    "votes": {
+      "YSRCP": 296,
+      "TDP": 280,
+      "OTH": 15
+    },
+    "winner_party": "YSRCP",
+    "margin": 16,
+    "margin_pct": 2.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 109,
+    "name": "Station 109",
+    "building": "Station 109",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 771,
+    "votes": {
+      "YSRCP": 360,
+      "TDP": 331,
+      "OTH": 80
+    },
+    "winner_party": "YSRCP",
+    "margin": 29,
+    "margin_pct": 3.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 110,
+    "name": "Station 110",
+    "building": "Station 110",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 939,
+    "votes": {
+      "YSRCP": 481,
+      "TDP": 481,
+      "OTH": 0
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 111,
+    "name": "Station 111",
+    "building": "Station 111",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 738,
+    "votes": {
+      "YSRCP": 394,
+      "TDP": 307,
+      "OTH": 37
+    },
+    "winner_party": "YSRCP",
+    "margin": 87,
+    "margin_pct": 11.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 112,
+    "name": "Station 112",
+    "building": "Station 112",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 702,
+    "votes": {
+      "YSRCP": 386,
+      "TDP": 273,
+      "OTH": 43
+    },
+    "winner_party": "YSRCP",
+    "margin": 113,
+    "margin_pct": 16.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 113,
+    "name": "Station 113",
+    "building": "Station 113",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 484,
+    "votes": {
+      "YSRCP": 252,
+      "TDP": 199,
+      "OTH": 33
+    },
+    "winner_party": "YSRCP",
+    "margin": 53,
+    "margin_pct": 11.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 114,
+    "name": "Station 114",
+    "building": "Station 114",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 320,
+    "votes": {
+      "YSRCP": 212,
+      "TDP": 97,
+      "OTH": 11
+    },
+    "winner_party": "YSRCP",
+    "margin": 115,
+    "margin_pct": 35.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 115,
+    "name": "Station 115",
+    "building": "Station 115",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 956,
+    "votes": {
+      "YSRCP": 443,
+      "TDP": 442,
+      "OTH": 71
+    },
+    "winner_party": "YSRCP",
+    "margin": 1,
+    "margin_pct": 0.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 116,
+    "name": "Station 116",
+    "building": "Station 116",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 806,
+    "votes": {
+      "YSRCP": 431,
+      "TDP": 330,
+      "OTH": 45
+    },
+    "winner_party": "YSRCP",
+    "margin": 101,
+    "margin_pct": 12.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 117,
+    "name": "Station 117",
+    "building": "Station 117",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 641,
+    "votes": {
+      "YSRCP": 299,
+      "TDP": 285,
+      "OTH": 57
+    },
+    "winner_party": "YSRCP",
+    "margin": 14,
+    "margin_pct": 2.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 118,
+    "name": "Station 118",
+    "building": "Station 118",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 739,
+    "votes": {
+      "YSRCP": 355,
+      "TDP": 345,
+      "OTH": 39
+    },
+    "winner_party": "YSRCP",
+    "margin": 10,
+    "margin_pct": 1.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 119,
+    "name": "Station 119",
+    "building": "Station 119",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 816,
+    "votes": {
+      "YSRCP": 473,
+      "TDP": 295,
+      "OTH": 48
+    },
+    "winner_party": "YSRCP",
+    "margin": 178,
+    "margin_pct": 21.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 120,
+    "name": "Station 120",
+    "building": "Station 120",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 258,
+    "votes": {
+      "YSRCP": 130,
+      "TDP": 119,
+      "OTH": 9
+    },
+    "winner_party": "YSRCP",
+    "margin": 11,
+    "margin_pct": 4.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 121,
+    "name": "Station 121",
+    "building": "Station 121",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 964,
+    "votes": {
+      "YSRCP": 545,
+      "TDP": 370,
+      "OTH": 49
+    },
+    "winner_party": "YSRCP",
+    "margin": 175,
+    "margin_pct": 18.2,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 122,
+    "name": "Station 122",
+    "building": "Station 122",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 603,
+    "votes": {
+      "YSRCP": 318,
+      "TDP": 251,
+      "OTH": 34
+    },
+    "winner_party": "YSRCP",
+    "margin": 67,
+    "margin_pct": 11.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 123,
+    "name": "Station 123",
+    "building": "Station 123",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 998,
+    "votes": {
+      "YSRCP": 519,
+      "TDP": 421,
+      "OTH": 58
+    },
+    "winner_party": "YSRCP",
+    "margin": 98,
+    "margin_pct": 9.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 124,
+    "name": "Station 124",
+    "building": "Station 124",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1087,
+    "votes": {
+      "YSRCP": 565,
+      "TDP": 446,
+      "OTH": 76
+    },
+    "winner_party": "YSRCP",
+    "margin": 119,
+    "margin_pct": 10.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 125,
+    "name": "Station 125",
+    "building": "Station 125",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1063,
+    "votes": {
+      "YSRCP": 518,
+      "TDP": 477,
+      "OTH": 68
+    },
+    "winner_party": "YSRCP",
+    "margin": 41,
+    "margin_pct": 3.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 126,
+    "name": "Station 126",
+    "building": "Station 126",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 676,
+    "votes": {
+      "YSRCP": 390,
+      "TDP": 240,
+      "OTH": 46
+    },
+    "winner_party": "YSRCP",
+    "margin": 150,
+    "margin_pct": 22.2,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 127,
+    "name": "Station 127",
+    "building": "Station 127",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 659,
+    "votes": {
+      "YSRCP": 402,
+      "TDP": 219,
+      "OTH": 38
+    },
+    "winner_party": "YSRCP",
+    "margin": 183,
+    "margin_pct": 27.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 128,
+    "name": "Station 128",
+    "building": "Station 128",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 717,
+    "votes": {
+      "YSRCP": 359,
+      "TDP": 285,
+      "OTH": 73
+    },
+    "winner_party": "YSRCP",
+    "margin": 74,
+    "margin_pct": 10.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 129,
+    "name": "Station 129",
+    "building": "Station 129",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 821,
+    "votes": {
+      "YSRCP": 394,
+      "TDP": 367,
+      "OTH": 60
+    },
+    "winner_party": "YSRCP",
+    "margin": 27,
+    "margin_pct": 3.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 130,
+    "name": "Station 130",
+    "building": "Station 130",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 643,
+    "votes": {
+      "YSRCP": 333,
+      "TDP": 258,
+      "OTH": 52
+    },
+    "winner_party": "YSRCP",
+    "margin": 75,
+    "margin_pct": 11.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 131,
+    "name": "Station 131",
+    "building": "Station 131",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 749,
+    "votes": {
+      "YSRCP": 374,
+      "TDP": 323,
+      "OTH": 52
+    },
+    "winner_party": "YSRCP",
+    "margin": 51,
+    "margin_pct": 6.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 132,
+    "name": "Station 132",
+    "building": "Station 132",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1009,
+    "votes": {
+      "YSRCP": 564,
+      "TDP": 564,
+      "OTH": 0
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 133,
+    "name": "Station 133",
+    "building": "Station 133",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 978,
+    "votes": {
+      "YSRCP": 600,
+      "TDP": 328,
+      "OTH": 50
+    },
+    "winner_party": "YSRCP",
+    "margin": 272,
+    "margin_pct": 27.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 134,
+    "name": "Station 134",
+    "building": "Station 134",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 735,
+    "votes": {
+      "YSRCP": 458,
+      "TDP": 223,
+      "OTH": 54
+    },
+    "winner_party": "YSRCP",
+    "margin": 235,
+    "margin_pct": 32.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 135,
+    "name": "Station 135",
+    "building": "Station 135",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 966,
+    "votes": {
+      "YSRCP": 556,
+      "TDP": 316,
+      "OTH": 94
+    },
+    "winner_party": "YSRCP",
+    "margin": 240,
+    "margin_pct": 24.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 136,
+    "name": "Station 136",
+    "building": "Station 136",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 878,
+    "votes": {
+      "YSRCP": 458,
+      "TDP": 337,
+      "OTH": 83
+    },
+    "winner_party": "YSRCP",
+    "margin": 121,
+    "margin_pct": 13.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 137,
+    "name": "Station 137",
+    "building": "Station 137",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 866,
+    "votes": {
+      "YSRCP": 516,
+      "TDP": 309,
+      "OTH": 41
+    },
+    "winner_party": "YSRCP",
+    "margin": 207,
+    "margin_pct": 23.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 138,
+    "name": "Station 138",
+    "building": "Station 138",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 514,
+    "votes": {
+      "YSRCP": 290,
+      "TDP": 204,
+      "OTH": 20
+    },
+    "winner_party": "YSRCP",
+    "margin": 86,
+    "margin_pct": 16.7,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 139,
+    "name": "Station 139",
+    "building": "Station 139",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 483,
+    "votes": {
+      "YSRCP": 230,
+      "TDP": 224,
+      "OTH": 29
+    },
+    "winner_party": "YSRCP",
+    "margin": 6,
+    "margin_pct": 1.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 140,
+    "name": "Station 140",
+    "building": "Station 140",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 826,
+    "votes": {
+      "YSRCP": 498,
+      "TDP": 302,
+      "OTH": 26
+    },
+    "winner_party": "YSRCP",
+    "margin": 196,
+    "margin_pct": 23.7,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 141,
+    "name": "Station 141",
+    "building": "Station 141",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 996,
+    "votes": {
+      "YSRCP": 474,
+      "TDP": 457,
+      "OTH": 65
+    },
+    "winner_party": "YSRCP",
+    "margin": 17,
+    "margin_pct": 1.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 142,
+    "name": "Station 142",
+    "building": "Station 142",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 507,
+    "votes": {
+      "YSRCP": 246,
+      "TDP": 220,
+      "OTH": 41
+    },
+    "winner_party": "YSRCP",
+    "margin": 26,
+    "margin_pct": 5.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 143,
+    "name": "Station 143",
+    "building": "Station 143",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 589,
+    "votes": {
+      "YSRCP": 281,
+      "TDP": 274,
+      "OTH": 34
+    },
+    "winner_party": "YSRCP",
+    "margin": 7,
+    "margin_pct": 1.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 144,
+    "name": "Station 144",
+    "building": "Station 144",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 811,
+    "votes": {
+      "YSRCP": 625,
+      "TDP": 155,
+      "OTH": 31
+    },
+    "winner_party": "YSRCP",
+    "margin": 470,
+    "margin_pct": 58.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 145,
+    "name": "Station 145",
+    "building": "Station 145",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 869,
+    "votes": {
+      "YSRCP": 530,
+      "TDP": 311,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 219,
+    "margin_pct": 25.2,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 146,
+    "name": "Station 146",
+    "building": "Station 146",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 765,
+    "votes": {
+      "YSRCP": 486,
+      "TDP": 232,
+      "OTH": 47
+    },
+    "winner_party": "YSRCP",
+    "margin": 254,
+    "margin_pct": 33.2,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 147,
+    "name": "Station 147",
+    "building": "Station 147",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 865,
+    "votes": {
+      "YSRCP": 532,
+      "TDP": 281,
+      "OTH": 52
+    },
+    "winner_party": "YSRCP",
+    "margin": 251,
+    "margin_pct": 29.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 148,
+    "name": "Station 148",
+    "building": "Station 148",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 939,
+    "votes": {
+      "YSRCP": 480,
+      "TDP": 410,
+      "OTH": 49
+    },
+    "winner_party": "YSRCP",
+    "margin": 70,
+    "margin_pct": 7.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 149,
+    "name": "Station 149",
+    "building": "Station 149",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 430,
+    "votes": {
+      "YSRCP": 268,
+      "TDP": 148,
+      "OTH": 14
+    },
+    "winner_party": "YSRCP",
+    "margin": 120,
+    "margin_pct": 27.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 150,
+    "name": "Station 150",
+    "building": "Station 150",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 547,
+    "votes": {
+      "YSRCP": 268,
+      "TDP": 260,
+      "OTH": 19
+    },
+    "winner_party": "YSRCP",
+    "margin": 8,
+    "margin_pct": 1.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 151,
+    "name": "Station 151",
+    "building": "Station 151",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 821,
+    "votes": {
+      "YSRCP": 523,
+      "TDP": 224,
+      "OTH": 74
+    },
+    "winner_party": "YSRCP",
+    "margin": 299,
+    "margin_pct": 36.4,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 152,
+    "name": "Station 152",
+    "building": "Station 152",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 983,
+    "votes": {
+      "YSRCP": 588,
+      "TDP": 322,
+      "OTH": 73
+    },
+    "winner_party": "YSRCP",
+    "margin": 266,
+    "margin_pct": 27.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 153,
+    "name": "Station 153",
+    "building": "Station 153",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 901,
+    "votes": {
+      "YSRCP": 510,
+      "TDP": 321,
+      "OTH": 70
+    },
+    "winner_party": "YSRCP",
+    "margin": 189,
+    "margin_pct": 21.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 154,
+    "name": "Station 154",
+    "building": "Station 154",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 766,
+    "votes": {
+      "YSRCP": 371,
+      "TDP": 371,
+      "OTH": 24
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 155,
+    "name": "Station 155",
+    "building": "Station 155",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 909,
+    "votes": {
+      "YSRCP": 486,
+      "TDP": 356,
+      "OTH": 67
+    },
+    "winner_party": "YSRCP",
+    "margin": 130,
+    "margin_pct": 14.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 156,
+    "name": "Station 156",
+    "building": "Station 156",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 850,
+    "votes": {
+      "YSRCP": 418,
+      "TDP": 397,
+      "OTH": 35
+    },
+    "winner_party": "YSRCP",
+    "margin": 21,
+    "margin_pct": 2.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 157,
+    "name": "Station 157",
+    "building": "Station 157",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 885,
+    "votes": {
+      "YSRCP": 461,
+      "TDP": 372,
+      "OTH": 52
+    },
+    "winner_party": "YSRCP",
+    "margin": 89,
+    "margin_pct": 10.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 158,
+    "name": "Station 158",
+    "building": "Station 158",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 917,
+    "votes": {
+      "YSRCP": 482,
+      "TDP": 389,
+      "OTH": 46
+    },
+    "winner_party": "YSRCP",
+    "margin": 93,
+    "margin_pct": 10.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 159,
+    "name": "Station 159",
+    "building": "Station 159",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 961,
+    "votes": {
+      "YSRCP": 625,
+      "TDP": 256,
+      "OTH": 80
+    },
+    "winner_party": "YSRCP",
+    "margin": 369,
+    "margin_pct": 38.4,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 160,
+    "name": "Station 160",
+    "building": "Station 160",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 922,
+    "votes": {
+      "YSRCP": 439,
+      "TDP": 432,
+      "OTH": 51
+    },
+    "winner_party": "YSRCP",
+    "margin": 7,
+    "margin_pct": 0.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 161,
+    "name": "Station 161",
+    "building": "Station 161",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 825,
+    "votes": {
+      "YSRCP": 529,
+      "TDP": 228,
+      "OTH": 68
+    },
+    "winner_party": "YSRCP",
+    "margin": 301,
+    "margin_pct": 36.5,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 162,
+    "name": "Station 162",
+    "building": "Station 162",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 760,
+    "votes": {
+      "YSRCP": 380,
+      "TDP": 321,
+      "OTH": 59
+    },
+    "winner_party": "YSRCP",
+    "margin": 59,
+    "margin_pct": 7.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 163,
+    "name": "Station 163",
+    "building": "Station 163",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 585,
+    "votes": {
+      "YSRCP": 355,
+      "TDP": 187,
+      "OTH": 43
+    },
+    "winner_party": "YSRCP",
+    "margin": 168,
+    "margin_pct": 28.7,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 164,
+    "name": "Station 164",
+    "building": "Station 164",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 571,
+    "votes": {
+      "YSRCP": 271,
+      "TDP": 258,
       "OTH": 42
     },
     "winner_party": "YSRCP",
-    "margin": 97,
-    "margin_pct": 12.5,
+    "margin": 13,
+    "margin_pct": 2.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 165,
+    "name": "Station 165",
+    "building": "Station 165",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 344,
+    "votes": {
+      "YSRCP": 164,
+      "TDP": 157,
+      "OTH": 23
+    },
+    "winner_party": "YSRCP",
+    "margin": 7,
+    "margin_pct": 2.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 166,
+    "name": "Station 166",
+    "building": "Station 166",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 854,
+    "votes": {
+      "YSRCP": 469,
+      "TDP": 349,
+      "OTH": 36
+    },
+    "winner_party": "YSRCP",
+    "margin": 120,
+    "margin_pct": 14.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 167,
+    "name": "Station 167",
+    "building": "Station 167",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 524,
+    "votes": {
+      "YSRCP": 337,
+      "TDP": 159,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 178,
+    "margin_pct": 34.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 168,
+    "name": "Station 168",
+    "building": "Station 168",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 489,
+    "votes": {
+      "YSRCP": 326,
+      "TDP": 147,
+      "OTH": 16
+    },
+    "winner_party": "YSRCP",
+    "margin": 179,
+    "margin_pct": 36.6,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 169,
+    "name": "Station 169",
+    "building": "Station 169",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 582,
+    "votes": {
+      "YSRCP": 340,
+      "TDP": 218,
+      "OTH": 24
+    },
+    "winner_party": "YSRCP",
+    "margin": 122,
+    "margin_pct": 21.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 170,
+    "name": "Station 170",
+    "building": "Station 170",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 500,
+    "votes": {
+      "YSRCP": 249,
+      "TDP": 214,
+      "OTH": 37
+    },
+    "winner_party": "YSRCP",
+    "margin": 35,
+    "margin_pct": 7.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 171,
+    "name": "Station 171",
+    "building": "Station 171",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 748,
+    "votes": {
+      "YSRCP": 370,
+      "TDP": 338,
+      "OTH": 40
+    },
+    "winner_party": "YSRCP",
+    "margin": 32,
+    "margin_pct": 4.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 172,
+    "name": "Station 172",
+    "building": "Station 172",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 603,
+    "votes": {
+      "YSRCP": 291,
+      "TDP": 289,
+      "OTH": 23
+    },
+    "winner_party": "YSRCP",
+    "margin": 2,
+    "margin_pct": 0.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 173,
+    "name": "Station 173",
+    "building": "Station 173",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 597,
+    "votes": {
+      "YSRCP": 298,
+      "TDP": 258,
+      "OTH": 41
+    },
+    "winner_party": "YSRCP",
+    "margin": 40,
+    "margin_pct": 6.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 174,
+    "name": "Station 174",
+    "building": "Station 174",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 555,
+    "votes": {
+      "YSRCP": 303,
+      "TDP": 231,
+      "OTH": 21
+    },
+    "winner_party": "YSRCP",
+    "margin": 72,
+    "margin_pct": 13.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 175,
+    "name": "Station 175",
+    "building": "Station 175",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 549,
+    "votes": {
+      "YSRCP": 271,
+      "TDP": 253,
+      "OTH": 25
+    },
+    "winner_party": "YSRCP",
+    "margin": 18,
+    "margin_pct": 3.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 176,
+    "name": "Station 176",
+    "building": "Station 176",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 453,
+    "votes": {
+      "YSRCP": 277,
+      "TDP": 277,
+      "OTH": 0
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 177,
+    "name": "Station 177",
+    "building": "Station 177",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 490,
+    "votes": {
+      "YSRCP": 262,
+      "TDP": 179,
+      "OTH": 49
+    },
+    "winner_party": "YSRCP",
+    "margin": 83,
+    "margin_pct": 16.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 178,
+    "name": "Station 178",
+    "building": "Station 178",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 514,
+    "votes": {
+      "YSRCP": 273,
+      "TDP": 216,
+      "OTH": 25
+    },
+    "winner_party": "YSRCP",
+    "margin": 57,
+    "margin_pct": 11.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 179,
+    "name": "Station 179",
+    "building": "Station 179",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 432,
+    "votes": {
+      "YSRCP": 209,
+      "TDP": 195,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 14,
+    "margin_pct": 3.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 180,
+    "name": "Station 180",
+    "building": "Station 180",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 475,
+    "votes": {
+      "YSRCP": 240,
+      "TDP": 200,
+      "OTH": 35
+    },
+    "winner_party": "YSRCP",
+    "margin": 40,
+    "margin_pct": 8.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 181,
+    "name": "Station 181",
+    "building": "Station 181",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 439,
+    "votes": {
+      "YSRCP": 217,
+      "TDP": 198,
+      "OTH": 24
+    },
+    "winner_party": "YSRCP",
+    "margin": 19,
+    "margin_pct": 4.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 182,
+    "name": "Station 182",
+    "building": "Station 182",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 544,
+    "votes": {
+      "YSRCP": 286,
+      "TDP": 223,
+      "OTH": 35
+    },
+    "winner_party": "YSRCP",
+    "margin": 63,
+    "margin_pct": 11.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 183,
+    "name": "Station 183",
+    "building": "Station 183",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 570,
+    "votes": {
+      "YSRCP": 272,
+      "TDP": 256,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 16,
+    "margin_pct": 2.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 184,
+    "name": "Station 184",
+    "building": "Station 184",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 917,
+    "votes": {
+      "YSRCP": 489,
+      "TDP": 393,
+      "OTH": 35
+    },
+    "winner_party": "YSRCP",
+    "margin": 96,
+    "margin_pct": 10.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 185,
+    "name": "Station 185",
+    "building": "Station 185",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 519,
+    "votes": {
+      "YSRCP": 244,
+      "TDP": 241,
+      "OTH": 34
+    },
+    "winner_party": "YSRCP",
+    "margin": 3,
+    "margin_pct": 0.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 186,
+    "name": "Station 186",
+    "building": "Station 186",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 572,
+    "votes": {
+      "YSRCP": 315,
+      "TDP": 220,
+      "OTH": 37
+    },
+    "winner_party": "YSRCP",
+    "margin": 95,
+    "margin_pct": 16.6,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 187,
+    "name": "Station 187",
+    "building": "Station 187",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 598,
+    "votes": {
+      "YSRCP": 302,
+      "TDP": 269,
+      "OTH": 27
+    },
+    "winner_party": "YSRCP",
+    "margin": 33,
+    "margin_pct": 5.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 188,
+    "name": "Station 188",
+    "building": "Station 188",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 675,
+    "votes": {
+      "YSRCP": 355,
+      "TDP": 278,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 77,
+    "margin_pct": 11.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 189,
+    "name": "Station 189",
+    "building": "Station 189",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1005,
+    "votes": {
+      "YSRCP": 590,
+      "TDP": 358,
+      "OTH": 57
+    },
+    "winner_party": "YSRCP",
+    "margin": 232,
+    "margin_pct": 23.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 190,
+    "name": "Station 190",
+    "building": "Station 190",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 566,
+    "votes": {
+      "YSRCP": 350,
+      "TDP": 184,
+      "OTH": 32
+    },
+    "winner_party": "YSRCP",
+    "margin": 166,
+    "margin_pct": 29.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 191,
+    "name": "Station 191",
+    "building": "Station 191",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 500,
+    "votes": {
+      "YSRCP": 284,
+      "TDP": 188,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 96,
+    "margin_pct": 19.2,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 192,
+    "name": "Station 192",
+    "building": "Station 192",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 201,
+    "votes": {
+      "YSRCP": 112,
+      "TDP": 74,
+      "OTH": 15
+    },
+    "winner_party": "YSRCP",
+    "margin": 38,
+    "margin_pct": 18.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 193,
+    "name": "Station 193",
+    "building": "Station 193",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 946,
+    "votes": {
+      "YSRCP": 506,
+      "TDP": 396,
+      "OTH": 44
+    },
+    "winner_party": "YSRCP",
+    "margin": 110,
+    "margin_pct": 11.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 194,
+    "name": "Station 194",
+    "building": "Station 194",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 634,
+    "votes": {
+      "YSRCP": 382,
+      "TDP": 226,
+      "OTH": 26
+    },
+    "winner_party": "YSRCP",
+    "margin": 156,
+    "margin_pct": 24.6,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 195,
+    "name": "Station 195",
+    "building": "Station 195",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 478,
+    "votes": {
+      "YSRCP": 268,
+      "TDP": 192,
+      "OTH": 18
+    },
+    "winner_party": "YSRCP",
+    "margin": 76,
+    "margin_pct": 15.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 196,
+    "name": "Station 196",
+    "building": "Station 196",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1092,
+    "votes": {
+      "YSRCP": 627,
+      "TDP": 402,
+      "OTH": 63
+    },
+    "winner_party": "YSRCP",
+    "margin": 225,
+    "margin_pct": 20.6,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 197,
+    "name": "Station 197",
+    "building": "Station 197",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1082,
+    "votes": {
+      "YSRCP": 525,
+      "TDP": 517,
+      "OTH": 40
+    },
+    "winner_party": "YSRCP",
+    "margin": 8,
+    "margin_pct": 0.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 198,
+    "name": "Station 198",
+    "building": "Station 198",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 960,
+    "votes": {
+      "YSRCP": 468,
+      "TDP": 468,
+      "OTH": 24
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 199,
+    "name": "Station 199",
+    "building": "Station 199",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 815,
+    "votes": {
+      "YSRCP": 451,
+      "TDP": 316,
+      "OTH": 48
+    },
+    "winner_party": "YSRCP",
+    "margin": 135,
+    "margin_pct": 16.6,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 200,
+    "name": "Station 200",
+    "building": "Station 200",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1048,
+    "votes": {
+      "YSRCP": 508,
+      "TDP": 488,
+      "OTH": 52
+    },
+    "winner_party": "YSRCP",
+    "margin": 20,
+    "margin_pct": 1.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 201,
+    "name": "Station 201",
+    "building": "Station 201",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 748,
+    "votes": {
+      "YSRCP": 405,
+      "TDP": 311,
+      "OTH": 32
+    },
+    "winner_party": "YSRCP",
+    "margin": 94,
+    "margin_pct": 12.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 202,
+    "name": "Station 202",
+    "building": "Station 202",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 643,
+    "votes": {
+      "YSRCP": 304,
+      "TDP": 297,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 7,
+    "margin_pct": 1.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 203,
+    "name": "Station 203",
+    "building": "Station 203",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 869,
+    "votes": {
+      "YSRCP": 461,
+      "TDP": 379,
+      "OTH": 29
+    },
+    "winner_party": "YSRCP",
+    "margin": 82,
+    "margin_pct": 9.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 204,
+    "name": "Station 204",
+    "building": "Station 204",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 661,
+    "votes": {
+      "YSRCP": 343,
+      "TDP": 293,
+      "OTH": 25
+    },
+    "winner_party": "YSRCP",
+    "margin": 50,
+    "margin_pct": 7.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 205,
+    "name": "Station 205",
+    "building": "Station 205",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 315,
+    "votes": {
+      "YSRCP": 170,
+      "TDP": 136,
+      "OTH": 9
+    },
+    "winner_party": "YSRCP",
+    "margin": 34,
+    "margin_pct": 10.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 206,
+    "name": "Station 206",
+    "building": "Station 206",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 720,
+    "votes": {
+      "YSRCP": 425,
+      "TDP": 269,
+      "OTH": 26
+    },
+    "winner_party": "YSRCP",
+    "margin": 156,
+    "margin_pct": 21.7,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 207,
+    "name": "Station 207",
+    "building": "Station 207",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 749,
+    "votes": {
+      "YSRCP": 403,
+      "TDP": 319,
+      "OTH": 27
+    },
+    "winner_party": "YSRCP",
+    "margin": 84,
+    "margin_pct": 11.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 208,
+    "name": "Station 208",
+    "building": "Station 208",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 493,
+    "votes": {
+      "YSRCP": 255,
+      "TDP": 218,
+      "OTH": 20
+    },
+    "winner_party": "YSRCP",
+    "margin": 37,
+    "margin_pct": 7.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 209,
+    "name": "Station 209",
+    "building": "Station 209",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 733,
+    "votes": {
+      "YSRCP": 401,
+      "TDP": 292,
+      "OTH": 40
+    },
+    "winner_party": "YSRCP",
+    "margin": 109,
+    "margin_pct": 14.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 210,
+    "name": "Station 210",
+    "building": "Station 210",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 527,
+    "votes": {
+      "YSRCP": 259,
+      "TDP": 254,
+      "OTH": 14
+    },
+    "winner_party": "YSRCP",
+    "margin": 5,
+    "margin_pct": 0.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 211,
+    "name": "Station 211",
+    "building": "Station 211",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 933,
+    "votes": {
+      "YSRCP": 457,
+      "TDP": 435,
+      "OTH": 41
+    },
+    "winner_party": "YSRCP",
+    "margin": 22,
+    "margin_pct": 2.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 212,
+    "name": "Station 212",
+    "building": "Station 212",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 823,
+    "votes": {
+      "YSRCP": 460,
+      "TDP": 329,
+      "OTH": 34
+    },
+    "winner_party": "YSRCP",
+    "margin": 131,
+    "margin_pct": 15.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 213,
+    "name": "Station 213",
+    "building": "Station 213",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 959,
+    "votes": {
+      "YSRCP": 530,
+      "TDP": 398,
+      "OTH": 31
+    },
+    "winner_party": "YSRCP",
+    "margin": 132,
+    "margin_pct": 13.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 214,
+    "name": "Station 214",
+    "building": "Station 214",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 814,
+    "votes": {
+      "YSRCP": 438,
+      "TDP": 348,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 90,
+    "margin_pct": 11.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 215,
+    "name": "Station 215",
+    "building": "Station 215",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 611,
+    "votes": {
+      "YSRCP": 348,
+      "TDP": 230,
+      "OTH": 33
+    },
+    "winner_party": "YSRCP",
+    "margin": 118,
+    "margin_pct": 19.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 216,
+    "name": "Station 216",
+    "building": "Station 216",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 481,
+    "votes": {
+      "YSRCP": 229,
+      "TDP": 224,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 5,
+    "margin_pct": 1.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 217,
+    "name": "Station 217",
+    "building": "Station 217",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 688,
+    "votes": {
+      "YSRCP": 348,
+      "TDP": 296,
+      "OTH": 44
+    },
+    "winner_party": "YSRCP",
+    "margin": 52,
+    "margin_pct": 7.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 218,
+    "name": "Station 218",
+    "building": "Station 218",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 670,
+    "votes": {
+      "YSRCP": 393,
+      "TDP": 239,
+      "OTH": 38
+    },
+    "winner_party": "YSRCP",
+    "margin": 154,
+    "margin_pct": 23.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 219,
+    "name": "Station 219",
+    "building": "Station 219",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 719,
+    "votes": {
+      "YSRCP": 434,
+      "TDP": 268,
+      "OTH": 17
+    },
+    "winner_party": "YSRCP",
+    "margin": 166,
+    "margin_pct": 23.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 220,
+    "name": "Station 220",
+    "building": "Station 220",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 615,
+    "votes": {
+      "YSRCP": 302,
+      "TDP": 302,
+      "OTH": 11
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 221,
+    "name": "Station 221",
+    "building": "Station 221",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 399,
+    "votes": {
+      "YSRCP": 195,
+      "TDP": 192,
+      "OTH": 12
+    },
+    "winner_party": "YSRCP",
+    "margin": 3,
+    "margin_pct": 0.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 222,
+    "name": "Station 222",
+    "building": "Station 222",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 322,
+    "votes": {
+      "YSRCP": 175,
+      "TDP": 132,
+      "OTH": 15
+    },
+    "winner_party": "YSRCP",
+    "margin": 43,
+    "margin_pct": 13.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 223,
+    "name": "Station 223",
+    "building": "Station 223",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 672,
+    "votes": {
+      "YSRCP": 307,
+      "TDP": 306,
+      "OTH": 59
+    },
+    "winner_party": "YSRCP",
+    "margin": 1,
+    "margin_pct": 0.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 224,
+    "name": "Station 224",
+    "building": "Station 224",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 814,
+    "votes": {
+      "YSRCP": 409,
+      "TDP": 333,
+      "OTH": 72
+    },
+    "winner_party": "YSRCP",
+    "margin": 76,
+    "margin_pct": 9.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 225,
+    "name": "Station 225",
+    "building": "Station 225",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 863,
+    "votes": {
+      "YSRCP": 544,
+      "TDP": 258,
+      "OTH": 61
+    },
+    "winner_party": "YSRCP",
+    "margin": 286,
+    "margin_pct": 33.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 226,
+    "name": "Station 226",
+    "building": "Station 226",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1016,
+    "votes": {
+      "YSRCP": 492,
+      "TDP": 471,
+      "OTH": 53
+    },
+    "winner_party": "YSRCP",
+    "margin": 21,
+    "margin_pct": 2.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 227,
+    "name": "Station 227",
+    "building": "Station 227",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 796,
+    "votes": {
+      "YSRCP": 426,
+      "TDP": 321,
+      "OTH": 49
+    },
+    "winner_party": "YSRCP",
+    "margin": 105,
+    "margin_pct": 13.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 228,
+    "name": "Station 228",
+    "building": "Station 228",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 722,
+    "votes": {
+      "YSRCP": 391,
+      "TDP": 291,
+      "OTH": 40
+    },
+    "winner_party": "YSRCP",
+    "margin": 100,
+    "margin_pct": 13.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 229,
+    "name": "Station 229",
+    "building": "Station 229",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 686,
+    "votes": {
+      "YSRCP": 453,
+      "TDP": 166,
+      "OTH": 67
+    },
+    "winner_party": "YSRCP",
+    "margin": 287,
+    "margin_pct": 41.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 230,
+    "name": "Station 230",
+    "building": "Station 230",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 765,
+    "votes": {
+      "YSRCP": 407,
+      "TDP": 320,
+      "OTH": 38
+    },
+    "winner_party": "YSRCP",
+    "margin": 87,
+    "margin_pct": 11.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 231,
+    "name": "Station 231",
+    "building": "Station 231",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 924,
+    "votes": {
+      "YSRCP": 512,
+      "TDP": 387,
+      "OTH": 25
+    },
+    "winner_party": "YSRCP",
+    "margin": 125,
+    "margin_pct": 13.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 232,
+    "name": "Station 232",
+    "building": "Station 232",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 615,
+    "votes": {
+      "YSRCP": 305,
+      "TDP": 270,
+      "OTH": 40
+    },
+    "winner_party": "YSRCP",
+    "margin": 35,
+    "margin_pct": 5.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 233,
+    "name": "Station 233",
+    "building": "Station 233",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 786,
+    "votes": {
+      "YSRCP": 441,
+      "TDP": 291,
+      "OTH": 54
+    },
+    "winner_party": "YSRCP",
+    "margin": 150,
+    "margin_pct": 19.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 234,
+    "name": "Station 234",
+    "building": "Station 234",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 635,
+    "votes": {
+      "YSRCP": 377,
+      "TDP": 216,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 161,
+    "margin_pct": 25.4,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 235,
+    "name": "Station 235",
+    "building": "Station 235",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 926,
+    "votes": {
+      "YSRCP": 517,
+      "TDP": 330,
+      "OTH": 79
+    },
+    "winner_party": "YSRCP",
+    "margin": 187,
+    "margin_pct": 20.2,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 236,
+    "name": "Station 236",
+    "building": "Station 236",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1112,
+    "votes": {
+      "YSRCP": 691,
+      "TDP": 298,
+      "OTH": 123
+    },
+    "winner_party": "YSRCP",
+    "margin": 393,
+    "margin_pct": 35.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 237,
+    "name": "Station 237",
+    "building": "Station 237",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 891,
+    "votes": {
+      "YSRCP": 726,
+      "TDP": 123,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 603,
+    "margin_pct": 67.7,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 238,
+    "name": "Station 238",
+    "building": "Station 238",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 809,
+    "votes": {
+      "YSRCP": 504,
+      "TDP": 254,
+      "OTH": 51
+    },
+    "winner_party": "YSRCP",
+    "margin": 250,
+    "margin_pct": 30.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 239,
+    "name": "Station 239",
+    "building": "Station 239",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 291,
+    "votes": {
+      "YSRCP": 219,
+      "TDP": 56,
+      "OTH": 16
+    },
+    "winner_party": "YSRCP",
+    "margin": 163,
+    "margin_pct": 56.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 240,
+    "name": "Station 240",
+    "building": "Station 240",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 842,
+    "votes": {
+      "YSRCP": 478,
+      "TDP": 313,
+      "OTH": 51
+    },
+    "winner_party": "YSRCP",
+    "margin": 165,
+    "margin_pct": 19.6,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 241,
+    "name": "Station 241",
+    "building": "Station 241",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 851,
+    "votes": {
+      "YSRCP": 546,
+      "TDP": 280,
+      "OTH": 25
+    },
+    "winner_party": "YSRCP",
+    "margin": 266,
+    "margin_pct": 31.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 242,
+    "name": "Station 242",
+    "building": "Station 242",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1109,
+    "votes": {
+      "YSRCP": 606,
+      "TDP": 606,
+      "OTH": 0
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 243,
+    "name": "Station 243",
+    "building": "Station 243",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 954,
+    "votes": {
+      "YSRCP": 519,
+      "TDP": 354,
+      "OTH": 81
+    },
+    "winner_party": "YSRCP",
+    "margin": 165,
+    "margin_pct": 17.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 244,
+    "name": "Station 244",
+    "building": "Station 244",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 850,
+    "votes": {
+      "YSRCP": 498,
+      "TDP": 330,
+      "OTH": 22
+    },
+    "winner_party": "YSRCP",
+    "margin": 168,
+    "margin_pct": 19.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 245,
+    "name": "Station 245",
+    "building": "Station 245",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 850,
+    "votes": {
+      "YSRCP": 438,
+      "TDP": 378,
+      "OTH": 34
+    },
+    "winner_party": "YSRCP",
+    "margin": 60,
+    "margin_pct": 7.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 246,
+    "name": "Station 246",
+    "building": "Station 246",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 625,
+    "votes": {
+      "YSRCP": 329,
+      "TDP": 271,
+      "OTH": 25
+    },
+    "winner_party": "YSRCP",
+    "margin": 58,
+    "margin_pct": 9.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 247,
+    "name": "Station 247",
+    "building": "Station 247",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 444,
+    "votes": {
+      "YSRCP": 226,
+      "TDP": 190,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 36,
+    "margin_pct": 8.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 248,
+    "name": "Station 248",
+    "building": "Station 248",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 509,
+    "votes": {
+      "YSRCP": 285,
+      "TDP": 210,
+      "OTH": 14
+    },
+    "winner_party": "YSRCP",
+    "margin": 75,
+    "margin_pct": 14.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 249,
+    "name": "Station 249",
+    "building": "Station 249",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 897,
+    "votes": {
+      "YSRCP": 447,
+      "TDP": 399,
+      "OTH": 51
+    },
+    "winner_party": "YSRCP",
+    "margin": 48,
+    "margin_pct": 5.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 250,
+    "name": "Station 250",
+    "building": "Station 250",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 893,
+    "votes": {
+      "YSRCP": 493,
+      "TDP": 369,
+      "OTH": 31
+    },
+    "winner_party": "YSRCP",
+    "margin": 124,
+    "margin_pct": 13.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 251,
+    "name": "Station 251",
+    "building": "Station 251",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 722,
+    "votes": {
+      "YSRCP": 409,
+      "TDP": 283,
+      "OTH": 30
+    },
+    "winner_party": "YSRCP",
+    "margin": 126,
+    "margin_pct": 17.5,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 252,
+    "name": "Station 252",
+    "building": "Station 252",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 747,
+    "votes": {
+      "YSRCP": 370,
+      "TDP": 338,
+      "OTH": 39
+    },
+    "winner_party": "YSRCP",
+    "margin": 32,
+    "margin_pct": 4.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 253,
+    "name": "Station 253",
+    "building": "Station 253",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 360,
+    "votes": {
+      "YSRCP": 210,
+      "TDP": 137,
+      "OTH": 13
+    },
+    "winner_party": "YSRCP",
+    "margin": 73,
+    "margin_pct": 20.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 254,
+    "name": "Station 254",
+    "building": "Station 254",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 692,
+    "votes": {
+      "YSRCP": 362,
+      "TDP": 288,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 74,
+    "margin_pct": 10.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 255,
+    "name": "Station 255",
+    "building": "Station 255",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 893,
+    "votes": {
+      "YSRCP": 452,
+      "TDP": 420,
+      "OTH": 21
+    },
+    "winner_party": "YSRCP",
+    "margin": 32,
+    "margin_pct": 3.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 256,
+    "name": "Station 256",
+    "building": "Station 256",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 885,
+    "votes": {
+      "YSRCP": 542,
+      "TDP": 309,
+      "OTH": 34
+    },
+    "winner_party": "YSRCP",
+    "margin": 233,
+    "margin_pct": 26.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 257,
+    "name": "Station 257",
+    "building": "Station 257",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 828,
+    "votes": {
+      "YSRCP": 558,
+      "TDP": 233,
+      "OTH": 37
+    },
+    "winner_party": "YSRCP",
+    "margin": 325,
+    "margin_pct": 39.3,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 258,
+    "name": "Station 258",
+    "building": "Station 258",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 704,
+    "votes": {
+      "YSRCP": 410,
+      "TDP": 263,
+      "OTH": 31
+    },
+    "winner_party": "YSRCP",
+    "margin": 147,
+    "margin_pct": 20.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 259,
+    "name": "Station 259",
+    "building": "Station 259",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 710,
+    "votes": {
+      "YSRCP": 348,
+      "TDP": 302,
+      "OTH": 60
+    },
+    "winner_party": "YSRCP",
+    "margin": 46,
+    "margin_pct": 6.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 260,
+    "name": "Station 260",
+    "building": "Station 260",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 764,
+    "votes": {
+      "YSRCP": 370,
+      "TDP": 338,
+      "OTH": 56
+    },
+    "winner_party": "YSRCP",
+    "margin": 32,
+    "margin_pct": 4.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 261,
+    "name": "Station 261",
+    "building": "Station 261",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 740,
+    "votes": {
+      "YSRCP": 406,
+      "TDP": 277,
+      "OTH": 57
+    },
+    "winner_party": "YSRCP",
+    "margin": 129,
+    "margin_pct": 17.4,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 262,
+    "name": "Station 262",
+    "building": "Station 262",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 746,
+    "votes": {
+      "YSRCP": 362,
+      "TDP": 357,
+      "OTH": 27
+    },
+    "winner_party": "YSRCP",
+    "margin": 5,
+    "margin_pct": 0.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 263,
+    "name": "Station 263",
+    "building": "Station 263",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 607,
+    "votes": {
+      "YSRCP": 359,
+      "TDP": 220,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 139,
+    "margin_pct": 22.9,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 264,
+    "name": "Station 264",
+    "building": "Station 264",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 609,
+    "votes": {
+      "YSRCP": 339,
+      "TDP": 339,
+      "OTH": 0
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 265,
+    "name": "Station 265",
+    "building": "Station 265",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 932,
+    "votes": {
+      "YSRCP": 489,
+      "TDP": 390,
+      "OTH": 53
+    },
+    "winner_party": "YSRCP",
+    "margin": 99,
+    "margin_pct": 10.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 266,
+    "name": "Station 266",
+    "building": "Station 266",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 870,
+    "votes": {
+      "YSRCP": 464,
+      "TDP": 374,
+      "OTH": 32
+    },
+    "winner_party": "YSRCP",
+    "margin": 90,
+    "margin_pct": 10.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 267,
+    "name": "Station 267",
+    "building": "Station 267",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 986,
+    "votes": {
+      "YSRCP": 521,
+      "TDP": 410,
+      "OTH": 55
+    },
+    "winner_party": "YSRCP",
+    "margin": 111,
+    "margin_pct": 11.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 268,
+    "name": "Station 268",
+    "building": "Station 268",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 583,
+    "votes": {
+      "YSRCP": 321,
+      "TDP": 233,
+      "OTH": 29
+    },
+    "winner_party": "YSRCP",
+    "margin": 88,
+    "margin_pct": 15.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 269,
+    "name": "Station 269",
+    "building": "Station 269",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 594,
+    "votes": {
+      "YSRCP": 341,
+      "TDP": 213,
+      "OTH": 40
+    },
+    "winner_party": "YSRCP",
+    "margin": 128,
+    "margin_pct": 21.5,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 270,
+    "name": "Station 270",
+    "building": "Station 270",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 495,
+    "votes": {
+      "YSRCP": 281,
+      "TDP": 190,
+      "OTH": 24
+    },
+    "winner_party": "YSRCP",
+    "margin": 91,
+    "margin_pct": 18.4,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 271,
+    "name": "Station 271",
+    "building": "Station 271",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 877,
+    "votes": {
+      "YSRCP": 429,
+      "TDP": 396,
+      "OTH": 52
+    },
+    "winner_party": "YSRCP",
+    "margin": 33,
+    "margin_pct": 3.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 272,
+    "name": "Station 272",
+    "building": "Station 272",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 720,
+    "votes": {
+      "YSRCP": 436,
+      "TDP": 227,
+      "OTH": 57
+    },
+    "winner_party": "YSRCP",
+    "margin": 209,
+    "margin_pct": 29.0,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 273,
+    "name": "Station 273",
+    "building": "Station 273",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 689,
+    "votes": {
+      "YSRCP": 372,
+      "TDP": 276,
+      "OTH": 41
+    },
+    "winner_party": "YSRCP",
+    "margin": 96,
+    "margin_pct": 13.9,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 274,
+    "name": "Station 274",
+    "building": "Station 274",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1112,
+    "votes": {
+      "YSRCP": 580,
+      "TDP": 431,
+      "OTH": 101
+    },
+    "winner_party": "YSRCP",
+    "margin": 149,
+    "margin_pct": 13.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 275,
+    "name": "Station 275",
+    "building": "Station 275",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 646,
+    "votes": {
+      "YSRCP": 369,
+      "TDP": 241,
+      "OTH": 36
+    },
+    "winner_party": "YSRCP",
+    "margin": 128,
+    "margin_pct": 19.8,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 276,
+    "name": "Station 276",
+    "building": "Station 276",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 603,
+    "votes": {
+      "YSRCP": 323,
+      "TDP": 242,
+      "OTH": 38
+    },
+    "winner_party": "YSRCP",
+    "margin": 81,
+    "margin_pct": 13.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 277,
+    "name": "Station 277",
+    "building": "Station 277",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 725,
+    "votes": {
+      "YSRCP": 365,
+      "TDP": 318,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 47,
+    "margin_pct": 6.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 278,
+    "name": "Station 278",
+    "building": "Station 278",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 592,
+    "votes": {
+      "YSRCP": 305,
+      "TDP": 263,
+      "OTH": 24
+    },
+    "winner_party": "YSRCP",
+    "margin": 42,
+    "margin_pct": 7.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 279,
+    "name": "Station 279",
+    "building": "Station 279",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 718,
+    "votes": {
+      "YSRCP": 377,
+      "TDP": 297,
+      "OTH": 44
+    },
+    "winner_party": "YSRCP",
+    "margin": 80,
+    "margin_pct": 11.1,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 280,
+    "name": "Station 280",
+    "building": "Station 280",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 710,
+    "votes": {
+      "YSRCP": 359,
+      "TDP": 307,
+      "OTH": 44
+    },
+    "winner_party": "YSRCP",
+    "margin": 52,
+    "margin_pct": 7.3,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 281,
+    "name": "Station 281",
+    "building": "Station 281",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 784,
+    "votes": {
+      "YSRCP": 381,
+      "TDP": 361,
+      "OTH": 42
+    },
+    "winner_party": "YSRCP",
+    "margin": 20,
+    "margin_pct": 2.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 282,
+    "name": "Station 282",
+    "building": "Station 282",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 501,
+    "votes": {
+      "YSRCP": 253,
+      "TDP": 220,
+      "OTH": 28
+    },
+    "winner_party": "YSRCP",
+    "margin": 33,
+    "margin_pct": 6.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 283,
+    "name": "Station 283",
+    "building": "Station 283",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 692,
+    "votes": {
+      "YSRCP": 353,
+      "TDP": 308,
+      "OTH": 31
+    },
+    "winner_party": "YSRCP",
+    "margin": 45,
+    "margin_pct": 6.5,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 284,
+    "name": "Station 284",
+    "building": "Station 284",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 621,
+    "votes": {
+      "YSRCP": 313,
+      "TDP": 281,
+      "OTH": 27
+    },
+    "winner_party": "YSRCP",
+    "margin": 32,
+    "margin_pct": 5.2,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 285,
+    "name": "Station 285",
+    "building": "Station 285",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 396,
+    "votes": {
+      "YSRCP": 199,
+      "TDP": 180,
+      "OTH": 17
+    },
+    "winner_party": "YSRCP",
+    "margin": 19,
+    "margin_pct": 4.8,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 286,
+    "name": "Station 286",
+    "building": "Station 286",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1112,
+    "votes": {
+      "YSRCP": 613,
+      "TDP": 613,
+      "OTH": 0
+    },
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 287,
+    "name": "Station 287",
+    "building": "Station 287",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1010,
+    "votes": {
+      "YSRCP": 491,
+      "TDP": 454,
+      "OTH": 65
+    },
+    "winner_party": "YSRCP",
+    "margin": 37,
+    "margin_pct": 3.7,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 288,
+    "name": "Station 288",
+    "building": "Station 288",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 978,
+    "votes": {
+      "YSRCP": 465,
+      "TDP": 426,
+      "OTH": 87
+    },
+    "winner_party": "YSRCP",
+    "margin": 39,
+    "margin_pct": 4.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 289,
+    "name": "Station 289",
+    "building": "Station 289",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 1126,
+    "votes": {
+      "YSRCP": 539,
+      "TDP": 501,
+      "OTH": 86
+    },
+    "winner_party": "YSRCP",
+    "margin": 38,
+    "margin_pct": 3.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 290,
+    "name": "Station 290",
+    "building": "Station 290",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 902,
+    "votes": {
+      "YSRCP": 425,
+      "TDP": 420,
+      "OTH": 57
+    },
+    "winner_party": "YSRCP",
+    "margin": 5,
+    "margin_pct": 0.6,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 291,
+    "name": "Station 291",
+    "building": "Station 291",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 802,
+    "votes": {
+      "YSRCP": 461,
+      "TDP": 260,
+      "OTH": 81
+    },
+    "winner_party": "YSRCP",
+    "margin": 201,
+    "margin_pct": 25.1,
+    "tier": "DEFICIT_CRITICAL"
+  },
+  {
+    "booth_no": 292,
+    "name": "Station 292",
+    "building": "Station 292",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 761,
+    "votes": {
+      "YSRCP": 380,
+      "TDP": 342,
+      "OTH": 39
+    },
+    "winner_party": "YSRCP",
+    "margin": 38,
+    "margin_pct": 5.0,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 293,
+    "name": "Station 293",
+    "building": "Station 293",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 662,
+    "votes": {
+      "YSRCP": 345,
+      "TDP": 296,
+      "OTH": 21
+    },
+    "winner_party": "YSRCP",
+    "margin": 49,
+    "margin_pct": 7.4,
+    "tier": "DEFICIT_MODERATE"
+  },
+  {
+    "booth_no": 294,
+    "name": "Station 294",
+    "building": "Station 294",
+    "locality": "",
+    "sections": "",
+    "mandal": "",
+    "pincode": "",
+    "lat": null,
+    "lng": null,
+    "is_urban": false,
+    "electorate": null,
+    "total_votes": 708,
+    "votes": {
+      "YSRCP": 350,
+      "TDP": 305,
+      "OTH": 53
+    },
+    "winner_party": "YSRCP",
+    "margin": 45,
+    "margin_pct": 6.4,
     "tier": "DEFICIT_MODERATE"
   }
 ]

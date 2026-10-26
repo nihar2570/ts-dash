@@ -323,17 +323,17 @@
     "lng": 77.202122,
     "is_urban": false,
     "electorate": 934,
-    "total_votes": 780,
-    "turnout_pct": 83.6,
+    "total_votes": 844,
+    "turnout_pct": 90.4,
     "votes": {
-      "BJP": 486,
-      "YSRCP": 244,
-      "OTH": 50
+      "BJP": 326,
+      "YSRCP": 429,
+      "OTH": 89
     },
-    "winner_party": "BJP",
-    "margin": 242,
-    "margin_pct": 31.0,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 103,
+    "margin_pct": 12.2,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 17,
@@ -347,17 +347,17 @@
     "lng": 77.148441,
     "is_urban": false,
     "electorate": 908,
-    "total_votes": 726,
-    "turnout_pct": 80.0,
+    "total_votes": 970,
+    "turnout_pct": 106.8,
     "votes": {
-      "BJP": 420,
-      "YSRCP": 254,
-      "OTH": 52
+      "BJP": 248,
+      "YSRCP": 512,
+      "OTH": 210
     },
-    "winner_party": "BJP",
-    "margin": 166,
-    "margin_pct": 22.9,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 264,
+    "margin_pct": 27.2,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 18,
@@ -371,16 +371,16 @@
     "lng": 77.149343,
     "is_urban": false,
     "electorate": 871,
-    "total_votes": 739,
-    "turnout_pct": 84.9,
+    "total_votes": 637,
+    "turnout_pct": 73.1,
     "votes": {
-      "BJP": 389,
-      "YSRCP": 290,
-      "OTH": 60
+      "BJP": 345,
+      "YSRCP": 246,
+      "OTH": 46
     },
     "winner_party": "BJP",
     "margin": 99,
-    "margin_pct": 13.4,
+    "margin_pct": 15.5,
     "tier": "LEAN"
   },
   {
@@ -395,17 +395,17 @@
     "lng": 77.214198,
     "is_urban": false,
     "electorate": 970,
-    "total_votes": 824,
-    "turnout_pct": 85.0,
+    "total_votes": 871,
+    "turnout_pct": 89.8,
     "votes": {
-      "BJP": 464,
-      "YSRCP": 299,
-      "OTH": 61
+      "BJP": 231,
+      "YSRCP": 537,
+      "OTH": 103
     },
-    "winner_party": "BJP",
-    "margin": 165,
-    "margin_pct": 20.0,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 306,
+    "margin_pct": 35.1,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 20,
@@ -419,17 +419,17 @@
     "lng": 77.214198,
     "is_urban": false,
     "electorate": 907,
-    "total_votes": 729,
-    "turnout_pct": 80.4,
+    "total_votes": 641,
+    "turnout_pct": 70.7,
     "votes": {
-      "BJP": 441,
-      "YSRCP": 239,
-      "OTH": 49
+      "BJP": 212,
+      "YSRCP": 333,
+      "OTH": 96
     },
-    "winner_party": "BJP",
-    "margin": 202,
-    "margin_pct": 27.7,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 121,
+    "margin_pct": 18.9,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 21,
@@ -443,17 +443,17 @@
     "lng": 77.209948,
     "is_urban": false,
     "electorate": 835,
-    "total_votes": 640,
-    "turnout_pct": 76.7,
+    "total_votes": 987,
+    "turnout_pct": 118.2,
     "votes": {
-      "BJP": 317,
-      "YSRCP": 268,
-      "OTH": 55
+      "BJP": 354,
+      "YSRCP": 548,
+      "OTH": 85
     },
-    "winner_party": "BJP",
-    "margin": 49,
-    "margin_pct": 7.7,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 194,
+    "margin_pct": 19.7,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 22,
@@ -467,17 +467,17 @@
     "lng": 77.17601,
     "is_urban": false,
     "electorate": 917,
-    "total_votes": 722,
-    "turnout_pct": 78.8,
+    "total_votes": 951,
+    "turnout_pct": 103.7,
     "votes": {
-      "BJP": 417,
-      "YSRCP": 253,
-      "OTH": 52
+      "BJP": 509,
+      "YSRCP": 330,
+      "OTH": 112
     },
     "winner_party": "BJP",
-    "margin": 164,
-    "margin_pct": 22.7,
-    "tier": "STRONGHOLD"
+    "margin": 179,
+    "margin_pct": 18.8,
+    "tier": "LEAN"
   },
   {
     "booth_no": 23,
@@ -491,16 +491,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 874,
-    "total_votes": 768,
-    "turnout_pct": 87.9,
+    "total_votes": 987,
+    "turnout_pct": 112.9,
     "votes": {
-      "BJP": 474,
-      "YSRCP": 244,
-      "OTH": 50
+      "BJP": 556,
+      "YSRCP": 355,
+      "OTH": 76
     },
     "winner_party": "BJP",
-    "margin": 230,
-    "margin_pct": 29.9,
+    "margin": 201,
+    "margin_pct": 20.4,
     "tier": "STRONGHOLD"
   },
   {
@@ -515,17 +515,17 @@
     "lng": 77.165042,
     "is_urban": false,
     "electorate": 901,
-    "total_votes": 770,
-    "turnout_pct": 85.5,
+    "total_votes": 901,
+    "turnout_pct": 100.0,
     "votes": {
-      "BJP": 330,
-      "YSRCP": 366,
-      "OTH": 74
+      "BJP": 596,
+      "YSRCP": 237,
+      "OTH": 68
     },
-    "winner_party": "YSRCP",
-    "margin": 36,
-    "margin_pct": 4.7,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "BJP",
+    "margin": 359,
+    "margin_pct": 39.8,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 25,
@@ -539,17 +539,17 @@
     "lng": 77.142234,
     "is_urban": false,
     "electorate": 680,
-    "total_votes": 599,
-    "turnout_pct": 88.2,
+    "total_votes": 927,
+    "turnout_pct": 136.3,
     "votes": {
-      "BJP": 284,
-      "YSRCP": 261,
-      "OTH": 54
+      "BJP": 549,
+      "YSRCP": 329,
+      "OTH": 49
     },
     "winner_party": "BJP",
-    "margin": 23,
-    "margin_pct": 3.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 220,
+    "margin_pct": 23.7,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 26,
@@ -563,17 +563,17 @@
     "lng": 77.140986,
     "is_urban": false,
     "electorate": 957,
-    "total_votes": 800,
-    "turnout_pct": 83.6,
+    "total_votes": 907,
+    "turnout_pct": 94.8,
     "votes": {
-      "BJP": 452,
-      "YSRCP": 289,
-      "OTH": 59
+      "BJP": 400,
+      "YSRCP": 463,
+      "OTH": 44
     },
-    "winner_party": "BJP",
-    "margin": 163,
-    "margin_pct": 20.4,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 63,
+    "margin_pct": 6.9,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 27,
@@ -587,16 +587,16 @@
     "lng": 77.141353,
     "is_urban": false,
     "electorate": 1028,
-    "total_votes": 803,
-    "turnout_pct": 78.2,
+    "total_votes": 849,
+    "turnout_pct": 82.6,
     "votes": {
-      "BJP": 401,
-      "YSRCP": 334,
-      "OTH": 68
+      "BJP": 436,
+      "YSRCP": 358,
+      "OTH": 55
     },
     "winner_party": "BJP",
-    "margin": 67,
-    "margin_pct": 8.3,
+    "margin": 78,
+    "margin_pct": 9.2,
     "tier": "LEAN"
   },
   {
@@ -611,17 +611,17 @@
     "lng": 77.136463,
     "is_urban": false,
     "electorate": 961,
-    "total_votes": 846,
-    "turnout_pct": 88.1,
+    "total_votes": 455,
+    "turnout_pct": 47.3,
     "votes": {
-      "BJP": 388,
-      "YSRCP": 380,
-      "OTH": 78
+      "BJP": 254,
+      "YSRCP": 174,
+      "OTH": 27
     },
     "winner_party": "BJP",
-    "margin": 8,
-    "margin_pct": 0.9,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 80,
+    "margin_pct": 17.6,
+    "tier": "LEAN"
   },
   {
     "booth_no": 29,
@@ -635,17 +635,17 @@
     "lng": 77.10338,
     "is_urban": false,
     "electorate": 870,
-    "total_votes": 667,
-    "turnout_pct": 76.7,
+    "total_votes": 756,
+    "turnout_pct": 86.9,
     "votes": {
-      "BJP": 378,
-      "YSRCP": 240,
-      "OTH": 49
+      "BJP": 415,
+      "YSRCP": 318,
+      "OTH": 23
     },
     "winner_party": "BJP",
-    "margin": 138,
-    "margin_pct": 20.7,
-    "tier": "STRONGHOLD"
+    "margin": 97,
+    "margin_pct": 12.8,
+    "tier": "LEAN"
   },
   {
     "booth_no": 31,
@@ -659,17 +659,17 @@
     "lng": 77.100271,
     "is_urban": false,
     "electorate": 907,
-    "total_votes": 759,
-    "turnout_pct": 83.7,
+    "total_votes": 887,
+    "turnout_pct": 97.8,
     "votes": {
-      "BJP": 435,
-      "YSRCP": 269,
-      "OTH": 55
+      "BJP": 0,
+      "YSRCP": 345,
+      "OTH": 542
     },
-    "winner_party": "BJP",
-    "margin": 166,
-    "margin_pct": 21.9,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 345,
+    "margin_pct": 38.9,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 32,
@@ -683,17 +683,17 @@
     "lng": 77.100271,
     "is_urban": false,
     "electorate": 836,
-    "total_votes": 637,
-    "turnout_pct": 76.3,
+    "total_votes": 569,
+    "turnout_pct": 68.1,
     "votes": {
-      "BJP": 245,
-      "YSRCP": 325,
-      "OTH": 67
+      "BJP": 300,
+      "YSRCP": 214,
+      "OTH": 55
     },
-    "winner_party": "YSRCP",
-    "margin": 80,
-    "margin_pct": 12.6,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "BJP",
+    "margin": 86,
+    "margin_pct": 15.1,
+    "tier": "LEAN"
   },
   {
     "booth_no": 33,
@@ -707,16 +707,16 @@
     "lng": 77.221257,
     "is_urban": false,
     "electorate": 916,
-    "total_votes": 759,
-    "turnout_pct": 82.9,
+    "total_votes": 1036,
+    "turnout_pct": 113.1,
     "votes": {
-      "BJP": 468,
-      "YSRCP": 241,
-      "OTH": 50
+      "BJP": 691,
+      "YSRCP": 275,
+      "OTH": 70
     },
     "winner_party": "BJP",
-    "margin": 227,
-    "margin_pct": 29.9,
+    "margin": 416,
+    "margin_pct": 40.2,
     "tier": "STRONGHOLD"
   },
   {
@@ -731,17 +731,17 @@
     "lng": 77.224018,
     "is_urban": false,
     "electorate": 1068,
-    "total_votes": 893,
-    "turnout_pct": 83.7,
+    "total_votes": 603,
+    "turnout_pct": 56.5,
     "votes": {
-      "BJP": 504,
-      "YSRCP": 323,
-      "OTH": 66
+      "BJP": 227,
+      "YSRCP": 307,
+      "OTH": 69
     },
-    "winner_party": "BJP",
-    "margin": 181,
-    "margin_pct": 20.3,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 80,
+    "margin_pct": 13.3,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 35,
@@ -755,17 +755,17 @@
     "lng": 77.260351,
     "is_urban": false,
     "electorate": 1173,
-    "total_votes": 1052,
-    "turnout_pct": 89.7,
+    "total_votes": 493,
+    "turnout_pct": 42.0,
     "votes": {
-      "BJP": 581,
-      "YSRCP": 391,
-      "OTH": 80
+      "BJP": 203,
+      "YSRCP": 241,
+      "OTH": 49
     },
-    "winner_party": "BJP",
-    "margin": 190,
-    "margin_pct": 18.1,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 38,
+    "margin_pct": 7.7,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 36,
@@ -779,17 +779,17 @@
     "lng": 77.261991,
     "is_urban": false,
     "electorate": 845,
-    "total_votes": 647,
-    "turnout_pct": 76.6,
+    "total_votes": 410,
+    "turnout_pct": 48.5,
     "votes": {
-      "BJP": 355,
-      "YSRCP": 242,
-      "OTH": 50
+      "BJP": 170,
+      "YSRCP": 219,
+      "OTH": 21
     },
-    "winner_party": "BJP",
-    "margin": 113,
-    "margin_pct": 17.5,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 49,
+    "margin_pct": 12.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 37,
@@ -803,17 +803,17 @@
     "lng": 77.261991,
     "is_urban": false,
     "electorate": 876,
-    "total_votes": 726,
-    "turnout_pct": 82.9,
+    "total_votes": 749,
+    "turnout_pct": 85.5,
     "votes": {
-      "BJP": 435,
-      "YSRCP": 242,
-      "OTH": 49
+      "BJP": 335,
+      "YSRCP": 345,
+      "OTH": 69
     },
-    "winner_party": "BJP",
-    "margin": 193,
-    "margin_pct": 26.6,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 10,
+    "margin_pct": 1.3,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 38,
@@ -827,16 +827,16 @@
     "lng": 77.264421,
     "is_urban": false,
     "electorate": 819,
-    "total_votes": 689,
-    "turnout_pct": 84.2,
+    "total_votes": 753,
+    "turnout_pct": 91.9,
     "votes": {
-      "BJP": 380,
-      "YSRCP": 256,
-      "OTH": 53
+      "BJP": 393,
+      "YSRCP": 293,
+      "OTH": 67
     },
     "winner_party": "BJP",
-    "margin": 124,
-    "margin_pct": 18.0,
+    "margin": 100,
+    "margin_pct": 13.3,
     "tier": "LEAN"
   },
   {
@@ -851,16 +851,16 @@
     "lng": 77.264421,
     "is_urban": false,
     "electorate": 834,
-    "total_votes": 658,
-    "turnout_pct": 78.9,
+    "total_votes": 901,
+    "turnout_pct": 108.0,
     "votes": {
-      "BJP": 407,
-      "YSRCP": 208,
-      "OTH": 43
+      "BJP": 533,
+      "YSRCP": 310,
+      "OTH": 58
     },
     "winner_party": "BJP",
-    "margin": 199,
-    "margin_pct": 30.2,
+    "margin": 223,
+    "margin_pct": 24.8,
     "tier": "STRONGHOLD"
   },
   {
@@ -875,17 +875,17 @@
     "lng": 77.222468,
     "is_urban": false,
     "electorate": 713,
-    "total_votes": 660,
-    "turnout_pct": 92.6,
+    "total_votes": 550,
+    "turnout_pct": 77.1,
     "votes": {
-      "BJP": 283,
-      "YSRCP": 313,
-      "OTH": 64
+      "BJP": 0,
+      "YSRCP": 273,
+      "OTH": 277
     },
     "winner_party": "YSRCP",
-    "margin": 30,
-    "margin_pct": 4.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 273,
+    "margin_pct": 49.6,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 41,
@@ -899,17 +899,17 @@
     "lng": 77.222468,
     "is_urban": false,
     "electorate": 1012,
-    "total_votes": 940,
-    "turnout_pct": 92.9,
+    "total_votes": 724,
+    "turnout_pct": 71.5,
     "votes": {
-      "BJP": 416,
-      "YSRCP": 435,
-      "OTH": 89
+      "BJP": 341,
+      "YSRCP": 330,
+      "OTH": 53
     },
-    "winner_party": "YSRCP",
-    "margin": 19,
-    "margin_pct": 2.0,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "BJP",
+    "margin": 11,
+    "margin_pct": 1.5,
+    "tier": "LEAN"
   },
   {
     "booth_no": 42,
@@ -923,16 +923,16 @@
     "lng": 77.243113,
     "is_urban": false,
     "electorate": 1002,
-    "total_votes": 806,
-    "turnout_pct": 80.5,
+    "total_votes": 470,
+    "turnout_pct": 46.9,
     "votes": {
-      "BJP": 401,
-      "YSRCP": 336,
-      "OTH": 69
+      "BJP": 228,
+      "YSRCP": 202,
+      "OTH": 40
     },
     "winner_party": "BJP",
-    "margin": 65,
-    "margin_pct": 8.1,
+    "margin": 26,
+    "margin_pct": 5.5,
     "tier": "LEAN"
   },
   {
@@ -947,16 +947,16 @@
     "lng": 77.243113,
     "is_urban": false,
     "electorate": 1017,
-    "total_votes": 845,
-    "turnout_pct": 83.1,
+    "total_votes": 850,
+    "turnout_pct": 83.6,
     "votes": {
-      "BJP": 483,
-      "YSRCP": 301,
-      "OTH": 61
+      "BJP": 521,
+      "YSRCP": 264,
+      "OTH": 65
     },
     "winner_party": "BJP",
-    "margin": 182,
-    "margin_pct": 21.5,
+    "margin": 257,
+    "margin_pct": 30.2,
     "tier": "STRONGHOLD"
   },
   {
@@ -971,17 +971,17 @@
     "lng": 77.284241,
     "is_urban": false,
     "electorate": 942,
-    "total_votes": 762,
-    "turnout_pct": 80.9,
+    "total_votes": 653,
+    "turnout_pct": 69.3,
     "votes": {
-      "BJP": 321,
-      "YSRCP": 366,
-      "OTH": 75
+      "BJP": 257,
+      "YSRCP": 354,
+      "OTH": 42
     },
     "winner_party": "YSRCP",
-    "margin": 45,
-    "margin_pct": 5.9,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 97,
+    "margin_pct": 14.9,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 45,
@@ -995,17 +995,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 961,
-    "total_votes": 730,
-    "turnout_pct": 76.0,
+    "total_votes": 558,
+    "turnout_pct": 58.1,
     "votes": {
-      "BJP": 386,
-      "YSRCP": 285,
-      "OTH": 59
+      "BJP": 238,
+      "YSRCP": 286,
+      "OTH": 34
     },
-    "winner_party": "BJP",
-    "margin": 101,
-    "margin_pct": 13.8,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 48,
+    "margin_pct": 8.6,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 46,
@@ -1019,17 +1019,17 @@
     "lng": 77.303599,
     "is_urban": false,
     "electorate": 1063,
-    "total_votes": 887,
-    "turnout_pct": 83.5,
+    "total_votes": 849,
+    "turnout_pct": 79.9,
     "votes": {
-      "BJP": 416,
-      "YSRCP": 391,
-      "OTH": 80
+      "BJP": 435,
+      "YSRCP": 342,
+      "OTH": 72
     },
     "winner_party": "BJP",
-    "margin": 25,
-    "margin_pct": 2.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 93,
+    "margin_pct": 11.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 47,
@@ -1043,17 +1043,17 @@
     "lng": 77.311309,
     "is_urban": false,
     "electorate": 1000,
-    "total_votes": 749,
-    "turnout_pct": 74.9,
+    "total_votes": 549,
+    "turnout_pct": 54.9,
     "votes": {
-      "BJP": 433,
-      "YSRCP": 262,
-      "OTH": 54
+      "BJP": 286,
+      "YSRCP": 239,
+      "OTH": 24
     },
     "winner_party": "BJP",
-    "margin": 171,
-    "margin_pct": 22.8,
-    "tier": "STRONGHOLD"
+    "margin": 47,
+    "margin_pct": 8.6,
+    "tier": "LEAN"
   },
   {
     "booth_no": 48,
@@ -1067,16 +1067,16 @@
     "lng": 77.300576,
     "is_urban": false,
     "electorate": 1000,
-    "total_votes": 855,
-    "turnout_pct": 85.5,
+    "total_votes": 904,
+    "turnout_pct": 90.4,
     "votes": {
-      "BJP": 495,
-      "YSRCP": 298,
-      "OTH": 62
+      "BJP": 587,
+      "YSRCP": 254,
+      "OTH": 63
     },
     "winner_party": "BJP",
-    "margin": 197,
-    "margin_pct": 23.0,
+    "margin": 333,
+    "margin_pct": 36.8,
     "tier": "STRONGHOLD"
   },
   {
@@ -1091,17 +1091,17 @@
     "lng": 77.335398,
     "is_urban": false,
     "electorate": 891,
-    "total_votes": 831,
-    "turnout_pct": 93.3,
+    "total_votes": 962,
+    "turnout_pct": 108.0,
     "votes": {
-      "BJP": 395,
-      "YSRCP": 362,
-      "OTH": 74
+      "BJP": 563,
+      "YSRCP": 305,
+      "OTH": 94
     },
     "winner_party": "BJP",
-    "margin": 33,
-    "margin_pct": 4.0,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 258,
+    "margin_pct": 26.8,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 50,
@@ -1115,17 +1115,17 @@
     "lng": 77.354689,
     "is_urban": false,
     "electorate": 732,
-    "total_votes": 571,
-    "turnout_pct": 78.1,
+    "total_votes": 895,
+    "turnout_pct": 122.3,
     "votes": {
-      "BJP": 237,
-      "YSRCP": 277,
-      "OTH": 57
+      "BJP": 562,
+      "YSRCP": 267,
+      "OTH": 66
     },
-    "winner_party": "YSRCP",
-    "margin": 40,
-    "margin_pct": 7.0,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "BJP",
+    "margin": 295,
+    "margin_pct": 33.0,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 51,
@@ -1139,16 +1139,16 @@
     "lng": 77.367613,
     "is_urban": false,
     "electorate": 1046,
-    "total_votes": 844,
-    "turnout_pct": 80.7,
+    "total_votes": 808,
+    "turnout_pct": 77.2,
     "votes": {
-      "BJP": 509,
-      "YSRCP": 278,
-      "OTH": 57
+      "BJP": 505,
+      "YSRCP": 242,
+      "OTH": 61
     },
     "winner_party": "BJP",
-    "margin": 231,
-    "margin_pct": 27.4,
+    "margin": 263,
+    "margin_pct": 32.5,
     "tier": "STRONGHOLD"
   },
   {
@@ -1163,17 +1163,17 @@
     "lng": null,
     "is_urban": false,
     "electorate": 1133,
-    "total_votes": 924,
-    "turnout_pct": 81.6,
+    "total_votes": 744,
+    "turnout_pct": 65.7,
     "votes": {
-      "BJP": 487,
-      "YSRCP": 363,
-      "OTH": 74
+      "BJP": 457,
+      "YSRCP": 0,
+      "OTH": 287
     },
     "winner_party": "BJP",
-    "margin": 124,
-    "margin_pct": 13.4,
-    "tier": "LEAN"
+    "margin": 457,
+    "margin_pct": 61.4,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 53,
@@ -1187,17 +1187,17 @@
     "lng": 77.399738,
     "is_urban": false,
     "electorate": 940,
-    "total_votes": 799,
-    "turnout_pct": 85.0,
+    "total_votes": 593,
+    "turnout_pct": 63.1,
     "votes": {
-      "BJP": 343,
-      "YSRCP": 379,
-      "OTH": 77
+      "BJP": 305,
+      "YSRCP": 254,
+      "OTH": 34
     },
-    "winner_party": "YSRCP",
-    "margin": 36,
-    "margin_pct": 4.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "BJP",
+    "margin": 51,
+    "margin_pct": 8.6,
+    "tier": "LEAN"
   },
   {
     "booth_no": 54,
@@ -1211,17 +1211,17 @@
     "lng": 77.353647,
     "is_urban": false,
     "electorate": 1026,
-    "total_votes": 808,
-    "turnout_pct": 78.8,
+    "total_votes": 890,
+    "turnout_pct": 86.7,
     "votes": {
-      "BJP": 340,
-      "YSRCP": 389,
-      "OTH": 79
+      "BJP": 449,
+      "YSRCP": 399,
+      "OTH": 42
     },
-    "winner_party": "YSRCP",
-    "margin": 49,
-    "margin_pct": 6.1,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "BJP",
+    "margin": 50,
+    "margin_pct": 5.6,
+    "tier": "LEAN"
   },
   {
     "booth_no": 55,
@@ -1403,17 +1403,17 @@
     "lng": 77.288827,
     "is_urban": false,
     "electorate": 1042,
-    "total_votes": 805,
-    "turnout_pct": 77.3,
+    "total_votes": 816,
+    "turnout_pct": 78.3,
     "votes": {
-      "BJP": 475,
-      "YSRCP": 274,
-      "OTH": 56
+      "BJP": 423,
+      "YSRCP": 356,
+      "OTH": 37
     },
     "winner_party": "BJP",
-    "margin": 201,
-    "margin_pct": 25.0,
-    "tier": "STRONGHOLD"
+    "margin": 67,
+    "margin_pct": 8.2,
+    "tier": "LEAN"
   },
   {
     "booth_no": 64,
@@ -1427,17 +1427,17 @@
     "lng": 77.304619,
     "is_urban": false,
     "electorate": 1002,
-    "total_votes": 835,
-    "turnout_pct": 83.4,
+    "total_votes": 747,
+    "turnout_pct": 74.6,
     "votes": {
-      "BJP": 407,
-      "YSRCP": 355,
-      "OTH": 73
+      "BJP": 348,
+      "YSRCP": 359,
+      "OTH": 40
     },
-    "winner_party": "BJP",
-    "margin": 52,
-    "margin_pct": 6.2,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 11,
+    "margin_pct": 1.5,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 66,
@@ -1451,17 +1451,17 @@
     "lng": 77.34112,
     "is_urban": false,
     "electorate": 895,
-    "total_votes": 673,
-    "turnout_pct": 75.2,
+    "total_votes": 633,
+    "turnout_pct": 70.7,
     "votes": {
-      "BJP": 307,
-      "YSRCP": 304,
-      "OTH": 62
+      "BJP": 319,
+      "YSRCP": 298,
+      "OTH": 16
     },
     "winner_party": "BJP",
-    "margin": 3,
-    "margin_pct": 0.4,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 21,
+    "margin_pct": 3.3,
+    "tier": "LEAN"
   },
   {
     "booth_no": 67,
@@ -1475,17 +1475,17 @@
     "lng": 77.321266,
     "is_urban": false,
     "electorate": 873,
-    "total_votes": 699,
-    "turnout_pct": 80.1,
+    "total_votes": 856,
+    "turnout_pct": 98.1,
     "votes": {
-      "BJP": 285,
-      "YSRCP": 343,
-      "OTH": 71
+      "BJP": 490,
+      "YSRCP": 325,
+      "OTH": 41
     },
-    "winner_party": "YSRCP",
-    "margin": 58,
-    "margin_pct": 8.3,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "BJP",
+    "margin": 165,
+    "margin_pct": 19.3,
+    "tier": "LEAN"
   },
   {
     "booth_no": 68,
@@ -1499,16 +1499,16 @@
     "lng": null,
     "is_urban": false,
     "electorate": 813,
-    "total_votes": 676,
-    "turnout_pct": 83.2,
+    "total_votes": 713,
+    "turnout_pct": 87.7,
     "votes": {
-      "BJP": 284,
-      "YSRCP": 325,
-      "OTH": 67
+      "BJP": 317,
+      "YSRCP": 361,
+      "OTH": 35
     },
     "winner_party": "YSRCP",
-    "margin": 41,
-    "margin_pct": 6.1,
+    "margin": 44,
+    "margin_pct": 6.2,
     "tier": "DEFICIT_MODERATE"
   },
   {
@@ -1523,17 +1523,17 @@
     "lng": 77.360569,
     "is_urban": false,
     "electorate": 1126,
-    "total_votes": 1006,
-    "turnout_pct": 89.4,
+    "total_votes": 689,
+    "turnout_pct": 61.2,
     "votes": {
-      "BJP": 496,
-      "YSRCP": 424,
-      "OTH": 86
+      "BJP": 259,
+      "YSRCP": 388,
+      "OTH": 42
     },
-    "winner_party": "BJP",
-    "margin": 72,
-    "margin_pct": 7.2,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 129,
+    "margin_pct": 18.7,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 70,
@@ -1547,17 +1547,17 @@
     "lng": 77.371602,
     "is_urban": false,
     "electorate": 820,
-    "total_votes": 671,
-    "turnout_pct": 81.9,
+    "total_votes": 1097,
+    "turnout_pct": 133.8,
     "votes": {
-      "BJP": 296,
-      "YSRCP": 311,
-      "OTH": 64
+      "BJP": 600,
+      "YSRCP": 441,
+      "OTH": 56
     },
-    "winner_party": "YSRCP",
-    "margin": 15,
-    "margin_pct": 2.2,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "BJP",
+    "margin": 159,
+    "margin_pct": 14.5,
+    "tier": "LEAN"
   },
   {
     "booth_no": 71,
@@ -1571,17 +1571,17 @@
     "lng": 77.364123,
     "is_urban": false,
     "electorate": 804,
-    "total_votes": 648,
-    "turnout_pct": 80.6,
+    "total_votes": 923,
+    "turnout_pct": 114.8,
     "votes": {
-      "BJP": 379,
-      "YSRCP": 223,
-      "OTH": 46
+      "BJP": 0,
+      "YSRCP": 432,
+      "OTH": 491
     },
-    "winner_party": "BJP",
-    "margin": 156,
-    "margin_pct": 24.1,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 432,
+    "margin_pct": 46.8,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 72,
@@ -1595,17 +1595,17 @@
     "lng": 77.328738,
     "is_urban": false,
     "electorate": 817,
-    "total_votes": 658,
-    "turnout_pct": 80.6,
+    "total_votes": 647,
+    "turnout_pct": 79.2,
     "votes": {
-      "BJP": 359,
-      "YSRCP": 248,
-      "OTH": 51
+      "BJP": 404,
+      "YSRCP": 209,
+      "OTH": 34
     },
     "winner_party": "BJP",
-    "margin": 111,
-    "margin_pct": 16.9,
-    "tier": "LEAN"
+    "margin": 195,
+    "margin_pct": 30.1,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 73,
@@ -1619,16 +1619,16 @@
     "lng": 77.328738,
     "is_urban": false,
     "electorate": 915,
-    "total_votes": 799,
-    "turnout_pct": 87.4,
+    "total_votes": 589,
+    "turnout_pct": 64.4,
     "votes": {
-      "BJP": 408,
-      "YSRCP": 324,
-      "OTH": 67
+      "BJP": 337,
+      "YSRCP": 224,
+      "OTH": 28
     },
     "winner_party": "BJP",
-    "margin": 84,
-    "margin_pct": 10.5,
+    "margin": 113,
+    "margin_pct": 19.2,
     "tier": "LEAN"
   },
   {
@@ -1643,17 +1643,17 @@
     "lng": 77.269332,
     "is_urban": false,
     "electorate": 915,
-    "total_votes": 742,
-    "turnout_pct": 81.2,
+    "total_votes": 1122,
+    "turnout_pct": 122.6,
     "votes": {
-      "BJP": 388,
-      "YSRCP": 293,
-      "OTH": 61
+      "BJP": 470,
+      "YSRCP": 562,
+      "OTH": 90
     },
-    "winner_party": "BJP",
-    "margin": 95,
-    "margin_pct": 12.8,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 92,
+    "margin_pct": 8.2,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 75,
@@ -1667,17 +1667,17 @@
     "lng": 77.269332,
     "is_urban": false,
     "electorate": 977,
-    "total_votes": 891,
-    "turnout_pct": 91.2,
+    "total_votes": 868,
+    "turnout_pct": 88.8,
     "votes": {
-      "BJP": 617,
-      "YSRCP": 227,
-      "OTH": 47
+      "BJP": 444,
+      "YSRCP": 380,
+      "OTH": 44
     },
     "winner_party": "BJP",
-    "margin": 390,
-    "margin_pct": 43.8,
-    "tier": "STRONGHOLD"
+    "margin": 64,
+    "margin_pct": 7.4,
+    "tier": "LEAN"
   },
   {
     "booth_no": 76,
@@ -1691,17 +1691,17 @@
     "lng": 77.267229,
     "is_urban": false,
     "electorate": 834,
-    "total_votes": 725,
-    "turnout_pct": 87.0,
+    "total_votes": 785,
+    "turnout_pct": 94.1,
     "votes": {
-      "BJP": 342,
-      "YSRCP": 318,
-      "OTH": 65
+      "BJP": 0,
+      "YSRCP": 295,
+      "OTH": 490
     },
-    "winner_party": "BJP",
-    "margin": 24,
-    "margin_pct": 3.3,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "YSRCP",
+    "margin": 295,
+    "margin_pct": 37.6,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 78,
@@ -1715,16 +1715,16 @@
     "lng": 77.281312,
     "is_urban": false,
     "electorate": 1135,
-    "total_votes": 918,
-    "turnout_pct": 80.9,
+    "total_votes": 344,
+    "turnout_pct": 30.3,
     "votes": {
-      "BJP": 545,
-      "YSRCP": 310,
-      "OTH": 63
+      "BJP": 210,
+      "YSRCP": 127,
+      "OTH": 7
     },
     "winner_party": "BJP",
-    "margin": 235,
-    "margin_pct": 25.6,
+    "margin": 83,
+    "margin_pct": 24.1,
     "tier": "STRONGHOLD"
   },
   {
@@ -1739,16 +1739,16 @@
     "lng": 77.281312,
     "is_urban": false,
     "electorate": 881,
-    "total_votes": 725,
-    "turnout_pct": 82.3,
+    "total_votes": 743,
+    "turnout_pct": 84.3,
     "votes": {
-      "BJP": 388,
-      "YSRCP": 280,
-      "OTH": 57
+      "BJP": 416,
+      "YSRCP": 292,
+      "OTH": 35
     },
     "winner_party": "BJP",
-    "margin": 108,
-    "margin_pct": 14.9,
+    "margin": 124,
+    "margin_pct": 16.7,
     "tier": "LEAN"
   },
   {
@@ -1763,17 +1763,17 @@
     "lng": 77.281312,
     "is_urban": false,
     "electorate": 936,
-    "total_votes": 713,
-    "turnout_pct": 76.2,
+    "total_votes": 666,
+    "turnout_pct": 71.2,
     "votes": {
-      "BJP": 366,
-      "YSRCP": 288,
-      "OTH": 59
+      "BJP": 406,
+      "YSRCP": 233,
+      "OTH": 27
     },
     "winner_party": "BJP",
-    "margin": 78,
-    "margin_pct": 10.9,
-    "tier": "LEAN"
+    "margin": 173,
+    "margin_pct": 26.0,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 81,
@@ -1787,17 +1787,17 @@
     "lng": 77.281312,
     "is_urban": false,
     "electorate": 904,
-    "total_votes": 762,
-    "turnout_pct": 84.3,
+    "total_votes": 639,
+    "turnout_pct": 70.7,
     "votes": {
-      "BJP": 356,
-      "YSRCP": 337,
-      "OTH": 69
+      "BJP": 389,
+      "YSRCP": 229,
+      "OTH": 21
     },
     "winner_party": "BJP",
-    "margin": 19,
-    "margin_pct": 2.5,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 160,
+    "margin_pct": 25.0,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 82,
@@ -1811,17 +1811,17 @@
     "lng": 77.274011,
     "is_urban": false,
     "electorate": 833,
-    "total_votes": 712,
-    "turnout_pct": 85.5,
+    "total_votes": 547,
+    "turnout_pct": 65.7,
     "votes": {
-      "BJP": 364,
-      "YSRCP": 289,
-      "OTH": 59
+      "BJP": 322,
+      "YSRCP": 203,
+      "OTH": 22
     },
     "winner_party": "BJP",
-    "margin": 75,
-    "margin_pct": 10.5,
-    "tier": "LEAN"
+    "margin": 119,
+    "margin_pct": 21.8,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 83,
@@ -1835,17 +1835,17 @@
     "lng": 77.274011,
     "is_urban": false,
     "electorate": 979,
-    "total_votes": 849,
-    "turnout_pct": 86.8,
+    "total_votes": 801,
+    "turnout_pct": 81.8,
     "votes": {
-      "BJP": 420,
-      "YSRCP": 356,
-      "OTH": 73
+      "BJP": 507,
+      "YSRCP": 256,
+      "OTH": 38
     },
     "winner_party": "BJP",
-    "margin": 64,
-    "margin_pct": 7.5,
-    "tier": "LEAN"
+    "margin": 251,
+    "margin_pct": 31.3,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 84,
@@ -1859,15 +1859,15 @@
     "lng": 77.274011,
     "is_urban": false,
     "electorate": 908,
-    "total_votes": 771,
-    "turnout_pct": 85.0,
+    "total_votes": 716,
+    "turnout_pct": 78.9,
     "votes": {
-      "BJP": 485,
-      "YSRCP": 238,
-      "OTH": 48
+      "BJP": 450,
+      "YSRCP": 221,
+      "OTH": 45
     },
     "winner_party": "BJP",
-    "margin": 247,
+    "margin": 229,
     "margin_pct": 32.0,
     "tier": "STRONGHOLD"
   },
@@ -2099,17 +2099,17 @@
     "lng": 77.279016,
     "is_urban": false,
     "electorate": 1055,
-    "total_votes": 915,
-    "turnout_pct": 86.8,
+    "total_votes": 609,
+    "turnout_pct": 57.7,
     "votes": {
-      "BJP": 608,
-      "YSRCP": 254,
-      "OTH": 53
+      "BJP": 292,
+      "YSRCP": 302,
+      "OTH": 15
     },
-    "winner_party": "BJP",
-    "margin": 354,
-    "margin_pct": 38.7,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 10,
+    "margin_pct": 1.6,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 95,
@@ -2123,17 +2123,17 @@
     "lng": 77.279016,
     "is_urban": false,
     "electorate": 796,
-    "total_votes": 698,
-    "turnout_pct": 87.7,
+    "total_votes": 633,
+    "turnout_pct": 79.5,
     "votes": {
-      "BJP": 340,
-      "YSRCP": 297,
-      "OTH": 61
+      "BJP": 420,
+      "YSRCP": 196,
+      "OTH": 17
     },
     "winner_party": "BJP",
-    "margin": 43,
-    "margin_pct": 6.2,
-    "tier": "LEAN"
+    "margin": 224,
+    "margin_pct": 35.4,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 96,
@@ -2147,17 +2147,17 @@
     "lng": 77.286417,
     "is_urban": false,
     "electorate": 877,
-    "total_votes": 714,
-    "turnout_pct": 81.5,
+    "total_votes": 571,
+    "turnout_pct": 65.1,
     "votes": {
-      "BJP": 388,
-      "YSRCP": 271,
-      "OTH": 55
+      "BJP": 348,
+      "YSRCP": 204,
+      "OTH": 19
     },
     "winner_party": "BJP",
-    "margin": 117,
-    "margin_pct": 16.4,
-    "tier": "LEAN"
+    "margin": 144,
+    "margin_pct": 25.2,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 97,
@@ -2171,17 +2171,17 @@
     "lng": 77.286417,
     "is_urban": false,
     "electorate": 794,
-    "total_votes": 702,
-    "turnout_pct": 88.5,
+    "total_votes": 748,
+    "turnout_pct": 94.2,
     "votes": {
-      "BJP": 307,
-      "YSRCP": 328,
-      "OTH": 67
+      "BJP": 414,
+      "YSRCP": 294,
+      "OTH": 40
     },
-    "winner_party": "YSRCP",
-    "margin": 21,
-    "margin_pct": 3.0,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "winner_party": "BJP",
+    "margin": 120,
+    "margin_pct": 16.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 98,
@@ -2195,16 +2195,16 @@
     "lng": 77.288737,
     "is_urban": false,
     "electorate": 911,
-    "total_votes": 719,
-    "turnout_pct": 79.0,
+    "total_votes": 721,
+    "turnout_pct": 79.1,
     "votes": {
-      "BJP": 441,
-      "YSRCP": 231,
-      "OTH": 47
+      "BJP": 454,
+      "YSRCP": 221,
+      "OTH": 46
     },
     "winner_party": "BJP",
-    "margin": 210,
-    "margin_pct": 29.2,
+    "margin": 233,
+    "margin_pct": 32.3,
     "tier": "STRONGHOLD"
   },
   {
@@ -2219,17 +2219,17 @@
     "lng": 77.286417,
     "is_urban": false,
     "electorate": 747,
-    "total_votes": 585,
-    "turnout_pct": 78.4,
+    "total_votes": 821,
+    "turnout_pct": 109.9,
     "votes": {
-      "BJP": 234,
-      "YSRCP": 291,
-      "OTH": 60
+      "BJP": 456,
+      "YSRCP": 313,
+      "OTH": 52
     },
-    "winner_party": "YSRCP",
-    "margin": 57,
-    "margin_pct": 9.7,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "BJP",
+    "margin": 143,
+    "margin_pct": 17.4,
+    "tier": "LEAN"
   },
   {
     "booth_no": 100,
@@ -2243,17 +2243,17 @@
     "lng": 77.281739,
     "is_urban": false,
     "electorate": 956,
-    "total_votes": 804,
-    "turnout_pct": 84.2,
+    "total_votes": 859,
+    "turnout_pct": 89.9,
     "votes": {
-      "BJP": 320,
-      "YSRCP": 402,
-      "OTH": 82
+      "BJP": 622,
+      "YSRCP": 206,
+      "OTH": 31
     },
-    "winner_party": "YSRCP",
-    "margin": 82,
-    "margin_pct": 10.2,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "BJP",
+    "margin": 416,
+    "margin_pct": 48.4,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 101,
@@ -2267,17 +2267,17 @@
     "lng": 77.281739,
     "is_urban": false,
     "electorate": 959,
-    "total_votes": 766,
-    "turnout_pct": 79.9,
+    "total_votes": 857,
+    "turnout_pct": 89.4,
     "votes": {
-      "BJP": 347,
-      "YSRCP": 348,
-      "OTH": 71
+      "BJP": 298,
+      "YSRCP": 473,
+      "OTH": 86
     },
     "winner_party": "YSRCP",
-    "margin": 1,
-    "margin_pct": 0.1,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 175,
+    "margin_pct": 20.4,
+    "tier": "DEFICIT_CRITICAL"
   },
   {
     "booth_no": 102,
@@ -2291,16 +2291,16 @@
     "lng": 77.281739,
     "is_urban": false,
     "electorate": 936,
-    "total_votes": 783,
-    "turnout_pct": 83.7,
+    "total_votes": 594,
+    "turnout_pct": 63.5,
     "votes": {
-      "BJP": 444,
-      "YSRCP": 281,
-      "OTH": 58
+      "BJP": 378,
+      "YSRCP": 166,
+      "OTH": 50
     },
     "winner_party": "BJP",
-    "margin": 163,
-    "margin_pct": 20.8,
+    "margin": 212,
+    "margin_pct": 35.7,
     "tier": "STRONGHOLD"
   },
   {
@@ -2315,17 +2315,17 @@
     "lng": 77.281739,
     "is_urban": false,
     "electorate": 913,
-    "total_votes": 792,
-    "turnout_pct": 86.8,
+    "total_votes": 794,
+    "turnout_pct": 87.0,
     "votes": {
-      "BJP": 427,
-      "YSRCP": 303,
-      "OTH": 62
+      "BJP": 533,
+      "YSRCP": 221,
+      "OTH": 40
     },
     "winner_party": "BJP",
-    "margin": 124,
-    "margin_pct": 15.7,
-    "tier": "LEAN"
+    "margin": 312,
+    "margin_pct": 39.3,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 104,
@@ -2339,17 +2339,17 @@
     "lng": 77.279292,
     "is_urban": false,
     "electorate": 810,
-    "total_votes": 661,
-    "turnout_pct": 81.7,
+    "total_votes": 906,
+    "turnout_pct": 111.9,
     "votes": {
-      "BJP": 360,
-      "YSRCP": 250,
-      "OTH": 51
+      "BJP": 634,
+      "YSRCP": 0,
+      "OTH": 272
     },
     "winner_party": "BJP",
-    "margin": 110,
-    "margin_pct": 16.6,
-    "tier": "LEAN"
+    "margin": 634,
+    "margin_pct": 70.0,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 105,
@@ -2363,17 +2363,17 @@
     "lng": 77.279292,
     "is_urban": false,
     "electorate": 938,
-    "total_votes": 762,
-    "turnout_pct": 81.3,
+    "total_votes": 851,
+    "turnout_pct": 90.7,
     "votes": {
-      "BJP": 407,
-      "YSRCP": 294,
-      "OTH": 61
+      "BJP": 553,
+      "YSRCP": 256,
+      "OTH": 42
     },
     "winner_party": "BJP",
-    "margin": 113,
-    "margin_pct": 14.8,
-    "tier": "LEAN"
+    "margin": 297,
+    "margin_pct": 34.9,
+    "tier": "STRONGHOLD"
   },
   {
     "booth_no": 106,
@@ -2387,16 +2387,16 @@
     "lng": 77.266726,
     "is_urban": false,
     "electorate": 877,
-    "total_votes": 734,
-    "turnout_pct": 83.7,
+    "total_votes": 682,
+    "turnout_pct": 77.8,
     "votes": {
-      "BJP": 364,
-      "YSRCP": 307,
-      "OTH": 63
+      "BJP": 363,
+      "YSRCP": 261,
+      "OTH": 58
     },
     "winner_party": "BJP",
-    "margin": 57,
-    "margin_pct": 7.8,
+    "margin": 102,
+    "margin_pct": 15.0,
     "tier": "LEAN"
   }
 ]

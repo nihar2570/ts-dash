@@ -31,7 +31,7 @@ import {
 } from '../data/casteClassifierService';
 import { planPadayatraRoute, type PadayatraHouseStop } from '../data/padayatraService';
 import { AcPadayatraPlannerView } from './AcPadayatraPlannerView';
-import type { SeeepcDataset, ConstituencyDemographics } from '../types';
+import type { DemographicsDataset, ConstituencyDemographics } from '../types';
 
 export interface AcItem {
   ac_no: number;
@@ -48,7 +48,7 @@ interface BoothDataViewProps {
   initialBoothNo?: number;
   onSelectBooth?: (boothNo: number) => void;
   initialViewMode?: 'table' | 'panna' | 'household' | 'padayatra' | 'ac-plan';
-  seeepcData?: SeeepcDataset | null;
+  demographicsData?: DemographicsDataset | null;
 }
 
 /**
@@ -83,7 +83,7 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
   initialBoothNo,
   onSelectBooth,
   initialViewMode,
-  seeepcData,
+  demographicsData,
 }) => {
   // AC selection & search
   const [acSearchQuery, setAcSearchQuery] = useState('');
@@ -189,14 +189,14 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
 
   // All 175 AC list
   const acList: AcItem[] = useMemo(() => {
-    if (!seeepcData?.constituencies) {
+    if (!demographicsData?.constituencies) {
       return Array.from({ length: 175 }, (_, i) => ({
         ac_no: i + 1,
         ac_name: `Constituency #${i + 1}`,
         district: 'Andhra Pradesh',
       }));
     }
-    return Object.values(seeepcData.constituencies).map((c: ConstituencyDemographics) => ({
+    return Object.values(demographicsData.constituencies).map((c: ConstituencyDemographics) => ({
       ac_no: c.ac_no,
       ac_name: c.ac_name,
       district: c.district,
@@ -204,7 +204,7 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
       winnerParty: c.winner_2023.party,
       margin: c.margin_2023,
     }));
-  }, [seeepcData]);
+  }, [demographicsData]);
 
   const currentAc = useMemo((): AcItem => {
     return (

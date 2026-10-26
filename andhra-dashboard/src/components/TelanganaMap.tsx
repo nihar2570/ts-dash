@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import L from 'leaflet';
 import { Layers, Hexagon, Map as MapIcon, Crosshair, Maximize2, Minimize2, Plus, Minus, RotateCcw, Palette } from 'lucide-react';
-import type { ConstituencyResult, Year, ViewMode, SeeepcDataset } from '../types';
+import type { ConstituencyResult, Year, ViewMode, DemographicsDataset } from '../types';
 import { getPartyColor, getDistrictGrey, getPastelPartyColor } from '../types';
 import { ANDHRA_HEX_COORDINATES } from '../data/hexCoordinates';
 
@@ -51,7 +51,7 @@ interface MapProps {
   onSelectAc: (acNo: number) => void;
   viewMode: ViewMode;
   selectedYear: Year;
-  seeepcData?: SeeepcDataset | null;
+  demographicsData?: DemographicsDataset | null;
 }
 
 export const AndhraMap: React.FC<MapProps> = ({
@@ -62,7 +62,7 @@ export const AndhraMap: React.FC<MapProps> = ({
   onSelectAc,
   viewMode,
   selectedYear,
-  seeepcData,
+  demographicsData,
 }) => {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
@@ -485,8 +485,8 @@ export const AndhraMap: React.FC<MapProps> = ({
 
       let fillColor = '#94a3b8';
 
-      if (thematicLayer !== 'NONE' && seeepcData?.constituencies) {
-        const acInfo = seeepcData.constituencies[String(acNo)];
+      if (thematicLayer !== 'NONE' && demographicsData?.constituencies) {
+        const acInfo = demographicsData.constituencies[String(acNo)];
         const casteProf = acInfo?.caste_profile as unknown as Record<string, number> | undefined;
         const ageProf = acInfo?.age_profile as unknown as Record<string, number> | undefined;
         let pct = 0;
@@ -577,8 +577,8 @@ export const AndhraMap: React.FC<MapProps> = ({
           tooltipHtml += `<div class="text-xs text-slate-400">No data available</div>`;
         }
 
-        if (thematicLayer !== 'NONE' && seeepcData?.constituencies) {
-          const acInfo = seeepcData.constituencies[String(acNo)];
+        if (thematicLayer !== 'NONE' && demographicsData?.constituencies) {
+          const acInfo = demographicsData.constituencies[String(acNo)];
           const casteProf = acInfo?.caste_profile as unknown as Record<string, number> | undefined;
           const ageProf = acInfo?.age_profile as unknown as Record<string, number> | undefined;
           let pct = 0;
@@ -649,7 +649,7 @@ export const AndhraMap: React.FC<MapProps> = ({
         }
       }, 100);
     }
-  }, [mapReady, geoJsonData, yearResults, selectedAcNo, viewMode, selectedYear, onSelectAc, thematicLayer, seeepcData]);
+  }, [mapReady, geoJsonData, yearResults, selectedAcNo, viewMode, selectedYear, onSelectAc, thematicLayer, demographicsData]);
 
   // One-click Re-center handler to reset map view directly to Andhra Pradesh boundary
   const handleRecenter = () => {
@@ -688,8 +688,8 @@ export const AndhraMap: React.FC<MapProps> = ({
       let textColor = hexColorMode === 'pastel' ? '#0f172a' : '#ffffff';
       let demographicPct = 0;
 
-      if (thematicLayer !== 'NONE' && seeepcData?.constituencies) {
-        const acInfo = seeepcData.constituencies[String(acNo)];
+      if (thematicLayer !== 'NONE' && demographicsData?.constituencies) {
+        const acInfo = demographicsData.constituencies[String(acNo)];
         const casteProf = acInfo?.caste_profile as unknown as Record<string, number> | undefined;
         const ageProf = acInfo?.age_profile as unknown as Record<string, number> | undefined;
         if (casteProf && thematicLayer in casteProf) {
@@ -770,7 +770,7 @@ export const AndhraMap: React.FC<MapProps> = ({
         demographicPct,
       };
     });
-  }, [yearResults, thematicLayer, seeepcData, viewMode, hexColorMode]);
+  }, [yearResults, thematicLayer, demographicsData, viewMode, hexColorMode]);
 
   const hoveredItem = useMemo(() => {
     if (!hoveredHexAc) return null;

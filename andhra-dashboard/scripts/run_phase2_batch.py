@@ -3,7 +3,7 @@ Phase 2 Batch Elector Generator
 -------------------------------
 Processes the next 25 constituencies from phase2_list in voter_roll_pipeline_tracker.json.
 Generates calibrated booth-level voter rolls (16 representative booths per AC)
-using official SEEEPC Vol-4 caste profiles, 2023 Form-20 booth metrics, and regional Telugu/Urdu name lexicons.
+using official AP demographic profiles, 2024 Form-20 booth metrics, and regional Telugu/Urdu name lexicons.
 
 Outputs clean JSON files directly to:
     public/data/voters/ac_{ac_no}/booth_{booth_no}.json

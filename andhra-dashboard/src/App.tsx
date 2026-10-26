@@ -5,7 +5,7 @@ import type {
   ViewMode,
   ConstituencyCandidatesData,
   ActiveTab,
-  SeeepcDataset,
+  DemographicsDataset,
 } from './types';
 import { AndhraMap } from './components/TelanganaMap';
 import { SeatTallyBar } from './components/SeatTallyBar';
@@ -124,7 +124,7 @@ export const App: React.FC = () => {
   const [geoJsonData, setGeoJsonData] = useState<any | null>(null);
   const [districtGeoJsonData, setDistrictGeoJsonData] = useState<any | null>(null);
   const [candidatesData, setCandidatesData] = useState<Record<string, ConstituencyCandidatesData> | null>(null);
-  const [seeepcData, setSeeepcData] = useState<SeeepcDataset | null>(null);
+  const [demographicsData, setDemographicsData] = useState<DemographicsDataset | null>(null);
   const isDossierRoute = typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('dossier');
 
   const handleOpenDossier = (acNo: number, tab?: string) => {
@@ -148,7 +148,7 @@ export const App: React.FC = () => {
     async function loadData() {
       try {
         setLoading(true);
-        const [geoRes, electRes, distRes, candRes, seeepcRes] = await Promise.all([
+        const [geoRes, electRes, distRes, candRes, demoRes] = await Promise.all([
           fetch('/data/andhra_assembly.geojson'),
           fetch('/data/andhra_elections.json'),
           fetch('/data/andhra_districts.geojson').catch(() => null),
@@ -164,13 +164,13 @@ export const App: React.FC = () => {
         const elect = await electRes.json();
         const dist = distRes && distRes.ok ? await distRes.json() : null;
         const cand = candRes && candRes.ok ? await candRes.json() : null;
-        const seeepc = seeepcRes && seeepcRes.ok ? await seeepcRes.json() : null;
+        const demographics = demoRes && demoRes.ok ? await demoRes.json() : null;
 
         setGeoJsonData(geo);
         setElectionData(elect);
         setDistrictGeoJsonData(dist);
         setCandidatesData(cand);
-        setSeeepcData(seeepc);
+        setDemographicsData(demographics);
         setLoading(false);
       } catch (err: any) {
         console.error(err);
@@ -228,7 +228,7 @@ export const App: React.FC = () => {
       <ConstituencyDossier
         data={candidatesData[String(selectedAcNo)] || null}
         isOpen={true}
-        seeepcData={seeepcData}
+        demographicsData={demographicsData}
         geoJsonData={geoJsonData}
         allConstituencies={allConstituenciesList}
         electionData={electionData}
@@ -270,7 +270,7 @@ export const App: React.FC = () => {
         electionData={electionData}
         setSelectedAcNo={setSelectedAcNo}
         onOpenDossier={(acNo) => handleOpenDossier(acNo)}
-        seeepcData={seeepcData}
+        demographicsData={demographicsData}
         setIsExecutiveBriefingOpen={setIsExecutiveBriefingOpen}
         onHelpOpen={() => setHelpOpen(true)}
       />
@@ -321,7 +321,7 @@ export const App: React.FC = () => {
                     onSelectAc={setSelectedAcNo}
                     viewMode={viewMode}
                     selectedYear={selectedYear}
-                    seeepcData={seeepcData}
+                    demographicsData={demographicsData}
                   />
                 </div>
               </div>
@@ -353,9 +353,9 @@ export const App: React.FC = () => {
         )}
 
         {/* Simulations Tab: War Room & Inverse-Margin Bubble Chart */}
-        {activeTab === 'simulations' && seeepcData && (
+        {activeTab === 'simulations' && demographicsData && (
           <SimulationsView
-            data={seeepcData}
+            data={demographicsData}
             electionData={electionData}
             onNavigateToActions={(acNo) => {
               if (acNo) setSelectedAcNo(acNo);
@@ -369,9 +369,9 @@ export const App: React.FC = () => {
         )}
 
         {/* Actions Tab: Campaign Playbook & Strategic Point Allocator */}
-        {activeTab === 'actions' && seeepcData && (
+        {activeTab === 'actions' && demographicsData && (
           <ActionsView
-            data={seeepcData}
+            data={demographicsData}
             initialSelectedAc={selectedAcNo}
             onOpenDossier={(acNo) => handleOpenDossier(acNo)}
             scenarioBridge={activeScenarioBridge}
@@ -392,17 +392,17 @@ export const App: React.FC = () => {
             }}
             initialBoothNo={selectedBoothNo}
             onSelectBooth={setSelectedBoothNo}
-            seeepcData={seeepcData}
+            demographicsData={demographicsData}
           />
         )}
       </main>
 
       {/* Feature #11: Global Executive Intelligence Briefing Modal */}
-      {seeepcData && (
+      {demographicsData && (
         <ExecutiveBriefingModal
           isOpen={isExecutiveBriefingOpen}
           onClose={() => setIsExecutiveBriefingOpen(false)}
-          data={seeepcData}
+          data={demographicsData}
           targetParty="INC"
         />
       )}

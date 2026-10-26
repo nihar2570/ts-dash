@@ -11,16 +11,16 @@
     "lng": 78.895721,
     "is_urban": false,
     "electorate": 1019,
-    "total_votes": 790,
-    "turnout_pct": 77.6,
+    "total_votes": 572,
+    "turnout_pct": 56.1,
     "votes": {
-      "YSRCP": 465,
-      "BJP": 275,
-      "OTH": 50
+      "YSRCP": 572,
+      "BJP": 0,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 190,
-    "margin_pct": 24.1,
+    "margin": 572,
+    "margin_pct": 100.0,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -35,16 +35,16 @@
     "lng": 78.896784,
     "is_urban": false,
     "electorate": 866,
-    "total_votes": 662,
-    "turnout_pct": 76.5,
+    "total_votes": 381,
+    "turnout_pct": 44.0,
     "votes": {
-      "YSRCP": 480,
-      "BJP": 154,
-      "OTH": 28
+      "YSRCP": 381,
+      "BJP": 0,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 326,
-    "margin_pct": 49.2,
+    "margin": 381,
+    "margin_pct": 100.0,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -59,17 +59,17 @@
     "lng": 78.931578,
     "is_urban": false,
     "electorate": 772,
-    "total_votes": 634,
-    "turnout_pct": 82.2,
+    "total_votes": 5,
+    "turnout_pct": 0.6,
     "votes": {
-      "YSRCP": 264,
-      "BJP": 314,
-      "OTH": 56
+      "YSRCP": 0,
+      "BJP": 0,
+      "OTH": 5
     },
-    "winner_party": "BJP",
-    "margin": 50,
-    "margin_pct": 7.9,
-    "tier": "LEAN"
+    "winner_party": "YSRCP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 4,
@@ -83,16 +83,16 @@
     "lng": 78.931578,
     "is_urban": false,
     "electorate": 980,
-    "total_votes": 841,
-    "turnout_pct": 85.9,
+    "total_votes": 39,
+    "turnout_pct": 4.0,
     "votes": {
-      "YSRCP": 458,
-      "BJP": 325,
-      "OTH": 58
+      "YSRCP": 39,
+      "BJP": 0,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 133,
-    "margin_pct": 15.8,
+    "margin": 39,
+    "margin_pct": 100.0,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -107,17 +107,17 @@
     "lng": 78.910431,
     "is_urban": false,
     "electorate": 1001,
-    "total_votes": 856,
-    "turnout_pct": 85.6,
+    "total_votes": 3,
+    "turnout_pct": 0.3,
     "votes": {
-      "YSRCP": 516,
-      "BJP": 289,
-      "OTH": 51
+      "YSRCP": 0,
+      "BJP": 0,
+      "OTH": 3
     },
     "winner_party": "YSRCP",
-    "margin": 227,
-    "margin_pct": 26.5,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 6,
@@ -131,16 +131,16 @@
     "lng": 78.910431,
     "is_urban": false,
     "electorate": 998,
-    "total_votes": 821,
-    "turnout_pct": 82.3,
+    "total_votes": 251,
+    "turnout_pct": 25.2,
     "votes": {
-      "YSRCP": 462,
-      "BJP": 305,
-      "OTH": 54
+      "YSRCP": 251,
+      "BJP": 0,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 157,
-    "margin_pct": 19.1,
+    "margin": 251,
+    "margin_pct": 100.0,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -155,16 +155,16 @@
     "lng": 78.906717,
     "is_urban": false,
     "electorate": 944,
-    "total_votes": 737,
-    "turnout_pct": 78.1,
+    "total_votes": 290,
+    "turnout_pct": 30.7,
     "votes": {
-      "YSRCP": 461,
-      "BJP": 234,
-      "OTH": 42
+      "YSRCP": 290,
+      "BJP": 0,
+      "OTH": 0
     },
     "winner_party": "YSRCP",
-    "margin": 227,
-    "margin_pct": 30.8,
+    "margin": 290,
+    "margin_pct": 100.0,
     "tier": "DEFICIT_CRITICAL"
   },
   {
@@ -179,17 +179,17 @@
     "lng": 78.914221,
     "is_urban": false,
     "electorate": 938,
-    "total_votes": 732,
-    "turnout_pct": 78.1,
+    "total_votes": 3076,
+    "turnout_pct": 327.9,
     "votes": {
-      "YSRCP": 407,
-      "BJP": 276,
-      "OTH": 49
+      "YSRCP": 290,
+      "BJP": 0,
+      "OTH": 2786
     },
     "winner_party": "YSRCP",
-    "margin": 131,
-    "margin_pct": 17.9,
-    "tier": "DEFICIT_CRITICAL"
+    "margin": 290,
+    "margin_pct": 9.4,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 9,

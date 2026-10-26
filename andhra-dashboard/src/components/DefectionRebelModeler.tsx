@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import type { SeeepcDataset } from '../types';
+import type { DemographicsDataset } from '../types';
 import { getPartyColor } from '../types';
 import {
   AlertTriangle,
@@ -86,7 +86,7 @@ export const PRESET_SCENARIOS: Omit<DefectionEvent, 'id'>[] = [
 ];
 
 export interface DefectionRebelModelerProps {
-  data: SeeepcDataset;
+  data: DemographicsDataset;
   onOpenDossier?: (acNo: number) => void;
   events?: DefectionEvent[];
   onEventsChange?: (events: DefectionEvent[]) => void;

@@ -11,16 +11,16 @@
     "lng": 77.796232,
     "is_urban": false,
     "electorate": 934,
-    "total_votes": 733,
-    "turnout_pct": 78.5,
+    "total_votes": 746,
+    "turnout_pct": 79.9,
     "votes": {
-      "BJP": 391,
-      "YSRCP": 309,
-      "OTH": 33
+      "BJP": 0,
+      "YSRCP": 0,
+      "OTH": 746
     },
     "winner_party": "BJP",
-    "margin": 82,
-    "margin_pct": 11.2,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -35,17 +35,17 @@
     "lng": 77.817922,
     "is_urban": false,
     "electorate": 962,
-    "total_votes": 717,
-    "turnout_pct": 74.6,
+    "total_votes": 707,
+    "turnout_pct": 73.5,
     "votes": {
-      "BJP": 231,
-      "YSRCP": 440,
-      "OTH": 46
+      "BJP": 0,
+      "YSRCP": 0,
+      "OTH": 707
     },
-    "winner_party": "YSRCP",
-    "margin": 209,
-    "margin_pct": 29.1,
-    "tier": "DEFICIT_CRITICAL"
+    "winner_party": "BJP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 3,
@@ -59,16 +59,16 @@
     "lng": 77.817922,
     "is_urban": false,
     "electorate": 698,
-    "total_votes": 640,
-    "turnout_pct": 91.8,
+    "total_votes": 518,
+    "turnout_pct": 74.2,
     "votes": {
-      "BJP": 327,
-      "YSRCP": 283,
-      "OTH": 30
+      "BJP": 0,
+      "YSRCP": 0,
+      "OTH": 518
     },
     "winner_party": "BJP",
-    "margin": 44,
-    "margin_pct": 6.9,
+    "margin": 0,
+    "margin_pct": 0.0,
     "tier": "LEAN"
   },
   {
@@ -83,17 +83,17 @@
     "lng": 77.80955,
     "is_urban": false,
     "electorate": 1028,
-    "total_votes": 901,
-    "turnout_pct": 87.7,
+    "total_votes": 622,
+    "turnout_pct": 60.5,
     "votes": {
-      "BJP": 451,
-      "YSRCP": 408,
-      "OTH": 42
+      "BJP": 0,
+      "YSRCP": 0,
+      "OTH": 622
     },
     "winner_party": "BJP",
-    "margin": 43,
-    "margin_pct": 4.8,
-    "tier": "BATTLEGROUND_TOSS_UP"
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 5,
@@ -107,16 +107,16 @@
     "lng": 77.80955,
     "is_urban": false,
     "electorate": 1098,
-    "total_votes": 978,
-    "turnout_pct": 89.1,
+    "total_votes": 810,
+    "turnout_pct": 73.8,
     "votes": {
-      "BJP": 413,
-      "YSRCP": 512,
-      "OTH": 53
+      "BJP": 0,
+      "YSRCP": 0,
+      "OTH": 810
     },
-    "winner_party": "YSRCP",
-    "margin": 99,
-    "margin_pct": 10.1,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "BJP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   }
 ]

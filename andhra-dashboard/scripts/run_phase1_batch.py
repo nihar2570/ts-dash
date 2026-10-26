@@ -2,7 +2,7 @@
 Phase 1 Batch Elector Generator
 -------------------------------
 Generates calibrated booth-level voter rolls for all 20 Phase 1 battleground constituencies
-using official SEEEPC Vol-4 caste profiles, 2023 Form-20 booth metrics, and regional Telugu/Urdu name lexicons.
+using official AP demographic profiles, 2024 Form-20 booth metrics, and regional Telugu/Urdu name lexicons.
 
 Outputs clean JSON files directly to:
     public/data/voters/ac_{ac_no}/booth_{booth_no}.json

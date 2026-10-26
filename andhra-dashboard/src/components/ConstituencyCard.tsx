@@ -11,6 +11,7 @@ import {
   Scale,
   FileText,
   Target,
+  Vote,
 } from 'lucide-react';
 import { CONSTITUENCY_MANDALS } from '../data/mandalData';
 
@@ -201,8 +202,23 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
                 </span>
               </div>
 
+              {/* Turnout & Electorate Metrics */}
+              {res.turnout_pct > 0 && (
+                <div className="flex items-center justify-between text-[11px] text-slate-500 pt-1">
+                  <span className="flex items-center gap-1 font-medium text-slate-600">
+                    <Vote className="w-3 h-3 text-indigo-600" />
+                    Turnout: <strong className="text-slate-800 font-mono">{res.turnout_pct}%</strong>
+                  </span>
+                  {res.total_electors ? (
+                    <span className="text-[10px] text-slate-400 font-mono">
+                      {res.total_electors.toLocaleString()} electors
+                    </span>
+                  ) : null}
+                </div>
+              )}
+
               {/* Feature #5 Micro-Badge: Form-20 Booth Deficit / Buffer */}
-              {isActive && y === '2023' && (
+              {isActive && (y === '2024' || y === '2023') && (
                 <button
                   type="button"
                   onClick={(e) => {

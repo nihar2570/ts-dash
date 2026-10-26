@@ -13,7 +13,7 @@ import {
   ChevronDown,
   ChevronUp,
 } from 'lucide-react';
-import type { SeeepcDataset } from '../types';
+import type { DemographicsDataset } from '../types';
 
 export type PartySwing = Record<string, number>;
 export type MacroSwing = Record<string, number>;
@@ -21,7 +21,7 @@ export type MacroSwing = Record<string, number>;
 interface SwingStudioModalProps {
   isOpen: boolean;
   onClose: () => void;
-  data: SeeepcDataset;
+  data: DemographicsDataset;
   swings: Record<string, PartySwing>;
   setSwings: React.Dispatch<React.SetStateAction<Record<string, PartySwing>>>;
   macroSwing: MacroSwing;
@@ -417,7 +417,7 @@ export const SwingStudioModal: React.FC<SwingStudioModalProps> = ({
                     Demographic Swing Studio
                   </h2>
                   <span className="text-[11px] font-mono bg-indigo-50 text-indigo-700 border border-indigo-200 px-2.5 py-0.5 rounded-full font-bold">
-                    SEEEPC Vol-4 • 100% Simplex Balancer
+                    Demographics Engine • 100% Simplex Balancer
                   </span>
                 </div>
                 <p className="text-xs text-slate-500">

@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import type { SeeepcDataset, SimulatedConstituencyResult } from '../types';
+import type { DemographicsDataset, SimulatedConstituencyResult } from '../types';
 import type { MacroSwing, PartySwing } from './SwingStudioModal';
 import {
   Handshake,
@@ -37,7 +37,7 @@ export interface TurnoutSettings {
 }
 
 export interface AdvancedSimulationSuiteProps {
-  data: SeeepcDataset;
+  data: DemographicsDataset;
   simulatedResults: SimulatedConstituencyResult[];
   activePreset: string;
   onApplyPreset: (presetKey: string) => void;
@@ -453,7 +453,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                       <Sliders className="w-4 h-4 text-indigo-300" />
                     </span>
                     <span className="font-bold text-xs text-white uppercase tracking-wider font-mono">
-                      SEEEPC Volume-4 Demographics Engine
+                      Demographics & Community Swings Engine
                     </span>
                     {activeCustomizedCount > 0 && (
                       <span className="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/40 px-2 py-0.5 rounded font-mono font-bold">

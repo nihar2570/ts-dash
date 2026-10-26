@@ -146,7 +146,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
           </h3>
           <ul className="text-xs text-slate-700 space-y-1 pl-5 list-disc">
             <li>Click the dark <strong>"Executive Briefing"</strong> button in the header for a high-level strategic briefing across all constituencies.</li>
-            <li>Shows <strong>key metrics, vulnerability analysis, and strategic recommendations</strong> powered by SEEEPC data.</li>
+            <li>Shows <strong>key metrics, vulnerability analysis, and strategic recommendations</strong> powered by demographic census data.</li>
           </ul>
         </section>
 

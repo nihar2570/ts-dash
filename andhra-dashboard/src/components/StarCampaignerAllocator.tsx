@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import type { SeeepcDataset, CasteProfile } from '../types';
+import type { DemographicsDataset, CasteProfile } from '../types';
 import { getPartyColor } from '../types';
 import {
   Star,
@@ -558,7 +558,7 @@ export function getConstituencySquadRecommendation(
 }
 
 export interface StarCampaignerAllocatorProps {
-  data: SeeepcDataset;
+  data: DemographicsDataset;
   onOpenDossier?: (acNo: number) => void;
   allocations?: Record<string, Record<number, number>>;
   onAllocationsChange?: (allocations: Record<string, Record<number, number>>) => void;

@@ -84,8 +84,6 @@ for ac_no_str, c in demo['constituencies'].items():
 
 with open('public/data/andhra_demographics.json', 'w', encoding='utf-8') as f:
     json.dump(demo, f, indent=2, ensure_ascii=False)
-with open('public/data/telangana_seeepc_demographics.json', 'w', encoding='utf-8') as f:
-    json.dump(demo, f, indent=2, ensure_ascii=False)
 
 print("Saved updated elections and demographics files with verified candidate names!")
 

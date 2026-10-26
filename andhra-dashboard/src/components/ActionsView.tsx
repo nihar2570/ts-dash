@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import type { SeeepcDataset, ActiveScenarioBridge, ConstituencyCandidatesData } from '../types';
+import type { DemographicsDataset, ActiveScenarioBridge, ConstituencyCandidatesData } from '../types';
 import { getPartyColor, getPartyBg } from '../types';
 import type { WhatIfTab } from './AdvancedSimulationSuite';
 import {
@@ -36,7 +36,7 @@ import { DefectionRebelModeler, type DefectionEvent, PRESET_SCENARIOS } from './
 import { ExecutiveBriefingModal } from './ExecutiveBriefingModal';
 
 interface ActionsViewProps {
-  data: SeeepcDataset;
+  data: DemographicsDataset;
   initialSelectedAc?: number | null;
   onOpenDossier?: (acNo: number) => void;
   scenarioBridge?: ActiveScenarioBridge | null;
@@ -715,7 +715,7 @@ topTargets
   )
   .join('\n\n')}
 
-Generated via Andhra Pradesh Assembly SEEEPC Strategic Decision Engine.`;
+Generated via Andhra Pradesh Assembly Strategic Decision Engine.`;
   }, [
     battlegroundList,
     targetParty,

@@ -491,16 +491,16 @@
     "lng": 78.388879,
     "is_urban": false,
     "electorate": 892,
-    "total_votes": 695,
-    "turnout_pct": 78.0,
+    "total_votes": 10,
+    "turnout_pct": 1.1,
     "votes": {
-      "TDP": 286,
-      "YSRCP": 359,
-      "OTH": 50
+      "TDP": 0,
+      "YSRCP": 0,
+      "OTH": 10
     },
-    "winner_party": "YSRCP",
-    "margin": 73,
-    "margin_pct": 10.5,
-    "tier": "DEFICIT_MODERATE"
+    "winner_party": "TDP",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "tier": "LEAN"
   }
 ]

@@ -62,7 +62,8 @@ All production datasets reside in `public/data/`:
 | `andhra_districts.geojson` | Boundary polygons for all 26 Andhra Pradesh districts |
 | `andhra_elections.json` | Certified election results for 2014, 2019, and 2024 |
 | `andhra_candidates_2024.json` | Complete MyNeta ADR affidavits for all 2,368 candidates |
-| `andhra_demographics.json` | SEEEPC demographic estimates and community weightings |
+| `andhra_voters_info_2024.json` | Official ECI 2024 Form-12 voter info, total electors, male/female turnout, NOTA, postal and valid votes for all 175 ACs |
+| `andhra_demographics.json` | Andhra Pradesh demographic estimates and community census weightings |
 | `booths/ac_{acNo}.json` | Authentic ECI polling station coordinates and Form-20 returns |
 | `rolls/` | Form-20 polling station roll data |
 

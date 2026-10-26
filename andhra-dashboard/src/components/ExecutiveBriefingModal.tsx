@@ -1,5 +1,5 @@
 import React from 'react';
-import type { SeeepcDataset } from '../types';
+import type { DemographicsDataset } from '../types';
 import { getPartyColor } from '../types';
 import {
   X,
@@ -14,7 +14,7 @@ import {
 interface ExecutiveBriefingModalProps {
   isOpen: boolean;
   onClose: () => void;
-  data: SeeepcDataset;
+  data: DemographicsDataset;
   targetParty: 'TDP' | 'YSRCP' | 'JSP' | 'BJP' | 'INC';
 }
 

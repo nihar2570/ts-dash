@@ -227,17 +227,17 @@
     "lng": 83.137442,
     "is_urban": false,
     "electorate": 847,
-    "total_votes": 675,
-    "turnout_pct": 79.8,
+    "total_votes": 22,
+    "turnout_pct": 2.6,
     "votes": {
-      "JSP": 446,
-      "YSRCP": 192,
-      "OTH": 37
+      "JSP": 10,
+      "YSRCP": 12,
+      "OTH": 0
     },
-    "winner_party": "JSP",
-    "margin": 254,
-    "margin_pct": 37.6,
-    "tier": "STRONGHOLD"
+    "winner_party": "YSRCP",
+    "margin": 2,
+    "margin_pct": 9.1,
+    "tier": "DEFICIT_MODERATE"
   },
   {
     "booth_no": 11,
@@ -251,16 +251,16 @@
     "lng": 83.12464,
     "is_urban": false,
     "electorate": 853,
-    "total_votes": 702,
-    "turnout_pct": 82.3,
+    "total_votes": 819,
+    "turnout_pct": 96.0,
     "votes": {
-      "JSP": 536,
-      "YSRCP": 139,
-      "OTH": 27
+      "JSP": 517,
+      "YSRCP": 12,
+      "OTH": 290
     },
     "winner_party": "JSP",
-    "margin": 397,
-    "margin_pct": 56.6,
+    "margin": 505,
+    "margin_pct": 61.7,
     "tier": "STRONGHOLD"
   },
   {
@@ -275,17 +275,17 @@
     "lng": 83.136041,
     "is_urban": false,
     "electorate": 900,
-    "total_votes": 731,
-    "turnout_pct": 81.3,
+    "total_votes": 649,
+    "turnout_pct": 72.1,
     "votes": {
-      "JSP": 416,
-      "YSRCP": 264,
-      "OTH": 51
+      "JSP": 370,
+      "YSRCP": 279,
+      "OTH": 0
     },
     "winner_party": "JSP",
-    "margin": 152,
-    "margin_pct": 20.8,
-    "tier": "STRONGHOLD"
+    "margin": 91,
+    "margin_pct": 14.0,
+    "tier": "LEAN"
   },
   {
     "booth_no": 13,
@@ -299,16 +299,16 @@
     "lng": 83.12466,
     "is_urban": false,
     "electorate": 980,
-    "total_votes": 646,
-    "turnout_pct": 66.0,
+    "total_votes": 223,
+    "turnout_pct": 22.8,
     "votes": {
-      "JSP": 383,
-      "YSRCP": 220,
-      "OTH": 43
+      "JSP": 221,
+      "YSRCP": 2,
+      "OTH": 0
     },
     "winner_party": "JSP",
-    "margin": 163,
-    "margin_pct": 25.2,
+    "margin": 219,
+    "margin_pct": 98.2,
     "tier": "STRONGHOLD"
   },
   {

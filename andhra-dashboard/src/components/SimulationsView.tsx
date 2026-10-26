@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import type {
-  SeeepcDataset,
+  DemographicsDataset,
   ElectionData,
   SimulatedConstituencyResult,
   ActiveScenarioBridge,
@@ -86,7 +86,7 @@ export const DEFAULT_ZERO_SWINGS: Record<string, PartySwing> = {
 };
 
 interface SimulationsViewProps {
-  data: SeeepcDataset;
+  data: DemographicsDataset;
   electionData?: ElectionData | null;
   onNavigateToActions: (acNo?: number) => void;
   onSelectConstituencyDossier?: (acNo: number) => void;

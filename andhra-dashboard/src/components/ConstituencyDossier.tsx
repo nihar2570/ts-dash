@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import type { ConstituencyCandidatesData, SeeepcDataset, ElectionData } from '../types';
+import type { ConstituencyCandidatesData, DemographicsDataset, ElectionData } from '../types';
 import { getPartyColor, getPartyBg } from '../types';
 import {
   ExternalLink,
@@ -35,7 +35,7 @@ interface ConstituencyDossierProps {
   data: ConstituencyCandidatesData | null;
   isOpen?: boolean;
   onClose: () => void;
-  seeepcData?: SeeepcDataset | null;
+  demographicsData?: DemographicsDataset | null;
   geoJsonData?: any;
   onSelectAc?: (acNo: number) => void;
   allConstituencies?: { ac_no: number; ac_name: string; district: string }[];
@@ -47,7 +47,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
   data,
   isOpen = true,
   onClose,
-  seeepcData,
+  demographicsData,
   geoJsonData,
   onSelectAc,
   allConstituencies,
@@ -141,13 +141,17 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
 
   const mandalTotals = useMemo(() => {
     const totalBooths = mandals.reduce((sum, m) => sum + (m.booths || 0), 0);
-    const totalElectorate = mandals.reduce((sum, m) => sum + (m.electorate || 0), 0);
+    const totalElectorate =
+      data?.voters_info?.electors_total ||
+      mandals.reduce((sum, m) => sum + (m.electorate || 0), 0);
     const avgTurnout =
-      mandals.length > 0
+      data?.voters_info?.turnout_pct !== undefined
+        ? String(data.voters_info.turnout_pct)
+        : mandals.length > 0
         ? (mandals.reduce((sum, m) => sum + (m.turnout_pct || 0), 0) / mandals.length).toFixed(1)
         : '0.0';
     return { totalBooths, totalElectorate, avgTurnout };
-  }, [mandals]);
+  }, [mandals, data?.voters_info]);
 
   const [mandalSearch, setMandalSearch] = useState('');
   const filteredMandals = useMemo(() => {
@@ -163,9 +167,9 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
 
   // AC Demographics & Key Topics hooks
   const acDemographics = useMemo(() => {
-    if (!data || !seeepcData?.constituencies) return null;
-    return seeepcData.constituencies[String(data.ac_no)] || null;
-  }, [data, seeepcData]);
+    if (!data || !demographicsData?.constituencies) return null;
+    return demographicsData.constituencies[String(data.ac_no)] || null;
+  }, [data, demographicsData]);
 
   const acTopics = useMemo(() => {
     if (!data) return null;
@@ -176,42 +180,117 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
     if (!acDemographics?.caste_profile) return null;
     const cp = acDemographics.caste_profile;
     const bcTotal = Number((
+      (cp.bc_turpu_kapu || 0) +
+      (cp.bc_yadava || cp.bc_yadav || 0) +
+      (cp.bc_kuruba_boya || 0) +
+      (cp.bc_settibalija_goud || cp.bc_goud || 0) +
+      (cp.bc_padmashali || 0) +
       (cp.bc_mudiraj || 0) +
       (cp.bc_munnuru_kapu || 0) +
-      (cp.bc_padmashali || 0) +
-      (cp.bc_goud || 0) +
-      (cp.bc_yadav || 0) +
       (cp.bc_other || 0)
     ).toFixed(1));
 
-    const scTotal = Number(((cp.sc_madiga || 0) + (cp.sc_mala || 0)).toFixed(1));
-    const stTotal = Number(((cp.st_lambada || 0) + (cp.st_koya_gond || 0)).toFixed(1));
-    const minorityTotal = Number((cp.minority_muslim || 0).toFixed(1));
-    const ocTotal = Number(((cp.oc_reddy || 0) + (cp.oc_velama || 0) + (cp.oc_other || 0)).toFixed(1));
+    const scTotal = Number((
+      (cp.sc_madiga_relli || cp.sc_madiga || 0) +
+      (cp.sc_mala || 0)
+    ).toFixed(1));
+
+    const stTotal = Number((
+      (cp.st_tribal || cp.st_lambada || 0) +
+      (cp.st_koya_gond || 0)
+    ).toFixed(1));
+
+    const minorityTotal = Number((
+      (cp.minority_muslim || 0) +
+      (cp.minority_christian || 0)
+    ).toFixed(1));
+
+    const ocTotal = Number((
+      (cp.kapu || 0) +
+      (cp.kamma || 0) +
+      (cp.reddy || cp.oc_reddy || 0) +
+      (cp.oc_velama || 0) +
+      (cp.oc_other || 0)
+    ).toFixed(1));
 
     const COMM_META: Record<string, { name: string; category: string; color: string; bg: string }> = {
-      sc_madiga: { name: 'SC Madiga', category: 'Scheduled Castes', color: '#6366f1', bg: '#e0e7ff' },
-      sc_mala: { name: 'SC Mala', category: 'Scheduled Castes', color: '#818cf8', bg: '#ede9fe' },
-      st_lambada: { name: 'ST Lambada', category: 'Scheduled Tribes', color: '#f59e0b', bg: '#fef3c7' },
-      st_koya_gond: { name: 'ST Koya / Gond', category: 'Scheduled Tribes', color: '#d97706', bg: '#fef3c7' },
-      bc_mudiraj: { name: 'BC Mudiraj', category: 'Backward Classes', color: '#06b6d4', bg: '#cffafe' },
-      bc_munnuru_kapu: { name: 'BC Munnuru Kapu', category: 'Backward Classes', color: '#10b981', bg: '#d1fae5' },
-      bc_padmashali: { name: 'BC Padmashali', category: 'Backward Classes', color: '#14b8a6', bg: '#ccfbf1' },
-      bc_goud: { name: 'BC Goud', category: 'Backward Classes', color: '#0ea5e9', bg: '#e0f2fe' },
-      bc_yadav: { name: 'BC Yadav', category: 'Backward Classes', color: '#3b82f6', bg: '#dbeafe' },
+      // 1. Backward Classes (BC)
+      bc_turpu_kapu: { name: 'BC Turpu Kapu', category: 'Backward Classes', color: '#0284c7', bg: '#e0f2fe' },
+      bc_yadava: { name: 'BC Yadava / Golla', category: 'Backward Classes', color: '#0369a1', bg: '#e0f2fe' },
+      bc_kuruba_boya: { name: 'BC Kuruba / Boya', category: 'Backward Classes', color: '#0284c7', bg: '#e0f2fe' },
+      bc_settibalija_goud: { name: 'BC Settibalija / Goud', category: 'Backward Classes', color: '#0ea5e9', bg: '#e0f2fe' },
+      bc_padmashali: { name: 'BC Padmashali', category: 'Backward Classes', color: '#06b6d4', bg: '#cffafe' },
       bc_other: { name: 'Other BCs', category: 'Backward Classes', color: '#64748b', bg: '#f1f5f9' },
+
+      // 2. Scheduled Castes (SC)
+      sc_madiga_relli: { name: 'SC Madiga / Relli', category: 'Scheduled Castes', color: '#6366f1', bg: '#ede9fe' },
+      sc_mala: { name: 'SC Mala', category: 'Scheduled Castes', color: '#7c3aed', bg: '#ede9fe' },
+
+      // 3. Scheduled Tribes (ST)
+      st_tribal: { name: 'ST Tribals (Sugali / Agency)', category: 'Scheduled Tribes', color: '#d97706', bg: '#fef3c7' },
+
+      // 4. Open Categories (OC)
+      kapu: { name: 'Kapu / Balija / Telaga', category: 'Open Categories', color: '#e11d48', bg: '#ffe4e6' },
+      kamma: { name: 'Kamma', category: 'Open Categories', color: '#be123c', bg: '#ffe4e6' },
+      reddy: { name: 'Reddy', category: 'Open Categories', color: '#9f1239', bg: '#ffe4e6' },
+
+      // 5. Religious Minorities
       minority_muslim: { name: 'Muslim Minorities', category: 'Religious Minorities', color: '#16a34a', bg: '#dcfce7' },
-      oc_reddy: { name: 'OC Reddy', category: 'Open Categories', color: '#e11d48', bg: '#ffe4e6' },
-      oc_velama: { name: 'OC Velama', category: 'Open Categories', color: '#f43f5e', bg: '#ffe4e6' },
+      minority_christian: { name: 'Christian Minorities', category: 'Religious Minorities', color: '#059669', bg: '#d1fae5' },
+
+      // Fallbacks for any legacy keys
+      sc_madiga: { name: 'SC Madiga', category: 'Scheduled Castes', color: '#6366f1', bg: '#ede9fe' },
+      st_lambada: { name: 'ST Lambada', category: 'Scheduled Tribes', color: '#d97706', bg: '#fef3c7' },
+      st_koya_gond: { name: 'ST Koya / Gond', category: 'Scheduled Tribes', color: '#b45309', bg: '#fef3c7' },
+      bc_mudiraj: { name: 'BC Mudiraj', category: 'Backward Classes', color: '#0284c7', bg: '#e0f2fe' },
+      bc_munnuru_kapu: { name: 'BC Munnuru Kapu', category: 'Backward Classes', color: '#0284c7', bg: '#e0f2fe' },
+      bc_goud: { name: 'BC Goud', category: 'Backward Classes', color: '#0ea5e9', bg: '#e0f2fe' },
+      bc_yadav: { name: 'BC Yadav', category: 'Backward Classes', color: '#0369a1', bg: '#e0f2fe' },
+      oc_reddy: { name: 'Reddy', category: 'Open Categories', color: '#9f1239', bg: '#ffe4e6' },
+      oc_velama: { name: 'Velama', category: 'Open Categories', color: '#be123c', bg: '#ffe4e6' },
       oc_other: { name: 'Other OCs', category: 'Open Categories', color: '#94a3b8', bg: '#f8fafc' },
     };
 
     const sortedCommunities = Object.entries(cp)
-      .map(([key, pct]) => ({
-        key,
-        pct: Number(pct.toFixed(2)),
-        meta: COMM_META[key] || { name: key, category: 'Other', color: '#64748b', bg: '#f1f5f9' },
-      }))
+      .map(([key, pct]) => {
+        let meta = COMM_META[key];
+        if (!meta) {
+          const formattedName = key
+            .split('_')
+            .map((w) => {
+              const low = w.toLowerCase();
+              if (['bc', 'sc', 'st', 'oc'].includes(low)) return low.toUpperCase();
+              return w.charAt(0).toUpperCase() + w.slice(1);
+            })
+            .join(' ');
+          let cat = 'Open Categories';
+          let col = '#e11d48';
+          let bgCol = '#ffe4e6';
+          if (key.startsWith('bc_')) {
+            cat = 'Backward Classes';
+            col = '#0284c7';
+            bgCol = '#e0f2fe';
+          } else if (key.startsWith('sc_')) {
+            cat = 'Scheduled Castes';
+            col = '#6366f1';
+            bgCol = '#ede9fe';
+          } else if (key.startsWith('st_')) {
+            cat = 'Scheduled Tribes';
+            col = '#d97706';
+            bgCol = '#fef3c7';
+          } else if (key.includes('minority') || key.includes('muslim') || key.includes('christian')) {
+            cat = 'Religious Minorities';
+            col = '#16a34a';
+            bgCol = '#dcfce7';
+          }
+          meta = { name: formattedName, category: cat, color: col, bg: bgCol };
+        }
+        return {
+          key,
+          pct: Number(pct.toFixed(2)),
+          meta,
+        };
+      })
       .sort((a, b) => b.pct - a.pct);
 
     const dominant = sortedCommunities[0];
@@ -359,7 +438,9 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                     <span className="text-sm font-black text-slate-900">
                       {data.total_valid_votes.toLocaleString()}
                     </span>
-                    <span className="text-[10px] text-slate-400">cast</span>
+                    <span className="text-[10px] font-bold text-indigo-700">
+                      {data.voters_info ? `${data.voters_info.turnout_pct}%` : 'cast'}
+                    </span>
                   </div>
                 </div>
 
@@ -773,6 +854,106 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
       {/* TAB 2: MANDAL & POLLING BOOTH DRILLDOWN (#13) */}
       {dossierTab === 'mandals' && (
         <div className="space-y-6 animate-in fade-in duration-150">
+          {/* Official ECI 2024 Statutory Voters Information Banner */}
+          {data.voters_info && (
+            <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-xl p-4 border border-indigo-700/40 shadow-xs space-y-3">
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-indigo-500/20 pb-2.5">
+                <div className="flex items-center gap-2">
+                  <span className="p-1 rounded bg-indigo-500/30 text-indigo-300">
+                    <Vote className="w-4 h-4 text-indigo-300" />
+                  </span>
+                  <div>
+                    <h4 className="font-black text-sm text-slate-100 flex items-center gap-2">
+                      Official ECI 2024 Voter Turnout &amp; Electors Profile
+                      <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 px-2 py-0.5 rounded font-mono font-bold">
+                        Form-12 Statutory Report
+                      </span>
+                    </h4>
+                    <p className="text-[11px] text-slate-400">
+                      Certified election data from Election Commission of India (ECI 2024 General Election)
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  {form20Url && (
+                    <a
+                      href={form20Url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600/80 hover:bg-indigo-600 text-white rounded-lg text-xs font-semibold border border-indigo-400/30 transition-all cursor-pointer shadow-xs"
+                      title="Open official Returning Officer Form-20 (Booth-wise Polling Result Sheet) PDF from CEO Andhra Pradesh"
+                    >
+                      <FileText className="w-3.5 h-3.5 text-indigo-200" />
+                      <span>Official Form-20 PDF ↗</span>
+                    </a>
+                  )}
+                  <div className="text-right">
+                    <div className="text-xl font-black text-indigo-300 font-mono">
+                      {data.voters_info.turnout_pct}%
+                    </div>
+                    <div className="text-[10px] uppercase font-bold text-slate-400">Official Poll Turnout</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 5-Column Stats Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-xs">
+                <div className="bg-slate-800/80 rounded-lg p-2.5 border border-slate-700/50">
+                  <div className="text-[10px] text-slate-400 uppercase font-semibold">Total Electors</div>
+                  <div className="text-base font-black text-slate-100 font-mono mt-0.5">
+                    {data.voters_info.electors_total.toLocaleString()}
+                  </div>
+                  <div className="text-[10px] text-slate-400 mt-1 flex justify-between font-mono">
+                    <span>M: {data.voters_info.electors_male.toLocaleString()}</span>
+                    <span>F: {data.voters_info.electors_female.toLocaleString()}</span>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/80 rounded-lg p-2.5 border border-slate-700/50">
+                  <div className="text-[10px] text-slate-400 uppercase font-semibold">Total Votes Polled</div>
+                  <div className="text-base font-black text-emerald-300 font-mono mt-0.5">
+                    {data.voters_info.voted_total.toLocaleString()}
+                  </div>
+                  <div className="text-[10px] text-slate-400 mt-1 flex justify-between font-mono">
+                    <span>M: {data.voters_info.voted_male.toLocaleString()}</span>
+                    <span>F: {data.voters_info.voted_female.toLocaleString()}</span>
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/80 rounded-lg p-2.5 border border-slate-700/50">
+                  <div className="text-[10px] text-slate-400 uppercase font-semibold">Valid Votes Polled</div>
+                  <div className="text-base font-black text-indigo-200 font-mono mt-0.5">
+                    {(data.voters_info.valid_votes_polled || data.total_valid_votes).toLocaleString()}
+                  </div>
+                  <div className="text-[10px] text-slate-400 mt-1">
+                    Candidate ballots polled
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/80 rounded-lg p-2.5 border border-slate-700/50">
+                  <div className="text-[10px] text-slate-400 uppercase font-semibold">NOTA Votes</div>
+                  <div className="text-base font-black text-amber-300 font-mono mt-0.5">
+                    {data.voters_info.nota_votes.toLocaleString()}
+                  </div>
+                  <div className="text-[10px] text-slate-400 mt-1 font-mono">
+                    {((data.voters_info.nota_votes / data.voters_info.voted_total) * 100).toFixed(2)}% of polled
+                  </div>
+                </div>
+
+                <div className="bg-slate-800/80 rounded-lg p-2.5 border border-slate-700/50 col-span-2 sm:col-span-1">
+                  <div className="text-[10px] text-slate-400 uppercase font-semibold">Postal &amp; Tendered</div>
+                  <div className="text-base font-black text-slate-200 font-mono mt-0.5">
+                    {data.voters_info.voted_postal.toLocaleString()}
+                  </div>
+                  <div className="text-[10px] text-slate-400 mt-1 flex justify-between font-mono">
+                    <span>Rej: {data.voters_info.rejected_postal_votes + data.voters_info.rejected_evm_votes}</span>
+                    <span>Tend: {data.voters_info.tendered_votes || 0}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Mandal KPI Cards (1-Line Horizontal Cards) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
             <div className="bg-slate-50 hover:bg-slate-100/70 transition-colors border border-slate-200/90 rounded-xl px-3.5 py-2.5 flex items-center justify-between gap-2 shadow-2xs">
@@ -1005,16 +1186,16 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
             <div className="space-y-6 animate-in fade-in duration-150">
               {acDemographics && demographicSummary ? (
                 <>
-                  {/* SEEEPC Survey Header / Context Banner */}
+                  {/* Demographics Survey Header / Context Banner */}
                   <div className="bg-gradient-to-r from-indigo-900 via-slate-900 to-slate-800 text-white p-4 rounded-xl border border-indigo-700/50 shadow-xs flex flex-wrap items-center justify-between gap-3">
                     <div className="space-y-1">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="bg-indigo-500 text-white font-mono text-xs px-2 py-0.5 rounded-md font-bold flex items-center gap-1">
                           <PieChart className="w-3.5 h-3.5" />
-                          SEEEPC Vol-IV
+                          AP Demographics
                         </span>
                         <span className="font-bold text-sm text-slate-100">
-                          Official Socio-Economic &amp; Caste Census Survey
+                          Official Socio-Economic &amp; Caste Demographic Profile
                         </span>
                         <span
                           className={`text-[11px] font-bold px-2 py-0.5 rounded-full ${
@@ -1125,14 +1306,14 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                       <div>
                         <h3 className="font-bold text-slate-900 text-sm flex items-center gap-2">
                           <Users className="w-4 h-4 text-indigo-600" />
-                          Broad Social Coalition Composition (SEEEPC Model)
+                          Broad Social Coalition Composition (Demographic Model)
                         </h3>
                         <p className="text-xs text-slate-500">
                           Aggregated voter shares across the five constitutional and reservation groupings with state baseline comparison.
                         </p>
                       </div>
                       <div className="text-[11px] text-slate-400 font-mono">
-                        TS State Baseline: BC 46.3% &middot; SC 17.4% &middot; ST 10.4% &middot; Min 11.8% &middot; OC 15.8%
+                        AP State Baseline: BC 49.2% &middot; OC 19.7% &middot; SC 17.1% &middot; Min 8.5% &middot; ST 5.5%
                       </div>
                     </div>
 
@@ -1152,8 +1333,8 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                           </div>
                         </div>
                         <div className="mt-3 pt-2 border-t border-sky-100 text-[11px]">
-                          <span className={demographicSummary.bcTotal >= 46.27 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
-                            {demographicSummary.bcTotal >= 46.27 ? `+${(demographicSummary.bcTotal - 46.27).toFixed(1)}%` : `${(demographicSummary.bcTotal - 46.27).toFixed(1)}%`} vs State
+                          <span className={demographicSummary.bcTotal >= 49.2 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
+                            {demographicSummary.bcTotal >= 49.2 ? `+${(demographicSummary.bcTotal - 49.2).toFixed(1)}%` : `${(demographicSummary.bcTotal - 49.2).toFixed(1)}%`} vs State
                           </span>
                         </div>
                       </div>
@@ -1173,8 +1354,8 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                           </div>
                         </div>
                         <div className="mt-3 pt-2 border-t border-indigo-100 text-[11px]">
-                          <span className={demographicSummary.scTotal >= 17.42 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
-                            {demographicSummary.scTotal >= 17.42 ? `+${(demographicSummary.scTotal - 17.42).toFixed(1)}%` : `${(demographicSummary.scTotal - 17.42).toFixed(1)}%`} vs State
+                          <span className={demographicSummary.scTotal >= 17.1 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
+                            {demographicSummary.scTotal >= 17.1 ? `+${(demographicSummary.scTotal - 17.1).toFixed(1)}%` : `${(demographicSummary.scTotal - 17.1).toFixed(1)}%`} vs State
                           </span>
                         </div>
                       </div>
@@ -1194,8 +1375,8 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                           </div>
                         </div>
                         <div className="mt-3 pt-2 border-t border-amber-100 text-[11px]">
-                          <span className={demographicSummary.stTotal >= 10.43 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
-                            {demographicSummary.stTotal >= 10.43 ? `+${(demographicSummary.stTotal - 10.43).toFixed(1)}%` : `${(demographicSummary.stTotal - 10.43).toFixed(1)}%`} vs State
+                          <span className={demographicSummary.stTotal >= 5.5 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
+                            {demographicSummary.stTotal >= 5.5 ? `+${(demographicSummary.stTotal - 5.5).toFixed(1)}%` : `${(demographicSummary.stTotal - 5.5).toFixed(1)}%`} vs State
                           </span>
                         </div>
                       </div>
@@ -1204,7 +1385,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                       <div className="bg-emerald-50/60 border border-emerald-100 rounded-xl p-3 flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between">
-                            <span className="text-xs font-bold text-emerald-800">Muslim Minorities</span>
+                            <span className="text-xs font-bold text-emerald-800">Religious Minorities</span>
                             <span className="text-[10px] bg-emerald-200/70 text-emerald-800 px-1.5 py-0.2 rounded font-bold">MIN</span>
                           </div>
                           <div className="text-2xl font-black text-emerald-950 font-mono mt-1">
@@ -1215,8 +1396,8 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                           </div>
                         </div>
                         <div className="mt-3 pt-2 border-t border-emerald-100 text-[11px]">
-                          <span className={demographicSummary.minorityTotal >= 11.84 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
-                            {demographicSummary.minorityTotal >= 11.84 ? `+${(demographicSummary.minorityTotal - 11.84).toFixed(1)}%` : `${(demographicSummary.minorityTotal - 11.84).toFixed(1)}%`} vs State
+                          <span className={demographicSummary.minorityTotal >= 8.5 ? 'text-emerald-700 font-semibold' : 'text-slate-600'}>
+                            {demographicSummary.minorityTotal >= 8.5 ? `+${(demographicSummary.minorityTotal - 8.5).toFixed(1)}%` : `${(demographicSummary.minorityTotal - 8.5).toFixed(1)}%`} vs State
                           </span>
                         </div>
                       </div>
@@ -1236,8 +1417,8 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                           </div>
                         </div>
                         <div className="mt-3 pt-2 border-t border-rose-100 text-[11px]">
-                          <span className={demographicSummary.ocTotal >= 15.79 ? 'text-rose-700 font-semibold' : 'text-slate-600'}>
-                            {demographicSummary.ocTotal >= 15.79 ? `+${(demographicSummary.ocTotal - 15.79).toFixed(1)}%` : `${(demographicSummary.ocTotal - 15.79).toFixed(1)}%`} vs State
+                          <span className={demographicSummary.ocTotal >= 19.7 ? 'text-rose-700 font-semibold' : 'text-slate-600'}>
+                            {demographicSummary.ocTotal >= 19.7 ? `+${(demographicSummary.ocTotal - 19.7).toFixed(1)}%` : `${(demographicSummary.ocTotal - 19.7).toFixed(1)}%`} vs State
                           </span>
                         </div>
                       </div>
@@ -1249,7 +1430,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
                     <div className="bg-slate-100/90 px-4 py-2.5 border-b border-slate-200 flex flex-wrap justify-between items-center gap-2 text-xs">
                       <span className="font-bold text-slate-800 flex items-center gap-2">
                         <Users className="w-3.5 h-3.5 text-indigo-600" />
-                        Constituency Community Breakdown (14 SEEEPC Census Segments)
+                        Constituency Community Breakdown (14 Demographic Census Segments)
                       </span>
                       <span className="text-[11px] text-slate-500 font-mono">
                         Ranked by Electorate Share
@@ -1438,7 +1619,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
               ) : (
                 <div className="bg-slate-50 border border-slate-200 rounded-xl p-10 text-center space-y-3">
                   <PieChart className="w-10 h-10 text-slate-400 mx-auto" />
-                  <div className="font-bold text-slate-800 text-sm">SEEEPC Demographics Loading</div>
+                  <div className="font-bold text-slate-800 text-sm">Demographics Loading</div>
                   <p className="text-xs text-slate-500 max-w-md mx-auto">
                     Constituency-level caste and age survey data from the Directorate of Economics and Statistics is currently loading.
                   </p>
@@ -1588,7 +1769,7 @@ export const ConstituencyDossier: React.FC<ConstituencyDossierProps> = ({
         {/* Footer */}
         <div className="px-6 py-3 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between text-xs text-slate-500">
           <div>
-            Data Sources: Election Commission of India (ECI Form 20) &middot; Association for Democratic Reforms (ADR) &middot; DES Andhra Pradesh (SEEEPC Survey Vol-IV)
+            Data Sources: Election Commission of India (ECI Form 20) &middot; Association for Democratic Reforms (ADR) &middot; DES Andhra Pradesh (Demographics Profile)
           </div>
           <div className="text-slate-400">
             Andhra Pradesh Assembly Constituency Intelligence Dossier

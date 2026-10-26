@@ -293,7 +293,7 @@ def main():
         "constituencies": constituencies_dict
     }
 
-    out_path = os.path.join("c:\\Users\\NIHAR\\OneDrive\\Desktop\\work\\ai\\ts-dash\\andhra-dashboard\\public\\data\\telangana_seeepc_demographics.json")
+    out_path = os.path.join("c:\\Users\\NIHAR\\OneDrive\\Desktop\\work\\ai\\ts-dash\\andhra-dashboard\\public\\data\\andhra_demographics.json")
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2)

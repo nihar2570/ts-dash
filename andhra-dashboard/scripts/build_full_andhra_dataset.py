@@ -7,10 +7,10 @@ Build Full Andhra Pradesh Dataset from satishvmadala/andhrapradesh_opendata_loca
    https://en.wikipedia.org/wiki/2024_Andhra_Pradesh_Legislative_Assembly_election
 3. Merges map boundaries, election winners/runners-up, vote shares, and demographics.
 4. Updates:
-   - public/data/andhra_assembly.geojson & telangana_assembly.geojson
-   - public/data/andhra_districts.geojson & telangana_districts.geojson
-   - public/data/andhra_elections.json & telangana_elections.json
-   - public/data/andhra_demographics.json & telangana_seeepc_demographics.json
+   - public/data/andhra_assembly.geojson
+   - public/data/andhra_districts.geojson
+   - public/data/andhra_elections.json
+   - public/data/andhra_demographics.json
    - src/data/mandalData.ts
    - src/data/hexCoordinates.ts
 """
@@ -294,7 +294,7 @@ def build_all():
     demo_json['metadata']['total_seats'] = 175
     demo_json['metadata']['majority_mark'] = 88
 
-    for p in ['public/data/andhra_demographics.json', 'public/data/telangana_seeepc_demographics.json']:
+    for p in ['public/data/andhra_demographics.json']:
         with open(p, 'w', encoding='utf-8') as f:
             json.dump(demo_json, f, indent=2, ensure_ascii=False)
         print(f"Saved {p}")

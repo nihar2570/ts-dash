@@ -21,7 +21,7 @@ export const ConstituencyTable: React.FC<ConstituencyTableProps> = ({
   const [search, setSearch] = useState('');
   const [selectedParty, setSelectedParty] = useState('ALL');
   const [selectedDistrict, setSelectedDistrict] = useState('ALL');
-  const [sortBy, setSortBy] = useState<'ac_no' | 'margin_asc' | 'margin_desc' | 'votes'>('ac_no');
+  const [sortBy, setSortBy] = useState<'ac_no' | 'margin_asc' | 'margin_desc' | 'votes' | 'turnout_desc' | 'turnout_asc'>('ac_no');
 
   const list = useMemo(() => Object.values(results), [results]);
 
@@ -59,6 +59,8 @@ export const ConstituencyTable: React.FC<ConstituencyTableProps> = ({
         if (sortBy === 'margin_asc') return a.margin - b.margin;
         if (sortBy === 'margin_desc') return b.margin - a.margin;
         if (sortBy === 'votes') return b.winner.votes - a.winner.votes;
+        if (sortBy === 'turnout_desc') return (b.turnout_pct || 0) - (a.turnout_pct || 0);
+        if (sortBy === 'turnout_asc') return (a.turnout_pct || 0) - (b.turnout_pct || 0);
         return a.ac_no - b.ac_no;
       });
   }, [list, search, selectedParty, selectedDistrict, sortBy]);
@@ -152,6 +154,16 @@ export const ConstituencyTable: React.FC<ConstituencyTableProps> = ({
               <th className="py-2.5 px-3">Party</th>
               <th className="py-2.5 px-3">Runner-Up</th>
               <th className="py-2.5 px-3 text-right">Margin</th>
+              <th
+                className="py-2.5 px-3 text-right cursor-pointer hover:text-indigo-600 transition-colors select-none"
+                onClick={() => setSortBy((prev) => (prev === 'turnout_desc' ? 'turnout_asc' : 'turnout_desc'))}
+                title="Click to sort by turnout %"
+              >
+                <div className="flex items-center justify-end gap-1">
+                  <span>Turnout</span>
+                  <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                </div>
+              </th>
               <th className="py-2.5 px-3 text-center">Status</th>
             </tr>
           </thead>
@@ -174,7 +186,7 @@ export const ConstituencyTable: React.FC<ConstituencyTableProps> = ({
                   <td className="py-2.5 px-3 font-semibold text-slate-900">
                     <div className="flex items-center justify-between gap-1">
                       <span>{r.ac_name}</span>
-                      {onOpenDossier && year === '2023' && (
+                      {onOpenDossier && (year === '2024' || year === '2023') && (
                         <button
                           type="button"
                           onClick={(e) => {
@@ -214,6 +226,23 @@ export const ConstituencyTable: React.FC<ConstituencyTableProps> = ({
                   <td className="py-2.5 px-3 text-right font-mono font-medium">
                     <span className="text-slate-900">{r.margin.toLocaleString()}</span>
                     <span className="text-[10px] text-slate-400 block">({r.margin_pct}%)</span>
+                  </td>
+                  <td className="py-2.5 px-3 text-right font-mono font-bold text-slate-800">
+                    {r.turnout_pct > 0 ? (
+                      <span
+                        className={
+                          r.turnout_pct >= 85
+                            ? 'text-emerald-700'
+                            : r.turnout_pct < 70
+                            ? 'text-amber-700'
+                            : 'text-slate-800'
+                        }
+                      >
+                        {r.turnout_pct}%
+                      </span>
+                    ) : (
+                      <span className="text-slate-300">—</span>
+                    )}
                   </td>
                   <td className="py-2.5 px-3 text-center">
                     {r.swing ? (

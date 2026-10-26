@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Search, HelpCircle } from 'lucide-react';
-import type { Year, ViewMode, SeeepcDataset, ElectionData, ActiveTab } from '../types';
+import type { Year, ViewMode, DemographicsDataset, ElectionData, ActiveTab } from '../types';
 
 interface HeaderBarProps {
   activeTab: ActiveTab;
@@ -12,7 +12,7 @@ interface HeaderBarProps {
   electionData: ElectionData | null;
   setSelectedAcNo: (acNo: number) => void;
   onOpenDossier?: (acNo: number) => void;
-  seeepcData?: SeeepcDataset | null;
+  demographicsData?: DemographicsDataset | null;
   setIsExecutiveBriefingOpen?: (open: boolean) => void;
   onHelpOpen: () => void;
 }
@@ -27,7 +27,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
   electionData,
   setSelectedAcNo,
   onOpenDossier,
-  seeepcData: _seeepcData,
+  demographicsData: _demographicsData,
   setIsExecutiveBriefingOpen: _setIsExecutiveBriefingOpen,
   onHelpOpen,
 }) => {

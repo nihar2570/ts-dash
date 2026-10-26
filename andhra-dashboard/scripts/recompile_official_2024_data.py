@@ -222,7 +222,7 @@ def update_datasets(constituencies_2024):
         }
 
     demo['constituencies'] = new_constits
-    for path in ['public/data/andhra_demographics.json', 'public/data/telangana_seeepc_demographics.json']:
+    for path in ['public/data/andhra_demographics.json']:
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(demo, f, indent=2, ensure_ascii=False)
         print(f"Saved {path}")

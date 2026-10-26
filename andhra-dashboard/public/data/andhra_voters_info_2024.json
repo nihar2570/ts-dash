@@ -1,0 +1,4937 @@
+{
+  "metadata": {
+    "source": "Election Commission of India (ECI)",
+    "election": "Andhra Pradesh Legislative Assembly General Election 2024",
+    "document": "12 - AC WISE VOTERS INFORMATION (Statistical Report)",
+    "total_seats": 175,
+    "state_poll_percentage": 81.79
+  },
+  "state_summary": {
+    "total_constituencies": 175,
+    "electors": {
+      "male": 20339851,
+      "female": 21058615,
+      "third_gender": 3421,
+      "total": 41401887,
+      "overseas": 7927,
+      "service": 68185
+    },
+    "voted": {
+      "male": 16438876,
+      "female": 16914874,
+      "third_gender": 1543,
+      "postal": 508810,
+      "test_votes": 0,
+      "total": 33864103,
+      "overseas_voted": 191
+    },
+    "turnout_pct": 81.79,
+    "rejected_postal_votes": 39646,
+    "rejected_evm_votes": 87540,
+    "nota_votes": 365667,
+    "valid_votes_polled": 33371250,
+    "tendered_votes": 268
+  },
+  "constituencies": {
+    "1": {
+      "ac_no": 1,
+      "ac_name": "Ichchapuram",
+      "electors": {
+        "male": 132646,
+        "female": 137517,
+        "third_gender": 17,
+        "total": 270180,
+        "overseas": 11,
+        "service": 1978
+      },
+      "voted": {
+        "male": 84001,
+        "female": 102147,
+        "third_gender": 2,
+        "postal": 2693,
+        "test_votes": 0,
+        "total": 188843,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 69.9,
+      "rejected_postal_votes": 28,
+      "rejected_evm_votes": 0,
+      "nota_votes": 4374,
+      "valid_votes_polled": 184441,
+      "total_polled": 188843,
+      "tendered_votes": 0
+    },
+    "2": {
+      "ac_no": 2,
+      "ac_name": "Palasa",
+      "electors": {
+        "male": 110198,
+        "female": 112159,
+        "third_gender": 21,
+        "total": 222378,
+        "overseas": 1,
+        "service": 3030
+      },
+      "voted": {
+        "male": 76832,
+        "female": 88416,
+        "third_gender": 2,
+        "postal": 3728,
+        "test_votes": 0,
+        "total": 168978,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 75.99,
+      "rejected_postal_votes": 732,
+      "rejected_evm_votes": 211,
+      "nota_votes": 2762,
+      "valid_votes_polled": 165273,
+      "total_polled": 168978,
+      "tendered_votes": 0
+    },
+    "3": {
+      "ac_no": 3,
+      "ac_name": "Tekkali",
+      "electors": {
+        "male": 120665,
+        "female": 118572,
+        "third_gender": 9,
+        "total": 239246,
+        "overseas": 16,
+        "service": 2919
+      },
+      "voted": {
+        "male": 91339,
+        "female": 95580,
+        "third_gender": 2,
+        "postal": 4580,
+        "test_votes": 0,
+        "total": 191501,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 80.04,
+      "rejected_postal_votes": 464,
+      "rejected_evm_votes": 984,
+      "nota_votes": 3682,
+      "valid_votes_polled": 186371,
+      "total_polled": 191501,
+      "tendered_votes": 0
+    },
+    "4": {
+      "ac_no": 4,
+      "ac_name": "Pathapatnam",
+      "electors": {
+        "male": 114159,
+        "female": 112998,
+        "third_gender": 10,
+        "total": 227167,
+        "overseas": 9,
+        "service": 1854
+      },
+      "voted": {
+        "male": 78529,
+        "female": 81594,
+        "third_gender": 3,
+        "postal": 3237,
+        "test_votes": 0,
+        "total": 163363,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 71.91,
+      "rejected_postal_votes": 28,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3604,
+      "valid_votes_polled": 159731,
+      "total_polled": 163363,
+      "tendered_votes": 0
+    },
+    "5": {
+      "ac_no": 5,
+      "ac_name": "Srikakulam",
+      "electors": {
+        "male": 136514,
+        "female": 137978,
+        "third_gender": 31,
+        "total": 274523,
+        "overseas": 27,
+        "service": 1263
+      },
+      "voted": {
+        "male": 90730,
+        "female": 95923,
+        "third_gender": 1,
+        "postal": 5918,
+        "test_votes": 0,
+        "total": 192572,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 70.15,
+      "rejected_postal_votes": 404,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3373,
+      "valid_votes_polled": 188795,
+      "total_polled": 192572,
+      "tendered_votes": 0
+    },
+    "6": {
+      "ac_no": 6,
+      "ac_name": "Amadalavalasa",
+      "electors": {
+        "male": 98313,
+        "female": 97770,
+        "third_gender": 15,
+        "total": 196098,
+        "overseas": 4,
+        "service": 2240
+      },
+      "voted": {
+        "male": 76101,
+        "female": 78248,
+        "third_gender": 3,
+        "postal": 4782,
+        "test_votes": 0,
+        "total": 159134,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 81.15,
+      "rejected_postal_votes": 427,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2300,
+      "valid_votes_polled": 156407,
+      "total_polled": 159134,
+      "tendered_votes": 0
+    },
+    "7": {
+      "ac_no": 7,
+      "ac_name": "Etcherla",
+      "electors": {
+        "male": 123967,
+        "female": 121715,
+        "third_gender": 14,
+        "total": 245696,
+        "overseas": 4,
+        "service": 936
+      },
+      "voted": {
+        "male": 102664,
+        "female": 101171,
+        "third_gender": 3,
+        "postal": 2965,
+        "test_votes": 0,
+        "total": 206803,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.17,
+      "rejected_postal_votes": 241,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3952,
+      "valid_votes_polled": 202610,
+      "total_polled": 206803,
+      "tendered_votes": 0
+    },
+    "8": {
+      "ac_no": 8,
+      "ac_name": "Narasannapeta",
+      "electors": {
+        "male": 109263,
+        "female": 107818,
+        "third_gender": 13,
+        "total": 217094,
+        "overseas": 3,
+        "service": 2228
+      },
+      "voted": {
+        "male": 85647,
+        "female": 88196,
+        "third_gender": 1,
+        "postal": 3977,
+        "test_votes": 0,
+        "total": 177821,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 81.91,
+      "rejected_postal_votes": 29,
+      "rejected_evm_votes": 416,
+      "nota_votes": 3300,
+      "valid_votes_polled": 174076,
+      "total_polled": 177821,
+      "tendered_votes": 0
+    },
+    "9": {
+      "ac_no": 9,
+      "ac_name": "Rajam (SC)",
+      "electors": {
+        "male": 115342,
+        "female": 113029,
+        "third_gender": 19,
+        "total": 228390,
+        "overseas": 17,
+        "service": 887
+      },
+      "voted": {
+        "male": 87027,
+        "female": 86208,
+        "third_gender": 4,
+        "postal": 3262,
+        "test_votes": 0,
+        "total": 176501,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 77.28,
+      "rejected_postal_votes": 7,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2536,
+      "valid_votes_polled": 173958,
+      "total_polled": 176501,
+      "tendered_votes": 0
+    },
+    "10": {
+      "ac_no": 10,
+      "ac_name": "Palakonda (ST)",
+      "electors": {
+        "male": 95601,
+        "female": 100057,
+        "third_gender": 15,
+        "total": 195673,
+        "overseas": 3,
+        "service": 653
+      },
+      "voted": {
+        "male": 71795,
+        "female": 74996,
+        "third_gender": 14,
+        "postal": 2794,
+        "test_votes": 0,
+        "total": 149599,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.45,
+      "rejected_postal_votes": 9,
+      "rejected_evm_votes": 1215,
+      "nota_votes": 4260,
+      "valid_votes_polled": 144115,
+      "total_polled": 149599,
+      "tendered_votes": 0
+    },
+    "11": {
+      "ac_no": 11,
+      "ac_name": "Kurupam (ST)",
+      "electors": {
+        "male": 94805,
+        "female": 99769,
+        "third_gender": 42,
+        "total": 194616,
+        "overseas": 6,
+        "service": 502
+      },
+      "voted": {
+        "male": 74002,
+        "female": 78417,
+        "third_gender": 26,
+        "postal": 3150,
+        "test_votes": 0,
+        "total": 155595,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 79.95,
+      "rejected_postal_votes": 304,
+      "rejected_evm_votes": 0,
+      "nota_votes": 4761,
+      "valid_votes_polled": 150530,
+      "total_polled": 155595,
+      "tendered_votes": 0
+    },
+    "12": {
+      "ac_no": 12,
+      "ac_name": "Parvathipuram (SC)",
+      "electors": {
+        "male": 94173,
+        "female": 96328,
+        "third_gender": 11,
+        "total": 190512,
+        "overseas": 4,
+        "service": 695
+      },
+      "voted": {
+        "male": 72762,
+        "female": 76019,
+        "third_gender": 2,
+        "postal": 3317,
+        "test_votes": 0,
+        "total": 152100,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 79.84,
+      "rejected_postal_votes": 467,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3465,
+      "valid_votes_polled": 148168,
+      "total_polled": 152100,
+      "tendered_votes": 2
+    },
+    "13": {
+      "ac_no": 13,
+      "ac_name": "Salur (ST)",
+      "electors": {
+        "male": 100133,
+        "female": 104737,
+        "third_gender": 4,
+        "total": 204874,
+        "overseas": 5,
+        "service": 385
+      },
+      "voted": {
+        "male": 76403,
+        "female": 79921,
+        "third_gender": 0,
+        "postal": 2288,
+        "test_votes": 0,
+        "total": 158612,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 77.42,
+      "rejected_postal_votes": 257,
+      "rejected_evm_votes": 0,
+      "nota_votes": 5743,
+      "valid_votes_polled": 152612,
+      "total_polled": 158612,
+      "tendered_votes": 0
+    },
+    "14": {
+      "ac_no": 14,
+      "ac_name": "Bobbili",
+      "electors": {
+        "male": 115110,
+        "female": 117050,
+        "third_gender": 10,
+        "total": 232170,
+        "overseas": 12,
+        "service": 938
+      },
+      "voted": {
+        "male": 91189,
+        "female": 94683,
+        "third_gender": 5,
+        "postal": 3159,
+        "test_votes": 0,
+        "total": 189036,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 81.42,
+      "rejected_postal_votes": 12,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2561,
+      "valid_votes_polled": 186463,
+      "total_polled": 189036,
+      "tendered_votes": 0
+    },
+    "15": {
+      "ac_no": 15,
+      "ac_name": "Cheepurupalle",
+      "electors": {
+        "male": 103026,
+        "female": 102882,
+        "third_gender": 10,
+        "total": 205918,
+        "overseas": 10,
+        "service": 434
+      },
+      "voted": {
+        "male": 85814,
+        "female": 85720,
+        "third_gender": 2,
+        "postal": 1981,
+        "test_votes": 0,
+        "total": 173517,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.27,
+      "rejected_postal_votes": 6,
+      "rejected_evm_votes": 456,
+      "nota_votes": 2855,
+      "valid_votes_polled": 170200,
+      "total_polled": 173517,
+      "tendered_votes": 2
+    },
+    "16": {
+      "ac_no": 16,
+      "ac_name": "Gajapathinagaram",
+      "electors": {
+        "male": 101776,
+        "female": 104729,
+        "third_gender": 5,
+        "total": 206510,
+        "overseas": 9,
+        "service": 1039
+      },
+      "voted": {
+        "male": 87325,
+        "female": 90285,
+        "third_gender": 2,
+        "postal": 2948,
+        "test_votes": 0,
+        "total": 180560,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.43,
+      "rejected_postal_votes": 328,
+      "rejected_evm_votes": 1919,
+      "nota_votes": 3729,
+      "valid_votes_polled": 174584,
+      "total_polled": 180560,
+      "tendered_votes": 1
+    },
+    "17": {
+      "ac_no": 17,
+      "ac_name": "Nellimarla",
+      "electors": {
+        "male": 106574,
+        "female": 107973,
+        "third_gender": 3,
+        "total": 214550,
+        "overseas": 3,
+        "service": 999
+      },
+      "voted": {
+        "male": 92888,
+        "female": 95628,
+        "third_gender": 1,
+        "postal": 2367,
+        "test_votes": 0,
+        "total": 190884,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.97,
+      "rejected_postal_votes": 12,
+      "rejected_evm_votes": 558,
+      "nota_votes": 3311,
+      "valid_votes_polled": 187003,
+      "total_polled": 190884,
+      "tendered_votes": 16
+    },
+    "18": {
+      "ac_no": 18,
+      "ac_name": "Vizianagaram",
+      "electors": {
+        "male": 125329,
+        "female": 132402,
+        "third_gender": 29,
+        "total": 257760,
+        "overseas": 33,
+        "service": 555
+      },
+      "voted": {
+        "male": 89886,
+        "female": 94893,
+        "third_gender": 7,
+        "postal": 4910,
+        "test_votes": 0,
+        "total": 189696,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 73.59,
+      "rejected_postal_votes": 18,
+      "rejected_evm_votes": 871,
+      "nota_votes": 1365,
+      "valid_votes_polled": 187442,
+      "total_polled": 189696,
+      "tendered_votes": 19
+    },
+    "19": {
+      "ac_no": 19,
+      "ac_name": "Srungavarapukota",
+      "electors": {
+        "male": 109053,
+        "female": 114298,
+        "third_gender": 2,
+        "total": 223353,
+        "overseas": 13,
+        "service": 878
+      },
+      "voted": {
+        "male": 92371,
+        "female": 97722,
+        "third_gender": 1,
+        "postal": 3024,
+        "test_votes": 0,
+        "total": 193118,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.46,
+      "rejected_postal_votes": 176,
+      "rejected_evm_votes": 2688,
+      "nota_votes": 1969,
+      "valid_votes_polled": 188285,
+      "total_polled": 193118,
+      "tendered_votes": 0
+    },
+    "20": {
+      "ac_no": 20,
+      "ac_name": "Bhimili",
+      "electors": {
+        "male": 179337,
+        "female": 184952,
+        "third_gender": 15,
+        "total": 364304,
+        "overseas": 55,
+        "service": 1291
+      },
+      "voted": {
+        "male": 135101,
+        "female": 140232,
+        "third_gender": 0,
+        "postal": 4855,
+        "test_votes": 0,
+        "total": 280188,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.91,
+      "rejected_postal_votes": 802,
+      "rejected_evm_votes": 1151,
+      "nota_votes": 3061,
+      "valid_votes_polled": 275174,
+      "total_polled": 280188,
+      "tendered_votes": 0
+    },
+    "21": {
+      "ac_no": 21,
+      "ac_name": "Visakhapatnam East",
+      "electors": {
+        "male": 142764,
+        "female": 149660,
+        "third_gender": 20,
+        "total": 292444,
+        "overseas": 133,
+        "service": 238
+      },
+      "voted": {
+        "male": 96232,
+        "female": 104273,
+        "third_gender": 15,
+        "postal": 3759,
+        "test_votes": 0,
+        "total": 204279,
+        "overseas_voted": 14
+      },
+      "turnout_pct": 69.85,
+      "rejected_postal_votes": 182,
+      "rejected_evm_votes": 603,
+      "nota_votes": 1508,
+      "valid_votes_polled": 201986,
+      "total_polled": 204279,
+      "tendered_votes": 0
+    },
+    "22": {
+      "ac_no": 22,
+      "ac_name": "Visakhapatnam South",
+      "electors": {
+        "male": 106623,
+        "female": 110314,
+        "third_gender": 33,
+        "total": 216970,
+        "overseas": 59,
+        "service": 200
+      },
+      "voted": {
+        "male": 66220,
+        "female": 71176,
+        "third_gender": 5,
+        "postal": 1938,
+        "test_votes": 0,
+        "total": 139339,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 64.22,
+      "rejected_postal_votes": 11,
+      "rejected_evm_votes": 0,
+      "nota_votes": 631,
+      "valid_votes_polled": 138697,
+      "total_polled": 139339,
+      "tendered_votes": 0
+    },
+    "23": {
+      "ac_no": 23,
+      "ac_name": "Visakhapatnam North",
+      "electors": {
+        "male": 140998,
+        "female": 144996,
+        "third_gender": 22,
+        "total": 286016,
+        "overseas": 183,
+        "service": 227
+      },
+      "voted": {
+        "male": 90297,
+        "female": 94686,
+        "third_gender": 13,
+        "postal": 3468,
+        "test_votes": 0,
+        "total": 188464,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 65.89,
+      "rejected_postal_votes": 256,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1130,
+      "valid_votes_polled": 187078,
+      "total_polled": 188464,
+      "tendered_votes": 0
+    },
+    "24": {
+      "ac_no": 24,
+      "ac_name": "Visakhapatnam West",
+      "electors": {
+        "male": 105645,
+        "female": 108256,
+        "third_gender": 11,
+        "total": 213912,
+        "overseas": 43,
+        "service": 473
+      },
+      "voted": {
+        "male": 71285,
+        "female": 77936,
+        "third_gender": 7,
+        "postal": 2382,
+        "test_votes": 0,
+        "total": 151610,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 70.87,
+      "rejected_postal_votes": 602,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1002,
+      "valid_votes_polled": 150006,
+      "total_polled": 151610,
+      "tendered_votes": 0
+    },
+    "25": {
+      "ac_no": 25,
+      "ac_name": "Gajuwaka",
+      "electors": {
+        "male": 167859,
+        "female": 166528,
+        "third_gender": 12,
+        "total": 334399,
+        "overseas": 230,
+        "service": 788
+      },
+      "voted": {
+        "male": 114844,
+        "female": 118105,
+        "third_gender": 0,
+        "postal": 3644,
+        "test_votes": 0,
+        "total": 236593,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 70.75,
+      "rejected_postal_votes": 337,
+      "rejected_evm_votes": 1927,
+      "nota_votes": 1518,
+      "valid_votes_polled": 232811,
+      "total_polled": 236593,
+      "tendered_votes": 0
+    },
+    "26": {
+      "ac_no": 26,
+      "ac_name": "Chodavaram",
+      "electors": {
+        "male": 106201,
+        "female": 111887,
+        "third_gender": 7,
+        "total": 218095,
+        "overseas": 1,
+        "service": 611
+      },
+      "voted": {
+        "male": 89133,
+        "female": 94874,
+        "third_gender": 4,
+        "postal": 2638,
+        "test_votes": 0,
+        "total": 186649,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.58,
+      "rejected_postal_votes": 26,
+      "rejected_evm_votes": 882,
+      "nota_votes": 3849,
+      "valid_votes_polled": 181892,
+      "total_polled": 186649,
+      "tendered_votes": 0
+    },
+    "27": {
+      "ac_no": 27,
+      "ac_name": "Madugula",
+      "electors": {
+        "male": 92648,
+        "female": 96911,
+        "third_gender": 1,
+        "total": 189560,
+        "overseas": 11,
+        "service": 571
+      },
+      "voted": {
+        "male": 78784,
+        "female": 83778,
+        "third_gender": 0,
+        "postal": 2848,
+        "test_votes": 0,
+        "total": 165410,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.26,
+      "rejected_postal_votes": 189,
+      "rejected_evm_votes": 0,
+      "nota_votes": 4070,
+      "valid_votes_polled": 161151,
+      "total_polled": 165410,
+      "tendered_votes": 0
+    },
+    "28": {
+      "ac_no": 28,
+      "ac_name": "Araku Valley (ST)",
+      "electors": {
+        "male": 119550,
+        "female": 126066,
+        "third_gender": 7,
+        "total": 245623,
+        "overseas": 0,
+        "service": 134
+      },
+      "voted": {
+        "male": 87948,
+        "female": 87400,
+        "third_gender": 2,
+        "postal": 3540,
+        "test_votes": 0,
+        "total": 178890,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 72.83,
+      "rejected_postal_votes": 38,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3593,
+      "valid_votes_polled": 175259,
+      "total_polled": 178890,
+      "tendered_votes": 0
+    },
+    "29": {
+      "ac_no": 29,
+      "ac_name": "Paderu (ST)",
+      "electors": {
+        "male": 119861,
+        "female": 128596,
+        "third_gender": 16,
+        "total": 248473,
+        "overseas": 2,
+        "service": 86
+      },
+      "voted": {
+        "male": 78310,
+        "female": 81064,
+        "third_gender": 2,
+        "postal": 2744,
+        "test_votes": 0,
+        "total": 162120,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 65.25,
+      "rejected_postal_votes": 101,
+      "rejected_evm_votes": 859,
+      "nota_votes": 1420,
+      "valid_votes_polled": 159740,
+      "total_polled": 162120,
+      "tendered_votes": 0
+    },
+    "30": {
+      "ac_no": 30,
+      "ac_name": "Anakapalle",
+      "electors": {
+        "male": 104093,
+        "female": 110661,
+        "third_gender": 5,
+        "total": 214759,
+        "overseas": 59,
+        "service": 1045
+      },
+      "voted": {
+        "male": 82045,
+        "female": 88507,
+        "third_gender": 3,
+        "postal": 3047,
+        "test_votes": 0,
+        "total": 173602,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 80.84,
+      "rejected_postal_votes": 283,
+      "rejected_evm_votes": 541,
+      "nota_votes": 1853,
+      "valid_votes_polled": 170925,
+      "total_polled": 173602,
+      "tendered_votes": 0
+    },
+    "31": {
+      "ac_no": 31,
+      "ac_name": "Pendurthi",
+      "electors": {
+        "male": 153035,
+        "female": 154984,
+        "third_gender": 5,
+        "total": 308024,
+        "overseas": 14,
+        "service": 479
+      },
+      "voted": {
+        "male": 111880,
+        "female": 116759,
+        "third_gender": 4,
+        "postal": 3919,
+        "test_votes": 0,
+        "total": 232562,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 75.5,
+      "rejected_postal_votes": 18,
+      "rejected_evm_votes": 2400,
+      "nota_votes": 2834,
+      "valid_votes_polled": 227310,
+      "total_polled": 232562,
+      "tendered_votes": 6
+    },
+    "32": {
+      "ac_no": 32,
+      "ac_name": "Yelamanchili",
+      "electors": {
+        "male": 101369,
+        "female": 106002,
+        "third_gender": 9,
+        "total": 207380,
+        "overseas": 10,
+        "service": 986
+      },
+      "voted": {
+        "male": 86343,
+        "female": 90967,
+        "third_gender": 1,
+        "postal": 2144,
+        "test_votes": 0,
+        "total": 179455,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.53,
+      "rejected_postal_votes": 28,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2409,
+      "valid_votes_polled": 177018,
+      "total_polled": 179455,
+      "tendered_votes": 0
+    },
+    "33": {
+      "ac_no": 33,
+      "ac_name": "Payakaraopet (SC)",
+      "electors": {
+        "male": 123793,
+        "female": 127390,
+        "third_gender": 2,
+        "total": 251185,
+        "overseas": 6,
+        "service": 441
+      },
+      "voted": {
+        "male": 102401,
+        "female": 104202,
+        "third_gender": 1,
+        "postal": 2167,
+        "test_votes": 0,
+        "total": 208771,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.11,
+      "rejected_postal_votes": 27,
+      "rejected_evm_votes": 1258,
+      "nota_votes": 4107,
+      "valid_votes_polled": 203379,
+      "total_polled": 208771,
+      "tendered_votes": 0
+    },
+    "34": {
+      "ac_no": 34,
+      "ac_name": "Narsipatnam",
+      "electors": {
+        "male": 103052,
+        "female": 109306,
+        "third_gender": 4,
+        "total": 212362,
+        "overseas": 14,
+        "service": 316
+      },
+      "voted": {
+        "male": 87369,
+        "female": 92479,
+        "third_gender": 3,
+        "postal": 3015,
+        "test_votes": 0,
+        "total": 182866,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.11,
+      "rejected_postal_votes": 0,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3824,
+      "valid_votes_polled": 179042,
+      "total_polled": 182866,
+      "tendered_votes": 0
+    },
+    "35": {
+      "ac_no": 35,
+      "ac_name": "Tuni",
+      "electors": {
+        "male": 110855,
+        "female": 113822,
+        "third_gender": 25,
+        "total": 224702,
+        "overseas": 3,
+        "service": 164
+      },
+      "voted": {
+        "male": 93197,
+        "female": 94094,
+        "third_gender": 11,
+        "postal": 2262,
+        "test_votes": 0,
+        "total": 189564,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.36,
+      "rejected_postal_votes": 119,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3434,
+      "valid_votes_polled": 186011,
+      "total_polled": 189564,
+      "tendered_votes": 20
+    },
+    "36": {
+      "ac_no": 36,
+      "ac_name": "Prathipadu",
+      "electors": {
+        "male": 107259,
+        "female": 110059,
+        "third_gender": 21,
+        "total": 217339,
+        "overseas": 9,
+        "service": 72
+      },
+      "voted": {
+        "male": 87869,
+        "female": 87016,
+        "third_gender": 8,
+        "postal": 1647,
+        "test_votes": 0,
+        "total": 176540,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 81.23,
+      "rejected_postal_votes": 55,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2582,
+      "valid_votes_polled": 173903,
+      "total_polled": 176540,
+      "tendered_votes": 0
+    },
+    "37": {
+      "ac_no": 37,
+      "ac_name": "Pithapuram",
+      "electors": {
+        "male": 118321,
+        "female": 118227,
+        "third_gender": 3,
+        "total": 236551,
+        "overseas": 16,
+        "service": 142
+      },
+      "voted": {
+        "male": 103467,
+        "female": 101442,
+        "third_gender": 3,
+        "postal": 2511,
+        "test_votes": 0,
+        "total": 207423,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.69,
+      "rejected_postal_votes": 254,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2027,
+      "valid_votes_polled": 205142,
+      "total_polled": 207423,
+      "tendered_votes": 0
+    },
+    "38": {
+      "ac_no": 38,
+      "ac_name": "Kakinada Rural",
+      "electors": {
+        "male": 133593,
+        "female": 135852,
+        "third_gender": 8,
+        "total": 269453,
+        "overseas": 113,
+        "service": 123
+      },
+      "voted": {
+        "male": 100320,
+        "female": 101608,
+        "third_gender": 5,
+        "postal": 4527,
+        "test_votes": 0,
+        "total": 206460,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.62,
+      "rejected_postal_votes": 21,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1783,
+      "valid_votes_polled": 204656,
+      "total_polled": 206460,
+      "tendered_votes": 0
+    },
+    "39": {
+      "ac_no": 39,
+      "ac_name": "Peddapuram",
+      "electors": {
+        "male": 105911,
+        "female": 109298,
+        "third_gender": 13,
+        "total": 215222,
+        "overseas": 19,
+        "service": 127
+      },
+      "voted": {
+        "male": 88090,
+        "female": 88897,
+        "third_gender": 8,
+        "postal": 2102,
+        "test_votes": 0,
+        "total": 179097,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.22,
+      "rejected_postal_votes": 248,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2020,
+      "valid_votes_polled": 176829,
+      "total_polled": 179097,
+      "tendered_votes": 0
+    },
+    "40": {
+      "ac_no": 40,
+      "ac_name": "Anaparthy",
+      "electors": {
+        "male": 110564,
+        "female": 115536,
+        "third_gender": 3,
+        "total": 226103,
+        "overseas": 17,
+        "service": 50
+      },
+      "voted": {
+        "male": 96256,
+        "female": 98704,
+        "third_gender": 2,
+        "postal": 1950,
+        "test_votes": 0,
+        "total": 196912,
+        "overseas_voted": 4
+      },
+      "turnout_pct": 87.09,
+      "rejected_postal_votes": 158,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3105,
+      "valid_votes_polled": 193649,
+      "total_polled": 196912,
+      "tendered_votes": 6
+    },
+    "41": {
+      "ac_no": 41,
+      "ac_name": "Kakinada City",
+      "electors": {
+        "male": 115630,
+        "female": 125964,
+        "third_gender": 103,
+        "total": 241697,
+        "overseas": 119,
+        "service": 77
+      },
+      "voted": {
+        "male": 83638,
+        "female": 90596,
+        "third_gender": 64,
+        "postal": 2913,
+        "test_votes": 0,
+        "total": 177211,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 73.32,
+      "rejected_postal_votes": 27,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1446,
+      "valid_votes_polled": 175738,
+      "total_polled": 177211,
+      "tendered_votes": 11
+    },
+    "42": {
+      "ac_no": 42,
+      "ac_name": "Ramachandrapuram",
+      "electors": {
+        "male": 100813,
+        "female": 102527,
+        "third_gender": 1,
+        "total": 203341,
+        "overseas": 35,
+        "service": 134
+      },
+      "voted": {
+        "male": 87430,
+        "female": 86487,
+        "third_gender": 1,
+        "postal": 2389,
+        "test_votes": 0,
+        "total": 176307,
+        "overseas_voted": 2
+      },
+      "turnout_pct": 86.71,
+      "rejected_postal_votes": 91,
+      "rejected_evm_votes": 828,
+      "nota_votes": 1608,
+      "valid_votes_polled": 173780,
+      "total_polled": 176307,
+      "tendered_votes": 0
+    },
+    "43": {
+      "ac_no": 43,
+      "ac_name": "Mummidivaram",
+      "electors": {
+        "male": 122298,
+        "female": 123173,
+        "third_gender": 0,
+        "total": 245471,
+        "overseas": 7,
+        "service": 175
+      },
+      "voted": {
+        "male": 103900,
+        "female": 101245,
+        "third_gender": 0,
+        "postal": 2275,
+        "test_votes": 0,
+        "total": 207420,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.5,
+      "rejected_postal_votes": 99,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1865,
+      "valid_votes_polled": 205456,
+      "total_polled": 207420,
+      "tendered_votes": 7
+    },
+    "44": {
+      "ac_no": 44,
+      "ac_name": "Amalapuram (SC)",
+      "electors": {
+        "male": 106386,
+        "female": 107243,
+        "third_gender": 1,
+        "total": 213630,
+        "overseas": 36,
+        "service": 122
+      },
+      "voted": {
+        "male": 89006,
+        "female": 86817,
+        "third_gender": 1,
+        "postal": 2672,
+        "test_votes": 0,
+        "total": 178496,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.55,
+      "rejected_postal_votes": 151,
+      "rejected_evm_votes": 709,
+      "nota_votes": 2133,
+      "valid_votes_polled": 175503,
+      "total_polled": 178496,
+      "tendered_votes": 4
+    },
+    "45": {
+      "ac_no": 45,
+      "ac_name": "Razole (SC)",
+      "electors": {
+        "male": 97893,
+        "female": 100116,
+        "third_gender": 1,
+        "total": 198010,
+        "overseas": 62,
+        "service": 90
+      },
+      "voted": {
+        "male": 77351,
+        "female": 79047,
+        "third_gender": 1,
+        "postal": 2551,
+        "test_votes": 0,
+        "total": 158950,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 80.27,
+      "rejected_postal_votes": 110,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1628,
+      "valid_votes_polled": 157212,
+      "total_polled": 158950,
+      "tendered_votes": 0
+    },
+    "46": {
+      "ac_no": 46,
+      "ac_name": "Gannavaram (SC)",
+      "electors": {
+        "male": 100074,
+        "female": 98659,
+        "third_gender": 6,
+        "total": 198739,
+        "overseas": 27,
+        "service": 137
+      },
+      "voted": {
+        "male": 85030,
+        "female": 81361,
+        "third_gender": 3,
+        "postal": 2662,
+        "test_votes": 0,
+        "total": 169056,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.06,
+      "rejected_postal_votes": 183,
+      "rejected_evm_votes": 671,
+      "nota_votes": 1751,
+      "valid_votes_polled": 166451,
+      "total_polled": 169056,
+      "tendered_votes": 0
+    },
+    "47": {
+      "ac_no": 47,
+      "ac_name": "Kothapeta",
+      "electors": {
+        "male": 125143,
+        "female": 127326,
+        "third_gender": 6,
+        "total": 252475,
+        "overseas": 85,
+        "service": 92
+      },
+      "voted": {
+        "male": 108050,
+        "female": 107467,
+        "third_gender": 3,
+        "postal": 2204,
+        "test_votes": 0,
+        "total": 217724,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.24,
+      "rejected_postal_votes": 95,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1575,
+      "valid_votes_polled": 216054,
+      "total_polled": 217724,
+      "tendered_votes": 8
+    },
+    "48": {
+      "ac_no": 48,
+      "ac_name": "Mandapeta",
+      "electors": {
+        "male": 107291,
+        "female": 113266,
+        "third_gender": 6,
+        "total": 220563,
+        "overseas": 25,
+        "service": 69
+      },
+      "voted": {
+        "male": 94220,
+        "female": 97733,
+        "third_gender": 2,
+        "postal": 2143,
+        "test_votes": 0,
+        "total": 194098,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.0,
+      "rejected_postal_votes": 52,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1568,
+      "valid_votes_polled": 192478,
+      "total_polled": 194098,
+      "tendered_votes": 0
+    },
+    "49": {
+      "ac_no": 49,
+      "ac_name": "Rajanagaram",
+      "electors": {
+        "male": 106945,
+        "female": 109608,
+        "third_gender": 6,
+        "total": 216559,
+        "overseas": 12,
+        "service": 68
+      },
+      "voted": {
+        "male": 94568,
+        "female": 94929,
+        "third_gender": 6,
+        "postal": 1548,
+        "test_votes": 0,
+        "total": 191051,
+        "overseas_voted": 4
+      },
+      "turnout_pct": 88.22,
+      "rejected_postal_votes": 113,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2975,
+      "valid_votes_polled": 187963,
+      "total_polled": 191051,
+      "tendered_votes": 8
+    },
+    "50": {
+      "ac_no": 50,
+      "ac_name": "Rajahmundry City",
+      "electors": {
+        "male": 128835,
+        "female": 138706,
+        "third_gender": 50,
+        "total": 267591,
+        "overseas": 178,
+        "service": 107
+      },
+      "voted": {
+        "male": 87321,
+        "female": 93633,
+        "third_gender": 26,
+        "postal": 3306,
+        "test_votes": 0,
+        "total": 184286,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 68.87,
+      "rejected_postal_votes": 610,
+      "rejected_evm_votes": 1525,
+      "nota_votes": 1569,
+      "valid_votes_polled": 180582,
+      "total_polled": 184286,
+      "tendered_votes": 4
+    },
+    "51": {
+      "ac_no": 51,
+      "ac_name": "Rajahmundry Rural",
+      "electors": {
+        "male": 133343,
+        "female": 139575,
+        "third_gender": 24,
+        "total": 272942,
+        "overseas": 23,
+        "service": 116
+      },
+      "voted": {
+        "male": 97530,
+        "female": 101672,
+        "third_gender": 17,
+        "postal": 3077,
+        "test_votes": 0,
+        "total": 202296,
+        "overseas_voted": 1
+      },
+      "turnout_pct": 74.12,
+      "rejected_postal_votes": 238,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2699,
+      "valid_votes_polled": 199359,
+      "total_polled": 202296,
+      "tendered_votes": 9
+    },
+    "52": {
+      "ac_no": 52,
+      "ac_name": "Jaggampeta",
+      "electors": {
+        "male": 113665,
+        "female": 116279,
+        "third_gender": 13,
+        "total": 229957,
+        "overseas": 21,
+        "service": 94
+      },
+      "voted": {
+        "male": 96322,
+        "female": 96132,
+        "third_gender": 3,
+        "postal": 1669,
+        "test_votes": 0,
+        "total": 194126,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.42,
+      "rejected_postal_votes": 147,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1928,
+      "valid_votes_polled": 192051,
+      "total_polled": 194126,
+      "tendered_votes": 0
+    },
+    "53": {
+      "ac_no": 53,
+      "ac_name": "Rampachodavaram (ST)",
+      "electors": {
+        "male": 131965,
+        "female": 145401,
+        "third_gender": 16,
+        "total": 277382,
+        "overseas": 3,
+        "service": 65
+      },
+      "voted": {
+        "male": 100738,
+        "female": 107777,
+        "third_gender": 3,
+        "postal": 4103,
+        "test_votes": 0,
+        "total": 212621,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.65,
+      "rejected_postal_votes": 42,
+      "rejected_evm_votes": 2071,
+      "nota_votes": 7269,
+      "valid_votes_polled": 203239,
+      "total_polled": 212621,
+      "tendered_votes": 10
+    },
+    "54": {
+      "ac_no": 54,
+      "ac_name": "Kovvur (SC)",
+      "electors": {
+        "male": 89850,
+        "female": 94390,
+        "third_gender": 5,
+        "total": 184245,
+        "overseas": 75,
+        "service": 109
+      },
+      "voted": {
+        "male": 77989,
+        "female": 80180,
+        "third_gender": 3,
+        "postal": 1800,
+        "test_votes": 0,
+        "total": 159972,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.83,
+      "rejected_postal_votes": 160,
+      "rejected_evm_votes": 701,
+      "nota_votes": 2465,
+      "valid_votes_polled": 156646,
+      "total_polled": 159972,
+      "tendered_votes": 0
+    },
+    "55": {
+      "ac_no": 55,
+      "ac_name": "Nidadavole",
+      "electors": {
+        "male": 104388,
+        "female": 109167,
+        "third_gender": 4,
+        "total": 213559,
+        "overseas": 93,
+        "service": 163
+      },
+      "voted": {
+        "male": 89201,
+        "female": 91491,
+        "third_gender": 2,
+        "postal": 1983,
+        "test_votes": 0,
+        "total": 182677,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.54,
+      "rejected_postal_votes": 181,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2137,
+      "valid_votes_polled": 180359,
+      "total_polled": 182677,
+      "tendered_votes": 0
+    },
+    "56": {
+      "ac_no": 56,
+      "ac_name": "Achanta",
+      "electors": {
+        "male": 88974,
+        "female": 91132,
+        "third_gender": 4,
+        "total": 180110,
+        "overseas": 32,
+        "service": 93
+      },
+      "voted": {
+        "male": 73064,
+        "female": 75972,
+        "third_gender": 2,
+        "postal": 1559,
+        "test_votes": 0,
+        "total": 150597,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.61,
+      "rejected_postal_votes": 56,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1673,
+      "valid_votes_polled": 148868,
+      "total_polled": 150597,
+      "tendered_votes": 0
+    },
+    "57": {
+      "ac_no": 57,
+      "ac_name": "Palacole",
+      "electors": {
+        "male": 95826,
+        "female": 99314,
+        "third_gender": 6,
+        "total": 195146,
+        "overseas": 92,
+        "service": 89
+      },
+      "voted": {
+        "male": 80028,
+        "female": 80888,
+        "third_gender": 3,
+        "postal": 2512,
+        "test_votes": 0,
+        "total": 163431,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.75,
+      "rejected_postal_votes": 218,
+      "rejected_evm_votes": 0,
+      "nota_votes": 919,
+      "valid_votes_polled": 162294,
+      "total_polled": 163431,
+      "tendered_votes": 0
+    },
+    "58": {
+      "ac_no": 58,
+      "ac_name": "Narasapuram",
+      "electors": {
+        "male": 84736,
+        "female": 85785,
+        "third_gender": 0,
+        "total": 170521,
+        "overseas": 51,
+        "service": 73
+      },
+      "voted": {
+        "male": 72677,
+        "female": 71178,
+        "third_gender": 0,
+        "postal": 1703,
+        "test_votes": 0,
+        "total": 145558,
+        "overseas_voted": 6
+      },
+      "turnout_pct": 85.36,
+      "rejected_postal_votes": 140,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1216,
+      "valid_votes_polled": 144202,
+      "total_polled": 145558,
+      "tendered_votes": 0
+    },
+    "59": {
+      "ac_no": 59,
+      "ac_name": "Bhimavaram",
+      "electors": {
+        "male": 122870,
+        "female": 130280,
+        "third_gender": 51,
+        "total": 253201,
+        "overseas": 86,
+        "service": 85
+      },
+      "voted": {
+        "male": 99426,
+        "female": 101953,
+        "third_gender": 26,
+        "postal": 2696,
+        "test_votes": 0,
+        "total": 204101,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 80.61,
+      "rejected_postal_votes": 118,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1210,
+      "valid_votes_polled": 202773,
+      "total_polled": 204101,
+      "tendered_votes": 0
+    },
+    "60": {
+      "ac_no": 60,
+      "ac_name": "Undi",
+      "electors": {
+        "male": 110250,
+        "female": 114579,
+        "third_gender": 2,
+        "total": 224831,
+        "overseas": 12,
+        "service": 106
+      },
+      "voted": {
+        "male": 96697,
+        "female": 97026,
+        "third_gender": 2,
+        "postal": 1833,
+        "test_votes": 0,
+        "total": 195558,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.98,
+      "rejected_postal_votes": 86,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1607,
+      "valid_votes_polled": 193865,
+      "total_polled": 195558,
+      "tendered_votes": 2
+    },
+    "61": {
+      "ac_no": 61,
+      "ac_name": "Tanuku",
+      "electors": {
+        "male": 114524,
+        "female": 120148,
+        "third_gender": 5,
+        "total": 234677,
+        "overseas": 91,
+        "service": 102
+      },
+      "voted": {
+        "male": 93918,
+        "female": 98642,
+        "third_gender": 4,
+        "postal": 2305,
+        "test_votes": 0,
+        "total": 194869,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.04,
+      "rejected_postal_votes": 101,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1722,
+      "valid_votes_polled": 193046,
+      "total_polled": 194869,
+      "tendered_votes": 0
+    },
+    "62": {
+      "ac_no": 62,
+      "ac_name": "Tadepalligudem",
+      "electors": {
+        "male": 105208,
+        "female": 110107,
+        "third_gender": 10,
+        "total": 215325,
+        "overseas": 11,
+        "service": 340
+      },
+      "voted": {
+        "male": 87208,
+        "female": 88771,
+        "third_gender": 9,
+        "postal": 2193,
+        "test_votes": 0,
+        "total": 178181,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.75,
+      "rejected_postal_votes": 132,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1534,
+      "valid_votes_polled": 176515,
+      "total_polled": 178181,
+      "tendered_votes": 2
+    },
+    "63": {
+      "ac_no": 63,
+      "ac_name": "Ungutur",
+      "electors": {
+        "male": 101740,
+        "female": 104888,
+        "third_gender": 6,
+        "total": 206634,
+        "overseas": 46,
+        "service": 197
+      },
+      "voted": {
+        "male": 90435,
+        "female": 90667,
+        "third_gender": 5,
+        "postal": 1530,
+        "test_votes": 0,
+        "total": 182637,
+        "overseas_voted": 7
+      },
+      "turnout_pct": 88.39,
+      "rejected_postal_votes": 14,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2105,
+      "valid_votes_polled": 180518,
+      "total_polled": 182637,
+      "tendered_votes": 0
+    },
+    "64": {
+      "ac_no": 64,
+      "ac_name": "Denduluru",
+      "electors": {
+        "male": 109013,
+        "female": 115092,
+        "third_gender": 9,
+        "total": 224114,
+        "overseas": 88,
+        "service": 101
+      },
+      "voted": {
+        "male": 95360,
+        "female": 97538,
+        "third_gender": 3,
+        "postal": 1897,
+        "test_votes": 0,
+        "total": 194798,
+        "overseas_voted": 15
+      },
+      "turnout_pct": 86.92,
+      "rejected_postal_votes": 132,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1920,
+      "valid_votes_polled": 192746,
+      "total_polled": 194798,
+      "tendered_votes": 0
+    },
+    "65": {
+      "ac_no": 65,
+      "ac_name": "Eluru",
+      "electors": {
+        "male": 112539,
+        "female": 122878,
+        "third_gender": 47,
+        "total": 235464,
+        "overseas": 13,
+        "service": 119
+      },
+      "voted": {
+        "male": 79569,
+        "female": 85562,
+        "third_gender": 17,
+        "postal": 4118,
+        "test_votes": 0,
+        "total": 169266,
+        "overseas_voted": 2
+      },
+      "turnout_pct": 71.89,
+      "rejected_postal_votes": 715,
+      "rejected_evm_votes": 2276,
+      "nota_votes": 1256,
+      "valid_votes_polled": 165019,
+      "total_polled": 169266,
+      "tendered_votes": 0
+    },
+    "66": {
+      "ac_no": 66,
+      "ac_name": "Gopalapuram (SC)",
+      "electors": {
+        "male": 119050,
+        "female": 123798,
+        "third_gender": 5,
+        "total": 242853,
+        "overseas": 49,
+        "service": 90
+      },
+      "voted": {
+        "male": 104887,
+        "female": 105499,
+        "third_gender": 4,
+        "postal": 1615,
+        "test_votes": 0,
+        "total": 212005,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.3,
+      "rejected_postal_votes": 346,
+      "rejected_evm_votes": 0,
+      "nota_votes": 4500,
+      "valid_votes_polled": 207159,
+      "total_polled": 212005,
+      "tendered_votes": 0
+    },
+    "67": {
+      "ac_no": 67,
+      "ac_name": "Polavaram (ST)",
+      "electors": {
+        "male": 122822,
+        "female": 131216,
+        "third_gender": 9,
+        "total": 254047,
+        "overseas": 21,
+        "service": 66
+      },
+      "voted": {
+        "male": 106324,
+        "female": 112523,
+        "third_gender": 4,
+        "postal": 2752,
+        "test_votes": 0,
+        "total": 221603,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.23,
+      "rejected_postal_votes": 19,
+      "rejected_evm_votes": 2585,
+      "nota_votes": 5611,
+      "valid_votes_polled": 213388,
+      "total_polled": 221603,
+      "tendered_votes": 0
+    },
+    "68": {
+      "ac_no": 68,
+      "ac_name": "Chintalapudi (SC)",
+      "electors": {
+        "male": 134363,
+        "female": 138737,
+        "third_gender": 41,
+        "total": 273141,
+        "overseas": 33,
+        "service": 72
+      },
+      "voted": {
+        "male": 110829,
+        "female": 112020,
+        "third_gender": 22,
+        "postal": 2546,
+        "test_votes": 0,
+        "total": 225417,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.53,
+      "rejected_postal_votes": 26,
+      "rejected_evm_votes": 0,
+      "nota_votes": 4121,
+      "valid_votes_polled": 221270,
+      "total_polled": 225417,
+      "tendered_votes": 0
+    },
+    "69": {
+      "ac_no": 69,
+      "ac_name": "Tiruvuru (SC)",
+      "electors": {
+        "male": 102041,
+        "female": 105192,
+        "third_gender": 6,
+        "total": 207239,
+        "overseas": 35,
+        "service": 49
+      },
+      "voted": {
+        "male": 90253,
+        "female": 91742,
+        "third_gender": 4,
+        "postal": 2733,
+        "test_votes": 0,
+        "total": 184732,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 89.14,
+      "rejected_postal_votes": 139,
+      "rejected_evm_votes": 1173,
+      "nota_votes": 1184,
+      "valid_votes_polled": 182236,
+      "total_polled": 184732,
+      "tendered_votes": 10
+    },
+    "70": {
+      "ac_no": 70,
+      "ac_name": "Nuzvid",
+      "electors": {
+        "male": 118153,
+        "female": 120871,
+        "third_gender": 10,
+        "total": 239034,
+        "overseas": 28,
+        "service": 53
+      },
+      "voted": {
+        "male": 105121,
+        "female": 105243,
+        "third_gender": 2,
+        "postal": 1742,
+        "test_votes": 0,
+        "total": 212108,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.74,
+      "rejected_postal_votes": 11,
+      "rejected_evm_votes": 380,
+      "nota_votes": 2771,
+      "valid_votes_polled": 208946,
+      "total_polled": 212108,
+      "tendered_votes": 6
+    },
+    "71": {
+      "ac_no": 71,
+      "ac_name": "Gannavaram",
+      "electors": {
+        "male": 134294,
+        "female": 144821,
+        "third_gender": 12,
+        "total": 279127,
+        "overseas": 53,
+        "service": 73
+      },
+      "voted": {
+        "male": 114594,
+        "female": 122447,
+        "third_gender": 3,
+        "postal": 2727,
+        "test_votes": 0,
+        "total": 239771,
+        "overseas_voted": 24
+      },
+      "turnout_pct": 85.9,
+      "rejected_postal_votes": 246,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1731,
+      "valid_votes_polled": 237794,
+      "total_polled": 239771,
+      "tendered_votes": 2
+    },
+    "72": {
+      "ac_no": 72,
+      "ac_name": "Gudivada",
+      "electors": {
+        "male": 97795,
+        "female": 106555,
+        "third_gender": 11,
+        "total": 204361,
+        "overseas": 60,
+        "service": 90
+      },
+      "voted": {
+        "male": 81136,
+        "female": 87432,
+        "third_gender": 10,
+        "postal": 3273,
+        "test_votes": 0,
+        "total": 171851,
+        "overseas_voted": 13
+      },
+      "turnout_pct": 84.09,
+      "rejected_postal_votes": 247,
+      "rejected_evm_votes": 0,
+      "nota_votes": 999,
+      "valid_votes_polled": 170605,
+      "total_polled": 171851,
+      "tendered_votes": 0
+    },
+    "73": {
+      "ac_no": 73,
+      "ac_name": "Kaikalur",
+      "electors": {
+        "male": 101271,
+        "female": 104407,
+        "third_gender": 4,
+        "total": 205682,
+        "overseas": 40,
+        "service": 78
+      },
+      "voted": {
+        "male": 89380,
+        "female": 90148,
+        "third_gender": 1,
+        "postal": 1477,
+        "test_votes": 0,
+        "total": 181006,
+        "overseas_voted": 2
+      },
+      "turnout_pct": 88.0,
+      "rejected_postal_votes": 15,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1598,
+      "valid_votes_polled": 179393,
+      "total_polled": 181006,
+      "tendered_votes": 0
+    },
+    "74": {
+      "ac_no": 74,
+      "ac_name": "Pedana",
+      "electors": {
+        "male": 83065,
+        "female": 84557,
+        "third_gender": 0,
+        "total": 167622,
+        "overseas": 19,
+        "service": 58
+      },
+      "voted": {
+        "male": 74382,
+        "female": 74027,
+        "third_gender": 0,
+        "postal": 1673,
+        "test_votes": 0,
+        "total": 150082,
+        "overseas_voted": 3
+      },
+      "turnout_pct": 89.54,
+      "rejected_postal_votes": 121,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1349,
+      "valid_votes_polled": 148612,
+      "total_polled": 150082,
+      "tendered_votes": 0
+    },
+    "75": {
+      "ac_no": 75,
+      "ac_name": "Machilipatnam",
+      "electors": {
+        "male": 94869,
+        "female": 101885,
+        "third_gender": 11,
+        "total": 196765,
+        "overseas": 58,
+        "service": 85
+      },
+      "voted": {
+        "male": 78099,
+        "female": 83003,
+        "third_gender": 5,
+        "postal": 3981,
+        "test_votes": 0,
+        "total": 165088,
+        "overseas_voted": 1
+      },
+      "turnout_pct": 83.9,
+      "rejected_postal_votes": 249,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1027,
+      "valid_votes_polled": 163812,
+      "total_polled": 165088,
+      "tendered_votes": 0
+    },
+    "76": {
+      "ac_no": 76,
+      "ac_name": "Avanigadda",
+      "electors": {
+        "male": 104687,
+        "female": 107750,
+        "third_gender": 18,
+        "total": 212455,
+        "overseas": 76,
+        "service": 124
+      },
+      "voted": {
+        "male": 91118,
+        "female": 91865,
+        "third_gender": 8,
+        "postal": 3871,
+        "test_votes": 0,
+        "total": 186862,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.95,
+      "rejected_postal_votes": 417,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1952,
+      "valid_votes_polled": 184493,
+      "total_polled": 186862,
+      "tendered_votes": 0
+    },
+    "77": {
+      "ac_no": 77,
+      "ac_name": "Pamarru (SC)",
+      "electors": {
+        "male": 89498,
+        "female": 95215,
+        "third_gender": 3,
+        "total": 184716,
+        "overseas": 60,
+        "service": 84
+      },
+      "voted": {
+        "male": 79384,
+        "female": 83305,
+        "third_gender": 0,
+        "postal": 2245,
+        "test_votes": 0,
+        "total": 164934,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 89.29,
+      "rejected_postal_votes": 65,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1733,
+      "valid_votes_polled": 163136,
+      "total_polled": 164934,
+      "tendered_votes": 0
+    },
+    "78": {
+      "ac_no": 78,
+      "ac_name": "Penamaluru",
+      "electors": {
+        "male": 142414,
+        "female": 152583,
+        "third_gender": 2,
+        "total": 294999,
+        "overseas": 216,
+        "service": 71
+      },
+      "voted": {
+        "male": 113314,
+        "female": 119966,
+        "third_gender": 1,
+        "postal": 3620,
+        "test_votes": 0,
+        "total": 236901,
+        "overseas_voted": 65
+      },
+      "turnout_pct": 80.31,
+      "rejected_postal_votes": 362,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1510,
+      "valid_votes_polled": 235029,
+      "total_polled": 236901,
+      "tendered_votes": 4
+    },
+    "79": {
+      "ac_no": 79,
+      "ac_name": "Vijayawada West",
+      "electors": {
+        "male": 126685,
+        "female": 129303,
+        "third_gender": 33,
+        "total": 256021,
+        "overseas": 81,
+        "service": 58
+      },
+      "voted": {
+        "male": 85254,
+        "female": 84832,
+        "third_gender": 16,
+        "postal": 1752,
+        "test_votes": 0,
+        "total": 171854,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 67.12,
+      "rejected_postal_votes": 11,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1236,
+      "valid_votes_polled": 170607,
+      "total_polled": 171854,
+      "tendered_votes": 0
+    },
+    "80": {
+      "ac_no": 80,
+      "ac_name": "Vijayawada Central",
+      "electors": {
+        "male": 134890,
+        "female": 142856,
+        "third_gender": 50,
+        "total": 277796,
+        "overseas": 58,
+        "service": 72
+      },
+      "voted": {
+        "male": 99285,
+        "female": 103451,
+        "third_gender": 41,
+        "postal": 2906,
+        "test_votes": 0,
+        "total": 205683,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 74.04,
+      "rejected_postal_votes": 140,
+      "rejected_evm_votes": 826,
+      "nota_votes": 951,
+      "valid_votes_polled": 203766,
+      "total_polled": 205683,
+      "tendered_votes": 0
+    },
+    "81": {
+      "ac_no": 81,
+      "ac_name": "Vijayawada East",
+      "electors": {
+        "male": 132504,
+        "female": 138167,
+        "third_gender": 23,
+        "total": 270694,
+        "overseas": 300,
+        "service": 70
+      },
+      "voted": {
+        "male": 94320,
+        "female": 98577,
+        "third_gender": 15,
+        "postal": 3181,
+        "test_votes": 0,
+        "total": 196093,
+        "overseas_voted": 2
+      },
+      "turnout_pct": 72.44,
+      "rejected_postal_votes": 187,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1049,
+      "valid_votes_polled": 194857,
+      "total_polled": 196093,
+      "tendered_votes": 13
+    },
+    "82": {
+      "ac_no": 82,
+      "ac_name": "Mylavaram",
+      "electors": {
+        "male": 136787,
+        "female": 144976,
+        "third_gender": 20,
+        "total": 281783,
+        "overseas": 58,
+        "service": 51
+      },
+      "voted": {
+        "male": 117561,
+        "female": 123077,
+        "third_gender": 13,
+        "postal": 2555,
+        "test_votes": 0,
+        "total": 243206,
+        "overseas_voted": 2
+      },
+      "turnout_pct": 86.31,
+      "rejected_postal_votes": 112,
+      "rejected_evm_votes": 497,
+      "nota_votes": 1598,
+      "valid_votes_polled": 240999,
+      "total_polled": 243206,
+      "tendered_votes": 0
+    },
+    "83": {
+      "ac_no": 83,
+      "ac_name": "Nandigama (SC)",
+      "electors": {
+        "male": 99437,
+        "female": 106078,
+        "third_gender": 6,
+        "total": 205521,
+        "overseas": 56,
+        "service": 41
+      },
+      "voted": {
+        "male": 87769,
+        "female": 92179,
+        "third_gender": 4,
+        "postal": 2226,
+        "test_votes": 0,
+        "total": 182178,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.64,
+      "rejected_postal_votes": 187,
+      "rejected_evm_votes": 0,
+      "nota_votes": 928,
+      "valid_votes_polled": 181063,
+      "total_polled": 182178,
+      "tendered_votes": 0
+    },
+    "84": {
+      "ac_no": 84,
+      "ac_name": "Jaggayyapeta",
+      "electors": {
+        "male": 98513,
+        "female": 106889,
+        "third_gender": 13,
+        "total": 205415,
+        "overseas": 96,
+        "service": 51
+      },
+      "voted": {
+        "male": 88669,
+        "female": 95903,
+        "third_gender": 4,
+        "postal": 2336,
+        "test_votes": 0,
+        "total": 186912,
+        "overseas_voted": 3
+      },
+      "turnout_pct": 90.99,
+      "rejected_postal_votes": 96,
+      "rejected_evm_votes": 929,
+      "nota_votes": 773,
+      "valid_votes_polled": 185114,
+      "total_polled": 186912,
+      "tendered_votes": 5
+    },
+    "85": {
+      "ac_no": 85,
+      "ac_name": "Pedakurapadu",
+      "electors": {
+        "male": 113544,
+        "female": 119044,
+        "third_gender": 16,
+        "total": 232604,
+        "overseas": 50,
+        "service": 151
+      },
+      "voted": {
+        "male": 101916,
+        "female": 105548,
+        "third_gender": 5,
+        "postal": 2128,
+        "test_votes": 0,
+        "total": 209597,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 90.11,
+      "rejected_postal_votes": 299,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1184,
+      "valid_votes_polled": 208114,
+      "total_polled": 209597,
+      "tendered_votes": 0
+    },
+    "86": {
+      "ac_no": 86,
+      "ac_name": "Tadikonda (SC)",
+      "electors": {
+        "male": 100301,
+        "female": 107530,
+        "third_gender": 1,
+        "total": 207832,
+        "overseas": 64,
+        "service": 217
+      },
+      "voted": {
+        "male": 88819,
+        "female": 93911,
+        "third_gender": 0,
+        "postal": 2301,
+        "test_votes": 0,
+        "total": 185031,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 89.03,
+      "rejected_postal_votes": 350,
+      "rejected_evm_votes": 581,
+      "nota_votes": 995,
+      "valid_votes_polled": 183105,
+      "total_polled": 185031,
+      "tendered_votes": 0
+    },
+    "87": {
+      "ac_no": 87,
+      "ac_name": "Mangalagiri",
+      "electors": {
+        "male": 140786,
+        "female": 151769,
+        "third_gender": 13,
+        "total": 292568,
+        "overseas": 61,
+        "service": 136
+      },
+      "voted": {
+        "male": 120982,
+        "female": 129626,
+        "third_gender": 7,
+        "postal": 3278,
+        "test_votes": 0,
+        "total": 253893,
+        "overseas_voted": 3
+      },
+      "turnout_pct": 86.78,
+      "rejected_postal_votes": 63,
+      "rejected_evm_votes": 0,
+      "nota_votes": 890,
+      "valid_votes_polled": 252940,
+      "total_polled": 253893,
+      "tendered_votes": 0
+    },
+    "88": {
+      "ac_no": 88,
+      "ac_name": "Ponnur",
+      "electors": {
+        "male": 109505,
+        "female": 118132,
+        "third_gender": 11,
+        "total": 227648,
+        "overseas": 52,
+        "service": 513
+      },
+      "voted": {
+        "male": 93451,
+        "female": 99545,
+        "third_gender": 3,
+        "postal": 2559,
+        "test_votes": 0,
+        "total": 195558,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.9,
+      "rejected_postal_votes": 37,
+      "rejected_evm_votes": 1646,
+      "nota_votes": 1248,
+      "valid_votes_polled": 192627,
+      "total_polled": 195558,
+      "tendered_votes": 0
+    },
+    "89": {
+      "ac_no": 89,
+      "ac_name": "Vemuru (SC)",
+      "electors": {
+        "male": 96145,
+        "female": 101877,
+        "third_gender": 16,
+        "total": 198038,
+        "overseas": 69,
+        "service": 580
+      },
+      "voted": {
+        "male": 83505,
+        "female": 87290,
+        "third_gender": 14,
+        "postal": 2231,
+        "test_votes": 0,
+        "total": 173040,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.38,
+      "rejected_postal_votes": 189,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1763,
+      "valid_votes_polled": 171088,
+      "total_polled": 173040,
+      "tendered_votes": 0
+    },
+    "90": {
+      "ac_no": 90,
+      "ac_name": "Repalle",
+      "electors": {
+        "male": 112955,
+        "female": 116037,
+        "third_gender": 13,
+        "total": 229005,
+        "overseas": 30,
+        "service": 1773
+      },
+      "voted": {
+        "male": 92355,
+        "female": 95217,
+        "third_gender": 3,
+        "postal": 4015,
+        "test_votes": 0,
+        "total": 191590,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.66,
+      "rejected_postal_votes": 315,
+      "rejected_evm_votes": 2443,
+      "nota_votes": 1891,
+      "valid_votes_polled": 186941,
+      "total_polled": 191590,
+      "tendered_votes": 22
+    },
+    "91": {
+      "ac_no": 91,
+      "ac_name": "Tenali",
+      "electors": {
+        "male": 129357,
+        "female": 138524,
+        "third_gender": 33,
+        "total": 267914,
+        "overseas": 177,
+        "service": 290
+      },
+      "voted": {
+        "male": 99352,
+        "female": 104426,
+        "third_gender": 15,
+        "postal": 3626,
+        "test_votes": 0,
+        "total": 207419,
+        "overseas_voted": 13
+      },
+      "turnout_pct": 77.42,
+      "rejected_postal_votes": 359,
+      "rejected_evm_votes": 1064,
+      "nota_votes": 1412,
+      "valid_votes_polled": 204584,
+      "total_polled": 207419,
+      "tendered_votes": 0
+    },
+    "92": {
+      "ac_no": 92,
+      "ac_name": "Bapatla",
+      "electors": {
+        "male": 94040,
+        "female": 98142,
+        "third_gender": 10,
+        "total": 192192,
+        "overseas": 34,
+        "service": 1267
+      },
+      "voted": {
+        "male": 77229,
+        "female": 81208,
+        "third_gender": 7,
+        "postal": 3200,
+        "test_votes": 0,
+        "total": 161644,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.11,
+      "rejected_postal_votes": 418,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1128,
+      "valid_votes_polled": 160098,
+      "total_polled": 161644,
+      "tendered_votes": 0
+    },
+    "93": {
+      "ac_no": 93,
+      "ac_name": "Prathipadu (SC)",
+      "electors": {
+        "male": 129618,
+        "female": 138611,
+        "third_gender": 23,
+        "total": 268252,
+        "overseas": 101,
+        "service": 364
+      },
+      "voted": {
+        "male": 107687,
+        "female": 113339,
+        "third_gender": 16,
+        "postal": 3078,
+        "test_votes": 0,
+        "total": 224120,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.55,
+      "rejected_postal_votes": 328,
+      "rejected_evm_votes": 2313,
+      "nota_votes": 1389,
+      "valid_votes_polled": 220090,
+      "total_polled": 224120,
+      "tendered_votes": 0
+    },
+    "94": {
+      "ac_no": 94,
+      "ac_name": "Guntur West",
+      "electors": {
+        "male": 135579,
+        "female": 142697,
+        "third_gender": 44,
+        "total": 278320,
+        "overseas": 447,
+        "service": 162
+      },
+      "voted": {
+        "male": 90002,
+        "female": 95500,
+        "third_gender": 10,
+        "postal": 4900,
+        "test_votes": 0,
+        "total": 190412,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 68.41,
+      "rejected_postal_votes": 44,
+      "rejected_evm_votes": 1893,
+      "nota_votes": 1055,
+      "valid_votes_polled": 187420,
+      "total_polled": 190412,
+      "tendered_votes": 4
+    },
+    "95": {
+      "ac_no": 95,
+      "ac_name": "Guntur East",
+      "electors": {
+        "male": 121939,
+        "female": 128817,
+        "third_gender": 34,
+        "total": 250790,
+        "overseas": 68,
+        "service": 99
+      },
+      "voted": {
+        "male": 86255,
+        "female": 90385,
+        "third_gender": 11,
+        "postal": 3042,
+        "test_votes": 0,
+        "total": 179693,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 71.65,
+      "rejected_postal_votes": 202,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1215,
+      "valid_votes_polled": 178276,
+      "total_polled": 179693,
+      "tendered_votes": 5
+    },
+    "96": {
+      "ac_no": 96,
+      "ac_name": "Chilakaluripet",
+      "electors": {
+        "male": 108599,
+        "female": 118219,
+        "third_gender": 49,
+        "total": 226867,
+        "overseas": 36,
+        "service": 221
+      },
+      "voted": {
+        "male": 93005,
+        "female": 100044,
+        "third_gender": 32,
+        "postal": 2477,
+        "test_votes": 0,
+        "total": 195558,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.2,
+      "rejected_postal_votes": 158,
+      "rejected_evm_votes": 0,
+      "nota_votes": 788,
+      "valid_votes_polled": 194612,
+      "total_polled": 195558,
+      "tendered_votes": 0
+    },
+    "97": {
+      "ac_no": 97,
+      "ac_name": "Narasaraopet",
+      "electors": {
+        "male": 113319,
+        "female": 119602,
+        "third_gender": 30,
+        "total": 232951,
+        "overseas": 30,
+        "service": 173
+      },
+      "voted": {
+        "male": 92033,
+        "female": 96648,
+        "third_gender": 15,
+        "postal": 3262,
+        "test_votes": 0,
+        "total": 191958,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.4,
+      "rejected_postal_votes": 106,
+      "rejected_evm_votes": 735,
+      "nota_votes": 1052,
+      "valid_votes_polled": 190065,
+      "total_polled": 191958,
+      "tendered_votes": 0
+    },
+    "98": {
+      "ac_no": 98,
+      "ac_name": "Sattenapalle",
+      "electors": {
+        "male": 118676,
+        "female": 123640,
+        "third_gender": 12,
+        "total": 242328,
+        "overseas": 43,
+        "service": 281
+      },
+      "voted": {
+        "male": 103179,
+        "female": 107424,
+        "third_gender": 3,
+        "postal": 2699,
+        "test_votes": 0,
+        "total": 213305,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.02,
+      "rejected_postal_votes": 737,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1140,
+      "valid_votes_polled": 211428,
+      "total_polled": 213305,
+      "tendered_votes": 0
+    },
+    "99": {
+      "ac_no": 99,
+      "ac_name": "Vinukonda",
+      "electors": {
+        "male": 131375,
+        "female": 133375,
+        "third_gender": 20,
+        "total": 264770,
+        "overseas": 21,
+        "service": 211
+      },
+      "voted": {
+        "male": 116732,
+        "female": 119262,
+        "third_gender": 1,
+        "postal": 2855,
+        "test_votes": 0,
+        "total": 238850,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 90.21,
+      "rejected_postal_votes": 153,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1694,
+      "valid_votes_polled": 237003,
+      "total_polled": 238850,
+      "tendered_votes": 0
+    },
+    "100": {
+      "ac_no": 100,
+      "ac_name": "Gurajala",
+      "electors": {
+        "male": 133503,
+        "female": 140579,
+        "third_gender": 42,
+        "total": 274124,
+        "overseas": 35,
+        "service": 153
+      },
+      "voted": {
+        "male": 112709,
+        "female": 118209,
+        "third_gender": 22,
+        "postal": 2148,
+        "test_votes": 0,
+        "total": 233088,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.03,
+      "rejected_postal_votes": 42,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1888,
+      "valid_votes_polled": 231158,
+      "total_polled": 233088,
+      "tendered_votes": 0
+    },
+    "101": {
+      "ac_no": 101,
+      "ac_name": "Macherla",
+      "electors": {
+        "male": 128749,
+        "female": 133747,
+        "third_gender": 22,
+        "total": 262518,
+        "overseas": 52,
+        "service": 114
+      },
+      "voted": {
+        "male": 108333,
+        "female": 111425,
+        "third_gender": 17,
+        "postal": 2629,
+        "test_votes": 0,
+        "total": 222404,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.72,
+      "rejected_postal_votes": 234,
+      "rejected_evm_votes": 2071,
+      "nota_votes": 1746,
+      "valid_votes_polled": 218353,
+      "total_polled": 222404,
+      "tendered_votes": 0
+    },
+    "102": {
+      "ac_no": 102,
+      "ac_name": "Yerragondapalem (SC)",
+      "electors": {
+        "male": 105445,
+        "female": 101988,
+        "third_gender": 2,
+        "total": 207435,
+        "overseas": 1,
+        "service": 221
+      },
+      "voted": {
+        "male": 93933,
+        "female": 91294,
+        "third_gender": 2,
+        "postal": 2063,
+        "test_votes": 0,
+        "total": 187292,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 90.29,
+      "rejected_postal_votes": 183,
+      "rejected_evm_votes": 1384,
+      "nota_votes": 2231,
+      "valid_votes_polled": 183494,
+      "total_polled": 187292,
+      "tendered_votes": 0
+    },
+    "103": {
+      "ac_no": 103,
+      "ac_name": "Darsi",
+      "electors": {
+        "male": 114448,
+        "female": 112134,
+        "third_gender": 8,
+        "total": 226590,
+        "overseas": 7,
+        "service": 220
+      },
+      "voted": {
+        "male": 104129,
+        "female": 101940,
+        "third_gender": 1,
+        "postal": 2184,
+        "test_votes": 0,
+        "total": 208254,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 91.91,
+      "rejected_postal_votes": 85,
+      "rejected_evm_votes": 1063,
+      "nota_votes": 2107,
+      "valid_votes_polled": 204999,
+      "total_polled": 208254,
+      "tendered_votes": 0
+    },
+    "104": {
+      "ac_no": 104,
+      "ac_name": "Parchur",
+      "electors": {
+        "male": 112338,
+        "female": 117477,
+        "third_gender": 6,
+        "total": 229821,
+        "overseas": 111,
+        "service": 488
+      },
+      "voted": {
+        "male": 98083,
+        "female": 102240,
+        "third_gender": 1,
+        "postal": 2959,
+        "test_votes": 0,
+        "total": 203283,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.45,
+      "rejected_postal_votes": 280,
+      "rejected_evm_votes": 729,
+      "nota_votes": 1289,
+      "valid_votes_polled": 200985,
+      "total_polled": 203283,
+      "tendered_votes": 0
+    },
+    "105": {
+      "ac_no": 105,
+      "ac_name": "Addanki",
+      "electors": {
+        "male": 119696,
+        "female": 124482,
+        "third_gender": 12,
+        "total": 244190,
+        "overseas": 22,
+        "service": 133
+      },
+      "voted": {
+        "male": 105719,
+        "female": 109594,
+        "third_gender": 0,
+        "postal": 2744,
+        "test_votes": 0,
+        "total": 218057,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 89.3,
+      "rejected_postal_votes": 519,
+      "rejected_evm_votes": 2020,
+      "nota_votes": 1600,
+      "valid_votes_polled": 213918,
+      "total_polled": 218057,
+      "tendered_votes": 0
+    },
+    "106": {
+      "ac_no": 106,
+      "ac_name": "Chirala",
+      "electors": {
+        "male": 99137,
+        "female": 103975,
+        "third_gender": 24,
+        "total": 203136,
+        "overseas": 42,
+        "service": 425
+      },
+      "voted": {
+        "male": 81768,
+        "female": 85683,
+        "third_gender": 13,
+        "postal": 3165,
+        "test_votes": 0,
+        "total": 170629,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.0,
+      "rejected_postal_votes": 301,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1255,
+      "valid_votes_polled": 169073,
+      "total_polled": 170629,
+      "tendered_votes": 0
+    },
+    "107": {
+      "ac_no": 107,
+      "ac_name": "Santhanuthalapadu (SC)",
+      "electors": {
+        "male": 105648,
+        "female": 109143,
+        "third_gender": 4,
+        "total": 214795,
+        "overseas": 100,
+        "service": 157
+      },
+      "voted": {
+        "male": 92584,
+        "female": 95128,
+        "third_gender": 2,
+        "postal": 2304,
+        "test_votes": 0,
+        "total": 190018,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.46,
+      "rejected_postal_votes": 102,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1725,
+      "valid_votes_polled": 188191,
+      "total_polled": 190018,
+      "tendered_votes": 5
+    },
+    "108": {
+      "ac_no": 108,
+      "ac_name": "Ongole",
+      "electors": {
+        "male": 115626,
+        "female": 124706,
+        "third_gender": 53,
+        "total": 240385,
+        "overseas": 81,
+        "service": 143
+      },
+      "voted": {
+        "male": 98816,
+        "female": 105473,
+        "third_gender": 40,
+        "postal": 5341,
+        "test_votes": 0,
+        "total": 209670,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.22,
+      "rejected_postal_votes": 367,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1310,
+      "valid_votes_polled": 207993,
+      "total_polled": 209670,
+      "tendered_votes": 0
+    },
+    "109": {
+      "ac_no": 109,
+      "ac_name": "Kandukur",
+      "electors": {
+        "male": 113224,
+        "female": 115729,
+        "third_gender": 26,
+        "total": 228979,
+        "overseas": 53,
+        "service": 66
+      },
+      "voted": {
+        "male": 101576,
+        "female": 102608,
+        "third_gender": 18,
+        "postal": 2725,
+        "test_votes": 0,
+        "total": 206927,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 90.37,
+      "rejected_postal_votes": 154,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1025,
+      "valid_votes_polled": 205748,
+      "total_polled": 206927,
+      "tendered_votes": 0
+    },
+    "110": {
+      "ac_no": 110,
+      "ac_name": "Kondapi (SC)",
+      "electors": {
+        "male": 118713,
+        "female": 120986,
+        "third_gender": 3,
+        "total": 239702,
+        "overseas": 40,
+        "service": 93
+      },
+      "voted": {
+        "male": 105561,
+        "female": 106224,
+        "third_gender": 2,
+        "postal": 2271,
+        "test_votes": 0,
+        "total": 214058,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 89.3,
+      "rejected_postal_votes": 114,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1612,
+      "valid_votes_polled": 212332,
+      "total_polled": 214058,
+      "tendered_votes": 0
+    },
+    "111": {
+      "ac_no": 111,
+      "ac_name": "Markapuram",
+      "electors": {
+        "male": 108451,
+        "female": 106565,
+        "third_gender": 8,
+        "total": 215024,
+        "overseas": 3,
+        "service": 416
+      },
+      "voted": {
+        "male": 95133,
+        "female": 93013,
+        "third_gender": 7,
+        "postal": 2807,
+        "test_votes": 0,
+        "total": 190960,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.81,
+      "rejected_postal_votes": 30,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1327,
+      "valid_votes_polled": 189603,
+      "total_polled": 190960,
+      "tendered_votes": 3
+    },
+    "112": {
+      "ac_no": 112,
+      "ac_name": "Giddalur",
+      "electors": {
+        "male": 124779,
+        "female": 120315,
+        "third_gender": 20,
+        "total": 245114,
+        "overseas": 9,
+        "service": 5404
+      },
+      "voted": {
+        "male": 99931,
+        "female": 102368,
+        "third_gender": 15,
+        "postal": 5750,
+        "test_votes": 0,
+        "total": 208064,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.88,
+      "rejected_postal_votes": 1195,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2251,
+      "valid_votes_polled": 204618,
+      "total_polled": 208064,
+      "tendered_votes": 0
+    },
+    "113": {
+      "ac_no": 113,
+      "ac_name": "Kanigiri",
+      "electors": {
+        "male": 121547,
+        "female": 118715,
+        "third_gender": 13,
+        "total": 240275,
+        "overseas": 1,
+        "service": 196
+      },
+      "voted": {
+        "male": 104350,
+        "female": 100003,
+        "third_gender": 7,
+        "postal": 2819,
+        "test_votes": 0,
+        "total": 207179,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.23,
+      "rejected_postal_votes": 114,
+      "rejected_evm_votes": 918,
+      "nota_votes": 2217,
+      "valid_votes_polled": 203930,
+      "total_polled": 207179,
+      "tendered_votes": 0
+    },
+    "114": {
+      "ac_no": 114,
+      "ac_name": "Kavali",
+      "electors": {
+        "male": 117152,
+        "female": 121465,
+        "third_gender": 28,
+        "total": 238645,
+        "overseas": 19,
+        "service": 92
+      },
+      "voted": {
+        "male": 97908,
+        "female": 100249,
+        "third_gender": 10,
+        "postal": 3675,
+        "test_votes": 0,
+        "total": 201842,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.58,
+      "rejected_postal_votes": 95,
+      "rejected_evm_votes": 1765,
+      "nota_votes": 2030,
+      "valid_votes_polled": 197952,
+      "total_polled": 201842,
+      "tendered_votes": 0
+    },
+    "115": {
+      "ac_no": 115,
+      "ac_name": "Atmakur",
+      "electors": {
+        "male": 105873,
+        "female": 109579,
+        "third_gender": 8,
+        "total": 215460,
+        "overseas": 20,
+        "service": 59
+      },
+      "voted": {
+        "male": 88849,
+        "female": 90969,
+        "third_gender": 1,
+        "postal": 3163,
+        "test_votes": 0,
+        "total": 182982,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.93,
+      "rejected_postal_votes": 89,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2347,
+      "valid_votes_polled": 180546,
+      "total_polled": 182982,
+      "tendered_votes": 0
+    },
+    "116": {
+      "ac_no": 116,
+      "ac_name": "Kovur",
+      "electors": {
+        "male": 129004,
+        "female": 138374,
+        "third_gender": 25,
+        "total": 267403,
+        "overseas": 14,
+        "service": 58
+      },
+      "voted": {
+        "male": 103142,
+        "female": 108933,
+        "third_gender": 9,
+        "postal": 3234,
+        "test_votes": 0,
+        "total": 215318,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 80.52,
+      "rejected_postal_votes": 64,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2377,
+      "valid_votes_polled": 212877,
+      "total_polled": 215318,
+      "tendered_votes": 0
+    },
+    "117": {
+      "ac_no": 117,
+      "ac_name": "Nellore City",
+      "electors": {
+        "male": 116764,
+        "female": 122713,
+        "third_gender": 67,
+        "total": 239544,
+        "overseas": 68,
+        "service": 47
+      },
+      "voted": {
+        "male": 84424,
+        "female": 87315,
+        "third_gender": 26,
+        "postal": 3092,
+        "test_votes": 0,
+        "total": 174857,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 73.0,
+      "rejected_postal_votes": 119,
+      "rejected_evm_votes": 0,
+      "nota_votes": 967,
+      "valid_votes_polled": 173771,
+      "total_polled": 174857,
+      "tendered_votes": 0
+    },
+    "118": {
+      "ac_no": 118,
+      "ac_name": "Nellore Rural",
+      "electors": {
+        "male": 136691,
+        "female": 144237,
+        "third_gender": 20,
+        "total": 280948,
+        "overseas": 22,
+        "service": 60
+      },
+      "voted": {
+        "male": 93094,
+        "female": 97266,
+        "third_gender": 7,
+        "postal": 5418,
+        "test_votes": 0,
+        "total": 195785,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 69.69,
+      "rejected_postal_votes": 645,
+      "rejected_evm_votes": 598,
+      "nota_votes": 2016,
+      "valid_votes_polled": 192526,
+      "total_polled": 195785,
+      "tendered_votes": 0
+    },
+    "119": {
+      "ac_no": 119,
+      "ac_name": "Sarvepalli",
+      "electors": {
+        "male": 112812,
+        "female": 119196,
+        "third_gender": 26,
+        "total": 232034,
+        "overseas": 14,
+        "service": 23
+      },
+      "voted": {
+        "male": 95959,
+        "female": 98645,
+        "third_gender": 5,
+        "postal": 1890,
+        "test_votes": 0,
+        "total": 196499,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.69,
+      "rejected_postal_votes": 87,
+      "rejected_evm_votes": 696,
+      "nota_votes": 2057,
+      "valid_votes_polled": 193659,
+      "total_polled": 196499,
+      "tendered_votes": 0
+    },
+    "120": {
+      "ac_no": 120,
+      "ac_name": "Gudur (SC)",
+      "electors": {
+        "male": 119199,
+        "female": 126008,
+        "third_gender": 34,
+        "total": 245241,
+        "overseas": 46,
+        "service": 36
+      },
+      "voted": {
+        "male": 95520,
+        "female": 98066,
+        "third_gender": 15,
+        "postal": 2820,
+        "test_votes": 0,
+        "total": 196421,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 80.09,
+      "rejected_postal_votes": 372,
+      "rejected_evm_votes": 1484,
+      "nota_votes": 3129,
+      "valid_votes_polled": 191436,
+      "total_polled": 196421,
+      "tendered_votes": 0
+    },
+    "121": {
+      "ac_no": 121,
+      "ac_name": "Sullurpeta (SC)",
+      "electors": {
+        "male": 118187,
+        "female": 124493,
+        "third_gender": 24,
+        "total": 242704,
+        "overseas": 28,
+        "service": 94
+      },
+      "voted": {
+        "male": 99377,
+        "female": 101803,
+        "third_gender": 6,
+        "postal": 2235,
+        "test_votes": 0,
+        "total": 203421,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.81,
+      "rejected_postal_votes": 283,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3423,
+      "valid_votes_polled": 199715,
+      "total_polled": 203421,
+      "tendered_votes": 0
+    },
+    "122": {
+      "ac_no": 122,
+      "ac_name": "Venkatagiri",
+      "electors": {
+        "male": 118942,
+        "female": 124691,
+        "third_gender": 4,
+        "total": 243637,
+        "overseas": 34,
+        "service": 55
+      },
+      "voted": {
+        "male": 97795,
+        "female": 99193,
+        "third_gender": 3,
+        "postal": 2868,
+        "test_votes": 0,
+        "total": 199859,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.03,
+      "rejected_postal_votes": 294,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3037,
+      "valid_votes_polled": 196528,
+      "total_polled": 199859,
+      "tendered_votes": 9
+    },
+    "123": {
+      "ac_no": 123,
+      "ac_name": "Udayagiri",
+      "electors": {
+        "male": 120108,
+        "female": 121743,
+        "third_gender": 10,
+        "total": 241861,
+        "overseas": 16,
+        "service": 184
+      },
+      "voted": {
+        "male": 99505,
+        "female": 98578,
+        "third_gender": 3,
+        "postal": 2902,
+        "test_votes": 0,
+        "total": 200988,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.1,
+      "rejected_postal_votes": 96,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2072,
+      "valid_votes_polled": 198820,
+      "total_polled": 200988,
+      "tendered_votes": 0
+    },
+    "124": {
+      "ac_no": 124,
+      "ac_name": "Badvel (SC)",
+      "electors": {
+        "male": 110067,
+        "female": 110148,
+        "third_gender": 5,
+        "total": 220220,
+        "overseas": 5,
+        "service": 930
+      },
+      "voted": {
+        "male": 84446,
+        "female": 88125,
+        "third_gender": 2,
+        "postal": 3459,
+        "test_votes": 0,
+        "total": 176032,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 79.93,
+      "rejected_postal_votes": 290,
+      "rejected_evm_votes": 862,
+      "nota_votes": 3076,
+      "valid_votes_polled": 171804,
+      "total_polled": 176032,
+      "tendered_votes": 1
+    },
+    "125": {
+      "ac_no": 125,
+      "ac_name": "Rajampet",
+      "electors": {
+        "male": 117734,
+        "female": 123623,
+        "third_gender": 6,
+        "total": 241363,
+        "overseas": 365,
+        "service": 163
+      },
+      "voted": {
+        "male": 87882,
+        "female": 95622,
+        "third_gender": 0,
+        "postal": 2947,
+        "test_votes": 0,
+        "total": 186451,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 77.25,
+      "rejected_postal_votes": 213,
+      "rejected_evm_votes": 1681,
+      "nota_votes": 1617,
+      "valid_votes_polled": 182940,
+      "total_polled": 186451,
+      "tendered_votes": 0
+    },
+    "126": {
+      "ac_no": 126,
+      "ac_name": "Kadapa",
+      "electors": {
+        "male": 138368,
+        "female": 145160,
+        "third_gender": 90,
+        "total": 283618,
+        "overseas": 13,
+        "service": 75
+      },
+      "voted": {
+        "male": 88553,
+        "female": 96541,
+        "third_gender": 32,
+        "postal": 5654,
+        "test_votes": 0,
+        "total": 190780,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 67.27,
+      "rejected_postal_votes": 253,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1444,
+      "valid_votes_polled": 189083,
+      "total_polled": 190780,
+      "tendered_votes": 0
+    },
+    "127": {
+      "ac_no": 127,
+      "ac_name": "Kodur (SC)",
+      "electors": {
+        "male": 100775,
+        "female": 103798,
+        "third_gender": 9,
+        "total": 204582,
+        "overseas": 569,
+        "service": 116
+      },
+      "voted": {
+        "male": 73721,
+        "female": 78643,
+        "third_gender": 2,
+        "postal": 1708,
+        "test_votes": 0,
+        "total": 154074,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 75.31,
+      "rejected_postal_votes": 269,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1112,
+      "valid_votes_polled": 152693,
+      "total_polled": 154074,
+      "tendered_votes": 0
+    },
+    "128": {
+      "ac_no": 128,
+      "ac_name": "Rayachoti",
+      "electors": {
+        "male": 126342,
+        "female": 129055,
+        "third_gender": 27,
+        "total": 255424,
+        "overseas": 72,
+        "service": 256
+      },
+      "voted": {
+        "male": 96561,
+        "female": 101186,
+        "third_gender": 6,
+        "postal": 3491,
+        "test_votes": 0,
+        "total": 201244,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 78.79,
+      "rejected_postal_votes": 390,
+      "rejected_evm_votes": 953,
+      "nota_votes": 1592,
+      "valid_votes_polled": 198309,
+      "total_polled": 201244,
+      "tendered_votes": 0
+    },
+    "129": {
+      "ac_no": 129,
+      "ac_name": "Pulivendla",
+      "electors": {
+        "male": 112097,
+        "female": 117945,
+        "third_gender": 19,
+        "total": 230061,
+        "overseas": 6,
+        "service": 374
+      },
+      "voted": {
+        "male": 91476,
+        "female": 95331,
+        "third_gender": 10,
+        "postal": 3009,
+        "test_votes": 0,
+        "total": 189826,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.51,
+      "rejected_postal_votes": 334,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1764,
+      "valid_votes_polled": 187728,
+      "total_polled": 189826,
+      "tendered_votes": 0
+    },
+    "130": {
+      "ac_no": 130,
+      "ac_name": "Kamalapuram",
+      "electors": {
+        "male": 100062,
+        "female": 104291,
+        "third_gender": 34,
+        "total": 204387,
+        "overseas": 23,
+        "service": 218
+      },
+      "voted": {
+        "male": 83917,
+        "female": 88472,
+        "third_gender": 12,
+        "postal": 2097,
+        "test_votes": 0,
+        "total": 174498,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.38,
+      "rejected_postal_votes": 147,
+      "rejected_evm_votes": 2155,
+      "nota_votes": 2128,
+      "valid_votes_polled": 170068,
+      "total_polled": 174498,
+      "tendered_votes": 0
+    },
+    "131": {
+      "ac_no": 131,
+      "ac_name": "Jammalamadugu",
+      "electors": {
+        "male": 118010,
+        "female": 124801,
+        "third_gender": 15,
+        "total": 242826,
+        "overseas": 14,
+        "service": 270
+      },
+      "voted": {
+        "male": 102851,
+        "female": 107577,
+        "third_gender": 3,
+        "postal": 3032,
+        "test_votes": 0,
+        "total": 213463,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.91,
+      "rejected_postal_votes": 293,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2392,
+      "valid_votes_polled": 210778,
+      "total_polled": 213463,
+      "tendered_votes": 0
+    },
+    "132": {
+      "ac_no": 132,
+      "ac_name": "Proddatur",
+      "electors": {
+        "male": 120120,
+        "female": 127935,
+        "third_gender": 48,
+        "total": 248103,
+        "overseas": 31,
+        "service": 137
+      },
+      "voted": {
+        "male": 95428,
+        "female": 102251,
+        "third_gender": 27,
+        "postal": 3671,
+        "test_votes": 0,
+        "total": 201377,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 81.17,
+      "rejected_postal_votes": 93,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1740,
+      "valid_votes_polled": 199544,
+      "total_polled": 201377,
+      "tendered_votes": 4
+    },
+    "133": {
+      "ac_no": 133,
+      "ac_name": "Mydukur",
+      "electors": {
+        "male": 104353,
+        "female": 107776,
+        "third_gender": 5,
+        "total": 212134,
+        "overseas": 33,
+        "service": 279
+      },
+      "voted": {
+        "male": 87849,
+        "female": 91872,
+        "third_gender": 1,
+        "postal": 2669,
+        "test_votes": 0,
+        "total": 182391,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.98,
+      "rejected_postal_votes": 149,
+      "rejected_evm_votes": 1502,
+      "nota_votes": 1564,
+      "valid_votes_polled": 179176,
+      "total_polled": 182391,
+      "tendered_votes": 0
+    },
+    "134": {
+      "ac_no": 134,
+      "ac_name": "Allagadda",
+      "electors": {
+        "male": 115509,
+        "female": 117716,
+        "third_gender": 12,
+        "total": 233237,
+        "overseas": 34,
+        "service": 561
+      },
+      "voted": {
+        "male": 97544,
+        "female": 98134,
+        "third_gender": 6,
+        "postal": 2952,
+        "test_votes": 0,
+        "total": 198636,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.16,
+      "rejected_postal_votes": 584,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1582,
+      "valid_votes_polled": 196470,
+      "total_polled": 198636,
+      "tendered_votes": 0
+    },
+    "135": {
+      "ac_no": 135,
+      "ac_name": "Srisailam",
+      "electors": {
+        "male": 96241,
+        "female": 100311,
+        "third_gender": 44,
+        "total": 196596,
+        "overseas": 5,
+        "service": 480
+      },
+      "voted": {
+        "male": 80360,
+        "female": 82418,
+        "third_gender": 26,
+        "postal": 2380,
+        "test_votes": 0,
+        "total": 165184,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.02,
+      "rejected_postal_votes": 604,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1077,
+      "valid_votes_polled": 163503,
+      "total_polled": 165184,
+      "tendered_votes": 0
+    },
+    "136": {
+      "ac_no": 136,
+      "ac_name": "Nandikotkur (SC)",
+      "electors": {
+        "male": 107008,
+        "female": 111344,
+        "third_gender": 18,
+        "total": 218370,
+        "overseas": 9,
+        "service": 323
+      },
+      "voted": {
+        "male": 91934,
+        "female": 92889,
+        "third_gender": 12,
+        "postal": 2501,
+        "test_votes": 0,
+        "total": 187336,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.79,
+      "rejected_postal_votes": 483,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1274,
+      "valid_votes_polled": 185579,
+      "total_polled": 187336,
+      "tendered_votes": 0
+    },
+    "137": {
+      "ac_no": 137,
+      "ac_name": "Kurnool",
+      "electors": {
+        "male": 132856,
+        "female": 141670,
+        "third_gender": 31,
+        "total": 274557,
+        "overseas": 68,
+        "service": 92
+      },
+      "voted": {
+        "male": 86244,
+        "female": 88709,
+        "third_gender": 8,
+        "postal": 4296,
+        "test_votes": 0,
+        "total": 179257,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 65.29,
+      "rejected_postal_votes": 663,
+      "rejected_evm_votes": 0,
+      "nota_votes": 718,
+      "valid_votes_polled": 177876,
+      "total_polled": 179257,
+      "tendered_votes": 0
+    },
+    "138": {
+      "ac_no": 138,
+      "ac_name": "Panyam",
+      "electors": {
+        "male": 161612,
+        "female": 170326,
+        "third_gender": 74,
+        "total": 332012,
+        "overseas": 23,
+        "service": 306
+      },
+      "voted": {
+        "male": 121952,
+        "female": 124945,
+        "third_gender": 38,
+        "postal": 5718,
+        "test_votes": 0,
+        "total": 252653,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.1,
+      "rejected_postal_votes": 558,
+      "rejected_evm_votes": 1819,
+      "nota_votes": 2663,
+      "valid_votes_polled": 247613,
+      "total_polled": 252653,
+      "tendered_votes": 1
+    },
+    "139": {
+      "ac_no": 139,
+      "ac_name": "Nandyal",
+      "electors": {
+        "male": 133482,
+        "female": 140874,
+        "third_gender": 90,
+        "total": 274446,
+        "overseas": 10,
+        "service": 508
+      },
+      "voted": {
+        "male": 99772,
+        "female": 105418,
+        "third_gender": 55,
+        "postal": 4930,
+        "test_votes": 0,
+        "total": 210175,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.58,
+      "rejected_postal_votes": 847,
+      "rejected_evm_votes": 750,
+      "nota_votes": 1518,
+      "valid_votes_polled": 207060,
+      "total_polled": 210175,
+      "tendered_votes": 0
+    },
+    "140": {
+      "ac_no": 140,
+      "ac_name": "Banaganapalle",
+      "electors": {
+        "male": 118621,
+        "female": 123050,
+        "third_gender": 24,
+        "total": 241695,
+        "overseas": 7,
+        "service": 516
+      },
+      "voted": {
+        "male": 100420,
+        "female": 103147,
+        "third_gender": 5,
+        "postal": 2778,
+        "test_votes": 0,
+        "total": 206350,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.38,
+      "rejected_postal_votes": 610,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1528,
+      "valid_votes_polled": 204212,
+      "total_polled": 206350,
+      "tendered_votes": 0
+    },
+    "141": {
+      "ac_no": 141,
+      "ac_name": "Dhone",
+      "electors": {
+        "male": 112357,
+        "female": 115408,
+        "third_gender": 70,
+        "total": 227835,
+        "overseas": 17,
+        "service": 484
+      },
+      "voted": {
+        "male": 93772,
+        "female": 94378,
+        "third_gender": 34,
+        "postal": 2158,
+        "test_votes": 0,
+        "total": 190342,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.54,
+      "rejected_postal_votes": 222,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1362,
+      "valid_votes_polled": 188758,
+      "total_polled": 190342,
+      "tendered_votes": 0
+    },
+    "142": {
+      "ac_no": 142,
+      "ac_name": "Pattikonda",
+      "electors": {
+        "male": 112039,
+        "female": 111988,
+        "third_gender": 22,
+        "total": 224049,
+        "overseas": 5,
+        "service": 446
+      },
+      "voted": {
+        "male": 96151,
+        "female": 93483,
+        "third_gender": 11,
+        "postal": 2258,
+        "test_votes": 0,
+        "total": 191903,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 85.65,
+      "rejected_postal_votes": 272,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2070,
+      "valid_votes_polled": 189561,
+      "total_polled": 191903,
+      "tendered_votes": 0
+    },
+    "143": {
+      "ac_no": 143,
+      "ac_name": "Kodumur (SC)",
+      "electors": {
+        "male": 123631,
+        "female": 123153,
+        "third_gender": 16,
+        "total": 246800,
+        "overseas": 10,
+        "service": 168
+      },
+      "voted": {
+        "male": 98881,
+        "female": 96276,
+        "third_gender": 7,
+        "postal": 2744,
+        "test_votes": 0,
+        "total": 197908,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 80.19,
+      "rejected_postal_votes": 375,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2169,
+      "valid_votes_polled": 195364,
+      "total_polled": 197908,
+      "tendered_votes": 5
+    },
+    "144": {
+      "ac_no": 144,
+      "ac_name": "Yemmiganur",
+      "electors": {
+        "male": 122223,
+        "female": 125670,
+        "third_gender": 47,
+        "total": 247940,
+        "overseas": 4,
+        "service": 188
+      },
+      "voted": {
+        "male": 101953,
+        "female": 101208,
+        "third_gender": 19,
+        "postal": 3029,
+        "test_votes": 0,
+        "total": 206209,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.17,
+      "rejected_postal_votes": 174,
+      "rejected_evm_votes": 2946,
+      "nota_votes": 2380,
+      "valid_votes_polled": 200709,
+      "total_polled": 206209,
+      "tendered_votes": 0
+    },
+    "145": {
+      "ac_no": 145,
+      "ac_name": "Mantralayam",
+      "electors": {
+        "male": 102209,
+        "female": 106175,
+        "third_gender": 23,
+        "total": 208407,
+        "overseas": 1,
+        "service": 57
+      },
+      "voted": {
+        "male": 87834,
+        "female": 87874,
+        "third_gender": 11,
+        "postal": 691,
+        "test_votes": 0,
+        "total": 176410,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.65,
+      "rejected_postal_votes": 86,
+      "rejected_evm_votes": 0,
+      "nota_votes": 3674,
+      "valid_votes_polled": 172650,
+      "total_polled": 176410,
+      "tendered_votes": 0
+    },
+    "146": {
+      "ac_no": 146,
+      "ac_name": "Adoni",
+      "electors": {
+        "male": 130469,
+        "female": 132648,
+        "third_gender": 52,
+        "total": 263169,
+        "overseas": 9,
+        "service": 111
+      },
+      "voted": {
+        "male": 87956,
+        "female": 87249,
+        "third_gender": 20,
+        "postal": 1859,
+        "test_votes": 0,
+        "total": 177084,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 67.29,
+      "rejected_postal_votes": 308,
+      "rejected_evm_votes": 643,
+      "nota_votes": 1615,
+      "valid_votes_polled": 174518,
+      "total_polled": 177084,
+      "tendered_votes": 1
+    },
+    "147": {
+      "ac_no": 147,
+      "ac_name": "Alur",
+      "electors": {
+        "male": 130350,
+        "female": 128866,
+        "third_gender": 53,
+        "total": 259269,
+        "overseas": 0,
+        "service": 272
+      },
+      "voted": {
+        "male": 107097,
+        "female": 101960,
+        "third_gender": 22,
+        "postal": 1588,
+        "test_votes": 0,
+        "total": 210667,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 81.25,
+      "rejected_postal_votes": 238,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2634,
+      "valid_votes_polled": 207795,
+      "total_polled": 210667,
+      "tendered_votes": 0
+    },
+    "148": {
+      "ac_no": 148,
+      "ac_name": "Rayadurg",
+      "electors": {
+        "male": 130858,
+        "female": 133518,
+        "third_gender": 42,
+        "total": 264418,
+        "overseas": 6,
+        "service": 66
+      },
+      "voted": {
+        "male": 114075,
+        "female": 113199,
+        "third_gender": 18,
+        "postal": 1532,
+        "test_votes": 0,
+        "total": 228824,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.54,
+      "rejected_postal_votes": 14,
+      "rejected_evm_votes": 543,
+      "nota_votes": 2370,
+      "valid_votes_polled": 225897,
+      "total_polled": 228824,
+      "tendered_votes": 0
+    },
+    "149": {
+      "ac_no": 149,
+      "ac_name": "Uravakonda",
+      "electors": {
+        "male": 110772,
+        "female": 113774,
+        "third_gender": 28,
+        "total": 224574,
+        "overseas": 6,
+        "service": 235
+      },
+      "voted": {
+        "male": 96201,
+        "female": 96141,
+        "third_gender": 18,
+        "postal": 2184,
+        "test_votes": 0,
+        "total": 194544,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.63,
+      "rejected_postal_votes": 22,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1915,
+      "valid_votes_polled": 192607,
+      "total_polled": 194544,
+      "tendered_votes": 0
+    },
+    "150": {
+      "ac_no": 150,
+      "ac_name": "Guntakal",
+      "electors": {
+        "male": 133347,
+        "female": 137635,
+        "third_gender": 75,
+        "total": 271057,
+        "overseas": 2,
+        "service": 409
+      },
+      "voted": {
+        "male": 101554,
+        "female": 102252,
+        "third_gender": 30,
+        "postal": 2929,
+        "test_votes": 0,
+        "total": 206765,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.28,
+      "rejected_postal_votes": 34,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1743,
+      "valid_votes_polled": 204988,
+      "total_polled": 206765,
+      "tendered_votes": 9
+    },
+    "151": {
+      "ac_no": 151,
+      "ac_name": "Tadpatri",
+      "electors": {
+        "male": 123714,
+        "female": 125363,
+        "third_gender": 26,
+        "total": 249103,
+        "overseas": 15,
+        "service": 223
+      },
+      "voted": {
+        "male": 102819,
+        "female": 103739,
+        "third_gender": 13,
+        "postal": 2604,
+        "test_votes": 0,
+        "total": 209175,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.97,
+      "rejected_postal_votes": 329,
+      "rejected_evm_votes": 1167,
+      "nota_votes": 1008,
+      "valid_votes_polled": 206671,
+      "total_polled": 209175,
+      "tendered_votes": 0
+    },
+    "152": {
+      "ac_no": 152,
+      "ac_name": "Singanamala (SC)",
+      "electors": {
+        "male": 123351,
+        "female": 124423,
+        "third_gender": 29,
+        "total": 247803,
+        "overseas": 14,
+        "service": 430
+      },
+      "voted": {
+        "male": 104047,
+        "female": 102310,
+        "third_gender": 20,
+        "postal": 1868,
+        "test_votes": 0,
+        "total": 208245,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.04,
+      "rejected_postal_votes": 12,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1906,
+      "valid_votes_polled": 206327,
+      "total_polled": 208245,
+      "tendered_votes": 5
+    },
+    "153": {
+      "ac_no": 153,
+      "ac_name": "Anantapur Urban",
+      "electors": {
+        "male": 137890,
+        "female": 143486,
+        "third_gender": 27,
+        "total": 281403,
+        "overseas": 69,
+        "service": 189
+      },
+      "voted": {
+        "male": 89187,
+        "female": 93826,
+        "third_gender": 5,
+        "postal": 6856,
+        "test_votes": 0,
+        "total": 189874,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 67.47,
+      "rejected_postal_votes": 299,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1379,
+      "valid_votes_polled": 188196,
+      "total_polled": 189874,
+      "tendered_votes": 0
+    },
+    "154": {
+      "ac_no": 154,
+      "ac_name": "Kalyandurg",
+      "electors": {
+        "male": 114473,
+        "female": 116426,
+        "third_gender": 7,
+        "total": 230906,
+        "overseas": 4,
+        "service": 121
+      },
+      "voted": {
+        "male": 102751,
+        "female": 101852,
+        "third_gender": 3,
+        "postal": 2526,
+        "test_votes": 0,
+        "total": 207132,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 89.7,
+      "rejected_postal_votes": 177,
+      "rejected_evm_votes": 1114,
+      "nota_votes": 1450,
+      "valid_votes_polled": 204391,
+      "total_polled": 207132,
+      "tendered_votes": 0
+    },
+    "155": {
+      "ac_no": 155,
+      "ac_name": "Raptadu",
+      "electors": {
+        "male": 125430,
+        "female": 125537,
+        "third_gender": 12,
+        "total": 250979,
+        "overseas": 7,
+        "service": 408
+      },
+      "voted": {
+        "male": 107499,
+        "female": 105883,
+        "third_gender": 2,
+        "postal": 4064,
+        "test_votes": 0,
+        "total": 217448,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.64,
+      "rejected_postal_votes": 291,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1706,
+      "valid_votes_polled": 215451,
+      "total_polled": 217448,
+      "tendered_votes": 0
+    },
+    "156": {
+      "ac_no": 156,
+      "ac_name": "Madakasira (SC)",
+      "electors": {
+        "male": 105836,
+        "female": 105046,
+        "third_gender": 1,
+        "total": 210883,
+        "overseas": 2,
+        "service": 79
+      },
+      "voted": {
+        "male": 93538,
+        "female": 91003,
+        "third_gender": 0,
+        "postal": 1768,
+        "test_votes": 0,
+        "total": 186309,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.35,
+      "rejected_postal_votes": 171,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2728,
+      "valid_votes_polled": 183410,
+      "total_polled": 186309,
+      "tendered_votes": 0
+    },
+    "157": {
+      "ac_no": 157,
+      "ac_name": "Hindupur",
+      "electors": {
+        "male": 124812,
+        "female": 124430,
+        "third_gender": 19,
+        "total": 249261,
+        "overseas": 5,
+        "service": 87
+      },
+      "voted": {
+        "male": 97648,
+        "female": 96239,
+        "third_gender": 6,
+        "postal": 2318,
+        "test_votes": 0,
+        "total": 196211,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 78.72,
+      "rejected_postal_votes": 250,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1686,
+      "valid_votes_polled": 194275,
+      "total_polled": 196211,
+      "tendered_votes": 0
+    },
+    "158": {
+      "ac_no": 158,
+      "ac_name": "Penukonda",
+      "electors": {
+        "male": 118153,
+        "female": 118032,
+        "third_gender": 4,
+        "total": 236189,
+        "overseas": 3,
+        "service": 203
+      },
+      "voted": {
+        "male": 103816,
+        "female": 101746,
+        "third_gender": 2,
+        "postal": 2633,
+        "test_votes": 0,
+        "total": 208197,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.15,
+      "rejected_postal_votes": 66,
+      "rejected_evm_votes": 516,
+      "nota_votes": 1972,
+      "valid_votes_polled": 205643,
+      "total_polled": 208197,
+      "tendered_votes": 0
+    },
+    "159": {
+      "ac_no": 159,
+      "ac_name": "Puttaparthi",
+      "electors": {
+        "male": 104611,
+        "female": 106896,
+        "third_gender": 12,
+        "total": 211519,
+        "overseas": 6,
+        "service": 457
+      },
+      "voted": {
+        "male": 91021,
+        "female": 91239,
+        "third_gender": 5,
+        "postal": 3008,
+        "test_votes": 0,
+        "total": 185273,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.59,
+      "rejected_postal_votes": 633,
+      "rejected_evm_votes": 665,
+      "nota_votes": 1382,
+      "valid_votes_polled": 182593,
+      "total_polled": 185273,
+      "tendered_votes": 0
+    },
+    "160": {
+      "ac_no": 160,
+      "ac_name": "Dharmavaram",
+      "electors": {
+        "male": 122013,
+        "female": 123983,
+        "third_gender": 20,
+        "total": 246016,
+        "overseas": 2,
+        "service": 258
+      },
+      "voted": {
+        "male": 108846,
+        "female": 109412,
+        "third_gender": 14,
+        "postal": 3098,
+        "test_votes": 0,
+        "total": 221370,
+        "overseas_voted": 2
+      },
+      "turnout_pct": 89.98,
+      "rejected_postal_votes": 607,
+      "rejected_evm_votes": 915,
+      "nota_votes": 1787,
+      "valid_votes_polled": 218061,
+      "total_polled": 221370,
+      "tendered_votes": 0
+    },
+    "161": {
+      "ac_no": 161,
+      "ac_name": "Kadiri",
+      "electors": {
+        "male": 124906,
+        "female": 128768,
+        "third_gender": 8,
+        "total": 253682,
+        "overseas": 2,
+        "service": 262
+      },
+      "voted": {
+        "male": 102396,
+        "female": 103774,
+        "third_gender": 7,
+        "postal": 3648,
+        "test_votes": 0,
+        "total": 209825,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.71,
+      "rejected_postal_votes": 35,
+      "rejected_evm_votes": 638,
+      "nota_votes": 2519,
+      "valid_votes_polled": 206633,
+      "total_polled": 209825,
+      "tendered_votes": 0
+    },
+    "162": {
+      "ac_no": 162,
+      "ac_name": "Thamballapalle",
+      "electors": {
+        "male": 110797,
+        "female": 114169,
+        "third_gender": 12,
+        "total": 224978,
+        "overseas": 13,
+        "service": 176
+      },
+      "voted": {
+        "male": 92883,
+        "female": 93900,
+        "third_gender": 4,
+        "postal": 1882,
+        "test_votes": 0,
+        "total": 188669,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 83.86,
+      "rejected_postal_votes": 26,
+      "rejected_evm_votes": 777,
+      "nota_votes": 2384,
+      "valid_votes_polled": 185482,
+      "total_polled": 188669,
+      "tendered_votes": 0
+    },
+    "163": {
+      "ac_no": 163,
+      "ac_name": "Pileru",
+      "electors": {
+        "male": 115358,
+        "female": 119634,
+        "third_gender": 22,
+        "total": 235014,
+        "overseas": 22,
+        "service": 406
+      },
+      "voted": {
+        "male": 93849,
+        "female": 96367,
+        "third_gender": 16,
+        "postal": 3854,
+        "test_votes": 0,
+        "total": 194086,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.58,
+      "rejected_postal_votes": 345,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1869,
+      "valid_votes_polled": 191872,
+      "total_polled": 194086,
+      "tendered_votes": 0
+    },
+    "164": {
+      "ac_no": 164,
+      "ac_name": "Madanapalle",
+      "electors": {
+        "male": 130627,
+        "female": 136090,
+        "third_gender": 51,
+        "total": 266768,
+        "overseas": 38,
+        "service": 178
+      },
+      "voted": {
+        "male": 98608,
+        "female": 101992,
+        "third_gender": 21,
+        "postal": 3477,
+        "test_votes": 0,
+        "total": 204098,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 76.51,
+      "rejected_postal_votes": 222,
+      "rejected_evm_votes": 1005,
+      "nota_votes": 1759,
+      "valid_votes_polled": 201112,
+      "total_polled": 204098,
+      "tendered_votes": 2
+    },
+    "165": {
+      "ac_no": 165,
+      "ac_name": "Punganur",
+      "electors": {
+        "male": 117448,
+        "female": 121803,
+        "third_gender": 5,
+        "total": 239256,
+        "overseas": 31,
+        "service": 388
+      },
+      "voted": {
+        "male": 102193,
+        "female": 104715,
+        "third_gender": 3,
+        "postal": 2793,
+        "test_votes": 0,
+        "total": 209704,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 87.65,
+      "rejected_postal_votes": 30,
+      "rejected_evm_votes": 0,
+      "nota_votes": 2904,
+      "valid_votes_polled": 206770,
+      "total_polled": 209704,
+      "tendered_votes": 0
+    },
+    "166": {
+      "ac_no": 166,
+      "ac_name": "Chandragiri",
+      "electors": {
+        "male": 153379,
+        "female": 162117,
+        "third_gender": 62,
+        "total": 315558,
+        "overseas": 49,
+        "service": 399
+      },
+      "voted": {
+        "male": 122171,
+        "female": 129596,
+        "third_gender": 30,
+        "postal": 4925,
+        "test_votes": 0,
+        "total": 256722,
+        "overseas_voted": 3
+      },
+      "turnout_pct": 81.35,
+      "rejected_postal_votes": 528,
+      "rejected_evm_votes": 945,
+      "nota_votes": 1700,
+      "valid_votes_polled": 253549,
+      "total_polled": 256722,
+      "tendered_votes": 0
+    },
+    "167": {
+      "ac_no": 167,
+      "ac_name": "Tirupati",
+      "electors": {
+        "male": 149933,
+        "female": 152628,
+        "third_gender": 35,
+        "total": 302596,
+        "overseas": 94,
+        "service": 93
+      },
+      "voted": {
+        "male": 94114,
+        "female": 97677,
+        "third_gender": 5,
+        "postal": 4704,
+        "test_votes": 0,
+        "total": 196500,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 64.94,
+      "rejected_postal_votes": 464,
+      "rejected_evm_votes": 2294,
+      "nota_votes": 1281,
+      "valid_votes_polled": 192461,
+      "total_polled": 196500,
+      "tendered_votes": 0
+    },
+    "168": {
+      "ac_no": 168,
+      "ac_name": "Srikalahasti",
+      "electors": {
+        "male": 120064,
+        "female": 128555,
+        "third_gender": 14,
+        "total": 248633,
+        "overseas": 21,
+        "service": 97
+      },
+      "voted": {
+        "male": 101182,
+        "female": 106088,
+        "third_gender": 2,
+        "postal": 2992,
+        "test_votes": 0,
+        "total": 210264,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 84.57,
+      "rejected_postal_votes": 212,
+      "rejected_evm_votes": 736,
+      "nota_votes": 1975,
+      "valid_votes_polled": 207341,
+      "total_polled": 210264,
+      "tendered_votes": 0
+    },
+    "169": {
+      "ac_no": 169,
+      "ac_name": "Satyavedu (SC)",
+      "electors": {
+        "male": 104460,
+        "female": 111002,
+        "third_gender": 11,
+        "total": 215473,
+        "overseas": 19,
+        "service": 88
+      },
+      "voted": {
+        "male": 89844,
+        "female": 93839,
+        "third_gender": 3,
+        "postal": 1720,
+        "test_votes": 0,
+        "total": 185406,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 86.05,
+      "rejected_postal_votes": 348,
+      "rejected_evm_votes": 536,
+      "nota_votes": 2764,
+      "valid_votes_polled": 181758,
+      "total_polled": 185406,
+      "tendered_votes": 0
+    },
+    "170": {
+      "ac_no": 170,
+      "ac_name": "Nagari",
+      "electors": {
+        "male": 98671,
+        "female": 104034,
+        "third_gender": 8,
+        "total": 202713,
+        "overseas": 20,
+        "service": 139
+      },
+      "voted": {
+        "male": 86022,
+        "female": 90175,
+        "third_gender": 5,
+        "postal": 2636,
+        "test_votes": 0,
+        "total": 178838,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.22,
+      "rejected_postal_votes": 308,
+      "rejected_evm_votes": 0,
+      "nota_votes": 1744,
+      "valid_votes_polled": 176786,
+      "total_polled": 178838,
+      "tendered_votes": 0
+    },
+    "171": {
+      "ac_no": 171,
+      "ac_name": "Gangadhara Nellore (SC)",
+      "electors": {
+        "male": 102319,
+        "female": 103099,
+        "third_gender": 6,
+        "total": 205424,
+        "overseas": 13,
+        "service": 475
+      },
+      "voted": {
+        "male": 90805,
+        "female": 90971,
+        "third_gender": 3,
+        "postal": 2591,
+        "test_votes": 0,
+        "total": 184370,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 89.75,
+      "rejected_postal_votes": 244,
+      "rejected_evm_votes": 905,
+      "nota_votes": 2125,
+      "valid_votes_polled": 181096,
+      "total_polled": 184370,
+      "tendered_votes": 4
+    },
+    "172": {
+      "ac_no": 172,
+      "ac_name": "Chittoor",
+      "electors": {
+        "male": 99557,
+        "female": 104124,
+        "third_gender": 31,
+        "total": 203712,
+        "overseas": 52,
+        "service": 862
+      },
+      "voted": {
+        "male": 80493,
+        "female": 84278,
+        "third_gender": 17,
+        "postal": 3933,
+        "test_votes": 0,
+        "total": 168721,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 82.82,
+      "rejected_postal_votes": 404,
+      "rejected_evm_votes": 528,
+      "nota_votes": 1096,
+      "valid_votes_polled": 166693,
+      "total_polled": 168721,
+      "tendered_votes": 0
+    },
+    "173": {
+      "ac_no": 173,
+      "ac_name": "Puthalapattu (SC)",
+      "electors": {
+        "male": 109856,
+        "female": 112211,
+        "third_gender": 7,
+        "total": 222074,
+        "overseas": 39,
+        "service": 1075
+      },
+      "voted": {
+        "male": 96074,
+        "female": 97879,
+        "third_gender": 1,
+        "postal": 2788,
+        "test_votes": 0,
+        "total": 196742,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.59,
+      "rejected_postal_votes": 296,
+      "rejected_evm_votes": 1428,
+      "nota_votes": 1420,
+      "valid_votes_polled": 193598,
+      "total_polled": 196742,
+      "tendered_votes": 0
+    },
+    "174": {
+      "ac_no": 174,
+      "ac_name": "Palamaner",
+      "electors": {
+        "male": 132885,
+        "female": 135250,
+        "third_gender": 0,
+        "total": 268135,
+        "overseas": 7,
+        "service": 239
+      },
+      "voted": {
+        "male": 117602,
+        "female": 117876,
+        "third_gender": 0,
+        "postal": 2443,
+        "test_votes": 0,
+        "total": 237921,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 88.73,
+      "rejected_postal_votes": 337,
+      "rejected_evm_votes": 1028,
+      "nota_votes": 2344,
+      "valid_votes_polled": 234212,
+      "total_polled": 237921,
+      "tendered_votes": 0
+    },
+    "175": {
+      "ac_no": 175,
+      "ac_name": "Kuppam",
+      "electors": {
+        "male": 112707,
+        "female": 113252,
+        "third_gender": 18,
+        "total": 225977,
+        "overseas": 5,
+        "service": 202
+      },
+      "voted": {
+        "male": 101333,
+        "female": 101637,
+        "third_gender": 6,
+        "postal": 1521,
+        "test_votes": 0,
+        "total": 204497,
+        "overseas_voted": 0
+      },
+      "turnout_pct": 90.49,
+      "rejected_postal_votes": 154,
+      "rejected_evm_votes": 976,
+      "nota_votes": 2115,
+      "valid_votes_polled": 201252,
+      "total_polled": 204497,
+      "tendered_votes": 11
+    }
+  }
+}

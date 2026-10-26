@@ -27,6 +27,26 @@ export interface DetailedCandidate {
   myneta?: MyNetaDisclosure | null;
 }
 
+export interface VotersInfo {
+  electors_total: number;
+  electors_male: number;
+  electors_female: number;
+  electors_third_gender: number;
+  service_electors?: number;
+  overseas_electors?: number;
+  voted_total: number;
+  voted_male: number;
+  voted_female: number;
+  voted_third_gender: number;
+  voted_postal: number;
+  turnout_pct: number;
+  rejected_postal_votes: number;
+  rejected_evm_votes: number;
+  nota_votes: number;
+  valid_votes_polled?: number;
+  tendered_votes?: number;
+}
+
 export interface ConstituencyCandidatesData {
   ac_no: number;
   ac_name: string;
@@ -38,6 +58,7 @@ export interface ConstituencyCandidatesData {
   total_candidates: number;
   candidates_above_1000: number;
   candidates: DetailedCandidate[];
+  voters_info?: VotersInfo;
 }
 
 export interface CandidateResult {
@@ -67,6 +88,8 @@ export interface ConstituencyResult {
   margin_pct: number;
   total_valid_votes: number;
   turnout_pct: number;
+  total_electors?: number;
+  voters_info?: any;
   swing?: SwingInfo | null;
 }
 
@@ -230,20 +253,33 @@ export function getDistrictBorderGrey(districtName: string): string {
 export type ActiveTab = 'results' | 'simulations' | 'actions' | 'booth-data';
 
 export interface CasteProfile {
-  sc_madiga: number;
-  sc_mala: number;
-  st_lambada: number;
-  st_koya_gond: number;
-  bc_mudiraj: number;
-  bc_munnuru_kapu: number;
+  // Andhra Pradesh 14-Segment Demographics Profile
+  kapu: number;
+  kamma: number;
+  reddy: number;
+  bc_turpu_kapu: number;
+  bc_yadava: number;
+  bc_kuruba_boya: number;
+  bc_settibalija_goud: number;
   bc_padmashali: number;
-  bc_goud: number;
-  bc_yadav: number;
   bc_other: number;
+  sc_madiga_relli: number;
+  sc_mala: number;
+  st_tribal: number;
   minority_muslim: number;
-  oc_reddy: number;
-  oc_velama: number;
-  oc_other: number;
+  minority_christian: number;
+
+  // Legacy fallback keys (optional)
+  sc_madiga?: number;
+  st_lambada?: number;
+  st_koya_gond?: number;
+  bc_mudiraj?: number;
+  bc_munnuru_kapu?: number;
+  bc_goud?: number;
+  bc_yadav?: number;
+  oc_reddy?: number;
+  oc_velama?: number;
+  oc_other?: number;
 }
 
 export interface AgeProfile {
@@ -264,8 +300,11 @@ export interface ConstituencyDemographics {
   margin_2023: number;
   margin_pct_2023: number;
   total_votes_2023: number;
+  total_electors?: number;
+  turnout_pct?: number;
   caste_profile: CasteProfile;
   age_profile: AgeProfile;
+  voters_info?: any;
 }
 
 export interface DistrictDemographics {
@@ -277,7 +316,7 @@ export interface DistrictDemographics {
   oc_pct: number;
 }
 
-export interface SeeepcDataset {
+export interface DemographicsDataset {
   metadata: {
     source: string;
     document: string;
