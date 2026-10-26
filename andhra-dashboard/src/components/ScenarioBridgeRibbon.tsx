@@ -16,7 +16,7 @@ interface ScenarioBridgeRibbonProps {
   bridge: ActiveScenarioBridge;
   activeTab: string;
   onExportToActions: () => void;
-  onNavigateToWhatIf: (category: 'caste_blocs' | 'coalition' | 'turnout' | 'anti_incumbency' | 'target_60') => void;
+  onNavigateToWhatIf: (category: 'caste_blocs' | 'coalition' | 'turnout' | 'anti_incumbency' | 'target_60' | 'polling_momentum') => void;
   onUnlinkScenario: () => void;
   actionsSeats?: {
     TDP?: number;
@@ -104,10 +104,11 @@ export const ScenarioBridgeRibbon: React.FC<ScenarioBridgeRibbonProps> = ({
           badge: 'bg-rose-900/60 text-rose-300 border-rose-700/60',
         };
       case 'target_60':
+      case 'polling_momentum':
         return {
-          pill: 'bg-emerald-950/80 hover:bg-emerald-900/90 text-emerald-200 border-emerald-500/50 hover:border-emerald-400',
-          dot: 'bg-emerald-400',
-          badge: 'bg-emerald-900/60 text-emerald-300 border-emerald-700/60',
+          pill: 'bg-amber-950/80 hover:bg-amber-900/90 text-amber-200 border-amber-500/50 hover:border-amber-400',
+          dot: 'bg-amber-400',
+          badge: 'bg-amber-900/60 text-amber-300 border-amber-700/60',
         };
       default:
         return {

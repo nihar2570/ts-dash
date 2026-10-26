@@ -33,6 +33,10 @@ import {
   DEFAULT_GROUND_CRISIS_SETTINGS,
   VIZAG_STEEL_PLANT_AC_NOS,
   AMARAVATI_CORE_AC_NOS,
+  TEMPLE_BELT_AC_NOS,
+  POLAVARAM_AGENCY_AC_NOS,
+  COASTAL_AQUA_AC_NOS,
+  URBAN_GOVT_EMPLOYEE_AC_NOS,
   JSP_SEATS_2024,
   BJP_SEATS_2024,
   RAYALASEEMA_DISTRICTS,
@@ -519,6 +523,56 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         ysrcpVotes += cut;
       }
 
+      // 7. Tirupati Prasadam & Temple Sanctity Devotional Surge (+3.0% NDA in Temple Belt)
+      if (groundCrisisSettings.tirupatiPrasadamControversy && TEMPLE_BELT_AC_NOS.has(ac.ac_no)) {
+        const surge = totalVotes * 0.030;
+        ysrcpVotes = Math.max(0, ysrcpVotes - surge);
+        tdpVotes += surge * 0.60;
+        bjpVotes += surge * 0.25;
+        jspVotes += surge * 0.15;
+      }
+
+      // 8. Polavaram Displacement & R&R Agitation (-3.0% NDA in Agency & Tribal ACs)
+      if (groundCrisisSettings.polavaramDisplacementAgitation && POLAVARAM_AGENCY_AC_NOS.has(ac.ac_no)) {
+        const cut = totalVotes * 0.030;
+        tdpVotes = Math.max(0, tdpVotes - (cut * 0.60));
+        jspVotes = Math.max(0, jspVotes - (cut * 0.40));
+        ysrcpVotes += cut * 0.80;
+        incVotes += cut * 0.20;
+      }
+
+      // 9. Coastal Aqua-Farmers Power Tariff Crisis (-3.0% NDA in 12 Coastal Delta ACs)
+      if (groundCrisisSettings.aquaFarmerPowerTariffCrisis && COASTAL_AQUA_AC_NOS.has(ac.ac_no)) {
+        const cut = totalVotes * 0.030;
+        tdpVotes = Math.max(0, tdpVotes - (cut * 0.70));
+        jspVotes = Math.max(0, jspVotes - (cut * 0.30));
+        ysrcpVotes += cut;
+      }
+
+      // 10. Crop Insurance & Non-Urban Agrarian Distress (-2.5% NDA across non-urban ACs)
+      if (groundCrisisSettings.cropInsuranceFarmerDistress && !URBAN_AC_NOS.has(ac.ac_no)) {
+        const cut = totalVotes * 0.025;
+        tdpVotes = Math.max(0, tdpVotes - (cut * 0.70));
+        jspVotes = Math.max(0, jspVotes - (cut * 0.30));
+        ysrcpVotes += cut;
+      }
+
+      // 11. Liquor Policy & Rural Women Disruption (-2.0% NDA in non-urban ACs)
+      if (groundCrisisSettings.liquorPolicyRetailDisruption && !URBAN_AC_NOS.has(ac.ac_no)) {
+        const cut = totalVotes * 0.020;
+        tdpVotes = Math.max(0, tdpVotes - cut);
+        ysrcpVotes += cut;
+      }
+
+      // 12. Govt Employees & CPS/GPS Pension Discontent (-3.0% NDA in Urban & Administrative Hubs)
+      if (groundCrisisSettings.govtEmployeePensionDiscontent && URBAN_GOVT_EMPLOYEE_AC_NOS.has(ac.ac_no)) {
+        const cut = totalVotes * 0.030;
+        tdpVotes = Math.max(0, tdpVotes - (cut * 0.70));
+        jspVotes = Math.max(0, jspVotes - (cut * 0.30));
+        ysrcpVotes += cut * 0.75;
+        incVotes += cut * 0.25;
+      }
+
       // Ensure positive integer votes
       tdpVotes = Math.max(0, Math.round(tdpVotes));
       ysrcpVotes = Math.max(0, Math.round(ysrcpVotes));
@@ -791,6 +845,54 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         label: '🌾 Seema Irrigation: -3.5% Drought',
         category: 'anti_incumbency',
         detail: 'Handri-Neeva & canal water anxiety in 52 ACs',
+      });
+    }
+    if (groundCrisisSettings.tirupatiPrasadamControversy) {
+      list.push({
+        id: 'crisis_tirupati_prasadam',
+        label: '🪔 Tirupati Laddu: +3.0% Devotional Surge',
+        category: 'anti_incumbency',
+        detail: 'Sanatana Dharma consolidation in 10 temple fortresses',
+      });
+    }
+    if (groundCrisisSettings.polavaramDisplacementAgitation) {
+      list.push({
+        id: 'crisis_polavaram_displacement',
+        label: '🏞️ Polavaram Agitation: -3.0% Tribal R&R',
+        category: 'anti_incumbency',
+        detail: 'Displacement compensation protests across 6 Agency ACs',
+      });
+    }
+    if (groundCrisisSettings.aquaFarmerPowerTariffCrisis) {
+      list.push({
+        id: 'crisis_aqua_farmers',
+        label: '🦐 Aqua Farmers: -3.0% Power Tariff Friction',
+        category: 'anti_incumbency',
+        detail: 'Electricity subsidy & processing cost grievance across 12 coastal ACs',
+      });
+    }
+    if (groundCrisisSettings.cropInsuranceFarmerDistress) {
+      list.push({
+        id: 'crisis_crop_insurance',
+        label: '🌾 Agrarian Distress: -2.5% Crop Insurance',
+        category: 'anti_incumbency',
+        detail: 'Fasal Bima payout delays across non-urban assembly seats',
+      });
+    }
+    if (groundCrisisSettings.liquorPolicyRetailDisruption) {
+      list.push({
+        id: 'crisis_liquor_policy',
+        label: '🍷 Liquor Policy: -2.0% Rural Women',
+        category: 'anti_incumbency',
+        detail: 'Retail licensing & excise policy friction among DWCRA groups',
+      });
+    }
+    if (groundCrisisSettings.govtEmployeePensionDiscontent) {
+      list.push({
+        id: 'crisis_govt_employees',
+        label: '👨‍🏫 Govt Employees: -3.0% GPS/CPS Pension',
+        category: 'anti_incumbency',
+        detail: 'DA arrears and pension friction across 12 urban employee hubs',
       });
     }
 

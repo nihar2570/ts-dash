@@ -71,6 +71,12 @@ export interface GroundCrisisSettings {
   redBookPolarization: boolean;       // Law & order / vendetta perception penalty in factional seats
   tdpJspCadreClash: number;           // 0% to 8% friction penalty between TDP and Janasena grassroots
   rayalaseemaWaterGrievance: boolean; // -3.5% agrarian drought & irrigation penalty in Rayalaseema
+  tirupatiPrasadamControversy: boolean; // +3.0% NDA Hindu devotional consolidation in Tirupati, Chittoor & temple belts
+  polavaramDisplacementAgitation: boolean; // -3.0% NDA penalty in Godavari & Agency tribal resettlement belts
+  aquaFarmerPowerTariffCrisis: boolean; // -3.0% NDA penalty in coastal aquaculture hatcheries & processing belt
+  cropInsuranceFarmerDistress: boolean; // -2.5% NDA agrarian distress penalty across rainfed farming mandals
+  liquorPolicyRetailDisruption: boolean; // -2.0% NDA penalty among rural women / SHG DWCRA voter segments
+  govtEmployeePensionDiscontent: boolean; // -3.0% NDA penalty among govt employees and teachers over GPS/CPS pension arrears
 }
 
 export const DEFAULT_GROUND_CRISIS_SETTINGS: GroundCrisisSettings = {
@@ -80,6 +86,12 @@ export const DEFAULT_GROUND_CRISIS_SETTINGS: GroundCrisisSettings = {
   redBookPolarization: false,
   tdpJspCadreClash: 0,
   rayalaseemaWaterGrievance: false,
+  tirupatiPrasadamControversy: false,
+  polavaramDisplacementAgitation: false,
+  aquaFarmerPowerTariffCrisis: false,
+  cropInsuranceFarmerDistress: false,
+  liquorPolicyRetailDisruption: false,
+  govtEmployeePensionDiscontent: false,
 };
 
 // 7 ACs in the Visakhapatnam Urban Industrial Belt affected by Steel Plant privatization
@@ -107,6 +119,62 @@ export const AMARAVATI_CORE_AC_NOS = new Set([
   91, // Tenali
   94, // Guntur West
   95, // Guntur East
+]);
+
+// 10 ACs in Temple & Pilgrim Hubs (Tirupati, Chittoor, Srisailam)
+export const TEMPLE_BELT_AC_NOS = new Set([
+  134, // Srisailam
+  166, // Chandragiri
+  167, // Tirupati
+  168, // Srikalahasti
+  169, // Satyavedu
+  170, // Nagari
+  171, // Gangadhara Nellore
+  172, // Chittoor
+  174, // Palamaner
+  175, // Kuppam
+]);
+
+// 6 ACs in Polavaram Agency & Tribal Resettlement Belts
+export const POLAVARAM_AGENCY_AC_NOS = new Set([
+  10, // Palakonda
+  11, // Kurupam
+  28, // Araku Valley
+  29, // Paderu
+  53, // Rampachodavaram
+  67, // Polavaram
+]);
+
+// 12 ACs in Coastal Aquaculture & Marine Processing Belts
+export const COASTAL_AQUA_AC_NOS = new Set([
+  45, // Razole
+  46, // Gannavaram (Konaseema)
+  58, // Narasapuram
+  59, // Bhimavaram
+  60, // Undi
+  74, // Pedana
+  75, // Machilipatnam
+  76, // Avanigadda
+  89, // Vemuru
+  90, // Repalle
+  92, // Bapatla
+  107, // Chirala
+]);
+
+// 12 ACs with High Concentration of State Government Employees & Teachers
+export const URBAN_GOVT_EMPLOYEE_AC_NOS = new Set([
+  21, // Visakhapatnam East
+  22, // Visakhapatnam South
+  23, // Visakhapatnam North
+  24, // Visakhapatnam West
+  79, // Vijayawada West
+  80, // Vijayawada Central
+  81, // Vijayawada East
+  94, // Guntur West
+  95, // Guntur East
+  137, // Kurnool
+  142, // Anantapur Urban
+  167, // Tirupati
 ]);
 
 // 21 ACs Contested and Won by Janasena (JSP) in 2024

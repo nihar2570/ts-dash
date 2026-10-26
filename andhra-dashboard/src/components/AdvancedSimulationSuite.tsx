@@ -5,8 +5,7 @@ import {
   Handshake,
   Users,
   TrendingDown,
-  Crosshair,
-  Dices,
+  TrendingUp,
   ChevronDown,
   ChevronUp,
   AlertTriangle,
@@ -19,7 +18,11 @@ import {
   Car,
   Trees,
   History,
+  Briefcase,
+  Sprout,
+  Waves,
 } from 'lucide-react';
+import { CampaignPollingTracker538 } from './CampaignPollingTracker538';
 import type {
   CoalitionSettings,
   MlaFatigueSettings,
@@ -65,16 +68,10 @@ export type WhatIfTab =
   | 'coalition'
   | 'turnout'
   | 'anti_incumbency'
-  | 'target_60';
+  | 'target_60'
+  | 'polling_momentum';
 
-// Standard normal distribution generator using Box-Muller transform
-function gaussianRandom(): number {
-  let u = 0;
-  let v = 0;
-  while (u === 0) u = Math.random();
-  while (v === 0) v = Math.random();
-  return Math.sqrt(-2.0 * Math.log(u)) * Math.cos(2.0 * Math.PI * v);
-}
+
 
 // Urban constituency numbers (Key municipal corporations & urban industrial belts in Andhra Pradesh)
 export const URBAN_AC_NOS = new Set([
@@ -111,7 +108,7 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
   setMlaFatigueSettings,
   groundCrisisSettings,
   setGroundCrisisSettings,
-  onNavigateToActions,
+  onNavigateToActions: _onNavigateToActions,
   onOpenDemographicStudio,
   activeCustomizedCount = 0,
   requestedTab,
@@ -128,6 +125,12 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
     if (groundCrisisSettings.redBookPolarization) c++;
     if (groundCrisisSettings.tdpJspCadreClash > 0) c++;
     if (groundCrisisSettings.rayalaseemaWaterGrievance) c++;
+    if (groundCrisisSettings.tirupatiPrasadamControversy) c++;
+    if (groundCrisisSettings.polavaramDisplacementAgitation) c++;
+    if (groundCrisisSettings.aquaFarmerPowerTariffCrisis) c++;
+    if (groundCrisisSettings.cropInsuranceFarmerDistress) c++;
+    if (groundCrisisSettings.liquorPolicyRetailDisruption) c++;
+    if (groundCrisisSettings.govtEmployeePensionDiscontent) c++;
     return c;
   }, [groundCrisisSettings]);
 
@@ -142,9 +145,6 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
     setActiveTab(tab);
     onTabChange?.(tab);
   };
-  const [pollingErrorSigma, setPollingErrorSigma] = useState<number>(3.0);
-  const [simulationSeed, setSimulationSeed] = useState<number>(1);
-  const [targetParty, setTargetParty] = useState<'TDP' | 'YSRCP' | 'JSP' | 'BJP'>('TDP');
 
   // Real-time seat tallies from compounded results
   const simulatedPartyTally = useMemo(() => {
@@ -157,137 +157,6 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
     });
     return { tally, totalFlips };
   }, [simulatedResults]);
-
-  // Target 88 Goal-Seek Reverse Optimizer Plan (Andhra Pradesh 175 ACs)
-  const target88Plan = useMemo(() => {
-    const wonList: SimulatedConstituencyResult[] = [];
-    const targetOpportunities: {
-      result: SimulatedConstituencyResult;
-      deficitVotes: number;
-      pctDeficit: number;
-      dominantCommunity: string;
-      dominantCommunityPct: number;
-    }[] = [];
-
-    simulatedResults.forEach((r) => {
-      if (r.simulated.winner_party === targetParty) {
-        wonList.push(r);
-      } else {
-        const total = r.simulated.winner_votes + r.simulated.runner_votes || 180000;
-        const targetVotes = r.simulated.party_votes[targetParty] || 0;
-        const deficitVotes = Math.max(0, r.simulated.winner_votes - targetVotes);
-        const pctDeficit = Math.round((deficitVotes / total) * 1000) / 10;
-        targetOpportunities.push({
-          result: r,
-          deficitVotes,
-          pctDeficit,
-          dominantCommunity: r.key_demographic,
-          dominantCommunityPct: r.key_demographic_pct,
-        });
-      }
-    });
-
-    targetOpportunities.sort((a, b) => a.deficitVotes - b.deficitVotes);
-    const needed = Math.max(0, 88 - wonList.length);
-    const pickupSeats = targetOpportunities.slice(0, Math.min(needed > 0 ? needed : 15, targetOpportunities.length));
-    const avgDeficit =
-      pickupSeats.length > 0
-        ? Math.round(pickupSeats.reduce((acc, p) => acc + p.deficitVotes, 0) / pickupSeats.length)
-        : 0;
-
-    return {
-      wonCount: wonList.length,
-      needed,
-      pickupSeats,
-      avgDeficit,
-    };
-  }, [simulatedResults, targetParty]);
-
-  // Monte Carlo 1,000-Run Volatility Engine for Andhra Pradesh (175 ACs, 88 to Majority)
-  const monteCarloStats = useMemo(() => {
-    void simulationSeed;
-    const runs = 1000;
-    const tdpSeats: number[] = [];
-    const ysrcpSeats: number[] = [];
-    const jspSeats: number[] = [];
-    const bjpSeats: number[] = [];
-    let tdpWins = 0;
-    let ysrcpWins = 0;
-    let ndaWins = 0;
-    let hungCount = 0;
-
-    for (let r = 0; r < runs; r++) {
-      const stateErrTdp = gaussianRandom() * (pollingErrorSigma * 0.7);
-      const stateErrYsrcp = gaussianRandom() * (pollingErrorSigma * 0.7);
-      const stateErrJsp = gaussianRandom() * (pollingErrorSigma * 0.6);
-      const stateErrBjp = gaussianRandom() * (pollingErrorSigma * 0.5);
-
-      let runTdpSeats = 0;
-      let runYsrcpSeats = 0;
-      let runJspSeats = 0;
-      let runBjpSeats = 0;
-
-      for (let i = 0; i < simulatedResults.length; i++) {
-        const item = simulatedResults[i];
-        const votes = item.simulated.party_votes;
-        const localNoiseTdp = gaussianRandom() * (pollingErrorSigma * 0.5);
-        const localNoiseYsrcp = gaussianRandom() * (pollingErrorSigma * 0.5);
-        const localNoiseJsp = gaussianRandom() * (pollingErrorSigma * 0.5);
-        const localNoiseBjp = gaussianRandom() * (pollingErrorSigma * 0.5);
-
-        const vTdp = (votes.TDP || 0) * (1 + (stateErrTdp + localNoiseTdp) / 100);
-        const vYsrcp = (votes.YSRCP || 0) * (1 + (stateErrYsrcp + localNoiseYsrcp) / 100);
-        const vJsp = (votes.JSP || 0) * (1 + (stateErrJsp + localNoiseJsp) / 100);
-        const vBjp = (votes.BJP || 0) * (1 + (stateErrBjp + localNoiseBjp) / 100);
-
-        const maxVotes = Math.max(vTdp, vYsrcp, vJsp, vBjp);
-        if (maxVotes === vTdp) runTdpSeats++;
-        else if (maxVotes === vYsrcp) runYsrcpSeats++;
-        else if (maxVotes === vJsp) runJspSeats++;
-        else if (maxVotes === vBjp) runBjpSeats++;
-      }
-
-      tdpSeats.push(runTdpSeats);
-      ysrcpSeats.push(runYsrcpSeats);
-      jspSeats.push(runJspSeats);
-      bjpSeats.push(runBjpSeats);
-
-      const runNdaSeats = runTdpSeats + runJspSeats + runBjpSeats;
-      if (runTdpSeats >= 88) tdpWins++;
-      if (runYsrcpSeats >= 88) ysrcpWins++;
-
-      if (runNdaSeats >= 88) {
-        ndaWins++;
-      } else if (runYsrcpSeats < 88) {
-        hungCount++;
-      }
-    }
-
-    tdpSeats.sort((a, b) => a - b);
-    ysrcpSeats.sort((a, b) => a - b);
-    jspSeats.sort((a, b) => a - b);
-    bjpSeats.sort((a, b) => a - b);
-
-    return {
-      runs,
-      tdp: {
-        median: tdpSeats[Math.floor(runs / 2)],
-        p10: tdpSeats[Math.floor(runs * 0.1)],
-        p90: tdpSeats[Math.floor(runs * 0.9)],
-        winProb: Math.round((tdpWins / runs) * 100),
-      },
-      ysrcp: {
-        median: ysrcpSeats[Math.floor(runs / 2)],
-        p10: ysrcpSeats[Math.floor(runs * 0.1)],
-        p90: ysrcpSeats[Math.floor(runs * 0.9)],
-        winProb: Math.round((ysrcpWins / runs) * 100),
-      },
-      nda: {
-        winProb: Math.round((ndaWins / runs) * 100),
-      },
-      hungProb: Math.round((hungCount / runs) * 100),
-    };
-  }, [simulatedResults, pollingErrorSigma, simulationSeed]);
 
   const isCoalitionActive = [
     'nda_2024_sweep',
@@ -430,15 +299,15 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
             </button>
 
             <button
-              onClick={() => handleSelectTab('target_60')}
+              onClick={() => handleSelectTab('polling_momentum')}
               className={`px-3 py-2 text-xs sm:text-sm font-bold rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
-                activeTab === 'target_60'
-                  ? 'bg-emerald-600 text-white shadow-md font-black ring-1 ring-emerald-400/40'
+                activeTab === 'polling_momentum' || activeTab === 'target_60'
+                  ? 'bg-amber-600 text-white shadow-md font-black ring-1 ring-amber-400/40'
                   : 'text-slate-400 hover:text-white hover:bg-slate-850'
               }`}
             >
-              <Crosshair className="w-4 h-4 text-emerald-300" />
-              <span>5. Target 60 &amp; Monte Carlo</span>
+              <TrendingUp className="w-4 h-4 text-amber-300" />
+              <span>5. Polling &amp; Momentum</span>
             </button>
           </div>
 
@@ -1026,17 +895,40 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                     <button
                       onClick={() =>
                         setGroundCrisisSettings({
-                          amaravatiPaceSlowdown: 4.0,
-                          superSixFiscalFriction: false,
+                          ...DEFAULT_GROUND_CRISIS_SETTINGS,
+                          cropInsuranceFarmerDistress: true,
+                          aquaFarmerPowerTariffCrisis: true,
+                          rayalaseemaWaterGrievance: true,
+                        })
+                      }
+                      className="px-2.5 py-1 text-xs bg-emerald-950/80 hover:bg-emerald-900 text-emerald-200 border border-emerald-700/60 rounded-lg font-bold cursor-pointer transition-colors"
+                    >
+                      🌾 Agrarian &amp; Aqua Distress
+                    </button>
+                    <button
+                      onClick={() =>
+                        setGroundCrisisSettings({
+                          ...DEFAULT_GROUND_CRISIS_SETTINGS,
                           vizagSteelPlantBacklash: true,
-                          redBookPolarization: false,
+                          govtEmployeePensionDiscontent: true,
                           tdpJspCadreClash: 3.5,
-                          rayalaseemaWaterGrievance: false,
+                          amaravatiPaceSlowdown: 3.0,
                         })
                       }
                       className="px-2.5 py-1 text-xs bg-amber-950/80 hover:bg-amber-900 text-amber-200 border border-amber-700/60 rounded-lg font-bold cursor-pointer transition-colors"
                     >
-                      Capital &amp; Steel Plant Discontent
+                      🏭 Industrial &amp; Employees Agitation
+                    </button>
+                    <button
+                      onClick={() =>
+                        setGroundCrisisSettings({
+                          ...DEFAULT_GROUND_CRISIS_SETTINGS,
+                          tirupatiPrasadamControversy: true,
+                        })
+                      }
+                      className="px-2.5 py-1 text-xs bg-orange-950/80 hover:bg-orange-900 text-orange-200 border border-orange-700/60 rounded-lg font-bold cursor-pointer transition-colors"
+                    >
+                      🪔 Sanatana Devotional Surge
                     </button>
                     <button
                       onClick={() =>
@@ -1047,16 +939,22 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                           redBookPolarization: true,
                           tdpJspCadreClash: 6.0,
                           rayalaseemaWaterGrievance: true,
+                          tirupatiPrasadamControversy: false,
+                          polavaramDisplacementAgitation: true,
+                          aquaFarmerPowerTariffCrisis: true,
+                          cropInsuranceFarmerDistress: true,
+                          liquorPolicyRetailDisruption: true,
+                          govtEmployeePensionDiscontent: true,
                         })
                       }
                       className="px-2.5 py-1 text-xs bg-rose-950/90 hover:bg-rose-900 text-rose-200 border border-rose-600/70 rounded-lg font-bold cursor-pointer transition-colors"
                     >
-                      Full 6-Point Stress
+                      ⚡ Full 12-Point Stress Test
                     </button>
                   </div>
                 </div>
 
-                {/* 6 AP Crisis Cards Grid */}
+                {/* 12 AP Crisis Cards Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                   {/* Card 1: Amaravati Capital Execution Pace */}
                   <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-amber-900/60 transition-colors space-y-2.5">
@@ -1315,114 +1213,264 @@ export const AdvancedSimulationSuite: React.FC<AdvancedSimulationSuiteProps> = (
                         : '○ Rayalaseema baseline stable'}
                     </div>
                   </div>
+
+                  {/* Card 7: Tirupati Laddu & Temple Sanctity Devotional Surge */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-amber-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Flame className="w-4 h-4 text-orange-400" />
+                          <span className="font-bold text-xs text-white">Tirupati Laddu Sanctity</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              tirupatiPrasadamControversy: !prev.tirupatiPrasadamControversy,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.tirupatiPrasadamControversy
+                              ? 'bg-orange-950 text-orange-300 border-orange-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.tirupatiPrasadamControversy ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-orange-300 font-mono">
+                          10 Temple Fortresses
+                        </span>
+                        <span>Tirupati, Chittoor &amp; Pilgrim Hubs</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Controversy over sacred prasadam and temple autonomy ignites devotional Sanatana Dharma consolidation (+3.0% NDA).
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-orange-400/90">
+                      {groundCrisisSettings.tirupatiPrasadamControversy
+                        ? '⚡ +3.0% devotional consolidation towards NDA'
+                        : '○ Normal devotional sentiment'}
+                    </div>
+                  </div>
+
+                  {/* Card 8: Polavaram Displacement & R&R Agitation */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-teal-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Trees className="w-4 h-4 text-teal-400" />
+                          <span className="font-bold text-xs text-white">Polavaram Tribal Agitation</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              polavaramDisplacementAgitation: !prev.polavaramDisplacementAgitation,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.polavaramDisplacementAgitation
+                              ? 'bg-teal-950 text-teal-300 border-teal-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.polavaramDisplacementAgitation ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-teal-300 font-mono">
+                          6 Agency ACs
+                        </span>
+                        <span>Polavaram, Rampachodavaram &amp; Tribal Belts</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Delays in R&amp;R package compensation and diaphragm wall repairs trigger discontent across ST forest mandals (-3.0%).
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-teal-400/90">
+                      {groundCrisisSettings.polavaramDisplacementAgitation
+                        ? '⚡ -3.0% NDA backlash in ST tribal agency pockets'
+                        : '○ Agency tribal baseline stable'}
+                    </div>
+                  </div>
+
+                  {/* Card 9: Coastal Aqua-Farmers Power Tariff Crisis */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-cyan-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Waves className="w-4 h-4 text-cyan-400" />
+                          <span className="font-bold text-xs text-white">Aqua-Farmers Tariff Friction</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              aquaFarmerPowerTariffCrisis: !prev.aquaFarmerPowerTariffCrisis,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.aquaFarmerPowerTariffCrisis
+                              ? 'bg-cyan-950 text-cyan-300 border-cyan-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.aquaFarmerPowerTariffCrisis ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-cyan-300 font-mono">
+                          12 Coastal Aqua ACs
+                        </span>
+                        <span>Bhimavaram, Narasapuram, Machilipatnam</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Fluctuating power subsidy tariffs and processing plant operational costs spark protests among prawn cultivators (-3.0%).
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-cyan-400/90">
+                      {groundCrisisSettings.aquaFarmerPowerTariffCrisis
+                        ? '⚡ -3.0% NDA penalty in coastal aquaculture delta'
+                        : '○ Aqua-culture industry stable'}
+                    </div>
+                  </div>
+
+                  {/* Card 10: Crop Insurance & Non-Urban Agrarian Distress */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-lime-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Sprout className="w-4 h-4 text-lime-400" />
+                          <span className="font-bold text-xs text-white">Crop Insurance Distress</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              cropInsuranceFarmerDistress: !prev.cropInsuranceFarmerDistress,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.cropInsuranceFarmerDistress
+                              ? 'bg-lime-950 text-lime-300 border-lime-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.cropInsuranceFarmerDistress ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-lime-300 font-mono">
+                          Statewide Non-Urban
+                        </span>
+                        <span>Rainfed Agriculture &amp; Dryland Mandals</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Delays in PM Fasal Bima crop damage settlements following dry spells spark agrarian dissatisfaction (-2.5%).
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-lime-400/90">
+                      {groundCrisisSettings.cropInsuranceFarmerDistress
+                        ? '⚡ -2.5% agrarian distress penalty across non-urban ACs'
+                        : '○ Normal agrarian harvest baseline'}
+                    </div>
+                  </div>
+
+                  {/* Card 11: Liquor Policy & Rural Women Disruption */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-pink-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <ShieldAlert className="w-4 h-4 text-pink-400" />
+                          <span className="font-bold text-xs text-white">Liquor Policy &amp; DWCRA Friction</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              liquorPolicyRetailDisruption: !prev.liquorPolicyRetailDisruption,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.liquorPolicyRetailDisruption
+                              ? 'bg-pink-950 text-pink-300 border-pink-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.liquorPolicyRetailDisruption ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-pink-300 font-mono">
+                          Rural DWCRA Women
+                        </span>
+                        <span>Retail Licensing &amp; Price Grievances</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Excise policy shifts and liquor shop licensing disputes trigger protests among rural women and anti-liquor groups (-2.0%).
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-pink-400/90">
+                      {groundCrisisSettings.liquorPolicyRetailDisruption
+                        ? '⚡ -2.0% swing among rural female SHG voters'
+                        : '○ DWCRA women loyalty baseline intact'}
+                    </div>
+                  </div>
+
+                  {/* Card 12: Govt Employees & CPS/GPS Pension Discontent */}
+                  <div className="bg-slate-950/90 p-3.5 rounded-xl border border-slate-800 hover:border-violet-900/60 transition-colors space-y-2.5 flex flex-col justify-between">
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <Briefcase className="w-4 h-4 text-violet-400" />
+                          <span className="font-bold text-xs text-white">Govt Employees GPS Pension</span>
+                        </div>
+                        <button
+                          onClick={() =>
+                            setGroundCrisisSettings((prev) => ({
+                              ...prev,
+                              govtEmployeePensionDiscontent: !prev.govtEmployeePensionDiscontent,
+                            }))
+                          }
+                          className={`text-[10px] font-mono font-bold px-2 py-0.5 rounded cursor-pointer transition-colors border ${
+                            groundCrisisSettings.govtEmployeePensionDiscontent
+                              ? 'bg-violet-950 text-violet-300 border-violet-600'
+                              : 'bg-slate-800 text-slate-400 border-slate-700'
+                          }`}
+                        >
+                          {groundCrisisSettings.govtEmployeePensionDiscontent ? 'ACTIVE' : 'OFF'}
+                        </button>
+                      </div>
+                      <div className="flex items-center gap-1.5 text-[10px] text-slate-400">
+                        <span className="bg-slate-900 px-1.5 py-0.5 rounded text-violet-300 font-mono">
+                          12 Urban Hubs
+                        </span>
+                        <span>Vijayawada, Vizag, Guntur, Tirupati</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400 leading-snug">
+                        Pending DA arrears and friction over Guaranteed Pension Scheme (GPS) vs OPS mobilize state government employees &amp; teachers (-3.0%).
+                      </p>
+                    </div>
+                    <div className="pt-2 border-t border-slate-900 text-[10px] font-mono text-violet-400/90">
+                      {groundCrisisSettings.govtEmployeePensionDiscontent
+                        ? '⚡ -3.0% penalty across state employee & teacher voter blocs'
+                        : '○ Government employee unions satisfied'}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           )}
 
-          {/* TAB 5: TARGET 88 & MONTE CARLO PROBABILITY */}
-          {activeTab === 'target_60' && (
-            <div className="space-y-4 animate-in fade-in duration-150">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                {/* Target 88 Reverse Solver */}
-                <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Crosshair className="w-4 h-4 text-emerald-400" />
-                      <span className="font-bold text-xs text-white">Target 88 Majority Optimizer</span>
-                    </div>
-                    <div className="flex items-center gap-1 bg-slate-900 p-1 rounded-lg border border-slate-800 text-xs">
-                      {(['TDP', 'YSRCP', 'JSP', 'BJP'] as const).map((p) => (
-                        <button
-                          key={p}
-                          onClick={() => setTargetParty(p)}
-                          className={`px-2 py-0.5 rounded font-bold cursor-pointer ${
-                            targetParty === p ? 'bg-indigo-600 text-white' : 'text-slate-400 hover:text-white'
-                          }`}
-                        >
-                          {p}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-2 bg-slate-900 p-3 rounded-lg border border-slate-800 text-center font-mono">
-                    <div>
-                      <span className="text-[10px] text-slate-400 block font-bold">WON</span>
-                      <span className="text-xl font-black text-white">{target88Plan.wonCount}</span>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-slate-400 block font-bold">NEEDED</span>
-                      <span className={`text-xl font-black ${target88Plan.needed === 0 ? 'text-emerald-400' : 'text-amber-400'}`}>
-                        {target88Plan.needed === 0 ? 'MAJORITY' : `${target88Plan.needed} seats`}
-                      </span>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-slate-400 block font-bold">AVG DEFICIT</span>
-                      <span className="text-sm font-black text-indigo-300">~{target88Plan.avgDeficit.toLocaleString()}</span>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-400 pt-1">
-                    <span>
-                      Top target: <strong>{target88Plan.pickupSeats[0]?.result.ac_name || 'None'}</strong> (Deficit: ~{target88Plan.pickupSeats[0]?.deficitVotes.toLocaleString()} votes)
-                    </span>
-                    {target88Plan.pickupSeats[0] && (
-                      <button
-                        onClick={() => onNavigateToActions(target88Plan.pickupSeats[0]?.result.ac_no)}
-                        className="px-2.5 py-1 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg font-bold text-[10px] cursor-pointer transition-colors"
-                      >
-                        Target in Playbook 🎯
-                      </button>
-                    )}
-                  </div>
-                </div>
-
-                {/* Monte Carlo 1,000-Run Volatility Meter */}
-                <div className="bg-slate-950/80 p-4 rounded-xl border border-slate-800 space-y-3">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Dices className="w-4 h-4 text-indigo-400" />
-                      <span className="font-bold text-xs text-white">Monte Carlo Win Probability (1,000 Runs)</span>
-                    </div>
-                    <button
-                      onClick={() => setSimulationSeed((prev) => prev + 1)}
-                      className="text-[10px] bg-slate-900 text-indigo-300 px-2 py-1 rounded border border-slate-800 hover:text-white cursor-pointer font-bold"
-                    >
-                      Re-run 1,000
-                    </button>
-                  </div>
-
-                  <div className="grid grid-cols-3 gap-2 bg-slate-900 p-3 rounded-lg border border-slate-800 text-center font-mono">
-                    <div>
-                      <span className="text-[10px] text-slate-400 block font-bold">NDA WIN</span>
-                      <span className="text-xl font-black text-emerald-400">{monteCarloStats.nda.winProb}%</span>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-slate-400 block font-bold">YSRCP WIN</span>
-                      <span className="text-xl font-black text-sky-400">{monteCarloStats.ysrcp.winProb}%</span>
-                    </div>
-                    <div>
-                      <span className="text-[10px] text-slate-400 block font-bold">HUNG ASSEMBLY</span>
-                      <span className="text-xl font-black text-amber-400">{monteCarloStats.hungProb}%</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between text-[11px] text-slate-400">
-                    <span>Polling Error Sigma: &plusmn;{pollingErrorSigma}%</span>
-                    <input
-                      type="range"
-                      min="1.5"
-                      max="5.0"
-                      step="0.5"
-                      value={pollingErrorSigma}
-                      onChange={(e) => setPollingErrorSigma(Number(e.target.value))}
-                      className="w-28 accent-indigo-500 cursor-pointer"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+          {/* TAB 5: POLLING & MOMENTUM (2024 RETROSPECTIVE + 2029 FORECAST SCENARIOS) */}
+          {(activeTab === 'target_60' || activeTab === 'polling_momentum') && (
+            <CampaignPollingTracker538
+              activePreset={activePreset}
+              simulatedResults={simulatedResults}
+              onApplyPreset={onApplyPreset}
+            />
           )}
         </div>
       )}
