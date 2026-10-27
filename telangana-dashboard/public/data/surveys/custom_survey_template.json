@@ -1,0 +1,30 @@
+{
+  "id": "survey_custom_template",
+  "name": "Custom Caste Survey Template",
+  "agency": "Independent Polling Group",
+  "shortLabel": "Custom Survey",
+  "leadAnalyst": "Chief Political Analyst",
+  "date": "Configurable Survey Date",
+  "sampleSize": 30000,
+  "methodology": "Fieldwork methodology description across 119 constituencies",
+  "marginOfError": "±2.0%",
+  "headlineFinding": "Custom caste swing hypothesis across backward classes and social groups",
+  "narrativeSummary": "Use this JSON template to configure, save, and load your custom polling agency data into the Telangana Intelligence Suite.",
+  "badgeColor": "indigo",
+  "swings": {
+    "sc_madiga": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "sc_mala": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "st_lambada": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "st_koya_gond": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "bc_mudiraj": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "bc_munnuru_kapu": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "bc_padmashali": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "bc_goud": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "bc_yadav": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "bc_other": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "minority_muslim": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "oc_reddy": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "oc_velama": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 },
+    "oc_other": { "INC": 0.0, "BRS": 0.0, "BJP": 0.0 }
+  }
+}

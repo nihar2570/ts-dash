@@ -1,0 +1,33 @@
+import type { CasteSurveyDefinition } from './types';
+
+export const SAS_GROUP_SURVEY: CasteSurveyDefinition = {
+  id: 'survey_sas_group',
+  name: 'Survey by SAS Group (Political Intelligence)',
+  agency: 'SAS Group & South Asia Strategies',
+  shortLabel: 'SAS Group',
+  leadAnalyst: 'Dr. Sudheer Kumar & Field Survey Cell',
+  date: 'Comprehensive Caste & Mandal Tracker',
+  sampleSize: 38200,
+  methodology: 'Constituency-stratified face-to-face polling with socio-economic caste quota quotas',
+  marginOfError: '±2.0%',
+  headlineFinding: 'BC Consolidation Behind Regional Voice (+7.5% BRS Mudiraj) & North TS Munnuru Kapu Saffron Shift',
+  narrativeSummary:
+    'SAS Group tracker documents strong Backward Class consolidation behind BRS in rural central and northern districts. BC Mudiraj (+7.5% BRS) and Padmashali (+6.5% BRS) show pronounced anti-incumbent backlash against the ruling Congress. Concurrently, North Telangana Munnuru Kapu voters swing +5.5% to BJP driven by local leadership, while SC Madiga splits between BJP (+4.0%) and BRS (+2.0%).',
+  badgeColor: 'emerald',
+  swings: {
+    sc_madiga: { INC: -6.0, BRS: 2.0, BJP: 4.0 },
+    sc_mala: { INC: 4.0, BRS: -3.0, BJP: -1.0 },
+    st_lambada: { INC: -3.0, BRS: 4.0, BJP: -1.0 },
+    st_koya_gond: { INC: -2.0, BRS: 1.0, BJP: 1.0 },
+    bc_mudiraj: { INC: -10.5, BRS: 7.5, BJP: 3.0 },
+    bc_munnuru_kapu: { INC: -7.5, BRS: 2.0, BJP: 5.5 },
+    bc_padmashali: { INC: -6.0, BRS: 6.5, BJP: -0.5 },
+    bc_goud: { INC: -5.0, BRS: 5.0, BJP: 0.0 },
+    bc_yadav: { INC: -5.5, BRS: 6.0, BJP: -0.5 },
+    bc_other: { INC: -5.0, BRS: 4.0, BJP: 1.0 },
+    minority_muslim: { INC: 7.0, BRS: -6.5, BJP: -0.5 },
+    oc_reddy: { INC: 2.0, BRS: -1.5, BJP: -0.5 },
+    oc_velama: { INC: -8.0, BRS: 7.0, BJP: 1.0 },
+    oc_other: { INC: -3.0, BRS: 0.0, BJP: 3.0 },
+  },
+};

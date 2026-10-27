@@ -1,0 +1,30 @@
+{
+  "id": "survey_janmat_insights",
+  "name": "Survey by Janmat Insights (BC & Grassroots Focus)",
+  "agency": "Janmat Research & Public Opinion Institute",
+  "shortLabel": "Janmat Insights",
+  "leadAnalyst": "P. Ravinder Reddy & Rural Stratification Cell",
+  "date": "Mandal-Level Backward Classes Study",
+  "sampleSize": 35400,
+  "methodology": "Grassroots survey tracking 112 sub-caste clusters across agrarian and artisan mandals",
+  "marginOfError": "±2.1%",
+  "headlineFinding": "Most Backward Classes (MBCs) & Artisans Swing to BRS (+8.0% Mudiraj, +7.0% Padmashali)",
+  "narrativeSummary": "Janmat Insights highlights deep discontent across artisanal and Most Backward Class (MBC) communities. Delays in craft revival packages and caste welfare corporation funds have triggered double-digit vote hemorrhages for Congress among Mudiraj (-12.0%) and Munnuru Kapu (-8.0%). BRS absorbs the bulk of this swing (+8.0% in Mudiraj, +7.0% in Padmashali, +6.0% in Yadav), while BJP captures significant Munnuru Kapu gains (+6.0%).",
+  "badgeColor": "amber",
+  "swings": {
+    "sc_madiga": { "INC": -7.0, "BRS": 3.0, "BJP": 4.0 },
+    "sc_mala": { "INC": 3.5, "BRS": -2.5, "BJP": -1.0 },
+    "st_lambada": { "INC": -1.5, "BRS": 2.5, "BJP": -1.0 },
+    "st_koya_gond": { "INC": -1.0, "BRS": 0.0, "BJP": 1.0 },
+    "bc_mudiraj": { "INC": -12.0, "BRS": 8.0, "BJP": 4.0 },
+    "bc_munnuru_kapu": { "INC": -8.0, "BRS": 2.0, "BJP": 6.0 },
+    "bc_padmashali": { "INC": -7.0, "BRS": 7.0, "BJP": 0.0 },
+    "bc_goud": { "INC": -5.0, "BRS": 5.0, "BJP": 0.0 },
+    "bc_yadav": { "INC": -6.0, "BRS": 6.0, "BJP": 0.0 },
+    "bc_other": { "INC": -7.0, "BRS": 5.5, "BJP": 1.5 },
+    "minority_muslim": { "INC": 5.0, "BRS": -5.0, "BJP": 0.0 },
+    "oc_reddy": { "INC": 2.5, "BRS": -1.5, "BJP": -1.0 },
+    "oc_velama": { "INC": -9.0, "BRS": 8.0, "BJP": 1.0 },
+    "oc_other": { "INC": -2.0, "BRS": 0.0, "BJP": 2.0 }
+  }
+}
