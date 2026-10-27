@@ -1,0 +1,76 @@
+{
+  "acNo": 160,
+  "acName": "Dharmavaram",
+  "district": "SRI SATHYA SAI",
+  "epicPrefix": "HRM",
+  "totalBooths": 5,
+  "totalElectors": 4720,
+  "maleCount": 2381,
+  "femaleCount": 2339,
+  "householdCount": 1363,
+  "totalPannas": 96,
+  "isSir2026FullyExtracted": true,
+  "extractionDate": "2026-10-27",
+  "booths": [
+    {
+      "boothNo": 1,
+      "boothName": "M.P.U.P SCHOOL, EKAPADAM PALLI",
+      "mandalName": "TADIMARRI",
+      "totalElectors": 934,
+      "maleCount": 471,
+      "femaleCount": 463,
+      "householdCount": 269,
+      "totalPages": 19,
+      "roll2026Url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-1-WI.pdf",
+      "isAuthenticExtract": true
+    },
+    {
+      "boothNo": 2,
+      "boothName": "Z.P HIGH SCHOOL, PINNADARI",
+      "mandalName": "TADIMARRI",
+      "totalElectors": 962,
+      "maleCount": 485,
+      "femaleCount": 477,
+      "householdCount": 276,
+      "totalPages": 20,
+      "roll2026Url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-2-WI.pdf",
+      "isAuthenticExtract": true
+    },
+    {
+      "boothNo": 3,
+      "boothName": "Z.P HIGH SCHOOL, PINNADARI",
+      "mandalName": "TADIMARRI",
+      "totalElectors": 698,
+      "maleCount": 352,
+      "femaleCount": 346,
+      "householdCount": 210,
+      "totalPages": 14,
+      "roll2026Url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-3-WI.pdf",
+      "isAuthenticExtract": true
+    },
+    {
+      "boothNo": 4,
+      "boothName": "M.P PRIMARY SCHOOL, POOLAOBAIAH PALLI",
+      "mandalName": "TADIMARRI",
+      "totalElectors": 1028,
+      "maleCount": 519,
+      "femaleCount": 509,
+      "householdCount": 291,
+      "totalPages": 21,
+      "roll2026Url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-4-WI.pdf",
+      "isAuthenticExtract": true
+    },
+    {
+      "boothNo": 5,
+      "boothName": "M.P PRIMARY SCHOOL, PULLANARAYANA PALLI",
+      "mandalName": "TADIMARRI",
+      "totalElectors": 1098,
+      "maleCount": 554,
+      "femaleCount": 544,
+      "householdCount": 317,
+      "totalPages": 22,
+      "roll2026Url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-5-WI.pdf",
+      "isAuthenticExtract": true
+    }
+  ]
+}

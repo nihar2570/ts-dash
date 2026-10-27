@@ -1,10 +1,10 @@
 [
   {
     "booth_no": 1,
-    "name": "MPUP SCHOOL,east side building,southern side room, TAKKELLAPADU, Takkilllapadu",
+    "name": "MPUP SCHOOL,east side building,southern side room, TAKKELLAPADU",
     "building": "MPUP SCHOOL,east side building,southern side room, TAKKELLAPADU",
     "locality": "Takkilllapadu",
-    "sections": "1. Takkellapadu, O C Area 2. Takkellapadu, S C Colony 3. Takkellapadu, S T Colony Area",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.961477,
@@ -35,14 +35,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-1-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 920,
+    "extracted_male": 464,
+    "extracted_female": 456,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_1.json"
   },
   {
     "booth_no": 2,
-    "name": "MPUP SCHOOL,west side new building, TAKKELLAPADU, Takkilllapadu",
+    "name": "MPUP SCHOOL,west side new building, TAKKELLAPADU",
     "building": "MPUP SCHOOL,west side new building, TAKKELLAPADU",
     "locality": "Takkilllapadu",
-    "sections": "1. Takkellapadu, O C Area 2. Takkellapadu, S C Colony Area 3. Takkellapadu, S T Colony Area",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.961477,
@@ -73,15 +80,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-2-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1016,
+    "extracted_male": 513,
+    "extracted_female": 503,
+    "extracted_households": 290,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_2.json"
   },
   {
     "booth_no": 3,
-    "name": "MPP SCHOOL, NORTH SIDE BUILDING, GARIKAPADU, GARIKAPADU",
+    "name": "MPP SCHOOL, NORTH SIDE BUILDING, GARIKAPADU",
     "building": "MPP SCHOOL, NORTH SIDE BUILDING, GARIKAPADU",
     "locality": "GARIKAPADU",
-    "sections": "1. Garikapadu, Garikapadu",
-    "mandal": "",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.948717,
     "lng": 80.052812,
@@ -111,14 +125,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-3-WI.pdf",
-    "panna_pages": 12
+    "panna_pages": 12,
+    "extracted_electorate": 584,
+    "extracted_male": 294,
+    "extracted_female": 290,
+    "extracted_households": 172,
+    "extracted_pannas": 12,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_3.json"
   },
   {
     "booth_no": 4,
-    "name": "MPP SCHOOL, SOUTH SIDE BUILDING, RAMACHANDRUNI PETA, ramachandrunipeta",
+    "name": "MPP SCHOOL, SOUTH SIDE BUILDING, RAMACHANDRUNI PETA",
     "building": "MPP SCHOOL, SOUTH SIDE BUILDING, RAMACHANDRUNI PETA",
     "locality": "ramachandrunipeta",
-    "sections": "1. Ramchandrunipet, O C Area 2. Rama Chandrunipeta, S C Colony 3. Rama Chandrunipeta, B C Area",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.947275,
@@ -149,14 +170,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-4-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 974,
+    "extracted_male": 491,
+    "extracted_female": 483,
+    "extracted_households": 268,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_4.json"
   },
   {
     "booth_no": 5,
-    "name": "MPP SCHOOL (MAIN) W.SIDE pacca BUILDING n.s. room, GANDRAI, Gandrai",
+    "name": "MPP SCHOOL (MAIN) W.SIDE pacca BUILDING n.s. room, GANDRAI",
     "building": "MPP SCHOOL (MAIN) W.SIDE pacca BUILDING n.s. room, GANDRAI",
     "locality": "Gandrai",
-    "sections": "1. Gandrai, B C Area 2. Gandrai, S C Area 3. Gandrai, O C, B C Area",
+    "sections": "1-(MAIN) W.SIDE PACCA BUILDING N.S. ROOM MAIN BASTI. 2-(MAIN) W.SIDE PACCA BUILDING N.S. ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.971484,
@@ -187,14 +215,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-5-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 965,
+    "extracted_male": 487,
+    "extracted_female": 478,
+    "extracted_households": 276,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_5.json"
   },
   {
     "booth_no": 6,
-    "name": "MPP SCHOOL (MAIN) E.SIDE SHED, GANDRAI, Gandrai",
+    "name": "MPP SCHOOL (MAIN) E.SIDE SHED, GANDRAI",
     "building": "MPP SCHOOL (MAIN) E.SIDE SHED, GANDRAI",
     "locality": "Gandrai",
-    "sections": "1. Gandrai, B C Area 2. Gandrai, S C Area 3. Gandrai, O C,B C Area",
+    "sections": "1-(MAIN) E.SIDE SHED MAIN BASTI. 2-(MAIN) E.SIDE SHED COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.971484,
@@ -225,14 +260,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-6-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 974,
+    "extracted_male": 491,
+    "extracted_female": 483,
+    "extracted_households": 273,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_6.json"
   },
   {
     "booth_no": 7,
-    "name": "MPP SCHOOL (MAIN) N.SIDE BUILDING, GANDRAI, Gandrai",
+    "name": "MPP SCHOOL (MAIN) N.SIDE BUILDING, GANDRAI",
     "building": "MPP SCHOOL (MAIN) N.SIDE BUILDING, GANDRAI",
     "locality": "Gandrai",
-    "sections": "1. Gandrai, Buchavaram Area 2. Gandrai, Muslim Area 3. Gandrai, O C Area",
+    "sections": "1-(MAIN) N.SIDE BUILDING MAIN BASTI. 2-(MAIN) N.SIDE BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.971484,
@@ -263,14 +305,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-7-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 892,
+    "extracted_male": 450,
+    "extracted_female": 442,
+    "extracted_households": 247,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_7.json"
   },
   {
     "booth_no": 8,
-    "name": "ZPHS, W.BIDING,S.SIDE 3 ROOM, GANDRAI, Gandrai",
+    "name": "ZPHS, W.BIDING,S.SIDE 3 ROOM, GANDRAI",
     "building": "ZPHS, W.BIDING,S.SIDE 3 ROOM, GANDRAI",
     "locality": "Gandrai",
-    "sections": "1. Gandrai, O C,B C Area 2. Gandrai, S T Colony 3. Gandrai, Muslim Area",
+    "sections": "1-ZPHS MAIN BASTI. 2-ZPHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.96713,
@@ -301,14 +350,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-8-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 719,
+    "extracted_male": 363,
+    "extracted_female": 356,
+    "extracted_households": 208,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_8.json"
   },
   {
     "booth_no": 9,
-    "name": "MPP SCHOOL,NORTH PUCCA BUILDING,W.ROOM, MALKAPURAM, MALKAPURAM",
+    "name": "MPP SCHOOL,NORTH PUCCA BUILDING,W.ROOM, MALKAPURAM",
     "building": "MPP SCHOOL,NORTH PUCCA BUILDING,W.ROOM, MALKAPURAM",
     "locality": "MALKAPURAM",
-    "sections": "1. Malkapuram, Uttaram Bazaar 2. Malkapuram, Malapalli 3. Malkapuram, B C Area",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.995585,
@@ -339,14 +395,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-9-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 821,
+    "extracted_male": 414,
+    "extracted_female": 407,
+    "extracted_households": 229,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_9.json"
   },
   {
     "booth_no": 10,
-    "name": "MPP SCHOOL, NORTH SIDE BUILDING E.ROOM, MALKAPURAM, Malkapuram",
+    "name": "MPP SCHOOL, NORTH SIDE BUILDING E.ROOM, MALKAPURAM",
     "building": "MPP SCHOOL, NORTH SIDE BUILDING E.ROOM, MALKAPURAM",
     "locality": "Malkapuram",
-    "sections": "1. Malkapuram, Uttaram Bazaar 2. Malkapuram, Malapalli 3. Malkapuram, B C Area",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.995585,
@@ -377,14 +440,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-10-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 908,
+    "extracted_male": 458,
+    "extracted_female": 450,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_10.json"
   },
   {
     "booth_no": 11,
-    "name": "MPP SCHOOL, SADARAN SIDE BUILDING MAIN HALL, SHARE MAHAMAD PETA, Sher Mohammed peta",
+    "name": "MPP SCHOOL, SADARAN SIDE BUILDING MAIN HALL, SHARE MAHAMAD PETA",
     "building": "MPP SCHOOL, SADARAN SIDE BUILDING MAIN HALL, SHARE MAHAMAD PETA",
     "locality": "Sher Mohammed peta",
-    "sections": "1. Sher Mahammad Pettah, Gandrai Road 2. Sher Mahammad Pettah, New Harijanawada Area 3. Sher Mahammad Pettah, Yadava Bazaar",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.920628,
@@ -415,14 +485,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-11-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 868,
+    "extracted_male": 438,
+    "extracted_female": 430,
+    "extracted_households": 252,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_11.json"
   },
   {
     "booth_no": 12,
-    "name": "MPP SCHOOL,EAST ZINK SHED NORTH SIDE ROOM, SHARE MAHAMAD PETA, Sher Mohammed peta",
+    "name": "MPP SCHOOL,EAST ZINK SHED NORTH SIDE ROOM, SHARE MAHAMAD PETA",
     "building": "MPP SCHOOL,EAST ZINK SHED NORTH SIDE ROOM, SHARE MAHAMAD PETA",
     "locality": "Sher Mohammed peta",
-    "sections": "1. Sher Mohammed Peta, Gandrai Road 2. Sher Mahammad Pettah, New Harijanawada Area 3. Sher Mahammad Pettah, Yadava Bazaar",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.920628,
@@ -453,14 +530,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-12-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 889,
+    "extracted_male": 448,
+    "extracted_female": 441,
+    "extracted_households": 254,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_12.json"
   },
   {
     "booth_no": 13,
-    "name": "MPP SCHOOL, WEST SIDE BUILDING, NORTH ROOM, SHARE MAHAMAD PETA, Sher mohammed peta",
+    "name": "MPP SCHOOL, WEST SIDE BUILDING, NORTH ROOM, SHARE MAHAMAD PETA",
     "building": "MPP SCHOOL, WEST SIDE BUILDING, NORTH ROOM, SHARE MAHAMAD PETA",
     "locality": "Sher mohammed peta",
-    "sections": "1. Sher Mohammed Peta, Eswaramma Bazaar 2. Sher Mahammad Pettah, Post Office Area 3. Sher Mahammad Pettah, Padmasali Bazaar",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.920628,
@@ -491,14 +575,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-13-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 964,
+    "extracted_male": 486,
+    "extracted_female": 478,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_13.json"
   },
   {
     "booth_no": 14,
-    "name": "M.P.P.S WEST SIDE TO SOUTH SIDE S.S.A BUILDING, SHARE MAHAMAD PETA, sher mohammed peta",
+    "name": "M.P.P.S WEST SIDE TO SOUTH SIDE S.S.A BUILDING, SHARE MAHAMAD PETA",
     "building": "M.P.P.S WEST SIDE TO SOUTH SIDE S.S.A BUILDING, SHARE MAHAMAD PETA",
     "locality": "sher mohammed peta",
-    "sections": "1. Sher Mohammed Peta, Eswaramma Bazaar 2. Sher Mohammed Peta, Cheruvvu Bazaar 3. Sher Mohammed Peta, Sai Nagar",
+    "sections": "1-M.P.P.S WEST SIDE TO SOUTH SIDE S.S.A BUILDING MAIN BASTI. 2-M.P.P.S WEST SIDE TO SOUTH SIDE S.S.A BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.920628,
@@ -529,14 +620,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-14-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 973,
+    "extracted_male": 491,
+    "extracted_female": 482,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_14.json"
   },
   {
     "booth_no": 15,
-    "name": "MPPS central s SOUTH SIDE Build Sothern side 2ndR, JAGGAIAHPETA, Sher mohammed peta",
+    "name": "MPPS central s SOUTH SIDE Build Sothern side 2ndR, JAGGAIAHPETA",
     "building": "MPPS central s SOUTH SIDE Build Sothern side 2ndR, JAGGAIAHPETA",
     "locality": "Sher mohammed peta",
-    "sections": "1. Sher Mohammed Peta, Jaggaiahpeta Donka Road 2. Sher Mahammad Pettah, Elementary School Road 3. Sher Mahammad Pettah, Hyderabad Road",
+    "sections": "1-MPPS CENTRAL S SOUTH SIDE BUILD SOTHERN SIDE 2NDR MAIN BASTI. 2-MPPS CENTRAL S SOUTH SIDE BUILD SOTHERN SIDE 2NDR COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.920799,
@@ -567,14 +665,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-15-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 799,
+    "extracted_male": 403,
+    "extracted_female": 396,
+    "extracted_households": 230,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_15.json"
   },
   {
     "booth_no": 16,
-    "name": "MPUP SCHOOL, PUCCA BUILDING W.SIDE ROOM, ANUMANCHIPALLI, Anumanchi palli",
+    "name": "MPUP SCHOOL, PUCCA BUILDING W.SIDE ROOM, ANUMANCHIPALLI",
     "building": "MPUP SCHOOL, PUCCA BUILDING W.SIDE ROOM, ANUMANCHIPALLI",
     "locality": "Anumanchi palli",
-    "sections": "1. Anumanchi Palli, Panchayat Office Road 2. Anumanchi Palli, Society Road 3. Anumanchi Palli, Hyderabad Road",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.93481,
@@ -605,14 +710,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-16-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 882,
+    "extracted_male": 445,
+    "extracted_female": 437,
+    "extracted_households": 253,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_16.json"
   },
   {
     "booth_no": 17,
-    "name": "MPUP SCHOOL, PUCCA BUILDING EAST ROOM., ANUMANCHIPALLI, Anumanchi palli",
+    "name": "MPUP SCHOOL, PUCCA BUILDING EAST ROOM., ANUMANCHIPALLI",
     "building": "MPUP SCHOOL, PUCCA BUILDING EAST ROOM., ANUMANCHIPALLI",
     "locality": "Anumanchi palli",
-    "sections": "1. Anumanchi Palli, Panchayat Office Road 2. Anumanchi Palli, Society Road 3. Anumanchi Palli, Hyderabad Road",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.93481,
@@ -643,14 +755,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-17-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1001,
+    "extracted_male": 505,
+    "extracted_female": 496,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_17.json"
   },
   {
     "booth_no": 18,
-    "name": "MPP SCHOOL SOUTH SIDE BUILDING E.SIDE ROOM, BALUSUPADU, Balusupadu",
+    "name": "MPP SCHOOL SOUTH SIDE BUILDING E.SIDE ROOM, BALUSUPADU",
     "building": "MPP SCHOOL SOUTH SIDE BUILDING E.SIDE ROOM, BALUSUPADU",
     "locality": "Balusupadu",
-    "sections": "1. Balusupadu, Harijanawada 2. Balusupadu, B C Colony 3. Balusupadu, Panchayat Office Centre",
+    "sections": "1-SOUTH SIDE BUILDING E.SIDE ROOM MAIN BASTI. 2-SOUTH SIDE BUILDING E.SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.922477,
@@ -681,14 +800,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-18-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 850,
+    "extracted_male": 429,
+    "extracted_female": 421,
+    "extracted_households": 245,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_18.json"
   },
   {
     "booth_no": 19,
-    "name": "MPP SCHOOL,WESTRN SIDE NEW BUILDING,S.S.A BUILDING, BALUSUPADU, Balusupadu",
+    "name": "MPP SCHOOL,WESTRN SIDE NEW BUILDING,S.S.A BUILDING, BALUSUPADU",
     "building": "MPP SCHOOL,WESTRN SIDE NEW BUILDING,S.S.A BUILDING, BALUSUPADU",
     "locality": "Balusupadu",
-    "sections": "1. Balusupadu, Harijanawada Area 2. Balusupadu, B C Colony 3. Balusupadu, Panchayat Office Centre",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.922477,
@@ -719,14 +845,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-19-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 984,
+    "extracted_male": 496,
+    "extracted_female": 488,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_19.json"
   },
   {
     "booth_no": 20,
-    "name": "MPPS,West side New Build, S.S.A Build (02-03), BALUSUPADU, Annavaram",
+    "name": "MPPS,West side New Build, S.S.A Build (02-03), BALUSUPADU",
     "building": "MPPS,West side New Build, S.S.A Build (02-03), BALUSUPADU",
     "locality": "Annavaram",
-    "sections": "1. Annavaram, Main Village 2. Annavaram, Main Village 3. Annavaram, Main Village",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.907614,
@@ -757,14 +890,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-20-WI.pdf",
-    "panna_pages": 13
+    "panna_pages": 13,
+    "extracted_electorate": 628,
+    "extracted_male": 317,
+    "extracted_female": 311,
+    "extracted_households": 181,
+    "extracted_pannas": 13,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_20.json"
   },
   {
     "booth_no": 21,
-    "name": "MPPH SCHOOL,WEST PUCCA BUILDING W.S.ROOM, BUDAVADA, Budhawada",
+    "name": "MPPH SCHOOL,WEST PUCCA BUILDING W.S.ROOM, BUDAVADA",
     "building": "MPPH SCHOOL,WEST PUCCA BUILDING W.S.ROOM, BUDAVADA",
     "locality": "Budhawada",
-    "sections": "1. Budhavada, Harijnawada Area 2. Budhavada, Main Village 3. Budhavada, Sugali Tanda",
+    "sections": "1-MPPH SCHOOL MAIN BASTI. 2-MPPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.878681,
@@ -795,14 +935,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-21-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 881,
+    "extracted_male": 444,
+    "extracted_female": 437,
+    "extracted_households": 259,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_21.json"
   },
   {
     "booth_no": 22,
-    "name": "MPUP HIGH SCHOOLW.SIDE PUCCA BILDING N.S.ROOM, BUDAWADA, Budhawada",
+    "name": "MPUP HIGH SCHOOLW.SIDE PUCCA BILDING N.S.ROOM, BUDAWADA",
     "building": "MPUP HIGH SCHOOLW.SIDE PUCCA BILDING N.S.ROOM, BUDAWADA",
     "locality": "Budhawada",
-    "sections": "1. Budhavada, Harijanawada Area 2. Budhavada, Main Village 3. Budhavada, Sugali Tanda",
+    "sections": "1-MPUP HIGH SCHOOLW.SIDE PUCCA BILDING N.S.ROOM MAIN BASTI. 2-MPUP HIGH SCHOOLW.SIDE PUCCA BILDING N.S.ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.878681,
@@ -833,14 +980,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-22-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1062,
+    "extracted_male": 536,
+    "extracted_female": 526,
+    "extracted_households": 306,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_22.json"
   },
   {
     "booth_no": 23,
-    "name": "MPE SCHOOL, PUCCA BUILDING, REDDI NAYAKA TANDA, Reddinayak tanda Budavadasivaru",
+    "name": "MPE SCHOOL, PUCCA BUILDING, REDDI NAYAKA TANDA",
     "building": "MPE SCHOOL, PUCCA BUILDING, REDDI NAYAKA TANDA",
     "locality": "Reddinayak tanda Budavadasivaru",
-    "sections": "1. Reddinayak Tanda, Pradhana Tanda 2. Reddinayak Tanda, Tripuravaram",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.882681,
@@ -871,14 +1025,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-23-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 847,
+    "extracted_male": 427,
+    "extracted_female": 420,
+    "extracted_households": 240,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_23.json"
   },
   {
     "booth_no": 24,
-    "name": "MPE SCHOOL, (C. S) N.S.PUCA BUILDING E.S ROOM, JAGGAIAHPETA, Jaggayyapeta",
+    "name": "MPE SCHOOL, (C. S) N.S.PUCA BUILDING E.S ROOM, JAGGAIAHPETA",
     "building": "MPE SCHOOL, (C. S) N.S.PUCA BUILDING E.S ROOM, JAGGAIAHPETA",
     "locality": "Jaggayyapeta",
-    "sections": "1. Jaggaiahpeta, Cheruvu Bazaar 2. Jaggaiahpeta, Markandeya Bazaar",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.89774,
@@ -909,14 +1070,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-24-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 867,
+    "extracted_male": 437,
+    "extracted_female": 430,
+    "extracted_households": 250,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_24.json"
   },
   {
     "booth_no": 25,
-    "name": "MPPS central s SOUTH SIDE Build Sothern side 2ndR, JAGGAIAHPETA, Jjaggayyapeta",
+    "name": "MPPS central s SOUTH SIDE Build Sothern side 2ndR, JAGGAIAHPETA",
     "building": "MPPS central s SOUTH SIDE Build Sothern side 2ndR, JAGGAIAHPETA",
     "locality": "Jjaggayyapeta",
-    "sections": "1. Jaggaiahpet, Cherruvu Bazaar 2. Jaggaiahpeta, Markandeya Bazaar",
+    "sections": "1-MPPS CENTRAL S SOUTH SIDE BUILD SOTHERN SIDE 2NDR MAIN BASTI. 2-MPPS CENTRAL S SOUTH SIDE BUILD SOTHERN SIDE 2NDR COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.89774,
@@ -947,14 +1115,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-25-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 961,
+    "extracted_male": 485,
+    "extracted_female": 476,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_25.json"
   },
   {
     "booth_no": 26,
-    "name": "SRIRAM AMMANI W.JR.COLLEGE. N.S.B.E.S RM, JAGGAIAHPETA, Jaggayyapeta",
+    "name": "SRIRAM AMMANI W.JR.COLLEGE. N.S.B.E.S RM, JAGGAIAHPETA",
     "building": "SRIRAM AMMANI W.JR.COLLEGE. N.S.B.E.S RM, JAGGAIAHPETA",
     "locality": "Jaggayyapeta",
-    "sections": "1. Jaggaiahpet, Mutyalamma Temple Bazaar 2. Jaggaiahpeta, Ramalayam Bazaar 3. Jaggaiahpeta, Pogaku Sandu",
+    "sections": "1-SRIRAM AMMANI W.JR.COLLEGE. N.S.B.E.S RM MAIN BASTI. 2-SRIRAM AMMANI W.JR.COLLEGE. N.S.B.E.S RM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895874,
@@ -985,14 +1160,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-26-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 930,
+    "extracted_male": 469,
+    "extracted_female": 461,
+    "extracted_households": 268,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_26.json"
   },
   {
     "booth_no": 27,
-    "name": "SRIRAM AMMANI W.JR.COLLEGE,N.S.B.W.S.RM, JAGGAIAHPETA, JAGGAIAHPETA",
+    "name": "SRIRAM AMMANI W.JR.COLLEGE,N.S.B.W.S.RM, JAGGAIAHPETA",
     "building": "SRIRAM AMMANI W.JR.COLLEGE,N.S.B.W.S.RM, JAGGAIAHPETA",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Mutyalamma Gudividi 2. Jaggaiahpeta, Ramayalam Radham Sandu 3. Jaggaiahpeta, Pogakusandu",
+    "sections": "1-SRIRAM AMMANI W.JR.COLLEGE MAIN BASTI. 2-SRIRAM AMMANI W.JR.COLLEGE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895874,
@@ -1023,14 +1205,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-27-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1092,
+    "extracted_male": 551,
+    "extracted_female": 541,
+    "extracted_households": 305,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_27.json"
   },
   {
     "booth_no": 28,
-    "name": "C.S.R.UP SCHOOL,POGAKU RD,W.S.ROOM, JAGGAIAHPETA, Jaggayyapeta",
+    "name": "C.S.R.UP SCHOOL,POGAKU RD,W.S.ROOM, JAGGAIAHPETA",
     "building": "C.S.R.UP SCHOOL,POGAKU RD,W.S.ROOM, JAGGAIAHPETA",
     "locality": "Jaggayyapeta",
-    "sections": "1. Jaggaiahpet, Gundavari Bazaar 2. Jaggaiahpeta, Ammani College Road 3. Jaggaiahpeta, Ramayalam Street",
+    "sections": "1-C.S.R.UP SCHOOL MAIN BASTI. 2-C.S.R.UP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.888561,
@@ -1061,14 +1250,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-28-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1085,
+    "extracted_male": 547,
+    "extracted_female": 538,
+    "extracted_households": 309,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_28.json"
   },
   {
     "booth_no": 29,
-    "name": "CSRUP SCHOOL,POGAKU RD,E.S.ROOM, JAGGAIAHPETA, Jaggayyapeta",
+    "name": "CSRUP SCHOOL,POGAKU RD,E.S.ROOM, JAGGAIAHPETA",
     "building": "CSRUP SCHOOL,POGAKU RD,E.S.ROOM, JAGGAIAHPETA",
     "locality": "Jaggayyapeta",
-    "sections": "1. Jaggaiahpet, Gundavari Bazaar 2. Jaggaiahpeta, Ammani College Road 3. Jaggaiahpeta, Ramalayam Street",
+    "sections": "1-CSRUP SCHOOL MAIN BASTI. 2-CSRUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.888561,
@@ -1099,14 +1295,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-29-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 819,
+    "extracted_male": 413,
+    "extracted_female": 406,
+    "extracted_households": 230,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_29.json"
   },
   {
     "booth_no": 30,
-    "name": "MPES SCHOOL,PUCCA BUILDING,N.S.1ST RM, SEETARAMAPURAM, Jaggayyapet",
+    "name": "MPES SCHOOL,PUCCA BUILDING,N.S.1ST RM, SEETARAMAPURAM",
     "building": "MPES SCHOOL,PUCCA BUILDING,N.S.1ST RM, SEETARAMAPURAM",
     "locality": "Jaggayyapet",
-    "sections": "1. Jaggaiahpet, Sitaramapuram,Vijayawada Road 2. Jaggaiahpet, Chintalatopu 3. Jaggaiahpet, Vijayawada Road",
+    "sections": "1-MPES SCHOOL MAIN BASTI. 2-MPES SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.893299,
@@ -1137,14 +1340,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-30-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 906,
+    "extracted_male": 457,
+    "extracted_female": 449,
+    "extracted_households": 262,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_30.json"
   },
   {
     "booth_no": 31,
-    "name": "MPE SCHOOL,PUCCA BUILDING,S.S.2ND RM, SEETARAMAPUR, Jaggayyapeta",
+    "name": "MPE SCHOOL,PUCCA BUILDING,S.S.2ND RM, SEETARAMAPUR",
     "building": "MPE SCHOOL,PUCCA BUILDING,S.S.2ND RM, SEETARAMAPUR",
     "locality": "Jaggayyapeta",
-    "sections": "1. Jaggaiahpet, Sitaramapuram, Vijayawada Road 2. Jaggaiahpet, Chintala Topu 3. Jaggaiahpet, Vijayawada Road",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.893299,
@@ -1175,14 +1385,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-31-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1080,
+    "extracted_male": 545,
+    "extracted_female": 535,
+    "extracted_households": 317,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_31.json"
   },
   {
     "booth_no": 32,
-    "name": "MPE SCHOOL, N.S.NEW B., SEETARAMAPURAM, JAGGAIAHPETA",
+    "name": "MPE SCHOOL, N.S.NEW B., SEETARAMAPURAM",
     "building": "MPE SCHOOL, N.S.NEW B., SEETARAMAPURAM",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Jaggaiahpeta 2. Jaggaiahpet, Jaggaiahpet",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.893299,
@@ -1213,14 +1430,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-32-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1024,
+    "extracted_male": 517,
+    "extracted_female": 507,
+    "extracted_households": 300,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_32.json"
   },
   {
     "booth_no": 33,
-    "name": "MPPS, North Side room Old Build,KAKANINAGAR, KAKANI NAGAR, Jaggayyapeta",
+    "name": "MPPS, North Side room Old Build,KAKANINAGAR, KAKANI NAGAR",
     "building": "MPPS, North Side room Old Build,KAKANINAGAR, KAKANI NAGAR",
     "locality": "Jaggayyapeta",
-    "sections": "1. Jaggaiahpet, Chintalatopu 2. Jaggaiahpet, R T C Colony 3. Jaggaiahpet, Y Y Colony",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.890342,
@@ -1251,14 +1475,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-33-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 734,
+    "extracted_male": 370,
+    "extracted_female": 364,
+    "extracted_households": 217,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_33.json"
   },
   {
     "booth_no": 34,
-    "name": "MPE SCHOOL NEW.B.N.S. ROOM., KAKANI NAGAR, JAGGAIAHPETA",
+    "name": "MPE SCHOOL NEW.B.N.S. ROOM., KAKANI NAGAR",
     "building": "MPE SCHOOL NEW.B.N.S. ROOM., KAKANI NAGAR",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Kakani Nagar 2. Jaggaiahpet, Jaggaiahpet 3. Jaggaiahpet, Y Y Colony",
+    "sections": "1-MPE SCHOOL NEW.B.N.S. ROOM. MAIN BASTI. 2-MPE SCHOOL NEW.B.N.S. ROOM. COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.890342,
@@ -1289,14 +1520,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-34-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 870,
+    "extracted_male": 439,
+    "extracted_female": 431,
+    "extracted_households": 250,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_34.json"
   },
   {
     "booth_no": 35,
-    "name": "APSW JR.COLLEGE(w) S.S. PUCCA B(INT.W) W.S.2ND RM, JAGGAIAHPETA, Jaggayyapeta",
+    "name": "APSW JR.COLLEGE(w) S.S. PUCCA B(INT.W) W.S.2ND RM, JAGGAIAHPETA",
     "building": "APSW JR.COLLEGE(w) S.S. PUCCA B(INT.W) W.S.2ND RM, JAGGAIAHPETA",
     "locality": "Jaggayyapeta",
-    "sections": "1. Jaggaiahpet, Kakani Nagar 2. Jaggaiahpet, Dange Nagar",
+    "sections": "1-APSW JR.COLLEGE(W) S.S. PUCCA B(INT.W) W.S.2ND RM MAIN BASTI. 2-APSW JR.COLLEGE(W) S.S. PUCCA B(INT.W) W.S.2ND RM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.88841,
@@ -1327,14 +1565,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-35-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1078,
+    "extracted_male": 544,
+    "extracted_female": 534,
+    "extracted_households": 300,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_35.json"
   },
   {
     "booth_no": 36,
-    "name": "APSW JR.COLLEG(w) S.S.AB S.SHED W.S.1ST RM, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "APSW JR.COLLEG(w) S.S.AB S.SHED W.S.1ST RM, JAGGAIAHPETA",
     "building": "APSW JR.COLLEG(w) S.S.AB S.SHED W.S.1ST RM, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Dange Nagar 2. Jaggaiahpet, Venkatagiri Gattu 3. Jaggaiahpet, Santhinagar",
+    "sections": "1-APSW JR.COLLEG(W) S.S.AB S.SHED W.S.1ST RM MAIN BASTI. 2-APSW JR.COLLEG(W) S.S.AB S.SHED W.S.1ST RM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.88841,
@@ -1365,14 +1610,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-36-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 853,
+    "extracted_male": 430,
+    "extracted_female": 423,
+    "extracted_households": 248,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_36.json"
   },
   {
     "booth_no": 37,
-    "name": "APSW J.C.(w) S.S. ABS.SHED S.S.2ND ROOM, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "APSW J.C.(w) S.S. ABS.SHED S.S.2ND ROOM, JAGGAIAHPETA",
     "building": "APSW J.C.(w) S.S. ABS.SHED S.S.2ND ROOM, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Dange Nagar 2. Jaggaiahpet, Venkata Giri Gattu 3. Jaggaiahpet, N S P Colony",
+    "sections": "1-APSW J.C.(W) S.S. ABS.SHED S.S.2ND ROOM MAIN BASTI. 2-APSW J.C.(W) S.S. ABS.SHED S.S.2ND ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.88841,
@@ -1403,14 +1655,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-37-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1075,
+    "extracted_male": 542,
+    "extracted_female": 533,
+    "extracted_households": 311,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_37.json"
   },
   {
     "booth_no": 38,
-    "name": "APSW J.C.(w) S.S.ABS SHED.W.S.3 RM, JAGGAIAHPETA, JAGGAIAHPETA",
+    "name": "APSW J.C.(w) S.S.ABS SHED.W.S.3 RM, JAGGAIAHPETA",
     "building": "APSW J.C.(w) S.S.ABS SHED.W.S.3 RM, JAGGAIAHPETA",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Jaggaiahpeta",
+    "sections": "1-APSW J.C.(W) S.S.ABS SHED.W.S.3 RM MAIN BASTI. 2-APSW J.C.(W) S.S.ABS SHED.W.S.3 RM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.88841,
@@ -1441,14 +1700,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-38-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 874,
+    "extracted_male": 441,
+    "extracted_female": 433,
+    "extracted_households": 256,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_38.json"
   },
   {
     "booth_no": 39,
-    "name": "AG.MARKET COMMITTEE OFFICE,RS.KENDRAM, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "AG.MARKET COMMITTEE OFFICE,RS.KENDRAM, JAGGAIAHPETA",
     "building": "AG.MARKET COMMITTEE OFFICE,RS.KENDRAM, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpeta, Opposite Annapoorna Theatre Erra Kaluva Katta 2. Jaggaiahpet, Dange Nagar",
+    "sections": "1-AG.MARKET COMMITTEE OFFICE MAIN BASTI. 2-AG.MARKET COMMITTEE OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.892119,
@@ -1479,14 +1745,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-39-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 873,
+    "extracted_male": 440,
+    "extracted_female": 433,
+    "extracted_households": 250,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_39.json"
   },
   {
     "booth_no": 40,
-    "name": "AG.M.C.OFFICE MEEGING HALL, JAGGAIAHPETA, JAGGAIAHPETA",
+    "name": "AG.M.C.OFFICE MEEGING HALL, JAGGAIAHPETA",
     "building": "AG.M.C.OFFICE MEEGING HALL, JAGGAIAHPETA",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Jaggaiahpeta",
+    "sections": "1-AG.M.C.OFFICE MEEGING HALL MAIN BASTI. 2-AG.M.C.OFFICE MEEGING HALL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.892119,
@@ -1517,14 +1790,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-40-WI.pdf",
-    "panna_pages": 14
+    "panna_pages": 14,
+    "extracted_electorate": 698,
+    "extracted_male": 352,
+    "extracted_female": 346,
+    "extracted_households": 195,
+    "extracted_pannas": 14,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_40.json"
   },
   {
     "booth_no": 41,
-    "name": "JRC JJC COLLEGE.S.S.ABS.SHED,E.S.BLK.RM.1, JAGGAIAHPEAT, Jaggaiah peta",
+    "name": "JRC JJC COLLEGE.S.S.ABS.SHED,E.S.BLK.RM.1, JAGGAIAHPEAT",
     "building": "JRC JJC COLLEGE.S.S.ABS.SHED,E.S.BLK.RM.1, JAGGAIAHPEAT",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Main Road Vijayawada 2. Jaggaiahpet, Yadava Bazaar 3. Jaggaiahpet, Durgapuram",
+    "sections": "1-JRC JJC COLLEGE.S.S.ABS.SHED MAIN BASTI. 2-JRC JJC COLLEGE.S.S.ABS.SHED COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.892192,
@@ -1555,20 +1835,27 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-41-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 780,
+    "extracted_male": 393,
+    "extracted_female": 387,
+    "extracted_households": 223,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_41.json"
   },
   {
     "booth_no": 42,
-    "name": "JRC JJC COLLEGE S.S.ABS.SHED.E.S.BLOCK RM.2, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "JRC JJC COLLEGE S.S.ABS.SHED.E.S.BLOCK RM.2, JAGGAIAHPETA",
     "building": "JRC JJC COLLEGE S.S.ABS.SHED.E.S.BLOCK RM.2, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Main Road (Vijayawada) 2. Jaggaiahpeta, Yadava Bazaar 3. Jaggaiahpeta, Durgapuram",
+    "sections": "1-JRC JJC COLLEGE S.S.ABS.SHED.E.S.BLOCK RM.2 MAIN BASTI. 2-JRC JJC COLLEGE S.S.ABS.SHED.E.S.BLOCK RM.2 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.892192,
     "lng": 80.100391,
     "is_urban": false,
-    "electorate": 1276,
+    "electorate": 1200,
     "total_votes": 771,
     "turnout_pct": 60.4,
     "votes": {
@@ -1593,14 +1880,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-42-WI.pdf",
-    "panna_pages": 26
+    "panna_pages": 24,
+    "extracted_electorate": 1200,
+    "extracted_male": 606,
+    "extracted_female": 594,
+    "extracted_households": 345,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_42.json"
   },
   {
     "booth_no": 43,
-    "name": "M.P.P.SCHOOL, NEW BUILDING, JAGGAIAHPETA, JAGGAIAHPETA",
+    "name": "M.P.P.SCHOOL, NEW BUILDING, JAGGAIAHPETA",
     "building": "M.P.P.SCHOOL, NEW BUILDING, JAGGAIAHPETA",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, S.J.S.College-East Side Area 2. Jaggayyapeta, Vidya Nagar 3. Jaggaiahpet, Rangu Bazaru",
+    "sections": "1-M.P.P.SCHOOL MAIN BASTI. 2-M.P.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.892192,
@@ -1631,14 +1925,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-43-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1032,
+    "extracted_male": 521,
+    "extracted_female": 511,
+    "extracted_households": 302,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_43.json"
   },
   {
     "booth_no": 44,
-    "name": "G.V.J.ZP(B) SCHOOL N.S.P.C.B.W.S.1ST ROOM, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "G.V.J.ZP(B) SCHOOL N.S.P.C.B.W.S.1ST ROOM, JAGGAIAHPETA",
     "building": "G.V.J.ZP(B) SCHOOL N.S.P.C.B.W.S.1ST ROOM, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Patha S B H Road 2. Jaggaiahpeta, Rangu Bazaar 3. Jaggaiahpeta, Satyanarayanapuram",
+    "sections": "1-G.V.J.ZP(B) SCHOOL N.S.P.C.B.W.S.1ST ROOM MAIN BASTI. 2-G.V.J.ZP(B) SCHOOL N.S.P.C.B.W.S.1ST ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895829,
@@ -1669,14 +1970,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-44-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 937,
+    "extracted_male": 473,
+    "extracted_female": 464,
+    "extracted_households": 271,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_44.json"
   },
   {
     "booth_no": 45,
-    "name": "GVJ ZPH(B) -N.S.PUCCA B.W.S.2ND ROOM, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "GVJ ZPH(B) -N.S.PUCCA B.W.S.2ND ROOM, JAGGAIAHPETA",
     "building": "GVJ ZPH(B) -N.S.PUCCA B.W.S.2ND ROOM, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Patha S B H Road 2. Jaggaiahpeta, Rangu Bazaru 3. Jaggaiahpeta, Satyanarayanapuram",
+    "sections": "1-GVJ ZPH(B) -N.S.PUCCA B.W.S.2ND ROOM MAIN BASTI. 2-GVJ ZPH(B) -N.S.PUCCA B.W.S.2ND ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895829,
@@ -1707,14 +2015,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-45-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1070,
+    "extracted_male": 540,
+    "extracted_female": 530,
+    "extracted_households": 307,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_45.json"
   },
   {
     "booth_no": 46,
-    "name": "GVJ ZPH(B)N.S. PUC.B. E.S.ROOM-1, JAGGAIAHPEAT, Jaggaiah peta",
+    "name": "GVJ ZPH(B)N.S. PUC.B. E.S.ROOM-1, JAGGAIAHPEAT",
     "building": "GVJ ZPH(B)N.S. PUC.B. E.S.ROOM-1, JAGGAIAHPEAT",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Balusupadu Main Road 2. Jaggaiahpet, Kanaka Durgamma Road 3. Jaggaiahpet, Balusupadu Road",
+    "sections": "1-GVJ ZPH(B)N.S. PUC.B. E.S.ROOM-1 MAIN BASTI. 2-GVJ ZPH(B)N.S. PUC.B. E.S.ROOM-1 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895829,
@@ -1745,14 +2060,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-46-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 848,
+    "extracted_male": 428,
+    "extracted_female": 420,
+    "extracted_households": 243,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_46.json"
   },
   {
     "booth_no": 47,
-    "name": "GVJ.ZPHS(B) N.S.PUC.B. E.S ROOM.2, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "GVJ.ZPHS(B) N.S.PUC.B. E.S ROOM.2, JAGGAIAHPETA",
     "building": "GVJ.ZPHS(B) N.S.PUC.B. E.S ROOM.2, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Balusupadu Road 2. Jaggaiahpet, Kanakadurgamma Temple Road 3. Jaggaiahpet, Balusupadu Road",
+    "sections": "1-GVJ.ZPHS(B) N.S.PUC.B. E.S ROOM.2 MAIN BASTI. 2-GVJ.ZPHS(B) N.S.PUC.B. E.S ROOM.2 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895829,
@@ -1783,14 +2105,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-47-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1119,
+    "extracted_male": 565,
+    "extracted_female": 554,
+    "extracted_households": 323,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_47.json"
   },
   {
     "booth_no": 48,
-    "name": "RCM UP SCHOOL PAKA BUILDING NORTH SIDE 1ST ROOM, JAGGAIAHPETA, JAGGAIAHPETA",
+    "name": "RCM UP SCHOOL PAKA BUILDING NORTH SIDE 1ST ROOM, JAGGAIAHPETA",
     "building": "RCM UP SCHOOL PAKA BUILDING NORTH SIDE 1ST ROOM, JAGGAIAHPETA",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Thota Bazar 2. Jaggaiahpet, Sivalyam Street",
+    "sections": "1-RCM UP SCHOOL PAKA BUILDING NORTH SIDE 1ST ROOM MAIN BASTI. 2-RCM UP SCHOOL PAKA BUILDING NORTH SIDE 1ST ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895393,
@@ -1821,14 +2150,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-48-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 992,
+    "extracted_male": 500,
+    "extracted_female": 492,
+    "extracted_households": 292,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_48.json"
   },
   {
     "booth_no": 49,
-    "name": "RCM UP SCHOOL PAKA BUILDING NORTH SIDE 3RD ROOM, JAGGAIAHPEAT, JAGGAIAHPETA",
+    "name": "RCM UP SCHOOL PAKA BUILDING NORTH SIDE 3RD ROOM, JAGGAIAHPEAT",
     "building": "RCM UP SCHOOL PAKA BUILDING NORTH SIDE 3RD ROOM, JAGGAIAHPEAT",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Jaggaiahpeta",
+    "sections": "1-RCM UP SCHOOL PAKA BUILDING NORTH SIDE 3RD ROOM MAIN BASTI. 2-RCM UP SCHOOL PAKA BUILDING NORTH SIDE 3RD ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895393,
@@ -1859,14 +2195,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-49-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1091,
+    "extracted_male": 550,
+    "extracted_female": 541,
+    "extracted_households": 309,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_49.json"
   },
   {
     "booth_no": 50,
-    "name": "RCM UPS W.S PUC.B.N.S RM.2, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "RCM UPS W.S PUC.B.N.S RM.2, JAGGAIAHPETA",
     "building": "RCM UPS W.S PUC.B.N.S RM.2, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Cherukuri Vari Street 2. Jaggaiahpet, Kanaka Durgamma Road 3. Jaggaiahpet, Kolimi Bazaar",
+    "sections": "1-RCM UPS W.S PUC.B.N.S RM.2 MAIN BASTI. 2-RCM UPS W.S PUC.B.N.S RM.2 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895393,
@@ -1897,14 +2240,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-50-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 820,
+    "extracted_male": 414,
+    "extracted_female": 406,
+    "extracted_households": 242,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_50.json"
   },
   {
     "booth_no": 51,
-    "name": "RCM UPSCHOOL , S.S.3ND ROOM, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "RCM UPSCHOOL , S.S.3ND ROOM, JAGGAIAHPETA",
     "building": "RCM UPSCHOOL , S.S.3ND ROOM, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Cherukurivari Street 2. Jaggaiahpet, Kanakadurgamma Road 3. Jaggaiahpet, Kolimi Bazaar",
+    "sections": "1-RCM UPSCHOOL MAIN BASTI. 2-RCM UPSCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.895393,
@@ -1935,14 +2285,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-51-WI.pdf",
-    "panna_pages": 14
+    "panna_pages": 14,
+    "extracted_electorate": 653,
+    "extracted_male": 329,
+    "extracted_female": 324,
+    "extracted_households": 181,
+    "extracted_pannas": 14,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_51.json"
   },
   {
     "booth_no": 52,
-    "name": "MPP SCHOOL,SOUTH SIDE, MITTAGUDEM, Jaggaiah peta",
+    "name": "MPP SCHOOL,SOUTH SIDE, MITTAGUDEM",
     "building": "MPP SCHOOL,SOUTH SIDE, MITTAGUDEM",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Muktyala Road 2. Jaggaiahpet, Janda Chettu 3. Jaggaiahpet, Balusupadu",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.88983543,
@@ -1973,14 +2330,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-52-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 778,
+    "extracted_male": 392,
+    "extracted_female": 386,
+    "extracted_households": 220,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_52.json"
   },
   {
     "booth_no": 53,
-    "name": "MPE SCHOOL, S.S.4TH CLLASS RM., MITTAGUDEM, Jaggaiah peta",
+    "name": "MPE SCHOOL, S.S.4TH CLLASS RM., MITTAGUDEM",
     "building": "MPE SCHOOL, S.S.4TH CLLASS RM., MITTAGUDEM",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Muktyala Road 2. Jaggaiahpet, Janda Chettu 3. Jaggaiahpet, Sivalayam Street",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.892138,
@@ -2011,14 +2375,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-53-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 969,
+    "extracted_male": 489,
+    "extracted_female": 480,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_53.json"
   },
   {
     "booth_no": 54,
-    "name": "MPPS NEW B.E.Sd.Nagamayya Baz, JAGGAIAHPETA, JAGGAIAHPETA",
+    "name": "MPPS NEW B.E.Sd.Nagamayya Baz, JAGGAIAHPETA",
     "building": "MPPS NEW B.E.Sd.Nagamayya Baz, JAGGAIAHPETA",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Nagamaiayya Bazaru/Brahmmana Bazaru",
+    "sections": "1-MPPS NEW B.E.SD.NAGAMAYYA BAZ MAIN BASTI. 2-MPPS NEW B.E.SD.NAGAMAYYA BAZ COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.892138,
@@ -2049,14 +2420,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-54-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 931,
+    "extracted_male": 470,
+    "extracted_female": 461,
+    "extracted_households": 268,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_54.json"
   },
   {
     "booth_no": 55,
-    "name": "ZPHS,GIRLS,S.S.PUC.B.W.S. 10TH SEC.(A), JAGGAIAHPETA, Jaggaiah peta",
+    "name": "ZPHS,GIRLS,S.S.PUC.B.W.S. 10TH SEC.(A), JAGGAIAHPETA",
     "building": "ZPHS,GIRLS,S.S.PUC.B.W.S. 10TH SEC.(A), JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Muktyala Road 2. Jaggaiahpet, Ranga Swamy Bazaar 3. Jaggaiahpet, Chakali Bazaar",
+    "sections": "1-ZPHS MAIN BASTI. 2-ZPHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.889913,
@@ -2087,14 +2465,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-55-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 847,
+    "extracted_male": 427,
+    "extracted_female": 420,
+    "extracted_households": 244,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_55.json"
   },
   {
     "booth_no": 56,
-    "name": "ZPHS SCHOOL (G) E.S. PUC.B.N.S.3RD ROOM, JAGGAIAHPETA, Jaggaiah peta",
+    "name": "ZPHS SCHOOL (G) E.S. PUC.B.N.S.3RD ROOM, JAGGAIAHPETA",
     "building": "ZPHS SCHOOL (G) E.S. PUC.B.N.S.3RD ROOM, JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Muktyala Road 2. Jaggaiahpet, Chakali Bazaar 3. Jaggaiahpet, William Pet",
+    "sections": "1-ZPHS SCHOOL (G) E.S. PUC.B.N.S.3RD ROOM MAIN BASTI. 2-ZPHS SCHOOL (G) E.S. PUC.B.N.S.3RD ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.889913,
@@ -2125,14 +2510,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-56-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 831,
+    "extracted_male": 419,
+    "extracted_female": 412,
+    "extracted_households": 243,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_56.json"
   },
   {
     "booth_no": 57,
-    "name": "ZPUPS(G) E.S.PUC.(b).N.S.ROOM.2, JAGGAIAHPETA, JAGGAIAHPETA",
+    "name": "ZPUPS(G) E.S.PUC.(b).N.S.ROOM.2, JAGGAIAHPETA",
     "building": "ZPUPS(G) E.S.PUC.(b).N.S.ROOM.2, JAGGAIAHPETA",
     "locality": "JAGGAIAHPETA",
-    "sections": "1. Jaggaiahpeta, Jaggaiahpeta",
+    "sections": "1-ZPUPS(G) E.S.PUC.(B).N.S.ROOM.2 MAIN BASTI. 2-ZPUPS(G) E.S.PUC.(B).N.S.ROOM.2 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.889913,
@@ -2163,14 +2555,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-57-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 858,
+    "extracted_male": 433,
+    "extracted_female": 425,
+    "extracted_households": 247,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_57.json"
   },
   {
     "booth_no": 58,
-    "name": "MPPS (URDU) S.S.RM., JAGGAIAHPETA, Jaggaiah peta",
+    "name": "MPPS (URDU) S.S.RM., JAGGAIAHPETA",
     "building": "MPPS (URDU) S.S.RM., JAGGAIAHPETA",
     "locality": "Jaggaiah peta",
-    "sections": "1. Jaggaiahpet, Akulavari Street 2. Jaggaiahpet, Mangili Bazaar",
+    "sections": "1-MPPS (URDU) S.S.RM. MAIN BASTI. 2-MPPS (URDU) S.S.RM. COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.88966791,
@@ -2201,14 +2600,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-58-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1088,
+    "extracted_male": 549,
+    "extracted_female": 539,
+    "extracted_households": 315,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_58.json"
   },
   {
     "booth_no": 59,
-    "name": "MPUP SCHOOL, S.S. PUC.(B) E.S. RM., TORRAGUNTAPALEM, Chillakallu shi varu Torragunta palem",
+    "name": "MPUP SCHOOL, S.S. PUC.(B) E.S. RM., TORRAGUNTAPALEM",
     "building": "MPUP SCHOOL, S.S. PUC.(B) E.S. RM., TORRAGUNTAPALEM",
     "locality": "Chillakallu shi varu Torragunta palem",
-    "sections": "1. Chillakallu Sivaru Torragunta Palem, U P School Bazaar 2. Chillakallu Sivaru Torragunta Palem, Anjaneya Swamy Bazaar",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.896855,
@@ -2239,14 +2645,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-59-WI.pdf",
-    "panna_pages": 14
+    "panna_pages": 14,
+    "extracted_electorate": 700,
+    "extracted_male": 353,
+    "extracted_female": 347,
+    "extracted_households": 198,
+    "extracted_pannas": 14,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_59.json"
   },
   {
     "booth_no": 60,
-    "name": "MPUP SCHOOL,S.S.PUC(B) W.S. 2ND RM, TORRAGUNTA PALEM, Torragunta palem",
+    "name": "MPUP SCHOOL,S.S.PUC(B) W.S. 2ND RM, TORRAGUNTA PALEM",
     "building": "MPUP SCHOOL,S.S.PUC(B) W.S. 2ND RM, TORRAGUNTA PALEM",
     "locality": "Torragunta palem",
-    "sections": "1. Chillakallu Shi Varu Torragunta Palem, U P School Bazaar 2. Chillakallu Shi Varu Torragunta Palem, Anjaneya Swamy Bazaar",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.896855,
@@ -2277,14 +2690,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-60-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 760,
+    "extracted_male": 383,
+    "extracted_female": 377,
+    "extracted_households": 212,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_60.json"
   },
   {
     "booth_no": 61,
-    "name": "MPPS W SIDE Tirumalagiri, TIRUMALAGIRI, Tirumalagiri",
+    "name": "MPPS W SIDE Tirumalagiri, TIRUMALAGIRI",
     "building": "MPPS W SIDE Tirumalagiri, TIRUMALAGIRI",
     "locality": "Tirumalagiri",
-    "sections": "1. Tirumalagiri, B C Colony 2. Tirumalagiri, Main Village 3. Tirumalagiri, Harijanawada",
+    "sections": "1-MPPS W SIDE TIRUMALAGIRI MAIN BASTI. 2-MPPS W SIDE TIRUMALAGIRI COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.910267,
@@ -2315,14 +2735,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-61-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1044,
+    "extracted_male": 527,
+    "extracted_female": 517,
+    "extracted_households": 297,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_61.json"
   },
   {
     "booth_no": 62,
-    "name": "MPE SCHOOL, N.S.PUC(B) E.S. ROOM, CHILLAKALLU, Chillakallu",
+    "name": "MPE SCHOOL, N.S.PUC(B) E.S. ROOM, CHILLAKALLU",
     "building": "MPE SCHOOL, N.S.PUC(B) E.S. ROOM, CHILLAKALLU",
     "locality": "Chillakallu",
-    "sections": "1. Chillakallu, B C Area 2. Chillakallu, O C Area 3. Chillakallu, Cheruvu Bazaar",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.898703,
@@ -2353,14 +2780,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-62-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 851,
+    "extracted_male": 429,
+    "extracted_female": 422,
+    "extracted_households": 247,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_62.json"
   },
   {
     "booth_no": 63,
-    "name": "MPE SCHOOL,E.S. PUC (B) 4TH CLLASS ROOM, CHILLAKALLU, Chillakallu",
+    "name": "MPE SCHOOL,E.S. PUC (B) 4TH CLLASS ROOM, CHILLAKALLU",
     "building": "MPE SCHOOL,E.S. PUC (B) 4TH CLLASS ROOM, CHILLAKALLU",
     "locality": "Chillakallu",
-    "sections": "1. Chillakallu, B C Area 2. Chillakallu, Yadava Bazaar 3. Chillakallu, O C, B C Area",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.898703,
@@ -2391,14 +2825,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-63-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 741,
+    "extracted_male": 374,
+    "extracted_female": 367,
+    "extracted_households": 208,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_63.json"
   },
   {
     "booth_no": 64,
-    "name": "ZPH SCHOOL, N.S.PUC (B) E.S.1st ROOM, CHILLAKALLU, Chillakallu",
+    "name": "ZPH SCHOOL, N.S.PUC (B) E.S.1st ROOM, CHILLAKALLU",
     "building": "ZPH SCHOOL, N.S.PUC (B) E.S.1st ROOM, CHILLAKALLU",
     "locality": "Chillakallu",
-    "sections": "1. Chillakallu, B C Area 2. Chillakallu, S C Colony 3. Chillakallu, B C Area",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.893089,
@@ -2429,14 +2870,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-64-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 819,
+    "extracted_male": 413,
+    "extracted_female": 406,
+    "extracted_households": 233,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_64.json"
   },
   {
     "booth_no": 65,
-    "name": "ZPH SCHOOL,N.S.PUC(B) E.S. 2ND ROOM, CHILLAKALLU, Chillakallu",
+    "name": "ZPH SCHOOL,N.S.PUC(B) E.S. 2ND ROOM, CHILLAKALLU",
     "building": "ZPH SCHOOL,N.S.PUC(B) E.S. 2ND ROOM, CHILLAKALLU",
     "locality": "Chillakallu",
-    "sections": "1. Chillakallu, B C Area 2. Chillakallu, B C Area 3. Chillakallu, Harijanawada",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521175",
     "lat": 16.893089,
@@ -2467,14 +2915,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-65-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1039,
+    "extracted_male": 524,
+    "extracted_female": 515,
+    "extracted_households": 297,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_65.json"
   },
   {
     "booth_no": 66,
-    "name": "ZPHS N.S.NB EST.S.3RD RM Eastern side, CHILLAKALLU, CHILAKALLU",
+    "name": "ZPHS N.S.NB EST.S.3RD RM Eastern side, CHILLAKALLU",
     "building": "ZPHS N.S.NB EST.S.3RD RM Eastern side, CHILLAKALLU",
     "locality": "CHILAKALLU",
-    "sections": "1. Chillakallu, S.C.-B.C Area",
+    "sections": "1-ZPHS N.S.NB EST.S.3RD RM EASTERN SIDE MAIN BASTI. 2-ZPHS N.S.NB EST.S.3RD RM EASTERN SIDE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.893089,
@@ -2505,14 +2960,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-66-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 995,
+    "extracted_male": 502,
+    "extracted_female": 493,
+    "extracted_households": 278,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_66.json"
   },
   {
     "booth_no": 67,
-    "name": "MPUPSCHOOL, S.S.OLD(B) W.S. 1ST ROOM, DHARMAVARAPPADU, Chillakallu",
+    "name": "MPUPSCHOOL, S.S.OLD(B) W.S. 1ST ROOM, DHARMAVARAPPADU",
     "building": "MPUPSCHOOL, S.S.OLD(B) W.S. 1ST ROOM, DHARMAVARAPPADU",
     "locality": "Chillakallu",
-    "sections": "1. Dharmavarapadu, Sugali Tanda 2. Dharmavarapadu, M C L Colony",
+    "sections": "1-MPUPSCHOOL MAIN BASTI. 2-MPUPSCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521000",
     "lat": 16.878912,
@@ -2543,14 +3005,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-67-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 891,
+    "extracted_male": 449,
+    "extracted_female": 442,
+    "extracted_households": 260,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_67.json"
   },
   {
     "booth_no": 68,
-    "name": "MPUP SCHOOL,S.S.OLD (B) E.S.1ST ROOM, DHARMAVARAPPADU, DHARMAVARAPPADU H/O CHILLAKALLU",
+    "name": "MPUP SCHOOL,S.S.OLD (B) E.S.1ST ROOM, DHARMAVARAPPADU",
     "building": "MPUP SCHOOL,S.S.OLD (B) E.S.1ST ROOM, DHARMAVARAPPADU",
     "locality": "DHARMAVARAPPADU H/O CHILLAKALLU",
-    "sections": "1. Dharmavarappadu, Dharmavarappadu 2. Jaggaiahpet, M.C.L Colony 3. Jaggaiahpet, M.C.L.Colony",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521000",
     "lat": 16.878912,
@@ -2581,14 +3050,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-68-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 984,
+    "extracted_male": 496,
+    "extracted_female": 488,
+    "extracted_households": 280,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_68.json"
   },
   {
     "booth_no": 69,
-    "name": "MPE SCHOOL, OLD (B) W.S. RM, JAYANTIPURAM, Jayanti puram",
+    "name": "MPE SCHOOL, OLD (B) W.S. RM, JAYANTIPURAM",
     "building": "MPE SCHOOL, OLD (B) W.S. RM, JAYANTIPURAM",
     "locality": "Jayanti puram",
-    "sections": "1. Jayanthi Puram, Main Bazaar 2. Jayanthi Puram, Sugali Tanda 3. Jayanthi Puram, Vaddera Bazaar",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521457",
     "lat": 16.864612,
@@ -2619,14 +3095,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-69-WI.pdf",
-    "panna_pages": 24
+    "panna_pages": 24,
+    "extracted_electorate": 1194,
+    "extracted_male": 602,
+    "extracted_female": 592,
+    "extracted_households": 343,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_69.json"
   },
   {
     "booth_no": 70,
-    "name": "MPE SCHOOL, OLD(B) E.S. ROOM, JAYANTHIPURAM, JAYANTHIPURAM",
+    "name": "MPE SCHOOL, OLD(B) E.S. ROOM, JAYANTHIPURAM",
     "building": "MPE SCHOOL, OLD(B) E.S. ROOM, JAYANTHIPURAM",
     "locality": "JAYANTHIPURAM",
-    "sections": "1. Jayanthipuram, Jayanthipuram 2. Jaggaiahpet, Sugali Thanda 3. Jaggaiahpet, Harijanawada",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521457",
     "lat": 16.864612,
@@ -2657,14 +3140,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-70-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 880,
+    "extracted_male": 444,
+    "extracted_female": 436,
+    "extracted_households": 259,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_70.json"
   },
   {
     "booth_no": 71,
-    "name": "MPUP SCHOOL W.S.RM N.B.1st room K.Agraharam, KOUTHAVARIAGRAHARAM, KOUTHAVARI AGRAHARAM",
+    "name": "MPUP SCHOOL W.S.RM N.B.1st room K.Agraharam, KOUTHAVARIAGRAHARAM",
     "building": "MPUP SCHOOL W.S.RM N.B.1st room K.Agraharam, KOUTHAVARIAGRAHARAM",
     "locality": "KOUTHAVARI AGRAHARAM",
-    "sections": "1. Kouthavari Agraharam, Yadava Bazaar 2. Kouthavari Agraharam, Main Village 3. Kouthavari Agraharam, Boddu Rai Street",
+    "sections": "1-MPUP SCHOOL W.S.RM N.B.1ST ROOM K.AGRAHARAM MAIN BASTI. 2-MPUP SCHOOL W.S.RM N.B.1ST ROOM K.AGRAHARAM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521457",
     "lat": 16.863943,
@@ -2695,14 +3185,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-71-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1057,
+    "extracted_male": 533,
+    "extracted_female": 524,
+    "extracted_households": 309,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_71.json"
   },
   {
     "booth_no": 72,
-    "name": "MPUPS E.S. Old Build, KOUTHAVARI AGRAHARAM, KOUTHAVARI AGRAHARAM",
+    "name": "MPUPS E.S. Old Build, KOUTHAVARI AGRAHARAM",
     "building": "MPUPS E.S. Old Build, KOUTHAVARI AGRAHARAM",
     "locality": "KOUTHAVARI AGRAHARAM",
-    "sections": "1. Kouthavari Agraharam, Yadava Bazaar 2. Kouthavari Agraharam, Main Bazaar 3. Kouthavari Agraharam, Boddurai Street",
+    "sections": "1-MPUPS E.S. OLD BUILD MAIN BASTI. 2-MPUPS E.S. OLD BUILD COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521457",
     "lat": 16.863943,
@@ -2733,14 +3230,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-72-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 815,
+    "extracted_male": 411,
+    "extracted_female": 404,
+    "extracted_households": 234,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_72.json"
   },
   {
     "booth_no": 73,
-    "name": "SRGVK MP ZPHS DA VAI PAKA BHA PA VAI 2va GADI, MUKTESWARA PURAM, MUKTESWARAPURAM",
+    "name": "SRGVK MP ZPHS DA VAI PAKA BHA PA VAI 2va GADI, MUKTESWARA PURAM",
     "building": "SRGVK MP ZPHS DA VAI PAKA BHA PA VAI 2va GADI, MUKTESWARA PURAM",
     "locality": "MUKTESWARAPURAM",
-    "sections": "1. Mukteswara Puram, Main Village 2. Mukteswara Puram, B C Colony 3. Mukteswara Puram, Sugali Tanda",
+    "sections": "1-SRGVK MP ZPHS DA VAI PAKA BHA PA VAI 2VA GADI MAIN BASTI. 2-SRGVK MP ZPHS DA VAI PAKA BHA PA VAI 2VA GADI COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "511457",
     "lat": 16.821641,
@@ -2771,14 +3275,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-73-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 902,
+    "extracted_male": 455,
+    "extracted_female": 447,
+    "extracted_households": 254,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_73.json"
   },
   {
     "booth_no": 74,
-    "name": "KAKATIYYA ELE.SCHOOL SRINAVAS NAGAR, MUKTESWARAPURAM, SRINIVASA NAGAR, FACT. COLONY H/o MUKTESWARAPUM",
+    "name": "KAKATIYYA ELE.SCHOOL SRINAVAS NAGAR, MUKTESWARAPURAM",
     "building": "KAKATIYYA ELE.SCHOOL SRINAVAS NAGAR, MUKTESWARAPURAM",
     "locality": "SRINIVASA NAGAR, FACT. COLONY H/o MUKTESWARAPUM",
-    "sections": "1. Mutteshwara Puram, K C L Colony 2. Mutteshwara Puram, K C L Quarters",
+    "sections": "1-KAKATIYYA ELE.SCHOOL SRINAVAS NAGAR MAIN BASTI. 2-KAKATIYYA ELE.SCHOOL SRINAVAS NAGAR COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "511457",
     "lat": 16.821641,
@@ -2809,14 +3320,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-74-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1099,
+    "extracted_male": 554,
+    "extracted_female": 545,
+    "extracted_households": 321,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_74.json"
   },
   {
     "booth_no": 75,
-    "name": "MPPS, PUC BUILD, HARIJANA COLNY, RAVIRALA, Raavirala",
+    "name": "MPPS, PUC BUILD, HARIJANA COLNY, RAVIRALA",
     "building": "MPPS, PUC BUILD, HARIJANA COLNY, RAVIRALA",
     "locality": "Raavirala",
-    "sections": "1. Raavirala, Main Village 2. Raavirala, Harijana Colony",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521457",
     "lat": 16.827612,
@@ -2847,14 +3365,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-75-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 725,
+    "extracted_male": 366,
+    "extracted_female": 359,
+    "extracted_households": 209,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_75.json"
   },
   {
     "booth_no": 76,
-    "name": "MPUP SCHOOL,NEW(B) E.S.ROOM, VEDADRI, Vedadri",
+    "name": "MPUP SCHOOL,NEW(B) E.S.ROOM, VEDADRI",
     "building": "MPUP SCHOOL,NEW(B) E.S.ROOM, VEDADRI",
     "locality": "Vedadri",
-    "sections": "1. Vedadri, Main Village 2. Vedadri, Hemadri Factory Colony",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521457",
     "lat": 16.808435,
@@ -2885,14 +3410,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-76-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 986,
+    "extracted_male": 497,
+    "extracted_female": 489,
+    "extracted_households": 287,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_76.json"
   },
   {
     "booth_no": 77,
-    "name": "MPEP SCHOOL, WEST SIDE BUILDING 1ST.ROOM, VEDADRI, Vedadri",
+    "name": "MPEP SCHOOL, WEST SIDE BUILDING 1ST.ROOM, VEDADRI",
     "building": "MPEP SCHOOL, WEST SIDE BUILDING 1ST.ROOM, VEDADRI",
     "locality": "Vedadri",
-    "sections": "1. Vedadri, Main Village 2. Vedadri, Sugali Tanda 3. Vedadri, Hemadri Factory Colony",
+    "sections": "1-MPEP SCHOOL MAIN BASTI. 2-MPEP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521457",
     "lat": 16.808435,
@@ -2923,14 +3455,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-77-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 929,
+    "extracted_male": 469,
+    "extracted_female": 460,
+    "extracted_households": 264,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_77.json"
   },
   {
     "booth_no": 78,
-    "name": "MPE SCHOOL, SOUTHSIDE (B) E.S. ROOM, BANDI PALEM, Bandi palem",
+    "name": "MPE SCHOOL, SOUTHSIDE (B) E.S. ROOM, BANDI PALEM",
     "building": "MPE SCHOOL, SOUTHSIDE (B) E.S. ROOM, BANDI PALEM",
     "locality": "Bandi palem",
-    "sections": "1. Bandipalem, Krishna Mandiram Road 2. Bandipalem, Mala Palli 3. Bandipalem, Main Village",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.817322,
@@ -2961,14 +3500,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-78-WI.pdf",
-    "panna_pages": 14
+    "panna_pages": 14,
+    "extracted_electorate": 700,
+    "extracted_male": 353,
+    "extracted_female": 347,
+    "extracted_households": 199,
+    "extracted_pannas": 14,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_78.json"
   },
   {
     "booth_no": 79,
-    "name": "MPE SCHOOL, S.S. (B) W.S. ROOM, BANDIPALEM, Bandipalem",
+    "name": "MPE SCHOOL, S.S. (B) W.S. ROOM, BANDIPALEM",
     "building": "MPE SCHOOL, S.S. (B) W.S. ROOM, BANDIPALEM",
     "locality": "Bandipalem",
-    "sections": "1. Bandipalem, Krishna Mandiram Road 2. Bandipalem, Main Village 3. Bandipalem, Harijanawada Area",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.817322,
@@ -2999,14 +3545,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-79-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 778,
+    "extracted_male": 392,
+    "extracted_female": 386,
+    "extracted_households": 217,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_79.json"
   },
   {
     "booth_no": 80,
-    "name": "MPE SCHOOL, PUC BUILDING, GUNDUBOYINA PALEM, GUNDABOINAPALEM H/o BANDIPALEM",
+    "name": "MPE SCHOOL, PUC BUILDING, GUNDUBOYINA PALEM",
     "building": "MPE SCHOOL, PUC BUILDING, GUNDUBOYINA PALEM",
     "locality": "GUNDABOINAPALEM H/o BANDIPALEM",
-    "sections": "1. Gundaboinapalem, Vaddera Bazaru 2. Gundaboinapalem, Harijanawada Area 3. Gundaboinapalem, Main Village",
+    "sections": "1-MPE SCHOOL MAIN BASTI. 2-MPE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521000",
     "lat": 16.825679,
@@ -3037,14 +3590,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-80-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1021,
+    "extracted_male": 515,
+    "extracted_female": 506,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_80.json"
   },
   {
     "booth_no": 81,
-    "name": "MPP SCHOOL, S.S.(B) , E.S. ROOM, POCHAMPALI, Pocham palli",
+    "name": "MPP SCHOOL, S.S.(B) , E.S. ROOM, POCHAMPALI",
     "building": "MPP SCHOOL, S.S.(B) , E.S. ROOM, POCHAMPALI",
     "locality": "Pocham palli",
-    "sections": "1. Pocham Palli, Sivalayam Street 2. Pocham Palli, Anjaneya Swamy Temple Street 3. Pocham Palli, Gundaboinapalem Road",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.834597,
@@ -3075,14 +3635,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-81-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 992,
+    "extracted_male": 500,
+    "extracted_female": 492,
+    "extracted_households": 284,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_81.json"
   },
   {
     "booth_no": 82,
-    "name": "MPP SCHOOL, S.S.(B) W.S. ROOM, POCHAMPALLI, Pochampalli",
+    "name": "MPP SCHOOL, S.S.(B) W.S. ROOM, POCHAMPALLI",
     "building": "MPP SCHOOL, S.S.(B) W.S. ROOM, POCHAMPALLI",
     "locality": "Pochampalli",
-    "sections": "1. Pocham Palli, Sivalayam Street 2. Pocham Palli, Gundaboinapalem Road 3. Pocham Palli, B C Area",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.834597,
@@ -3113,14 +3680,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-82-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 856,
+    "extracted_male": 432,
+    "extracted_female": 424,
+    "extracted_households": 238,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_82.json"
   },
   {
     "booth_no": 83,
-    "name": "ZPHS, E.S.(B) Eastern side 2nd room, Gowraravarm, GOURAVARAM, Gowravaram",
+    "name": "ZPHS, E.S.(B) Eastern side 2nd room, Gowraravarm, GOURAVARAM",
     "building": "ZPHS, E.S.(B) Eastern side 2nd room, Gowraravarm, GOURAVARAM",
     "locality": "Gowravaram",
-    "sections": "1. Gowravaram, Vaddera Colony 2. Gowravaram, Dudekula Bazaar 3. Gowravaram, Muslim Bazaar",
+    "sections": "1-ZPHS MAIN BASTI. 2-ZPHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.858216,
@@ -3151,14 +3725,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-83-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 963,
+    "extracted_male": 486,
+    "extracted_female": 477,
+    "extracted_households": 283,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_83.json"
   },
   {
     "booth_no": 84,
-    "name": "ZPHS N.Build(R.M.S) S.Side. 3rd RM Eastern side, GOURAVARAM, Gowravaram",
+    "name": "ZPHS N.Build(R.M.S) S.Side. 3rd RM Eastern side, GOURAVARAM",
     "building": "ZPHS N.Build(R.M.S) S.Side. 3rd RM Eastern side, GOURAVARAM",
     "locality": "Gowravaram",
-    "sections": "1. Gowravaram, Turpu Vari Bazaar 2. Gowravaram, Bus Station Road 3. Gowravaram, Kommineni Vari Street",
+    "sections": "1-ZPHS N.BUILD(R.M.S) S.SIDE. 3RD RM EASTERN SIDE MAIN BASTI. 2-ZPHS N.BUILD(R.M.S) S.SIDE. 3RD RM EASTERN SIDE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.858216,
@@ -3189,14 +3770,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-84-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 916,
+    "extracted_male": 462,
+    "extracted_female": 454,
+    "extracted_households": 274,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_84.json"
   },
   {
     "booth_no": 85,
-    "name": "ZPH SCHOOL, W.S. NEW (B) E.S. ROOM, GOURAVGARAM, Gowravaram",
+    "name": "ZPH SCHOOL, W.S. NEW (B) E.S. ROOM, GOURAVGARAM",
     "building": "ZPH SCHOOL, W.S. NEW (B) E.S. ROOM, GOURAVGARAM",
     "locality": "Gowravaram",
-    "sections": "1. Gowravaram, Turpuvari Bazaar 2. Gowravaram, Bus Station Road 3. Gowravaram, Sivalayam Street",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "JAGGAIAHPET",
     "pincode": "521178",
     "lat": 16.858216,
@@ -3227,14 +3815,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-85-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 970,
+    "extracted_male": 489,
+    "extracted_female": 481,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_85.json"
   },
   {
     "booth_no": 86,
-    "name": "MPP SCHOOL, S.S.NEW BUILDING, BHIMAVARAM, Bhimavaram",
+    "name": "MPP SCHOOL, S.S.NEW BUILDING, BHIMAVARAM",
     "building": "MPP SCHOOL, S.S.NEW BUILDING, BHIMAVARAM",
     "locality": "Bhimavaram",
-    "sections": "1. Bhimavaram, Ramalayam Street 2. Bheemavaram, Main Street",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.897145,
@@ -3265,14 +3860,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-86-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 785,
+    "extracted_male": 396,
+    "extracted_female": 389,
+    "extracted_households": 226,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_86.json"
   },
   {
     "booth_no": 87,
-    "name": "MPP SCHOOL, WEST SIDE NEW(B) OFFICE ROOM, BHIMAVARAM, Bhimavaram",
+    "name": "MPP SCHOOL, WEST SIDE NEW(B) OFFICE ROOM, BHIMAVARAM",
     "building": "MPP SCHOOL, WEST SIDE NEW(B) OFFICE ROOM, BHIMAVARAM",
     "locality": "Bhimavaram",
-    "sections": "1. Bhimavaram, Ramalayam Street 2. Bheemavaram, Main Street",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.897145,
@@ -3303,14 +3905,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-87-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1022,
+    "extracted_male": 516,
+    "extracted_female": 506,
+    "extracted_households": 288,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_87.json"
   },
   {
     "booth_no": 88,
-    "name": "ZPH SCHOOL, PUCCA BUILDING, W.S.SOUTH S. ROOM, BHIMAVARAM, Bhimavaram",
+    "name": "ZPH SCHOOL, PUCCA BUILDING, W.S.SOUTH S. ROOM, BHIMAVARAM",
     "building": "ZPH SCHOOL, PUCCA BUILDING, W.S.SOUTH S. ROOM, BHIMAVARAM",
     "locality": "Bhimavaram",
-    "sections": "1. Bhimavaram, Ramalayam Street Road 2. Bheemavaram, School Road 3. Bheemavaram, Main Street",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.895749,
@@ -3341,14 +3950,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-88-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 849,
+    "extracted_male": 428,
+    "extracted_female": 421,
+    "extracted_households": 258,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_88.json"
   },
   {
     "booth_no": 89,
-    "name": "ZPH SCHOOL,PUCCA BUILDING, N.S.ROOM, BHIMAVARAM, Bhimavaram",
+    "name": "ZPH SCHOOL,PUCCA BUILDING, N.S.ROOM, BHIMAVARAM",
     "building": "ZPH SCHOOL,PUCCA BUILDING, N.S.ROOM, BHIMAVARAM",
     "locality": "Bhimavaram",
-    "sections": "1. Bhimavaram, Vagu Prakka Road 2. Bheemavaram, Loka Street",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.895749,
@@ -3379,14 +3995,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-89-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 927,
+    "extracted_male": 468,
+    "extracted_female": 459,
+    "extracted_households": 258,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_89.json"
   },
   {
     "booth_no": 90,
-    "name": "MPUPS N.SIDE(Sarvasiksha A) BUILD, MAKKAPETA, Makkapeta hasnabad d.p",
+    "name": "MPUPS N.SIDE(Sarvasiksha A) BUILD, MAKKAPETA",
     "building": "MPUPS N.SIDE(Sarvasiksha A) BUILD, MAKKAPETA",
     "locality": "Makkapeta hasnabad d.p",
-    "sections": "1. Makkapeta Hasnabad, Penuganchiprolu Road 2. Makkapeta Hasnabad, B C Area 3. Makkapeta Hasnabad, Main Street",
+    "sections": "1-MPUPS N.SIDE(SARVASIKSHA A) BUILD MAIN BASTI. 2-MPUPS N.SIDE(SARVASIKSHA A) BUILD COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.924016,
@@ -3417,14 +4040,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-90-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 932,
+    "extracted_male": 470,
+    "extracted_female": 462,
+    "extracted_households": 272,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_90.json"
   },
   {
     "booth_no": 91,
-    "name": "MPUS, N SIDE (B) Eastern SIDE 3RD RM, MAKKAPETA, Makkapeta",
+    "name": "MPUS, N SIDE (B) Eastern SIDE 3RD RM, MAKKAPETA",
     "building": "MPUS, N SIDE (B) Eastern SIDE 3RD RM, MAKKAPETA",
     "locality": "Makkapeta",
-    "sections": "1. Makkapeta, Penuganchiprolu Road 2. Makkapeta, Main Street 3. Makkapeta, Building Sandu",
+    "sections": "1-MPUS MAIN BASTI. 2-MPUS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.924016,
@@ -3455,14 +4085,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-91-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1031,
+    "extracted_male": 520,
+    "extracted_female": 511,
+    "extracted_households": 283,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_91.json"
   },
   {
     "booth_no": 92,
-    "name": "MPP SCHOOL, NORTH SIDE (B) E.S.2ND ROOM, MAKKAPETA, MAKKAPETA",
+    "name": "MPP SCHOOL, NORTH SIDE (B) E.S.2ND ROOM, MAKKAPETA",
     "building": "MPP SCHOOL, NORTH SIDE (B) E.S.2ND ROOM, MAKKAPETA",
     "locality": "MAKKAPETA",
-    "sections": "1. Makkapeta, Makkapeta 2. Jaggaiahpet, Makkapet 3. Jaggaiahpet, Makkapet",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.924016,
@@ -3493,14 +4130,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-92-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 862,
+    "extracted_male": 435,
+    "extracted_female": 427,
+    "extracted_households": 242,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_92.json"
   },
   {
     "booth_no": 93,
-    "name": "MPPS, RCC BULD NORTH SIDE ROOM, GOPINENIPALEM, Gopineni palem",
+    "name": "MPPS, RCC BULD NORTH SIDE ROOM, GOPINENIPALEM",
     "building": "MPPS, RCC BULD NORTH SIDE ROOM, GOPINENIPALEM",
     "locality": "Gopineni palem",
-    "sections": "1. Gopineni Palem, Main Bazar 2. Gopinenipalem, S C B C Area 3. Gopinenipalem, S T Colony",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.937967,
@@ -3531,14 +4175,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-93-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 960,
+    "extracted_male": 484,
+    "extracted_female": 476,
+    "extracted_households": 278,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_93.json"
   },
   {
     "booth_no": 94,
-    "name": "MPP SCHOOL, RCC BUILDING SOUTH SIDE MIDDLE ROOM, GOPINENIPALEM, Gopineni palem",
+    "name": "MPP SCHOOL, RCC BUILDING SOUTH SIDE MIDDLE ROOM, GOPINENIPALEM",
     "building": "MPP SCHOOL, RCC BUILDING SOUTH SIDE MIDDLE ROOM, GOPINENIPALEM",
     "locality": "Gopineni palem",
-    "sections": "1. Gopineni Palem, Main Bazar 2. Gopinenipalem, S C B C Area 3. Gopinenipalem, S C Colony",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.937967,
@@ -3569,14 +4220,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-94-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 982,
+    "extracted_male": 495,
+    "extracted_female": 487,
+    "extracted_households": 272,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_94.json"
   },
   {
     "booth_no": 95,
-    "name": "MPP SCHOOL . EAST SIDE BUILDING, S.S.1ST ROOM, MANGOLLU, Mangollu",
+    "name": "MPP SCHOOL . EAST SIDE BUILDING, S.S.1ST ROOM, MANGOLLU",
     "building": "MPP SCHOOL . EAST SIDE BUILDING, S.S.1ST ROOM, MANGOLLU",
     "locality": "Mangollu",
-    "sections": "1. Mangollu, S T Locality 2. Mangollu, B C Locality 3. Mangollu, Locality",
+    "sections": "1-. EAST SIDE BUILDING MAIN BASTI. 2-. EAST SIDE BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.943701,
@@ -3607,14 +4265,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-95-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1022,
+    "extracted_male": 516,
+    "extracted_female": 506,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_95.json"
   },
   {
     "booth_no": 96,
-    "name": "MPP SCHOOL, SOUTH SIDE 2ND ROOM, MANGOLLU, Mangollu",
+    "name": "MPP SCHOOL, SOUTH SIDE 2ND ROOM, MANGOLLU",
     "building": "MPP SCHOOL, SOUTH SIDE 2ND ROOM, MANGOLLU",
     "locality": "Mangollu",
-    "sections": "1. Mangollu, Main Village 2. Mangollu, S C S T Locality",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.943701,
@@ -3645,14 +4310,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-96-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 910,
+    "extracted_male": 459,
+    "extracted_female": 451,
+    "extracted_households": 264,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_96.json"
   },
   {
     "booth_no": 97,
-    "name": "MPPS, RCC BUILDING EASTRN SIDE ROOM, MANGOLLU, MANGOLLU",
+    "name": "MPPS, RCC BUILDING EASTRN SIDE ROOM, MANGOLLU",
     "building": "MPPS, RCC BUILDING EASTRN SIDE ROOM, MANGOLLU",
     "locality": "MANGOLLU",
-    "sections": "1. Mangollu, Mangollu",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.943701,
@@ -3683,14 +4355,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-97-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 758,
+    "extracted_male": 382,
+    "extracted_female": 376,
+    "extracted_households": 217,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_97.json"
   },
   {
     "booth_no": 98,
-    "name": "MPP SCHOOL BUILDING, DECHUPALEM, Dechu palem",
+    "name": "MPP SCHOOL BUILDING, DECHUPALEM",
     "building": "MPP SCHOOL BUILDING, DECHUPALEM",
     "locality": "Dechu palem",
-    "sections": "1. Dechupalem, Main Village 2. Dechupalem, S C Locality 3. Dechupalem, Church Street",
+    "sections": "1-BUILDING MAIN BASTI. 2-BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.945737,
@@ -3721,14 +4400,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-98-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 851,
+    "extracted_male": 429,
+    "extracted_female": 422,
+    "extracted_households": 240,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_98.json"
   },
   {
     "booth_no": 99,
-    "name": "MPP SCHOOL, SOUTH SIDE.ROOM, CHINAMODUGUPALLI, CHINAMODUGAPALLI",
+    "name": "MPP SCHOOL, SOUTH SIDE.ROOM, CHINAMODUGUPALLI",
     "building": "MPP SCHOOL, SOUTH SIDE.ROOM, CHINAMODUGUPALLI",
     "locality": "CHINAMODUGAPALLI",
-    "sections": "1. Chinamodugapallli, S C B C Area 2. Chinamodugapalli, S T B C Area 3. Chinamodugapalli, Main Village",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.954516,
@@ -3759,14 +4445,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-99-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1002,
+    "extracted_male": 506,
+    "extracted_female": 496,
+    "extracted_households": 295,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_99.json"
   },
   {
     "booth_no": 100,
-    "name": "M.P.U.P.SouthSide, PEDAMODUGUPALLI, Peda modugapalli",
+    "name": "M.P.U.P.SouthSide, PEDAMODUGUPALLI",
     "building": "M.P.U.P.SouthSide, PEDAMODUGUPALLI",
     "locality": "Peda modugapalli",
-    "sections": "1. Peda Modugapallli, O C B C Area 2. Pedamodugapalli, Main Village 3. Pedamodugapalli, O C B C Area",
+    "sections": "1-M.P.U.P.SOUTHSIDE MAIN BASTI. 2-M.P.U.P.SOUTHSIDE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521178",
     "lat": 16.963911,
@@ -3797,14 +4490,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-100-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1094,
+    "extracted_male": 552,
+    "extracted_female": 542,
+    "extracted_households": 322,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_100.json"
   },
   {
     "booth_no": 101,
-    "name": "MPP SCHOOL BUILDING, RAMACHANDRAPURAM, Ramachandrapuram",
+    "name": "MPP SCHOOL BUILDING, RAMACHANDRAPURAM",
     "building": "MPP SCHOOL BUILDING, RAMACHANDRAPURAM",
     "locality": "Ramachandrapuram",
-    "sections": "1. Ramachandrapuram, Main Village 2. Ramachandrapuram, S C Colony 3. Ramachandrapuram, O C B C Area",
+    "sections": "1-BUILDING MAIN BASTI. 2-BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.973596,
@@ -3835,15 +4535,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-101-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 815,
+    "extracted_male": 411,
+    "extracted_female": 404,
+    "extracted_households": 232,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_101.json"
   },
   {
     "booth_no": 102,
-    "name": "MPUP SCHOOL BUILDING, INDUGUPALLI, Indugupallli",
+    "name": "MPUP SCHOOL BUILDING, INDUGUPALLI",
     "building": "MPUP SCHOOL BUILDING, INDUGUPALLI",
     "locality": "Indugupallli",
-    "sections": "1. Indugupallli, Main Village 2. Indugapalli, B C Area 3. Indugapalli, Main Village",
-    "mandal": "",
+    "sections": "1-MPUP SCHOOL BUILDING MAIN BASTI. 2-MPUP SCHOOL BUILDING COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.975245,
     "lng": 80.184143,
@@ -3873,14 +4580,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-102-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1142,
+    "extracted_male": 576,
+    "extracted_female": 566,
+    "extracted_households": 326,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_102.json"
   },
   {
     "booth_no": 103,
-    "name": "ZPH SCHOOL, TILED HOUSE BUILDING NORT S.ROOM, KANNEVEEDU, Kanne veedu",
+    "name": "ZPH SCHOOL, TILED HOUSE BUILDING NORT S.ROOM, KANNEVEEDU",
     "building": "ZPH SCHOOL, TILED HOUSE BUILDING NORT S.ROOM, KANNEVEEDU",
     "locality": "Kanne veedu",
-    "sections": "1. Kannevidu, S T S C B C Area 2. Kanneveedu, Main Village 3. Kanneveedu, O C B C Area",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.958177,
@@ -3911,14 +4625,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-103-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 788,
+    "extracted_male": 397,
+    "extracted_female": 391,
+    "extracted_households": 228,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_103.json"
   },
   {
     "booth_no": 104,
-    "name": "ZPH SCHOOL, TILED HOUSE BUILDING S.S.ROOM, KANNEVEEDU, Kanne veedu",
+    "name": "ZPH SCHOOL, TILED HOUSE BUILDING S.S.ROOM, KANNEVEEDU",
     "building": "ZPH SCHOOL, TILED HOUSE BUILDING S.S.ROOM, KANNEVEEDU",
     "locality": "Kanne veedu",
-    "sections": "1. Kanneveedu, S T,S C, O C Area 2. Kanneveedu, S T Area 3. Kanneveedu, S T,S C,B C Area",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.958177,
@@ -3949,14 +4670,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-104-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 888,
+    "extracted_male": 448,
+    "extracted_female": 440,
+    "extracted_households": 252,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_104.json"
   },
   {
     "booth_no": 105,
-    "name": "MPUP SCHOL BUILDING,, CHITTELA, chittela",
+    "name": "MPUP SCHOL BUILDING,, CHITTELA",
     "building": "MPUP SCHOL BUILDING,, CHITTELA",
     "locality": "chittela",
-    "sections": "1. Chittela, Main Village 2. Chittela, S C Area",
+    "sections": "1-MPUP SCHOL BUILDING MAIN BASTI. 2-MPUP SCHOL BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.933656,
@@ -3987,14 +4715,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-105-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1105,
+    "extracted_male": 558,
+    "extracted_female": 547,
+    "extracted_households": 309,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_105.json"
   },
   {
     "booth_no": 106,
-    "name": "MPP SCHOOL BUILDING, SINGAVARAM, SINGAVARAM CHITTELA SIVARU",
+    "name": "MPP SCHOOL BUILDING, SINGAVARAM",
     "building": "MPP SCHOOL BUILDING, SINGAVARAM",
     "locality": "SINGAVARAM CHITTELA SIVARU",
-    "sections": "1. Singavaram, Main Road 2. Singavaram Sivaru Chittela, S C Area 3. Singavaram Sivaru Chittela, Last Street",
+    "sections": "1-BUILDING MAIN BASTI. 2-BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.932406,
@@ -4025,14 +4760,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-106-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 934,
+    "extracted_male": 471,
+    "extracted_female": 463,
+    "extracted_households": 268,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_106.json"
   },
   {
     "booth_no": 107,
-    "name": "MPPS, SOUTH SIDE ROOM, VEMAVARAM, VEMAVARAM , REBBAVARAM",
+    "name": "MPPS, SOUTH SIDE ROOM, VEMAVARAM",
     "building": "MPPS, SOUTH SIDE ROOM, VEMAVARAM",
     "locality": "VEMAVARAM , REBBAVARAM",
-    "sections": "1. Vemavaram, Main Village 2. Vemavaram, S C Area 3. Vemavaram, B C Area",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.933804,
@@ -4063,14 +4805,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-107-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 968,
+    "extracted_male": 488,
+    "extracted_female": 480,
+    "extracted_households": 272,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_107.json"
   },
   {
     "booth_no": 108,
-    "name": "MPUP SCHOOL BUILDING,, ALLURUPADU, Allurupadu",
+    "name": "MPUP SCHOOL BUILDING,, ALLURUPADU",
     "building": "MPUP SCHOOL BUILDING,, ALLURUPADU",
     "locality": "Allurupadu",
-    "sections": "1. Allurupadu, O C B C Area 2. Aallurupadu, O C B C Area 3. Aallurupadu, Main Village",
+    "sections": "1-MPUP SCHOOL BUILDING MAIN BASTI. 2-MPUP SCHOOL BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521190",
     "lat": 16.941002,
@@ -4101,14 +4850,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-108-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 910,
+    "extracted_male": 459,
+    "extracted_female": 451,
+    "extracted_households": 269,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_108.json"
   },
   {
     "booth_no": 109,
-    "name": "MPSUP SCHOOL BUILDING NORTH SIDE ROOM, LINGALA, Lingala",
+    "name": "MPSUP SCHOOL BUILDING NORTH SIDE ROOM, LINGALA",
     "building": "MPSUP SCHOOL BUILDING NORTH SIDE ROOM, LINGALA",
     "locality": "Lingala",
-    "sections": "1. Lingala, S C Area 2. Lingala, O C B C Area 3. Lingala, S C Area",
+    "sections": "1-MPSUP SCHOOL BUILDING NORTH SIDE ROOM MAIN BASTI. 2-MPSUP SCHOOL BUILDING NORTH SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.957431,
@@ -4139,14 +4895,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-109-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 779,
+    "extracted_male": 393,
+    "extracted_female": 386,
+    "extracted_households": 219,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_109.json"
   },
   {
     "booth_no": 110,
-    "name": "MPP SCHOOL BUILDING, POCHAVARAM, Pochavaram",
+    "name": "MPP SCHOOL BUILDING, POCHAVARAM",
     "building": "MPP SCHOOL BUILDING, POCHAVARAM",
     "locality": "Pochavaram",
-    "sections": "1. Pochavaram, Main Village 2. Pochavaram, O C,B C,S C Area 3. Pochavaram, O C,B C,Area",
+    "sections": "1-BUILDING MAIN BASTI. 2-BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.976911,
@@ -4177,15 +4940,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-110-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 808,
+    "extracted_male": 408,
+    "extracted_female": 400,
+    "extracted_households": 234,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_110.json"
   },
   {
     "booth_no": 111,
-    "name": "MPP SCHOOL BUILDING, (SSA), GANGAVALLI, GANGAVALLI",
+    "name": "MPP SCHOOL BUILDING, (SSA), GANGAVALLI",
     "building": "MPP SCHOOL BUILDING, (SSA), GANGAVALLI",
     "locality": "GANGAVALLI",
-    "sections": "1. Gangavalli, Gangavalli",
-    "mandal": "",
+    "sections": "1-BUILDING MAIN BASTI. 2-BUILDING COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.968186,
     "lng": 80.208702,
@@ -4215,15 +4985,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-111-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 897,
+    "extracted_male": 452,
+    "extracted_female": 445,
+    "extracted_households": 249,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_111.json"
   },
   {
     "booth_no": 112,
-    "name": "RCM SCHOOL, WEST SIDE,, PENTELAVARI GUDEM, Pentalavari gudem",
+    "name": "RCM SCHOOL, WEST SIDE,, PENTELAVARI GUDEM",
     "building": "RCM SCHOOL, WEST SIDE,, PENTELAVARI GUDEM",
     "locality": "Pentalavari gudem",
-    "sections": "1. Pentalavari Gudem, Main Village 2. Pentelavari Gudem, S C Area 3. Pentelavari Gudem, B C Area",
-    "mandal": "",
+    "sections": "1-RCM SCHOOL MAIN BASTI. 2-RCM SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 17.008232,
     "lng": 80.210407,
@@ -4253,14 +5030,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-112-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1018,
+    "extracted_male": 514,
+    "extracted_female": 504,
+    "extracted_households": 297,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_112.json"
   },
   {
     "booth_no": 113,
-    "name": "ZPPHS, RCC Build South west Build, POLAMPALLI, polampalli",
+    "name": "ZPPHS, RCC Build South west Build, POLAMPALLI",
     "building": "ZPPHS, RCC Build South west Build, POLAMPALLI",
     "locality": "polampalli",
-    "sections": "1. Polampalli, B C O C Area 2. Polampalli, O C B C Area",
+    "sections": "1-ZPPHS MAIN BASTI. 2-ZPPHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 17.009724,
@@ -4291,14 +5075,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-113-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1008,
+    "extracted_male": 509,
+    "extracted_female": 499,
+    "extracted_households": 286,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_113.json"
   },
   {
     "booth_no": 114,
-    "name": "ZPH SCHOOL, WEST SIDE LAST ROOM, POLAMPALLI, Polampalli",
+    "name": "ZPH SCHOOL, WEST SIDE LAST ROOM, POLAMPALLI",
     "building": "ZPH SCHOOL, WEST SIDE LAST ROOM, POLAMPALLI",
     "locality": "Polampalli",
-    "sections": "1. Polampalli, O C B C Area 2. Polampalli, B C Area 3. Polampalli, Main Village",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 17.009724,
@@ -4329,14 +5120,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-114-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1050,
+    "extracted_male": 530,
+    "extracted_female": 520,
+    "extracted_households": 308,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_114.json"
   },
   {
     "booth_no": 115,
-    "name": "MPUPS BUILDING, DABBUKUPALLI, Dabbakupalli",
+    "name": "MPUPS BUILDING, DABBUKUPALLI",
     "building": "MPUPS BUILDING, DABBUKUPALLI",
     "locality": "Dabbakupalli",
-    "sections": "1. Dabbakupalli, O C B C Area 2. Dabbakupalli, O C B C Area 3. Dabbakupalli, Main Village",
+    "sections": "1-MPUPS BUILDING MAIN BASTI. 2-MPUPS BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.996027,
@@ -4367,14 +5165,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-115-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 839,
+    "extracted_male": 423,
+    "extracted_female": 416,
+    "extracted_households": 243,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_115.json"
   },
   {
     "booth_no": 116,
-    "name": "GRAMAPANCHAYT MEETING HALL, DABBUKUPALI, Dabbakupalli",
+    "name": "GRAMAPANCHAYT MEETING HALL, DABBUKUPALI",
     "building": "GRAMAPANCHAYT MEETING HALL, DABBUKUPALI",
     "locality": "Dabbakupalli",
-    "sections": "1. Dabbakupalli, O C B C Area 2. Dabbakupalli, Main Village 3. Dabbakupalli, S C Area",
+    "sections": "1-GRAMAPANCHAYT MEETING HALL MAIN BASTI. 2-GRAMAPANCHAYT MEETING HALL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.997171,
@@ -4405,14 +5210,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-116-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1013,
+    "extracted_male": 511,
+    "extracted_female": 502,
+    "extracted_households": 286,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_116.json"
   },
   {
     "booth_no": 117,
-    "name": "ZPH SCHOOL EAST SIDE FIRST ROOM, VATSVAI, Vatsavai",
+    "name": "ZPH SCHOOL EAST SIDE FIRST ROOM, VATSVAI",
     "building": "ZPH SCHOOL EAST SIDE FIRST ROOM, VATSVAI",
     "locality": "Vatsavai",
-    "sections": "1. Vatsavai, Annapurna Vidyalayam Veedhi 2. Vatsavai, Vadlamudi Bazar 3. Vatsavaayi, Sivalayam Street",
+    "sections": "1-ZPH SCHOOL EAST SIDE FIRST ROOM MAIN BASTI. 2-ZPH SCHOOL EAST SIDE FIRST ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.982618,
@@ -4443,14 +5255,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-117-WI.pdf",
-    "panna_pages": 13
+    "panna_pages": 13,
+    "extracted_electorate": 636,
+    "extracted_male": 321,
+    "extracted_female": 315,
+    "extracted_households": 181,
+    "extracted_pannas": 13,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_117.json"
   },
   {
     "booth_no": 118,
-    "name": "ZPH SCHOOL NORTH SIDE 2ND ROOM, VATSAVAI, Vatsavai",
+    "name": "ZPH SCHOOL NORTH SIDE 2ND ROOM, VATSAVAI",
     "building": "ZPH SCHOOL NORTH SIDE 2ND ROOM, VATSAVAI",
     "locality": "Vatsavai",
-    "sections": "1. Vatsavai, Annapurna Vidyalayam Street 2. Vatsavaayi, Sivalayam Street 3. Vatsavaayi, S C Area",
+    "sections": "1-ZPH SCHOOL NORTH SIDE 2ND ROOM MAIN BASTI. 2-ZPH SCHOOL NORTH SIDE 2ND ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.982618,
@@ -4481,14 +5300,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-118-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1001,
+    "extracted_male": 505,
+    "extracted_female": 496,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_118.json"
   },
   {
     "booth_no": 119,
-    "name": "MPP S (MAIN), RCC NEW BUILDING NORTHSIDE ROOM, VATSAVAI, Vatsavai",
+    "name": "MPP S (MAIN), RCC NEW BUILDING NORTHSIDE ROOM, VATSAVAI",
     "building": "MPP S (MAIN), RCC NEW BUILDING NORTHSIDE ROOM, VATSAVAI",
     "locality": "Vatsavai",
-    "sections": "1. Vatsavai, O C B C Area 2. Vatsavaayi, B C Area 3. Vatsavaayi, B C Area",
+    "sections": "1-MPP S (MAIN) MAIN BASTI. 2-MPP S (MAIN) COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.980884,
@@ -4519,14 +5345,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-119-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 854,
+    "extracted_male": 431,
+    "extracted_female": 423,
+    "extracted_households": 235,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_119.json"
   },
   {
     "booth_no": 120,
-    "name": "MPPS MAIN, RCC MAIN BUILDING NORTHSIDE 1ST ROOM, VATSAVAI, vatsavai",
+    "name": "MPPS MAIN, RCC MAIN BUILDING NORTHSIDE 1ST ROOM, VATSAVAI",
     "building": "MPPS MAIN, RCC MAIN BUILDING NORTHSIDE 1ST ROOM, VATSAVAI",
     "locality": "vatsavai",
-    "sections": "1. Vatsavai, B C Area 2. Vatsavaayi, Main Village 3. Vatsavaayi, B C Area",
+    "sections": "1-MPPS MAIN MAIN BASTI. 2-MPPS MAIN COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.980884,
@@ -4557,14 +5390,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-120-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 899,
+    "extracted_male": 453,
+    "extracted_female": 446,
+    "extracted_households": 249,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_120.json"
   },
   {
     "booth_no": 121,
-    "name": "MPPSCHOOL MAIN EAST SIDE NEW BUILDING N.S ROOM, VATSAVAI, VASTAVAI",
+    "name": "MPPSCHOOL MAIN EAST SIDE NEW BUILDING N.S ROOM, VATSAVAI",
     "building": "MPPSCHOOL MAIN EAST SIDE NEW BUILDING N.S ROOM, VATSAVAI",
     "locality": "VASTAVAI",
-    "sections": "1. Vatsavai, Vatsavai O.C. B.C.Area 2. Vatsavai, Vatsavai S.T- B.C-O.C Area",
+    "sections": "1-MPPSCHOOL MAIN EAST SIDE NEW BUILDING N.S ROOM MAIN BASTI. 2-MPPSCHOOL MAIN EAST SIDE NEW BUILDING N.S ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.980884,
@@ -4595,14 +5435,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-121-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1017,
+    "extracted_male": 513,
+    "extracted_female": 504,
+    "extracted_households": 284,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_121.json"
   },
   {
     "booth_no": 122,
-    "name": "MPP SCHOOL, SOUTH SIDE ROOM, VATSAVAI, Vatsavayi",
+    "name": "MPP SCHOOL, SOUTH SIDE ROOM, VATSAVAI",
     "building": "MPP SCHOOL, SOUTH SIDE ROOM, VATSAVAI",
     "locality": "Vatsavayi",
-    "sections": "1. Vatsavai, S T Area 2. Vatsavaayi, Vaddera Bazaar 3. Vatsavaayi, Main Village",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.980884,
@@ -4633,14 +5480,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-122-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 859,
+    "extracted_male": 433,
+    "extracted_female": 426,
+    "extracted_households": 255,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_122.json"
   },
   {
     "booth_no": 123,
-    "name": "MPP SCHOOL, NORTH SIDE NEW BUILDING, VATSAVAI, VATSAVAI",
+    "name": "MPP SCHOOL, NORTH SIDE NEW BUILDING, VATSAVAI",
     "building": "MPP SCHOOL, NORTH SIDE NEW BUILDING, VATSAVAI",
     "locality": "VATSAVAI",
-    "sections": "1. Vatsavai, Vatsavai S.T.Area 2. Vatsavai, Vatsavai B.C.Area 3. Vatsavai, Vatsavai Main Village",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.980884,
@@ -4671,14 +5525,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-123-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1013,
+    "extracted_male": 511,
+    "extracted_female": 502,
+    "extracted_households": 286,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_123.json"
   },
   {
     "booth_no": 124,
-    "name": "MPUPS, S SIDE BUILD E.S ROOM, VEMULA NARVA, Vemula narva",
+    "name": "MPUPS, S SIDE BUILD E.S ROOM, VEMULA NARVA",
     "building": "MPUPS, S SIDE BUILD E.S ROOM, VEMULA NARVA",
     "locality": "Vemula narva",
-    "sections": "1. Vemula Narva, Main Village 2. Vemulaparva, B C Area 3. Vemulaparva, Main Road",
+    "sections": "1-MPUPS MAIN BASTI. 2-MPUPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.990011,
@@ -4709,14 +5570,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-124-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 914,
+    "extracted_male": 461,
+    "extracted_female": 453,
+    "extracted_households": 259,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_124.json"
   },
   {
     "booth_no": 125,
-    "name": "ZPH SCHOOL, L.SHAPE BUILDING W.S. ROOM, KHAMBAMPADU, KambhampadU",
+    "name": "ZPH SCHOOL, L.SHAPE BUILDING W.S. ROOM, KHAMBAMPADU",
     "building": "ZPH SCHOOL, L.SHAPE BUILDING W.S. ROOM, KHAMBAMPADU",
     "locality": "KambhampadU",
-    "sections": "1. Kambampadu, Main Village 2. Kambhampadu, Main Bazaar 3. Kambhampadu, Main Bazar",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.944939,
@@ -4747,14 +5615,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-125-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 988,
+    "extracted_male": 498,
+    "extracted_female": 490,
+    "extracted_households": 287,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_125.json"
   },
   {
     "booth_no": 126,
-    "name": "ZPPHS, South East RCC S.S. ROOM, KHAMBAMPADU, Kambampadu",
+    "name": "ZPPHS, South East RCC S.S. ROOM, KHAMBAMPADU",
     "building": "ZPPHS, South East RCC S.S. ROOM, KHAMBAMPADU",
     "locality": "Kambampadu",
-    "sections": "1. Kambampadu, Main Village 2. Kambhampadu, Main Bazar 3. Kambhampadu, Main Bazar",
+    "sections": "1-ZPPHS MAIN BASTI. 2-ZPPHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.944939,
@@ -4785,14 +5660,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-126-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1140,
+    "extracted_male": 575,
+    "extracted_female": 565,
+    "extracted_households": 325,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_126.json"
   },
   {
     "booth_no": 127,
-    "name": "ZPH SCHOOL , NEW BUILDING S.S.1ST ROOM, KHAMBAMPADU, Kambham padu",
+    "name": "ZPH SCHOOL , NEW BUILDING S.S.1ST ROOM, KHAMBAMPADU",
     "building": "ZPH SCHOOL , NEW BUILDING S.S.1ST ROOM, KHAMBAMPADU",
     "locality": "Kambham padu",
-    "sections": "1. Kambampadu, S C Colony",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.944939,
@@ -4823,14 +5705,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-127-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1036,
+    "extracted_male": 523,
+    "extracted_female": 513,
+    "extracted_households": 294,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_127.json"
   },
   {
     "booth_no": 128,
-    "name": "MPUP SCHOOL, TILED HOUSE BUILDING N.S. 1ST ROOM, KAKARAVAI, Kakaravai",
+    "name": "MPUP SCHOOL, TILED HOUSE BUILDING N.S. 1ST ROOM, KAKARAVAI",
     "building": "MPUP SCHOOL, TILED HOUSE BUILDING N.S. 1ST ROOM, KAKARAVAI",
     "locality": "Kakaravai",
-    "sections": "1. Kakaravai, Main Village 2. Kakaravaayi, Bodduraayi Center 3. Kakaravaayi, S C Colony",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521175",
     "lat": 16.961296,
@@ -4861,14 +5750,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-128-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 857,
+    "extracted_male": 432,
+    "extracted_female": 425,
+    "extracted_households": 240,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_128.json"
   },
   {
     "booth_no": 129,
-    "name": "MPUP SCHOOL, WEST SIDE BUILDING, S.S. ROOM, MACHINENIPALEM, Maachineni palem",
+    "name": "MPUP SCHOOL, WEST SIDE BUILDING, S.S. ROOM, MACHINENIPALEM",
     "building": "MPUP SCHOOL, WEST SIDE BUILDING, S.S. ROOM, MACHINENIPALEM",
     "locality": "Maachineni palem",
-    "sections": "1. Machineni Palem, S C Area 2. Machinenipalem, Main Village 3. Machinenipalem, S T Area",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.946348,
@@ -4899,14 +5795,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-129-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1085,
+    "extracted_male": 547,
+    "extracted_female": 538,
+    "extracted_households": 319,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_129.json"
   },
   {
     "booth_no": 130,
-    "name": "MPPSCHOOL, WEST 1ST ROOM, TALLURU, Taalluru",
+    "name": "MPPSCHOOL, WEST 1ST ROOM, TALLURU",
     "building": "MPPSCHOOL, WEST 1ST ROOM, TALLURU",
     "locality": "Taalluru",
-    "sections": "1. Taalluru, Main Village 2. Talluru, Main Village",
+    "sections": "1-MPPSCHOOL MAIN BASTI. 2-MPPSCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "VATSAVAI",
     "pincode": "521402",
     "lat": 16.923451,
@@ -4937,14 +5840,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-130-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 904,
+    "extracted_male": 456,
+    "extracted_female": 448,
+    "extracted_households": 267,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_130.json"
   },
   {
     "booth_no": 131,
-    "name": "MPUP SCHOOL, WEST SIDE BUILDING N.S. 1ST ROOM, SIVA PURAM, SIVAPURAM , ANIGANDLAPADU",
+    "name": "MPUP SCHOOL, WEST SIDE BUILDING N.S. 1ST ROOM, SIVA PURAM",
     "building": "MPUP SCHOOL, WEST SIDE BUILDING N.S. 1ST ROOM, SIVA PURAM",
     "locality": "SIVAPURAM , ANIGANDLAPADU",
-    "sections": "1. Sivapuram, Main Village 2. Sivapuram Anigandlapadu, S T Colony 3. Sivapuram Anigandlapadu, S C Area",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.904494,
@@ -4975,14 +5885,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-131-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 946,
+    "extracted_male": 477,
+    "extracted_female": 469,
+    "extracted_households": 274,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_131.json"
   },
   {
     "booth_no": 132,
-    "name": "GRAM PANCHAYAT OFFICE, NORTH SIDE ROOM, ANIGANDLAPADU, Anigandl padu",
+    "name": "GRAM PANCHAYAT OFFICE, NORTH SIDE ROOM, ANIGANDLAPADU",
     "building": "GRAM PANCHAYAT OFFICE, NORTH SIDE ROOM, ANIGANDLAPADU",
     "locality": "Anigandl padu",
-    "sections": "1. Anigandlapadu, Main Village 2. Anigandlapadu, S C B C Area",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.892759,
@@ -5013,14 +5930,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-132-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1007,
+    "extracted_male": 508,
+    "extracted_female": 499,
+    "extracted_households": 292,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_132.json"
   },
   {
     "booth_no": 133,
-    "name": "MPUP SCHOOL, WEST SIDE ROOM, ANIGANDLAPADU, Anigandla padu",
+    "name": "MPUP SCHOOL, WEST SIDE ROOM, ANIGANDLAPADU",
     "building": "MPUP SCHOOL, WEST SIDE ROOM, ANIGANDLAPADU",
     "locality": "Anigandla padu",
-    "sections": "1. Anigandlapadu, Main Village 2. Anigandlapadu, S T B C Area",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.892759,
@@ -5051,14 +5975,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-133-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 909,
+    "extracted_male": 459,
+    "extracted_female": 450,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_133.json"
   },
   {
     "booth_no": 134,
-    "name": "MPUPS, EAST SIDE ROOM, ANIGANDLAPADU, Anigandlapadu",
+    "name": "MPUPS, EAST SIDE ROOM, ANIGANDLAPADU",
     "building": "MPUPS, EAST SIDE ROOM, ANIGANDLAPADU",
     "locality": "Anigandlapadu",
-    "sections": "1. Anigandlapadu, Main Village 2. Anigandlapadu, S T Locality 3. Anigandlapadu, Village Last Road",
+    "sections": "1-MPUPS MAIN BASTI. 2-MPUPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.892759,
@@ -5089,14 +6020,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-134-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 774,
+    "extracted_male": 390,
+    "extracted_female": 384,
+    "extracted_households": 229,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_134.json"
   },
   {
     "booth_no": 135,
-    "name": "NORTH SIDE ROOM GRAMA CHAVIDI, ANIGANDLAPADU, Anigandlapadu",
+    "name": "NORTH SIDE ROOM GRAMA CHAVIDI, ANIGANDLAPADU",
     "building": "NORTH SIDE ROOM GRAMA CHAVIDI, ANIGANDLAPADU",
     "locality": "Anigandlapadu",
-    "sections": "1. Aanigandlapadu, Main Village 2. Anigandlapadu, S C Colony",
+    "sections": "1-NORTH SIDE ROOM GRAMA CHAVIDI MAIN BASTI. 2-NORTH SIDE ROOM GRAMA CHAVIDI COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.892759,
@@ -5127,14 +6065,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-135-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 930,
+    "extracted_male": 469,
+    "extracted_female": 461,
+    "extracted_households": 274,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_135.json"
   },
   {
     "booth_no": 136,
-    "name": "GRAMA CHAVIDI SOUTH SIDE ROOM, ANIGANDLAPADU, Anigandlapadu",
+    "name": "GRAMA CHAVIDI SOUTH SIDE ROOM, ANIGANDLAPADU",
     "building": "GRAMA CHAVIDI SOUTH SIDE ROOM, ANIGANDLAPADU",
     "locality": "Anigandlapadu",
-    "sections": "1. Aanigandlapadu, Main Village 2. Anigandlapadu, S C Locality",
+    "sections": "1-GRAMA CHAVIDI SOUTH SIDE ROOM MAIN BASTI. 2-GRAMA CHAVIDI SOUTH SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.892759,
@@ -5165,14 +6110,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-136-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 730,
+    "extracted_male": 368,
+    "extracted_female": 362,
+    "extracted_households": 209,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_136.json"
   },
   {
     "booth_no": 137,
-    "name": "MPUP SCHOOL, NORTH SIDE ROOM, MUCHINTALA, Mutchintala",
+    "name": "MPUP SCHOOL, NORTH SIDE ROOM, MUCHINTALA",
     "building": "MPUP SCHOOL, NORTH SIDE ROOM, MUCHINTALA",
     "locality": "Mutchintala",
-    "sections": "1. Mutchintala, Main Village 2. Muchintala, S C Colony",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.909179,
@@ -5203,14 +6155,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-137-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 935,
+    "extracted_male": 472,
+    "extracted_female": 463,
+    "extracted_households": 254,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_137.json"
   },
   {
     "booth_no": 138,
-    "name": "MPP SCHOOL, SOUTH SIDE LAST ROOM, MUCHINTALA, Mutchintala",
+    "name": "MPP SCHOOL, SOUTH SIDE LAST ROOM, MUCHINTALA",
     "building": "MPP SCHOOL, SOUTH SIDE LAST ROOM, MUCHINTALA",
     "locality": "Mutchintala",
-    "sections": "1. Mutchintala, Main Village 2. Muchintala, S C Area",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.909179,
@@ -5241,14 +6200,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-138-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 934,
+    "extracted_male": 471,
+    "extracted_female": 463,
+    "extracted_households": 277,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_138.json"
   },
   {
     "booth_no": 139,
-    "name": "MPP SCHOOL, NORTH SIDE ROOM, LINGAGUDEM, lingagudem",
+    "name": "MPP SCHOOL, NORTH SIDE ROOM, LINGAGUDEM",
     "building": "MPP SCHOOL, NORTH SIDE ROOM, LINGAGUDEM",
     "locality": "lingagudem",
-    "sections": "1. Lingagudem, Main Village 2. Lingamgudem, Harijanawada 3. Lingamgudem, S T Thanda",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.903343,
@@ -5279,14 +6245,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-139-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1120,
+    "extracted_male": 565,
+    "extracted_female": 555,
+    "extracted_households": 323,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_139.json"
   },
   {
     "booth_no": 140,
-    "name": "KVR ZP BOYS HIGH SCHOOL, G.FL.N.S 2ND ROOM, PENUGANCHIPROLU, Penuganchiprolu",
+    "name": "KVR ZP BOYS HIGH SCHOOL, G.FL.N.S 2ND ROOM, PENUGANCHIPROLU",
     "building": "KVR ZP BOYS HIGH SCHOOL, G.FL.N.S 2ND ROOM, PENUGANCHIPROLU",
     "locality": "Penuganchiprolu",
-    "sections": "1. Penuganchiprolu, Girls High School Bazar 2. Penuganchiprolu, Malapalli 3. Penuganchiprolu, Vadderagudem",
+    "sections": "1-KVR ZP BOYS HIGH SCHOOL MAIN BASTI. 2-KVR ZP BOYS HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.908332,
@@ -5317,14 +6290,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-140-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 940,
+    "extracted_male": 474,
+    "extracted_female": 466,
+    "extracted_households": 267,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_140.json"
   },
   {
     "booth_no": 141,
-    "name": "KVR ZP BOYS HIGH SCHOOL,GR.FL.W.S.2ND ROOM, PENUGANCHIPROLU, Penuganchiprolu",
+    "name": "KVR ZP BOYS HIGH SCHOOL,GR.FL.W.S.2ND ROOM, PENUGANCHIPROLU",
     "building": "KVR ZP BOYS HIGH SCHOOL,GR.FL.W.S.2ND ROOM, PENUGANCHIPROLU",
     "locality": "Penuganchiprolu",
-    "sections": "1. Penuganchiprolu, Girl High School Bazar 2. Penuganchiprolu, Malapalli 3. Penuganchiprolu, Main Bazar",
+    "sections": "1-KVR ZP BOYS HIGH SCHOOL MAIN BASTI. 2-KVR ZP BOYS HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.908332,
@@ -5355,14 +6335,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-141-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 837,
+    "extracted_male": 422,
+    "extracted_female": 415,
+    "extracted_households": 244,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_141.json"
   },
   {
     "booth_no": 142,
-    "name": "MPP SCHOOL, VINAYAKASWAMY TEMPLE CENTRE S.S.ROOM, PENUGANCHIPROLU, Penuganchiprolu",
+    "name": "MPP SCHOOL, VINAYAKASWAMY TEMPLE CENTRE S.S.ROOM, PENUGANCHIPROLU",
     "building": "MPP SCHOOL, VINAYAKASWAMY TEMPLE CENTRE S.S.ROOM, PENUGANCHIPROLU",
     "locality": "Penuganchiprolu",
-    "sections": "1. Penuganchiprolu, Main Bazar 2. Penuganchiprolu, Harijanawada 3. Penuganchiprolu, Main Village",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.905888,
@@ -5393,14 +6380,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-142-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 912,
+    "extracted_male": 460,
+    "extracted_female": 452,
+    "extracted_households": 270,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_142.json"
   },
   {
     "booth_no": 143,
-    "name": "MPPS,2nd RM,VINAYAKA S.TEMPLE, PENUGANCHIPROLU, Penuganchiprolu",
+    "name": "MPPS,2nd RM,VINAYAKA S.TEMPLE, PENUGANCHIPROLU",
     "building": "MPPS,2nd RM,VINAYAKA S.TEMPLE, PENUGANCHIPROLU",
     "locality": "Penuganchiprolu",
-    "sections": "1. Penuganchiprolu, Main Bazar 2. Penuganchiprolu, Harijanawada 3. Penuganchiprolu, Main Village",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.905888,
@@ -5431,14 +6425,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-143-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1043,
+    "extracted_male": 526,
+    "extracted_female": 517,
+    "extracted_households": 301,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_143.json"
   },
   {
     "booth_no": 144,
-    "name": "MPPS, RCC BUILD S.S.ROOM, PENUGANCHIPROLU, penuganchi prolu",
+    "name": "MPPS, RCC BUILD S.S.ROOM, PENUGANCHIPROLU",
     "building": "MPPS, RCC BUILD S.S.ROOM, PENUGANCHIPROLU",
     "locality": "penuganchi prolu",
-    "sections": "1. Penuganchiprolu, Main Village 2. Penuganchiprolu, Madya Bazaru 3. Penuganchiprolu, O C,B C Area",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.906837,
@@ -5469,14 +6470,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-144-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 896,
+    "extracted_male": 452,
+    "extracted_female": 444,
+    "extracted_households": 255,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_144.json"
   },
   {
     "booth_no": 145,
-    "name": "MPUP SCHOOL, RCC BUILDING, N.S. ROOM, PENUGANCHIPROLU, penuganchi prolu",
+    "name": "MPUP SCHOOL, RCC BUILDING, N.S. ROOM, PENUGANCHIPROLU",
     "building": "MPUP SCHOOL, RCC BUILDING, N.S. ROOM, PENUGANCHIPROLU",
     "locality": "penuganchi prolu",
-    "sections": "1. Penuganchiprolu, Main Village 2. Penuganchiprolu, Madya Bazaru 3. Penuganchiprolu, O C,B C Locality",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.906837,
@@ -5507,14 +6515,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-145-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 872,
+    "extracted_male": 440,
+    "extracted_female": 432,
+    "extracted_households": 254,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_145.json"
   },
   {
     "booth_no": 146,
-    "name": "KVR ZP HIGH SCHOOL (BOYS) GR.FL.W.S 1ST ROOM, PENUGANCHIPROLU, penuganchi prolu",
+    "name": "KVR ZP HIGH SCHOOL (BOYS) GR.FL.W.S 1ST ROOM, PENUGANCHIPROLU",
     "building": "KVR ZP HIGH SCHOOL (BOYS) GR.FL.W.S 1ST ROOM, PENUGANCHIPROLU",
     "locality": "penuganchi prolu",
-    "sections": "1. Penuganchi Prolu, Cinema Hall Road 2. Penuganchiprolu, Main Village 3. Penuganchiprolu, B C Colony",
+    "sections": "1-KVR ZP HIGH SCHOOL (BOYS) GR.FL.W.S 1ST ROOM MAIN BASTI. 2-KVR ZP HIGH SCHOOL (BOYS) GR.FL.W.S 1ST ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.908332,
@@ -5545,14 +6560,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-146-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 709,
+    "extracted_male": 358,
+    "extracted_female": 351,
+    "extracted_households": 206,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_146.json"
   },
   {
     "booth_no": 147,
-    "name": "KVR ZPHS(BOYS) GR,FL.W.S.4TH ROOM, PENUGANCHIPROLU, penuganchi prolu",
+    "name": "KVR ZPHS(BOYS) GR,FL.W.S.4TH ROOM, PENUGANCHIPROLU",
     "building": "KVR ZPHS(BOYS) GR,FL.W.S.4TH ROOM, PENUGANCHIPROLU",
     "locality": "penuganchi prolu",
-    "sections": "1. Penuganchi Prolu, Cinema Hall Road 2. Penuganchiprolu, Main Village 3. Penuganchiprolu, B C Colony",
+    "sections": "1-KVR ZPHS(BOYS) GR MAIN BASTI. 2-KVR ZPHS(BOYS) GR COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.908332,
@@ -5583,14 +6605,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-147-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 973,
+    "extracted_male": 491,
+    "extracted_female": 482,
+    "extracted_households": 273,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_147.json"
   },
   {
     "booth_no": 148,
-    "name": "MPPS, E.S. Build N.Side ROOM, MUNDLAPADU, Mundla padu",
+    "name": "MPPS, E.S. Build N.Side ROOM, MUNDLAPADU",
     "building": "MPPS, E.S. Build N.Side ROOM, MUNDLAPADU",
     "locality": "Mundla padu",
-    "sections": "1. Mundla Padu, Mundlapadu 2. Mundlapadu, New Mundlapadu 3. Mundlapadu, Harijanawada",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.858105,
@@ -5621,14 +6650,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-148-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 934,
+    "extracted_male": 471,
+    "extracted_female": 463,
+    "extracted_households": 267,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_148.json"
   },
   {
     "booth_no": 149,
-    "name": "MPP SCOOL WEST SIDE 1ST ROOM, MUNDLAPADU, Mundlapadu",
+    "name": "MPP SCOOL WEST SIDE 1ST ROOM, MUNDLAPADU",
     "building": "MPP SCOOL WEST SIDE 1ST ROOM, MUNDLAPADU",
     "locality": "Mundlapadu",
-    "sections": "1. Mundla Padu, Old Mundlapadu 2. Mundlapadu, New Mundlapadu 3. Mundlapadu, Harijanawada",
+    "sections": "1-MPP SCOOL WEST SIDE 1ST ROOM MAIN BASTI. 2-MPP SCOOL WEST SIDE 1ST ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.858105,
@@ -5659,14 +6695,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-149-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 859,
+    "extracted_male": 433,
+    "extracted_female": 426,
+    "extracted_households": 247,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_149.json"
   },
   {
     "booth_no": 150,
-    "name": "N.R.ZPH SCHOOL, RCC BUILD S.Side.6th Class room, KONAKANCHI, Konakanchi",
+    "name": "N.R.ZPH SCHOOL, RCC BUILD S.Side.6th Class room, KONAKANCHI",
     "building": "N.R.ZPH SCHOOL, RCC BUILD S.Side.6th Class room, KONAKANCHI",
     "locality": "Konakanchi",
-    "sections": "1. Konakanchi, Main Village 2. Konakanchi, U P School Area 3. Konakanchi, S C Locality",
+    "sections": "1-N.R.ZPH SCHOOL MAIN BASTI. 2-N.R.ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521178",
     "lat": 16.823779,
@@ -5697,14 +6740,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-150-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1057,
+    "extracted_male": 533,
+    "extracted_female": 524,
+    "extracted_households": 299,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_150.json"
   },
   {
     "booth_no": 151,
-    "name": "NRZP H SCHOOL,RCC BUILDING, N.S.9TH CLASS ROOM, KONAKANCHI, Konakanchi",
+    "name": "NRZP H SCHOOL,RCC BUILDING, N.S.9TH CLASS ROOM, KONAKANCHI",
     "building": "NRZP H SCHOOL,RCC BUILDING, N.S.9TH CLASS ROOM, KONAKANCHI",
     "locality": "Konakanchi",
-    "sections": "1. Konakanchi, Main Village 2. Konakanchi, S C Area 3. Konakanchi, B C S C Area",
+    "sections": "1-NRZP H SCHOOL MAIN BASTI. 2-NRZP H SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521178",
     "lat": 16.823779,
@@ -5735,14 +6785,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-151-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 746,
+    "extracted_male": 376,
+    "extracted_female": 370,
+    "extracted_households": 205,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_151.json"
   },
   {
     "booth_no": 152,
     "name": "SJRCMS, Main Building 2nd Room Eastern side, NAVABUPETA",
     "building": "SJRCMS, Main Building 2nd Room Eastern side, NAVABUPETA",
     "locality": "Navab peta",
-    "sections": "1. Navab Peta, Main Village 2. Navab Peta, Vaddera Colony 3. Navab Peta, Harijanawada Area",
+    "sections": "1-SJRCMS MAIN BASTI. 2-SJRCMS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.816615,
@@ -5773,14 +6830,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-152-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 745,
+    "extracted_male": 376,
+    "extracted_female": 369,
+    "extracted_households": 206,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_152.json"
   },
   {
     "booth_no": 153,
     "name": "SJRCMS, Main Building 2nd Room West side, NAWBPETA",
     "building": "SJRCMS, Main Building 2nd Room West side, NAWBPETA",
     "locality": "Navab peta",
-    "sections": "1. Navab Peta, Main Village 2. Navab Peta, Vaddera Colony 3. Navab Peta, Harijanawada Area",
+    "sections": "1-SJRCMS MAIN BASTI. 2-SJRCMS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.816615,
@@ -5811,14 +6875,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-153-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 989,
+    "extracted_male": 499,
+    "extracted_female": 490,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_153.json"
   },
   {
     "booth_no": 154,
-    "name": "SJRMS, Main BUILDING, North West cornor Room, NAWBPETA, Nawabpeta",
+    "name": "SJRMS, Main BUILDING, North West cornor Room, NAWBPETA",
     "building": "SJRMS, Main BUILDING, North West cornor Room, NAWBPETA",
     "locality": "Nawabpeta",
-    "sections": "1. Navab Peta, Main Village 2. Navab Peta, Main Village",
+    "sections": "1-SJRMS MAIN BASTI. 2-SJRMS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.816615,
@@ -5849,14 +6920,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-154-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 823,
+    "extracted_male": 415,
+    "extracted_female": 408,
+    "extracted_households": 246,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_154.json"
   },
   {
     "booth_no": 155,
-    "name": "MPUP SCHOOL, EAST SIDE BUILDING N.S.1ST ROOM, THOTACHERLA, Thota charla",
+    "name": "MPUP SCHOOL, EAST SIDE BUILDING N.S.1ST ROOM, THOTACHERLA",
     "building": "MPUP SCHOOL, EAST SIDE BUILDING N.S.1ST ROOM, THOTACHERLA",
     "locality": "Thota charla",
-    "sections": "1. Thota Charla, Main Bazaar 2. Thotacherla, Main Village 3. Thotacharla, Harijanawada",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.814176,
@@ -5887,14 +6965,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-155-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 915,
+    "extracted_male": 462,
+    "extracted_female": 453,
+    "extracted_households": 264,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_155.json"
   },
   {
     "booth_no": 156,
-    "name": "MPUP SCHOOL SOUTH SIDE, BUILDING W.S.2ND ROOM, THOTACHERLA, TOTACHERLA",
+    "name": "MPUP SCHOOL SOUTH SIDE, BUILDING W.S.2ND ROOM, THOTACHERLA",
     "building": "MPUP SCHOOL SOUTH SIDE, BUILDING W.S.2ND ROOM, THOTACHERLA",
     "locality": "TOTACHERLA",
-    "sections": "1. Thotacherla, Thotacherla Mainbazar 2. Thotacharla, Thotacharla Mai Village 3. Thotacharla, Thotacharla S.C.Area",
+    "sections": "1-MPUP SCHOOL SOUTH SIDE MAIN BASTI. 2-MPUP SCHOOL SOUTH SIDE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.814176,
@@ -5925,14 +7010,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-156-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 947,
+    "extracted_male": 478,
+    "extracted_female": 469,
+    "extracted_households": 282,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_156.json"
   },
   {
     "booth_no": 157,
-    "name": "MPUP SCHOOL, WEST SIDE ROOM, SANAGAPADU, Sanagapadu",
+    "name": "MPUP SCHOOL, WEST SIDE ROOM, SANAGAPADU",
     "building": "MPUP SCHOOL, WEST SIDE ROOM, SANAGAPADU",
     "locality": "Sanagapadu",
-    "sections": "1. Sanagapadu, Main Village 2. Sanagapadu, S C Area 3. Sanagapadu, Village Centre Bazaar",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.81654,
@@ -5963,14 +7055,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-157-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 810,
+    "extracted_male": 409,
+    "extracted_female": 401,
+    "extracted_households": 226,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_157.json"
   },
   {
     "booth_no": 158,
-    "name": "MPUP SCHOOL, EAST SIDE ROOM, SANAGAPADU, Sanagapadu",
+    "name": "MPUP SCHOOL, EAST SIDE ROOM, SANAGAPADU",
     "building": "MPUP SCHOOL, EAST SIDE ROOM, SANAGAPADU",
     "locality": "Sanagapadu",
-    "sections": "1. Sanagapadu, Main Village 2. Sanagapadu, S C Area 3. Sanagapadu, Madhya Bazar",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.81654,
@@ -6001,14 +7100,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-158-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 840,
+    "extracted_male": 424,
+    "extracted_female": 416,
+    "extracted_households": 245,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_158.json"
   },
   {
     "booth_no": 159,
-    "name": "MPUP SCHOOL, S.S.BUILDING W.S. 2ND ROOM, VENGANAYAKUNIPALEM, VenganayakunI palem",
+    "name": "MPUP SCHOOL, S.S.BUILDING W.S. 2ND ROOM, VENGANAYAKUNIPALEM",
     "building": "MPUP SCHOOL, S.S.BUILDING W.S. 2ND ROOM, VENGANAYAKUNIPALEM",
     "locality": "VenganayakunI palem",
-    "sections": "1. Senagapadu, Venganayakunipalem B C Locality 2. Senaga Padu, Venkaganayakuni Palem S C Locality",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521185",
     "lat": 16.832084,
@@ -6039,14 +7145,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-159-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1007,
+    "extracted_male": 508,
+    "extracted_female": 499,
+    "extracted_households": 294,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_159.json"
   },
   {
     "booth_no": 160,
-    "name": "MPP SCHOOL RCC BUILDING ,VENKATAPURAM, VENKATAPURAM, Venkata puram",
+    "name": "MPP SCHOOL RCC BUILDING ,VENKATAPURAM, VENKATAPURAM",
     "building": "MPP SCHOOL RCC BUILDING ,VENKATAPURAM, VENKATAPURAM",
     "locality": "Venkata puram",
-    "sections": "1. Venkatapuram, Main Village 2. Venkatapuram, S C Area",
+    "sections": "1-RCC BUILDING MAIN BASTI. 2-RCC BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.84201,
@@ -6077,14 +7190,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-160-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 951,
+    "extracted_male": 480,
+    "extracted_female": 471,
+    "extracted_households": 272,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_160.json"
   },
   {
     "booth_no": 161,
-    "name": "MPP SCHOOL, EAST SIDE BUILDING, KOLLIKULLA, Kollikulla",
+    "name": "MPP SCHOOL, EAST SIDE BUILDING, KOLLIKULLA",
     "building": "MPP SCHOOL, EAST SIDE BUILDING, KOLLIKULLA",
     "locality": "Kollikulla",
-    "sections": "1. Kolli Kulla, Main Village 2. Kolli Kulla, B C Area 3. Kolli Kulla, B C Area",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.857192,
@@ -6115,14 +7235,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-161-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 965,
+    "extracted_male": 487,
+    "extracted_female": 478,
+    "extracted_households": 270,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_161.json"
   },
   {
     "booth_no": 162,
-    "name": "MPP SCHOOL, OLD BUILDING, SUBBAI GUDEM, Subbayi gudem",
+    "name": "MPP SCHOOL, OLD BUILDING, SUBBAI GUDEM",
     "building": "MPP SCHOOL, OLD BUILDING, SUBBAI GUDEM",
     "locality": "Subbayi gudem",
-    "sections": "1. Subbayi Gudem, S C Area 2. Subbayi Gudem, O C Area 3. Subbayi Gudem, Main Village",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.868381,
@@ -6153,14 +7280,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-162-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 877,
+    "extracted_male": 442,
+    "extracted_female": 435,
+    "extracted_households": 252,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_162.json"
   },
   {
     "booth_no": 163,
-    "name": "MPUP SCHOOL BUILDING, GUMMADIDURRU, Gummadidurru",
+    "name": "MPUP SCHOOL BUILDING, GUMMADIDURRU",
     "building": "MPUP SCHOOL BUILDING, GUMMADIDURRU",
     "locality": "Gummadidurru",
-    "sections": "1. Gummadidurru, Main Village 2. Gummadidurru, Harijanawada 3. Gummadidurru, Main Village",
+    "sections": "1-MPUP SCHOOL BUILDING MAIN BASTI. 2-MPUP SCHOOL BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.867636,
@@ -6191,14 +7325,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-163-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1056,
+    "extracted_male": 533,
+    "extracted_female": 523,
+    "extracted_households": 307,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_163.json"
   },
   {
     "booth_no": 164,
-    "name": "MPUP SCHOOL, NORTH SIDE BUILDING, GUMMADIDURRU, Gummadidurru",
+    "name": "MPUP SCHOOL, NORTH SIDE BUILDING, GUMMADIDURRU",
     "building": "MPUP SCHOOL, NORTH SIDE BUILDING, GUMMADIDURRU",
     "locality": "Gummadidurru",
-    "sections": "1. Gummadidurru, Main Village 2. Gummadidurru, Harijanawada 3. Gummadidurru, Main Village",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGANCHIPROLU",
     "pincode": "521190",
     "lat": 16.867636,
@@ -6229,15 +7370,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-164-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 826,
+    "extracted_male": 417,
+    "extracted_female": 409,
+    "extracted_households": 230,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_164.json"
   },
   {
     "booth_no": 165,
-    "name": "ZPH SCHOOL, SOUTHERN SIDE BUILD EAST SIDE 1STROOM, MAGALLU, Magallu",
+    "name": "ZPH SCHOOL, SOUTHERN SIDE BUILD EAST SIDE 1STROOM, MAGALLU",
     "building": "ZPH SCHOOL, SOUTHERN SIDE BUILD EAST SIDE 1STROOM, MAGALLU",
     "locality": "Magallu",
-    "sections": "1. Magallu, Main Village 2. Magallu, Harijanawada 3. Magallu, Main Bazar",
-    "mandal": "",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.812333,
     "lng": 80.313049,
@@ -6267,15 +7415,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-165-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 819,
+    "extracted_male": 413,
+    "extracted_female": 406,
+    "extracted_households": 231,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_165.json"
   },
   {
     "booth_no": 166,
-    "name": "ZPHS PADAMARA BLOCK VUTTARA VAIPU 3va GADI, MAGALLU, magallu",
+    "name": "ZPHS PADAMARA BLOCK VUTTARA VAIPU 3va GADI, MAGALLU",
     "building": "ZPHS PADAMARA BLOCK VUTTARA VAIPU 3va GADI, MAGALLU",
     "locality": "magallu",
-    "sections": "1. Magallu, Magallu 2. Magallu, Harijanawada",
-    "mandal": "",
+    "sections": "1-ZPHS PADAMARA BLOCK VUTTARA VAIPU 3VA GADI MAIN BASTI. 2-ZPHS PADAMARA BLOCK VUTTARA VAIPU 3VA GADI COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.812352,
     "lng": 80.312934,
@@ -6305,15 +7460,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-166-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 977,
+    "extracted_male": 493,
+    "extracted_female": 484,
+    "extracted_households": 280,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_166.json"
   },
   {
     "booth_no": 167,
-    "name": "MPP SCHOOL, NEW BUILDING E.S. ROOM, MAGALLU, Magollu",
+    "name": "MPP SCHOOL, NEW BUILDING E.S. ROOM, MAGALLU",
     "building": "MPP SCHOOL, NEW BUILDING E.S. ROOM, MAGALLU",
     "locality": "Magollu",
-    "sections": "1. Magallu, Main Village 2. Magallu, Harijanawada 3. Magallu, Main Bazar",
-    "mandal": "",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.815133,
     "lng": 80.318776,
@@ -6343,14 +7505,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-167-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1009,
+    "extracted_male": 509,
+    "extracted_female": 500,
+    "extracted_households": 299,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_167.json"
   },
   {
     "booth_no": 168,
-    "name": "MPP SCHOOL, KONDURU, Konduru",
+    "name": "MPP SCHOOL, KONDURU",
     "building": "MPP SCHOOL, KONDURU",
     "locality": "Konduru",
-    "sections": "1. Konduru, Main Village 2. Konduru, S C Colony",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.830214,
@@ -6381,14 +7550,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-168-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 919,
+    "extracted_male": 464,
+    "extracted_female": 455,
+    "extracted_households": 258,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_168.json"
   },
   {
     "booth_no": 169,
-    "name": "ZPH SCHOOL NEW BUILDING SOUTH W BLOCK SOUTH SIDE, JONNALAGADDA, Jonnalagadda",
+    "name": "ZPH SCHOOL NEW BUILDING SOUTH W BLOCK SOUTH SIDE, JONNALAGADDA",
     "building": "ZPH SCHOOL NEW BUILDING SOUTH W BLOCK SOUTH SIDE, JONNALAGADDA",
     "locality": "Jonnalagadda",
-    "sections": "1. Jonnalagadda, Main Bazar 2. Jonnalagadda, B C Area 3. Jonnalagadda, Main Village",
+    "sections": "1-ZPH SCHOOL NEW BUILDING SOUTH W BLOCK SOUTH SIDE MAIN BASTI. 2-ZPH SCHOOL NEW BUILDING SOUTH W BLOCK SOUTH SIDE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.873035,
@@ -6419,14 +7595,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-169-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 994,
+    "extracted_male": 501,
+    "extracted_female": 493,
+    "extracted_households": 282,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_169.json"
   },
   {
     "booth_no": 170,
-    "name": "ZPHS NEW BUILDING SOUTH WEST BLOCK NORTH SIDE ROOM, JONNALAGADDA, Jonnalagadda",
+    "name": "ZPHS NEW BUILDING SOUTH WEST BLOCK NORTH SIDE ROOM, JONNALAGADDA",
     "building": "ZPHS NEW BUILDING SOUTH WEST BLOCK NORTH SIDE ROOM, JONNALAGADDA",
     "locality": "Jonnalagadda",
-    "sections": "1. Jonnalagadda, Main Bazaar 2. Jonnalagadda, Main Village 3. Jonnalagadda, Harijanawada",
+    "sections": "1-ZPHS NEW BUILDING SOUTH WEST BLOCK NORTH SIDE ROOM MAIN BASTI. 2-ZPHS NEW BUILDING SOUTH WEST BLOCK NORTH SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.873035,
@@ -6457,14 +7640,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-170-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 973,
+    "extracted_male": 491,
+    "extracted_female": 482,
+    "extracted_households": 276,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_170.json"
   },
   {
     "booth_no": 171,
-    "name": "MPUPS, WESTERN SIDE Room, RAMIREDDIPALLI, Ramireddy palli",
+    "name": "MPUPS, WESTERN SIDE Room, RAMIREDDIPALLI",
     "building": "MPUPS, WESTERN SIDE Room, RAMIREDDIPALLI",
     "locality": "Ramireddy palli",
-    "sections": "1. Ramireddy Palli, Main Village 2. Ramireddypalli, S C Locality",
+    "sections": "1-MPUPS MAIN BASTI. 2-MPUPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.855884,
@@ -6495,14 +7685,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-171-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 953,
+    "extracted_male": 481,
+    "extracted_female": 472,
+    "extracted_households": 278,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_171.json"
   },
   {
     "booth_no": 172,
-    "name": "MPUPS East SIDE ROOM, RAMIREDDY PALLI, Ramireddy palli",
+    "name": "MPUPS East SIDE ROOM, RAMIREDDY PALLI",
     "building": "MPUPS East SIDE ROOM, RAMIREDDY PALLI",
     "locality": "Ramireddy palli",
-    "sections": "1. Ramireddy Palli, Main Village 2. Ramireddypalli, S C Locality",
+    "sections": "1-MPUPS EAST SIDE ROOM MAIN BASTI. 2-MPUPS EAST SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.855884,
@@ -6533,14 +7730,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-172-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1003,
+    "extracted_male": 506,
+    "extracted_female": 497,
+    "extracted_households": 290,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_172.json"
   },
   {
     "booth_no": 173,
-    "name": "MPP SCHOOL,NORTH SIDE Build Western Side ROOM, KANATAMATMA KURU, Konatamatmakuru",
+    "name": "MPP SCHOOL,NORTH SIDE Build Western Side ROOM, KANATAMATMA KURU",
     "building": "MPP SCHOOL,NORTH SIDE Build Western Side ROOM, KANATAMATMA KURU",
     "locality": "Konatamatmakuru",
-    "sections": "1. Konatamatmakuru, Main Village 2. Konatamatmakuru, Harijanawada",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521170",
     "lat": 16.85173,
@@ -6571,14 +7775,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-173-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 909,
+    "extracted_male": 459,
+    "extracted_female": 450,
+    "extracted_households": 253,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_173.json"
   },
   {
     "booth_no": 174,
-    "name": "MPPSCHOOL, MAIN HALL NORTH SIDE ROOM, DAMULURU, Damuluru",
+    "name": "MPPSCHOOL, MAIN HALL NORTH SIDE ROOM, DAMULURU",
     "building": "MPPSCHOOL, MAIN HALL NORTH SIDE ROOM, DAMULURU",
     "locality": "Damuluru",
-    "sections": "1. Damuluru, Sivalayam Temple Street 2. Damuluru, Main Village 3. Damuluru, Harijanawada",
+    "sections": "1-MPPSCHOOL MAIN BASTI. 2-MPPSCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521170",
     "lat": 16.831565,
@@ -6609,14 +7820,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-174-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 971,
+    "extracted_male": 490,
+    "extracted_female": 481,
+    "extracted_households": 270,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_174.json"
   },
   {
     "booth_no": 175,
-    "name": "MPPS CHOOL, MAIN HALL, SOUTH SIDE ROOM, DAMULURU, Damuluru",
+    "name": "MPPS CHOOL, MAIN HALL, SOUTH SIDE ROOM, DAMULURU",
     "building": "MPPS CHOOL, MAIN HALL, SOUTH SIDE ROOM, DAMULURU",
     "locality": "Damuluru",
-    "sections": "1. Damuluru, Sivalayam Street 2. Damuluru, Main Village 3. Damuluru, Harijanawada",
+    "sections": "1-MPPS CHOOL MAIN BASTI. 2-MPPS CHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521170",
     "lat": 16.831565,
@@ -6647,15 +7865,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-175-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1031,
+    "extracted_male": 520,
+    "extracted_female": 511,
+    "extracted_households": 305,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_175.json"
   },
   {
     "booth_no": 176,
-    "name": "MPP SCHOOL, S.S. ROOM, TORRAGUDIPADU, TORRAGUDIPADU",
+    "name": "MPP SCHOOL, S.S. ROOM, TORRAGUDIPADU",
     "building": "MPP SCHOOL, S.S. ROOM, TORRAGUDIPADU",
     "locality": "TORRAGUDIPADU",
-    "sections": "1. Torragudipadu, Torragudipadu",
-    "mandal": "",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.838921,
     "lng": 80.344644,
@@ -6685,14 +7910,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-176-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 964,
+    "extracted_male": 486,
+    "extracted_female": 478,
+    "extracted_households": 282,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_176.json"
   },
   {
     "booth_no": 177,
-    "name": "MPP SCHOOL,NEW BUILDING SOUTHERN SIDE 1ST ROOM, SOMAVARAM, Somavaram",
+    "name": "MPP SCHOOL,NEW BUILDING SOUTHERN SIDE 1ST ROOM, SOMAVARAM",
     "building": "MPP SCHOOL,NEW BUILDING SOUTHERN SIDE 1ST ROOM, SOMAVARAM",
     "locality": "Somavaram",
-    "sections": "1. Somavaram, Main Village 2. Somavaram, Harijanawada",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.815666,
@@ -6723,14 +7955,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-177-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 977,
+    "extracted_male": 493,
+    "extracted_female": 484,
+    "extracted_households": 280,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_177.json"
   },
   {
     "booth_no": 178,
-    "name": "MPEL SCHOOL NORTH SIDE ROOM, RUDRAVARAM, Rudravaram",
+    "name": "MPEL SCHOOL NORTH SIDE ROOM, RUDRAVARAM",
     "building": "MPEL SCHOOL NORTH SIDE ROOM, RUDRAVARAM",
     "locality": "Rudravaram",
-    "sections": "1. Rudravaram, S C Colony 2. Rudravaram, Main Village",
+    "sections": "1-MPEL SCHOOL NORTH SIDE ROOM MAIN BASTI. 2-MPEL SCHOOL NORTH SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.801407,
@@ -6761,14 +8000,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-178-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1055,
+    "extracted_male": 532,
+    "extracted_female": 523,
+    "extracted_households": 304,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_178.json"
   },
   {
     "booth_no": 179,
-    "name": "MPEL SCHOOL SOUTH SIDE ROOM, RUDRAVARAM, Rudravaram",
+    "name": "MPEL SCHOOL SOUTH SIDE ROOM, RUDRAVARAM",
     "building": "MPEL SCHOOL SOUTH SIDE ROOM, RUDRAVARAM",
     "locality": "Rudravaram",
-    "sections": "1. Rudravaram, S C Colony 2. Rudravaram, Main Village",
+    "sections": "1-MPEL SCHOOL SOUTH SIDE ROOM MAIN BASTI. 2-MPEL SCHOOL SOUTH SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.801407,
@@ -6799,14 +8045,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-179-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 972,
+    "extracted_male": 490,
+    "extracted_female": 482,
+    "extracted_households": 275,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_179.json"
   },
   {
     "booth_no": 180,
-    "name": "MPUP SCHOOL, SOUTH SIDE ROOM, GOLLAMUDI, Golla mudi",
+    "name": "MPUP SCHOOL, SOUTH SIDE ROOM, GOLLAMUDI",
     "building": "MPUP SCHOOL, SOUTH SIDE ROOM, GOLLAMUDI",
     "locality": "Golla mudi",
-    "sections": "1. Golla Mudi, Main Village 2. Gollamudi, S C Colony",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.783099,
@@ -6837,14 +8090,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-180-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 994,
+    "extracted_male": 501,
+    "extracted_female": 493,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_180.json"
   },
   {
     "booth_no": 181,
-    "name": "MPUP SCHOOL, NORTH SIDE ROOM, GOLLA MUDI, Golla mudi",
+    "name": "MPUP SCHOOL, NORTH SIDE ROOM, GOLLA MUDI",
     "building": "MPUP SCHOOL, NORTH SIDE ROOM, GOLLA MUDI",
     "locality": "Golla mudi",
-    "sections": "1. Golla Mudi, Main Village 2. Gollamudi, S C Colony",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "NANDIGAMA",
     "pincode": "521185",
     "lat": 16.783099,
@@ -6875,6 +8135,13 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/84/2026-EROLLGEN-S01-84-SIR-DraftRoll-Revision1-ENG-181-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1104,
+    "extracted_male": 557,
+    "extracted_female": 547,
+    "extracted_households": 315,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_84/booth_181.json"
   }
 ]

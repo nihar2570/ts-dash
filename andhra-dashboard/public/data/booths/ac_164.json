@@ -1,10 +1,10 @@
 [
   {
     "booth_no": 1,
-    "name": "MANDAL PARISHAD PRIMARY, SCHOOL MEKALAVANDLA PALLE, MEKALAVANDLA PALLE, MEKALAVANDLA PALLE",
+    "name": "MANDAL PARISHAD PRIMARY, SCHOOL MEKALAVANDLA PALLE, MEKALAVANDLA PALLE",
     "building": "MANDAL PARISHAD PRIMARY, SCHOOL MEKALAVANDLA PALLE, MEKALAVANDLA PALLE",
     "locality": "MEKALAVANDLA PALLE",
-    "sections": "1. Eguvmittamarri, Makalavandla Palle 2. Diguvamittamarri, Makalavandla Palle 3. Mittamarri Harijana Wada, Makalavandla Palle",
+    "sections": "1-MANDAL PARISHAD PRIMARY MAIN BASTI. 2-MANDAL PARISHAD PRIMARY COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.596639,
@@ -35,14 +35,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-1-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 779,
+    "extracted_male": 393,
+    "extracted_female": 386,
+    "extracted_households": 226,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_1.json"
   },
   {
     "booth_no": 2,
-    "name": "MANDAL PARISHAD UPPER PRIMARY, SCHOOL KOLLABAILU, KOLLABAILU, KOLLA BAILU",
+    "name": "MANDAL PARISHAD UPPER PRIMARY, SCHOOL KOLLABAILU, KOLLABAILU",
     "building": "MANDAL PARISHAD UPPER PRIMARY, SCHOOL KOLLABAILU, KOLLABAILU",
     "locality": "KOLLA BAILU",
-    "sections": "1. Pachatla Penta, Kolla Bailu 2. Madigaguntakanuma, Kolla Bailu 3. Seriguntalapalle, Kolla Bailu",
+    "sections": "1-MANDAL PARISHAD UPPER PRIMARY MAIN BASTI. 2-MANDAL PARISHAD UPPER PRIMARY COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.579547,
@@ -73,14 +80,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-2-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 869,
+    "extracted_male": 438,
+    "extracted_female": 431,
+    "extracted_households": 254,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_2.json"
   },
   {
     "booth_no": 3,
-    "name": "M.P.U.P, SCHOOL NORTH WEST ROOM BABUNAGAR, KOLLABAILU, BABUNAGAR",
+    "name": "M.P.U.P, SCHOOL NORTH WEST ROOM BABUNAGAR, KOLLABAILU",
     "building": "M.P.U.P, SCHOOL NORTH WEST ROOM BABUNAGAR, KOLLABAILU",
     "locality": "BABUNAGAR",
-    "sections": "1. Venkateswara Puram, Babunagar 2. Babunagar Colony, Babunagar 4. Babunagar, Babunagar",
+    "sections": "1-M.P.U.P MAIN BASTI. 2-M.P.U.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.579547,
@@ -111,14 +125,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-3-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 999,
+    "extracted_male": 504,
+    "extracted_female": 495,
+    "extracted_households": 291,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_3.json"
   },
   {
     "booth_no": 4,
-    "name": "M.P.U.P, SCHOOL NORTH EAST ROOM BABUNAGAR, BABUNAGAR COLONY, BABUNAGAR",
+    "name": "M.P.U.P, SCHOOL NORTH EAST ROOM BABUNAGAR, BABUNAGAR COLONY",
     "building": "M.P.U.P, SCHOOL NORTH EAST ROOM BABUNAGAR, BABUNAGAR COLONY",
     "locality": "BABUNAGAR",
-    "sections": "1. Babunagar Colony, Babunagar 2. Katlapalle, Babunagar 3. Venkateswara Puram, Babunagar",
+    "sections": "1-M.P.U.P MAIN BASTI. 2-M.P.U.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": null,
@@ -149,14 +170,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-4-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1011,
+    "extracted_male": 510,
+    "extracted_female": 501,
+    "extracted_households": 289,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_4.json"
   },
   {
     "booth_no": 5,
-    "name": "M.P.U.P, SCHOOL SOUTH WEST CLASS ROOM, BABUNAGAR, KURUVANKA, BABUNAGAR",
+    "name": "M.P.U.P, SCHOOL SOUTH WEST CLASS ROOM, BABUNAGAR, KURUVANKA",
     "building": "M.P.U.P, SCHOOL SOUTH WEST CLASS ROOM, BABUNAGAR, KURUVANKA",
     "locality": "BABUNAGAR",
-    "sections": "1. Babunagar Nagar Colony, Babunagar 9. Katlapalle, Babunagar 10. Venkateswara Puram, Babunagar",
+    "sections": "1-M.P.U.P MAIN BASTI. 2-M.P.U.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": null,
@@ -187,20 +215,27 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-5-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 920,
+    "extracted_male": 464,
+    "extracted_female": 456,
+    "extracted_households": 268,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_5.json"
   },
   {
     "booth_no": 6,
-    "name": "M.P.P, SCHOOL URDU BABUNAGAR, BABUNAGAR, BABUNAGAR",
+    "name": "M.P.P, SCHOOL URDU BABUNAGAR, BABUNAGAR",
     "building": "M.P.P, SCHOOL URDU BABUNAGAR, BABUNAGAR",
     "locality": "BABUNAGAR",
-    "sections": "1. Venkateswara Puram, Babunagar 2. Y.S.R. Colony, Babunagar 3. Babunagar, Babunagar",
+    "sections": "1-M.P.P MAIN BASTI. 2-M.P.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.579547,
     "lng": 78.454317,
     "is_urban": false,
-    "electorate": 1215,
+    "electorate": 1200,
     "total_votes": 901,
     "turnout_pct": 74.2,
     "votes": {
@@ -225,14 +260,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-6-WI.pdf",
-    "panna_pages": 25
+    "panna_pages": 24,
+    "extracted_electorate": 1200,
+    "extracted_male": 606,
+    "extracted_female": 594,
+    "extracted_households": 351,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_6.json"
   },
   {
     "booth_no": 7,
-    "name": "M.P.P, SCHOOL (TELUGU), EGUVA KURAVANKA, PONNETIPALEM, KURAVANKA",
+    "name": "M.P.P, SCHOOL (TELUGU), EGUVA KURAVANKA, PONNETIPALEM",
     "building": "M.P.P, SCHOOL (TELUGU), EGUVA KURAVANKA, PONNETIPALEM",
     "locality": "KURAVANKA",
-    "sections": "1. Ponnetipalem, Kuruvanka 2. Eguvakuruvanka, Kuruvanka 3. Eguvakuruvanka, Kuruvanka",
+    "sections": "1-M.P.P MAIN BASTI. 2-M.P.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.547783,
@@ -263,14 +305,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-7-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 870,
+    "extracted_male": 439,
+    "extracted_female": 431,
+    "extracted_households": 250,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_7.json"
   },
   {
     "booth_no": 8,
-    "name": "M.P.P, SCHOOL (URDU), EGUVAKURUVANKA, EGUVAKURUVANKA, KURAVANKA",
+    "name": "M.P.P, SCHOOL (URDU), EGUVAKURUVANKA, EGUVAKURUVANKA",
     "building": "M.P.P, SCHOOL (URDU), EGUVAKURUVANKA, EGUVAKURUVANKA",
     "locality": "KURAVANKA",
-    "sections": "1. Eguvakuruvanka, Kuruvanka 2. Diguvakuruvanka, Kuruvanka 3. Saraswati Colony, Kuruvanka",
+    "sections": "1-M.P.P MAIN BASTI. 2-M.P.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.547783,
@@ -301,14 +350,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-8-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1026,
+    "extracted_male": 518,
+    "extracted_female": 508,
+    "extracted_households": 292,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_8.json"
   },
   {
     "booth_no": 9,
-    "name": "M.P.U.P, SCHOOL, PONNUTI PALEM, PONNETI PALEM, PONNUTI PALEM",
+    "name": "M.P.U.P, SCHOOL, PONNUTI PALEM, PONNETI PALEM",
     "building": "M.P.U.P, SCHOOL, PONNUTI PALEM, PONNETI PALEM",
     "locality": "PONNUTI PALEM",
-    "sections": "1. Ponnetipalem, Ponnutipalem 2. Savaramvari Palle, Ponnutipalem 3. Ammagari Palle, Ponnutipalem",
+    "sections": "1-M.P.U.P MAIN BASTI. 2-M.P.U.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.569429,
@@ -339,14 +395,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-9-WI.pdf",
-    "panna_pages": 24
+    "panna_pages": 24,
+    "extracted_electorate": 1153,
+    "extracted_male": 582,
+    "extracted_female": 571,
+    "extracted_households": 323,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_9.json"
   },
   {
     "booth_no": 10,
-    "name": "MUNICIPAL UPPER PRIMARY SCHOOL, PAPPIREDDYGAIPALLE, PAPPIREDDYGARIPALLE, PAPPIREDDYGARIPALLE",
+    "name": "MUNICIPAL UPPER PRIMARY SCHOOL, PAPPIREDDYGAIPALLE, PAPPIREDDYGARIPALLE",
     "building": "MUNICIPAL UPPER PRIMARY SCHOOL, PAPPIREDDYGAIPALLE, PAPPIREDDYGARIPALLE",
     "locality": "PAPPIREDDYGARIPALLE",
-    "sections": "1. Pappireddigari Palle, Pappireddygari Ipalle 2. Ponnetipalam,Block3, Pappireddygari Ipalle 3. Rami Reddi Gari Palli, Pappireddygari Ipalle",
+    "sections": "1-MUNICIPAL UPPER PRIMARY SCHOOL MAIN BASTI. 2-MUNICIPAL UPPER PRIMARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.555551,
@@ -377,14 +440,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-10-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1093,
+    "extracted_male": 551,
+    "extracted_female": 542,
+    "extracted_households": 315,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_10.json"
   },
   {
     "booth_no": 11,
-    "name": "M.P.U.P, SCHOOL, ANKISETTY PALLE, ANKISETTY PALLE, ANKISETTY PALLE",
+    "name": "M.P.U.P, SCHOOL, ANKISETTY PALLE, ANKISETTY PALLE",
     "building": "M.P.U.P, SCHOOL, ANKISETTY PALLE, ANKISETTY PALLE",
     "locality": "ANKISETTY PALLE",
-    "sections": "1. Ankishettipalle, Ankisetty Palle 2. Malpalli, Ankisetty Palle 3. Tummaltunda, Ankisetty Palle",
+    "sections": "1-M.P.U.P MAIN BASTI. 2-M.P.U.P COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.541532,
@@ -415,14 +485,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-11-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 984,
+    "extracted_male": 496,
+    "extracted_female": 488,
+    "extracted_households": 285,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_11.json"
   },
   {
     "booth_no": 12,
-    "name": "M.P.P SCHOOL, CHIPPILI, DAKSHINA CHIPPILI, UTTARA CHIPPILI, CHIPPILI",
+    "name": "M.P.P SCHOOL, CHIPPILI, DAKSHINA CHIPPILI, UTTARA CHIPPILI",
     "building": "M.P.P SCHOOL, CHIPPILI, DAKSHINA CHIPPILI, UTTARA CHIPPILI",
     "locality": "CHIPPILI",
-    "sections": "1. Dakshinchippili, Chippili 2. Utharchippili, Chippili 3. Chippilikollafaram, Chippili",
+    "sections": "1-M.P.P SCHOOL MAIN BASTI. 2-M.P.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.553172,
@@ -453,14 +530,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-12-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 871,
+    "extracted_male": 439,
+    "extracted_female": 432,
+    "extracted_households": 253,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_12.json"
   },
   {
     "booth_no": 13,
-    "name": "M.P.U.P SCHOOL, VEMPALLI, VEMPALLE, VEMPALLE",
+    "name": "M.P.U.P SCHOOL, VEMPALLI, VEMPALLE",
     "building": "M.P.U.P SCHOOL, VEMPALLI, VEMPALLE",
     "locality": "VEMPALLE",
-    "sections": "1. Vempalli, Vempalli",
+    "sections": "1-M.P.U.P SCHOOL MAIN BASTI. 2-M.P.U.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.537876,
@@ -491,14 +575,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-13-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 890,
+    "extracted_male": 449,
+    "extracted_female": 441,
+    "extracted_households": 257,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_13.json"
   },
   {
     "booth_no": 14,
-    "name": "M.P.U.P SCHOOL NORTH NEW BUILDING, VEMPALLE, VEMPALLE HARIJANA WADA, VEMPALLE",
+    "name": "M.P.U.P SCHOOL NORTH NEW BUILDING, VEMPALLE, VEMPALLE HARIJANA WADA",
     "building": "M.P.U.P SCHOOL NORTH NEW BUILDING, VEMPALLE, VEMPALLE HARIJANA WADA",
     "locality": "VEMPALLE",
-    "sections": "1. Vempalli Harijanawada, Vempalli 2. Nallagatturalla, Vempalli 3. Nadimi Thaanda, Vempalli",
+    "sections": "1-M.P.U.P SCHOOL NORTH NEW BUILDING MAIN BASTI. 2-M.P.U.P SCHOOL NORTH NEW BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.537876,
@@ -529,14 +620,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-14-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1025,
+    "extracted_male": 517,
+    "extracted_female": 508,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_14.json"
   },
   {
     "booth_no": 15,
-    "name": "M.P.P SCHOOL, NORTH WING, POTTAVANDLAGADDA, SASTHRULA GADDA, POTTAVANDLAGADDA",
+    "name": "M.P.P SCHOOL, NORTH WING, POTTAVANDLAGADDA, SASTHRULA GADDA",
     "building": "M.P.P SCHOOL, NORTH WING, POTTAVANDLAGADDA, SASTHRULA GADDA",
     "locality": "POTTAVANDLAGADDA",
-    "sections": "1. Sasthrula Gadda, Pottavandlagadda 2. Kolla Vari Palli, Pottavandlagadda 3. Baarla Palli, Pottavandlagadda",
+    "sections": "1-M.P.P SCHOOL MAIN BASTI. 2-M.P.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.53995,
@@ -567,14 +665,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-15-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1096,
+    "extracted_male": 553,
+    "extracted_female": 543,
+    "extracted_households": 321,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_15.json"
   },
   {
     "booth_no": 16,
-    "name": "M.P.P SCHOOL SOUTH WING, POTTAVANDLAGADDA, KOLLAVARI PALLE, UTUPENTA, POTTAVANDLAGADDA",
+    "name": "M.P.P SCHOOL SOUTH WING, POTTAVANDLAGADDA, KOLLAVARI PALLE, UTUPENTA",
     "building": "M.P.P SCHOOL SOUTH WING, POTTAVANDLAGADDA, KOLLAVARI PALLE, UTUPENTA",
     "locality": "POTTAVANDLAGADDA",
-    "sections": "1. Kolla Vari Palli, Pottavandlagadda 2. Utu Penta, Pottavandlagadda 3. Baarla Palli, Pottavandlagadda",
+    "sections": "1-M.P.P SCHOOL SOUTH WING MAIN BASTI. 2-M.P.P SCHOOL SOUTH WING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.53991,
@@ -605,14 +710,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-16-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 993,
+    "extracted_male": 501,
+    "extracted_female": 492,
+    "extracted_households": 287,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_16.json"
   },
   {
     "booth_no": 17,
-    "name": "M.P.U.P SCHOOL, EAST WING, CHEEKALABAILU, DIGUV MEDIPALLE, CHEEKALA BAILU",
+    "name": "M.P.U.P SCHOOL, EAST WING, CHEEKALABAILU, DIGUV MEDIPALLE",
     "building": "M.P.U.P SCHOOL, EAST WING, CHEEKALABAILU, DIGUV MEDIPALLE",
     "locality": "CHEEKALA BAILU",
-    "sections": "1. Diguva Medipalli, Cheekala Bailu 2. Eguva Medipalli, Cheekala Bailu 3. Jolpalam, Cheekala Bailu",
+    "sections": "1-M.P.U.P SCHOOL MAIN BASTI. 2-M.P.U.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.545304,
@@ -643,14 +755,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-17-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 790,
+    "extracted_male": 398,
+    "extracted_female": 392,
+    "extracted_households": 224,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_17.json"
   },
   {
     "booth_no": 18,
-    "name": "M.P.U.P SCHOOL, WEST WING, CHEEKALABAILU, CHEEKALABAILU, CHEEKALA BAILU",
+    "name": "M.P.U.P SCHOOL, WEST WING, CHEEKALABAILU, CHEEKALABAILU",
     "building": "M.P.U.P SCHOOL, WEST WING, CHEEKALABAILU, CHEEKALABAILU",
     "locality": "CHEEKALA BAILU",
-    "sections": "1. Chiklbylu, Cheekala Bailu 2. Eguvmedipalli, Cheekala Bailu 3. Jolapalyam, Cheekala Bailu",
+    "sections": "1-M.P.U.P SCHOOL MAIN BASTI. 2-M.P.U.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.545304,
@@ -681,14 +800,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-18-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 741,
+    "extracted_male": 374,
+    "extracted_female": 367,
+    "extracted_households": 223,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_18.json"
   },
   {
     "booth_no": 19,
     "name": "Polling Station #19",
-    "building": "",
+    "building": "Polling Station #19",
     "locality": "MALEPADU",
-    "sections": "1. Maddigundlapally, Malepadu 2. Kotthur, Malepadu 3. Malepadu Harijanawada, Malepadu",
+    "sections": "1-POLLING STATION #19 MAIN BASTI. 2-POLLING STATION #19 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.50591,
@@ -719,14 +845,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-19-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1079,
+    "extracted_male": 544,
+    "extracted_female": 535,
+    "extracted_households": 303,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_19.json"
   },
   {
     "booth_no": 20,
     "name": "Polling Station #20",
-    "building": "",
+    "building": "Polling Station #20",
     "locality": "MALEPADU",
-    "sections": "1. Maddigundla Palli, Malepadu 2. Kothuru, Malepadu 3. Harijanawada(Madiga Palli), Malepadu",
+    "sections": "1-POLLING STATION #20 MAIN BASTI. 2-POLLING STATION #20 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.50591,
@@ -757,14 +890,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-20-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 915,
+    "extracted_male": 462,
+    "extracted_female": 453,
+    "extracted_households": 266,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_20.json"
   },
   {
     "booth_no": 21,
-    "name": "M.P.P SCHOOL, AVULAPALLE, AVULAPALLE, NALLARAJU PALLE, AVULAPALLE",
+    "name": "M.P.P SCHOOL, AVULAPALLE, AVULAPALLE, NALLARAJU PALLE",
     "building": "M.P.P SCHOOL, AVULAPALLE, AVULAPALLE, NALLARAJU PALLE",
     "locality": "AVULAPALLE",
-    "sections": "1. Aavula Palli, Avulapalle 2. Nallaraju Palli, Avulapalle 3. Kattholla Vooru, Avulapalle",
+    "sections": "1-M.P.P SCHOOL MAIN BASTI. 2-M.P.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "MADANAPALLI",
     "pincode": "517325",
     "lat": 13.474074,
@@ -795,6 +935,13 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/164/2026-EROLLGEN-S01-164-SIR-DraftRoll-Revision1-ENG-21-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 892,
+    "extracted_male": 450,
+    "extracted_female": 442,
+    "extracted_households": 258,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_164/booth_21.json"
   }
 ]

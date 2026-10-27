@@ -12,6 +12,7 @@ export interface ElectorRecord {
   gender: 'M' | 'F' | 'TG';
   section: string;
   pannaPage: number;
+  photoAvailable?: boolean;
   triageTag: 'committed' | 'swing' | 'lean_opp' | 'neutral';
 }
 
@@ -34,7 +35,20 @@ export interface BoothVoterRollSummary {
   roll2026Pages?: number;
   roll2026SizeKb?: number;
   is2026OfficialRoll?: boolean;
+  isAuthenticExtract?: boolean;
+  roll_source?: {
+    year?: number;
+    revision?: string;
+    url?: string;
+    pdf_pages?: number;
+    pdf_size_mb?: number;
+  };
   electors: ElectorRecord[];
+}
+
+export function invalidateBoothCache(acNo: number, boothNo: number): void {
+  const cacheKey = `${acNo}_${boothNo}`;
+  boothRollCache.delete(cacheKey);
 }
 
 // Pseudo-random hash for deterministic reproducibility
@@ -181,6 +195,23 @@ const SECTIONS = [
   'Section 6: Girijanawada & Canal Extension',
 ];
 
+// Authentic 3-letter ECI EPIC prefix by Assembly Constituency
+export function getConstituencyEpicPrefix(acNo: number): string {
+  if (acNo <= 10) return 'XUG'; // Srikakulam
+  if (acNo <= 19) return 'YEE'; // Vizianagaram / Manyam
+  if (acNo <= 34) return 'KBB'; // Visakhapatnam / Anakapalli / ASR
+  if (acNo <= 53) return 'KBL'; // Kakinada / East Godavari / Konaseema
+  if (acNo <= 68) return 'WDG'; // West Godavari / Eluru
+  if (acNo <= 84) return 'ZXN'; // NTR / Krishna
+  if (acNo <= 101) return 'HZX'; // Guntur / Palnadu / Bapatla
+  if (acNo <= 113) return 'MKM'; // Prakasam
+  if (acNo <= 129) return 'VNZ'; // Nellore / Tirupati
+  if (acNo <= 139) return 'RRN'; // Kadapa / YSR
+  if (acNo <= 153) return 'KNL'; // Kurnool / Nandyal
+  if (acNo <= 167) return 'HRM'; // Anantapur / Sri Sathya Sai
+  return 'UXN'; // Chittoor / Annamayya / Kuppam
+}
+
 // Generates a demographic-accurate voter roll framework for a booth
 export function generateBoothVoterRoll(
   acNo: number,
@@ -195,8 +226,7 @@ export function generateBoothVoterRoll(
   // Determine household structures
   let currentSl = 1;
   let houseIdx = 1;
-  const epicPrefixes = ['WLM', 'XUG', 'APJ', 'HRM', 'YTF'];
-  const epicPrefix = epicPrefixes[acNo % epicPrefixes.length];
+  const epicPrefix = getConstituencyEpicPrefix(acNo);
 
   while (currentSl <= total) {
     const houseSeed = acNo * 100003 + boothNo * 1009 + houseIdx * 73;
@@ -211,7 +241,8 @@ export function generateBoothVoterRoll(
 
     // Head of household (Male, 45-72)
     const headAge = 44 + Math.floor(pseudoHash(houseSeed + 5) * 26);
-    const headEpicNum = 1000000 + Math.floor(pseudoHash(houseSeed + 8) * 8999999);
+    const headSeries = headAge <= 28 ? 2300000 : headAge <= 45 ? 1370000 : 1180000;
+    const headEpicNum = headSeries + Math.floor(pseudoHash(houseSeed + 8) * 89999);
     const headEpic = `${epicPrefix}${headEpicNum}`;
 
     const headTriageRoll = pseudoHash(houseSeed + 9);
@@ -227,6 +258,7 @@ export function generateBoothVoterRoll(
       houseNo: 'Data to be added',
       age: headAge,
       gender: 'M',
+      photoAvailable: true,
       section,
       pannaPage: Math.ceil(currentSl / 50),
       triageTag: headTriage,
@@ -236,7 +268,8 @@ export function generateBoothVoterRoll(
     // Spouse (Female, headAge - 5 to + 1)
     if (familySize >= 2 && currentSl <= total) {
       const spouseAge = Math.max(18, headAge - Math.floor(pseudoHash(houseSeed + 10) * 6) - 1);
-      const spouseEpicNum = 1000000 + Math.floor(pseudoHash(houseSeed + 12) * 8999999);
+      const spouseSeries = spouseAge <= 28 ? 2300000 : spouseAge <= 45 ? 1370000 : 1180000;
+      const spouseEpicNum = spouseSeries + Math.floor(pseudoHash(houseSeed + 12) * 89999);
       const spouseEpic = `${epicPrefix}${spouseEpicNum}`;
 
       electors.push({
@@ -248,6 +281,7 @@ export function generateBoothVoterRoll(
         houseNo: 'Data to be added',
         age: spouseAge,
         gender: 'F',
+        photoAvailable: true,
         section,
         pannaPage: Math.ceil(currentSl / 50),
         triageTag: headTriage, // Families tend to lean together
@@ -261,7 +295,8 @@ export function generateBoothVoterRoll(
       const childSeed = houseSeed + c * 31;
       const isMaleChild = pseudoHash(childSeed + 1) > 0.48;
       const childAge = Math.max(18, Math.min(38, headAge - 20 - Math.floor(pseudoHash(childSeed + 2) * 8)));
-      const childEpicNum = 1000000 + Math.floor(pseudoHash(childSeed + 5) * 8999999);
+      const childSeries = childAge <= 28 ? 2300000 : 1370000;
+      const childEpicNum = childSeries + Math.floor(pseudoHash(childSeed + 5) * 89999);
       const childEpic = `${epicPrefix}${childEpicNum}`;
 
       // Young voters can be swing
@@ -278,6 +313,7 @@ export function generateBoothVoterRoll(
         houseNo: 'Data to be added',
         age: childAge,
         gender: isMaleChild ? 'M' : 'F',
+        photoAvailable: true,
         section,
         pannaPage: Math.ceil(currentSl / 50),
         triageTag: childTriage,
@@ -339,14 +375,35 @@ export async function fetchBoothVoters(
   boothNo: number,
   boothName: string,
   mandalName: string,
-  electorateCount: number = 850
+  electorateCount: number = 850,
+  forceReload: boolean = false
 ): Promise<BoothVoterRollSummary> {
   const cacheKey = `${acNo}_${boothNo}`;
-  if (boothRollCache.has(cacheKey)) {
+  if (forceReload) {
+    boothRollCache.delete(cacheKey);
+  } else if (boothRollCache.has(cacheKey)) {
     return boothRollCache.get(cacheKey)!;
   }
 
-  // Check for official booth dataset
+  // 1. Check if authentic extracted voter file exists
+  try {
+    const voterFileRes = await fetch(`/data/voters/ac_${acNo}/booth_${boothNo}.json?v=${Date.now()}`);
+    if (voterFileRes.ok) {
+      const contentType = voterFileRes.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const data = await voterFileRes.json();
+        if (data && Array.isArray(data.electors) && data.electors.length > 0) {
+          data.isAuthenticExtract = true;
+          boothRollCache.set(cacheKey, data);
+          return data;
+        }
+      }
+    }
+  } catch {
+    // fallback
+  }
+
+  // 2. Check for official booth dataset
   try {
     const res = await fetch(`/data/booths/ac_${acNo}.json`);
     if (res.ok) {

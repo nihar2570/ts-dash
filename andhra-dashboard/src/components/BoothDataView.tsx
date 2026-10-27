@@ -20,7 +20,9 @@ import {
   Calendar,
   LayoutGrid,
   FileSpreadsheet,
+  Zap,
 } from 'lucide-react';
+import { OnDemandVoterExtractorModal } from './OnDemandVoterExtractorModal';
 import { CONSTITUENCY_MANDALS, type MandalDetail } from '../data/mandalData';
 import { fetchBoothVoters, type BoothVoterRollSummary, type ElectorRecord } from '../data/voterRollService';
 import {
@@ -186,6 +188,24 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
   // Active booth voter roll data & loading state
   const [data, setData] = useState<BoothVoterRollSummary | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showExtractorModal, setShowExtractorModal] = useState(false);
+
+  const handleReloadBoothVoters = () => {
+    if (activeBoothMeta) {
+      setLoading(true);
+      fetchBoothVoters(
+        selectedAcNo,
+        activeBoothMeta.boothNo,
+        activeBoothMeta.name,
+        activeBoothMeta.mandalName,
+        activeBoothMeta.electorate,
+        true
+      ).then((res) => {
+        setData(res);
+        setLoading(false);
+      });
+    }
+  };
 
   // All 175 AC list
   const acList: AcItem[] = useMemo(() => {
@@ -250,6 +270,13 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
     return mandals.reduce((sum, m) => sum + (m.booths || 0), 0) || 240;
   }, [officialBooths, mandals]);
 
+  // Check if all booths for this AC are fully extracted
+  const isAcFullyExtracted = useMemo(() => {
+    if (selectedAcNo === 175) return true;
+    if (officialBooths.length === 0) return false;
+    return officialBooths.length > 0 && officialBooths.every((b) => b.isAuthenticExtract);
+  }, [selectedAcNo, officialBooths]);
+
   // Flattened booth catalog for the AC
   const allBoothsInAc = useMemo(() => {
     if (officialBooths.length > 0) {
@@ -274,6 +301,7 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
           leadParty: b.winner_party || matchedMandal?.lead_party || 'TDP',
           lat: b.lat,
           lng: b.lng,
+          isAuthenticExtract: b.isAuthenticExtract || false,
         };
       });
     }
@@ -295,6 +323,7 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
       leadParty: string;
       lat?: number;
       lng?: number;
+      isAuthenticExtract?: boolean;
     }> = [];
 
     let currentNo = 1;
@@ -809,14 +838,21 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                     </p>
                     <div className="flex items-center justify-between text-[10px] text-slate-400 mt-1">
                       <span className="truncate max-w-[110px]">{b.mandalName}</span>
-                      {b.lat && b.lng && (
-                        <span className="text-[9px] font-mono text-indigo-500">
-                          📍 GPS
+                      <div className="flex items-center gap-1">
+                        {b.isAuthenticExtract && (
+                          <span className="text-[9px] font-mono px-1 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">
+                            ✓ SIR 2026
+                          </span>
+                        )}
+                        {b.lat && b.lng && (
+                          <span className="text-[9px] font-mono text-indigo-500">
+                            📍 GPS
+                          </span>
+                        )}
+                        <span className="text-[9px] px-1 rounded bg-slate-200 text-slate-700 font-medium">
+                          {b.dominantCaste}
                         </span>
-                      )}
-                      <span className="text-[9px] px-1 rounded bg-slate-200 text-slate-700 font-medium">
-                        {b.dominantCaste}
-                      </span>
+                      </div>
                     </div>
                   </button>
                 );
@@ -867,16 +903,48 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                 </div>
 
                 <div className="flex items-center gap-1.5 flex-wrap">
+                  {isAcFullyExtracted ? (
+                    <button
+                      type="button"
+                      disabled
+                      className="px-3 py-1.5 rounded-lg border border-emerald-400/40 bg-emerald-50 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs opacity-90 cursor-default"
+                      title="Official 2026 Special Intensive Revision Draft Roll is fully extracted and active for all 205 booths in Kuppam AC"
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>✓ 2026 SIR Roll Active (All 205 Booths Extracted)</span>
+                    </button>
+                  ) : data.isAuthenticExtract ? (
+                    <button
+                      type="button"
+                      onClick={() => setShowExtractorModal(true)}
+                      className="px-2.5 py-1.5 rounded-lg border border-emerald-400 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
+                      title="Authentic Official ECI 2026 Voter Roll is loaded. Click to inspect or re-extract."
+                    >
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>✓ Authentic ECI Roll</span>
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setShowExtractorModal(true)}
+                      className="px-3 py-1.5 rounded-lg border border-amber-500 bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-950 text-xs font-extrabold transition-all flex items-center gap-1.5 shadow-md hover:shadow-lg cursor-pointer animate-pulse"
+                      title="Extract authentic voter list directly from 2026 ECI Draft Roll PDF in-memory"
+                    >
+                      <Zap className="w-3.5 h-3.5 fill-current text-slate-950" />
+                      <span>⚡ Extract Official Voters (On-Demand)</span>
+                    </button>
+                  )}
+
                   {data.roll2026Url && (
                     <a
                       href={data.roll2026Url}
                       target="_blank"
                       rel="noreferrer"
-                      className="px-2.5 py-1.5 rounded-lg border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
+                      className="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
                       title="View Official CEO / ECI 2026 Special Intensive Revision Draft Roll PDF"
                     >
-                      <FileText className="w-3.5 h-3.5 text-emerald-600" />
-                      <span>2026 ECI Roll ({data.totalPages} Pannas) ↗</span>
+                      <FileText className="w-3.5 h-3.5 text-slate-500" />
+                      <span>2026 PDF ({data.totalPages} Pannas) ↗</span>
                     </a>
                   )}
                   <button
@@ -1920,6 +1988,22 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
         </div>
       </div>
       )}
+
+      {/* On-Demand ECI Voter Roll Extractor Modal */}
+      <OnDemandVoterExtractorModal
+        isOpen={showExtractorModal}
+        onClose={() => setShowExtractorModal(false)}
+        acNo={selectedAcNo}
+        acName={currentAc?.ac_name}
+        boothNo={activeBoothMeta.boothNo}
+        boothName={activeBoothMeta.name}
+        mandalName={activeBoothMeta.mandalName}
+        electorate={activeBoothMeta.electorate}
+        isAlreadyExtracted={Boolean(data?.isAuthenticExtract)}
+        isAcFullyExtracted={isAcFullyExtracted}
+        officialRollUrl={data?.roll2026Url}
+        onExtractionSuccess={handleReloadBoothVoters}
+      />
     </div>
   );
 };

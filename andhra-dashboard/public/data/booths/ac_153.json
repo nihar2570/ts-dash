@@ -1,10 +1,10 @@
 [
   {
     "booth_no": 1,
-    "name": "M.P. ELEMENTARY SCHOOL, A.Nagireddypalli, A. NAGI REDDY PALLI",
+    "name": "M.P. ELEMENTARY SCHOOL, A.Nagireddypalli",
     "building": "M.P. ELEMENTARY SCHOOL, A.Nagireddypalli",
     "locality": "A. NAGI REDDY PALLI",
-    "sections": "1. A. Nagireddypalli, D.No.21 To 2End",
+    "sections": "1-M.P. ELEMENTARY SCHOOL MAIN BASTI. 2-M.P. ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ANANTAPURAM",
     "pincode": "515004",
     "lat": 14.728465,
@@ -35,14 +35,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-1-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1020,
+    "extracted_male": 515,
+    "extracted_female": 505,
+    "extracted_households": 300,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_1.json"
   },
   {
     "booth_no": 2,
     "name": "M.P.Ele.School, A.Narayanapuramu",
     "building": "M.P.Ele.School, A.Narayanapuramu",
     "locality": "A.NARAYANAPURAM",
-    "sections": "1. A.Narayanapuram, Block 1, Door No. 1-1 To 1-250",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ANANTAPURAM",
     "pincode": "515004",
     "lat": 14.703922,
@@ -73,14 +80,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-2-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1015,
+    "extracted_male": 512,
+    "extracted_female": 503,
+    "extracted_households": 292,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_2.json"
   },
   {
     "booth_no": 3,
     "name": "M.P.Ele.School, A.Narayanapuramu",
     "building": "M.P.Ele.School, A.Narayanapuramu",
     "locality": "A. NARAYANAPURAM",
-    "sections": "1. S.C Colony/Royal Nagar/Stalin Nagar, Block 1, D.No. 1-251 To 1-475-572",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ANANTAPURAM",
     "pincode": "515004",
     "lat": 14.703922,
@@ -111,15 +125,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-3-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 851,
+    "extracted_male": 429,
+    "extracted_female": 422,
+    "extracted_households": 236,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_3.json"
   },
   {
     "booth_no": 4,
     "name": "M.P.Ele.School, A.Narayanapuramu",
     "building": "M.P.Ele.School, A.Narayanapuramu",
     "locality": "A. NARAYANAPURAM",
-    "sections": "1. A.S.R Nagar, Stalin Nagar, Royal Nagar, D.No. 1-436 To 1-1496",
-    "mandal": "",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.703922,
     "lng": 77.57959,
@@ -149,15 +170,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-4-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1085,
+    "extracted_male": 547,
+    "extracted_female": 538,
+    "extracted_households": 307,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_4.json"
   },
   {
     "booth_no": 5,
-    "name": "Z.P.HIGH SCHOOL, TAPOVANAM, TAPOVANAM",
+    "name": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "building": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "locality": "TAPOVANAM",
-    "sections": "1. Tapovanam, D.No. 3-1 To 3-250",
-    "mandal": "",
+    "sections": "1-Z.P.HIGH SCHOOL MAIN BASTI. 2-Z.P.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.697016,
     "lng": 77.582551,
@@ -187,15 +215,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-5-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 973,
+    "extracted_male": 491,
+    "extracted_female": 482,
+    "extracted_households": 280,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_5.json"
   },
   {
     "booth_no": 6,
-    "name": "Z.P.HIGH SCHOOL, TAPOVANAM, TAPOVANAM",
+    "name": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "building": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "locality": "TAPOVANAM",
-    "sections": "1. Tapovanam, D.No. 3-251 To 3-324-153",
-    "mandal": "",
+    "sections": "1-Z.P.HIGH SCHOOL MAIN BASTI. 2-Z.P.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.697016,
     "lng": 77.582551,
@@ -225,15 +260,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-6-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 897,
+    "extracted_male": 452,
+    "extracted_female": 445,
+    "extracted_households": 260,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_6.json"
   },
   {
     "booth_no": 7,
-    "name": "Z.P.HIGH SCHOOL, TAPOVANAM, TAPOVANAM",
+    "name": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "building": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "locality": "TAPOVANAM",
-    "sections": "1. Tapovanam, D.No. 3-326 To 3-575",
-    "mandal": "",
+    "sections": "1-Z.P.HIGH SCHOOL MAIN BASTI. 2-Z.P.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.697016,
     "lng": 77.582551,
@@ -263,15 +305,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-7-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1016,
+    "extracted_male": 513,
+    "extracted_female": 503,
+    "extracted_households": 292,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_7.json"
   },
   {
     "booth_no": 8,
-    "name": "Z.P.HIGH SCHOOL, TAPOVANAM, TAPOVANAM",
+    "name": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "building": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "locality": "TAPOVANAM",
-    "sections": "1. Tapovanam, Door No. 3-576 To 3-1614",
-    "mandal": "",
+    "sections": "1-Z.P.HIGH SCHOOL MAIN BASTI. 2-Z.P.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.697016,
     "lng": 77.582551,
@@ -301,15 +350,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-8-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 851,
+    "extracted_male": 429,
+    "extracted_female": 422,
+    "extracted_households": 255,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_8.json"
   },
   {
     "booth_no": 9,
-    "name": "Z.P.HIGH SCHOOL, TAPOVANAM, TAPOVANAM",
+    "name": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "building": "Z.P.HIGH SCHOOL, TAPOVANAM",
     "locality": "TAPOVANAM",
-    "sections": "1. Stalin Nagar, D.No. 1-1 To 1-End",
-    "mandal": "",
+    "sections": "1-Z.P.HIGH SCHOOL MAIN BASTI. 2-Z.P.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.697016,
     "lng": 77.582551,
@@ -339,15 +395,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-9-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 934,
+    "extracted_male": 471,
+    "extracted_female": 463,
+    "extracted_households": 265,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_9.json"
   },
   {
     "booth_no": 10,
     "name": "M.P.Ele.School, Rajiv colony",
     "building": "M.P.Ele.School, Rajiv colony",
     "locality": "RAJIV COLONY",
-    "sections": "1. Rajeev Colony, Bhagat Singh Nagar, D. No. 1-1 To 1-End, 2-1 To 2-End",
-    "mandal": "",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.701816,
     "lng": 77.597792,
@@ -377,15 +440,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-10-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 714,
+    "extracted_male": 360,
+    "extracted_female": 354,
+    "extracted_households": 202,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_10.json"
   },
   {
     "booth_no": 11,
     "name": "M.P.Ele.School, Rajiv colony",
     "building": "M.P.Ele.School, Rajiv colony",
     "locality": "RAJIV COLONY",
-    "sections": "1. Rajeev Colony, D.No.31 To 3End,41 To 4End, 51 To 5End, 61",
-    "mandal": "",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.701816,
     "lng": 77.597792,
@@ -415,15 +485,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-11-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1021,
+    "extracted_male": 515,
+    "extracted_female": 506,
+    "extracted_households": 301,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_11.json"
   },
   {
     "booth_no": 12,
-    "name": "Gram panchayat office, Rajiv colony, RAJIV COLONY",
+    "name": "Gram panchayat office, Rajiv colony",
     "building": "Gram panchayat office, Rajiv colony",
     "locality": "RAJIV COLONY",
-    "sections": "1. Mutyalamma Colony, P.S Nagar, D. No. 7-1 To 7- End, 8-1 To 8-End",
-    "mandal": "",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.42253,
     "lng": 77.35965,
@@ -453,15 +530,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-12-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 777,
+    "extracted_male": 392,
+    "extracted_female": 385,
+    "extracted_households": 232,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_12.json"
   },
   {
     "booth_no": 13,
     "name": "M.P.U.P.School, Rudrampeta",
     "building": "M.P.U.P.School, Rudrampeta",
     "locality": "RUDRAMPETA",
-    "sections": "1. Rudrampeta, D. No. 1-1 To 1-200",
-    "mandal": "",
+    "sections": "1-M.P.U.P.SCHOOL MAIN BASTI. 2-M.P.U.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.671597,
     "lng": 77.578363,
@@ -491,15 +575,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-13-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 961,
+    "extracted_male": 485,
+    "extracted_female": 476,
+    "extracted_households": 264,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_13.json"
   },
   {
     "booth_no": 14,
     "name": "M.P.U.P.School, Rudrampeta",
     "building": "M.P.U.P.School, Rudrampeta",
     "locality": "RUDRAMPETA",
-    "sections": "1. Rudrampeta, D. No. 1-201 To 1-450",
-    "mandal": "",
+    "sections": "1-M.P.U.P.SCHOOL MAIN BASTI. 2-M.P.U.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.671597,
     "lng": 77.578363,
@@ -529,15 +620,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-14-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 968,
+    "extracted_male": 488,
+    "extracted_female": 480,
+    "extracted_households": 284,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_14.json"
   },
   {
     "booth_no": 15,
     "name": "M.P.U.P.School, Rudrampeta",
     "building": "M.P.U.P.School, Rudrampeta",
     "locality": "RUDRAMPETA",
-    "sections": "1. Rudrampeta, D. No. 1-451 To 1-650",
-    "mandal": "",
+    "sections": "1-M.P.U.P.SCHOOL MAIN BASTI. 2-M.P.U.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.671597,
     "lng": 77.578363,
@@ -567,15 +665,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-15-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1037,
+    "extracted_male": 523,
+    "extracted_female": 514,
+    "extracted_households": 297,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_15.json"
   },
   {
     "booth_no": 16,
     "name": "M.P.U.P.School, panthula colony, Rudrampeta",
     "building": "M.P.U.P.School, panthula colony, Rudrampeta",
     "locality": "RUDRAMPETA",
-    "sections": "1. Rudrampeta / A.D.C.C Bank Colony / Pantula Colony, D. No. 1-651 To End",
-    "mandal": "",
+    "sections": "1-M.P.U.P.SCHOOL MAIN BASTI. 2-M.P.U.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.671597,
     "lng": 77.578363,
@@ -605,15 +710,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-16-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 885,
+    "extracted_male": 446,
+    "extracted_female": 439,
+    "extracted_households": 250,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_16.json"
   },
   {
     "booth_no": 17,
     "name": "M.P.U.P.School, panthula colony, Rudrampeta",
     "building": "M.P.U.P.School, panthula colony, Rudrampeta",
     "locality": "RUDRAMPETA",
-    "sections": "1. Rudrampeta/Pantula Colony, Block No'S - 2 &amp; 3",
-    "mandal": "",
+    "sections": "1-M.P.U.P.SCHOOL MAIN BASTI. 2-M.P.U.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 14.671597,
     "lng": 77.578363,
@@ -643,6 +755,13 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/153/2026-EROLLGEN-S01-153-SIR-DraftRoll-Revision1-ENG-17-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 875,
+    "extracted_male": 441,
+    "extracted_female": 434,
+    "extracted_households": 243,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_153/booth_17.json"
   }
 ]

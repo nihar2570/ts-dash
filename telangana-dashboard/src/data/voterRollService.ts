@@ -30,7 +30,24 @@ export interface BoothVoterRollSummary {
   seniorCount: number; // 60+
   householdCount: number;
   totalPages: number;
+  roll2026Url?: string;
+  roll2026Pages?: number;
+  roll2026SizeKb?: number;
+  is2026OfficialRoll?: boolean;
+  isAuthenticExtract?: boolean;
+  roll_source?: {
+    year?: number;
+    revision?: string;
+    url?: string;
+    pdf_pages?: number;
+    pdf_size_mb?: number;
+  };
   electors: ElectorRecord[];
+}
+
+export function invalidateBoothCache(acNo: number, boothNo: number): void {
+  const cacheKey = `${acNo}_${boothNo}`;
+  boothRollCache.delete(cacheKey);
 }
 
 // Pseudo-random hash for deterministic reproducibility
@@ -339,20 +356,41 @@ export function generateBoothVoterRoll(
 // In-memory cache for ultra-fast instant booth inspection
 const boothRollCache = new Map<string, BoothVoterRollSummary>();
 
-// Loads voter rolls: checks in-memory cache first, falls back to deterministic generator (0.5ms)
+// Loads voter rolls: checks in-memory cache first, checks authentic JSON, falls back to deterministic generator
 export async function fetchBoothVoters(
   acNo: number,
   boothNo: number,
   boothName: string,
   mandalName: string,
-  electorateCount: number = 850
+  electorateCount: number = 850,
+  forceReload: boolean = false
 ): Promise<BoothVoterRollSummary> {
   const cacheKey = `${acNo}_${boothNo}`;
-  if (boothRollCache.has(cacheKey)) {
+  if (forceReload) {
+    boothRollCache.delete(cacheKey);
+  } else if (boothRollCache.has(cacheKey)) {
     return boothRollCache.get(cacheKey)!;
   }
 
-  // Generates calibrated demographic, household & caste profile in sub-millisecond
+  // 1. Check if authentic extracted voter file exists
+  try {
+    const voterFileRes = await fetch(`/data/voters/ac_${acNo}/booth_${boothNo}.json?v=${Date.now()}`);
+    if (voterFileRes.ok) {
+      const contentType = voterFileRes.headers.get('content-type') || '';
+      if (contentType.includes('application/json')) {
+        const data = await voterFileRes.json();
+        if (data && Array.isArray(data.electors) && data.electors.length > 0) {
+          data.isAuthenticExtract = true;
+          boothRollCache.set(cacheKey, data);
+          return data;
+        }
+      }
+    }
+  } catch {
+    // fallback
+  }
+
+  // 2. Generates calibrated demographic, household & caste profile in sub-millisecond
   const roll = generateBoothVoterRoll(acNo, boothNo, boothName, mandalName, electorateCount);
   boothRollCache.set(cacheKey, roll);
   return roll;

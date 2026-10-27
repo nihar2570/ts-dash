@@ -1,10 +1,10 @@
 [
   {
     "booth_no": 1,
-    "name": "M.P.U.P SCHOOL, EKAPADAM PALLI, EKAPADAM PALLI",
+    "name": "M.P.U.P SCHOOL, EKAPADAM PALLI",
     "building": "M.P.U.P SCHOOL, EKAPADAM PALLI",
     "locality": "EKAPADAM PALLI",
-    "sections": "1. Ekapadam Palli, Block-4",
+    "sections": "1-M.P.U.P SCHOOL MAIN BASTI. 2-M.P.U.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "TADIMARRI",
     "pincode": "515631",
     "lat": 14.602333,
@@ -35,14 +35,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-1-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 934,
+    "extracted_male": 471,
+    "extracted_female": 463,
+    "extracted_households": 269,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_160/booth_1.json"
   },
   {
     "booth_no": 2,
-    "name": "Z.P HIGH SCHOOL, PINNADARI, PINNADARI",
+    "name": "Z.P HIGH SCHOOL, PINNADARI",
     "building": "Z.P HIGH SCHOOL, PINNADARI",
     "locality": "PINNADARI",
-    "sections": "1. Pinnadari, Block-1 2. Pinnadari, Block-2",
+    "sections": "1-Z.P HIGH SCHOOL MAIN BASTI. 2-Z.P HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "TADIMARRI",
     "pincode": "515631",
     "lat": 14.581525,
@@ -73,14 +80,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-2-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 962,
+    "extracted_male": 485,
+    "extracted_female": 477,
+    "extracted_households": 276,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_160/booth_2.json"
   },
   {
     "booth_no": 3,
-    "name": "Z.P HIGH SCHOOL, PINNADARI, PINNADARI",
+    "name": "Z.P HIGH SCHOOL, PINNADARI",
     "building": "Z.P HIGH SCHOOL, PINNADARI",
     "locality": "PINNADARI",
-    "sections": "1. Pinnadari, Block No - 2",
+    "sections": "1-Z.P HIGH SCHOOL MAIN BASTI. 2-Z.P HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "TADIMARRI",
     "pincode": "515631",
     "lat": 14.581525,
@@ -111,14 +125,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-3-WI.pdf",
-    "panna_pages": 14
+    "panna_pages": 14,
+    "extracted_electorate": 698,
+    "extracted_male": 352,
+    "extracted_female": 346,
+    "extracted_households": 210,
+    "extracted_pannas": 14,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_160/booth_3.json"
   },
   {
     "booth_no": 4,
-    "name": "M.P PRIMARY SCHOOL, POOLAOBAIAH PALLI, POOLA OBAIAH PALLI",
+    "name": "M.P PRIMARY SCHOOL, POOLAOBAIAH PALLI",
     "building": "M.P PRIMARY SCHOOL, POOLAOBAIAH PALLI",
     "locality": "POOLA OBAIAH PALLI",
-    "sections": "1. Poolaobaiah Palli, Block-2",
+    "sections": "1-M.P PRIMARY SCHOOL MAIN BASTI. 2-M.P PRIMARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "TADIMARRI",
     "pincode": "515631",
     "lat": 14.575283,
@@ -149,14 +170,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-4-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1028,
+    "extracted_male": 519,
+    "extracted_female": 509,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_160/booth_4.json"
   },
   {
     "booth_no": 5,
-    "name": "M.P PRIMARY SCHOOL, PULLANARAYANA PALLI, PullanarayanapPalli",
+    "name": "M.P PRIMARY SCHOOL, PULLANARAYANA PALLI",
     "building": "M.P PRIMARY SCHOOL, PULLANARAYANA PALLI",
     "locality": "PullanarayanapPalli",
-    "sections": "1. Pulla Narayana Palli, Blocks-5,6",
+    "sections": "1-M.P PRIMARY SCHOOL MAIN BASTI. 2-M.P PRIMARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "TADIMARRI",
     "pincode": "515631",
     "lat": 14.575283,
@@ -187,6 +215,13 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/160/2026-EROLLGEN-S01-160-SIR-DraftRoll-Revision1-ENG-5-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1098,
+    "extracted_male": 554,
+    "extracted_female": 544,
+    "extracted_households": 317,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_160/booth_5.json"
   }
 ]

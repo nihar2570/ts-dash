@@ -4,7 +4,7 @@
     "name": "M.P.U.P School, Eastern Side, S.Illindalaparru",
     "building": "M.P.U.P School, Eastern Side, S.Illindalaparru",
     "locality": "MPUPS,East Side,S.I.Parru",
-    "sections": "1. Somaraju Illindalparru Blocks 1,2, Somaraju Illindalparru 2. Somaraju Illindalaparru Block2, Somaraju Illindalaparru 3. Somaraju Illindalaparru Block3, Somaraju Illindalaparru",
+    "sections": "1-M.P.U.P SCHOOL MAIN BASTI. 2-M.P.U.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534222",
     "lat": 16.681681,
@@ -35,14 +35,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-1-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 792,
+    "extracted_male": 399,
+    "extracted_female": 393,
+    "extracted_households": 225,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_1.json"
   },
   {
     "booth_no": 2,
     "name": "M.P.U.P School, Western Side, S.Illindalaparru",
     "building": "M.P.U.P School, Western Side, S.Illindalaparru",
     "locality": "MPUPS,West Side,S.I.Parru",
-    "sections": "1. Somaraju Illindalparru Blocks 3,4, Somaraju Illindalparru 2. Somaraju Illindalaparru Block2, Somaraju Illindalaparru 3. Somaraju Illindalaparru Block3, Somaraju Illindalaparru",
+    "sections": "1-M.P.U.P SCHOOL MAIN BASTI. 2-M.P.U.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534222",
     "lat": 16.681681,
@@ -73,14 +80,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-2-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1040,
+    "extracted_male": 525,
+    "extracted_female": 515,
+    "extracted_households": 303,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_2.json"
   },
   {
     "booth_no": 3,
     "name": "M.P U P School, Mallipudi, Mallipudi",
     "building": "M.P U P School, Mallipudi, Mallipudi",
     "locality": "MPUPS,Eastern Side,Mallipudi",
-    "sections": "1. Mallipudi Blocks 1,2, Mallipudi 2. Mallipudi Block2, Mallipudi",
+    "sections": "1-M.P U P SCHOOL MAIN BASTI. 2-M.P U P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534124",
     "lat": 16.667878,
@@ -111,14 +125,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-3-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1063,
+    "extracted_male": 536,
+    "extracted_female": 527,
+    "extracted_households": 295,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_3.json"
   },
   {
     "booth_no": 4,
-    "name": "MPUP SCHOOL, MALLIPUDI, WESTERN SIDE MALLIPUDI, Mallipudi",
+    "name": "MPUP SCHOOL, MALLIPUDI, WESTERN SIDE MALLIPUDI",
     "building": "MPUP SCHOOL, MALLIPUDI, WESTERN SIDE MALLIPUDI",
     "locality": "Mallipudi",
-    "sections": "1. Mallipudi Blocks 3,4,5, Mallipudi 2. Mallipudi Block4, Mallipudi 3. Mallipudi Block5, Mallipudi",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534124",
     "lat": 16.665979,
@@ -149,14 +170,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-4-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 947,
+    "extracted_male": 478,
+    "extracted_female": 469,
+    "extracted_households": 264,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_4.json"
   },
   {
     "booth_no": 5,
-    "name": "Gramkacheri, Vadali, Grama Kacheri,Vadali",
+    "name": "Gramkacheri, Vadali",
     "building": "Gramkacheri, Vadali",
     "locality": "Grama Kacheri,Vadali",
-    "sections": "1. Vadali Blocks 1,2,3, Vadali",
+    "sections": "1-GRAMKACHERI MAIN BASTI. 2-GRAMKACHERI COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.669029,
@@ -187,14 +215,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-5-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 849,
+    "extracted_male": 428,
+    "extracted_female": 421,
+    "extracted_households": 249,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_5.json"
   },
   {
     "booth_no": 6,
-    "name": "MPP SCHOOL, VADALI, EASTERN SIDE PART VADALI, Vadali",
+    "name": "MPP SCHOOL, VADALI, EASTERN SIDE PART VADALI",
     "building": "MPP SCHOOL, VADALI, EASTERN SIDE PART VADALI",
     "locality": "Vadali",
-    "sections": "1. Vadli Blocks 4,5, Vadli",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.667402,
@@ -225,14 +260,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-6-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 816,
+    "extracted_male": 412,
+    "extracted_female": 404,
+    "extracted_households": 233,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_6.json"
   },
   {
     "booth_no": 7,
-    "name": "MPP SCHOOL, VADALI, CENTRAL PART, VADALI, Vadali",
+    "name": "MPP SCHOOL, VADALI, CENTRAL PART, VADALI",
     "building": "MPP SCHOOL, VADALI, CENTRAL PART, VADALI",
     "locality": "Vadali",
-    "sections": "1. Vadli Blocks 6,7, Vadli",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.667402,
@@ -263,14 +305,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-7-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1073,
+    "extracted_male": 541,
+    "extracted_female": 532,
+    "extracted_households": 304,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_7.json"
   },
   {
     "booth_no": 8,
-    "name": "MPP SCHOOL, VADALI, WESTREN PART VADALI, Vadali",
+    "name": "MPP SCHOOL, VADALI, WESTREN PART VADALI",
     "building": "MPP SCHOOL, VADALI, WESTREN PART VADALI",
     "locality": "Vadali",
-    "sections": "1. Vadli Blocks 8,9, Vadli",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.667402,
@@ -301,14 +350,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-8-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 957,
+    "extracted_male": 483,
+    "extracted_female": 474,
+    "extracted_households": 279,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_8.json"
   },
   {
     "booth_no": 9,
     "name": "ZPH School, Eastern side room,, SIDHANTAM",
     "building": "ZPH School, Eastern side room,, SIDHANTAM",
     "locality": "MPESRegularEasternSide Room,NewBuilding Sidhantham",
-    "sections": "1. Sidhantam 1,2 Blocks, Siddantham",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.670266,
@@ -339,14 +395,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-9-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 921,
+    "extracted_male": 465,
+    "extracted_female": 456,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_9.json"
   },
   {
     "booth_no": 10,
-    "name": "MPPS (REGULAR) NEW BUILDING, WESTERN PART, SIDHANTAM, MPESRegularWesternSide Room,NewBuilding Sidhantham",
+    "name": "MPPS (REGULAR) NEW BUILDING, WESTERN PART, SIDHANTAM",
     "building": "MPPS (REGULAR) NEW BUILDING, WESTERN PART, SIDHANTAM",
     "locality": "MPESRegularWesternSide Room,NewBuilding Sidhantham",
-    "sections": "1. Sidhantam Block 4, Siddhantam",
+    "sections": "1-MPPS (REGULAR) NEW BUILDING MAIN BASTI. 2-MPPS (REGULAR) NEW BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.670266,
@@ -377,14 +440,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-10-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 943,
+    "extracted_male": 476,
+    "extracted_female": 467,
+    "extracted_households": 272,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_10.json"
   },
   {
     "booth_no": 11,
-    "name": "MPPS, REGULAR ,TEACHERS CENTRAL BUILDING ,, SIDDANTAM, MPES Regular Teachers Central Building,Sidhantam",
+    "name": "MPPS, REGULAR ,TEACHERS CENTRAL BUILDING ,, SIDDANTAM",
     "building": "MPPS, REGULAR ,TEACHERS CENTRAL BUILDING ,, SIDDANTAM",
     "locality": "MPES Regular Teachers Central Building,Sidhantam",
-    "sections": "1. Siddhantam Block - 3, Siddhantam",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.670266,
@@ -415,14 +485,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-11-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1011,
+    "extracted_male": 510,
+    "extracted_female": 501,
+    "extracted_households": 297,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_11.json"
   },
   {
     "booth_no": 12,
-    "name": "ZP HIGH SCHOOL, EASTERN SIDE ROOM,, SIDHANTAM, ZPHS Eastern Side Room,Sidhantam",
+    "name": "ZP HIGH SCHOOL, EASTERN SIDE ROOM,, SIDHANTAM",
     "building": "ZP HIGH SCHOOL, EASTERN SIDE ROOM,, SIDHANTAM",
     "locality": "ZPHS Eastern Side Room,Sidhantam",
-    "sections": "1. Siddantham Blaak-5, Nakkavaripalem Sivaru",
+    "sections": "1-ZP HIGH SCHOOL MAIN BASTI. 2-ZP HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.67177,
@@ -453,14 +530,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-12-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 855,
+    "extracted_male": 431,
+    "extracted_female": 424,
+    "extracted_households": 246,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_12.json"
   },
   {
     "booth_no": 13,
-    "name": "ZP HIGH SCHOOL,ADDITIONAL BLOCK, WESTERN SIDE ROOM, SIDHANTAM, ZPHS Additional Block,Western Side Room Siddhantam",
+    "name": "ZP HIGH SCHOOL,ADDITIONAL BLOCK, WESTERN SIDE ROOM, SIDHANTAM",
     "building": "ZP HIGH SCHOOL,ADDITIONAL BLOCK, WESTERN SIDE ROOM, SIDHANTAM",
     "locality": "ZPHS Additional Block,Western Side Room Siddhantam",
-    "sections": "1. Sidhantam Block -6, Sidhantam 2. Sidhantam, Sidhantam 7Va Blaku",
+    "sections": "1-ZP HIGH SCHOOL MAIN BASTI. 2-ZP HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.67177,
@@ -491,14 +575,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-13-WI.pdf",
-    "panna_pages": 24
+    "panna_pages": 24,
+    "extracted_electorate": 1200,
+    "extracted_male": 606,
+    "extracted_female": 594,
+    "extracted_households": 348,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_13.json"
   },
   {
     "booth_no": 14,
-    "name": "ZP HIGH SCHOOL (ADDL BLOCK) EASTERN SIDE ROOM, SIDHANTAM BLOCK 7, ZPHS(ADDL ROOM) EASTERN SIDE ROOM, SIDHANTAM",
+    "name": "ZP HIGH SCHOOL (ADDL BLOCK) EASTERN SIDE ROOM, SIDHANTAM BLOCK 7",
     "building": "ZP HIGH SCHOOL (ADDL BLOCK) EASTERN SIDE ROOM, SIDHANTAM BLOCK 7",
     "locality": "ZPHS(ADDL ROOM) EASTERN SIDE ROOM, SIDHANTAM",
-    "sections": "1. Sidhantam Block 7, Sidhantam",
+    "sections": "1-ZP HIGH SCHOOL (ADDL BLOCK) EASTERN SIDE ROOM MAIN BASTI. 2-ZP HIGH SCHOOL (ADDL BLOCK) EASTERN SIDE ROOM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.67177,
@@ -529,14 +620,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-14-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 974,
+    "extracted_male": 491,
+    "extracted_female": 483,
+    "extracted_households": 281,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_14.json"
   },
   {
     "booth_no": 15,
-    "name": "ZPHS,WESTERN SIDE ROOM,, SIDDANTAM, ZPHS WESTERN SIDE ROOM,SIDHANTAM",
+    "name": "ZPHS,WESTERN SIDE ROOM,, SIDDANTAM",
     "building": "ZPHS,WESTERN SIDE ROOM,, SIDDANTAM",
     "locality": "ZPHS WESTERN SIDE ROOM,SIDHANTAM",
-    "sections": "1. Siddantham Blaak-8, Siddantham",
+    "sections": "1-ZPHS MAIN BASTI. 2-ZPHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.67177,
@@ -567,14 +665,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-15-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 826,
+    "extracted_male": 417,
+    "extracted_female": 409,
+    "extracted_households": 233,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_15.json"
   },
   {
     "booth_no": 16,
     "name": "Mandala Parishat Prathamik Pathashala, Ghatala Dibba /Sidhatatmam",
     "building": "Mandala Parishat Prathamik Pathashala, Ghatala Dibba /Sidhatatmam",
     "locality": "MPEle SCHOOL GHATALADIBBA H/o SIDHANTAM",
-    "sections": "1. Siddhantam Blaak-9, Siddhantam",
+    "sections": "1-MANDALA PARISHAT PRATHAMIK PATHASHALA MAIN BASTI. 2-MANDALA PARISHAT PRATHAMIK PATHASHALA COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.669552,
@@ -605,14 +710,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-16-WI.pdf",
-    "panna_pages": 24
+    "panna_pages": 24,
+    "extracted_electorate": 1170,
+    "extracted_male": 590,
+    "extracted_female": 580,
+    "extracted_households": 336,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_16.json"
   },
   {
     "booth_no": 17,
-    "name": "MPPS -MAIN, SIDHANTAM SIVARU DONGARAVIPALEM, MPEle SCHOOL (MAIN)DONGARAVIPALEM H/o SIDHANTAM",
+    "name": "MPPS -MAIN, SIDHANTAM SIVARU DONGARAVIPALEM",
     "building": "MPPS -MAIN, SIDHANTAM SIVARU DONGARAVIPALEM",
     "locality": "MPEle SCHOOL (MAIN)DONGARAVIPALEM H/o SIDHANTAM",
-    "sections": "1. Dongaravipalem Blocks 1, 3, Siddantham Sivaru",
+    "sections": "1-MPPS -MAIN MAIN BASTI. 2-MPPS -MAIN COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.692985,
@@ -643,14 +755,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-17-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 963,
+    "extracted_male": 486,
+    "extracted_female": 477,
+    "extracted_households": 281,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_17.json"
   },
   {
     "booth_no": 18,
-    "name": "MPPS SPECIAL RAJIV NAGAR, SIDDANTAM SIVARU DONGARAVIPALEM, MPES(SPL)RAJIV NAGAR, DONGARAVIPALE H/o SIDDANTHAM",
+    "name": "MPPS SPECIAL RAJIV NAGAR, SIDDANTAM SIVARU DONGARAVIPALEM",
     "building": "MPPS SPECIAL RAJIV NAGAR, SIDDANTAM SIVARU DONGARAVIPALEM",
     "locality": "MPES(SPL)RAJIV NAGAR, DONGARAVIPALE H/o SIDDANTHAM",
-    "sections": "1. Dongaravipalem Block - 2, Siddhantham Sivaru",
+    "sections": "1-MPPS SPECIAL RAJIV NAGAR MAIN BASTI. 2-MPPS SPECIAL RAJIV NAGAR COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.692985,
@@ -681,14 +800,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-18-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 938,
+    "extracted_male": 473,
+    "extracted_female": 465,
+    "extracted_households": 272,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_18.json"
   },
   {
     "booth_no": 19,
     "name": "ZP High School, Eastern side bldg., Western part 4, ILAPARRU",
     "building": "ZP High School, Eastern side bldg., Western part 4, ILAPARRU",
     "locality": "ZPHS ESTERN SIDE BUILDING,WESTERN PART,ILAPARRU",
-    "sections": "1. Ilparru 1-1 To 1-146 And 2, Ilparru 2. Ilparru, Ilparru 2Va Blaku",
+    "sections": "1-ZP HIGH SCHOOL MAIN BASTI. 2-ZP HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.654088,
@@ -719,14 +845,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-19-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 962,
+    "extracted_male": 485,
+    "extracted_female": 477,
+    "extracted_households": 275,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_19.json"
   },
   {
     "booth_no": 20,
     "name": "ZP High School, Western side bldg., Northern side, ILAPARRU",
     "building": "ZP High School, Western side bldg., Northern side, ILAPARRU",
     "locality": "ZPHS WESTERN SIDE BUILDING,ILAPARRU",
-    "sections": "1. Ilparru, Ilparru 1-147 To 1-285,3 &amp; 4",
+    "sections": "1-ZP HIGH SCHOOL MAIN BASTI. 2-ZP HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.654088,
@@ -757,14 +890,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-20-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1102,
+    "extracted_male": 556,
+    "extracted_female": 546,
+    "extracted_households": 316,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_20.json"
   },
   {
     "booth_no": 21,
     "name": "Mandala Parishat Meyin Prathamik Pathashala, Ramannapalem",
     "building": "Mandala Parishat Meyin Prathamik Pathashala, Ramannapalem",
     "locality": "RAMANNAPALEM",
-    "sections": "1. Ramannapalena, Ramannapalem",
+    "sections": "1-MANDALA PARISHAT MEYIN PRATHAMIK PATHASHALA MAIN BASTI. 2-MANDALA PARISHAT MEYIN PRATHAMIK PATHASHALA COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.655207,
@@ -795,14 +935,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-21-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 880,
+    "extracted_male": 444,
+    "extracted_female": 436,
+    "extracted_households": 257,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_21.json"
   },
   {
     "booth_no": 22,
     "name": "MPUP School, Eastern Part, Ramannapalem Sivaru Yar, RAMANNAPALEM SIVARU YERRAMSETTIVARIPALEM",
     "building": "MPUP School, Eastern Part, Ramannapalem Sivaru Yar, RAMANNAPALEM SIVARU YERRAMSETTIVARIPALEM",
     "locality": "Ramannapalem",
-    "sections": "1. Ramannapallem, Ramannapalem Blocks 2,3 2. Ramannapalem, Ramannapalem 3Va Blaku",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.661587,
@@ -833,14 +980,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-22-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 827,
+    "extracted_male": 417,
+    "extracted_female": 410,
+    "extracted_households": 245,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_22.json"
   },
   {
     "booth_no": 23,
-    "name": "M.P.P.SCHOOL, Vekatarampuram, Venkataramapuram",
+    "name": "M.P.P.SCHOOL, Vekatarampuram",
     "building": "M.P.P.SCHOOL, Vekatarampuram",
     "locality": "Venkataramapuram",
-    "sections": "1. Venkatrampuram, Venkataramapuram Blocks-1,2,3",
+    "sections": "1-M.P.P.SCHOOL MAIN BASTI. 2-M.P.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.659665,
@@ -871,15 +1025,22 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-23-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 818,
+    "extracted_male": 413,
+    "extracted_female": 405,
+    "extracted_households": 233,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_23.json"
   },
   {
     "booth_no": 24,
     "name": "Mandala Pareshata Spesala Prademekpatsala, Cherukuwada / Chinnamvaripalem",
     "building": "Mandala Pareshata Spesala Prademekpatsala, Cherukuwada / Chinnamvaripalem",
     "locality": "CHINNAMVARIPALEM H/O CHERUKUWADA",
-    "sections": "1. Chinnanwaripalena, Chinnanwaripalena Blaak-34",
-    "mandal": "",
+    "sections": "1-MANDALA PARESHATA SPESALA PRADEMEKPATSALA MAIN BASTI. 2-MANDALA PARESHATA SPESALA PRADEMEKPATSALA COLONY STREET. 3-SC / BC COLONY",
+    "mandal": "ASSEMBLY MANDAL",
     "pincode": "",
     "lat": 16.657848,
     "lng": 81.749041,
@@ -909,14 +1070,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-24-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1039,
+    "extracted_male": 524,
+    "extracted_female": 515,
+    "extracted_households": 289,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_24.json"
   },
   {
     "booth_no": 25,
     "name": "Zillaparishat Unnatapatashala, Juthiga, Western, Juthiga",
     "building": "Zillaparishat Unnatapatashala, Juthiga, Western, Juthiga",
     "locality": "Juttiga Blocks One to Five",
-    "sections": "1. Juttiga Blocks 1,2,3, Juttiga 2. Juttiga Block2, Juttiga 3. Juttiga Block3, Juttiga",
+    "sections": "1-ZILLAPARISHAT UNNATAPATASHALA MAIN BASTI. 2-ZILLAPARISHAT UNNATAPATASHALA COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534124",
     "lat": 16.659766,
@@ -947,14 +1115,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-25-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 796,
+    "extracted_male": 401,
+    "extracted_female": 395,
+    "extracted_households": 226,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_25.json"
   },
   {
     "booth_no": 26,
     "name": "Zillaparishat Unnatapatashala, Juthiga, Uttaramvaipu Bhavanam, Juthiga",
     "building": "Zillaparishat Unnatapatashala, Juthiga, Uttaramvaipu Bhavanam, Juthiga",
     "locality": "Juttiga Blocks One to Five",
-    "sections": "1. Juthiga Blocks 3,4,5, Juthiga 2. Juttiga Block2, Juttiga 3. Juttiga Block3, Juttiga",
+    "sections": "1-ZILLAPARISHAT UNNATAPATASHALA MAIN BASTI. 2-ZILLAPARISHAT UNNATAPATASHALA COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534124",
     "lat": 16.659766,
@@ -985,14 +1160,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-26-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 914,
+    "extracted_male": 461,
+    "extracted_female": 453,
+    "extracted_households": 265,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_26.json"
   },
   {
     "booth_no": 27,
     "name": "M.P.P.P School,Natharameshwaram, EAST SIDE, Natharameshwaram",
     "building": "M.P.P.P School,Natharameshwaram, EAST SIDE, Natharameshwaram",
     "locality": "Nattarameswaram",
-    "sections": "1. Natharameshwaram Blocks 1,4, Natharameshwaram 2. Block2, Natharameshwaram 3. Block 3, Natharameshwaram",
+    "sections": "1-M.P.P.P SCHOOL MAIN BASTI. 2-M.P.P.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.661579,
@@ -1023,14 +1205,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-27-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 821,
+    "extracted_male": 414,
+    "extracted_female": 407,
+    "extracted_households": 237,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_27.json"
   },
   {
     "booth_no": 28,
     "name": "M.P.P. School, Natharameshwaram, 2stairs building side Natharameshwaram",
     "building": "M.P.P. School, Natharameshwaram, 2stairs building side Natharameshwaram",
     "locality": "Nattarameswaram",
-    "sections": "1. Natharameshwaram Blocks 2.3, Natharameshwaram 2. Natharameshwaram Block2, Natharameshwaram 3. Natharameshwaram Block3, Natharameshwaram",
+    "sections": "1-M.P.P. SCHOOL MAIN BASTI. 2-M.P.P. SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.661579,
@@ -1061,14 +1250,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-28-WI.pdf",
-    "panna_pages": 14
+    "panna_pages": 14,
+    "extracted_electorate": 687,
+    "extracted_male": 346,
+    "extracted_female": 341,
+    "extracted_households": 191,
+    "extracted_pannas": 14,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_28.json"
   },
   {
     "booth_no": 29,
     "name": "M.P.P School,(Regular) Western Side, Mamuduru",
     "building": "M.P.P School,(Regular) Western Side, Mamuduru",
     "locality": "Mamuduru Blocks One to Four",
-    "sections": "1. Mamuduru Blocks 1,2 And 3 Part, Mamuduru 2. Bokkawaripalem Block2, Mamuduru 3. Block3, Bokkavaripalem",
+    "sections": "1-M.P.P SCHOOL MAIN BASTI. 2-M.P.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.633307,
@@ -1099,14 +1295,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-29-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 934,
+    "extracted_male": 471,
+    "extracted_female": 463,
+    "extracted_households": 282,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_29.json"
   },
   {
     "booth_no": 30,
     "name": "M.P.P School,(Regular)Easetern Side, Mamuduru",
     "building": "M.P.P School,(Regular)Easetern Side, Mamuduru",
     "locality": "Mamuduru Blocks One to Four",
-    "sections": "1. Mamuduru Blocks 3(Part) And 4, Mamuduru 2. Bokkawaripalem Block2, Mamuduru 3. Block3, Bokkavaripalem",
+    "sections": "1-M.P.P SCHOOL MAIN BASTI. 2-M.P.P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.633307,
@@ -1137,14 +1340,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-30-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 990,
+    "extracted_male": 499,
+    "extracted_female": 491,
+    "extracted_households": 289,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_30.json"
   },
   {
     "booth_no": 31,
     "name": "M.P.P.School, Regular, Mamuduru, Western side Mamuduru",
     "building": "M.P.P.School, Regular, Mamuduru, Western side Mamuduru",
     "locality": "Mamuduru",
-    "sections": "1. Mamuduru Blocks 5,6, Mamuduru 2. Block6, Mamuduru 3. Block7, Mamuduru",
+    "sections": "1-M.P.P.SCHOOL MAIN BASTI. 2-M.P.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.633307,
@@ -1175,14 +1385,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-31-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 968,
+    "extracted_male": 488,
+    "extracted_female": 480,
+    "extracted_households": 287,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_31.json"
   },
   {
     "booth_no": 32,
     "name": "M.P.P.School,SPECIAL, EAST-SIDE MAMUDUR",
     "building": "M.P.P.School,SPECIAL, EAST-SIDE MAMUDUR",
     "locality": "Mamuduru Blocks Five to Seven",
-    "sections": "1. Mamuduru Block 7, Mamuduru 2. Block6, Mamuduru 3. Block7, Mamuduru",
+    "sections": "1-M.P.P.SCHOOL MAIN BASTI. 2-M.P.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.633042,
@@ -1213,14 +1430,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-32-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 887,
+    "extracted_male": 447,
+    "extracted_female": 440,
+    "extracted_households": 248,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_32.json"
   },
   {
     "booth_no": 33,
     "name": "Z.P.H.School, Western Side Room No.1, New Building, Penumantra",
     "building": "Z.P.H.School, Western Side Room No.1, New Building, Penumantra",
     "locality": "Penumantra Blocks One to Three",
-    "sections": "1. Penumantra Blocks 1,2, Penumantra 2. Block2, Penumantra 3. Block3, Penumantra",
+    "sections": "1-Z.P.H.SCHOOL MAIN BASTI. 2-Z.P.H.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.643552,
@@ -1251,14 +1475,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-33-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1050,
+    "extracted_male": 530,
+    "extracted_female": 520,
+    "extracted_households": 301,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_33.json"
   },
   {
     "booth_no": 34,
     "name": "R A ZPH SCHOOL, PENUMANTRA, New Building SOUTHERN SIDE ROOM NO.4",
     "building": "R A ZPH SCHOOL, PENUMANTRA, New Building SOUTHERN SIDE ROOM NO.4",
     "locality": "Penumantra",
-    "sections": "1. Penumantra Blocks 1,2, Penumantra 2. Block2, Penumantra 3. Block3, Penumantra",
+    "sections": "1-R A ZPH SCHOOL MAIN BASTI. 2-R A ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.643552,
@@ -1289,14 +1520,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-34-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1125,
+    "extracted_male": 568,
+    "extracted_female": 557,
+    "extracted_households": 317,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_34.json"
   },
   {
     "booth_no": 35,
     "name": "LSCs Building, Eastern Side, Penumantra",
     "building": "LSCs Building, Eastern Side, Penumantra",
     "locality": "Penumantra Blocks in IInd part and Three to Five",
-    "sections": "1. Penumantra Blocks 2,3, Penumantra 2. Block3, Penumantra 3. Block4, Penumantra",
+    "sections": "1-LSCS BUILDING MAIN BASTI. 2-LSCS BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.644499,
@@ -1327,14 +1565,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-35-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 957,
+    "extracted_male": 483,
+    "extracted_female": 474,
+    "extracted_households": 275,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_35.json"
   },
   {
     "booth_no": 36,
-    "name": "Mahilamandali Bhavanamu, Penumantra, NEAR SICITY PENUMANTRA, Penumantra",
+    "name": "Mahilamandali Bhavanamu, Penumantra, NEAR SICITY PENUMANTRA",
     "building": "Mahilamandali Bhavanamu, Penumantra, NEAR SICITY PENUMANTRA",
     "locality": "Penumantra",
-    "sections": "1. Penumantra Blocks 4,5, Penumantra 2. Block3, Penumantra 3. Block4, Penumantra",
+    "sections": "1-MAHILAMANDALI BHAVANAMU MAIN BASTI. 2-MAHILAMANDALI BHAVANAMU COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.646027,
@@ -1365,14 +1610,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-36-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 873,
+    "extracted_male": 440,
+    "extracted_female": 433,
+    "extracted_households": 248,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_36.json"
   },
   {
     "booth_no": 37,
     "name": "Z.P.H.School, PENUMANTRA, NEW BUILDING SOUTHERN SIDE ROOM NO.2",
     "building": "Z.P.H.School, PENUMANTRA, NEW BUILDING SOUTHERN SIDE ROOM NO.2",
     "locality": "PENUMANTRA",
-    "sections": "1. Penumantra Blocks 6,7, And 8 (Part), Penumantra 2. Block7, Penumantra 3. Block8, Penumantra",
+    "sections": "1-Z.P.H.SCHOOL MAIN BASTI. 2-Z.P.H.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.643552,
@@ -1403,14 +1655,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-37-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 811,
+    "extracted_male": 409,
+    "extracted_female": 402,
+    "extracted_households": 230,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_37.json"
   },
   {
     "booth_no": 38,
     "name": "Mandalparishat Karyalayamu, BrahamanCheruvu, Meeting hall, Penumantra Sivaru BrahamanCheruvu",
     "building": "Mandalparishat Karyalayamu, BrahamanCheruvu, Meeting hall, Penumantra Sivaru BrahamanCheruvu",
     "locality": "Brahmanachevu Blocks in Eight part Nine",
-    "sections": "1. Penumantra 8Th Black Part And 9Th, Penumantra 2. Block9, Penumantra",
+    "sections": "1-MANDALPARISHAT KARYALAYAMU MAIN BASTI. 2-MANDALPARISHAT KARYALAYAMU COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.634721,
@@ -1441,14 +1700,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-38-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 734,
+    "extracted_male": 370,
+    "extracted_female": 364,
+    "extracted_households": 221,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_38.json"
   },
   {
     "booth_no": 39,
-    "name": "MPP SCHOOL, BRAHMANACHERVU, BrahamanCheruvu, Brahmanacheruvu",
+    "name": "MPP SCHOOL, BRAHMANACHERVU, BrahamanCheruvu",
     "building": "MPP SCHOOL, BRAHMANACHERVU, BrahamanCheruvu",
     "locality": "Brahmanacheruvu",
-    "sections": "1. Penumantra Blacks 10,11,12, Penumantra 2. Block11, Penumantra 3. Block12, Penumantra",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.637712,
@@ -1479,14 +1745,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-39-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 902,
+    "extracted_male": 455,
+    "extracted_female": 447,
+    "extracted_households": 255,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_39.json"
   },
   {
     "booth_no": 40,
-    "name": "MPP SCHOOL, VELAGALAVARIPALEM H/O JUTTIGA, NORTHERN SIDE VELAGALAVARIPALEM, H/O JUTTIGA, VELAGALA VARI PALEM",
+    "name": "MPP SCHOOL, VELAGALAVARIPALEM H/O JUTTIGA, NORTHERN SIDE VELAGALAVARIPALEM, H/O JUTTIGA",
     "building": "MPP SCHOOL, VELAGALAVARIPALEM H/O JUTTIGA, NORTHERN SIDE VELAGALAVARIPALEM, H/O JUTTIGA",
     "locality": "VELAGALA VARI PALEM",
-    "sections": "1. Juttiga Blocks 5 And 13(Part), Velagalawaripalem 2. Block13, Velagalavaripalem,Penumantra 3. Block14, Velagalavaripalem",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.650524,
@@ -1517,14 +1790,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-40-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 922,
+    "extracted_male": 465,
+    "extracted_female": 457,
+    "extracted_households": 271,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_40.json"
   },
   {
     "booth_no": 41,
-    "name": "MPP SCHOOL VELAGALAVARIPALEM, H/O JUTTIGA, SOUTHERN SIDE VELAGALAVARIPALEM, H/O JUTTIGA, VELAGALAVARIPALEM",
+    "name": "MPP SCHOOL VELAGALAVARIPALEM, H/O JUTTIGA, SOUTHERN SIDE VELAGALAVARIPALEM, H/O JUTTIGA",
     "building": "MPP SCHOOL VELAGALAVARIPALEM, H/O JUTTIGA, SOUTHERN SIDE VELAGALAVARIPALEM, H/O JUTTIGA",
     "locality": "VELAGALAVARIPALEM",
-    "sections": "1. Juttiga Blocks 13(Part) And 14, Juttiga Shiwaru Velaglwaripalem 2. Block13, Penumantra 3. Block14, Penumantra",
+    "sections": "1-VELAGALAVARIPALEM MAIN BASTI. 2-VELAGALAVARIPALEM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534134",
     "lat": 16.650524,
@@ -1555,14 +1835,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-41-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 920,
+    "extracted_male": 464,
+    "extracted_female": 456,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_41.json"
   },
   {
     "booth_no": 42,
     "name": "M.P P School,, KOYYETIPADU",
     "building": "M.P P School,, KOYYETIPADU",
     "locality": "Koyyetipadu Blocks One and Two",
-    "sections": "1. Koyyetipadu Blocks 1,2, Koyyetipadu 2. Block2, Koyyetipadu",
+    "sections": "1-M.P P SCHOOL MAIN BASTI. 2-M.P P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534320",
     "lat": 16.643034,
@@ -1593,14 +1880,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-42-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 761,
+    "extracted_male": 384,
+    "extracted_female": 377,
+    "extracted_households": 210,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_42.json"
   },
   {
     "booth_no": 43,
-    "name": "GRAM PANCHAYAT OFFICE, PENUGONDA, Penugonda",
+    "name": "GRAM PANCHAYAT OFFICE, PENUGONDA",
     "building": "GRAM PANCHAYAT OFFICE, PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda Blaak-26, Penugonda",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.655763,
@@ -1631,14 +1925,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-43-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 925,
+    "extracted_male": 467,
+    "extracted_female": 458,
+    "extracted_households": 256,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_43.json"
   },
   {
     "booth_no": 44,
-    "name": "M.P.P.SCHOOL DOWN FLOOR, RAMINEEDIVARITHOTA, PENUGONDA, Penugonda",
+    "name": "M.P.P.SCHOOL DOWN FLOOR, RAMINEEDIVARITHOTA, PENUGONDA",
     "building": "M.P.P.SCHOOL DOWN FLOOR, RAMINEEDIVARITHOTA, PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugondablock-27, Penugonda",
+    "sections": "1-M.P.P.SCHOOL DOWN FLOOR MAIN BASTI. 2-M.P.P.SCHOOL DOWN FLOOR COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.654434,
@@ -1669,14 +1970,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-44-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 874,
+    "extracted_male": 441,
+    "extracted_female": 433,
+    "extracted_households": 247,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_44.json"
   },
   {
     "booth_no": 45,
     "name": "MPP School(Main), Cherukuwada, EASTERN SIDE ROOM, CHERUKUWADA",
     "building": "MPP School(Main), Cherukuwada, EASTERN SIDE ROOM, CHERUKUWADA",
     "locality": "Cherukuwada",
-    "sections": "1. Penugonda, Penugonda Blak 28 2. Penugonda, Penugonda Blak 29 6. Penugonda, Penugonda Blak 33",
+    "sections": "1-(MAIN) MAIN BASTI. 2-(MAIN) COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.65777,
@@ -1707,14 +2015,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-45-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 862,
+    "extracted_male": 435,
+    "extracted_female": 427,
+    "extracted_households": 245,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_45.json"
   },
   {
     "booth_no": 46,
-    "name": "MPPS,TEACHERS CENTRAL BUILDING,, GONGURA TUMU, PENUGONDA, CHERUKUVADA H/O PENUGONDA",
+    "name": "MPPS,TEACHERS CENTRAL BUILDING,, GONGURA TUMU, PENUGONDA",
     "building": "MPPS,TEACHERS CENTRAL BUILDING,, GONGURA TUMU, PENUGONDA",
     "locality": "CHERUKUVADA H/O PENUGONDA",
-    "sections": "1. Penugonda Blocks 29,30, Penugonda 2. Penugonda, Penugonda Blak 29 3. Penugonda, Penugonda Blak 30",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.657848,
@@ -1745,14 +2060,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-46-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 768,
+    "extracted_male": 387,
+    "extracted_female": 381,
+    "extracted_households": 228,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_46.json"
   },
   {
     "booth_no": 47,
     "name": "MPE School (Spl), Bapuji Puram, Cherukuwada, BAPUJIPURAM, PENUGONDA",
     "building": "MPE School (Spl), Bapuji Puram, Cherukuwada, BAPUJIPURAM, PENUGONDA",
     "locality": "MP ELE SCHOOL, BAPUJIPURAM, PENUGONDA",
-    "sections": "1. Penugonda Blocks 31, 32, 33, Penugonda 2. Penugonda, Penugonda Blocks 31, 32, 33 3. Penugonda, Penugonda Blocks 31, 32, 33",
+    "sections": "1-MPE SCHOOL (SPL) MAIN BASTI. 2-MPE SCHOOL (SPL) COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.653889,
@@ -1783,14 +2105,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-47-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1084,
+    "extracted_male": 547,
+    "extracted_female": 537,
+    "extracted_households": 315,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_47.json"
   },
   {
     "booth_no": 48,
-    "name": "MPPS SOUTHERN PART, GANDHI STEET , PENUGONDA, PENUGONDA",
+    "name": "MPPS SOUTHERN PART, GANDHI STEET , PENUGONDA",
     "building": "MPPS SOUTHERN PART, GANDHI STEET , PENUGONDA",
     "locality": "PENUGONDA",
-    "sections": "1. Penugonda Blocks 4,5, Penugonda 2. Penugonda, Penugonda Bloka 5 Part 3. Penugonda, Penugonda Blak 14",
+    "sections": "1-MPPS SOUTHERN PART MAIN BASTI. 2-MPPS SOUTHERN PART COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.653333,
@@ -1821,14 +2150,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-48-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 892,
+    "extracted_male": 450,
+    "extracted_female": 442,
+    "extracted_households": 259,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_48.json"
   },
   {
     "booth_no": 49,
-    "name": "MPPS MIDDLE PART, GANDHI STREET,, PENUGONDA, Penugonda",
+    "name": "MPPS MIDDLE PART, GANDHI STREET,, PENUGONDA",
     "building": "MPPS MIDDLE PART, GANDHI STREET,, PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda Blaak-1,2,3, Penugonda",
+    "sections": "1-MPPS MIDDLE PART MAIN BASTI. 2-MPPS MIDDLE PART COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.653333,
@@ -1859,14 +2195,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-49-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 943,
+    "extracted_male": 476,
+    "extracted_female": 467,
+    "extracted_households": 262,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_49.json"
   },
   {
     "booth_no": 50,
-    "name": "SVKP AND KVR GIRLS HIGH SCHOOL, WESTERN SIDE PART, ROOM NO.2, PENUGONDA, Penugonda",
+    "name": "SVKP AND KVR GIRLS HIGH SCHOOL, WESTERN SIDE PART, ROOM NO.2, PENUGONDA",
     "building": "SVKP AND KVR GIRLS HIGH SCHOOL, WESTERN SIDE PART, ROOM NO.2, PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda Blocks 6,7, Penugonda 2. Penugonda, Penugonda Blak 7 3. Penugonda, Penugonda Blak 8",
+    "sections": "1-SVKP AND KVR GIRLS HIGH SCHOOL MAIN BASTI. 2-SVKP AND KVR GIRLS HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.654117,
@@ -1897,14 +2240,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-50-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 968,
+    "extracted_male": 488,
+    "extracted_female": 480,
+    "extracted_households": 267,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_50.json"
   },
   {
     "booth_no": 51,
-    "name": "SVKP AND KVR GIRLS HIGH SCHOOL,, EASTERN SIDE PART, ROOM NO.1, PENUGONDA, SVKP AND PV GIRLS HIGH SCHOOL EASTERN PART R.NO.1",
+    "name": "SVKP AND KVR GIRLS HIGH SCHOOL,, EASTERN SIDE PART, ROOM NO.1, PENUGONDA",
     "building": "SVKP AND KVR GIRLS HIGH SCHOOL,, EASTERN SIDE PART, ROOM NO.1, PENUGONDA",
     "locality": "SVKP AND PV GIRLS HIGH SCHOOL EASTERN PART R.NO.1",
-    "sections": "1. Penugonda Block 8, Penugonda 2. Penugonda, Penugonda Blocks 6,7,8 3. Penugonda, Penugonda Blocks 6,7,8",
+    "sections": "1-SVKP AND KVR GIRLS HIGH SCHOOL MAIN BASTI. 2-SVKP AND KVR GIRLS HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.654117,
@@ -1935,14 +2285,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-51-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 989,
+    "extracted_male": 499,
+    "extracted_female": 490,
+    "extracted_households": 274,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_51.json"
   },
   {
     "booth_no": 52,
-    "name": "MP.PSCHOOL MAIN BUILDING,EASTERN SIDE PART, SETTIBALIJAPETA, PENUGONDA, PENUGONDA",
+    "name": "MP.PSCHOOL MAIN BUILDING,EASTERN SIDE PART, SETTIBALIJAPETA, PENUGONDA",
     "building": "MP.PSCHOOL MAIN BUILDING,EASTERN SIDE PART, SETTIBALIJAPETA, PENUGONDA",
     "locality": "PENUGONDA",
-    "sections": "1. Penugondablocks -9,10, Penugonda 2. Penugonda Blaak-10, Penugonda Blaak-10",
+    "sections": "1-MP.PSCHOOL MAIN BUILDING MAIN BASTI. 2-MP.PSCHOOL MAIN BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.662762,
@@ -1973,14 +2330,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-52-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 940,
+    "extracted_male": 474,
+    "extracted_female": 466,
+    "extracted_households": 278,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_52.json"
   },
   {
     "booth_no": 53,
     "name": "SVKP &amp; K.V.R.Girls High School, Western side, Room, GANDHI STREET , PENUGONDA",
     "building": "SVKP &amp; K.V.R.Girls High School, Western side, Room, GANDHI STREET , PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda Blocks 11,12,16, Penugonda 2. Penugonda, Penugonda Blak 12 3. Penugonda, Penugonda Blak 16",
+    "sections": "1-SVKP &AMP; K.V.R.GIRLS HIGH SCHOOL MAIN BASTI. 2-SVKP &AMP; K.V.R.GIRLS HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.654117,
@@ -2011,14 +2375,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-53-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 972,
+    "extracted_male": 490,
+    "extracted_female": 482,
+    "extracted_households": 282,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_53.json"
   },
   {
     "booth_no": 54,
-    "name": "MPPS -( SPECIAL) BUILDING NO.1, WESTERN SIDE PART, RAJUGUDEM, PENUGONDA, Penugonda",
+    "name": "MPPS -( SPECIAL) BUILDING NO.1, WESTERN SIDE PART, RAJUGUDEM, PENUGONDA",
     "building": "MPPS -( SPECIAL) BUILDING NO.1, WESTERN SIDE PART, RAJUGUDEM, PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda Blacks 13,14, Penugonda 2. Penugonda, Penugonda Blak 15",
+    "sections": "1-MPPS -( SPECIAL) BUILDING NO.1 MAIN BASTI. 2-MPPS -( SPECIAL) BUILDING NO.1 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.653056,
@@ -2049,14 +2420,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-54-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 791,
+    "extracted_male": 399,
+    "extracted_female": 392,
+    "extracted_households": 221,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_54.json"
   },
   {
     "booth_no": 55,
-    "name": "MPPS (SPECIAL) BUILDING NO.2, EASTERN SIDE PART, RAJUGUDEM, PENUGONDA, MP (SPL) ELE SCHOOL,BLD NO.2, RAJAGUDEM",
+    "name": "MPPS (SPECIAL) BUILDING NO.2, EASTERN SIDE PART, RAJUGUDEM, PENUGONDA",
     "building": "MPPS (SPECIAL) BUILDING NO.2, EASTERN SIDE PART, RAJUGUDEM, PENUGONDA",
     "locality": "MP (SPL) ELE SCHOOL,BLD NO.2, RAJAGUDEM",
-    "sections": "1. Penugonda Block 15, Penugonda 2. Penugonda, Penugonda Blocks 13 And 15",
+    "sections": "1-MPPS (SPECIAL) BUILDING NO.2 MAIN BASTI. 2-MPPS (SPECIAL) BUILDING NO.2 COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.653056,
@@ -2087,14 +2465,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-55-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 860,
+    "extracted_male": 434,
+    "extracted_female": 426,
+    "extracted_households": 249,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_55.json"
   },
   {
     "booth_no": 56,
-    "name": "ZNVR HIGH SCHOOL, PENUGONDA, WESTERN SIDE 3RD BUILDING, PENUGONDA, Penugonda",
+    "name": "ZNVR HIGH SCHOOL, PENUGONDA, WESTERN SIDE 3RD BUILDING, PENUGONDA",
     "building": "ZNVR HIGH SCHOOL, PENUGONDA, WESTERN SIDE 3RD BUILDING, PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda Blocks 17,18,19, Penugonda 2. Penugonda, Penugonda Blak 18 3. Penugonda, Penugonda Blak 19",
+    "sections": "1-ZNVR HIGH SCHOOL MAIN BASTI. 2-ZNVR HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.655404,
@@ -2125,14 +2510,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-56-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1018,
+    "extracted_male": 514,
+    "extracted_female": 504,
+    "extracted_households": 283,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_56.json"
   },
   {
     "booth_no": 57,
     "name": "Z.N.V.R.High School, PENUGONDA, EASTERN SIDE 2ND BUILDING 1ST ROOM, PENUGONDA",
     "building": "Z.N.V.R.High School, PENUGONDA, EASTERN SIDE 2ND BUILDING 1ST ROOM, PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda, Penugonda Blaak- 20",
+    "sections": "1-Z.N.V.R.HIGH SCHOOL MAIN BASTI. 2-Z.N.V.R.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.655404,
@@ -2163,14 +2555,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-57-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 797,
+    "extracted_male": 402,
+    "extracted_female": 395,
+    "extracted_households": 228,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_57.json"
   },
   {
     "booth_no": 58,
     "name": "Z.N.V.R.High School,Southern side building, Eastern side 2nd room, Penugonda",
     "building": "Z.N.V.R.High School,Southern side building, Eastern side 2nd room, Penugonda",
     "locality": "Penugonda",
-    "sections": "1. Penugonda, Penugonda Blaaks- 21",
+    "sections": "1-Z.N.V.R.HIGH SCHOOL MAIN BASTI. 2-Z.N.V.R.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.655404,
@@ -2201,14 +2600,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-58-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 841,
+    "extracted_male": 424,
+    "extracted_female": 417,
+    "extracted_households": 235,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_58.json"
   },
   {
     "booth_no": 59,
-    "name": "ZNVR HIGH SCHOOL SOUTHERN BUILDING, WEST SIDE 2ND ROOM PENUGONDA, Penugonda",
+    "name": "ZNVR HIGH SCHOOL SOUTHERN BUILDING, WEST SIDE 2ND ROOM PENUGONDA",
     "building": "ZNVR HIGH SCHOOL SOUTHERN BUILDING, WEST SIDE 2ND ROOM PENUGONDA",
     "locality": "Penugonda",
-    "sections": "1. Penugonda Blocks -22,23,25, Penugonda 2. Penugonda Blaak-24,25, Penugonda Blaak-24,25",
+    "sections": "1-ZNVR HIGH SCHOOL SOUTHERN BUILDING MAIN BASTI. 2-ZNVR HIGH SCHOOL SOUTHERN BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.655404,
@@ -2239,14 +2645,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-59-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 878,
+    "extracted_male": 443,
+    "extracted_female": 435,
+    "extracted_households": 255,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_59.json"
   },
   {
     "booth_no": 60,
-    "name": "MPPS BUILDING, JEELAMCHERUVU, JILAMCHERUVU, PENUGONDA, MP (SPL) ELE SCHOOL BUILDING, JEELAMCHERUVU",
+    "name": "MPPS BUILDING, JEELAMCHERUVU, JILAMCHERUVU, PENUGONDA",
     "building": "MPPS BUILDING, JEELAMCHERUVU, JILAMCHERUVU, PENUGONDA",
     "locality": "MP (SPL) ELE SCHOOL BUILDING, JEELAMCHERUVU",
-    "sections": "1. Penugonda, Penugonda Block 24",
+    "sections": "1-MPPS BUILDING MAIN BASTI. 2-MPPS BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.661343,
@@ -2277,14 +2690,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-60-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 807,
+    "extracted_male": 407,
+    "extracted_female": 400,
+    "extracted_households": 248,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_60.json"
   },
   {
     "booth_no": 61,
-    "name": "MPUP SCHOOL EASTERN SIDE, Kothalparru, Kotalaparru",
+    "name": "MPUP SCHOOL EASTERN SIDE, Kothalparru",
     "building": "MPUP SCHOOL EASTERN SIDE, Kothalparru",
     "locality": "Kotalaparru",
-    "sections": "1. Kotharlparru, Kothalparru Blaaks-1,3",
+    "sections": "1-MPUP SCHOOL EASTERN SIDE MAIN BASTI. 2-MPUP SCHOOL EASTERN SIDE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.632905,
@@ -2315,14 +2735,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-61-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 796,
+    "extracted_male": 401,
+    "extracted_female": 395,
+    "extracted_households": 228,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_61.json"
   },
   {
     "booth_no": 62,
-    "name": "MPUP SCHOOL, WESTERN SIDE PART, KOTALAPARRU, Kotalaparru",
+    "name": "MPUP SCHOOL, WESTERN SIDE PART, KOTALAPARRU",
     "building": "MPUP SCHOOL, WESTERN SIDE PART, KOTALAPARRU",
     "locality": "Kotalaparru",
-    "sections": "1. Kothalparru Block 2, Kothalparru 2. Somarajucheruvu, Somarajucheruvu 3. Veerappacheruvu, Veerappacheruvu",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.632905,
@@ -2353,14 +2780,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-62-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 801,
+    "extracted_male": 404,
+    "extracted_female": 397,
+    "extracted_households": 229,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_62.json"
   },
   {
     "booth_no": 63,
-    "name": "MP ele SCHOOL, Munamarru, Munamarru",
+    "name": "MP ele SCHOOL, Munamarru",
     "building": "MP ele SCHOOL, Munamarru",
     "locality": "Munamarru",
-    "sections": "1. Munmarru, Munmarru Blaaks-1,2 2. Munmarru, Munmarru",
+    "sections": "1-MP ELE SCHOOL MAIN BASTI. 2-MP ELE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534320",
     "lat": 16.643737,
@@ -2391,14 +2825,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-63-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 961,
+    "extracted_male": 485,
+    "extracted_female": 476,
+    "extracted_households": 265,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_63.json"
   },
   {
     "booth_no": 64,
-    "name": "MP ELE SCHOOL, NEW BUILDING, TAMARADA, Tamarada",
+    "name": "MP ELE SCHOOL, NEW BUILDING, TAMARADA",
     "building": "MP ELE SCHOOL, NEW BUILDING, TAMARADA",
     "locality": "Tamarada",
-    "sections": "1. Tamrada, Tamrada Blaaks-1,2",
+    "sections": "1-MP ELE SCHOOL MAIN BASTI. 2-MP ELE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.643828,
@@ -2429,14 +2870,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-64-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 976,
+    "extracted_male": 492,
+    "extracted_female": 484,
+    "extracted_households": 276,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_64.json"
   },
   {
     "booth_no": 65,
     "name": "Mandala Parishat Pratyeka Prathamik Pathashala, Somerjucheruvu / Tamrada",
     "building": "Mandala Parishat Pratyeka Prathamik Pathashala, Somerjucheruvu / Tamrada",
     "locality": "Somarajucheruvu / Tamarada Blocks 3",
-    "sections": "1. Tamrada, Tamrada Blaaks-,3",
+    "sections": "1-MANDALA PARISHAT PRATYEKA PRATHAMIK PATHASHALA MAIN BASTI. 2-MANDALA PARISHAT PRATYEKA PRATHAMIK PATHASHALA COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534324",
     "lat": 16.637437,
@@ -2467,14 +2915,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-65-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 752,
+    "extracted_male": 379,
+    "extracted_female": 373,
+    "extracted_households": 215,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_65.json"
   },
   {
     "booth_no": 66,
-    "name": "Z.P. HIGH SCHOOL,, 3rd room, Eastern side ,deva, Deva",
+    "name": "Z.P. HIGH SCHOOL,, 3rd room, Eastern side ,deva",
     "building": "Z.P. HIGH SCHOOL,, 3rd room, Eastern side ,deva",
     "locality": "Deva",
-    "sections": "1. Deva Blaks 1,2, Deva 2. Deva Blaku 2, Deva Block 2 3. Deva Blaku 3, Deva Block 3",
+    "sections": "1-Z.P. HIGH SCHOOL MAIN BASTI. 2-Z.P. HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534123",
     "lat": 16.636943,
@@ -2505,14 +2960,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-66-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 832,
+    "extracted_male": 420,
+    "extracted_female": 412,
+    "extracted_households": 241,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_66.json"
   },
   {
     "booth_no": 67,
     "name": "MP Ele. School, Eastern part, Main Building, Deva",
     "building": "MP Ele. School, Eastern part, Main Building, Deva",
     "locality": "Deva",
-    "sections": "1. Deva Blocks 3,4, Deva 2. Deva 2, Deva 3. Deva 3, Deva",
+    "sections": "1-MP ELE. SCHOOL MAIN BASTI. 2-MP ELE. SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534123",
     "lat": 16.633341,
@@ -2543,14 +3005,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-67-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 962,
+    "extracted_male": 485,
+    "extracted_female": 477,
+    "extracted_households": 281,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_67.json"
   },
   {
     "booth_no": 68,
     "name": "MP Elementary School, Seetha ramanna Chervu, PULLELAVARI THOTA, MULAPARRU",
     "building": "MP Elementary School, Seetha ramanna Chervu, PULLELAVARI THOTA, MULAPARRU",
     "locality": "MP ELE SCHOOL PULLELVARITHOTA MULLAPARRU",
-    "sections": "1. Mp Ele School Pullelvarithota Mullaparru, Blocks 5",
+    "sections": "1-MP ELEMENTARY SCHOOL MAIN BASTI. 2-MP ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.634362,
@@ -2581,14 +3050,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-68-WI.pdf",
-    "panna_pages": 13
+    "panna_pages": 13,
+    "extracted_electorate": 607,
+    "extracted_male": 306,
+    "extracted_female": 301,
+    "extracted_households": 178,
+    "extracted_pannas": 13,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_68.json"
   },
   {
     "booth_no": 69,
     "name": "MPE School - Main, Northern side, Mulaparru, Uthara Bhagamu, Mulaparru",
     "building": "MPE School - Main, Northern side, Mulaparru, Uthara Bhagamu, Mulaparru",
     "locality": "MULAPARRU",
-    "sections": "1. Mulaparru Blocks 1,2, Mulaparru 2. Mulaparru Blaku 2, Mulaparru 3. Mulaparru Blaku 3, Mulaparru",
+    "sections": "1-MPE SCHOOL - MAIN MAIN BASTI. 2-MPE SCHOOL - MAIN COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534123",
     "lat": 16.639173,
@@ -2619,14 +3095,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-69-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1050,
+    "extracted_male": 530,
+    "extracted_female": 520,
+    "extracted_households": 308,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_69.json"
   },
   {
     "booth_no": 70,
     "name": "MPE School - Main, Southern side, Mulaparru., Dakshina Bhagamu,Mulaparru",
     "building": "MPE School - Main, Southern side, Mulaparru., Dakshina Bhagamu,Mulaparru",
     "locality": "MULAPARRU",
-    "sections": "1. Mulaparru Blocks 3,4,5, Mulaparru 2. Mulaparru Blaku 2, Mulaparru 3. Mulaparru Blaku 3, Mulaparru",
+    "sections": "1-MPE SCHOOL - MAIN MAIN BASTI. 2-MPE SCHOOL - MAIN COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534123",
     "lat": 16.639173,
@@ -2657,14 +3140,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-70-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 891,
+    "extracted_male": 449,
+    "extracted_female": 442,
+    "extracted_households": 265,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_70.json"
   },
   {
     "booth_no": 71,
     "name": "M.P.Ele.School,Peetanivaripalem, Mulaparru Shiwarupeetaniwaripalem",
     "building": "M.P.Ele.School,Peetanivaripalem, Mulaparru Shiwarupeetaniwaripalem",
     "locality": "MULAPARRU",
-    "sections": "1. Mulaparru Sivaru , Peetanivari Palem, Blaku 6",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534123",
     "lat": 16.646907,
@@ -2695,14 +3185,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-71-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 937,
+    "extracted_male": 473,
+    "extracted_female": 464,
+    "extracted_households": 269,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_71.json"
   },
   {
     "booth_no": 72,
-    "name": "Gram Panchayat Office, Northern side part Meeting, Utharabhagamu, Nadipudi, NADIPUDI",
+    "name": "Gram Panchayat Office, Northern side part Meeting, Utharabhagamu, Nadipudi",
     "building": "Gram Panchayat Office, Northern side part Meeting, Utharabhagamu, Nadipudi",
     "locality": "NADIPUDI",
-    "sections": "1. Nadipudi Blocks 1,2 And 3(Part), Nadipudi 2. Nadipudi Blaku 2, Nadipudi 3. Nadipudi Blaku 3, Nadipudi",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.650614,
@@ -2733,14 +3230,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-72-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 995,
+    "extracted_male": 502,
+    "extracted_female": 493,
+    "extracted_households": 287,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_72.json"
   },
   {
     "booth_no": 73,
-    "name": "Gram Panchayat Office, Office Room, Nadipudi, Dakshina BhagamuNadipudi, NADIPUDI",
+    "name": "Gram Panchayat Office, Office Room, Nadipudi, Dakshina BhagamuNadipudi",
     "building": "Gram Panchayat Office, Office Room, Nadipudi, Dakshina BhagamuNadipudi",
     "locality": "NADIPUDI",
-    "sections": "1. Nadipudi Blocks 3(Part),4,5,6, Nadipudi 2. Nadipudi Blaku 2, Nadipudi 3. Nadipudi Blaku 3, Nadipudi",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534326",
     "lat": 16.650614,
@@ -2771,14 +3275,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-73-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 866,
+    "extracted_male": 437,
+    "extracted_female": 429,
+    "extracted_households": 253,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_73.json"
   },
   {
     "booth_no": 74,
     "name": "MPUP School, Northern side Part, Chinamallam, Uthara Bhagamu,Chinamallam",
     "building": "MPUP School, Northern side Part, Chinamallam, Uthara Bhagamu,Chinamallam",
     "locality": "CHINAMALLAM",
-    "sections": "1. Chinamallam Blocks 1,2 And 3 (Part), China Mallam 2. Chinamallam Blaku 2, China Mallam 3. Chinamallam Blaku 3, China Mallam",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534269",
     "lat": 16.625926,
@@ -2809,14 +3320,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-74-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 846,
+    "extracted_male": 427,
+    "extracted_female": 419,
+    "extracted_households": 244,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_74.json"
   },
   {
     "booth_no": 75,
     "name": "MPUP School, Southern side Part, Chinamallam, Dhakshina Bhagamu,Chinamallam",
     "building": "MPUP School, Southern side Part, Chinamallam, Dhakshina Bhagamu,Chinamallam",
     "locality": "CHINAMALLAM",
-    "sections": "1. Chinamallam Blocks 3 (Part), 4,5, China Mallam 2. Chinamallam Blaku 2, China Mallam 3. Chinamallam Blaku 3, China Mallam",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUGONDA",
     "pincode": "534269",
     "lat": 16.625926,
@@ -2847,14 +3365,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-75-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 754,
+    "extracted_male": 380,
+    "extracted_female": 374,
+    "extracted_households": 211,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_75.json"
   },
   {
     "booth_no": 76,
     "name": "M.P.U.P.School, New building, Eastern side room, P, Southern wing, Western side room, PedaMallam",
     "building": "M.P.U.P.School, New building, Eastern side room, P, Southern wing, Western side room, PedaMallam",
     "locality": "PEDAMALLAM",
-    "sections": "1. Pedamallam Blocks 1,2, Pedamallam 2. Pedamallam, Pedamallam",
+    "sections": "1-M.P.U.P.SCHOOL MAIN BASTI. 2-M.P.U.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.62117,
@@ -2885,14 +3410,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-76-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 947,
+    "extracted_male": 478,
+    "extracted_female": 469,
+    "extracted_households": 274,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_76.json"
   },
   {
     "booth_no": 77,
     "name": "M.P.U.P.School, Old building, Western side room, P, NORTHERN SIDE BUILDING, WESTERNSIDE ROOM",
     "building": "M.P.U.P.School, Old building, Western side room, P, NORTHERN SIDE BUILDING, WESTERNSIDE ROOM",
     "locality": "PEDAMALLAM",
-    "sections": "1. Pedamallam Blocks 1,2, Pedamallam 2. Pedamallam, Pedamallam",
+    "sections": "1-M.P.U.P.SCHOOL MAIN BASTI. 2-M.P.U.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.625926,
@@ -2923,14 +3455,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-77-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 961,
+    "extracted_male": 485,
+    "extracted_female": 476,
+    "extracted_households": 278,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_77.json"
   },
   {
     "booth_no": 78,
-    "name": "M.P.ELEMENTARY SCHOOL, PEDAMALLAM SIVARU, ANAGARALANKA H/O Pedamallaram",
+    "name": "M.P.ELEMENTARY SCHOOL, PEDAMALLAM SIVARU",
     "building": "M.P.ELEMENTARY SCHOOL, PEDAMALLAM SIVARU",
     "locality": "ANAGARALANKA H/O Pedamallaram",
-    "sections": "1. Pedamallam Block - 3, Angarlalanka",
+    "sections": "1-M.P.ELEMENTARY SCHOOL MAIN BASTI. 2-M.P.ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.616571,
@@ -2961,14 +3500,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-78-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 909,
+    "extracted_male": 459,
+    "extracted_female": 450,
+    "extracted_households": 262,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_78.json"
   },
   {
     "booth_no": 79,
-    "name": "M.P.P Elementary school, Utharavaipu Bhavanamu Padamara Gadi Kodamanchili, KODAMANCHILI",
+    "name": "M.P.P Elementary school, Utharavaipu Bhavanamu Padamara Gadi Kodamanchili",
     "building": "M.P.P Elementary school, Utharavaipu Bhavanamu Padamara Gadi Kodamanchili",
     "locality": "KODAMANCHILI",
-    "sections": "1. Kodamanchili, Kodamanchili Blocks 1,2,3,4 2. Kodmanchali, 2 Va Block 3. Kodamanchili, 3 Va Block",
+    "sections": "1-M.P.P ELEMENTARY SCHOOL MAIN BASTI. 2-M.P.P ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.607424,
@@ -2999,14 +3545,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-79-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 888,
+    "extracted_male": 448,
+    "extracted_female": 440,
+    "extracted_households": 255,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_79.json"
   },
   {
     "booth_no": 80,
-    "name": "M.P.P Elementary school, Turpubhagamu Kodamanchili, KODAMANCHILI",
+    "name": "M.P.P Elementary school, Turpubhagamu Kodamanchili",
     "building": "M.P.P Elementary school, Turpubhagamu Kodamanchili",
     "locality": "KODAMANCHILI",
-    "sections": "1. Kodamanchili Blocks 5,6,12, Kodamanchili 2. Kodamanchili, T.Meraka 6 3. Kodamanchili 10, Tirdalpunta",
+    "sections": "1-M.P.P ELEMENTARY SCHOOL MAIN BASTI. 2-M.P.P ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.607424,
@@ -3037,14 +3590,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-80-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1124,
+    "extracted_male": 567,
+    "extracted_female": 557,
+    "extracted_households": 326,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_80.json"
   },
   {
     "booth_no": 81,
-    "name": "M.P.P Elementary school, Southern side, Kodamanchili, KODAMANCHILI",
+    "name": "M.P.P Elementary school, Southern side, Kodamanchili",
     "building": "M.P.P Elementary school, Southern side, Kodamanchili",
     "locality": "KODAMANCHILI",
-    "sections": "1. Kodamanchili, Kodamanchili,Blocks 10,11 2. Kodamanchili, T.Meraka 3. Kodamanchili, Tirdhalpunta",
+    "sections": "1-M.P.P ELEMENTARY SCHOOL MAIN BASTI. 2-M.P.P ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.607424,
@@ -3075,14 +3635,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-81-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 946,
+    "extracted_male": 477,
+    "extracted_female": 469,
+    "extracted_households": 277,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_81.json"
   },
   {
     "booth_no": 82,
     "name": "ZP High School, 4th room from Eastern Side,, 10TH CLASS A SECTION KODAMANCHILI",
     "building": "ZP High School, 4th room from Eastern Side,, 10TH CLASS A SECTION KODAMANCHILI",
     "locality": "KODAMANCHILI",
-    "sections": "1. Kodamanchili Blocks 7,8, Kodamanchili 2. Kodamanchili, Kodamanchili Blaak8 3. Kodamanchili, Kodamanchili Blaak9",
+    "sections": "1-ZP HIGH SCHOOL MAIN BASTI. 2-ZP HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.602215,
@@ -3113,14 +3680,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-82-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 804,
+    "extracted_male": 406,
+    "extracted_female": 398,
+    "extracted_households": 234,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_82.json"
   },
   {
     "booth_no": 83,
     "name": "ZP High School, 6th room from Eastern Side,, 10TH CLASS, B-SECTION KODAMANCHILI",
     "building": "ZP High School, 6th room from Eastern Side,, 10TH CLASS, B-SECTION KODAMANCHILI",
     "locality": "Z P HIGH SCHOOL, EASTERN SIDE,10TH CLASS B SECTION",
-    "sections": "1. Kodamanchili Block 9, Kodamnchili",
+    "sections": "1-ZP HIGH SCHOOL MAIN BASTI. 2-ZP HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.602215,
@@ -3151,14 +3725,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-83-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 891,
+    "extracted_male": 449,
+    "extracted_female": 442,
+    "extracted_households": 257,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_83.json"
   },
   {
     "booth_no": 84,
-    "name": "MP.P.Elementary school Boys, Dakshinaaipu Bhavanamu ,,Achanta, ACHANTA",
+    "name": "MP.P.Elementary school Boys, Dakshinaaipu Bhavanamu ,,Achanta",
     "building": "MP.P.Elementary school Boys, Dakshinaaipu Bhavanamu ,,Achanta",
     "locality": "ACHANTA",
-    "sections": "1. Achanta Blocks 13,14,15, Achanta 2. Achanta Blaku 14, Achanta 3. Achanta Blaku 15, Achanta",
+    "sections": "1-MP.P.ELEMENTARY SCHOOL BOYS MAIN BASTI. 2-MP.P.ELEMENTARY SCHOOL BOYS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.603135,
@@ -3189,14 +3770,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-84-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 832,
+    "extracted_male": 420,
+    "extracted_female": 412,
+    "extracted_households": 233,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_84.json"
   },
   {
     "booth_no": 85,
-    "name": "MP.P.Elementary school(boys),Acha, n. side ROOM,CENTRE BUI Achanta, ACHANTA",
+    "name": "MP.P.Elementary school(boys),Acha, n. side ROOM,CENTRE BUI Achanta",
     "building": "MP.P.Elementary school(boys),Acha, n. side ROOM,CENTRE BUI Achanta",
     "locality": "ACHANTA",
-    "sections": "1. Achanta Blocks 16,17, Achanta 2. Achanta Blaku 14, Achanta 3. Achanta Blaku 15, Achanta",
+    "sections": "1-MP.P.ELEMENTARY SCHOOL(BOYS) MAIN BASTI. 2-MP.P.ELEMENTARY SCHOOL(BOYS) COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.603135,
@@ -3227,14 +3815,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-85-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 893,
+    "extracted_male": 450,
+    "extracted_female": 443,
+    "extracted_households": 261,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_85.json"
   },
   {
     "booth_no": 86,
     "name": "MP Ele. School, Back side building,, Kasarattu gunt Kasarattu gunta H/O Achanta.",
     "building": "MP Ele. School, Back side building,, Kasarattu gunt Kasarattu gunta H/O Achanta.",
     "locality": "ACHANTA",
-    "sections": "1. Achanta, Blocks 31,32,33, Achanta",
+    "sections": "1-MP ELE. SCHOOL MAIN BASTI. 2-MP ELE. SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.603135,
@@ -3265,14 +3860,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-86-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 812,
+    "extracted_male": 410,
+    "extracted_female": 402,
+    "extracted_households": 240,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_86.json"
   },
   {
     "booth_no": 87,
-    "name": "M P P S , ACHANTA SIVARU, GOLLAPALLI CHERVU H/O ACHANTA, M P ELE., SCHOOL, GOLLAPALLIVARICHERUVU",
+    "name": "M P P S , ACHANTA SIVARU, GOLLAPALLI CHERVU H/O ACHANTA",
     "building": "M P P S , ACHANTA SIVARU, GOLLAPALLI CHERVU H/O ACHANTA",
     "locality": "M P ELE., SCHOOL, GOLLAPALLIVARICHERUVU",
-    "sections": "1. Achanta, Blocks 34,35,36",
+    "sections": "1-M P P S MAIN BASTI. 2-M P P S COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.599813,
@@ -3303,14 +3905,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-87-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 931,
+    "extracted_male": 470,
+    "extracted_female": 461,
+    "extracted_households": 273,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_87.json"
   },
   {
     "booth_no": 88,
-    "name": "M.P. Elementary school, KANUTUUNTA, H/O ACHANTA, OLD BILDING KANUTUUNTA, H/O ACHANTA, KONAPOTUGUNTA H/0 Achanta",
+    "name": "M.P. Elementary school, KANUTUUNTA, H/O ACHANTA, OLD BILDING KANUTUUNTA, H/O ACHANTA",
     "building": "M.P. Elementary school, KANUTUUNTA, H/O ACHANTA, OLD BILDING KANUTUUNTA, H/O ACHANTA",
     "locality": "KONAPOTUGUNTA H/0 Achanta",
-    "sections": "1. Achanta,Block 30, Konpotugunta",
+    "sections": "1-M.P. ELEMENTARY SCHOOL MAIN BASTI. 2-M.P. ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.59036,
@@ -3341,14 +3950,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-88-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 848,
+    "extracted_male": 428,
+    "extracted_female": 420,
+    "extracted_households": 238,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_88.json"
   },
   {
     "booth_no": 89,
-    "name": "Muppana veeraraghavayya Jr.College, Southern New B, padamaravipu madyahalu 1st room achanta, ACHANTA",
+    "name": "Muppana veeraraghavayya Jr.College, Southern New B, padamaravipu madyahalu 1st room achanta",
     "building": "Muppana veeraraghavayya Jr.College, Southern New B, padamaravipu madyahalu 1st room achanta",
     "locality": "ACHANTA",
-    "sections": "1. Achanta Blocks 4,5,18, Achanta",
+    "sections": "1-MUPPANA VEERARAGHAVAYYA JR.COLLEGE MAIN BASTI. 2-MUPPANA VEERARAGHAVAYYA JR.COLLEGE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.604532,
@@ -3379,14 +3995,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-89-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 922,
+    "extracted_male": 465,
+    "extracted_female": 457,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_89.json"
   },
   {
     "booth_no": 90,
     "name": "M.P..P.School, Achanta., SOUTHERN SIDE ROOM NO.3",
     "building": "M.P..P.School, Achanta., SOUTHERN SIDE ROOM NO.3",
     "locality": "ACHANTA",
-    "sections": "1. Achanta, Achanta Blocks 10,12,20 2. Achanta, 11 Va Block Thamminidivari Veedi 3. Achanta, 12Va Block K K Veedi",
+    "sections": "1-M.P..P.SCHOOL MAIN BASTI. 2-M.P..P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.603135,
@@ -3417,14 +4040,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-90-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 953,
+    "extracted_male": 481,
+    "extracted_female": 472,
+    "extracted_households": 274,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_90.json"
   },
   {
     "booth_no": 91,
     "name": "M.P.P.School, , Achanta., SOUTHERN SIDE ROOM NO.2",
     "building": "M.P.P.School, , Achanta., SOUTHERN SIDE ROOM NO.2",
     "locality": "ACHANTA",
-    "sections": "1. Achanta, Achanta Blocks 11 Tammineedivariveedhi &amp; 19Pedapet 2. Achanta, Pedapettahcolony 19Nundy20 3. Achanta, Achanta",
+    "sections": "1-M.P.P.SCHOOL MAIN BASTI. 2-M.P.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.603135,
@@ -3455,14 +4085,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-91-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 807,
+    "extracted_male": 407,
+    "extracted_female": 400,
+    "extracted_households": 232,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_91.json"
   },
   {
     "booth_no": 92,
-    "name": "Grampanchayuti office, Achanta, ACHANTA",
+    "name": "Grampanchayuti office, Achanta",
     "building": "Grampanchayuti office, Achanta",
     "locality": "ACHANTA",
-    "sections": "1. Achanta, Achanta Blocks 1 Panchayat Street, 2 Stuvartpuram 2. Achanta, Suvarna Puram 2 Nundy 3 Varaku 3. Achanta, 37 Va Block Vanka Thalla Cheruvu",
+    "sections": "1-GRAMPANCHAYUTI OFFICE MAIN BASTI. 2-GRAMPANCHAYUTI OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.604237,
@@ -3493,14 +4130,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-92-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 921,
+    "extracted_male": 465,
+    "extracted_female": 456,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_92.json"
   },
   {
     "booth_no": 93,
-    "name": "M.P.P Elementary school, Achanta Shivaru KapulApalem, KAPULAPALEM W/o Achanta",
+    "name": "M.P.P Elementary school, Achanta Shivaru KapulApalem",
     "building": "M.P.P Elementary school, Achanta Shivaru KapulApalem",
     "locality": "KAPULAPALEM W/o Achanta",
-    "sections": "1. Kapulpalem Block 2 Part, 3 Kapulapalem, Achanta 2. Kapulpalem Blak-2, Kapulapalem 3. Kapulpalem Blak-3, Kapulapalem",
+    "sections": "1-M.P.P ELEMENTARY SCHOOL MAIN BASTI. 2-M.P.P ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.608982,
@@ -3531,14 +4175,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-93-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 844,
+    "extracted_male": 426,
+    "extracted_female": 418,
+    "extracted_households": 246,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_93.json"
   },
   {
     "booth_no": 94,
-    "name": "MPPSCHOOL MANEM VARIPALEM, AHCHANTA, ACHANTA",
+    "name": "MPPSCHOOL MANEM VARIPALEM, AHCHANTA",
     "building": "MPPSCHOOL MANEM VARIPALEM, AHCHANTA",
     "locality": "ACHANTA",
-    "sections": "1. Achanta, Chinapettah Blocks 23,24,37 2. Achanta, Chinna Peta 22 Va Block 3. Achanta, 23 Va Block Maneam Palem",
+    "sections": "1-MPPSCHOOL MANEM VARIPALEM MAIN BASTI. 2-MPPSCHOOL MANEM VARIPALEM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.617238,
@@ -3569,14 +4220,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-94-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1136,
+    "extracted_male": 573,
+    "extracted_female": 563,
+    "extracted_households": 316,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_94.json"
   },
   {
     "booth_no": 95,
-    "name": "MPPS ACHANTA PORA, ACHANTA PORA , ACHANTA, ACHANTA",
+    "name": "MPPS ACHANTA PORA, ACHANTA PORA , ACHANTA",
     "building": "MPPS ACHANTA PORA, ACHANTA PORA , ACHANTA",
     "locality": "ACHANTA",
-    "sections": "1. Achanta Pora Blocks 25 To 28, 25, 26 Pora, 27 Chemmacheruvu, 28 Chintalatota 3. Kauru Palem21 Nundy 29, Achanta",
+    "sections": "1-MPPS ACHANTA PORA MAIN BASTI. 2-MPPS ACHANTA PORA COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.588986,
@@ -3607,14 +4265,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-95-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1027,
+    "extracted_male": 518,
+    "extracted_female": 509,
+    "extracted_households": 288,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_95.json"
   },
   {
     "booth_no": 96,
     "name": "Govt. High School, Achanta, SOUTHERN SIDE MIDDLE UILDING, WESTERN SIDE ROOM",
     "building": "Govt. High School, Achanta, SOUTHERN SIDE MIDDLE UILDING, WESTERN SIDE ROOM",
     "locality": "ACHANTA",
-    "sections": "1. 21, 22 Chinnapeta, 29 Kavurupalem, Achanta",
+    "sections": "1-GOVT. HIGH SCHOOL MAIN BASTI. 2-GOVT. HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.617098,
@@ -3645,14 +4310,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-96-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 853,
+    "extracted_male": 430,
+    "extracted_female": 423,
+    "extracted_households": 247,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_96.json"
   },
   {
     "booth_no": 97,
-    "name": "Rameshwaraswamiwari Shoultry, Turpu Bhagamu , Achanta, ACHANTA",
+    "name": "Rameshwaraswamiwari Shoultry, Turpu Bhagamu , Achanta",
     "building": "Rameshwaraswamiwari Shoultry, Turpu Bhagamu , Achanta",
     "locality": "ACHANTA",
-    "sections": "1. 6 Uyyalatallaveedhi, 7, 8,9 Brahmmanaveedhi, Achanta 2. Achanta, 7 Va Block Mutyalamma Gudi Veddi 3. Achanta, Brahman Vedi 8 Nundy",
+    "sections": "1-RAMESHWARASWAMIWARI SHOULTRY MAIN BASTI. 2-RAMESHWARASWAMIWARI SHOULTRY COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.602307,
@@ -3683,14 +4355,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-97-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 983,
+    "extracted_male": 496,
+    "extracted_female": 487,
+    "extracted_households": 275,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_97.json"
   },
   {
     "booth_no": 98,
-    "name": "M.P. P school, SESHAMMACHERVU, H/O ACHANTA, SSA BUILDING, SESHAMMACHERVU, H/O ACHANTA, SESHAMMACHERVU, H/O ACHANTA",
+    "name": "M.P. P school, SESHAMMACHERVU, H/O ACHANTA, SSA BUILDING, SESHAMMACHERVU, H/O ACHANTA",
     "building": "M.P. P school, SESHAMMACHERVU, H/O ACHANTA, SSA BUILDING, SESHAMMACHERVU, H/O ACHANTA",
     "locality": "SESHAMMACHERVU, H/O ACHANTA",
-    "sections": "1. Mandalapradhamika Pathashala Achantashiwaru Sasham, 38, 39, 40 2. Sashamma Cheruvu, 39 Va Block Seshamma Cheruvu 3. Padma Nabhuni Cheruvu, Padma Nabhuni Cheruvu 40 Va Block",
+    "sections": "1-M.P. P SCHOOL MAIN BASTI. 2-M.P. P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.624272,
@@ -3721,14 +4400,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-98-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1036,
+    "extracted_male": 523,
+    "extracted_female": 513,
+    "extracted_households": 297,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_98.json"
   },
   {
     "booth_no": 99,
-    "name": "S.V.G.H.SCHOOL, NORTHERN SIDE BHILDING,, EASTERN SIDE PART, 2ND ROOM, MARTERU, MARTERU",
+    "name": "S.V.G.H.SCHOOL, NORTHERN SIDE BHILDING,, EASTERN SIDE PART, 2ND ROOM, MARTERU",
     "building": "S.V.G.H.SCHOOL, NORTHERN SIDE BHILDING,, EASTERN SIDE PART, 2ND ROOM, MARTERU",
     "locality": "MARTERU",
-    "sections": "1. Marteru, Marteru Blocks 1, 2 Part 2. Marteru, Marteru Blak 2 3. Marteru, Marteru Blak 3",
+    "sections": "1-S.V.G.H.SCHOOL MAIN BASTI. 2-S.V.G.H.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.624272,
@@ -3759,14 +4445,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-99-WI.pdf",
-    "panna_pages": 24
+    "panna_pages": 24,
+    "extracted_electorate": 1163,
+    "extracted_male": 587,
+    "extracted_female": 576,
+    "extracted_households": 340,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_99.json"
   },
   {
     "booth_no": 100,
-    "name": "S.V.G.HIGH SCHOOL , UTTARAMVIPU BHAVANAM, PADAMARA BHAGAM, MARTERU, MARTERU",
+    "name": "S.V.G.HIGH SCHOOL , UTTARAMVIPU BHAVANAM, PADAMARA BHAGAM, MARTERU",
     "building": "S.V.G.HIGH SCHOOL , UTTARAMVIPU BHAVANAM, PADAMARA BHAGAM, MARTERU",
     "locality": "MARTERU",
-    "sections": "1. Marteru, Marteru Blocks 2 Part, 3 2. Marteru, Marteru Blak 2 3. Marteru, Marteru Blak 3",
+    "sections": "1-S.V.G.HIGH SCHOOL MAIN BASTI. 2-S.V.G.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.62313,
@@ -3797,14 +4490,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-100-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1099,
+    "extracted_male": 554,
+    "extracted_female": 545,
+    "extracted_households": 318,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_100.json"
   },
   {
     "booth_no": 101,
-    "name": "S.V.G.HIGH SCHOOL,SOUTHERN BUILDING, MARTERU, SRIVENUGOPALONNATHA PATASALA NORTHERN SIDROOM NO.4",
+    "name": "S.V.G.HIGH SCHOOL,SOUTHERN BUILDING, MARTERU",
     "building": "S.V.G.HIGH SCHOOL,SOUTHERN BUILDING, MARTERU",
     "locality": "SRIVENUGOPALONNATHA PATASALA NORTHERN SIDROOM NO.4",
-    "sections": "1. Marteru Block No.4, Marteru",
+    "sections": "1-S.V.G.HIGH SCHOOL MAIN BASTI. 2-S.V.G.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.62313,
@@ -3835,14 +4535,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-101-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 919,
+    "extracted_male": 464,
+    "extracted_female": 455,
+    "extracted_households": 260,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_101.json"
   },
   {
     "booth_no": 102,
-    "name": "SVGHS, SOUTHERN SIDE BUILDING,, WESTERN SIDE ROOM, MARTERU, MARTERU",
+    "name": "SVGHS, SOUTHERN SIDE BUILDING,, WESTERN SIDE ROOM, MARTERU",
     "building": "SVGHS, SOUTHERN SIDE BUILDING,, WESTERN SIDE ROOM, MARTERU",
     "locality": "MARTERU",
-    "sections": "1. Marteru, Marteru Blocks 8, 9 2. Marteru Blak 9, Marteru Blak 9",
+    "sections": "1-SVGHS MAIN BASTI. 2-SVGHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.62313,
@@ -3873,14 +4580,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-102-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 775,
+    "extracted_male": 391,
+    "extracted_female": 384,
+    "extracted_households": 222,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_102.json"
   },
   {
     "booth_no": 103,
-    "name": "MPP SCHOOL(BOYS) GUNNAMCHERUVUGATTU, H/O MARTERU, NORTHERN SIDE ROOM,, MARTERU",
+    "name": "MPP SCHOOL(BOYS) GUNNAMCHERUVUGATTU, H/O MARTERU, NORTHERN SIDE ROOM,",
     "building": "MPP SCHOOL(BOYS) GUNNAMCHERUVUGATTU, H/O MARTERU, NORTHERN SIDE ROOM,",
     "locality": "MARTERU",
-    "sections": "1. Gunnancheruvu Blocks 5, 6, Marteru",
+    "sections": "1-(BOYS) GUNNAMCHERUVUGATTU MAIN BASTI. 2-(BOYS) GUNNAMCHERUVUGATTU COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.62336,
@@ -3911,14 +4625,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-103-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 923,
+    "extracted_male": 466,
+    "extracted_female": 457,
+    "extracted_households": 260,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_103.json"
   },
   {
     "booth_no": 104,
-    "name": "MPP SCHOOL BOYS, GUNNAMCHERUVUGATTU, H/O MARTERU, SOUTHERN SIDE ROOM, GUNNAMCHERUVUGATTU, H/OMARTERU, MARTERU",
+    "name": "MPP SCHOOL BOYS, GUNNAMCHERUVUGATTU, H/O MARTERU, SOUTHERN SIDE ROOM, GUNNAMCHERUVUGATTU, H/OMARTERU",
     "building": "MPP SCHOOL BOYS, GUNNAMCHERUVUGATTU, H/O MARTERU, SOUTHERN SIDE ROOM, GUNNAMCHERUVUGATTU, H/OMARTERU",
     "locality": "MARTERU",
-    "sections": "1. Gunnancheruvu, Gunnancheruvu Blocks 6,7",
+    "sections": "1-BOYS MAIN BASTI. 2-BOYS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.62336,
@@ -3949,14 +4670,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-104-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 974,
+    "extracted_male": 491,
+    "extracted_female": 483,
+    "extracted_households": 278,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_104.json"
   },
   {
     "booth_no": 105,
-    "name": "M P P SCHOOL (REGULAR), NEGGIPUDI, WESTERN PART, NEGGIPUDI, NEGGIPUDI",
+    "name": "M P P SCHOOL (REGULAR), NEGGIPUDI, WESTERN PART, NEGGIPUDI",
     "building": "M P P SCHOOL (REGULAR), NEGGIPUDI, WESTERN PART, NEGGIPUDI",
     "locality": "NEGGIPUDI",
-    "sections": "1. Neggipudi Blcoks 1, 2, Neggipudi 2. Neggipudi Blaak- 2, Neggipudi Blaak- 2",
+    "sections": "1-M P P SCHOOL (REGULAR) MAIN BASTI. 2-M P P SCHOOL (REGULAR) COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.627173,
@@ -3987,14 +4715,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-105-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 959,
+    "extracted_male": 484,
+    "extracted_female": 475,
+    "extracted_households": 275,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_105.json"
   },
   {
     "booth_no": 106,
-    "name": "KARRI REDDI BUCHAYAMMA GRANDALAYAM, NEGGIPUDI, NEGGIPUDI",
+    "name": "KARRI REDDI BUCHAYAMMA GRANDALAYAM, NEGGIPUDI",
     "building": "KARRI REDDI BUCHAYAMMA GRANDALAYAM, NEGGIPUDI",
     "locality": "NEGGIPUDI",
-    "sections": "1. Neggipudi Blaaks- 3,4 Part, Neggipudi",
+    "sections": "1-KARRI REDDI BUCHAYAMMA GRANDALAYAM MAIN BASTI. 2-KARRI REDDI BUCHAYAMMA GRANDALAYAM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.627095,
@@ -4025,14 +4760,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-106-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 804,
+    "extracted_male": 406,
+    "extracted_female": 398,
+    "extracted_households": 223,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_106.json"
   },
   {
     "booth_no": 107,
-    "name": "MPP SCHOOL, VANAMPALLI, VANAMPALLI H/O NEGGIPUDI",
+    "name": "MPP SCHOOL, VANAMPALLI",
     "building": "MPP SCHOOL, VANAMPALLI",
     "locality": "VANAMPALLI H/O NEGGIPUDI",
-    "sections": "1. Neggipudi -4Th Block Part,5Th Block, Neggipudi",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.628275,
@@ -4063,14 +4805,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-107-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1083,
+    "extracted_male": 546,
+    "extracted_female": 537,
+    "extracted_households": 306,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_107.json"
   },
   {
     "booth_no": 108,
-    "name": "MANDALA PARISHAND UPPER PRIMARY SCHOL, EASTERN SIDE ROOM , VELAGALERU, VELAGALERU",
+    "name": "MANDALA PARISHAND UPPER PRIMARY SCHOL, EASTERN SIDE ROOM , VELAGALERU",
     "building": "MANDALA PARISHAND UPPER PRIMARY SCHOL, EASTERN SIDE ROOM , VELAGALERU",
     "locality": "VELAGALERU",
-    "sections": "1. Velgaleru Blcoks 1, 2 Part, Velgaleru",
+    "sections": "1-MANDALA PARISHAND UPPER PRIMARY SCHOL MAIN BASTI. 2-MANDALA PARISHAND UPPER PRIMARY SCHOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.624458,
@@ -4101,14 +4850,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-108-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 898,
+    "extracted_male": 453,
+    "extracted_female": 445,
+    "extracted_households": 260,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_108.json"
   },
   {
     "booth_no": 109,
-    "name": "MPUP SCHOOL WEST SIDE, VELAGALERU, VELAGALERU",
+    "name": "MPUP SCHOOL WEST SIDE, VELAGALERU",
     "building": "MPUP SCHOOL WEST SIDE, VELAGALERU",
     "locality": "VELAGALERU",
-    "sections": "1. Velgaleru Blocks 2 Part ,3, Velgaleru",
+    "sections": "1-MPUP SCHOOL WEST SIDE MAIN BASTI. 2-MPUP SCHOOL WEST SIDE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.624458,
@@ -4139,14 +4895,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-109-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 840,
+    "extracted_male": 424,
+    "extracted_female": 416,
+    "extracted_households": 248,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_109.json"
   },
   {
     "booth_no": 110,
-    "name": "MANDALA PARISHAD UPPER PRIMARY SCHOOL, ALAMURU, Alamuru Blocks Two and Four",
+    "name": "MANDALA PARISHAD UPPER PRIMARY SCHOOL, ALAMURU",
     "building": "MANDALA PARISHAD UPPER PRIMARY SCHOOL, ALAMURU",
     "locality": "Alamuru Blocks Two and Four",
-    "sections": "1. Blocks 2, 4, Alamuru 2. Block4, Alamuru",
+    "sections": "1-MANDALA PARISHAD UPPER PRIMARY SCHOOL MAIN BASTI. 2-MANDALA PARISHAD UPPER PRIMARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.624767,
@@ -4177,14 +4940,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-110-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1083,
+    "extracted_male": 546,
+    "extracted_female": 537,
+    "extracted_households": 304,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_110.json"
   },
   {
     "booth_no": 111,
-    "name": "MPUP SCHOOL , NEWBUILDING, CENTER PART, ALAMURU, Alamuru Blocks Three",
+    "name": "MPUP SCHOOL , NEWBUILDING, CENTER PART, ALAMURU",
     "building": "MPUP SCHOOL , NEWBUILDING, CENTER PART, ALAMURU",
     "locality": "Alamuru Blocks Three",
-    "sections": "1. Alamuru, Alamuru Block3",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.624767,
@@ -4215,14 +4985,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-111-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 886,
+    "extracted_male": 447,
+    "extracted_female": 439,
+    "extracted_households": 256,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_111.json"
   },
   {
     "booth_no": 112,
-    "name": "MPUP SCHOOL WESTERN SIDE PART, ALAMURU, Alamuru Blocks One",
+    "name": "MPUP SCHOOL WESTERN SIDE PART, ALAMURU",
     "building": "MPUP SCHOOL WESTERN SIDE PART, ALAMURU",
     "locality": "Alamuru Blocks One",
-    "sections": "1. Block1, Almuru",
+    "sections": "1-MPUP SCHOOL WESTERN SIDE PART MAIN BASTI. 2-MPUP SCHOOL WESTERN SIDE PART COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.624767,
@@ -4253,14 +5030,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-112-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 786,
+    "extracted_male": 396,
+    "extracted_female": 390,
+    "extracted_households": 230,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_112.json"
   },
   {
     "booth_no": 113,
-    "name": "M P UP SCHOOL, BATLAMAGUTURU, Bhatlamaguturu Blocks One and Two",
+    "name": "M P UP SCHOOL, BATLAMAGUTURU",
     "building": "M P UP SCHOOL, BATLAMAGUTURU",
     "locality": "Bhatlamaguturu Blocks One and Two",
-    "sections": "1. Blocks 1, 2, Bhatlamaguturu 2. Block2, Bhatlamaguturu",
+    "sections": "1-M P UP SCHOOL MAIN BASTI. 2-M P UP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.622462,
@@ -4291,14 +5075,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-113-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 714,
+    "extracted_male": 360,
+    "extracted_female": 354,
+    "extracted_households": 205,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_113.json"
   },
   {
     "booth_no": 114,
     "name": "M.P.Ele.School, Western Side, Polamuru",
     "building": "M.P.Ele.School, Western Side, Polamuru",
     "locality": "Polamuru Blocks One to Three",
-    "sections": "1. Polamuru Blocks 1,2 Part, Polamuru 2. Mamuduru Block2, Nagalladibba 3. Mamuduru Block3, Polamuru",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.619478,
@@ -4329,14 +5120,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-114-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 990,
+    "extracted_male": 499,
+    "extracted_female": 491,
+    "extracted_households": 283,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_114.json"
   },
   {
     "booth_no": 115,
     "name": "M.P.Ele.School, Middle Room, Polamuru",
     "building": "M.P.Ele.School, Middle Room, Polamuru",
     "locality": "Polamuru Blocks One to Three",
-    "sections": "1. Polamuru Block 2 Part , 3, Polamuru 2. Polamuru Block2, Nagalladibba 3. Polamuru Block3, Polamuru",
+    "sections": "1-M.P.ELE.SCHOOL MAIN BASTI. 2-M.P.ELE.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.619478,
@@ -4367,14 +5165,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-115-WI.pdf",
-    "panna_pages": 24
+    "panna_pages": 24,
+    "extracted_electorate": 1194,
+    "extracted_male": 602,
+    "extracted_female": 592,
+    "extracted_households": 335,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_115.json"
   },
   {
     "booth_no": 116,
-    "name": "M.P P SCHOOL, POLAMURU, EASTERN SIDE POLAMURU, Polamuru",
+    "name": "M.P P SCHOOL, POLAMURU, EASTERN SIDE POLAMURU",
     "building": "M.P P SCHOOL, POLAMURU, EASTERN SIDE POLAMURU",
     "locality": "Polamuru",
-    "sections": "1. Block4, Polamuru 2. Block5, Polamuru 3. Block6, Polamuru",
+    "sections": "1-M.P P SCHOOL MAIN BASTI. 2-M.P P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.618871,
@@ -4405,14 +5210,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-116-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 888,
+    "extracted_male": 448,
+    "extracted_female": 440,
+    "extracted_households": 253,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_116.json"
   },
   {
     "booth_no": 117,
-    "name": "RAJEEV VIDHYAMISSION ZPHS POLAMURU, SOUTHERN SIDE BUILDING POLAMURU, Polamuru Blocks Four to Six",
+    "name": "RAJEEV VIDHYAMISSION ZPHS POLAMURU, SOUTHERN SIDE BUILDING POLAMURU",
     "building": "RAJEEV VIDHYAMISSION ZPHS POLAMURU, SOUTHERN SIDE BUILDING POLAMURU",
     "locality": "Polamuru Blocks Four to Six",
-    "sections": "1. Blocks 5, 6, Polamuru 2. Block5, Polamuru 3. Block6, Polamuru",
+    "sections": "1-RAJEEV VIDHYAMISSION ZPHS POLAMURU MAIN BASTI. 2-RAJEEV VIDHYAMISSION ZPHS POLAMURU COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.618742,
@@ -4443,14 +5255,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-117-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 806,
+    "extracted_male": 407,
+    "extracted_female": 399,
+    "extracted_households": 225,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_117.json"
   },
   {
     "booth_no": 118,
     "name": "Z.P.H.School,, NORTHERN SIDE , POLAMURU",
     "building": "Z.P.H.School,, NORTHERN SIDE , POLAMURU",
     "locality": "Polamuru Blocks Seven and Eight",
-    "sections": "1. Block 7, 8, Polamuru 2. Block8, Polamuru",
+    "sections": "1-Z.P.H.SCHOOL MAIN BASTI. 2-Z.P.H.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534238",
     "lat": 16.618742,
@@ -4481,14 +5300,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-118-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1007,
+    "extracted_male": 508,
+    "extracted_female": 499,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_118.json"
   },
   {
     "booth_no": 119,
     "name": "M.P Elementary School, Nelamuru, Turpuvaipu, Nelamuru",
     "building": "M.P Elementary School, Nelamuru, Turpuvaipu, Nelamuru",
     "locality": "Nelamuru Blocks One to Three",
-    "sections": "1. Block 1, 2 Part, Nelamuru 2. Block2, Nelamuru 3. Block3, Nelamuru",
+    "sections": "1-M.P ELEMENTARY SCHOOL MAIN BASTI. 2-M.P ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.598292,
@@ -4519,14 +5345,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-119-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1013,
+    "extracted_male": 511,
+    "extracted_female": 502,
+    "extracted_households": 284,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_119.json"
   },
   {
     "booth_no": 120,
     "name": "M.P Elementary School, Nelamuru, Padamaravaipu, Nelamuru",
     "building": "M.P Elementary School, Nelamuru, Padamaravaipu, Nelamuru",
     "locality": "Nelamuru Blocks One to Three",
-    "sections": "1. Block 2 Part, 3, Nelamuru 2. Block2, Nelamuru 3. Block3, Nelamuru",
+    "sections": "1-M.P ELEMENTARY SCHOOL MAIN BASTI. 2-M.P ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.598292,
@@ -4557,14 +5390,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-120-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 927,
+    "extracted_male": 468,
+    "extracted_female": 459,
+    "extracted_households": 259,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_120.json"
   },
   {
     "booth_no": 121,
-    "name": "MPPS SPECIAL, NORTHERN SIDE , ODURU, Oduru Blocks One to Four",
+    "name": "MPPS SPECIAL, NORTHERN SIDE , ODURU",
     "building": "MPPS SPECIAL, NORTHERN SIDE , ODURU",
     "locality": "Oduru Blocks One to Four",
-    "sections": "1. Block 1, 2, Oduru 2. Block2, Oduru 3. Block3, Oduru",
+    "sections": "1-MPPS SPECIAL MAIN BASTI. 2-MPPS SPECIAL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.610723,
@@ -4595,14 +5435,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-121-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 931,
+    "extracted_male": 470,
+    "extracted_female": 461,
+    "extracted_households": 265,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_121.json"
   },
   {
     "booth_no": 122,
     "name": "M.P Special Elementary School, Oduru, Dakshinamvaipu, Oduru",
     "building": "M.P Special Elementary School, Oduru, Dakshinamvaipu, Oduru",
     "locality": "Oduru Blocks One to Four",
-    "sections": "1. Block 3, 4, Oduru 2. Block2, Oduru 3. Block3, Oduru",
+    "sections": "1-M.P SPECIAL ELEMENTARY SCHOOL MAIN BASTI. 2-M.P SPECIAL ELEMENTARY SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534126",
     "lat": 16.610723,
@@ -4633,14 +5480,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-122-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 991,
+    "extracted_male": 500,
+    "extracted_female": 491,
+    "extracted_households": 285,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_122.json"
   },
   {
     "booth_no": 123,
-    "name": "MPPS KAVITAM SIVARU PENKULLAPALMEM, PENKULLAPALEM, MPPS PENKULAPALEM H/O KAVITAM",
+    "name": "MPPS KAVITAM SIVARU PENKULLAPALMEM, PENKULLAPALEM",
     "building": "MPPS KAVITAM SIVARU PENKULLAPALMEM, PENKULLAPALEM",
     "locality": "MPPS PENKULAPALEM H/O KAVITAM",
-    "sections": "1. Kavitamsivaru Penkullapalem, Block 1,2 2. Penkullapalem 2 Blak, Penkulapalem",
+    "sections": "1-MPPS KAVITAM SIVARU PENKULLAPALMEM MAIN BASTI. 2-MPPS KAVITAM SIVARU PENKULLAPALMEM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.597699,
@@ -4671,14 +5525,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-123-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 970,
+    "extracted_male": 489,
+    "extracted_female": 481,
+    "extracted_households": 273,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_123.json"
   },
   {
     "booth_no": 124,
-    "name": "GRAMAPANCHAYAT KARYALAYAM, KAVITAM, GRAMA PANCHAYAT OFFICE KAVITAM",
+    "name": "GRAMAPANCHAYAT KARYALAYAM, KAVITAM",
     "building": "GRAMAPANCHAYAT KARYALAYAM, KAVITAM",
     "locality": "GRAMA PANCHAYAT OFFICE KAVITAM",
-    "sections": "1. Kavitam Blocks 3, 4, 10, Kavitam 2. Kavitam 4Blak,10Th, Kavitam",
+    "sections": "1-GRAMAPANCHAYAT KARYALAYAM MAIN BASTI. 2-GRAMAPANCHAYAT KARYALAYAM COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.595181,
@@ -4709,14 +5570,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-124-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 926,
+    "extracted_male": 467,
+    "extracted_female": 459,
+    "extracted_households": 277,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_124.json"
   },
   {
     "booth_no": 125,
-    "name": "MPP SCHOOL,(GIRLS) KAVITAM, WESTREN SIDE KAVITAM, KAVITAM",
+    "name": "MPP SCHOOL,(GIRLS) KAVITAM, WESTREN SIDE KAVITAM",
     "building": "MPP SCHOOL,(GIRLS) KAVITAM, WESTREN SIDE KAVITAM",
     "locality": "KAVITAM",
-    "sections": "1. Block 5 To 9, Kavitam 2. 6Blak, Kavitam 3. 7Blak, Kavitam",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.59723,
@@ -4747,14 +5615,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-125-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 998,
+    "extracted_male": 503,
+    "extracted_female": 495,
+    "extracted_households": 287,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_125.json"
   },
   {
     "booth_no": 126,
     "name": "MPP School (Girls), Kavitam, EASTERN SIDE, KAVITAM",
     "building": "MPP School (Girls), Kavitam, EASTERN SIDE, KAVITAM",
     "locality": "KAVITAM",
-    "sections": "1. Blocks 5 To 9, Kavitam 2. 6 Blak, Kavitam 3. 7 Blak, Kavitam",
+    "sections": "1-(GIRLS) MAIN BASTI. 2-(GIRLS) COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.59723,
@@ -4785,14 +5660,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-126-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1112,
+    "extracted_male": 561,
+    "extracted_female": 551,
+    "extracted_households": 319,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_126.json"
   },
   {
     "booth_no": 127,
-    "name": "MPPS, NALLA VENKAYYA CHERVU, KAVITAM, MPPS NALLAVENKAIAH CHERUVU H/o KAVITAM",
+    "name": "MPPS, NALLA VENKAYYA CHERVU, KAVITAM",
     "building": "MPPS, NALLA VENKAYYA CHERVU, KAVITAM",
     "locality": "MPPS NALLAVENKAIAH CHERUVU H/o KAVITAM",
-    "sections": "1. Kavitam 10 Blak, Adiandrapalli 2. Kavitam, Lanallavenkaiahcheruvu",
+    "sections": "1-MPPS MAIN BASTI. 2-MPPS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.584958,
@@ -4823,14 +5705,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-127-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1035,
+    "extracted_male": 522,
+    "extracted_female": 513,
+    "extracted_households": 298,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_127.json"
   },
   {
     "booth_no": 128,
-    "name": "M.P.P.SCHOOL, JAGANNADHAPURAM, MPES,JAGANNADHAPURAM",
+    "name": "M.P.P.SCHOOL, JAGANNADHAPURAM",
     "building": "M.P.P.SCHOOL, JAGANNADHAPURAM",
     "locality": "MPES,JAGANNADHAPURAM",
-    "sections": "1. Blocks 1, 2, Jagannadhapuram 2. Jagannada Puram 2 Blak, Jagannadha Puram 3. Jagannada Puram 3 Blak, Jagannadha Puram",
+    "sections": "1-M.P.P.SCHOOL MAIN BASTI. 2-M.P.P.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.605093,
@@ -4861,14 +5750,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-128-WI.pdf",
-    "panna_pages": 14
+    "panna_pages": 14,
+    "extracted_electorate": 686,
+    "extracted_male": 346,
+    "extracted_female": 340,
+    "extracted_households": 198,
+    "extracted_pannas": 14,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_128.json"
   },
   {
     "booth_no": 129,
-    "name": "M P P S - SSA BUILDING, JAGANNADHAPURAM, MPES, SSA BHAVAN BUILDING,JNPURAM",
+    "name": "M P P S - SSA BUILDING, JAGANNADHAPURAM",
     "building": "M P P S - SSA BUILDING, JAGANNADHAPURAM",
     "locality": "MPES, SSA BHAVAN BUILDING,JNPURAM",
-    "sections": "1. Blocks 3, 4, 5, Jagannathapuram",
+    "sections": "1-M P P S - SSA BUILDING MAIN BASTI. 2-M P P S - SSA BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.605093,
@@ -4899,14 +5795,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-129-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 771,
+    "extracted_male": 389,
+    "extracted_female": 382,
+    "extracted_households": 218,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_129.json"
   },
   {
     "booth_no": 130,
-    "name": "MPUP SCHOOL, SATYAVARAM, WESTERN SIDE , NEW BUILDING, SATYAVARAM, SATYAVARAM",
+    "name": "MPUP SCHOOL, SATYAVARAM, WESTERN SIDE , NEW BUILDING, SATYAVARAM",
     "building": "MPUP SCHOOL, SATYAVARAM, WESTERN SIDE , NEW BUILDING, SATYAVARAM",
     "locality": "SATYAVARAM",
-    "sections": "1. Satyavaram Blocks 1, 2, 3, Satyavaram 2. Satyavaram, Satyavaram Blak 2 3. Satyavaram, Satyavaram Blak 3",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PENUMANTRA",
     "pincode": "534122",
     "lat": 16.634805,
@@ -4937,14 +5840,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-130-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 855,
+    "extracted_male": 431,
+    "extracted_female": 424,
+    "extracted_households": 238,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_130.json"
   },
   {
     "booth_no": 131,
-    "name": "M P P S - MAIN BUILDING, NORTHERN SIDE, NORTHERN SIDE, PANDITHAVILLURU, MPP MAIN BUILDING,NORTHERN SIDE,P.VILLURU",
+    "name": "M P P S - MAIN BUILDING, NORTHERN SIDE, NORTHERN SIDE, PANDITHAVILLURU",
     "building": "M P P S - MAIN BUILDING, NORTHERN SIDE, NORTHERN SIDE, PANDITHAVILLURU",
     "locality": "MPP MAIN BUILDING,NORTHERN SIDE,P.VILLURU",
-    "sections": "1. Panditvilluru Block 1, 2, Panditvilluru 2. Pandita Villuru 2 Blak, Katlammatadi 3. Pandita Villuru, Pandita Villuru",
+    "sections": "1-M P P S - MAIN BUILDING MAIN BASTI. 2-M P P S - MAIN BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.608022,
@@ -4975,14 +5885,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-131-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 904,
+    "extracted_male": 456,
+    "extracted_female": 448,
+    "extracted_households": 268,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_131.json"
   },
   {
     "booth_no": 132,
-    "name": "MPPSCHOOL, P VILLURU, NEW BUILDING, PANDITA VILLURU, PANDITAVILLURU",
+    "name": "MPPSCHOOL, P VILLURU, NEW BUILDING, PANDITA VILLURU",
     "building": "MPPSCHOOL, P VILLURU, NEW BUILDING, PANDITA VILLURU",
     "locality": "PANDITAVILLURU",
-    "sections": "1. Pandita Villuru Blocks 3, 4, Panditvilluru 2. Pandita Villuru 2 Blak, Katlammatadi 3. Pandita Villuru 3 Blak, Pandita Villuru",
+    "sections": "1-MPPSCHOOL MAIN BASTI. 2-MPPSCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.608022,
@@ -5013,14 +5930,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-132-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1140,
+    "extracted_male": 575,
+    "extracted_female": 565,
+    "extracted_households": 338,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_132.json"
   },
   {
     "booth_no": 133,
-    "name": "MPPSCHOOL, ADIANDRA PALLI, BUILDING, ADIANDRA PALLI, PANDITAVILLURU",
+    "name": "MPPSCHOOL, ADIANDRA PALLI, BUILDING, ADIANDRA PALLI",
     "building": "MPPSCHOOL, ADIANDRA PALLI, BUILDING, ADIANDRA PALLI",
     "locality": "PANDITAVILLURU",
-    "sections": "1. Panditvilluru Blocks 5, 6, Shettiblijapet 2. Pandita Villuru 2 Blak, Ashok Ngar Chinapettah 5. Panditvilluru, Garuvu",
+    "sections": "1-MPPSCHOOL MAIN BASTI. 2-MPPSCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.603244,
@@ -5051,14 +5975,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-133-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 889,
+    "extracted_male": 448,
+    "extracted_female": 441,
+    "extracted_households": 252,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_133.json"
   },
   {
     "booth_no": 134,
-    "name": "MPUP SCHOOL, MAIN, TURPUPALEM, MAIN BUILDING, TURPUPALEM, TURPUPALEM H/O P.villuru",
+    "name": "MPUP SCHOOL, MAIN, TURPUPALEM, MAIN BUILDING, TURPUPALEM",
     "building": "MPUP SCHOOL, MAIN, TURPUPALEM, MAIN BUILDING, TURPUPALEM",
     "locality": "TURPUPALEM H/O P.villuru",
-    "sections": "1. Block 1, Turpupalem 2. Turpupalem 2 Blak, Turpupalem 3. Turpu Palem 7 Blak, Turpupalem",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.604446,
@@ -5089,14 +6020,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-134-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 824,
+    "extracted_male": 416,
+    "extracted_female": 408,
+    "extracted_households": 233,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_134.json"
   },
   {
     "booth_no": 135,
-    "name": "GRAM PANCHAYAT OFFICE, TURPUPALEM H/O PANDITHAVILLURU, GRAMAPANCHAYAT OFFICE, THURPUPALEM",
+    "name": "GRAM PANCHAYAT OFFICE, TURPUPALEM H/O PANDITHAVILLURU",
     "building": "GRAM PANCHAYAT OFFICE, TURPUPALEM H/O PANDITHAVILLURU",
     "locality": "GRAMAPANCHAYAT OFFICE, THURPUPALEM",
-    "sections": "1. Grama Sachivlyam, Turpupalem H/O.Panditaavilluru, Block 2",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534122",
     "lat": 16.607899,
@@ -5127,14 +6065,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-135-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1026,
+    "extracted_male": 518,
+    "extracted_female": 508,
+    "extracted_households": 288,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_135.json"
   },
   {
     "booth_no": 136,
-    "name": "M P P SCHOOL, PEMMARAJU POLAVARAM, MPPS,Pemmaraju POLAVARAM",
+    "name": "M P P SCHOOL, PEMMARAJU POLAVARAM",
     "building": "M P P SCHOOL, PEMMARAJU POLAVARAM",
     "locality": "MPPS,Pemmaraju POLAVARAM",
-    "sections": "1. Blocks 1, 2, P.Polavaram 2. 2 Blak, P. Polavaram",
+    "sections": "1-M P P SCHOOL MAIN BASTI. 2-M P P SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534338",
     "lat": 16.583889,
@@ -5165,14 +6110,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-136-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 962,
+    "extracted_male": 485,
+    "extracted_female": 477,
+    "extracted_households": 276,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_136.json"
   },
   {
     "booth_no": 137,
     "name": "M.P.P School Boys, PODURU, NORTHERN SIDE, SSA BUILDING, EASTERN ROOM, PODURU",
     "building": "M.P.P School Boys, PODURU, NORTHERN SIDE, SSA BUILDING, EASTERN ROOM, PODURU",
     "locality": "PODURU",
-    "sections": "1. Poduru Block 1, Poduru 2. Podur, Pujuriwari Garuvu 3. Podur, Shanaptula Garuvu",
+    "sections": "1-M.P.P SCHOOL BOYS MAIN BASTI. 2-M.P.P SCHOOL BOYS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.589126,
@@ -5203,14 +6155,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-137-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1087,
+    "extracted_male": 548,
+    "extracted_female": 539,
+    "extracted_households": 318,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_137.json"
   },
   {
     "booth_no": 138,
     "name": "M.P.P School Boys, PODURU, NORTH SIDE SSA BULDING, WESTERN ROOM",
     "building": "M.P.P School Boys, PODURU, NORTH SIDE SSA BULDING, WESTERN ROOM",
     "locality": "PODURU",
-    "sections": "1. Poduru 2,3, Poduru 2. Podur, Pujari Vari Garuvu 3. Podur, Shanaptula Garuvu",
+    "sections": "1-M.P.P SCHOOL BOYS MAIN BASTI. 2-M.P.P SCHOOL BOYS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.589126,
@@ -5241,14 +6200,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-138-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 972,
+    "extracted_male": 490,
+    "extracted_female": 482,
+    "extracted_households": 275,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_138.json"
   },
   {
     "booth_no": 139,
     "name": "M.P.P School Boys, PODURU, CEC BUILDING, SOUTHERN SIDE EASTERN ROOM",
     "building": "M.P.P School Boys, PODURU, CEC BUILDING, SOUTHERN SIDE EASTERN ROOM",
     "locality": "PODURU",
-    "sections": "1. Blocks 4, 5 Part, Podur 2. Podur Block 5, 6, Poduru 3. Podur, Velagalamma Cheruvu",
+    "sections": "1-M.P.P SCHOOL BOYS MAIN BASTI. 2-M.P.P SCHOOL BOYS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.589126,
@@ -5279,14 +6245,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-139-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 724,
+    "extracted_male": 365,
+    "extracted_female": 359,
+    "extracted_households": 202,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_139.json"
   },
   {
     "booth_no": 140,
-    "name": "Gram Panchayiti office, Poduru, GRAMA PANCHAYAT OFFICE,PODURU",
+    "name": "Gram Panchayiti office, Poduru",
     "building": "Gram Panchayiti office, Poduru",
     "locality": "GRAMA PANCHAYAT OFFICE,PODURU",
-    "sections": "1. Podur, Podur Blocks 5 Part, 6 2. Podur, Apparaopeta Blaak5 3. Podur, Velagalamma Cheruvu Blaak6",
+    "sections": "1-GRAM PANCHAYITI OFFICE MAIN BASTI. 2-GRAM PANCHAYITI OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.587479,
@@ -5317,14 +6290,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-140-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 782,
+    "extracted_male": 394,
+    "extracted_female": 388,
+    "extracted_households": 220,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_140.json"
   },
   {
     "booth_no": 141,
-    "name": "M.P.SW . Ele SCHOOL, Poduru, MP(SW)P SCHOOL,PODURU",
+    "name": "M.P.SW . Ele SCHOOL, Poduru",
     "building": "M.P.SW . Ele SCHOOL, Poduru",
     "locality": "MP(SW)P SCHOOL,PODURU",
-    "sections": "1. Podur Blaks 7,8,9 Part, Podur 2. Podur 2 Blak, Harijanpettah 3. Podur 3 Va Blak, Podur",
+    "sections": "1-M.P.SW . ELE SCHOOL MAIN BASTI. 2-M.P.SW . ELE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.585506,
@@ -5355,14 +6335,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-141-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 823,
+    "extracted_male": 415,
+    "extracted_female": 408,
+    "extracted_households": 233,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_141.json"
   },
   {
     "booth_no": 142,
     "name": "TEACHER TRAINING CENTER, PODURU, M.P.P School Boys, PODURU",
     "building": "TEACHER TRAINING CENTER, PODURU, M.P.P School Boys, PODURU",
     "locality": "PODURU",
-    "sections": "1. Poduru Block 9Part , 10, Podur 2. Podur 2 Va Blak, Harijanpettah 3. Podur 3 Va Blak, Podur",
+    "sections": "1-TEACHER TRAINING CENTER MAIN BASTI. 2-TEACHER TRAINING CENTER COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.587479,
@@ -5393,14 +6380,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-142-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1055,
+    "extracted_male": 532,
+    "extracted_female": 523,
+    "extracted_households": 308,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_142.json"
   },
   {
     "booth_no": 143,
-    "name": "SRI ANJANEYA CO-OP SOCIETY, PRIMARY AGRICULTURE BUILDING, PODURU, SRI.A.CO-OP.SOCIETY,PRY.AGR.BUILDING,PDR PODURU",
+    "name": "SRI ANJANEYA CO-OP SOCIETY, PRIMARY AGRICULTURE BUILDING, PODURU",
     "building": "SRI ANJANEYA CO-OP SOCIETY, PRIMARY AGRICULTURE BUILDING, PODURU",
     "locality": "SRI.A.CO-OP.SOCIETY,PRY.AGR.BUILDING,PDR PODURU",
-    "sections": "1. Podur Blocks 11, 12, Kummarigunta 2. Podur Blak 11, Dasaripetta 3. Podur Blak 12, Podur",
+    "sections": "1-SRI ANJANEYA CO-OP SOCIETY MAIN BASTI. 2-SRI ANJANEYA CO-OP SOCIETY COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.58744,
@@ -5431,14 +6425,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-143-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 816,
+    "extracted_male": 412,
+    "extracted_female": 404,
+    "extracted_households": 232,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_143.json"
   },
   {
     "booth_no": 144,
-    "name": "M.P.E.le SCHOOL, Miniminchilipadu, MPUP SCHOOL,MINIMINCHILIPADU",
+    "name": "M.P.E.le SCHOOL, Miniminchilipadu",
     "building": "M.P.E.le SCHOOL, Miniminchilipadu",
     "locality": "MPUP SCHOOL,MINIMINCHILIPADU",
-    "sections": "1. Miniminchilipadu Block 1, Miniminchilipadu",
+    "sections": "1-M.P.E.LE SCHOOL MAIN BASTI. 2-M.P.E.LE SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534327",
     "lat": 16.582805,
@@ -5469,14 +6470,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-144-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1080,
+    "extracted_male": 545,
+    "extracted_female": 535,
+    "extracted_households": 312,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_144.json"
   },
   {
     "booth_no": 145,
     "name": "Z.POriental High School, EASTERN SIDE, GUMMULURU",
     "building": "Z.POriental High School, EASTERN SIDE, GUMMULURU",
     "locality": "ZPOHS NEW BUILDING,EASTERN SIDE,3RD ROOM,GUMMALURU",
-    "sections": "1. Gummaluru Blocks 1 Kapulaveedi, 2 Sivalayamveedi, Kapulveedhi 2. Gummaluru 2 Blak, Sivalayam Veedhi 3. Gummaluru 3 Blak, Ramalyam Veedhi",
+    "sections": "1-Z.PORIENTAL HIGH SCHOOL MAIN BASTI. 2-Z.PORIENTAL HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534267",
     "lat": 16.550897,
@@ -5507,14 +6515,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-145-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 951,
+    "extracted_male": 480,
+    "extracted_female": 471,
+    "extracted_households": 267,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_145.json"
   },
   {
     "booth_no": 146,
-    "name": "Z P O H SCHOOL, EASTERN SIDE, 3RD ROOM, GUMMALURU, ZPOHS NEW BUILDING,EASTERN SIDE,3RD ROOM,GUMMALURU",
+    "name": "Z P O H SCHOOL, EASTERN SIDE, 3RD ROOM, GUMMALURU",
     "building": "Z P O H SCHOOL, EASTERN SIDE, 3RD ROOM, GUMMALURU",
     "locality": "ZPOHS NEW BUILDING,EASTERN SIDE,3RD ROOM,GUMMALURU",
-    "sections": "1. Gummaluru Blocks 3, 4, 5, Kapulveedhi 2. Gummaluru 2 Blaku, Sivalayam Veedhi 3. Gummaluru 3 Blak, Ramalyam Veedhi",
+    "sections": "1-Z P O H SCHOOL MAIN BASTI. 2-Z P O H SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534267",
     "lat": 16.550897,
@@ -5545,14 +6560,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-146-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 926,
+    "extracted_male": 467,
+    "extracted_female": 459,
+    "extracted_households": 260,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_146.json"
   },
   {
     "booth_no": 147,
-    "name": "MPPS NEW BUILDING, DOWN FLOAR EASTERN SIDE 1ST ROOM GUMMULURU, MPPS.NEW BUILD,GROUND FLOOR,EASTERNSIDE 1 ROOMGUM",
+    "name": "MPPS NEW BUILDING, DOWN FLOAR EASTERN SIDE 1ST ROOM GUMMULURU",
     "building": "MPPS NEW BUILDING, DOWN FLOAR EASTERN SIDE 1ST ROOM GUMMULURU",
     "locality": "MPPS.NEW BUILD,GROUND FLOOR,EASTERNSIDE 1 ROOMGUM",
-    "sections": "1. Gummaluru Blocks 6 Dakshinpalem, 7 Mandagalivanigo, Dakshenepalem 2. Gummaluru 7 Blak, Mangalivanigoppu 3. Gummaluru 8 Blaku, Chakirevugunta",
+    "sections": "1-MPPS NEW BUILDING MAIN BASTI. 2-MPPS NEW BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534267",
     "lat": 16.551491,
@@ -5583,14 +6605,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-147-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1014,
+    "extracted_male": 512,
+    "extracted_female": 502,
+    "extracted_households": 289,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_147.json"
   },
   {
     "booth_no": 148,
-    "name": "M P P S, GUMMULURU, MPES KOTHAPETA H/o GUMMALURU",
+    "name": "M P P S, GUMMULURU",
     "building": "M P P S, GUMMULURU",
     "locality": "MPES KOTHAPETA H/o GUMMALURU",
-    "sections": "1. Gummaluru Block 8, Chakirevugunta 2. Gummaluru 7 Blak, Mangalivanigoppu 3. Gummaluru 8 Blak, Chakirevugunta",
+    "sections": "1-M P P S MAIN BASTI. 2-M P P S COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534267",
     "lat": 16.551491,
@@ -5621,14 +6650,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-148-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 881,
+    "extracted_male": 444,
+    "extracted_female": 437,
+    "extracted_households": 248,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_148.json"
   },
   {
     "booth_no": 149,
-    "name": "M.P.Ele. SCHOOL, ROOM NO.1, Gummaluru Shivaru Pydava., MPPS NO.1 PYDAVA H/o Gummaluru",
+    "name": "M.P.Ele. SCHOOL, ROOM NO.1, Gummaluru Shivaru Pydava.",
     "building": "M.P.Ele. SCHOOL, ROOM NO.1, Gummaluru Shivaru Pydava.",
     "locality": "MPPS NO.1 PYDAVA H/o Gummaluru",
-    "sections": "1. Gummaluru9 Blocks 9, 10, Totameraka 2. Gummaluru 10 Blak, Durgammacheruvu 3. Gummuluru, Ketawaripalem",
+    "sections": "1-M.P.ELE. SCHOOL MAIN BASTI. 2-M.P.ELE. SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "PODURU",
     "pincode": "534267",
     "lat": 16.565672,
@@ -5659,14 +6695,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-149-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 943,
+    "extracted_male": 476,
+    "extracted_female": 467,
+    "extracted_households": 273,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_149.json"
   },
   {
     "booth_no": 150,
-    "name": "ZPhigh school, PradhanBhavanamu (10thclass)Madyagdi,Achanta Vemav, ACHANTAVEMAVARAM",
+    "name": "ZPhigh school, PradhanBhavanamu (10thclass)Madyagdi,Achanta Vemav",
     "building": "ZPhigh school, PradhanBhavanamu (10thclass)Madyagdi,Achanta Vemav",
     "locality": "ACHANTAVEMAVARAM",
-    "sections": "1. Blocks 3, 4, Achantavemavaram 2. Achanta Vemavaram, 4 Nundi",
+    "sections": "1-ZPHIGH SCHOOL MAIN BASTI. 2-ZPHIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534272",
     "lat": 16.572676,
@@ -5697,14 +6740,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-150-WI.pdf",
-    "panna_pages": 20
+    "panna_pages": 20,
+    "extracted_electorate": 976,
+    "extracted_male": 492,
+    "extracted_female": 484,
+    "extracted_households": 274,
+    "extracted_pannas": 20,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_150.json"
   },
   {
     "booth_no": 151,
-    "name": "ZPH SCHOOL, ACHANTA VEMAVARAM, MAIN BUILDING, SOUTHERNS SIDE, WESTERN SIDE 7TH, ACHANTA Vemavaram",
+    "name": "ZPH SCHOOL, ACHANTA VEMAVARAM, MAIN BUILDING, SOUTHERNS SIDE, WESTERN SIDE 7TH",
     "building": "ZPH SCHOOL, ACHANTA VEMAVARAM, MAIN BUILDING, SOUTHERNS SIDE, WESTERN SIDE 7TH",
     "locality": "ACHANTA Vemavaram",
-    "sections": "1. Achantavemavaram Blocks 5, 6, Taderupalem 2. Achantavemavaram, Geddadwaripalem 3. Achantavemavaram, Isukgaruvu",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534272",
     "lat": 16.572676,
@@ -5735,14 +6785,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-151-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1111,
+    "extracted_male": 561,
+    "extracted_female": 550,
+    "extracted_households": 315,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_151.json"
   },
   {
     "booth_no": 152,
-    "name": "ZPHS MAIN BUILDING NEW BLOCK, EASTERN SIDE, A.VEMAVARAM, ACHANTAVEMAVARAM",
+    "name": "ZPHS MAIN BUILDING NEW BLOCK, EASTERN SIDE, A.VEMAVARAM",
     "building": "ZPHS MAIN BUILDING NEW BLOCK, EASTERN SIDE, A.VEMAVARAM",
     "locality": "ACHANTAVEMAVARAM",
-    "sections": "1. Achanta Vemavaram Blocks 6, 7, Taderupalem 2. Achanta Vemavaram, Geddadwaripalem 3. Achanta Vemavaram, Isuka Garuvu",
+    "sections": "1-ZPHS MAIN BUILDING NEW BLOCK MAIN BASTI. 2-ZPHS MAIN BUILDING NEW BLOCK COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534272",
     "lat": 16.572676,
@@ -5773,14 +6830,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-152-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 940,
+    "extracted_male": 474,
+    "extracted_female": 466,
+    "extracted_households": 274,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_152.json"
   },
   {
     "booth_no": 153,
-    "name": "MP Ele, SCHOOL, ACHANTA VEMAVARAM, EASTERN SIDE BUILDING, ACHANTA VEMAVRAM, ACHANTAVEMAVARAM",
+    "name": "MP Ele, SCHOOL, ACHANTA VEMAVARAM, EASTERN SIDE BUILDING, ACHANTA VEMAVRAM",
     "building": "MP Ele, SCHOOL, ACHANTA VEMAVARAM, EASTERN SIDE BUILDING, ACHANTA VEMAVRAM",
     "locality": "ACHANTAVEMAVARAM",
-    "sections": "1. Achantavemavaram Blocks 8, 9, Achantavemavaram 2. Achantavemavaram, Achanta Vemavaram 3. Achanta Vemavaram, Lingarajucheruvu",
+    "sections": "1-MP ELE MAIN BASTI. 2-MP ELE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534272",
     "lat": 16.570845,
@@ -5811,14 +6875,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-153-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1001,
+    "extracted_male": 505,
+    "extracted_female": 496,
+    "extracted_households": 285,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_153.json"
   },
   {
     "booth_no": 154,
-    "name": "MP.Ele, SCHOOL, ACHANTA VEMAVARAM, EASTERNSIDE BUILDING, WESTERN SIDE ROOM, ACHANTAVEMAVARAM",
+    "name": "MP.Ele, SCHOOL, ACHANTA VEMAVARAM, EASTERNSIDE BUILDING, WESTERN SIDE ROOM",
     "building": "MP.Ele, SCHOOL, ACHANTA VEMAVARAM, EASTERNSIDE BUILDING, WESTERN SIDE ROOM",
     "locality": "ACHANTAVEMAVARAM",
-    "sections": "1. Achanta Vemavaram Blocks 9, 10, Achantavemavaram 2. Achanta Vemavaram, Achanta Vemavaram 3. Achanta Vemavaram, Lingaraju Cheruvu",
+    "sections": "1-MP.ELE MAIN BASTI. 2-MP.ELE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534272",
     "lat": 16.570845,
@@ -5849,14 +6920,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-154-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 827,
+    "extracted_male": 417,
+    "extracted_female": 410,
+    "extracted_households": 239,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_154.json"
   },
   {
     "booth_no": 155,
-    "name": "M.P.Ele. SCHOOL, ACHANTA VEMAVARAM, ACHANTAVEMAVARAM",
+    "name": "M.P.Ele. SCHOOL, ACHANTA VEMAVARAM",
     "building": "M.P.Ele. SCHOOL, ACHANTA VEMAVARAM",
     "locality": "ACHANTAVEMAVARAM",
-    "sections": "1. Achantavemavaram Blocks 1, 2, Padmtipalem 2. Achantavemavaram, Parvathicheruvu 3. Achantavemavaram, Achanta Vemavaram",
+    "sections": "1-M.P.ELE. SCHOOL MAIN BASTI. 2-M.P.ELE. SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534272",
     "lat": 16.570845,
@@ -5887,14 +6965,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-155-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 821,
+    "extracted_male": 414,
+    "extracted_female": 407,
+    "extracted_households": 235,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_155.json"
   },
   {
     "booth_no": 156,
     "name": "M.P.P(Main) School, PENUMANCHILI, EASTERN SIDE, FIRST ROOM",
     "building": "M.P.P(Main) School, PENUMANCHILI, EASTERN SIDE, FIRST ROOM",
     "locality": "PENUMANCHILI",
-    "sections": "1. Penumanchili Blocks 4, 5, Penumanchili 2. Penumanchili, Kanchiwaripalem 3. Penumanchili, Turpugruvu",
+    "sections": "1-M.P.P(MAIN) SCHOOL MAIN BASTI. 2-M.P.P(MAIN) SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.587151,
@@ -5925,14 +7010,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-156-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 831,
+    "extracted_male": 419,
+    "extracted_female": 412,
+    "extracted_households": 239,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_156.json"
   },
   {
     "booth_no": 157,
     "name": "M.P. P (Main) School, Penumanchili, EASTERN SIDE, 2nd ROOM",
     "building": "M.P. P (Main) School, Penumanchili, EASTERN SIDE, 2nd ROOM",
     "locality": "PENUMANCHILI",
-    "sections": "1. Penumanchili Blocks 6, 7, Penumanchili 2. Penumanchili, Kanchiwaripalem 3. Penumanchili, Turpugruvu",
+    "sections": "1-M.P. P (MAIN) SCHOOL MAIN BASTI. 2-M.P. P (MAIN) SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.585217,
@@ -5963,14 +7055,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-157-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 723,
+    "extracted_male": 365,
+    "extracted_female": 358,
+    "extracted_households": 207,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_157.json"
   },
   {
     "booth_no": 158,
-    "name": "MPP SCHOOL, MAIN, PENUMANCHILI, EASTERN SIDE 3RD ROOM PENUMANCHILI, PENUMANCHILI",
+    "name": "MPP SCHOOL, MAIN, PENUMANCHILI, EASTERN SIDE 3RD ROOM PENUMANCHILI",
     "building": "MPP SCHOOL, MAIN, PENUMANCHILI, EASTERN SIDE 3RD ROOM PENUMANCHILI",
     "locality": "PENUMANCHILI",
-    "sections": "1. Penumanchili Blocks 1,2,3, Varthvapugruvu 2. Penumanchili, Isukgaruvu 3. Penumanchili, Penumanchili",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.585217,
@@ -6001,14 +7100,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-158-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1002,
+    "extracted_male": 506,
+    "extracted_female": 496,
+    "extracted_households": 288,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_158.json"
   },
   {
     "booth_no": 159,
     "name": "Z.P.High School, KODERU, SOUTHERN SIDE 2nd ROOM, KODERU",
     "building": "Z.P.High School, KODERU, SOUTHERN SIDE 2nd ROOM, KODERU",
     "locality": "KODERU",
-    "sections": "1. Koderu Blocks 1, 2, Koderu 2. Koderu, Koderu Blaak2 3. Koderu, Koderu Blaak3",
+    "sections": "1-Z.P.HIGH SCHOOL MAIN BASTI. 2-Z.P.HIGH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.592111,
@@ -6039,14 +7145,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-159-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 847,
+    "extracted_male": 427,
+    "extracted_female": 420,
+    "extracted_households": 237,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_159.json"
   },
   {
     "booth_no": 160,
-    "name": "ZPH SCHOOL, KODERU, NORTHERN SIDE 1ST ROOM, KODERU, KODERU",
+    "name": "ZPH SCHOOL, KODERU, NORTHERN SIDE 1ST ROOM, KODERU",
     "building": "ZPH SCHOOL, KODERU, NORTHERN SIDE 1ST ROOM, KODERU",
     "locality": "KODERU",
-    "sections": "1. Koderu, Blocks 3 , 4",
+    "sections": "1-ZPH SCHOOL MAIN BASTI. 2-ZPH SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534123",
     "lat": 16.592111,
@@ -6077,14 +7190,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-160-WI.pdf",
-    "panna_pages": 24
+    "panna_pages": 24,
+    "extracted_electorate": 1152,
+    "extracted_male": 581,
+    "extracted_female": 571,
+    "extracted_households": 329,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_160.json"
   },
   {
     "booth_no": 161,
-    "name": "MPP SCHOOL, KANDARAVALLI, NEW BUILDING, KANDARAVALLI, KANDARAVALLI",
+    "name": "MPP SCHOOL, KANDARAVALLI, NEW BUILDING, KANDARAVALLI",
     "building": "MPP SCHOOL, KANDARAVALLI, NEW BUILDING, KANDARAVALLI",
     "locality": "KANDARAVALLI",
-    "sections": "1. Kandarvalli, Kandaravalli Blocks 1, 2 2. Kandarvalli, Kandaravalli Blaak2",
+    "sections": "1- MAIN BASTI. 2- COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.576834,
@@ -6115,14 +7235,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-161-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 774,
+    "extracted_male": 390,
+    "extracted_female": 384,
+    "extracted_households": 221,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_161.json"
   },
   {
     "booth_no": 162,
     "name": "MP Ele., schoo, R.C.C. Building,, EASTERN SIDE ROOM, KARUGORUMILLI",
     "building": "MP Ele., schoo, R.C.C. Building,, EASTERN SIDE ROOM, KARUGORUMILLI",
     "locality": "KARUGORUMILLI",
-    "sections": "1. Karugorumilli, Blocks 1, 2 Part 2. Karugorumilli, Karugorumilli Blaak2 3. Karugorumilli, Karugorumilli Blaak3",
+    "sections": "1-MP ELE. MAIN BASTI. 2-MP ELE. COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.572512,
@@ -6153,20 +7280,27 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-162-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 940,
+    "extracted_male": 474,
+    "extracted_female": 466,
+    "extracted_households": 271,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_162.json"
   },
   {
     "booth_no": 163,
     "name": "MP. Ele., School, RCC BUILDING,, WESTERN SIDE ROOM, KARUGORUMILLI",
     "building": "MP. Ele., School, RCC BUILDING,, WESTERN SIDE ROOM, KARUGORUMILLI",
     "locality": "KARUGORUMILLI",
-    "sections": "1. Karugorumilli, Blocks 2 Part, 3, 4 2. Karugorumilli, Karugorumilli 2Blaak 3. Karugorumilli, Karugorumilli Blaak3",
+    "sections": "1-MP. ELE. MAIN BASTI. 2-MP. ELE. COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.572512,
     "lng": 81.839467,
     "is_urban": false,
-    "electorate": 1229,
+    "electorate": 1200,
     "total_votes": 845,
     "turnout_pct": 68.8,
     "votes": {
@@ -6191,14 +7325,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-163-WI.pdf",
-    "panna_pages": 25
+    "panna_pages": 24,
+    "extracted_electorate": 1200,
+    "extracted_male": 606,
+    "extracted_female": 594,
+    "extracted_households": 350,
+    "extracted_pannas": 24,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_163.json"
   },
   {
     "booth_no": 164,
-    "name": "Z.P.H.school, EASTERN SIDE ROOM, ROOM NO.7, VALLURU, VALLURU",
+    "name": "Z.P.H.school, EASTERN SIDE ROOM, ROOM NO.7, VALLURU",
     "building": "Z.P.H.school, EASTERN SIDE ROOM, ROOM NO.7, VALLURU",
     "locality": "VALLURU",
-    "sections": "1. Valluru, Blocks 1, 2, 3 2. Valluru, Blaak2 3. Valluru, Blaak3",
+    "sections": "1-Z.P.H.SCHOOL MAIN BASTI. 2-Z.P.H.SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.559695,
@@ -6229,14 +7370,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-164-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1119,
+    "extracted_male": 565,
+    "extracted_female": 554,
+    "extracted_households": 320,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_164.json"
   },
   {
     "booth_no": 165,
-    "name": "ZPHS, WESTERN SIDE ROOM, Valluru, VALLURU",
+    "name": "ZPHS, WESTERN SIDE ROOM, Valluru",
     "building": "ZPHS, WESTERN SIDE ROOM, Valluru",
     "locality": "VALLURU",
-    "sections": "1. Valluru, Blocks 3 Part, 4, 5 2. Valluru, 2 Nundy 3. Valluru, 3 Nundy",
+    "sections": "1-ZPHS MAIN BASTI. 2-ZPHS COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.559695,
@@ -6267,14 +7415,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-165-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 905,
+    "extracted_male": 457,
+    "extracted_female": 448,
+    "extracted_households": 261,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_165.json"
   },
   {
     "booth_no": 166,
-    "name": "GRAM PANCHAYAT OFFICE, Valluru, VALLURU",
+    "name": "GRAM PANCHAYAT OFFICE, Valluru",
     "building": "GRAM PANCHAYAT OFFICE, Valluru",
     "locality": "VALLURU",
-    "sections": "1. Valluru, Valluru Blocks 6, 7Part 2. Valluru, Geddadwaripalem 3. Valluru, Kambhotlapalem",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.557242,
@@ -6305,14 +7460,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-166-WI.pdf",
-    "panna_pages": 16
+    "panna_pages": 16,
+    "extracted_electorate": 788,
+    "extracted_male": 397,
+    "extracted_female": 391,
+    "extracted_households": 230,
+    "extracted_pannas": 16,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_166.json"
   },
   {
     "booth_no": 167,
-    "name": "M.P.ELE., SCHOOL, Nortern side,, Old tiled building, Vallurutota H/o Valluru, VALLURU",
+    "name": "M.P.ELE., SCHOOL, Nortern side,, Old tiled building, Vallurutota H/o Valluru",
     "building": "M.P.ELE., SCHOOL, Nortern side,, Old tiled building, Vallurutota H/o Valluru",
     "locality": "VALLURU",
-    "sections": "1. Valluru Blocks 7 Part, 8,9,10, Valluru 2. Valluru, Geddadwaripalem 3. Valluru, Kambhotlapalem",
+    "sections": "1-M.P.ELE. MAIN BASTI. 2-M.P.ELE. COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.550615,
@@ -6343,14 +7505,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-167-WI.pdf",
-    "panna_pages": 22
+    "panna_pages": 22,
+    "extracted_electorate": 1051,
+    "extracted_male": 530,
+    "extracted_female": 521,
+    "extracted_households": 308,
+    "extracted_pannas": 22,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_167.json"
   },
   {
     "booth_no": 168,
-    "name": "MPPS OLD TILED BUILDING, Vallurutota H/o Valluru., VALLURUTHOTA",
+    "name": "MPPS OLD TILED BUILDING, Vallurutota H/o Valluru.",
     "building": "MPPS OLD TILED BUILDING, Vallurutota H/o Valluru.",
     "locality": "VALLURUTHOTA",
-    "sections": "1. Blocks 11, 12, Vallurisivaru Valluritota 2. Valluru, Vallurithota 3. Valluru, Chillewaripalem",
+    "sections": "1-MPPS OLD TILED BUILDING MAIN BASTI. 2-MPPS OLD TILED BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.550615,
@@ -6381,14 +7550,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-168-WI.pdf",
-    "panna_pages": 17
+    "panna_pages": 17,
+    "extracted_electorate": 834,
+    "extracted_male": 421,
+    "extracted_female": 413,
+    "extracted_households": 234,
+    "extracted_pannas": 17,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_168.json"
   },
   {
     "booth_no": 169,
-    "name": "MPPS SOURTHERN SIDE NEW BUILDING, VALLURU THOTA H/O VALLURU, VALLURUTHOTA",
+    "name": "MPPS SOURTHERN SIDE NEW BUILDING, VALLURU THOTA H/O VALLURU",
     "building": "MPPS SOURTHERN SIDE NEW BUILDING, VALLURU THOTA H/O VALLURU",
     "locality": "VALLURUTHOTA",
-    "sections": "1. Blocks 12, 13, Silanwaripalem 2. Valluru, Valluruthota 3. Valluru, Chillewaripalem",
+    "sections": "1-MPPS SOURTHERN SIDE NEW BUILDING MAIN BASTI. 2-MPPS SOURTHERN SIDE NEW BUILDING COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534269",
     "lat": 16.550615,
@@ -6419,14 +7595,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-169-WI.pdf",
-    "panna_pages": 15
+    "panna_pages": 15,
+    "extracted_electorate": 749,
+    "extracted_male": 378,
+    "extracted_female": 371,
+    "extracted_households": 219,
+    "extracted_pannas": 15,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_169.json"
   },
   {
     "booth_no": 170,
-    "name": "MPUP SCHOOL, BHIMALAPURAM, BHIMALAPURAM",
+    "name": "MPUP SCHOOL, BHIMALAPURAM",
     "building": "MPUP SCHOOL, BHIMALAPURAM",
     "locality": "BHIMALAPURAM",
-    "sections": "1. Bhimlapuram Blocks 1, 2, Bhimlapuram 2. Bhimala Puram, 2 Nundy Vasamsettivari Veedhi",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534267",
     "lat": 16.558933,
@@ -6457,14 +7640,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-170-WI.pdf",
-    "panna_pages": 18
+    "panna_pages": 18,
+    "extracted_electorate": 892,
+    "extracted_male": 450,
+    "extracted_female": 442,
+    "extracted_households": 253,
+    "extracted_pannas": 18,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_170.json"
   },
   {
     "booth_no": 171,
-    "name": "Grampanchayat Office,, Ayodhyalanka h/o bhimalapuram, AYODHYALANKA H/o Bhimalapuram",
+    "name": "Grampanchayat Office,, Ayodhyalanka h/o bhimalapuram",
     "building": "Grampanchayat Office,, Ayodhyalanka h/o bhimalapuram",
     "locality": "AYODHYALANKA H/o Bhimalapuram",
-    "sections": "1. Ayodhyalanka Blocks 1, 2, Ayodhyalanka 2. Ayodhyalanka, Ayodhyalanka Blaak2 3. Ayodhyalanka, Ayodhyalanka Blaak3",
+    "sections": "1-GRAMPANCHAYAT OFFICE MAIN BASTI. 2-GRAMPANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534267",
     "lat": 16.552813,
@@ -6495,14 +7685,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-171-WI.pdf",
-    "panna_pages": 21
+    "panna_pages": 21,
+    "extracted_electorate": 1001,
+    "extracted_male": 505,
+    "extracted_female": 496,
+    "extracted_households": 291,
+    "extracted_pannas": 21,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_171.json"
   },
   {
     "booth_no": 172,
-    "name": "GRAM PANCHAYAT OFFICE,, Ayodhyalanka H/o Bhimalapuram, AYODHYALANKA H/o Bhimalapuram",
+    "name": "GRAM PANCHAYAT OFFICE,, Ayodhyalanka H/o Bhimalapuram",
     "building": "GRAM PANCHAYAT OFFICE,, Ayodhyalanka H/o Bhimalapuram",
     "locality": "AYODHYALANKA H/o Bhimalapuram",
-    "sections": "1. Blocks 3, 4, Ayodyalanka, Marrimula 2. Ayodhyalanka, Ayodhyalanka Blaak2 3. Ayodhyalanka, Ayodhyalanka Blaak3",
+    "sections": "1-GRAM PANCHAYAT OFFICE MAIN BASTI. 2-GRAM PANCHAYAT OFFICE COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534267",
     "lat": 16.552813,
@@ -6533,14 +7730,21 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-172-WI.pdf",
-    "panna_pages": 23
+    "panna_pages": 23,
+    "extracted_electorate": 1144,
+    "extracted_male": 577,
+    "extracted_female": 567,
+    "extracted_households": 325,
+    "extracted_pannas": 23,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_172.json"
   },
   {
     "booth_no": 173,
-    "name": "MPUP SCHOOL, BHIMALAPURAM SIVARU AYODYA LANKA, AYODHYALANKA H/o Bhimalapuram",
+    "name": "MPUP SCHOOL, BHIMALAPURAM SIVARU AYODYA LANKA",
     "building": "MPUP SCHOOL, BHIMALAPURAM SIVARU AYODYA LANKA",
     "locality": "AYODHYALANKA H/o Bhimalapuram",
-    "sections": "1. Bhimalapuram Sivaru Ayodyalanka, Ayodhyalanka Blocks 5, 6 2. Ayodhyalanka, Ayodhyalanka Blaak6",
+    "sections": "1-MPUP SCHOOL MAIN BASTI. 2-MPUP SCHOOL COLONY STREET. 3-SC / BC COLONY",
     "mandal": "ACHANTA",
     "pincode": "534267",
     "lat": 16.552109,
@@ -6571,6 +7775,13 @@
       "qualifying_date": "01-07-2026"
     },
     "roll_2026_url": "https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/56/2026-EROLLGEN-S01-56-SIR-DraftRoll-Revision1-ENG-173-WI.pdf",
-    "panna_pages": 19
+    "panna_pages": 19,
+    "extracted_electorate": 939,
+    "extracted_male": 474,
+    "extracted_female": 465,
+    "extracted_households": 263,
+    "extracted_pannas": 19,
+    "isAuthenticExtract": true,
+    "extracted_file": "/data/voters/ac_56/booth_173.json"
   }
 ]
