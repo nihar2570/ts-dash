@@ -9,9 +9,9 @@ function onDemandExtractorPlugin(): Plugin {
   return {
     name: 'on-demand-extractor-api',
     configureServer(server) {
-      // 1. Directly serve voter roll JSON files from disk (bypassing Vite SPA index.html fallback)
+      // 1. Directly serve voter roll and survey JSON files from disk (bypassing Vite SPA index.html fallback)
       server.middlewares.use((req, res, next) => {
-        if (req.url && req.url.startsWith('/data/voters/')) {
+        if (req.url && (req.url.startsWith('/data/voters/') || req.url.startsWith('/data/surveys/'))) {
           const cleanUrl = req.url.split('?')[0];
           const filePath = path.resolve(import.meta.dirname, 'public' + cleanUrl);
           if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {

@@ -1,0 +1,211 @@
+{
+  "id": "survey_sib_intelligence_2026",
+  "title": "Survey by SIB (State Intelligence Bureau)",
+  "shortTitle": "State Intelligence Pulse",
+  "agency": "Special Intelligence Bureau (Administrative Ground Assessment)",
+  "leadAnalyst": "SIB Field Stations & District Special Branches",
+  "conductedDate": "February 2026",
+  "sampleSize": 68000,
+  "sampleDistribution": {
+    "uttarandhra": 13600,
+    "kostaAndhra": 31280,
+    "rayalaseema": 23120
+  },
+  "marginOfError": "± 1.2%",
+  "methodology": "Triangulated Administrative Beat Assessment synthesizing 37,088 polling station reports, Mandal Revenue Officer feedback, and caste association resolutions.",
+  "executiveSummary": "Confidential state intelligence assessment confirms robust pro-governance momentum. Law & order stability, Amaravati construction resumption, and targeted BC welfare corporations deliver strong electoral dividends across 23 out of 26 districts.",
+  "badgeColor": "amber",
+  "badgeIcon": "Shield",
+  "keyCasteFindings": [
+    "BC community approval rating stands at peak 63% statewide, anchored by dedicated sub-caste welfare federation allocations.",
+    "Pawan Kalyan's Deputy CM stature generates an unprecedented 88% consolidation of Kapu, Balija, and Telaga youth behind the NDA banner.",
+    "Tirupati temple administration reforms generate strong devotional consolidation (+4.5% Hindu voter surge in Rayalaseema pilgrim corridors).",
+    "YSRCP retains hardcore cadre support in 11-15 factional constituencies, but lacks breakthrough momentum in floating BC swing segments."
+  ],
+  "regionalInsights": {
+    "uttarandhra": "Zero viable opposition mobilization detected; Uttarandhra is projected as an absolute NDA sweep (34/34 seats).",
+    "kostaAndhra": "Capital region economic revitalization radiating through Krishna, Guntur, and Bapatla. YSRCP limited to single isolated seats.",
+    "rayalaseema": "Kurnool, Anantapur, and Chittoor show decisive NDA dominance (75%+ seat share); Kadapa remains fiercely contested."
+  },
+  "projectedTotals": {
+    "ndaVoteSharePct": 55.6,
+    "ysrcpVoteSharePct": 39.8,
+    "incVoteSharePct": 2.4,
+    "othVoteSharePct": 2.2,
+    "projectedSeatsNDA": 160,
+    "projectedSeatsYSRCP": 15,
+    "tossUpSeats": 8
+  },
+  "castePreferences": {
+    "kapu": {
+      "TDP": 38.0,
+      "JSP": 50.0,
+      "YSRCP": 10.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "kamma": {
+      "TDP": 87.0,
+      "JSP": 2.0,
+      "YSRCP": 9.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "reddy": {
+      "TDP": 21.0,
+      "JSP": 4.0,
+      "YSRCP": 71.0,
+      "INC": 3.0,
+      "OTH": 1.0
+    },
+    "bc_turpu_kapu": {
+      "TDP": 62.0,
+      "JSP": 6.0,
+      "YSRCP": 30.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_yadava": {
+      "TDP": 57.0,
+      "JSP": 5.0,
+      "YSRCP": 36.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_kuruba_boya": {
+      "TDP": 65.0,
+      "JSP": 3.0,
+      "YSRCP": 30.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_settibalija_goud": {
+      "TDP": 54.0,
+      "JSP": 12.0,
+      "YSRCP": 32.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_padmashali": {
+      "TDP": 57.0,
+      "JSP": 6.0,
+      "YSRCP": 34.0,
+      "INC": 2.0,
+      "OTH": 1.0
+    },
+    "bc_other": {
+      "TDP": 59.0,
+      "JSP": 5.0,
+      "YSRCP": 34.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "sc_madiga_relli": {
+      "TDP": 54.0,
+      "JSP": 3.0,
+      "YSRCP": 40.0,
+      "INC": 2.0,
+      "OTH": 1.0
+    },
+    "sc_mala": {
+      "TDP": 25.0,
+      "JSP": 3.0,
+      "YSRCP": 65.0,
+      "INC": 5.0,
+      "OTH": 2.0
+    },
+    "st_tribal": {
+      "TDP": 39.0,
+      "JSP": 6.0,
+      "YSRCP": 51.0,
+      "INC": 3.0,
+      "OTH": 1.0
+    },
+    "minority_muslim": {
+      "TDP": 27.0,
+      "JSP": 4.0,
+      "YSRCP": 62.0,
+      "INC": 5.0,
+      "OTH": 2.0
+    },
+    "minority_christian": {
+      "TDP": 20.0,
+      "JSP": 3.0,
+      "YSRCP": 71.0,
+      "INC": 4.0,
+      "OTH": 2.0
+    }
+  },
+  "casteSwings": {
+    "kapu": {
+      "TDP": 2.0,
+      "YSRCP": -2.0,
+      "JSP": 0.0
+    },
+    "kamma": {
+      "TDP": 2.0,
+      "YSRCP": -2.0,
+      "JSP": 0.0
+    },
+    "reddy": {
+      "TDP": 4.0,
+      "YSRCP": -4.0,
+      "JSP": 0.0
+    },
+    "bc_turpu_kapu": {
+      "TDP": 2.0,
+      "YSRCP": -3.0,
+      "JSP": 1.0
+    },
+    "bc_yadava": {
+      "TDP": 2.0,
+      "YSRCP": -3.0,
+      "JSP": 1.0
+    },
+    "bc_kuruba_boya": {
+      "TDP": 2.0,
+      "YSRCP": -2.0,
+      "JSP": 0.0
+    },
+    "bc_settibalija_goud": {
+      "TDP": 1.0,
+      "YSRCP": -1.0,
+      "JSP": 0.0
+    },
+    "bc_padmashali": {
+      "TDP": 2.0,
+      "YSRCP": -2.0,
+      "JSP": 0.0
+    },
+    "bc_other": {
+      "TDP": 2.0,
+      "YSRCP": -2.0,
+      "JSP": 0.0
+    },
+    "sc_madiga_relli": {
+      "TDP": 2.0,
+      "YSRCP": -2.0,
+      "JSP": 0.0
+    },
+    "sc_mala": {
+      "TDP": 4.0,
+      "YSRCP": -4.0,
+      "JSP": 0.0
+    },
+    "st_tribal": {
+      "TDP": 2.0,
+      "YSRCP": -3.0,
+      "JSP": 1.0
+    },
+    "minority_muslim": {
+      "TDP": 3.0,
+      "YSRCP": -3.0,
+      "JSP": 1.0
+    },
+    "minority_christian": {
+      "TDP": 3.0,
+      "YSRCP": -3.0,
+      "JSP": 1.0
+    }
+  }
+}

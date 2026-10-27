@@ -22,11 +22,21 @@ import {
   History,
   ShieldCheck,
   Scale,
+  BarChart3,
+  Vote,
+  Globe,
 } from 'lucide-react';
 import { SwingStudioModal } from './SwingStudioModal';
 import type { MacroSwing, PartySwing } from './SwingStudioModal';
 import { AdvancedSimulationSuite, URBAN_AC_NOS } from './AdvancedSimulationSuite';
 import type { TurnoutSettings, WhatIfTab } from './AdvancedSimulationSuite';
+import { SurveyConfiguratorModal } from './SurveyConfiguratorModal';
+import {
+  fetchSurveysCatalog,
+  BUNDLED_SURVEYS,
+  getCustomSurveys,
+} from '../data/surveyScenarioService';
+import type { CasteSurveyDataset } from '../data/surveyScenarioService';
 import {
   DEFAULT_COALITION_SETTINGS,
   DEFAULT_MLA_FATIGUE_SETTINGS,
@@ -140,6 +150,19 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
   const [tossUpThreshold, setTossUpThreshold] = useState<number>(8000);
   const [searchFilter, setSearchFilter] = useState<string>('');
 
+  // Surveys state (Pre-filled realistic caste demographic surveys)
+  const [allSurveys, setAllSurveys] = useState<CasteSurveyDataset[]>(Object.values(BUNDLED_SURVEYS));
+  const [activeSurvey, setActiveSurvey] = useState<CasteSurveyDataset>(BUNDLED_SURVEYS.survey_peoples_pulse_2026);
+  const [isSurveyModalOpen, setIsSurveyModalOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    fetchSurveysCatalog().then(() => {
+      const custom = getCustomSurveys();
+      const bundledList = Object.values(BUNDLED_SURVEYS);
+      setAllSurveys([...bundledList, ...custom]);
+    });
+  }, []);
+
   // Count actively customized communities
   const activeCustomizedCount = useMemo(() => {
     let count = 0;
@@ -231,6 +254,20 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       reset.youth_18_25 = { TDP: 8, YSRCP: -10, JSP: 2 };
       setMacroSwing({ TDP: 3.5, YSRCP: -4.5, JSP: 1.0 });
       setTurnoutSettings({ urbanShift: 4, ruralShift: 1, femaleShift: 2 });
+    } else if (presetKey.startsWith('survey_') || presetKey.startsWith('custom_survey_')) {
+      // 9. Demographic Caste Survey: Pre-filled strictly by complete caste data!
+      const targetSurvey = allSurveys.find((s) => s.id === presetKey) || BUNDLED_SURVEYS[presetKey];
+      if (targetSurvey) {
+        setActiveSurvey(targetSurvey);
+        Object.entries(targetSurvey.casteSwings).forEach(([commKey, s]) => {
+          reset[commKey] = { TDP: s.TDP, YSRCP: s.YSRCP, JSP: s.JSP };
+        });
+        setMacroSwing({ TDP: 0, YSRCP: 0, JSP: 0 });
+        setTurnoutSettings({ urbanShift: 0, ruralShift: 0, femaleShift: 0 });
+        setCoalitionSettings(DEFAULT_COALITION_SETTINGS);
+        setMlaFatigueSettings(DEFAULT_MLA_FATIGUE_SETTINGS);
+        setGroundCrisisSettings(DEFAULT_GROUND_CRISIS_SETTINGS);
+      }
     }
 
     setSwings(reset);
@@ -379,8 +416,8 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
       jspVotes += totalVotes * ((macroSwing.JSP || 0) / 100);
 
       // Seat Sharing & Coalition Dynamics across Presets
-      if (activePreset === 'nda_2024_sweep' || activePreset === 'baseline') {
-        // Exact official 2024 mandate - clean baseline without artificial double transfers
+      if (activePreset === 'nda_2024_sweep' || activePreset === 'baseline' || activePreset.startsWith('survey_') || activePreset.startsWith('custom_survey_')) {
+        // Pure caste demography survey or exact official 2024 mandate - clean baseline without artificial double transfers
       } else if (activePreset === 'nda_2029_defense' || activePreset === 'nda_2029_max_surge') {
         const isJspContested = JSP_SEATS_2024.has(ac.ac_no);
         const isBjpContested = BJP_SEATS_2024.has(ac.ac_no);
@@ -745,6 +782,15 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         category: 'coalition',
         detail: 'Amaravati delivery and mega industrial investments breach YSRCP last 11 bastions',
       });
+    } else if (activePreset.startsWith('survey_') || activePreset.startsWith('custom_survey_')) {
+      if (activeSurvey) {
+        list.push({
+          id: activeSurvey.id,
+          label: `📊 ${activeSurvey.title} (${activeSurvey.sampleSize?.toLocaleString()} Sample)`,
+          category: 'caste_blocs',
+          detail: `${activeSurvey.agency}: ${activeSurvey.executiveSummary?.slice(0, 95)}...`,
+        });
+      }
     }
 
     // 2. Caste Blocs
@@ -920,6 +966,7 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
     else if (activePreset === 'tdp_vs_jsp_bjp_2029') scenarioName = '🤝🔥 2029 Realigned: TDP Solo vs JSP+BJP vs YSRCP';
     else if (activePreset === 'ysrcp_2029_resurgence') scenarioName = '⚡ 2029 YSRCP Resurgence (Welfare Backlash)';
     else if (activePreset === 'nda_2029_max_surge' || activePreset === 'nda_super_wave') scenarioName = '🎯 2029 NDA Max Surge (170+ Clean Sweep)';
+    else if (activePreset.startsWith('survey_') || activePreset.startsWith('custom_survey_')) scenarioName = activeSurvey ? `📊 ${activeSurvey.title}` : '📊 Field Caste Polling Survey';
     else if (activePreset === 'custom') scenarioName = '⚙️ Custom AP Strategic Scenario';
 
     onBridgeChange({
@@ -1135,6 +1182,107 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             </div>
             <span className="text-[11px] font-mono text-indigo-700 font-bold hidden xl:inline">Forward War Room Models</span>
           </div>
+
+          <div className="border-t border-slate-200/70" />
+
+          {/* Row 3: Pre-filled Complete Caste Demographic Surveys */}
+          <div className="flex flex-wrap items-center justify-between gap-2.5">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-[11px] font-black uppercase tracking-wider text-emerald-950 font-mono flex items-center gap-1.5 min-w-[170px]">
+                <Vote className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Field Caste Surveys:</span>
+              </span>
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <button
+                  onClick={() => applyPreset('survey_peoples_pulse_2026')}
+                  className={`px-3 py-1.5 text-xs rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                    activePreset === 'survey_peoples_pulse_2026'
+                      ? 'bg-emerald-600 text-white shadow-sm ring-2 ring-emerald-400/50 font-black'
+                      : 'bg-white text-slate-700 hover:bg-emerald-50 hover:text-emerald-900 border border-slate-200'
+                  }`}
+                  title="People's Pulse 2026: Multistage caste tracker (54,200 sample) - Solid BC retention & Kapu consolidation (154 NDA)"
+                >
+                  <BarChart3 className="w-3.5 h-3.5" />
+                  <span>📊 Survey by People's Pulse</span>
+                </button>
+
+                <button
+                  onClick={() => applyPreset('survey_lok_poll_2026')}
+                  className={`px-3 py-1.5 text-xs rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                    activePreset === 'survey_lok_poll_2026'
+                      ? 'bg-blue-600 text-white shadow-sm ring-2 ring-blue-400/50 font-black'
+                      : 'bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-900 border border-slate-200'
+                  }`}
+                  title="Lok Poll 2026: Macro demographic field study (42,800 sample) - Rural BC price-rise friction (142 NDA / 33 YSRCP)"
+                >
+                  <Target className="w-3.5 h-3.5" />
+                  <span>🎯 Survey by Lok Poll</span>
+                </button>
+
+                <button
+                  onClick={() => applyPreset('survey_sib_intelligence_2026')}
+                  className={`px-3 py-1.5 text-xs rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                    activePreset === 'survey_sib_intelligence_2026'
+                      ? 'bg-amber-600 text-white shadow-sm ring-2 ring-amber-400/50 font-black'
+                      : 'bg-white text-slate-700 hover:bg-amber-50 hover:text-amber-900 border border-slate-200'
+                  }`}
+                  title="SIB Intelligence 2026: Administrative Beat Assessment (68,000 interactions) - Law & order + Amaravati push (160 NDA)"
+                >
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>🛡️ Survey by SIB Intelligence</span>
+                </button>
+
+                <button
+                  onClick={() => applyPreset('survey_ipac_field_wing_2026')}
+                  className={`px-3 py-1.5 text-xs rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                    activePreset === 'survey_ipac_field_wing_2026'
+                      ? 'bg-rose-600 text-white shadow-sm ring-2 ring-rose-400/50 font-black'
+                      : 'bg-white text-slate-700 hover:bg-rose-50 hover:text-rose-900 border border-slate-200'
+                  }`}
+                  title="IPAC Field Wing 2026: DBT & Welfare saturation survey (85,000 respondents) - High rural agrarian competition (118 NDA / 57 YSRCP)"
+                >
+                  <Flame className="w-3.5 h-3.5" />
+                  <span>🔥 Survey by IPAC Field Wing</span>
+                </button>
+
+                <button
+                  onClick={() => applyPreset('survey_atma_sakshi_2026')}
+                  className={`px-3 py-1.5 text-xs rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                    activePreset === 'survey_atma_sakshi_2026'
+                      ? 'bg-indigo-600 text-white shadow-sm ring-2 ring-indigo-400/50 font-black'
+                      : 'bg-white text-slate-700 hover:bg-indigo-50 hover:text-indigo-900 border border-slate-200'
+                  }`}
+                  title="Atma Sakshi (CPS) 2026: Granular caste arithmetic index (46,500 sample) - BC + Kapu + Kamma social coalition (148 NDA)"
+                >
+                  <Scale className="w-3.5 h-3.5" />
+                  <span>⚖️ Survey by Atma Sakshi (CPS)</span>
+                </button>
+
+                <button
+                  onClick={() => applyPreset('survey_cvoter_macro_2026')}
+                  className={`px-3 py-1.5 text-xs rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
+                    activePreset === 'survey_cvoter_macro_2026'
+                      ? 'bg-teal-600 text-white shadow-sm ring-2 ring-teal-400/50 font-black'
+                      : 'bg-white text-slate-700 hover:bg-teal-50 hover:text-teal-900 border border-slate-200'
+                  }`}
+                  title="C-Voter / Macro Pulse 2026: National CATI tracker (38,500 sample) - Double-engine governance approval (150 NDA)"
+                >
+                  <Globe className="w-3.5 h-3.5" />
+                  <span>🌐 Survey by C-Voter Pulse</span>
+                </button>
+
+                <button
+                  onClick={() => setIsSurveyModalOpen(true)}
+                  className="px-3 py-1.5 text-xs rounded-lg font-bold transition-all cursor-pointer flex items-center gap-1.5 bg-slate-900 text-white hover:bg-slate-800 shadow-sm"
+                  title="Configure and tune caste demographics, swings, and sample preferences for this survey"
+                >
+                  <Sliders className="w-3.5 h-3.5 text-amber-400" />
+                  <span>⚙️ Configure / Tune Survey...</span>
+                </button>
+              </div>
+            </div>
+            <span className="text-[11px] font-mono text-emerald-700 font-bold hidden xl:inline">Complete Caste Demography Surveys</span>
+          </div>
         </div>
 
         {/* Real-time Explanatory Strategic Barometer Banner for Active Preset */}
@@ -1247,6 +1395,64 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
             <span className="text-[11px] bg-amber-100 text-amber-900 font-mono px-2.5 py-0.5 rounded border border-amber-300 font-bold">
               170+ Seat Clean Sweep
             </span>
+          </div>
+        )}
+
+        {(activePreset.startsWith('survey_') || activePreset.startsWith('custom_survey_')) && activeSurvey && (
+          <div className="px-4 py-3 bg-gradient-to-r from-emerald-50 via-teal-50 to-indigo-50/70 rounded-xl border border-emerald-300 text-xs text-emerald-950 flex flex-wrap items-center justify-between gap-3 shadow-2xs">
+            <div className="flex items-start gap-2.5">
+              <div className="p-1.5 bg-emerald-600 text-white rounded-lg shrink-0 mt-0.5">
+                <BarChart3 className="w-4 h-4" />
+              </div>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="font-black text-slate-900 text-sm">{activeSurvey.title}</span>
+                  <span className="text-[10px] bg-emerald-100 text-emerald-900 font-bold px-2 py-0.5 rounded border border-emerald-300">
+                    {activeSurvey.agency}
+                  </span>
+                  <span className="text-[10px] bg-slate-100 text-slate-700 font-mono px-1.5 py-0.5 rounded border border-slate-300 font-bold">
+                    Sample: {activeSurvey.sampleSize?.toLocaleString()} ({activeSurvey.marginOfError})
+                  </span>
+                  <span className="text-[10px] bg-indigo-100 text-indigo-800 font-semibold px-1.5 py-0.5 rounded border border-indigo-200">
+                    {activeSurvey.conductedDate}
+                  </span>
+                </div>
+                <p className="text-slate-700 text-xs leading-relaxed max-w-4xl">
+                  {activeSurvey.executiveSummary}
+                </p>
+                <div className="flex items-center gap-2 pt-1 flex-wrap text-[11px]">
+                  <span className="font-bold text-slate-700">Survey Caste Matrix:</span>
+                  <span className="bg-white/80 px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800">
+                    Kapu: <strong>{(activeSurvey.castePreferences?.kapu?.TDP || 0) + (activeSurvey.castePreferences?.kapu?.JSP || 0)}% NDA</strong>
+                  </span>
+                  <span className="bg-white/80 px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800">
+                    Kamma: <strong>{(activeSurvey.castePreferences?.kamma?.TDP || 0) + (activeSurvey.castePreferences?.kamma?.JSP || 0)}% NDA</strong>
+                  </span>
+                  <span className="bg-white/80 px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800">
+                    Reddy: <strong>{activeSurvey.castePreferences?.reddy?.YSRCP || 0}% YSRCP</strong>
+                  </span>
+                  <span className="bg-white/80 px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800">
+                    BC Kuruba: <strong>{(activeSurvey.castePreferences?.bc_kuruba_boya?.TDP || 0) + (activeSurvey.castePreferences?.bc_kuruba_boya?.JSP || 0)}% NDA</strong>
+                  </span>
+                  <span className="bg-white/80 px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800">
+                    SC Madiga: <strong>{(activeSurvey.castePreferences?.sc_madiga_relli?.TDP || 0) + (activeSurvey.castePreferences?.sc_madiga_relli?.JSP || 0)}% NDA</strong>
+                  </span>
+                  <span className="bg-white/80 px-2 py-0.5 rounded border border-slate-200 font-mono text-slate-800">
+                    SC Mala: <strong>{activeSurvey.castePreferences?.sc_mala?.YSRCP || 0}% YSRCP</strong>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 shrink-0">
+              <button
+                onClick={() => setIsSurveyModalOpen(true)}
+                className="px-3 py-1.5 bg-slate-900 hover:bg-slate-800 text-white rounded-lg font-bold text-xs flex items-center gap-1.5 shadow-xs cursor-pointer transition-colors"
+              >
+                <Sliders className="w-3.5 h-3.5 text-amber-400" />
+                <span>Configure Caste Sliders</span>
+              </button>
+            </div>
           </div>
         )}
 
@@ -1857,6 +2063,25 @@ export const SimulationsView: React.FC<SimulationsViewProps> = ({
         tally={tally}
         onApplyPreset={applyPreset}
         activePreset={activePreset}
+      />
+
+      {/* Demographic Caste Survey Configurator & Tuning Modal */}
+      <SurveyConfiguratorModal
+        isOpen={isSurveyModalOpen}
+        onClose={() => setIsSurveyModalOpen(false)}
+        activeSurvey={activeSurvey}
+        allSurveys={allSurveys}
+        onSelectSurvey={(s) => {
+          setActiveSurvey(s);
+          applyPreset(s.id);
+        }}
+        onApplySwings={(customSwings, updatedSurvey) => {
+          setSwings(customSwings);
+          if (updatedSurvey) {
+            setActiveSurvey(updatedSurvey);
+            setActivePreset(updatedSurvey.id);
+          }
+        }}
       />
     </div>
   );

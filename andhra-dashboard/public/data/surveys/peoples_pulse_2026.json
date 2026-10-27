@@ -1,0 +1,211 @@
+{
+  "id": "survey_peoples_pulse_2026",
+  "title": "Survey by People's Pulse",
+  "shortTitle": "People's Pulse 2026",
+  "agency": "People's Pulse Research Organization",
+  "leadAnalyst": "G. Murthy & Field Research Team",
+  "conductedDate": "February 2026",
+  "sampleSize": 54200,
+  "sampleDistribution": {
+    "uttarandhra": 10840,
+    "kostaAndhra": 24390,
+    "rayalaseema": 18970
+  },
+  "marginOfError": "± 1.8%",
+  "methodology": "Multistage Stratified Purposive Random Sampling across all 175 Assembly Constituencies with face-to-face CAPI surveys across 4 polling booths per mandal.",
+  "executiveSummary": "Ground caste tracker reveals rock-solid NDA coalition cohesion in Coastal Andhra and strong BC retention in Rayalaseema. Sub-categorization dividend among SC Madigas sustains NDA edge, offsetting minor rural welfare delivery friction.",
+  "badgeColor": "emerald",
+  "badgeIcon": "BarChart3",
+  "keyCasteFindings": [
+    "Kapu-Balija-Telaga alliance consolidation remains resilient at 85% combined NDA preference under Pawan Kalyan's leadership.",
+    "BC Kuruba/Boya in Rayalaseema and Turpu Kapu in Uttarandhra show over 58-62% loyalty to TDP.",
+    "SC Madiga community leans 51% NDA following Supreme Court sub-categorization momentum, contrasting with SC Mala consolidation behind YSRCP (67%).",
+    "Reddy bastion holds firm for YSRCP at 74% preference across Kadapa, Kurnool, and Palnadu."
+  ],
+  "regionalInsights": {
+    "uttarandhra": "BC Turpu Kapu and Yadava blocs hold firmly with TDP-JSP; Srikakulam and Vizianagaram maintain 85%+ NDA sweep probability.",
+    "kostaAndhra": "Godavari delta Kapu-Kamma-Settibalija alliance intact. Aquaculture farmers voice moderate tariff discontent but vote intention remains allied.",
+    "rayalaseema": "Fierce factional fights in Kadapa and Kurnool; TDP Kuruba-Boya mobilization counters YSRCP Reddy consolidation."
+  },
+  "projectedTotals": {
+    "ndaVoteSharePct": 53.8,
+    "ysrcpVoteSharePct": 41.2,
+    "incVoteSharePct": 2.8,
+    "othVoteSharePct": 2.2,
+    "projectedSeatsNDA": 154,
+    "projectedSeatsYSRCP": 21,
+    "tossUpSeats": 14
+  },
+  "castePreferences": {
+    "kapu": {
+      "TDP": 36.0,
+      "JSP": 49.0,
+      "YSRCP": 13.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "kamma": {
+      "TDP": 84.0,
+      "JSP": 2.0,
+      "YSRCP": 12.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "reddy": {
+      "TDP": 17.0,
+      "JSP": 4.0,
+      "YSRCP": 74.0,
+      "INC": 4.0,
+      "OTH": 1.0
+    },
+    "bc_turpu_kapu": {
+      "TDP": 58.0,
+      "JSP": 6.0,
+      "YSRCP": 34.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_yadava": {
+      "TDP": 53.0,
+      "JSP": 5.0,
+      "YSRCP": 40.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_kuruba_boya": {
+      "TDP": 62.0,
+      "JSP": 3.0,
+      "YSRCP": 33.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_settibalija_goud": {
+      "TDP": 52.0,
+      "JSP": 11.0,
+      "YSRCP": 35.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "bc_padmashali": {
+      "TDP": 54.0,
+      "JSP": 6.0,
+      "YSRCP": 37.0,
+      "INC": 2.0,
+      "OTH": 1.0
+    },
+    "bc_other": {
+      "TDP": 56.0,
+      "JSP": 5.0,
+      "YSRCP": 37.0,
+      "INC": 1.0,
+      "OTH": 1.0
+    },
+    "sc_madiga_relli": {
+      "TDP": 51.0,
+      "JSP": 3.0,
+      "YSRCP": 43.0,
+      "INC": 2.0,
+      "OTH": 1.0
+    },
+    "sc_mala": {
+      "TDP": 22.0,
+      "JSP": 3.0,
+      "YSRCP": 67.0,
+      "INC": 6.0,
+      "OTH": 2.0
+    },
+    "st_tribal": {
+      "TDP": 36.0,
+      "JSP": 6.0,
+      "YSRCP": 54.0,
+      "INC": 3.0,
+      "OTH": 1.0
+    },
+    "minority_muslim": {
+      "TDP": 25.0,
+      "JSP": 3.0,
+      "YSRCP": 64.0,
+      "INC": 6.0,
+      "OTH": 2.0
+    },
+    "minority_christian": {
+      "TDP": 18.0,
+      "JSP": 2.0,
+      "YSRCP": 73.0,
+      "INC": 5.0,
+      "OTH": 2.0
+    }
+  },
+  "casteSwings": {
+    "kapu": {
+      "TDP": 0.0,
+      "YSRCP": 1.0,
+      "JSP": -1.0
+    },
+    "kamma": {
+      "TDP": -1.0,
+      "YSRCP": 1.0,
+      "JSP": 0.0
+    },
+    "reddy": {
+      "TDP": 0.0,
+      "YSRCP": -1.0,
+      "JSP": 0.0
+    },
+    "bc_turpu_kapu": {
+      "TDP": -2.0,
+      "YSRCP": 1.0,
+      "JSP": 1.0
+    },
+    "bc_yadava": {
+      "TDP": -2.0,
+      "YSRCP": 1.0,
+      "JSP": 1.0
+    },
+    "bc_kuruba_boya": {
+      "TDP": -1.0,
+      "YSRCP": 1.0,
+      "JSP": 0.0
+    },
+    "bc_settibalija_goud": {
+      "TDP": -1.0,
+      "YSRCP": 2.0,
+      "JSP": -1.0
+    },
+    "bc_padmashali": {
+      "TDP": -1.0,
+      "YSRCP": 1.0,
+      "JSP": 0.0
+    },
+    "bc_other": {
+      "TDP": -1.0,
+      "YSRCP": 1.0,
+      "JSP": 0.0
+    },
+    "sc_madiga_relli": {
+      "TDP": -1.0,
+      "YSRCP": 1.0,
+      "JSP": 0.0
+    },
+    "sc_mala": {
+      "TDP": 1.0,
+      "YSRCP": -2.0,
+      "JSP": 0.0
+    },
+    "st_tribal": {
+      "TDP": -1.0,
+      "YSRCP": 0.0,
+      "JSP": 1.0
+    },
+    "minority_muslim": {
+      "TDP": 1.0,
+      "YSRCP": -1.0,
+      "JSP": 0.0
+    },
+    "minority_christian": {
+      "TDP": 1.0,
+      "YSRCP": -1.0,
+      "JSP": 0.0
+    }
+  }
+}

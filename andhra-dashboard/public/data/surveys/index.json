@@ -1,0 +1,132 @@
+{
+  "surveys": [
+    {
+      "id": "survey_peoples_pulse_2026",
+      "filename": "peoples_pulse_2026.json",
+      "title": "Survey by People's Pulse",
+      "shortTitle": "People's Pulse 2026",
+      "agency": "People's Pulse Research Organization",
+      "conductedDate": "February 2026",
+      "sampleSize": 54200,
+      "marginOfError": "\u00b1 1.8%",
+      "badgeColor": "emerald",
+      "badgeIcon": "BarChart3",
+      "projectedTotals": {
+        "ndaVoteSharePct": 53.8,
+        "ysrcpVoteSharePct": 41.2,
+        "incVoteSharePct": 2.8,
+        "othVoteSharePct": 2.2,
+        "projectedSeatsNDA": 154,
+        "projectedSeatsYSRCP": 21,
+        "tossUpSeats": 14
+      }
+    },
+    {
+      "id": "survey_lok_poll_2026",
+      "filename": "lok_poll_2026.json",
+      "title": "Survey by Lok Poll",
+      "shortTitle": "Lok Poll Field Study",
+      "agency": "Lok Poll Strategic Research Group",
+      "conductedDate": "January 2026",
+      "sampleSize": 42800,
+      "marginOfError": "\u00b1 2.1%",
+      "badgeColor": "blue",
+      "badgeIcon": "Target",
+      "projectedTotals": {
+        "ndaVoteSharePct": 51.5,
+        "ysrcpVoteSharePct": 43.6,
+        "incVoteSharePct": 2.7,
+        "othVoteSharePct": 2.2,
+        "projectedSeatsNDA": 142,
+        "projectedSeatsYSRCP": 33,
+        "tossUpSeats": 22
+      }
+    },
+    {
+      "id": "survey_sib_intelligence_2026",
+      "filename": "sib_intelligence_2026.json",
+      "title": "Survey by SIB (State Intelligence Bureau)",
+      "shortTitle": "State Intelligence Pulse",
+      "agency": "Special Intelligence Bureau (Administrative Ground Assessment)",
+      "conductedDate": "February 2026",
+      "sampleSize": 68000,
+      "marginOfError": "\u00b1 1.2%",
+      "badgeColor": "amber",
+      "badgeIcon": "Shield",
+      "projectedTotals": {
+        "ndaVoteSharePct": 55.6,
+        "ysrcpVoteSharePct": 39.8,
+        "incVoteSharePct": 2.4,
+        "othVoteSharePct": 2.2,
+        "projectedSeatsNDA": 160,
+        "projectedSeatsYSRCP": 15,
+        "tossUpSeats": 8
+      }
+    },
+    {
+      "id": "survey_ipac_field_wing_2026",
+      "filename": "ipac_field_wing_2026.json",
+      "title": "Survey by IPAC Field Wing",
+      "shortTitle": "IPAC War Room Pulse",
+      "agency": "Indian Political Action Committee (Field Strategy Wing)",
+      "conductedDate": "February 2026",
+      "sampleSize": 85000,
+      "marginOfError": "\u00b1 1.5%",
+      "badgeColor": "rose",
+      "badgeIcon": "Flame",
+      "projectedTotals": {
+        "ndaVoteSharePct": 48.9,
+        "ysrcpVoteSharePct": 46.2,
+        "incVoteSharePct": 2.6,
+        "othVoteSharePct": 2.3,
+        "projectedSeatsNDA": 118,
+        "projectedSeatsYSRCP": 57,
+        "tossUpSeats": 35
+      }
+    },
+    {
+      "id": "survey_atma_sakshi_2026",
+      "filename": "atma_sakshi_2026.json",
+      "title": "Survey by Atma Sakshi (CPS)",
+      "shortTitle": "Atma Sakshi Caste Index",
+      "agency": "Atma Sakshi Group / Center for Poll Strategies (CPS)",
+      "conductedDate": "January 2026",
+      "sampleSize": 46500,
+      "marginOfError": "\u00b1 2.0%",
+      "badgeColor": "indigo",
+      "badgeIcon": "Scale",
+      "projectedTotals": {
+        "ndaVoteSharePct": 53.1,
+        "ysrcpVoteSharePct": 42.1,
+        "incVoteSharePct": 2.7,
+        "othVoteSharePct": 2.1,
+        "projectedSeatsNDA": 148,
+        "projectedSeatsYSRCP": 27,
+        "tossUpSeats": 18
+      }
+    },
+    {
+      "id": "survey_cvoter_macro_2026",
+      "filename": "cvoter_macro_2026.json",
+      "title": "Survey by C-Voter / Macro Pulse",
+      "shortTitle": "C-Voter AP Macro Tracker",
+      "agency": "C-Voter International & State Opinion Council",
+      "conductedDate": "February 2026",
+      "sampleSize": 38500,
+      "marginOfError": "\u00b1 2.2%",
+      "badgeColor": "cyan",
+      "badgeIcon": "Globe",
+      "projectedTotals": {
+        "ndaVoteSharePct": 53.5,
+        "ysrcpVoteSharePct": 41.5,
+        "incVoteSharePct": 2.8,
+        "othVoteSharePct": 2.2,
+        "projectedSeatsNDA": 150,
+        "projectedSeatsYSRCP": 25,
+        "tossUpSeats": 16
+      }
+    }
+  ],
+  "totalSurveys": 6,
+  "updatedAt": "2026-02-15"
+}
