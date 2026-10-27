@@ -30,6 +30,10 @@ export interface BoothVoterRollSummary {
   seniorCount: number; // 60+
   householdCount: number;
   totalPages: number;
+  roll2026Url?: string;
+  roll2026Pages?: number;
+  roll2026SizeKb?: number;
+  is2026OfficialRoll?: boolean;
   electors: ElectorRecord[];
 }
 
@@ -353,6 +357,16 @@ export async function fetchBoothVoters(
           boothName = b.building || b.name || boothName;
           mandalName = b.mandal || mandalName;
           electorateCount = b.electorate || electorateCount;
+
+          const roll = generateBoothVoterRoll(acNo, boothNo, boothName, mandalName, electorateCount);
+          if (b.roll_2026_url || b.roll_2026?.url) {
+            roll.roll2026Url = b.roll_2026_url || b.roll_2026?.url;
+            roll.roll2026Pages = b.roll_2026?.pdf_pages || b.panna_pages;
+            roll.roll2026SizeKb = b.roll_2026?.pdf_size_kb;
+            roll.is2026OfficialRoll = true;
+          }
+          boothRollCache.set(cacheKey, roll);
+          return roll;
         }
       }
     } else if (acNo === 175) {

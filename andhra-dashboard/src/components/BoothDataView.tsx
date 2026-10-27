@@ -866,7 +866,19 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-1.5">
+                <div className="flex items-center gap-1.5 flex-wrap">
+                  {data.roll2026Url && (
+                    <a
+                      href={data.roll2026Url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="px-2.5 py-1.5 rounded-lg border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
+                      title="View Official CEO / ECI 2026 Special Intensive Revision Draft Roll PDF"
+                    >
+                      <FileText className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>2026 ECI Roll ({data.totalPages} Pannas) ↗</span>
+                    </a>
+                  )}
                   <button
                     type="button"
                     onClick={() => window.print()}
