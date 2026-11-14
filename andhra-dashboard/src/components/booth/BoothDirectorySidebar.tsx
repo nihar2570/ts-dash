@@ -1,10 +1,20 @@
 import React from 'react';
 import { Search, Building } from 'lucide-react';
 import type { MandalDetail } from '../../data/mandalData';
-import { FORM_20_URLS } from '../../data/form20Urls';
+
+export interface BoothSidebarItem {
+  boothNo: number;
+  name: string;
+  mandalName?: string;
+  electorate: number;
+  winnerParty?: string;
+  margin?: number;
+  swingVs2019?: number;
+  [key: string]: any;
+}
 
 interface BoothDirectorySidebarProps {
-  filteredBoothsList: any[];
+  filteredBoothsList: BoothSidebarItem[];
   allBoothsCount: number;
   selectedBoothNo: number;
   onSelectBooth: (boothNo: number) => void;
@@ -26,20 +36,20 @@ export const BoothDirectorySidebar: React.FC<BoothDirectorySidebarProps> = ({
   mandals,
   boothFilterMandal,
   setBoothFilterMandal,
-  selectedAcNo = 1,
+  selectedAcNo: _selectedAcNo = 1,
 }) => {
-  const form20Url = FORM_20_URLS[selectedAcNo];
-
   return (
     <div id="booth-catalog" className="lg:col-span-3 space-y-3 print:hidden scroll-mt-24">
       <div className="bg-white rounded-xl border border-slate-200 p-3 shadow-2xs space-y-2.5">
         <div className="flex items-center justify-between">
           <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
             <Building className="w-4 h-4 text-indigo-600" />
-            Polling Stations ({filteredBoothsList.length})
+            Booth Directory
           </span>
           <span className="text-[10px] font-mono text-slate-500">
-            Total: {allBoothsCount}
+            {filteredBoothsList.length === allBoothsCount
+              ? `${allBoothsCount} booths`
+              : `${filteredBoothsList.length} of ${allBoothsCount} booths`}
           </span>
         </div>
 
@@ -109,9 +119,6 @@ export const BoothDirectorySidebar: React.FC<BoothDirectorySidebarProps> = ({
         <div className="max-h-[640px] overflow-y-auto space-y-1.5 pr-1">
           {filteredBoothsList.map((b) => {
             const isSelected = b.boothNo === selectedBoothNo;
-            const pdfUrl =
-              b.roll2026Url ||
-              `https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/${selectedAcNo}/2026-EROLLGEN-S01-${selectedAcNo}-SIR-DraftRoll-Revision1-ENG-${b.boothNo}-WI.pdf`;
             return (
               <div
                 key={b.boothNo}
@@ -123,59 +130,51 @@ export const BoothDirectorySidebar: React.FC<BoothDirectorySidebarProps> = ({
                 }`}
               >
                 <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-slate-900 font-mono">
-                    Booth #{b.boothNo}
-                  </span>
-                  <div className="flex items-center gap-1">
+                  <div className="flex items-center gap-1.5 min-w-0">
+                    <span className="font-bold text-slate-900 font-mono">
+                      Booth #{b.boothNo}
+                    </span>
+                    {b.winnerParty && (
+                      <span
+                        className={`text-[9px] font-mono font-bold px-1 py-0.2 rounded border shrink-0 ${
+                          b.winnerParty === 'TDP'
+                            ? 'bg-amber-100 text-amber-900 border-amber-300'
+                            : b.winnerParty === 'YSRCP'
+                            ? 'bg-blue-100 text-blue-900 border-blue-300'
+                            : 'bg-slate-100 text-slate-700 border-slate-300'
+                        }`}
+                      >
+                        {b.winnerParty} {b.margin ? `+${b.margin}` : ''}
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-1 shrink-0">
+                    {b.swingVs2019 !== undefined && !isNaN(b.swingVs2019) && (
+                      <span
+                        className={`text-[9px] font-mono font-bold px-1 rounded flex items-center gap-0.5 ${
+                          b.swingVs2019 >= 0
+                            ? 'bg-emerald-100 text-emerald-800'
+                            : 'bg-rose-100 text-rose-800'
+                        }`}
+                        title="5-Year TDP vote swing vs 2019"
+                      >
+                        {b.swingVs2019 >= 0 ? `+${b.swingVs2019.toFixed(0)}%` : `${b.swingVs2019.toFixed(0)}%`}
+                      </span>
+                    )}
                     <span className="text-[10px] font-mono text-slate-500">
                       {b.electorate}v
                     </span>
                   </div>
                 </div>
-                <p className="text-[11px] text-slate-600 truncate mt-0.5" title={b.name}>
-                  {b.name.replace(`Polling Station #${b.boothNo} - `, '')}
-                </p>
-                <div className="flex items-center justify-between text-[10px] text-slate-400 mt-1 gap-1">
-                  <span className="truncate max-w-[90px]">{b.mandalName}</span>
-                  <div className="flex items-center gap-1 shrink-0">
-                    {b.isAuthenticExtract && (
-                      <span className="text-[9px] font-mono px-1 rounded bg-emerald-100 text-emerald-800 font-bold border border-emerald-200">
-                        ✓ SIR 2026
-                      </span>
-                    )}
-                    <a
-                      href={pdfUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-rose-50 hover:bg-rose-100 text-rose-700 hover:text-rose-900 border border-rose-200 font-bold transition-colors inline-flex items-center gap-0.5 cursor-pointer shadow-3xs"
-                      title={`Open Official SIR 2026 Draft Roll PDF for Booth #${b.boothNo}`}
-                    >
-                      <span>PDF</span>
-                      <span className="text-[8px]">↗</span>
-                    </a>
-                    {form20Url && (
-                      <a
-                        href={form20Url}
-                        target="_blank"
-                        rel="noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                        className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-700 hover:text-emerald-900 border border-emerald-200 font-bold transition-colors inline-flex items-center gap-0.5 cursor-pointer shadow-3xs"
-                        title={`Open Official 2024 Form-20 PDF for Booth #${b.boothNo}`}
-                      >
-                        <span>F20</span>
-                        <span className="text-[8px]">↗</span>
-                      </a>
-                    )}
-                    {b.lat && b.lng && (
-                      <span className="text-[9px] font-mono text-indigo-500" title={`GPS: ${b.lat}, ${b.lng}`}>
-                        📍 GPS
-                      </span>
-                    )}
-                    <span className="text-[9px] px-1 rounded bg-slate-200 text-slate-700 font-medium">
-                      {b.dominantCaste}
+                <div className="flex items-center justify-between text-[11px] text-slate-600 mt-0.5 gap-2">
+                  <p className="truncate" title={b.name}>
+                    {b.name.replace(`Polling Station #${b.boothNo} - `, '')}
+                  </p>
+                  {b.mandalName && (
+                    <span className="text-[10px] text-slate-400 shrink-0 font-medium">
+                      {b.mandalName}
                     </span>
-                  </div>
+                  )}
                 </div>
               </div>
             );

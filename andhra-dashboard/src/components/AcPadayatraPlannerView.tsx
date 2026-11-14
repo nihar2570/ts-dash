@@ -76,7 +76,7 @@ export const AcPadayatraPlannerView: React.FC<AcPadayatraPlannerViewProps> = ({
                 AC-Wide Campaign Itinerary
               </span>
               <span className="text-xs text-amber-300 font-mono">
-                AC #{acNo} {acName} &middot; {plan.strategySummary.totalBoothsInAc} Total Polling Stations
+                AC #{acNo} {acName} &middot; {plan.strategySummary.totalBoothsInAc} Total Booths
               </span>
             </div>
             <h3 className="text-base sm:text-lg font-black text-slate-100">

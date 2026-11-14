@@ -12,8 +12,6 @@ import {
   Briefcase,
   GitFork,
   ChevronRight,
-  ChevronLeft,
-  X,
   Pin,
   Sparkles,
 } from 'lucide-react';
@@ -27,6 +25,8 @@ import {
   type RedPillParty,
   type TriggerFreshness,
 } from './redPillMicroTriggers';
+import { RedPillTriggerInfoModal } from './RedPillTriggerInfoModal';
+import { RedPillSearchTableView } from './RedPillSearchTableView';
 
 export interface RedPillEmotionalMatrixProps {
   demographicsData?: DemographicsDataset;
@@ -1022,200 +1022,30 @@ export const RedPillEmotionalMatrix: React.FC<RedPillEmotionalMatrixProps> = ({
 
         {/* SECONDARY FLAT LIST / SEARCH MODE */}
         {viewMode === 'search' && (
-          <div className="space-y-3">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="relative flex-1 min-w-[240px]">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
-                <input
-                  type="text"
-                  placeholder={`Search ${activeParty === 'TDP_JSP' ? 'NDA' : 'YSRCP'} triggers (e.g., Super Six, Sand, Laddu, Viveka, Pension)...`}
-                  value={searchQuery}
-                  onChange={(e) => {
-                    setSearchQuery(e.target.value);
-                    setCurrentPage(1);
-                  }}
-                  className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-9 pr-3 py-1.5 text-xs text-white placeholder-slate-500 focus:outline-hidden focus:ring-1 focus:ring-rose-500"
-                />
-              </div>
-
-              <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-                <span>
-                  {filteredTriggers.length} matches &middot; Page {currentPage}/{totalPages}
-                </span>
-                <button
-                  disabled={currentPage === 1}
-                  onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
-                  className="p-1 rounded bg-slate-800 hover:bg-slate-700 disabled:opacity-30 text-white cursor-pointer"
-                >
-                  <ChevronLeft className="w-4 h-4" />
-                </button>
-                <button
-                  disabled={currentPage === totalPages}
-                  onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
-                  className="p-1 rounded bg-slate-800 hover:bg-slate-700 disabled:opacity-30 text-white cursor-pointer"
-                >
-                  <ChevronRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-
-            <div className="divide-y divide-slate-800/80 border border-slate-800 rounded-xl overflow-hidden bg-slate-950/60">
-              {paginatedTriggers.map((t) => {
-                const isOn = activeTriggerIds.has(t.id);
-                const meta = RED_PILL_CATEGORIES[t.category];
-                const fMeta = FRESHNESS_META[t.freshness];
-                return (
-                  <div
-                    key={t.id}
-                    onClick={() => toggleTrigger(t.id)}
-                    className={`px-3 py-2.5 flex items-center justify-between gap-3 cursor-pointer hover:bg-slate-800/60 transition-colors ${
-                      isOn ? '' : 'opacity-60'
-                    }`}
-                  >
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <span
-                        className="w-2 h-2 rounded-full shrink-0"
-                        style={{ backgroundColor: meta.color }}
-                      />
-                      <span
-                        className={`text-[9.5px] font-mono font-bold px-1.5 py-0.2 rounded border shrink-0 ${fMeta.badgeClass}`}
-                      >
-                        {fMeta.shortLabel}
-                      </span>
-                      <div className="min-w-0">
-                        <div className="text-xs font-semibold text-white truncate">{t.title}</div>
-                        <div className="text-[10.5px] text-slate-400 truncate italic">
-                          {t.subCluster} &middot; {t.targetGroup}
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-3 shrink-0">
-                      <button
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setInspectedTrigger(t);
-                        }}
-                        className="text-[10px] text-slate-400 hover:text-white underline cursor-pointer"
-                      >
-                        Info
-                      </button>
-                      <span className="text-[11px] font-mono font-bold text-rose-300">
-                        +{t.impactPct.toFixed(2)}%
-                      </span>
-                      <div
-                        className={`w-7 h-4 rounded-full relative flex items-center px-0.5 transition-colors ${
-                          isOn ? 'bg-emerald-500' : 'bg-slate-700'
-                        }`}
-                      >
-                        <div
-                          className={`w-3 h-3 rounded-full bg-white transition-transform ${
-                            isOn ? 'translate-x-3' : 'translate-x-0'
-                          }`}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+          <RedPillSearchTableView
+            activeParty={activeParty}
+            activeTriggerIds={activeTriggerIds}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            currentPage={currentPage}
+            setCurrentPage={setCurrentPage}
+            totalPages={totalPages}
+            filteredTriggersCount={filteredTriggers.length}
+            paginatedTriggers={paginatedTriggers}
+            toggleTrigger={toggleTrigger}
+            onInspectTrigger={setInspectedTrigger}
+          />
         )}
       </div>
 
       {/* 3. CLEAN TRIGGER INFO MODAL WITH STRATEGY PIVOT NOTE */}
-      {inspectedTrigger && (
-        <div className="fixed inset-0 bg-black/75 z-50 flex items-center justify-center p-4 backdrop-blur-xs animate-in fade-in duration-150">
-          <div className="bg-slate-900 border border-slate-700 rounded-2xl max-w-lg w-full p-5 space-y-3.5 shadow-2xl relative">
-            <button
-              onClick={() => setInspectedTrigger(null)}
-              className="absolute top-4 right-4 p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white cursor-pointer"
-            >
-              <X className="w-4 h-4" />
-            </button>
-
-            <div className="flex items-center gap-2 pr-8">
-              <span className="p-2 rounded-lg bg-slate-800 border border-slate-700">
-                {getCategoryIcon(inspectedTrigger.category)}
-              </span>
-              <div>
-                <div className="flex items-center gap-1.5 flex-wrap">
-                  <span className="text-[10px] uppercase font-mono font-bold text-slate-400">
-                    #{inspectedTrigger.id.toUpperCase()} &middot; {inspectedTrigger.subCluster}
-                  </span>
-                  <span
-                    className={`text-[9.5px] font-mono font-bold px-1.5 py-0.2 rounded border ${
-                      FRESHNESS_META[inspectedTrigger.freshness].badgeClass
-                    }`}
-                  >
-                    {FRESHNESS_META[inspectedTrigger.freshness].label} ({FRESHNESS_META[inspectedTrigger.freshness].multiplierLabel})
-                  </span>
-                </div>
-                <h3 className="text-sm font-black text-white mt-0.5">{inspectedTrigger.title}</h3>
-              </div>
-            </div>
-
-            <p className="text-xs text-slate-200 bg-slate-950 p-3 rounded-xl border border-slate-800 italic leading-relaxed">
-              "{inspectedTrigger.hook}"
-            </p>
-
-            {inspectedTrigger.reframeAngle && (
-              <div className="bg-amber-950/30 border border-amber-700/40 rounded-xl p-3 text-xs space-y-0.5">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300 block">
-                  {inspectedTrigger.freshness === 'reframed'
-                    ? 'How to Pivot Without Fatigue:'
-                    : 'Saturation Warning:'}
-                </span>
-                <p className="text-slate-300 leading-relaxed">{inspectedTrigger.reframeAngle}</p>
-              </div>
-            )}
-
-            <div className="grid grid-cols-2 gap-2 text-xs font-mono bg-slate-950/60 p-3 rounded-xl border border-slate-850">
-              <div>
-                <span className="text-[9px] text-slate-400 uppercase block">Target Audience</span>
-                <strong className="text-amber-300">{inspectedTrigger.targetGroup}</strong>
-              </div>
-              <div>
-                <span className="text-[9px] text-slate-400 uppercase block">Delivery Channel</span>
-                <strong className="text-emerald-300">{inspectedTrigger.deliveryChannel}</strong>
-              </div>
-              <div>
-                <span className="text-[9px] text-slate-400 uppercase block">Effective Vote Shift</span>
-                <strong className="text-rose-400">
-                  +{inspectedTrigger.impactPct.toFixed(2)}%
-                  {inspectedTrigger.freshness !== 'fresh' && (
-                    <span className="text-[10px] text-slate-500 font-normal ml-1">
-                      (base +{inspectedTrigger.baseImpactPct.toFixed(2)}%)
-                    </span>
-                  )}
-                </strong>
-              </div>
-              <div>
-                <span className="text-[9px] text-slate-400 uppercase block">Voters Shifted</span>
-                <strong className="text-white">
-                  ~{inspectedTrigger.votersAffectedStatewide.toLocaleString()}
-                </strong>
-              </div>
-            </div>
-
-            <div className="flex justify-end pt-1">
-              <button
-                onClick={() => {
-                  toggleTrigger(inspectedTrigger.id);
-                  setInspectedTrigger(null);
-                }}
-                className={`px-4 py-1.5 rounded-lg font-bold text-xs cursor-pointer ${
-                  activeTriggerIds.has(inspectedTrigger.id)
-                    ? 'bg-rose-950 hover:bg-rose-900 text-rose-200 border border-rose-700'
-                    : 'bg-emerald-950 hover:bg-emerald-900 text-emerald-200 border border-emerald-700'
-                }`}
-              >
-                {activeTriggerIds.has(inspectedTrigger.id) ? 'Mute Trigger' : 'Activate Trigger'}
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <RedPillTriggerInfoModal
+        trigger={inspectedTrigger}
+        onClose={() => setInspectedTrigger(null)}
+        isActive={inspectedTrigger ? activeTriggerIds.has(inspectedTrigger.id) : false}
+        onToggle={toggleTrigger}
+        getCategoryIcon={getCategoryIcon}
+      />
     </div>
   );
 };

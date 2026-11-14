@@ -86,9 +86,6 @@ export const RED_PILL_SECTIONS: NavSection[] = [
   },
 ];
 
-// Default export for backward compatibility
-export const REACH_SECTIONS: NavSection[] = BLUE_PILL_SECTIONS;
-
 interface FloatingSideNavProps {
   sections?: NavSection[];
   activeRoute?: 'blue_pill' | 'red_pill';

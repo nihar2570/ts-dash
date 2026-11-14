@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import { Vote, Sparkles, CheckCircle2 } from 'lucide-react';
 import type { SimulatedConstituencyResult } from '../types';
 
@@ -189,11 +189,11 @@ export const CampaignPollingTracker538: React.FC<CampaignPollingTrackerProps> = 
   const minY = 32;
   const maxY = 62;
 
-  const valToY = (v: number) => {
+  const valToY = useCallback((v: number) => {
     const clamped = Math.max(minY, Math.min(maxY, v));
     const fraction = (clamped - minY) / (maxY - minY);
     return paddingTop + chartH - fraction * chartH;
-  };
+  }, [chartH, paddingTop]);
 
   // Convert surveys into SVG scatter points
   const chartPoints = useMemo(() => {
@@ -211,7 +211,7 @@ export const CampaignPollingTracker538: React.FC<CampaignPollingTrackerProps> = 
         radius,
       };
     });
-  }, [chartW, paddingLeft]);
+  }, [chartW, paddingLeft, valToY]);
 
   // Helper to build smooth cubic bezier curve through control points
   const buildBezierFromPoints = (pts: { x: number; y: number }[]) => {
@@ -252,7 +252,7 @@ export const CampaignPollingTracker538: React.FC<CampaignPollingTrackerProps> = 
         finalY_ysrcp: valToY(scenario.ysrcpFinal),
       };
     });
-  }, [chartW, paddingLeft]);
+  }, [chartW, paddingLeft, valToY]);
 
   const yGridLines = [35, 40, 45, 50, 55, 60];
 

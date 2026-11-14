@@ -587,40 +587,40 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
   return (
     <div className="space-y-4">
       {/* Top Banner: Constituency Selector Bar */}
-      <div className="bg-white rounded-xl border border-slate-200 p-3.5 shadow-2xs flex flex-wrap items-center justify-between gap-3 print:hidden">
-        <div className="flex items-center gap-3">
+      <div className="bg-white rounded-xl border border-slate-200 p-3.5 shadow-2xs flex flex-wrap lg:flex-nowrap items-center justify-between gap-3 print:hidden">
+        <div className="flex items-center gap-3 min-w-0">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white font-black text-sm shadow-xs shrink-0">
             #{selectedAcNo}
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h2 className="text-base font-black text-slate-900 tracking-tight">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              <h2 className="text-base font-black text-slate-900 tracking-tight whitespace-nowrap">
                 {currentAc.ac_name}
               </h2>
               {currentAc.district && (
-                <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-semibold border border-slate-200">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-semibold border border-slate-200 whitespace-nowrap">
                   {currentAc.district}
                 </span>
               )}
               {currentAc.reservation && currentAc.reservation !== 'GEN' && (
-                <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-bold border border-amber-200">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-bold border border-amber-200 whitespace-nowrap">
                   {currentAc.reservation}
                 </span>
               )}
             </div>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-slate-500 truncate">
               Statewide E-Panna &amp; Polling Station Roster Explorer &middot;{' '}
               <strong className="text-slate-800">{totalBoothsInAc} Total Polling Stations</strong>
             </p>
           </div>
         </div>
 
-        {/* AC Search & Switcher & 30/60/90 Campaign Switcher */}
-        <div className="flex items-center gap-2 flex-1 max-w-xl justify-end flex-wrap">
+        {/* AC Search & Switcher & Padayatra Plan Switcher */}
+        <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
             onClick={() => setViewMode(viewMode === 'ac-plan' ? 'table' : 'ac-plan')}
-            className={`px-3 py-1.5 rounded-lg border text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs shrink-0 ${
+            className={`px-3 py-1.5 rounded-lg border text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs whitespace-nowrap shrink-0 ${
               viewMode === 'ac-plan'
                 ? 'bg-amber-500 text-slate-950 border-amber-400 font-black ring-2 ring-amber-300'
                 : 'bg-amber-50 hover:bg-amber-100 text-amber-900 border-amber-300'
@@ -628,14 +628,14 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
             title="15 / 30 / 60 / 90-Day AC-Wide Padayatra Campaign Itinerary"
           >
             <Calendar className="w-3.5 h-3.5 text-amber-800" />
-            <span>{viewMode === 'ac-plan' ? '← Single Booth Roll Mode' : 'Whole AC (15/30/60/90d) Plan'}</span>
+            <span>{viewMode === 'ac-plan' ? '← Single Booth Roll' : 'Padayatra Plan'}</span>
           </button>
 
-          <div className="relative flex-1 max-w-xs">
+          <div className="relative w-44 sm:w-52">
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
             <input
               type="text"
-              placeholder="Jump to AC (e.g. Sirpur, 40, Gajwel)..."
+              placeholder="Jump to AC..."
               value={acSearchQuery}
               onChange={(e) => setAcSearchQuery(e.target.value)}
               className="w-full pl-8 pr-2.5 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:outline-hidden focus:ring-1 focus:ring-indigo-500 text-slate-900"
@@ -649,7 +649,7 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
               onSelectAc(ac);
               setSelectedBoothNo(1);
             }}
-            className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 font-bold focus:outline-hidden cursor-pointer"
+            className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 font-bold focus:outline-hidden cursor-pointer whitespace-nowrap max-w-[220px]"
           >
             {acList
               .filter(

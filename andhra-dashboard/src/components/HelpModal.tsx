@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   X,
   Sparkles,
@@ -37,18 +37,18 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
   const { mapColorShade, setMapColorShade } = useDashboard();
   const [activeTab, setActiveTab] = useState<HelpTab>('overview');
   const [searchQuery, setSearchQuery] = useState('');
-  const [currentFontSize, setCurrentFontSize] = useState<string>('18px');
-
-  useEffect(() => {
+  const [currentFontSize, setCurrentFontSize] = useState<string>(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('ts_dash_font_size') || document.documentElement.style.fontSize || '18px';
-      setCurrentFontSize(saved.trim());
+      return (localStorage.getItem('ts_dash_font_size') || document.documentElement.style.fontSize || '18px').trim();
     }
-  }, [isOpen]);
+    return '18px';
+  });
 
   const handleSelectFontSize = (size: string) => {
     setCurrentFontSize(size);
-    document.documentElement.style.fontSize = size;
+    if (typeof document !== 'undefined') {
+      document.documentElement.style.setProperty('font-size', size);
+    }
     try {
       localStorage.setItem('ts_dash_font_size', size);
     } catch {}
@@ -56,7 +56,7 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
 
   const tabs: { key: HelpTab; label: string; icon: React.FC<{ className?: string }> }[] = [
     { key: 'overview', label: 'Mandate & Overview', icon: Shield },
-    { key: 'tabs', label: '5 War Room Tabs', icon: Layers },
+    { key: 'tabs', label: '6 War Room Tabs', icon: Layers },
     { key: 'demographics', label: 'Caste Equations', icon: Users },
     { key: 'solvers', label: 'Tactical Solvers', icon: Target },
     { key: 'shortcuts', label: 'Shortcuts & Hotkeys', icon: Keyboard },
@@ -222,20 +222,25 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             </div>
           )}
 
-          {/* TAB 2: 5 WAR ROOM TABS */}
+          {/* TAB 2: 6 WAR ROOM TABS */}
           {(activeTab === 'tabs' || q) && (
             <div className="space-y-4">
               <div className="border-b border-slate-200 pb-2">
                 <h3 className="text-base font-black text-slate-900 flex items-center gap-2">
                   <Layers className="w-4 h-4 text-indigo-600" />
-                  The 5 Core War Room Tabs &mdash; Guided Walkthrough
+                  The 6 Core War Room Tabs across 2 Functional Groups
                 </h3>
                 <p className="text-xs text-slate-500 mt-0.5">
-                  Organized in the logical strategic campaign sequence from Macro Baseline to Booth Execution
+                  Partitioned into Ground &amp; Constituency Intelligence (Ground Truth) and War Room &amp; Strategy (Intervention)
                 </p>
               </div>
 
-              <div className="space-y-3">
+              {/* Group 1: Ground & Constituency Intelligence */}
+              <div className="space-y-2">
+                <div className="text-[11px] font-black uppercase tracking-wider text-indigo-700 bg-indigo-50 px-2.5 py-1 rounded-md border border-indigo-100 flex items-center gap-1.5">
+                  <span>Ground &amp; Constituency Intelligence (Anatomy &amp; Facts)</span>
+                </div>
+
                 {/* 1. Results & Map */}
                 <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
                   <div className="flex items-center justify-between">
@@ -246,63 +251,84 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                     <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 1</kbd>
                   </div>
                   <p className="text-[11px] text-slate-600 leading-relaxed">
-                    Interactive choropleth map and 175-constituency directory across 2014, 2019, and 2024 elections. Switch between <strong>Party Colors</strong>, <strong>Victory Margins</strong> (highlights seats won by &lt;10k votes), and <strong>Seat Swings</strong>. Click any constituency on the map to lock its historical battle card, turnout trend, and open the <strong>Full Candidate Dossier</strong>.
+                    Interactive choropleth map and 175-constituency directory across 2014, 2019, and 2024 elections. Switch between <strong>Party Colors</strong>, <strong>Victory Margins</strong> (highlights seats won by &lt;10k votes), and <strong>Seat Swings</strong>. Click any constituency to inspect its battle card and voter trends.
                   </p>
                 </div>
 
-                {/* 2. Simulations */}
+                {/* 2. AC Dossier */}
                 <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
                   <div className="flex items-center justify-between">
                     <h4 className="font-bold text-slate-900 text-xs flex items-center gap-2">
                       <span className="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-mono font-bold text-[10px]">2</span>
-                      🔮 Simulations &amp; What-If Scenarios
+                      🏛️ AC Dossier (Candidate Roster &amp; Affidavits)
                     </h4>
                     <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 2</kbd>
                   </div>
                   <p className="text-[11px] text-slate-600 leading-relaxed">
-                    Senior Chief-Advisor forecasting suite. Dial community swing percentages across 14 caste and demographic blocs to observe projected seat outcomes on the <strong>Live Assembly Majority Barometer</strong>. Features the <strong>Inverse-Margin Bubble Chart</strong> (voter scale vs. flip-deficit) and the <strong>Scenario Bridge Ribbon</strong> to export scenario assumptions into the Playbook.
+                    Full-page constituency dossier. Inspect candidate wealth, educational qualifications, criminal affidavits, local issue priorities, mandal circles, and demographic caste share for any selected constituency with an instant dropdown switcher.
                   </p>
                 </div>
 
-                {/* 3. Playbook & Actions */}
+                {/* 3. Voter Rolls & Booths */}
                 <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
                   <div className="flex items-center justify-between">
                     <h4 className="font-bold text-slate-900 text-xs flex items-center gap-2">
                       <span className="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-mono font-bold text-[10px]">3</span>
-                      🎯 Playbook &amp; Campaign Actions
+                      📋 Voter Rolls &amp; E-Panna Booth Data
                     </h4>
                     <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 3</kbd>
+                  </div>
+                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                    Hyper-local booth and polling station operations across all 45,791 booths. Inspect certified Form-20 numbers, polling station buildings, onomastic surname clusters, and assign field targets using the <strong>Panna Pramukh (Page Committee) Deficit Solver</strong> down to 30-voter pages.
+                  </p>
+                </div>
+              </div>
+
+              {/* Group 2: War Room & Strategy */}
+              <div className="space-y-2 pt-2">
+                <div className="text-[11px] font-black uppercase tracking-wider text-amber-800 bg-amber-50 px-2.5 py-1 rounded-md border border-amber-100 flex items-center gap-1.5">
+                  <span>War Room &amp; Strategy (Intervention &amp; Forecasting)</span>
+                </div>
+
+                {/* 4. Simulations */}
+                <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-bold text-slate-900 text-xs flex items-center gap-2">
+                      <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-mono font-bold text-[10px]">4</span>
+                      🔮 Simulations &amp; What-If Scenarios
+                    </h4>
+                    <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 4</kbd>
+                  </div>
+                  <p className="text-[11px] text-slate-600 leading-relaxed">
+                    Senior Chief-Advisor forecasting suite. Dial community swing percentages across 14 caste and demographic blocs to observe projected seat outcomes on the <strong>Live Assembly Majority Barometer</strong>. Features the <strong>Inverse-Margin Bubble Chart</strong> and the <strong>Scenario Bridge Ribbon</strong> to export scenario assumptions into the Playbook.
+                  </p>
+                </div>
+
+                {/* 5. Playbook & Actions */}
+                <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-bold text-slate-900 text-xs flex items-center gap-2">
+                      <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-mono font-bold text-[10px]">5</span>
+                      🎯 Playbook &amp; Campaign Actions
+                    </h4>
+                    <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 5</kbd>
                   </div>
                   <p className="text-[11px] text-slate-600 leading-relaxed">
                     Tactical campaign execution center. Allocate <strong>Resource Points</strong> (Digital Blitz, Field Rallies, Welfare beneficiary drives) across battlegrounds. Deploy <strong>Star Campaigners</strong> (Chandrababu Naidu, Pawan Kalyan, Nara Lokesh, Purandeswari) and model the vote-splintering impact of independent and factional rebels in the <strong>Defection Modeler</strong>.
                   </p>
                 </div>
 
-                {/* 4. Voter Reach */}
+                {/* 6. Voter Reach */}
                 <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
                   <div className="flex items-center justify-between">
                     <h4 className="font-bold text-slate-900 text-xs flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-mono font-bold text-[10px]">4</span>
+                      <span className="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-mono font-bold text-[10px]">6</span>
                       📢 Voter Reach &amp; Micro-Targeting
                     </h4>
-                    <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 4</kbd>
+                    <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 6</kbd>
                   </div>
                   <p className="text-[11px] text-slate-600 leading-relaxed">
                     Audience segmentation engine cross-tabulating <strong>Caste &times; Age</strong> (18&ndash;25 Gen Z first-timers, 26&ndash;40 Millennials, 41&ndash;55 Middle Age, 56+ Seniors). Maps channel touchpoints (WhatsApp Communities, Door-to-Door, Mega Rallies, Local Cable/IVR) with priority issues (Unemployment, Polavaram/Irrigation, Amaravati, Welfare Subsidies) and a 5&ndash;10 touch campaign cadence.
-                  </p>
-                </div>
-
-                {/* 5. Voter Rolls & Booths */}
-                <div className="bg-slate-50 p-3.5 rounded-xl border border-slate-200 space-y-1.5">
-                  <div className="flex items-center justify-between">
-                    <h4 className="font-bold text-slate-900 text-xs flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-mono font-bold text-[10px]">5</span>
-                      📋 Voter Rolls &amp; E-Panna Booth Data
-                    </h4>
-                    <kbd className="px-1.5 py-0.5 bg-white border border-slate-200 rounded text-[10px] font-mono font-bold text-slate-600">Hotkey: 5</kbd>
-                  </div>
-                  <p className="text-[11px] text-slate-600 leading-relaxed">
-                    Hyper-local booth and polling station operations. Inspect Form-20 historical turnout patterns, onomastic surname clustering (family name patronymics matched to demographic groups), and assign targets using the <strong>Panna Pramukh (Page Committee) Deficit Solver</strong> down to individual 30-voter pages.
                   </p>
                 </div>
               </div>
@@ -507,30 +533,37 @@ export const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
                 </div>
 
                 <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-slate-700 font-medium text-xs">Jump to 🔮 Simulations &amp; Barometer</span>
+                  <span className="text-slate-700 font-medium text-xs">Jump to 🏛️ AC Dossier</span>
                   <kbd className="px-2 py-1 bg-white border border-slate-200 rounded font-mono font-bold text-slate-800 text-xs shadow-2xs">
                     2
                   </kbd>
                 </div>
 
                 <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-slate-700 font-medium text-xs">Jump to 🎯 Playbook &amp; Actions</span>
+                  <span className="text-slate-700 font-medium text-xs">Jump to 📋 Voter Rolls &amp; E-Panna</span>
                   <kbd className="px-2 py-1 bg-white border border-slate-200 rounded font-mono font-bold text-slate-800 text-xs shadow-2xs">
                     3
                   </kbd>
                 </div>
 
                 <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-slate-700 font-medium text-xs">Jump to 📢 Voter Reach &amp; Targeting</span>
+                  <span className="text-slate-700 font-medium text-xs">Jump to 🔮 Simulations &amp; Barometer</span>
                   <kbd className="px-2 py-1 bg-white border border-slate-200 rounded font-mono font-bold text-slate-800 text-xs shadow-2xs">
                     4
                   </kbd>
                 </div>
 
                 <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
-                  <span className="text-slate-700 font-medium text-xs">Jump to 📋 Voter Rolls &amp; E-Panna</span>
+                  <span className="text-slate-700 font-medium text-xs">Jump to 🎯 Playbook &amp; Actions</span>
                   <kbd className="px-2 py-1 bg-white border border-slate-200 rounded font-mono font-bold text-slate-800 text-xs shadow-2xs">
                     5
+                  </kbd>
+                </div>
+
+                <div className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100">
+                  <span className="text-slate-700 font-medium text-xs">Jump to 📢 Voter Reach &amp; Targeting</span>
+                  <kbd className="px-2 py-1 bg-white border border-slate-200 rounded font-mono font-bold text-slate-800 text-xs shadow-2xs">
+                    6
                   </kbd>
                 </div>
 

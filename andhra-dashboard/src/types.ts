@@ -297,7 +297,7 @@ export function getDistrictBorderGrey(districtName: string): string {
   return DISTRICT_GREY_SHADES[districtName]?.border || '#64748b';
 }
 
-export type ActiveTab = 'results' | 'simulations' | 'actions' | 'booth-data' | 'reach';
+export type ActiveTab = 'results' | 'dossier' | 'booth-data' | 'simulations' | 'actions' | 'reach';
 
 export interface CasteProfile {
   // Andhra Pradesh 14-Segment Demographics Profile

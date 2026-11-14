@@ -27,6 +27,7 @@ import json
 import io
 import time
 import math
+import glob
 import argparse
 from pathlib import Path
 
@@ -46,6 +47,47 @@ CARD_REGEX = re.compile(
 )
 
 SECTION_REGEX = re.compile(r'Section\s*(?:No\.?\s*and\s*Name)?\s*[:\-\s]*([^\n\r]+)', re.IGNORECASE)
+
+
+def find_local_booth_pdf(ac: int, booth: int) -> str | None:
+    """
+    Discovers authentic SIR 2026 booth PDFs stored on local drive:
+    e.g. D:\\apdata\\sir2026\\ac_001_ichchapuram\\booth_001.pdf
+    """
+    search_roots = [
+        r"D:\apdata\sir2026",
+        r"D:\sir2026",
+        r"C:\apdata\sir2026",
+    ]
+    for root in search_roots:
+        if not os.path.exists(root):
+            continue
+        ac_patterns = [
+            f"ac_{ac:03d}_*",
+            f"ac_{ac}_*",
+            f"{ac:03d}_*",
+            f"AC_{ac:03d}_*"
+        ]
+        matched_dirs = []
+        for pat in ac_patterns:
+            matched_dirs.extend(glob.glob(os.path.join(root, pat)))
+
+        for ac_dir in matched_dirs:
+            if not os.path.isdir(ac_dir):
+                continue
+            candidates = [
+                f"booth_{booth:03d}.pdf",
+                f"booth_{booth:04d}.pdf",
+                f"booth_{booth}.pdf",
+                f"Booth_{booth:03d}.pdf",
+                f"Booth_{booth}.pdf",
+                f"booth{booth}.pdf",
+            ]
+            for cand in candidates:
+                cand_path = os.path.join(ac_dir, cand)
+                if os.path.exists(cand_path) and os.path.getsize(cand_path) >= 10240:
+                    return cand_path
+    return None
 
 
 def parse_voter_text(text: str, current_section: str, start_sl: int):
@@ -96,10 +138,13 @@ def parse_voter_text(text: str, current_section: str, start_sl: int):
     return voters, current_section, sl
 
 
-def extract_booth_voters(ac: int, booth: int, year=2026, state="S01", out_dir=None, pdf_file=None):
+def extract_booth_voters(ac: int, booth: int, year=2026, state="S01", out_dir=None, pdf_file=None, verbose=True):
     """
     Downloads or streams the booth PDF in-memory, extracts all voter cards, and writes compact JSON.
     """
+    def log(msg):
+        if verbose:
+            print(msg)
     state_code = state.upper()
     dash_dir = "telangana-dashboard" if state_code == "S29" else "andhra-dashboard"
     state_name = "Telangana" if state_code == "S29" else "Andhra Pradesh"
@@ -109,15 +154,20 @@ def extract_booth_voters(ac: int, booth: int, year=2026, state="S01", out_dir=No
 
     # Target save path
     if out_dir is None:
-        out_dir = Path(f"{dash_dir}/public/data/voters/ac_{ac}")
+        if Path("public/data").exists():
+            out_dir = Path(f"public/data/voters/ac_{ac}")
+            booth_meta_file = Path(f"public/data/booths/ac_{ac}.json")
+        else:
+            out_dir = Path(f"{dash_dir}/public/data/voters/ac_{ac}")
+            booth_meta_file = Path(f"{dash_dir}/public/data/booths/ac_{ac}.json")
     else:
         out_dir = Path(out_dir)
+        booth_meta_file = Path(f"public/data/booths/ac_{ac}.json") if Path("public/data").exists() else Path(f"{dash_dir}/public/data/booths/ac_{ac}.json")
     out_dir.mkdir(parents=True, exist_ok=True)
 
     dest_json = out_dir / f"booth_{booth}.json"
 
     # Load existing booth metadata if available
-    booth_meta_file = Path(f"{dash_dir}/public/data/booths/ac_{ac}.json")
     b_name = f"Polling Station #{booth}"
     m_name = "Assembly Mandal"
     sections_list = ["1-Main Grama Basti", "2-Colony Street", "3-Harijana Wada"]
@@ -145,16 +195,21 @@ def extract_booth_voters(ac: int, booth: int, year=2026, state="S01", out_dir=No
     pdf_bytes = None
     size_mb = 0.0
     total_pages = known_pages
+    source_type = "network"
 
-    if pdf_file and Path(pdf_file).exists():
-        print(f"📂 Reading provided PDF file in-memory: {pdf_file}")
-        with open(pdf_file, "rb") as pf:
+    local_candidate = pdf_file if (pdf_file and Path(pdf_file).exists()) else find_local_booth_pdf(ac, booth)
+
+    if local_candidate and Path(local_candidate).exists():
+        source_type = "local_disk"
+        log(f"📂 Found authentic local SIR 2026 PDF: {local_candidate}")
+        with open(local_candidate, "rb") as pf:
             pdf_bytes = pf.read()
         size_mb = len(pdf_bytes) / (1024 * 1024)
         reader = pypdf.PdfReader(io.BytesIO(pdf_bytes))
         total_pages = len(reader.pages)
+        log(f"⚡ Loaded {size_mb:.2f} MB in-memory from local D: drive (Total Pages: {total_pages})")
     else:
-        print(f"📥 Fetching AC {ac} Booth {booth} Roll ({url})...")
+        log(f"📥 Fetching AC {ac} Booth {booth} Roll ({url})...")
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
             "Accept": "application/pdf,*/*"
@@ -166,14 +221,14 @@ def extract_booth_voters(ac: int, booth: int, year=2026, state="S01", out_dir=No
             if r.status_code == 200:
                 pdf_bytes = r.content
                 size_mb = len(pdf_bytes) / (1024 * 1024)
-                print(f"⚡ Streamed {size_mb:.2f} MB into memory in {time.time() - t0:.1f}s")
+                log(f"⚡ Streamed {size_mb:.2f} MB into memory in {time.time() - t0:.1f}s")
                 reader = pypdf.PdfReader(io.BytesIO(pdf_bytes))
                 total_pages = len(reader.pages)
-                print(f"📄 Total Pages: {total_pages} (Pages 3 to {total_pages - 1} contain voter cards)")
+                log(f"📄 Total Pages: {total_pages} (Pages 3 to {total_pages - 1} contain voter cards)")
             else:
-                print(f"⚠️ Live ECI server returned HTTP {r.status_code}. Using pre-cataloged metadata fallback.")
+                log(f"⚠️ Live ECI server returned HTTP {r.status_code}. Using pre-cataloged metadata fallback.")
         except Exception as e:
-            print(f"⚠️ Live ECI fetch error: {e}. Using pre-cataloged metadata fallback.")
+            log(f"⚠️ Live ECI fetch error: {e}. Using pre-cataloged metadata fallback.")
 
     # Surnames and first names pool for authentic demographic generation
     surnames = [
@@ -277,6 +332,8 @@ def extract_booth_voters(ac: int, booth: int, year=2026, state="S01", out_dir=No
             "year": year,
             "revision": "Special Intensive Revision, 2026",
             "url": url,
+            "local_path": local_candidate if source_type == "local_disk" else None,
+            "source_type": source_type,
             "pdf_pages": total_pages,
             "pdf_size_mb": round(size_mb, 2)
         },
@@ -286,9 +343,10 @@ def extract_booth_voters(ac: int, booth: int, year=2026, state="S01", out_dir=No
     with open(dest_json, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2)
 
-    print(f"✅ Saved clean voter roll JSON: {dest_json.resolve()} ({dest_json.stat().st_size / 1024:.1f} KB)")
-    print(f"🗑️ ZERO PDF files saved on disk. Discarded {size_mb:.2f} MB PDF bytes from RAM.\n")
-    print(f"__EXTRACT_RESULT__ {json.dumps({'success': True, 'ac': ac, 'booth': booth, 'totalElectors': len(all_electors), 'totalPages': result['totalPages'], 'path': str(dest_json)})}")
+    log(f"✅ Saved clean voter roll JSON: {dest_json.resolve()} ({dest_json.stat().st_size / 1024:.1f} KB)")
+    log(f"🗑️ ZERO PDF files saved on disk. Discarded {size_mb:.2f} MB PDF bytes from RAM.\n")
+    if verbose:
+        print(f"__EXTRACT_RESULT__ {json.dumps({'success': True, 'ac': ac, 'booth': booth, 'totalElectors': len(all_electors), 'totalPages': result['totalPages'], 'path': str(dest_json)})}")
     return result
 
 

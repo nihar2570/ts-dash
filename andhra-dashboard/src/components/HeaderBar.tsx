@@ -53,72 +53,102 @@ export const HeaderBar: React.FC<HeaderBarProps> = ({
             </div>
           </div>
 
-          {/* Central tab switcher: Arranged in the logical campaign funnel (Results -> Simulations -> Playbook -> Reach -> Rolls) */}
-          <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-2xs gap-0.5 overflow-x-auto scrollbar-none">
-            {/* 1. Results & Map */}
-            <button
-              onClick={() => setActiveTab('results')}
-              className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
-                activeTab === 'results'
-                  ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Historical Election Results & Choropleth Map"
-            >
-              <span>📊 Results &amp; Map</span>
-            </button>
+          {/* Central tab switcher: Arranged into two distinct functional groups */}
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-none py-0.5">
+            {/* Group 1: Ground & Constituency Intelligence */}
+            <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-2xs gap-0.5 shrink-0">
+              <span className="px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-slate-400 select-none hidden xl:inline-block">
+                Ground
+              </span>
 
-            {/* 2. Simulations (Forward Forecasts) */}
-            <button
-              onClick={() => setActiveTab('simulations')}
-              className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
-                activeTab === 'simulations'
-                  ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Chief Advisor What-If Scenarios & Assembly Majority Barometer"
-            >
-              <span>🔮 Simulations</span>
-            </button>
+              {/* 1. Results & Map */}
+              <button
+                onClick={() => setActiveTab('results')}
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  activeTab === 'results'
+                    ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Historical Election Results & Choropleth Map"
+              >
+                <span>📊 Results &amp; Map</span>
+              </button>
 
-            {/* 3. Playbook & Actions (Strategy & Allocation) */}
-            <button
-              onClick={() => setActiveTab('actions')}
-              className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
-                activeTab === 'actions'
-                  ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Campaign Playbook: Star Campaigners, Resource Allocator & Defection Modeler"
-            >
-              <span>🎯 Playbook &amp; Actions</span>
-            </button>
+              {/* 2. AC Dossier (Standalone Tab) */}
+              <button
+                onClick={() => setActiveTab('dossier')}
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  activeTab === 'dossier'
+                    ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Constituency Dossier: Candidate Affidavits, Caste Demographics & Turnout Swings"
+              >
+                <span>🏛️ AC Dossier</span>
+              </button>
 
-            {/* 4. Voter Reach & Cadence (Audience & Messaging) */}
-            <button
-              onClick={() => setActiveTab('reach')}
-              className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
-                activeTab === 'reach'
-                  ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="Statewide Caste & Age Micro-Targeting and 5-10 Touch Campaign Cadence"
-            >
-              <span>📢 Voter Reach</span>
-            </button>
+              {/* 3. Voter Rolls & Polling Stations (Ground Execution) */}
+              <button
+                onClick={() => setActiveTab('booth-data')}
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  activeTab === 'booth-data'
+                    ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="E-Panna Sheet, Polling Station Triage & Padayatra Street Routes"
+              >
+                <span>📋 Voter Rolls</span>
+              </button>
+            </div>
 
-            {/* 5. Voter Rolls & Polling Stations (Ground Execution) */}
-            <button
-              onClick={() => setActiveTab('booth-data')}
-              className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
-                activeTab === 'booth-data'
-                  ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
-                  : 'text-slate-600 hover:text-slate-900'
-              }`}
-              title="E-Panna Sheet, Polling Station Triage & Padayatra Street Routes"
-            >
-              <span>📋 Voter Rolls</span>
-            </button>
+            {/* Subtle Divider */}
+            <div className="h-6 w-px bg-slate-200 shrink-0 hidden md:block" />
+
+            {/* Group 2: War Room & Strategic Action */}
+            <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 text-xs font-bold shadow-2xs gap-0.5 shrink-0">
+              <span className="px-1.5 py-0.5 text-[10px] font-black uppercase tracking-wider text-slate-400 select-none hidden xl:inline-block">
+                Strategy
+              </span>
+
+              {/* 4. Simulations (Forward Forecasts) */}
+              <button
+                onClick={() => setActiveTab('simulations')}
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  activeTab === 'simulations'
+                    ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Chief Advisor What-If Scenarios & Assembly Majority Barometer"
+              >
+                <span>🔮 Simulations</span>
+              </button>
+
+              {/* 5. Playbook & Actions (Strategy & Allocation) */}
+              <button
+                onClick={() => setActiveTab('actions')}
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  activeTab === 'actions'
+                    ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Campaign Playbook: Star Campaigners, Resource Allocator & Defection Modeler"
+              >
+                <span>🎯 Playbook</span>
+              </button>
+
+              {/* 6. Voter Reach & Cadence (Audience & Messaging) */}
+              <button
+                onClick={() => setActiveTab('reach')}
+                className={`px-3 py-1.5 rounded-lg transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap ${
+                  activeTab === 'reach'
+                    ? 'bg-white text-indigo-700 shadow-xs font-black ring-1 ring-slate-200'
+                    : 'text-slate-600 hover:text-slate-900'
+                }`}
+                title="Statewide Caste & Age Micro-Targeting and 5-10 Touch Campaign Cadence"
+              >
+                <span>📢 Voter Reach</span>
+              </button>
+            </div>
           </div>
 
           {/* Top Right Corner: Compact Icons by default, expand with label on hover */}

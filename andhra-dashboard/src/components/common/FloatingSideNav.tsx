@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import {
   ChevronUp,
   Compass,
@@ -125,7 +125,7 @@ export const FloatingSideNav: React.FC<FloatingSideNavProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, [sections, activeSectionId]);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = useCallback((id: string) => {
     setActiveSection(id);
     clickLockUntilRef.current = Date.now() + 700;
     if (onSelectSection) {
@@ -136,11 +136,11 @@ export const FloatingSideNav: React.FC<FloatingSideNavProps> = ({
       const top = element.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: 'smooth' });
     }
-  };
+  }, [onSelectSection]);
 
-  const scrollToTop = () => {
+  const scrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  }, []);
 
   if (!sections || sections.length === 0) return null;
 

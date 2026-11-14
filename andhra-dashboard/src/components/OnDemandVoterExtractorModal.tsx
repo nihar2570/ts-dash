@@ -175,9 +175,9 @@ export const OnDemandVoterExtractorModal: React.FC<OnDemandVoterExtractorModalPr
           <div className="p-3.5 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-start gap-3 text-xs text-blue-200">
             <ShieldCheck className="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
             <div>
-              <span className="font-semibold text-blue-300">Zero Disk Pileup Architecture:</span>
+              <span className="font-semibold text-blue-300">Local-First In-Memory Architecture:</span>
               <p className="mt-0.5 text-blue-300/80 leading-relaxed">
-                The streaming engine downloads the 10–15 MB draft roll directly into memory buffers, extracts voter cards into a lightweight ~200 KB JSON, and immediately purges all PDF bytes. No multi-gigabyte disk pileup.
+                Prioritizes authentic SIR 2026 Draft Rolls stored in <code className="text-cyan-300 font-mono bg-slate-900/60 px-1 py-0.5 rounded">D:\apdata\sir2026</code> for instant offline extraction. Streams into RAM, parses voter cards into ~200 KB JSON, and purges all PDF bytes immediately.
               </p>
             </div>
           </div>
@@ -221,13 +221,13 @@ export const OnDemandVoterExtractorModal: React.FC<OnDemandVoterExtractorModalPr
           <div className="space-y-3">
             <button
               onClick={handleRunExtraction}
-              disabled={isRunning || isAcFullyExtracted}
+              disabled={isRunning}
               className={`w-full py-3.5 px-4 rounded-xl font-semibold text-sm flex items-center justify-center gap-2 transition shadow-lg ${
-                isRunning || isAcFullyExtracted
+                isRunning
                   ? 'bg-slate-800 text-slate-400 cursor-not-allowed border border-slate-700'
-                  : isAlreadyExtracted
-                  ? 'bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700'
-                  : 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-amber-500/20'
+                  : isAlreadyExtracted || isAcFullyExtracted
+                  ? 'bg-slate-800 hover:bg-slate-750 text-slate-200 border border-slate-700 cursor-pointer'
+                  : 'bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-950 font-bold shadow-amber-500/20 cursor-pointer'
               }`}
             >
               {isRunning ? (
@@ -235,12 +235,7 @@ export const OnDemandVoterExtractorModal: React.FC<OnDemandVoterExtractorModalPr
                   <Loader2 className="w-4 h-4 animate-spin" />
                   <span>Extracting Roll in Memory...</span>
                 </>
-              ) : isAcFullyExtracted ? (
-                <>
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                  <span>AC Fully Extracted (All 205 Booths Active)</span>
-                </>
-              ) : isAlreadyExtracted ? (
+              ) : isAlreadyExtracted || isAcFullyExtracted ? (
                 <>
                   <RefreshCw className="w-4 h-4" />
                   <span>Re-Extract Authentic Roll (Force Overwrite)</span>

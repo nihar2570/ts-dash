@@ -60,6 +60,9 @@ const AppContent: React.FC = () => {
     if (typeof window !== 'undefined') {
       const params = new URLSearchParams(window.location.search);
       const tabParam = params.get('tab');
+      if (tabParam === 'dossier' || tabParam === 'candidate' || tabParam === 'candidates' || params.has('dossier')) {
+        return 'dossier';
+      }
       if (tabParam === 'booth-data' || tabParam === 'booth' || tabParam === 'epanna') {
         return 'booth-data';
       }
@@ -160,13 +163,13 @@ const AppContent: React.FC = () => {
   const [districtGeoJsonData, setDistrictGeoJsonData] = useState<any | null>(null);
   const [candidatesData, setCandidatesData] = useState<Record<string, ConstituencyCandidatesData> | null>(null);
   const [demographicsData, setDemographicsData] = useState<DemographicsDataset | null>(null);
-  const isDossierRoute = typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('dossier');
 
-  const handleOpenDossier = (acNo: number, tab?: string) => {
-    const url = new URL(window.location.origin + window.location.pathname);
-    url.searchParams.set('dossier', String(acNo));
-    if (tab) url.searchParams.set('tab', tab);
-    window.open(url.toString(), '_blank');
+  const handleOpenDossier = (acNo: number, _tab?: string) => {
+    setSelectedAcNo(acNo);
+    setActiveTab('dossier');
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -186,10 +189,10 @@ const AppContent: React.FC = () => {
 
   // Keep browser address bar clean without trailing ?tab= or ?ac= queries
   useEffect(() => {
-    if (typeof window !== 'undefined' && !isDossierRoute && window.location.search) {
+    if (typeof window !== 'undefined' && activeTab === 'results' && window.location.search && !window.location.search.includes('dossier')) {
       window.history.replaceState({}, '', window.location.pathname);
     }
-  }, [isDossierRoute]);
+  }, [activeTab]);
 
   // Global keyboard shortcuts
   useEffect(() => {
@@ -225,19 +228,23 @@ const AppContent: React.FC = () => {
         return;
       }
       if (e.key === '2') {
-        setActiveTab('simulations');
+        setActiveTab('dossier');
         return;
       }
       if (e.key === '3') {
-        setActiveTab('actions');
+        setActiveTab('booth-data');
         return;
       }
       if (e.key === '4') {
-        setActiveTab('reach');
+        setActiveTab('simulations');
         return;
       }
       if (e.key === '5') {
-        setActiveTab('booth-data');
+        setActiveTab('actions');
+        return;
+      }
+      if (e.key === '6') {
+        setActiveTab('reach');
         return;
       }
       if (e.key.toLowerCase() === 'z') {
@@ -326,6 +333,7 @@ const AppContent: React.FC = () => {
   const currentYearResults = electionData.results[selectedYear] || {};
   const currentSummary = electionData.summary[selectedYear];
 
+  // AC list for dropdowns and navigation
   const allConstituenciesList = electionData
     ? Object.values(electionData.results['2024'] || electionData.results['2023'] || {})
         .map((r) => ({
@@ -335,41 +343,6 @@ const AppContent: React.FC = () => {
         }))
         .sort((a, b) => a.ac_no - b.ac_no)
     : [];
-
-  // Standalone Full-Page Dossier Mode (when loaded with ?dossier=<ac_no>)
-  if (isDossierRoute && candidatesData && selectedAcNo) {
-    return (
-      <ConstituencyDossier
-        data={candidatesData[String(selectedAcNo)] || null}
-        isOpen={true}
-        demographicsData={demographicsData}
-        geoJsonData={geoJsonData}
-        allConstituencies={allConstituenciesList}
-        electionData={electionData}
-        onSelectAc={(acNo) => {
-          setSelectedAcNo(acNo);
-          const url = new URL(window.location.href);
-          url.searchParams.set('dossier', String(acNo));
-          window.history.replaceState({}, '', url.pathname + url.search);
-        }}
-        onClose={() => {
-          const url = new URL(window.location.href);
-          url.searchParams.delete('view');
-          url.searchParams.delete('dossier');
-          url.searchParams.delete('tab');
-          window.location.href = url.pathname + (url.search ? url.search : '');
-        }}
-        onNavigateToBoothData={(acNo, boothNo, viewMode) => {
-          const url = new URL(window.location.origin + window.location.pathname);
-          url.searchParams.set('tab', 'booth-data');
-          url.searchParams.set('ac', String(acNo));
-          if (boothNo) url.searchParams.set('booth', String(boothNo));
-          if (viewMode) url.searchParams.set('view', viewMode);
-          window.open(url.toString(), '_blank');
-        }}
-      />
-    );
-  }
 
   return (
     <div className={`min-h-screen bg-slate-100/80 text-slate-900 pb-12 ${isZenMode ? 'war-room-zen' : ''}`}>
@@ -537,6 +510,28 @@ const AppContent: React.FC = () => {
               />
             </div>
           </>
+        )}
+
+        {/* AC Dossier Tab: Standalone Full Interactive Constituency Dossier */}
+        {activeTab === 'dossier' && candidatesData && (
+          <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
+            <ConstituencyDossier
+              data={candidatesData[String(selectedAcNo || 40)] || null}
+              isOpen={true}
+              demographicsData={demographicsData}
+              geoJsonData={geoJsonData}
+              allConstituencies={allConstituenciesList}
+              electionData={electionData}
+              onSelectAc={(acNo) => setSelectedAcNo(acNo)}
+              onClose={() => setActiveTab('results')}
+              onNavigateToBoothData={(acNo, boothNo) => {
+                setSelectedAcNo(acNo);
+                if (boothNo) setSelectedBoothNo(boothNo);
+                setActiveTab('booth-data');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            />
+          </div>
         )}
 
         {/* Simulations Tab: War Room & Inverse-Margin Bubble Chart */}

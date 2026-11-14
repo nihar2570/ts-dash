@@ -35,6 +35,10 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
   onOpenDossier,
   onOpenBoothData,
 }) => {
+  // Compression toggle state for past elections (2019, 2014) to optimize vertical viewport
+  const [expandedYears, setExpandedYears] = useState<Record<string, boolean>>({});
+  const [expandAllPast, setExpandAllPast] = useState<boolean>(false);
+
   if (!selectedAcNo) {
     return (
       <div className="bg-white rounded-xl p-6 shadow-sm border border-slate-200 text-center py-12">
@@ -61,10 +65,6 @@ export const ConstituencyCard: React.FC<ConstituencyCardProps> = ({
   const acMandals = selectedAcNo ? CONSTITUENCY_MANDALS[selectedAcNo] || [] : [];
   const totalBooths = acMandals.reduce((sum, m) => sum + (m.booths || 0), 0) || 240;
   const votesPerBoothToFlip = Math.ceil((currentResult?.margin || 0) / totalBooths);
-
-  // Compression toggle state for past elections (2019, 2014) to optimize vertical viewport
-  const [expandedYears, setExpandedYears] = useState<Record<string, boolean>>({});
-  const [expandAllPast, setExpandAllPast] = useState<boolean>(false);
 
   const toggleYear = (y: string) => {
     setExpandedYears((prev) => ({

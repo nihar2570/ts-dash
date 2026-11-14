@@ -1,13 +1,10 @@
-import React, { useEffect, useRef, useState, useMemo } from 'react';
+import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import L from 'leaflet';
 import * as turf from '@turf/turf';
 import {
   RotateCcw,
-  Target,
-  X,
   Users,
   Compass,
-  FileText,
   Maximize2,
   Minimize2,
   ShieldAlert,
@@ -15,10 +12,19 @@ import {
   Heart,
 } from 'lucide-react';
 import type { BoothDetail } from './BoothPannaDeficitSolver';
-import { FORM_20_URLS } from '../data/form20Urls';
-import { getOfficialSir2026PdfUrl } from '../data/voterRollService';
+import {
+  CampusPollingStationsDrawer,
+  type CampusFacility,
+  type MapLayerMode,
+} from './booth/CampusPollingStationsDrawer';
 
-export type MapLayerMode = 'political' | 'panna' | 'gender';
+export type { CampusFacility, MapLayerMode };
+
+const FIT_BOUNDS_OPTIONS: L.FitBoundsOptions = {
+  paddingTopLeft: [50, 75],
+  paddingBottomRight: [50, 65],
+  maxZoom: 14,
+};
 
 export interface BoothTriageMapProps {
   acNo: number;
@@ -76,12 +82,23 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
   // Active / Clicked Booth for detail inspection drawer
   const [activeBooth, setActiveBooth] = useState<BoothDetail | null>(null);
   activeBoothRef.current = activeBooth;
+  const hasFittedAcBoundsRef = useRef<number | null>(null);
+
+  // Reset active booth and bounds tracking when switching constituencies
+  useEffect(() => {
+    setActiveBooth(null);
+    prevActiveBoothNoRef.current = null;
+    hasFittedAcBoundsRef.current = null;
+    if (onSelectBooth) onSelectBooth(null);
+  }, [acNo]);
 
   // Sync with selectedBoothNo prop if passed
   useEffect(() => {
     if (selectedBoothNo) {
       const match = booths.find((b) => b.boothNo === selectedBoothNo);
       if (match) setActiveBooth(match);
+    } else {
+      setActiveBooth(null);
     }
   }, [selectedBoothNo, booths]);
 
@@ -195,6 +212,42 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
     return getTriageColor(b.triage);
   };
 
+  // Reusable helper to safely fit constituency or booth bounds with layout clearance
+  const fitCurrentAcBounds = useCallback((forceAnimate: boolean = false) => {
+    const map = mapInstanceRef.current;
+    if (!map) return;
+
+    try {
+      map.invalidateSize();
+
+      if (boundaryLayerRef.current) {
+        const bounds = boundaryLayerRef.current.getBounds();
+        if (bounds.isValid()) {
+          map.fitBounds(bounds, { ...FIT_BOUNDS_OPTIONS, animate: forceAnimate });
+          hasFittedAcBoundsRef.current = acNo;
+          return;
+        }
+      }
+
+      if (booths.length > 0) {
+        const lats = booths.map((b) => b.lat).filter((lat) => !isNaN(lat) && lat !== 0);
+        const lngs = booths.map((b) => b.lng).filter((lng) => !isNaN(lng) && lng !== 0);
+        if (lats.length > 0 && lngs.length > 0) {
+          map.fitBounds(
+            [
+              [Math.min(...lats), Math.min(...lngs)],
+              [Math.max(...lats), Math.max(...lngs)],
+            ],
+            { ...FIT_BOUNDS_OPTIONS, animate: forceAnimate }
+          );
+          hasFittedAcBoundsRef.current = acNo;
+        }
+      }
+    } catch (err) {
+      console.warn('Map fit bounds warning:', err);
+    }
+  }, [acNo, booths]);
+
   // 1. Initialize Map Instance
   useEffect(() => {
     if (!mapContainerRef.current) return;
@@ -205,6 +258,10 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
     }
 
     const map = L.map(mapContainerRef.current, {
+      center: [16.5, 80.5],
+      zoom: 8,
+      minZoom: 6,
+      maxZoom: 19,
       zoomControl: false,
       attributionControl: false,
       scrollWheelZoom: true,
@@ -251,17 +308,28 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
     tileLayerRef.current = layer;
   }, [isLight]);
 
-  // Handle map resizing when in full page mode
+  // 3. Dynamic ResizeObserver for robust layout resizing across fullscreen, sidebars & tabs
   useEffect(() => {
-    const map = mapInstanceRef.current;
-    if (!map) return;
-    const timer = setTimeout(() => {
-      map.invalidateSize();
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [isFullPageMap]);
+    const container = mapContainerRef.current;
+    if (!container) return;
 
-  // 3. Render AC Polygon Boundary & Fit Bounds
+    const ro = new ResizeObserver(() => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.invalidateSize();
+        // If container just gained non-zero dimensions and bounds haven't been fitted for this AC, fit them
+        if (hasFittedAcBoundsRef.current !== acNo && container.clientWidth > 50 && container.clientHeight > 50) {
+          fitCurrentAcBounds(false);
+        }
+      }
+    });
+    ro.observe(container);
+
+    return () => {
+      ro.disconnect();
+    };
+  }, [acNo, fitCurrentAcBounds]);
+
+  // 4. Render AC Polygon Boundary & Fit Bounds
   useEffect(() => {
     const map = mapInstanceRef.current;
     if (!map) return;
@@ -285,33 +353,21 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
       }).addTo(map);
 
       boundaryLayerRef.current = boundaryLayer;
-
-      try {
-        const bounds = boundaryLayer.getBounds();
-        if (bounds.isValid()) {
-          map.fitBounds(bounds, { padding: [35, 35] });
-        }
-      } catch {
-        // Fallback
-      }
-    } else if (booths.length > 0) {
-      const lats = booths.map((b) => b.lat).filter((lat) => !isNaN(lat) && lat !== 0);
-      const lngs = booths.map((b) => b.lng).filter((lng) => !isNaN(lng) && lng !== 0);
-      if (lats.length > 0 && lngs.length > 0) {
-        const minLat = Math.min(...lats);
-        const maxLat = Math.max(...lats);
-        const minLng = Math.min(...lngs);
-        const maxLng = Math.max(...lngs);
-        map.fitBounds(
-          [
-            [minLat, minLng],
-            [maxLat, maxLng],
-          ],
-          { padding: [35, 35] }
-        );
-      }
     }
-  }, [acFeature, booths, isLight]);
+
+    // Trigger bounds fitting with layout safety checks
+    const container = mapContainerRef.current;
+    if (container && container.clientWidth > 50 && container.clientHeight > 50) {
+      fitCurrentAcBounds(false);
+    } else {
+      const t1 = setTimeout(() => fitCurrentAcBounds(false), 80);
+      const t2 = setTimeout(() => fitCurrentAcBounds(false), 260);
+      return () => {
+        clearTimeout(t1);
+        clearTimeout(t2);
+      };
+    }
+  }, [acFeature, isLight, fitCurrentAcBounds]);
 
   // 4. Render Mandal Boundary Lines & Sector Labels within the AC
   useEffect(() => {
@@ -381,6 +437,40 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
     });
     return map;
   }, [booths]);
+
+  const activeCampus = useMemo<CampusFacility | null>(() => {
+    if (!activeBooth || isNaN(activeBooth.lat) || isNaN(activeBooth.lng) || (activeBooth.lat === 0 && activeBooth.lng === 0)) return null;
+    const coordKey = `${activeBooth.lat.toFixed(5)},${activeBooth.lng.toFixed(5)}`;
+    const sisterBooths = boothsByCoordKey.get(coordKey) || [activeBooth];
+    if (sisterBooths.length <= 1) return null;
+
+    const totalElectors = sisterBooths.reduce((sum, sb) => sum + sb.electorate, 0);
+    const totalVotes = sisterBooths.reduce((sum, sb) => sum + (sb.targetVotes + sb.opponentVotes), 0);
+    const pannaPages = sisterBooths.reduce((sum, sb) => sum + sb.pannaPages, 0);
+    const femaleElectors = sisterBooths.reduce((sum, sb) => sum + (sb.femaleElectors || Math.round(sb.electorate * 0.51)), 0);
+    const turnoutPct = totalElectors > 0 ? Math.round((totalVotes / totalElectors) * 100) : 75;
+    const distinctWinners = new Set(sisterBooths.map((sb) => sb.winnerParty).filter(Boolean));
+    const isSplitCampus = distinctWinners.size > 1;
+
+    return {
+      id: coordKey,
+      name: activeBooth.name,
+      cleanBuildingName: activeBooth.name,
+      location: activeBooth.location,
+      mandalName: activeBooth.mandalName,
+      lat: activeBooth.lat,
+      lng: activeBooth.lng,
+      booths: sisterBooths,
+      totalElectors,
+      totalVotes,
+      turnoutPct,
+      pannaPages,
+      femaleElectors,
+      isSplitCampus,
+      campusTriage: sisterBooths.some((sb) => sb.triage === 'battleground') ? 'battleground' : (sisterBooths[0].triage as any),
+      highestSviScore: Math.max(...sisterBooths.map((sb) => sb.svi?.score || 0)),
+    };
+  }, [activeBooth, boothsByCoordKey]);
 
   // 5. Render Polling Station Circle Markers with Zero-Lag Instant Tooltips
   useEffect(() => {
@@ -677,8 +767,8 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
     map.invalidateSize();
 
     // Smoothly fly camera directly to the booth coordinates with high zoom level (zoom 15)
-    const currentZoom = map.getZoom();
-    const targetZoom = Math.max(currentZoom, 15);
+    const currentZoom = typeof map.getZoom() === 'number' && !isNaN(map.getZoom()) ? map.getZoom() : 13;
+    const targetZoom = Math.min(17, Math.max(currentZoom, 15));
     map.flyTo([activeBooth.lat, activeBooth.lng], targetZoom, {
       animate: true,
       duration: 1.2,
@@ -748,11 +838,7 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
 
   // Center / Reset View handler
   const handleResetBounds = () => {
-    const map = mapInstanceRef.current;
-    if (!map) return;
-    if (boundaryLayerRef.current) {
-      map.fitBounds(boundaryLayerRef.current.getBounds(), { padding: [35, 35] });
-    }
+    fitCurrentAcBounds(true);
   };
 
   // Fullscreen map toggle state
@@ -837,8 +923,8 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
           isFullscreen
             ? 'flex-1 h-full min-h-0'
             : isFullPageMap
-            ? 'flex-1 min-h-[450px] h-full'
-            : 'h-[480px] sm:h-[540px]'
+            ? 'flex-1 min-h-[500px] h-full'
+            : 'h-[520px] sm:h-[600px] lg:h-[680px]'
         } ${isLight ? 'bg-slate-100' : 'bg-slate-950'}`}
       >
         <div ref={mapContainerRef} className="w-full h-full z-10" />
@@ -1085,331 +1171,23 @@ export const BoothTriageMap: React.FC<BoothTriageMapProps> = ({
           )}
         </div>
 
-        {/* Selected Booth Inspector Card (Sliding overlay) */}
-        {activeBooth && (
-          <div
-            className={`absolute top-12 right-3 left-3 sm:left-auto sm:w-96 z-30 backdrop-blur-md p-3.5 sm:p-4 rounded-xl border shadow-2xl space-y-2.5 animate-in fade-in slide-in-from-top-2 duration-150 transition-colors ${
-              isLight
-                ? 'bg-white/95 border-indigo-300 text-slate-900 shadow-indigo-100'
-                : 'bg-slate-900/95 border-indigo-500/50 text-white'
-            }`}
-          >
-            <div
-              className={`flex items-start justify-between gap-2 border-b pb-2 ${
-                isLight ? 'border-slate-200' : 'border-slate-800'
-              }`}
-            >
-              <div>
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`font-mono font-bold text-xs px-2 py-0.5 rounded border ${
-                      isLight
-                        ? 'bg-slate-100 text-amber-700 border-slate-300'
-                        : 'bg-slate-800 text-amber-300 border-slate-700'
-                    }`}
-                  >
-                    PS #{activeBooth.boothNo}
-                  </span>
-                  <span
-                    className={`text-[10px] font-bold px-2 py-0.5 rounded-full border uppercase ${
-                      activeBooth.triage === 'battleground' || activeBooth.triage === 'vulnerable'
-                        ? 'bg-amber-500/20 text-amber-500 border-amber-500/40'
-                        : activeBooth.triage === 'fortress'
-                        ? 'bg-emerald-500/20 text-emerald-600 border-emerald-500/40'
-                        : 'bg-rose-500/20 text-rose-600 border-rose-500/40'
-                    }`}
-                  >
-                    {activeBooth.triage === 'battleground'
-                      ? '🔥 Battleground (≤45 votes)'
-                      : activeBooth.triage === 'vulnerable'
-                      ? '⚠️ Tight Lead'
-                      : activeBooth.triage === 'fortress'
-                      ? '🛡️ Stronghold'
-                      : 'Opponent Turf'}
-                  </span>
-                </div>
-                <h4
-                  className={`text-xs sm:text-sm font-bold mt-1 leading-snug ${
-                    isLight ? 'text-slate-900' : 'text-white'
-                  }`}
-                >
-                  {activeBooth.name}
-                </h4>
-                <p className={`text-[11px] mt-0.5 ${isLight ? 'text-slate-500' : 'text-slate-400'}`}>
-                  📍 {activeBooth.location} &middot;{' '}
-                  <span className={`font-medium ${isLight ? 'text-slate-700' : 'text-slate-300'}`}>
-                    {activeBooth.mandalName} Mandal
-                  </span>
-                </p>
-              </div>
-
-              <button
-                type="button"
-                onClick={() => setActiveBooth(null)}
-                className={`p-1 rounded-lg transition-colors cursor-pointer ${
-                  isLight
-                    ? 'bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800'
-                    : 'bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white'
-                }`}
-              >
-                <X className="w-4 h-4" />
-              </button>
-            </div>
-
-            {/* Metrics Grid */}
-            <div
-              className={`grid grid-cols-2 gap-2 text-[11px] p-2.5 rounded-lg border ${
-                isLight
-                  ? 'bg-slate-50 border-slate-200 text-slate-800'
-                  : 'bg-slate-950/80 border-slate-800 text-slate-200'
-              }`}
-            >
-              <div>
-                <span
-                  className={`text-[10px] block uppercase ${
-                    isLight ? 'text-slate-500' : 'text-slate-400'
-                  }`}
-                >
-                  Registered Electors
-                </span>
-                <span
-                  className={`font-mono font-bold flex items-center gap-1 ${
-                    isLight ? 'text-slate-900' : 'text-white'
-                  }`}
-                >
-                  <Users className="w-3 h-3 text-indigo-500" />
-                  {activeBooth.electorate} (~{activeBooth.pannaPages} pages)
-                </span>
-              </div>
-              <div>
-                <span
-                  className={`text-[10px] block uppercase ${
-                    isLight ? 'text-slate-500' : 'text-slate-400'
-                  }`}
-                >
-                  Panna Pramukhs
-                </span>
-                <span
-                  className={`font-mono font-bold ${
-                    isLight ? 'text-indigo-600' : 'text-indigo-300'
-                  }`}
-                >
-                  {activeBooth.pannaPages} Assigned (30/p)
-                </span>
-              </div>
-            </div>
-
-            {/* 2024 Form-20 Candidate Vote Breakdown */}
-            {activeBooth.candidates && (
-              <div
-                className={`p-2.5 rounded-lg border text-[11px] space-y-1.5 ${
-                  isLight ? 'bg-indigo-50/60 border-indigo-200' : 'bg-indigo-950/30 border-indigo-800/40'
-                }`}
-              >
-                <div className="flex items-center justify-between font-bold text-xs">
-                  <span className="flex items-center gap-1.5">
-                    <Vote className="w-3.5 h-3.5 text-indigo-500" />
-                    <span>2024 Form-20 Result</span>
-                  </span>
-                  <span
-                    className={`text-[9px] font-mono px-1.5 py-0.5 rounded font-bold ${
-                      activeBooth.form20Source?.includes('OFFICIAL')
-                        ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                        : 'bg-amber-500/20 text-amber-400 border border-amber-500/30'
-                    }`}
-                  >
-                    {activeBooth.form20Source?.includes('OFFICIAL') ? 'Verified Form-20 OCR' : 'Mandal Model'}
-                  </span>
-                </div>
-                <div className="space-y-1 pt-0.5">
-                  {Object.entries(activeBooth.candidates).map(([cand, votes]) => (
-                    <div key={cand} className="flex items-center justify-between text-[11px]">
-                      <span className={isLight ? 'text-slate-700' : 'text-slate-300'}>{cand}</span>
-                      <span className={`font-mono font-bold ${isLight ? 'text-slate-900' : 'text-white'}`}>
-                        {votes.toLocaleString()}
-                      </span>
-                    </div>
-                  ))}
-                  <div
-                    className={`pt-1 border-t flex items-center justify-between font-bold text-[10px] ${
-                      isLight ? 'border-indigo-200' : 'border-indigo-800/50'
-                    }`}
-                  >
-                    <span className={isLight ? 'text-slate-600' : 'text-slate-400'}>
-                      Winner Lead:{' '}
-                      <strong className="text-indigo-400">{activeBooth.winnerParty}</strong> (+{activeBooth.margin?.toLocaleString()} votes)
-                    </span>
-                    <span className="text-slate-400 font-mono">Turnout: {activeBooth.turnoutPct}%</span>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {/* Mahila / Gender Mobilization Card */}
-            <div
-              className={`p-2.5 rounded-lg border text-[11px] space-y-1.5 ${
-                isLight ? 'bg-pink-50/50 border-pink-200' : 'bg-pink-950/20 border-pink-900/40'
-              }`}
-            >
-              <div className="flex items-center justify-between font-bold text-xs">
-                <span className="flex items-center gap-1.5 text-pink-500">
-                  <Heart className="w-3.5 h-3.5" />
-                  <span>Mahila / Gender Distribution (SIR 2026)</span>
-                </span>
-                <span className="font-mono text-[10px] text-pink-400 font-bold">
-                  {(((activeBooth.femaleElectors || Math.round(activeBooth.electorate * 0.51)) / activeBooth.electorate) * 100).toFixed(1)}% Women
-                </span>
-              </div>
-              <div className="grid grid-cols-2 gap-2 text-[10px]">
-                <div className="flex items-center justify-between">
-                  <span className={isLight ? 'text-slate-600' : 'text-slate-400'}>Female Electors:</span>
-                  <span className="font-mono font-bold text-pink-400">
-                    {(activeBooth.femaleElectors || Math.round(activeBooth.electorate * 0.51)).toLocaleString()}
-                  </span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className={isLight ? 'text-slate-600' : 'text-slate-400'}>Male Electors:</span>
-                  <span className="font-mono font-bold text-blue-400">
-                    {(activeBooth.maleElectors || (activeBooth.electorate - (activeBooth.femaleElectors || Math.round(activeBooth.electorate * 0.51)))).toLocaleString()}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* SVI Threat Assessment Card */}
-            {activeBooth.svi && (
-              <div
-                className={`text-[11px] p-2.5 rounded-lg border space-y-1.5 ${
-                  activeBooth.svi.level === 'CRITICAL'
-                    ? 'bg-rose-950/40 border-rose-500/60 text-rose-200'
-                    : activeBooth.svi.level === 'HIGH'
-                    ? 'bg-amber-950/40 border-amber-500/60 text-amber-200'
-                    : isLight
-                    ? 'bg-slate-50 border-slate-200 text-slate-700'
-                    : 'bg-slate-950/50 border-slate-800 text-slate-300'
-                }`}
-              >
-                <div className="flex items-center justify-between">
-                  <span className="font-bold flex items-center gap-1.5 text-xs">
-                    <ShieldAlert
-                      className={`w-3.5 h-3.5 ${
-                        activeBooth.svi.level === 'CRITICAL'
-                          ? 'text-rose-400'
-                          : activeBooth.svi.level === 'HIGH'
-                          ? 'text-amber-400'
-                          : 'text-slate-400'
-                      }`}
-                    />
-                    <span>SVI Vulnerability Index: {activeBooth.svi.level}</span>
-                  </span>
-                  <span className="font-mono text-[10px] font-bold px-1.5 py-0.2 rounded bg-black/30">
-                    Score: {activeBooth.svi.score}/100
-                  </span>
-                </div>
-                <div className="text-[10px] space-y-0.5 opacity-90">
-                  {activeBooth.svi.reasons.map((r, rIdx) => (
-                    <div key={rIdx} className="flex items-center gap-1">
-                      <span className="w-1 h-1 rounded-full bg-current" />
-                      <span>{r}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="pt-1 border-t border-current/20 flex items-center justify-between text-[10px] font-mono">
-                  <span>EC Protocol:</span>
-                  <strong className="underline">
-                    {activeBooth.svi.recommendedCapf
-                      ? '🚨 Deploy CAPF & 100% Webcasting'
-                      : 'Standard Micro-Observer'}
-                  </strong>
-                </div>
-              </div>
-            )}
-
-            {/* Panna Pramukh Directive */}
-            <div
-              className={`text-[11px] p-2 rounded-lg border flex items-start gap-1.5 ${
-                isLight
-                  ? 'bg-amber-50/80 border-amber-200 text-slate-800'
-                  : 'bg-slate-950/60 border-slate-800/80 text-slate-300'
-              }`}
-            >
-              <Target className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
-              <span>
-                <strong>Ground Directive:</strong> {activeBooth.actionNote}
-              </span>
-            </div>
-
-            {/* View in Dedicated Standalone E-Panna & Rolls Tab */}
-            <button
-              type="button"
-              onClick={() => {
-                if (onOpenStandaloneBooth) {
-                  onOpenStandaloneBooth(activeBooth);
-                } else {
-                  const url = new URL(window.location.origin + window.location.pathname);
-                  url.searchParams.set('tab', 'booth-data');
-                  url.searchParams.set('ac', String(acNo));
-                  url.searchParams.set('booth', String(activeBooth.boothNo));
-                  window.open(url.toString(), '_blank');
-                }
-              }}
-              className="w-full py-2 px-3 rounded-lg text-xs font-bold transition-all shadow-xs flex items-center justify-center gap-1.5 cursor-pointer mt-1 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white group"
-              title="Open full E-Panna, voter register, and household caste intelligence in dedicated standalone tab"
-            >
-              <FileText className="w-3.5 h-3.5 text-indigo-200 group-hover:scale-110 transition-transform" />
-              <span>Open in E-Panna &amp; Rolls Standalone Tab ({activeBooth.electorate} Electors) ↗</span>
-            </button>
-
-            {FORM_20_URLS[acNo] && (
-              <a
-                href={FORM_20_URLS[acNo]}
-                target="_blank"
-                rel="noreferrer"
-                className={`w-full py-1.5 px-3 rounded-lg text-[11px] font-semibold transition-all border flex items-center justify-center gap-1.5 cursor-pointer mt-1 ${
-                  isLight
-                    ? 'bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border-emerald-300'
-                    : 'bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 border-emerald-700'
-                }`}
-                title={`Open Official CEO Andhra Pradesh 2024 Form-20 PDF for AC #${acNo} (Station #${activeBooth.boothNo})`}
-              >
-                <FileText className="w-3.5 h-3.5 text-emerald-600" />
-                <span>Official 2024 Form-20 PDF (Station #{activeBooth.boothNo}) ↗</span>
-              </a>
-            )}
-
-            <a
-              href={getOfficialSir2026PdfUrl(acNo, activeBooth.boothNo)}
-              target="_blank"
-              rel="noreferrer"
-              className={`w-full py-1.5 px-3 rounded-lg text-[11px] font-semibold transition-all border flex items-center justify-center gap-1.5 cursor-pointer mt-1 ${
-                isLight
-                  ? 'bg-rose-50 hover:bg-rose-100 text-rose-800 border-rose-300'
-                  : 'bg-rose-950/80 hover:bg-rose-900 text-rose-300 border-rose-700'
-              }`}
-              title={`Open Official ECI SIR 2026 Draft Roll PDF for AC #${acNo} (Station #${activeBooth.boothNo})`}
-            >
-              <FileText className="w-3.5 h-3.5 text-rose-600" />
-              <span>Official SIR 2026 PDF (Station #{activeBooth.boothNo}) ↗</span>
-            </a>
-
-            {/* Optional Quick Overlay Modal */}
-            {onViewVoterRoll && (
-              <button
-                type="button"
-                onClick={() => onViewVoterRoll(activeBooth)}
-                className={`w-full py-1.5 px-3 rounded-lg text-[11px] font-semibold transition-all border flex items-center justify-center gap-1.5 cursor-pointer mt-1 ${
-                  isLight
-                    ? 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-300'
-                    : 'bg-slate-800 hover:bg-slate-700 text-slate-300 border-slate-600'
-                }`}
-                title="Quick preview modal"
-              >
-                <Users className="w-3.5 h-3.5 text-slate-400" />
-                <span>Quick Preview Modal</span>
-              </button>
-            )}
-          </div>
-        )}
+        {/* Selected Booth Inspector Card (Sliding overlay drawer) */}
+        <CampusPollingStationsDrawer
+          activeBooth={activeBooth}
+          activeCampus={activeCampus}
+          mapLayerMode={mapLayerMode}
+          acNo={acNo}
+          isLight={isLight}
+          onClose={() => {
+            setActiveBooth(null);
+          }}
+          onSelectBooth={(sb) => {
+            setActiveBooth(sb);
+            if (onSelectBooth) onSelectBooth(sb);
+          }}
+          onOpenStandaloneBooth={onOpenStandaloneBooth}
+          onViewVoterRoll={onViewVoterRoll}
+        />
       </div>
     </div>
   );

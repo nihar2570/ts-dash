@@ -61,7 +61,7 @@ function onDemandExtractorPlugin(): Plugin {
                 rollSource: content.roll_source,
                 isAuthenticExtract: true
               };
-            } catch (e) {
+            } catch {
               // file being written or corrupt
             }
           }
@@ -78,7 +78,7 @@ function onDemandExtractorPlugin(): Plugin {
             let body: any = {};
             try {
               body = JSON.parse(bodyStr);
-            } catch (err) {
+            } catch {
               res.writeHead(400, { 'Content-Type': 'application/json' });
               return res.end(JSON.stringify({ error: 'Invalid JSON request body' }));
             }
@@ -106,13 +106,18 @@ function onDemandExtractorPlugin(): Plugin {
                     isAuthenticExtract: true
                   }
                 }));
-              } catch (e) {
+              } catch {
                 // re-run if corrupt
               }
             }
 
             const pythonCmd = process.platform === 'win32' ? 'python' : 'python3';
-            const scriptPath = path.resolve(import.meta.dirname, '../scripts/extract_booth_voters.py');
+            const candidatePaths = [
+              path.resolve(import.meta.dirname, 'scripts/extract_booth_voters.py'),
+              path.resolve(import.meta.dirname, '../andhra-pipeline-scripts/extract_booth_voters.py'),
+              path.resolve(import.meta.dirname, '../scripts/extract_booth_voters.py')
+            ];
+            const scriptPath = candidatePaths.find(p => fs.existsSync(p)) || candidatePaths[0];
 
             const args = [
               scriptPath,

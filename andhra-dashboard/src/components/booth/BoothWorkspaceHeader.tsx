@@ -4,7 +4,6 @@ import {
   Layers,
   Home,
   Footprints,
-  Printer,
   CheckCircle2,
   Zap,
   Search,
@@ -102,22 +101,12 @@ export const BoothWorkspaceHeader: React.FC<BoothWorkspaceHeaderProps> = ({
             </div>
 
             <div className="flex items-center gap-1.5 flex-wrap">
-              {isAcFullyExtracted ? (
-                <button
-                  type="button"
-                  disabled
-                  className="px-3 py-1.5 rounded-lg border border-emerald-400/40 bg-emerald-50 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs opacity-90 cursor-default"
-                  title="Official 2026 Special Intensive Revision Draft Roll is fully extracted and active for all booths in this AC"
-                >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>✓ Extracted</span>
-                </button>
-              ) : data.isAuthenticExtract ? (
+              {isAcFullyExtracted || data?.isAuthenticExtract ? (
                 <button
                   type="button"
                   onClick={onOpenExtractorModal}
                   className="px-2.5 py-1.5 rounded-lg border border-emerald-400 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
-                  title="Authentic Official ECI 2026 Voter Roll is loaded. Click to inspect or re-extract."
+                  title="Official 2026 ECI Draft Roll is loaded. Click to inspect or re-extract."
                 >
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                   <span>✓ Extracted</span>
@@ -139,37 +128,13 @@ export const BoothWorkspaceHeader: React.FC<BoothWorkspaceHeaderProps> = ({
                   href={form20Url}
                   target="_blank"
                   rel="noreferrer"
-                  className="px-2.5 py-1.5 rounded-lg border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
-                  title={`Open Official CEO Andhra Pradesh 2024 Form-20 Polling Station Result Sheet for AC #${selectedAcNo} (Booth #${data.boothNo})`}
+                  className="px-3 py-1.5 rounded-lg border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
+                  title={`Open Official CEO Andhra Pradesh 2024 Form-20 Polling Station Result Sheet for AC #${selectedAcNo}`}
                 >
                   <FileText className="w-3.5 h-3.5 text-emerald-600" />
-                  <span>Official 2024 Form-20 PDF ↗</span>
+                  <span>View Complete AC Data ↗</span>
                 </a>
               )}
-
-              <a
-                href={
-                  data.roll2026Url ||
-                  `https://voters.eci.gov.in/eroll/2026/s01/sir-draftroll/${selectedAcNo}/2026-EROLLGEN-S01-${selectedAcNo}-SIR-DraftRoll-Revision1-ENG-${data.boothNo}-WI.pdf`
-                }
-                target="_blank"
-                rel="noreferrer"
-                className="px-2.5 py-1.5 rounded-lg border border-rose-300 bg-rose-50 hover:bg-rose-100 text-rose-800 text-xs font-bold transition-all flex items-center gap-1.5 shadow-2xs cursor-pointer"
-                title={`Open Official CEO Andhra Pradesh SIR 2026 Draft Roll PDF for Booth #${data.boothNo}`}
-              >
-                <FileText className="w-3.5 h-3.5 text-rose-600" />
-                <span>Official SIR 2026 PDF ↗</span>
-              </a>
-
-              <button
-                type="button"
-                onClick={() => window.print()}
-                className="p-1.5 rounded-lg border border-slate-200 text-slate-600 hover:text-slate-900 hover:bg-slate-50 text-xs font-bold transition-all flex items-center gap-1 cursor-pointer"
-                title="Print E-Roll Register"
-              >
-                <Printer className="w-3.5 h-3.5" />
-                <span>Print</span>
-              </button>
             </div>
           </div>
 

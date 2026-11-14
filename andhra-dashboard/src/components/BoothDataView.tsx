@@ -6,7 +6,6 @@ import {
   MapPin,
   Layers,
   FileSpreadsheet,
-  Building2,
 } from 'lucide-react';
 import { FloatingSideNav, type NavSection } from './common/FloatingSideNav';
 import { OnDemandVoterExtractorModal } from './OnDemandVoterExtractorModal';
@@ -311,17 +310,6 @@ export const BoothDataView: React.FC<BoothDataViewProps> = ({
 
     return list;
   }, [officialBooths, mandals, selectedAcNo]);
-
-  // Count of booths per mandal in current catalog
-  const mandalBoothCounts = useMemo(() => {
-    const counts: Record<string, number> = {};
-    const cleanStr = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-    allBoothsInAc.forEach((b) => {
-      const key = cleanStr(b.mandalName);
-      counts[key] = (counts[key] || 0) + 1;
-    });
-    return counts;
-  }, [allBoothsInAc]);
 
   // Filtered booth list based on user search & mandal filter
   const filteredBoothsList = useMemo(() => {
@@ -658,40 +646,40 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
       <FloatingSideNav sections={BOOTH_SECTIONS} />
 
       {/* Top Banner: Constituency Selector Bar */}
-      <div id="booth-header" className="scroll-mt-24 bg-white rounded-xl border border-slate-200 p-3.5 shadow-2xs flex flex-wrap items-center justify-between gap-3 print:hidden">
-        <div className="flex items-center gap-3">
+      <div id="booth-header" className="scroll-mt-24 bg-white rounded-xl border border-slate-200 p-3.5 shadow-2xs flex flex-wrap lg:flex-nowrap items-center justify-between gap-3 print:hidden">
+        <div className="flex items-center gap-3 min-w-0">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-purple-600 flex items-center justify-center text-white font-black text-sm shadow-xs shrink-0">
             #{selectedAcNo}
           </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <h2 className="text-base font-black text-slate-900 tracking-tight">
+          <div className="min-w-0">
+            <div className="flex items-center gap-2 flex-wrap">
+              <h2 className="text-base font-black text-slate-900 tracking-tight whitespace-nowrap">
                 {currentAc.ac_name}
               </h2>
               {currentAc.district && (
-                <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-semibold border border-slate-200">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-semibold border border-slate-200 whitespace-nowrap">
                   {currentAc.district}
                 </span>
               )}
               {currentAc.reservation && currentAc.reservation !== 'GEN' && (
-                <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-bold border border-amber-200">
+                <span className="text-xs px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 font-bold border border-amber-200 whitespace-nowrap">
                   {currentAc.reservation}
                 </span>
               )}
             </div>
-            <p className="text-xs text-slate-500">
+            <p className="text-xs text-slate-500 truncate">
               Statewide E-Panna &amp; Polling Station Roster Explorer &middot;{' '}
               <strong className="text-slate-800">{totalBoothsInAc} Total Polling Stations</strong>
             </p>
           </div>
         </div>
 
-        {/* AC Search & Switcher & 30/60/90 Campaign Switcher */}
-        <div className="flex items-center gap-2 flex-1 max-w-xl justify-end flex-wrap">
+        {/* AC Search & Switcher & Padayatra Plan Switcher */}
+        <div className="flex items-center gap-2 shrink-0">
           <button
             type="button"
             onClick={() => setViewMode(viewMode === 'ac-plan' ? 'table' : 'ac-plan')}
-            className={`px-3 py-1.5 rounded-lg border text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs shrink-0 ${
+            className={`px-3 py-1.5 rounded-lg border text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer shadow-2xs whitespace-nowrap shrink-0 ${
               viewMode === 'ac-plan'
                 ? 'bg-amber-500 text-slate-950 border-amber-400 font-black ring-2 ring-amber-300'
                 : 'bg-amber-50 hover:bg-amber-100 text-amber-900 border-amber-300'
@@ -699,14 +687,14 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
             title="15 / 30 / 60 / 90-Day AC-Wide Padayatra Campaign Itinerary"
           >
             <Calendar className="w-3.5 h-3.5 text-amber-800" />
-            <span>{viewMode === 'ac-plan' ? '← Single Booth Roll Mode' : 'Whole AC (15/30/60/90d) Plan'}</span>
+            <span>{viewMode === 'ac-plan' ? '← Single Booth Roll' : 'Padayatra Plan'}</span>
           </button>
 
-          <div className="relative flex-1 max-w-xs">
+          <div className="relative w-44 sm:w-52">
             <Search className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-2.5" />
             <input
               type="text"
-              placeholder="Jump to AC (e.g. Kuppam, 175, Mangalagiri, Pithapuram)..."
+              placeholder="Jump to AC..."
               value={acSearchQuery}
               onChange={(e) => setAcSearchQuery(e.target.value)}
               className="w-full pl-8 pr-2.5 py-1.5 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:outline-hidden focus:ring-1 focus:ring-indigo-500 text-slate-900"
@@ -720,7 +708,7 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
               onSelectAc(ac);
               setSelectedBoothNo(1);
             }}
-            className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 font-bold focus:outline-hidden cursor-pointer"
+            className="text-xs bg-slate-50 border border-slate-300 rounded-lg px-2.5 py-1.5 text-slate-700 font-bold focus:outline-hidden cursor-pointer whitespace-nowrap max-w-[220px]"
           >
             {acList
               .filter(
@@ -737,89 +725,6 @@ ${stop.talkingPoints.demographicPitch.points.map((p) => `• ${p}`).join('\n')}
           </select>
         </div>
       </div>
-
-      {/* Mandal Ground Rollup Ribbon & 1-Click Filter Chips */}
-      {mandals.length > 0 && (
-        <div className="bg-white rounded-xl border border-slate-200 p-3 shadow-2xs space-y-2">
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-2">
-            <div className="flex items-center gap-2">
-              <Building2 className="w-4 h-4 text-indigo-600" />
-              <span className="text-xs font-bold text-slate-900">
-                Mandal Rollup ({mandals.length} Mandals &middot; {totalBoothsInAc} Polling Stations)
-              </span>
-              <span className="text-[10px] bg-indigo-50 text-indigo-700 font-mono font-bold px-2 py-0.5 rounded border border-indigo-200">
-                Revenue Circles
-              </span>
-            </div>
-
-            {boothFilterMandal !== 'ALL' && (
-              <button
-                type="button"
-                onClick={() => setBoothFilterMandal('ALL')}
-                className="text-xs text-indigo-600 hover:text-indigo-800 font-bold flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <span>Reset to All Mandals ({allBoothsInAc.length})</span>
-                <span className="text-slate-400">&times;</span>
-              </button>
-            )}
-          </div>
-
-          {/* Multi-line Mandal Filter Chips (No horizontal scrollbar) */}
-          <div className="flex flex-wrap items-center gap-2 pt-0.5">
-            {/* All Mandals Chip */}
-            <button
-              type="button"
-              onClick={() => setBoothFilterMandal('ALL')}
-              className={`shrink-0 px-3 py-1.5 rounded-lg border text-xs font-bold flex items-center gap-2 transition-all cursor-pointer ${
-                boothFilterMandal === 'ALL'
-                  ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
-                  : 'bg-slate-50 hover:bg-slate-100 text-slate-700 border-slate-200'
-              }`}
-            >
-              <span>All Mandals</span>
-              <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                boothFilterMandal === 'ALL' ? 'bg-slate-700 text-white' : 'bg-slate-200 text-slate-700'
-              }`}>
-                {allBoothsInAc.length}
-              </span>
-            </button>
-
-            {/* Individual Mandal Chips */}
-            {mandals.map((m) => {
-              const cleanStr = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
-              const count = mandalBoothCounts[cleanStr(m.name)] || m.booths;
-              const isSelected = boothFilterMandal.toLowerCase() === m.name.toLowerCase();
-              return (
-                <button
-                  key={m.mandal_id}
-                  type="button"
-                  onClick={() => setBoothFilterMandal(isSelected ? 'ALL' : m.name)}
-                  className={`shrink-0 px-3 py-1.5 rounded-lg border text-xs font-semibold flex items-center gap-2 transition-all cursor-pointer ${
-                    isSelected
-                      ? 'bg-indigo-600 text-white border-indigo-600 shadow-xs ring-2 ring-indigo-300 font-bold'
-                      : 'bg-white hover:bg-indigo-50/60 hover:border-indigo-300 text-slate-700 border-slate-200'
-                  }`}
-                >
-                  <div className="flex items-center gap-1.5">
-                    <span className="truncate max-w-[130px]">{m.name}</span>
-                    <span className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono font-bold ${
-                      isSelected ? 'bg-indigo-700 text-white' : 'bg-slate-100 text-slate-700'
-                    }`}>
-                      {count}
-                    </span>
-                  </div>
-
-                  <span className={`text-[10px] border-l pl-2 hidden sm:inline ${
-                    isSelected ? 'border-indigo-400 text-indigo-100' : 'border-slate-200 text-slate-400'
-                  }`}>
-                    {m.turnout_pct}% &middot; +{(m.margin / 1000).toFixed(1)}k {m.lead_party}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      )}
 
       {/* Main Content Area: AC-Wide Planner OR Single Booth Roll Explorer */}
       {viewMode === 'ac-plan' ? (

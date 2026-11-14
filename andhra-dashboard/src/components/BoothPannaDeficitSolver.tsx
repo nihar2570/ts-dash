@@ -82,7 +82,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
   const [explorerViewMode, setExplorerViewMode] = useState<'map' | 'list'>('map');
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [selectedMapBoothNo, setSelectedMapBoothNo] = useState<number | null>(null);
-  const [selectedTriageCategory, setSelectedTriageCategory] = useState<'battleground' | 'fortress' | 'vulnerable' | 'hostile' | 'all' | null>('battleground');
+  const [selectedTriageCategory, setSelectedTriageCategory] = useState<'battleground' | 'fortress' | 'vulnerable' | 'hostile' | 'all' | null>('all');
   const [boothSearch, setBoothSearch] = useState<string>('');
   const [selectedMandalFilter, setSelectedMandalFilter] = useState<string>('all');
   const [visibleBoothCount, setVisibleBoothCount] = useState<number>(standaloneMapOnly ? 50 : 25);
@@ -121,15 +121,46 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
             const targetVotes = hasJsonVotes ? (b.votes[targetParty] || 0) : Math.round(estVotes * targetShare);
             const opponentVotes = hasJsonVotes ? (b.total_votes - targetVotes) : Math.round(estVotes * oppShare);
             const margin = hasJsonVotes ? (isTargetWinner ? b.margin : -b.margin) : (targetVotes - opponentVotes);
-            const triage = b.triage || (margin > 130 ? 'fortress' : margin > 30 ? 'vulnerable' : margin >= -30 ? 'battleground' : 'hostile');
+            
+            // 3-Tier Tactical Triage: 'fortress' (Stronghold) | 'battleground' (Contestable / Swing) | 'hostile' (Opponent Turf)
+            let triage: 'fortress' | 'battleground' | 'hostile' = 'battleground';
+            const rawTriage = String(b.triage || '').toLowerCase().trim();
+            const absMargin = Math.abs(margin);
+
+            if (isTargetWinner) {
+              // Target party leads in this polling station
+              // If lead is decisive (>35 votes, >6% margin, or marked fortress/secure) -> Stronghold
+              if (rawTriage === 'fortress') {
+                triage = 'fortress';
+              } else if (rawTriage === 'battleground' || rawTriage === 'toss_up') {
+                triage = 'battleground';
+              } else if (absMargin > 35 || (b.margin_pct && b.margin_pct > 6.0) || rawTriage === 'secure') {
+                triage = 'fortress';
+              } else {
+                triage = 'battleground';
+              }
+            } else {
+              // Opponent leads in this polling station
+              // If opponent lead is decisive (>35 votes, >6% margin, or marked hostile/secure-for-opp) -> Opponent Turf
+              // Narrow deficit (<=35 votes or <=6% margin) -> Battleground (high-priority flip targets)
+              if (rawTriage === 'hostile') {
+                triage = 'hostile';
+              } else if (rawTriage === 'battleground' || rawTriage === 'toss_up') {
+                triage = 'battleground';
+              } else if (absMargin > 35 || (b.margin_pct && b.margin_pct > 6.0) || (rawTriage === 'secure' && !isTargetWinner)) {
+                triage = 'hostile';
+              } else {
+                triage = 'battleground';
+              }
+            }
 
             let actionNote = '';
             if (triage === 'fortress') {
               actionNote = 'Solid stronghold. Focus on voter mobilization & transport assistance.';
             } else if (triage === 'battleground') {
-              actionNote = 'Favorable battleground. Deploy local youth influencers.';
-            } else if (triage === 'vulnerable') {
-              actionNote = 'Tight contest. Redress local grievances & door-to-door outreach.';
+              actionNote = margin >= 0
+                ? 'Competitive edge. Deploy youth influencers and ward committee leaders.'
+                : 'Flip target. High-priority outreach on local civic grievances.';
             } else {
               actionNote = 'Opponent bastion. Target swing electors with flagship welfare pamphlets.';
             }
@@ -194,7 +225,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
     return () => {
       isMounted = false;
     };
-  }, [acNo, targetParty, winnerParty, runnerParty, district]);
+  }, [acNo, targetParty, winnerParty, runnerParty, district, mandals, totalValidVotes, winnerVotes, runnerVotes]);
 
   // Constituency Booth Aggregates
   const totalBooths = useMemo(() => {
@@ -233,7 +264,6 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
     return {
       fortressCount: allBooths.filter((b) => b.triage === 'fortress').length,
       battlegroundCount: allBooths.filter((b) => b.triage === 'battleground').length,
-      vulnerableCount: allBooths.filter((b) => b.triage === 'vulnerable').length,
       hostileCount: allBooths.filter((b) => b.triage === 'hostile').length,
     };
   }, [allBooths]);
@@ -259,7 +289,7 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
     });
   }, [allBooths, selectedTriageCategory, selectedMandalFilter, boothSearch]);
 
-  const handleSelectTriage = (cat: 'battleground' | 'fortress' | 'vulnerable' | 'hostile' | 'all') => {
+  const handleSelectTriage = (cat: 'battleground' | 'fortress' | 'hostile' | 'all') => {
     if (selectedTriageCategory === cat) {
       setSelectedTriageCategory('all');
     } else {
@@ -545,19 +575,6 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                 <span>Strongholds ({boothTriage.fortressCount})</span>
               </button>
               <button
-                onClick={() => handleSelectTriage('vulnerable')}
-                className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 border ${
-                  selectedTriageCategory === 'vulnerable'
-                    ? 'bg-yellow-400 text-slate-950 border-yellow-300 shadow-xs'
-                    : theme === 'light'
-                    ? 'bg-slate-100 text-slate-700 border-slate-300 hover:bg-slate-200'
-                    : 'bg-slate-800 text-slate-300 border-slate-700 hover:text-white'
-                }`}
-                title="Filter for Tight Lead booths (1-40 votes)"
-              >
-                <span>⚠️ Tight Leads ({boothTriage.vulnerableCount})</span>
-              </button>
-              <button
                 onClick={() => handleSelectTriage('hostile')}
                 className={`px-2.5 py-1 rounded-lg text-xs font-bold transition-all cursor-pointer flex items-center gap-1 border ${
                   selectedTriageCategory === 'hostile'
@@ -632,8 +649,8 @@ export const BoothPannaDeficitSolver: React.FC<BoothPannaDeficitSolverProps> = (
                 targetParty={targetParty}
                 booths={filteredBooths}
                 geoJsonData={geoJsonData}
-                selectedTriageCategory={selectedTriageCategory}
-                onSelectTriageCategory={handleSelectTriage}
+                selectedTriageCategory={selectedTriageCategory as any}
+                onSelectTriageCategory={handleSelectTriage as any}
                 selectedBoothNo={selectedMapBoothNo}
                 onSelectBooth={(b) => setSelectedMapBoothNo(b ? b.boothNo : null)}
                 onViewVoterRoll={(b) => setInspectedVoterBooth(b)}

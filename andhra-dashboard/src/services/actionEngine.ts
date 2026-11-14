@@ -1,6 +1,6 @@
 import type { DemographicsDataset, ActiveScenarioBridge } from '../types';
 import type { ActionAllocation } from '../components/actions/ConstituencyActionList';
-import { CAMPAIGNER_PROFILES } from '../components/StarCampaignerAllocator';
+import { CAMPAIGNER_PROFILES } from '../components/campaigner/campaignerProfiles';
 import type { DefectionEvent } from '../components/DefectionRebelModeler';
 
 export interface BattlegroundItem {

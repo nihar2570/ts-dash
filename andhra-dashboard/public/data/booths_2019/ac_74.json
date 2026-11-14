@@ -1,0 +1,6032 @@
+[
+  {
+    "booth_no": 1,
+    "name": "ZILLA PARISHAD HIGH SCHOOL SOUTH SIDE 8th CLASS ROOM, MUKKOLLU",
+    "building": "ZILLA PARISHAD HIGH SCHOOL SOUTH SIDE 8th CLASS ROOM, MUKKOLLU",
+    "locality": "MUKKOLLU",
+    "mandal": "GUDUR",
+    "lat": 16.27695,
+    "lng": 81.064375,
+    "is_urban": false,
+    "electorate": 580,
+    "total_votes": 455,
+    "turnout_pct": 78.5,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 37,
+    "margin_pct": 8.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 159,
+      "TDP": 196,
+      "OTH": 100
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 159,
+      "Kagitha Krishnaprasad (TDP)": 196,
+      "Others / NOTA": 100
+    }
+  },
+  {
+    "booth_no": 2,
+    "name": "Z P H S NORTH SIDE 7th CLASS ROOM, MUKKOLLU",
+    "building": "Z P H S NORTH SIDE 7th CLASS ROOM, MUKKOLLU",
+    "locality": "MUKKOLLU",
+    "mandal": "GUDUR",
+    "lat": 16.27695,
+    "lng": 81.064375,
+    "is_urban": false,
+    "electorate": 576,
+    "total_votes": 463,
+    "turnout_pct": 80.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 24,
+    "margin_pct": 5.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 196,
+      "TDP": 172,
+      "OTH": 95
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 196,
+      "Kagitha Krishnaprasad (TDP)": 172,
+      "Others / NOTA": 95
+    }
+  },
+  {
+    "booth_no": 3,
+    "name": "M P P S, NAGAVARAM",
+    "building": "M P P S, NAGAVARAM",
+    "locality": "nagavaram h/o MUKKOLLU",
+    "mandal": "GUDUR",
+    "lat": 16.276795,
+    "lng": 81.064569,
+    "is_urban": false,
+    "electorate": 247,
+    "total_votes": 203,
+    "turnout_pct": 82.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 12,
+    "margin_pct": 5.9,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 87,
+      "TDP": 75,
+      "OTH": 41
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 87,
+      "Kagitha Krishnaprasad (TDP)": 75,
+      "Others / NOTA": 41
+    }
+  },
+  {
+    "booth_no": 4,
+    "name": "Grama Panchayat Office, Jakkamcherla",
+    "building": "Grama Panchayat Office, Jakkamcherla",
+    "locality": "Jakkamcherla",
+    "mandal": "GUDUR",
+    "lat": 16.27654,
+    "lng": 81.04859,
+    "is_urban": false,
+    "electorate": 395,
+    "total_votes": 322,
+    "turnout_pct": 81.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 61,
+    "margin_pct": 18.9,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 161,
+      "TDP": 100,
+      "OTH": 61
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 161,
+      "Kagitha Krishnaprasad (TDP)": 100,
+      "Others / NOTA": 61
+    }
+  },
+  {
+    "booth_no": 5,
+    "name": "M.P.U.P School (URDU) Pinaguduru Lanka",
+    "building": "M.P.U.P School (URDU) Pinaguduru Lanka",
+    "locality": "PINAGUDURULANKA",
+    "mandal": "GUDUR",
+    "lat": 16.248943,
+    "lng": 81.049411,
+    "is_urban": false,
+    "electorate": 272,
+    "total_votes": 221,
+    "turnout_pct": 81.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 10,
+    "margin_pct": 4.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 93,
+      "TDP": 83,
+      "OTH": 45
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 93,
+      "Kagitha Krishnaprasad (TDP)": 83,
+      "Others / NOTA": 45
+    }
+  },
+  {
+    "booth_no": 6,
+    "name": "Grama Panchayat, Kalapatam",
+    "building": "Grama Panchayat, Kalapatam",
+    "locality": "kALAPATAM",
+    "mandal": "GUDUR",
+    "lat": 16.255095,
+    "lng": 81.054229,
+    "is_urban": false,
+    "electorate": 355,
+    "total_votes": 288,
+    "turnout_pct": 81.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 12,
+    "margin_pct": 4.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 120,
+      "TDP": 108,
+      "OTH": 60
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 120,
+      "Kagitha Krishnaprasad (TDP)": 108,
+      "Others / NOTA": 60
+    }
+  },
+  {
+    "booth_no": 7,
+    "name": "Smt. Turlapati Kamala ZPHS 10th class room, Tarakaturu",
+    "building": "Smt. Turlapati Kamala ZPHS 10th class room, Tarakaturu",
+    "locality": "Tarakaturu",
+    "mandal": "GUDUR",
+    "lat": 16.228212,
+    "lng": 81.034987,
+    "is_urban": false,
+    "electorate": 597,
+    "total_votes": 512,
+    "turnout_pct": 85.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 45,
+    "margin_pct": 8.8,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 227,
+      "TDP": 182,
+      "OTH": 103
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 227,
+      "Kagitha Krishnaprasad (TDP)": 182,
+      "Others / NOTA": 103
+    }
+  },
+  {
+    "booth_no": 8,
+    "name": "Smt. Turlapati Kamala ZPHS 3rd class room, Tarakaturu",
+    "building": "Smt. Turlapati Kamala ZPHS 3rd class room, Tarakaturu",
+    "locality": "THARAKATURU",
+    "mandal": "GUDUR",
+    "lat": 16.225631,
+    "lng": 81.034457,
+    "is_urban": false,
+    "electorate": 524,
+    "total_votes": 439,
+    "turnout_pct": 83.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 2,
+    "margin_pct": 0.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 174,
+      "TDP": 172,
+      "OTH": 93
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 174,
+      "Kagitha Krishnaprasad (TDP)": 172,
+      "Others / NOTA": 93
+    }
+  },
+  {
+    "booth_no": 9,
+    "name": "Smt. Turlapati Kamala ZPHS 4th class room, Tarakaturu",
+    "building": "Smt. Turlapati Kamala ZPHS 4th class room, Tarakaturu",
+    "locality": "THARAKATURU PALEM",
+    "mandal": "GUDUR",
+    "lat": 16.220409,
+    "lng": 81.048286,
+    "is_urban": false,
+    "electorate": 1120,
+    "total_votes": 896,
+    "turnout_pct": 80.0,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 12,
+    "margin_pct": 1.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 347,
+      "TDP": 359,
+      "OTH": 190
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 347,
+      "Kagitha Krishnaprasad (TDP)": 359,
+      "Others / NOTA": 190
+    }
+  },
+  {
+    "booth_no": 10,
+    "name": "M P P S, TARAKATURUPALEM",
+    "building": "M P P S, TARAKATURUPALEM",
+    "locality": "MADDIPATLA",
+    "mandal": "GUDUR",
+    "lat": 16.213065,
+    "lng": 81.030381,
+    "is_urban": false,
+    "electorate": 440,
+    "total_votes": 354,
+    "turnout_pct": 80.4,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 2,
+    "margin_pct": 0.6,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 139,
+      "TDP": 141,
+      "OTH": 74
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 139,
+      "Kagitha Krishnaprasad (TDP)": 141,
+      "Others / NOTA": 74
+    }
+  },
+  {
+    "booth_no": 11,
+    "name": "M P P SCHOOL, MADDIPATLA",
+    "building": "M P P SCHOOL, MADDIPATLA",
+    "locality": "KANCHAKODURU",
+    "mandal": "GUDUR",
+    "lat": 16.209085,
+    "lng": 81.044561,
+    "is_urban": false,
+    "electorate": 423,
+    "total_votes": 354,
+    "turnout_pct": 83.7,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 39,
+    "margin_pct": 11.0,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 118,
+      "TDP": 157,
+      "OTH": 79
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 118,
+      "Kagitha Krishnaprasad (TDP)": 157,
+      "Others / NOTA": 79
+    }
+  },
+  {
+    "booth_no": 12,
+    "name": "M. P. P School \u201e KANCHAKODURU",
+    "building": "M. P. P School \u201e KANCHAKODURU",
+    "locality": "Rayavaram",
+    "mandal": "GUDUR",
+    "lat": 16.191639,
+    "lng": 81.053484,
+    "is_urban": false,
+    "electorate": 892,
+    "total_votes": 756,
+    "turnout_pct": 84.7,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 11,
+    "margin_pct": 1.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 292,
+      "TDP": 303,
+      "OTH": 161
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 292,
+      "Kagitha Krishnaprasad (TDP)": 303,
+      "Others / NOTA": 161
+    }
+  },
+  {
+    "booth_no": 13,
+    "name": "M.P.P.SCHOOL OLD BUILDING WEST SIDE 5 TH CLASS ROOM, RAYAVARAM",
+    "building": "M.P.P.SCHOOL OLD BUILDING WEST SIDE 5 TH CLASS ROOM, RAYAVARAM",
+    "locality": "RAYAVARAM",
+    "mandal": "GUDUR",
+    "lat": 16.191639,
+    "lng": 81.053484,
+    "is_urban": false,
+    "electorate": 589,
+    "total_votes": 482,
+    "turnout_pct": 81.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 21,
+    "margin_pct": 4.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 202,
+      "TDP": 181,
+      "OTH": 99
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 202,
+      "Kagitha Krishnaprasad (TDP)": 181,
+      "Others / NOTA": 99
+    }
+  },
+  {
+    "booth_no": 14,
+    "name": "M.P.P SCHOOL OLD BUILDING EAST SIDE 4TH CLASS ROOM, RAYAVARAM",
+    "building": "M.P.P SCHOOL OLD BUILDING EAST SIDE 4TH CLASS ROOM, RAYAVARAM",
+    "locality": "Polavaram",
+    "mandal": "GUDUR",
+    "lat": 16.177678,
+    "lng": 81.038587,
+    "is_urban": false,
+    "electorate": 576,
+    "total_votes": 466,
+    "turnout_pct": 80.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 2,
+    "margin_pct": 0.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 185,
+      "TDP": 183,
+      "OTH": 98
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 185,
+      "Kagitha Krishnaprasad (TDP)": 183,
+      "Others / NOTA": 98
+    }
+  },
+  {
+    "booth_no": 15,
+    "name": "M.P.P School 1st class room\u201e Rayavaram",
+    "building": "M.P.P School 1st class room\u201e Rayavaram",
+    "locality": "Polavaram",
+    "mandal": "GUDUR",
+    "lat": 16.177678,
+    "lng": 81.038587,
+    "is_urban": false,
+    "electorate": 905,
+    "total_votes": 761,
+    "turnout_pct": 84.1,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 94,
+    "margin_pct": 12.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 248,
+      "TDP": 342,
+      "OTH": 171
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 248,
+      "Kagitha Krishnaprasad (TDP)": 342,
+      "Others / NOTA": 171
+    }
+  },
+  {
+    "booth_no": 16,
+    "name": "Z.P.H.SCHOOL 6TH CLASS ROOM, Polavaram",
+    "building": "Z.P.H.SCHOOL 6TH CLASS ROOM, Polavaram",
+    "locality": "POLAVARAM",
+    "mandal": "GUDUR",
+    "lat": 16.177678,
+    "lng": 81.038587,
+    "is_urban": false,
+    "electorate": 937,
+    "total_votes": 794,
+    "turnout_pct": 84.8,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 4,
+    "margin_pct": 0.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 311,
+      "TDP": 315,
+      "OTH": 168
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 311,
+      "Kagitha Krishnaprasad (TDP)": 315,
+      "Others / NOTA": 168
+    }
+  },
+  {
+    "booth_no": 17,
+    "name": "Z.P.H.School 4th class room\u201e Polavaram",
+    "building": "Z.P.H.School 4th class room\u201e Polavaram",
+    "locality": "IDUGULLA PALLI",
+    "mandal": "GUDUR",
+    "lat": 16.175775,
+    "lng": 81.033917,
+    "is_urban": false,
+    "electorate": 858,
+    "total_votes": 693,
+    "turnout_pct": 80.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 4,
+    "margin_pct": 0.6,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 276,
+      "TDP": 272,
+      "OTH": 145
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 276,
+      "Kagitha Krishnaprasad (TDP)": 272,
+      "Others / NOTA": 145
+    }
+  },
+  {
+    "booth_no": 18,
+    "name": "Z.P.H.SCHOOL 3RD CLASS ROOM, Polavaram",
+    "building": "Z.P.H.SCHOOL 3RD CLASS ROOM, Polavaram",
+    "locality": "Ramannapet",
+    "mandal": "GUDUR",
+    "lat": 16.167014,
+    "lng": 81.021603,
+    "is_urban": false,
+    "electorate": 597,
+    "total_votes": 499,
+    "turnout_pct": 83.5,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 22,
+    "margin_pct": 4.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 185,
+      "TDP": 207,
+      "OTH": 107
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 185,
+      "Kagitha Krishnaprasad (TDP)": 207,
+      "Others / NOTA": 107
+    }
+  },
+  {
+    "booth_no": 19,
+    "name": "MP P SCHOOL SOUTHERN SIDE BUILDING, IDUGULLAPALLI",
+    "building": "MP P SCHOOL SOUTHERN SIDE BUILDING, IDUGULLAPALLI",
+    "locality": "Mallavolu",
+    "mandal": "GUDUR",
+    "lat": 16.169636,
+    "lng": 81.044184,
+    "is_urban": false,
+    "electorate": 1009,
+    "total_votes": 875,
+    "turnout_pct": 86.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 206,
+    "margin_pct": 23.5,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 460,
+      "TDP": 254,
+      "OTH": 161
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 460,
+      "Kagitha Krishnaprasad (TDP)": 254,
+      "Others / NOTA": 161
+    }
+  },
+  {
+    "booth_no": 20,
+    "name": "ANGANWADI CENTER RAMANNAPETA",
+    "building": "ANGANWADI CENTER RAMANNAPETA",
+    "locality": "Mallavolu",
+    "mandal": "GUDUR",
+    "lat": 16.169636,
+    "lng": 81.044184,
+    "is_urban": false,
+    "electorate": 588,
+    "total_votes": 492,
+    "turnout_pct": 83.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 113,
+    "margin_pct": 23.0,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 257,
+      "TDP": 144,
+      "OTH": 91
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 257,
+      "Kagitha Krishnaprasad (TDP)": 144,
+      "Others / NOTA": 91
+    }
+  },
+  {
+    "booth_no": 21,
+    "name": "Z P H S BLOCK 3 BHAVAN 10TH CLASS B SECTION NORTH SIDE ROOM, MALI-AVOLU",
+    "building": "Z P H S BLOCK 3 BHAVAN 10TH CLASS B SECTION NORTH SIDE ROOM, MALI-AVOLU",
+    "locality": "Mallavolu",
+    "mandal": "GUDUR",
+    "lat": 16.169636,
+    "lng": 81.044184,
+    "is_urban": false,
+    "electorate": 768,
+    "total_votes": 671,
+    "turnout_pct": 87.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 2,
+    "margin_pct": 0.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 266,
+      "TDP": 264,
+      "OTH": 141
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 266,
+      "Kagitha Krishnaprasad (TDP)": 264,
+      "Others / NOTA": 141
+    }
+  },
+  {
+    "booth_no": 22,
+    "name": "Z P H S BLOCK 3 BHAVANAM 9TH CLASS A SECTION SOUTH SIDE ROOM, MALI-AVOLIJ",
+    "building": "Z P H S BLOCK 3 BHAVANAM 9TH CLASS A SECTION SOUTH SIDE ROOM, MALI-AVOLIJ",
+    "locality": "Mallavolu",
+    "mandal": "GUDUR",
+    "lat": 16.182991,
+    "lng": 81.043521,
+    "is_urban": false,
+    "electorate": 955,
+    "total_votes": 827,
+    "turnout_pct": 86.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 61,
+    "margin_pct": 7.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 360,
+      "TDP": 299,
+      "OTH": 168
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 360,
+      "Kagitha Krishnaprasad (TDP)": 299,
+      "Others / NOTA": 168
+    }
+  },
+  {
+    "booth_no": 23,
+    "name": "Z P H S BLOCK 2 BHAVANAM 9TH CLASS B SECTION SOUTH SIDE ROOM, MALI-AVOLIJ",
+    "building": "Z P H S BLOCK 2 BHAVANAM 9TH CLASS B SECTION SOUTH SIDE ROOM, MALI-AVOLIJ",
+    "locality": "R N AGRAHARAM H/O MALLAVOLU",
+    "mandal": "GUDUR",
+    "lat": 16.183031,
+    "lng": 81.043561,
+    "is_urban": false,
+    "electorate": 526,
+    "total_votes": 431,
+    "turnout_pct": 82.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 9,
+    "margin_pct": 2.1,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 175,
+      "TDP": 166,
+      "OTH": 90
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 175,
+      "Kagitha Krishnaprasad (TDP)": 166,
+      "Others / NOTA": 90
+    }
+  },
+  {
+    "booth_no": 24,
+    "name": "Z P H S BLOCK 1 BHAVANAM 7TH CLASS ROOM NORTH SIDE, Mallavollu",
+    "building": "Z P H S BLOCK 1 BHAVANAM 7TH CLASS ROOM NORTH SIDE, Mallavollu",
+    "locality": "MUTRASUPALEM H/O MALLAVOLU",
+    "mandal": "GUDUR",
+    "lat": 16.175579,
+    "lng": 81.053493,
+    "is_urban": false,
+    "electorate": 1051,
+    "total_votes": 839,
+    "turnout_pct": 79.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 176,
+    "margin_pct": 21.0,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 429,
+      "TDP": 253,
+      "OTH": 157
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 429,
+      "Kagitha Krishnaprasad (TDP)": 253,
+      "Others / NOTA": 157
+    }
+  },
+  {
+    "booth_no": 25,
+    "name": "M P P S, R N AGRAHARAM",
+    "building": "M P P S, R N AGRAHARAM",
+    "locality": "MALLAVOLU",
+    "mandal": "GUDUR",
+    "lat": 16.169636,
+    "lng": 81.044184,
+    "is_urban": false,
+    "electorate": 166,
+    "total_votes": 150,
+    "turnout_pct": 80.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 30,
+    "margin_pct": 20.0,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 76,
+      "TDP": 46,
+      "OTH": 28
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 76,
+      "Kagitha Krishnaprasad (TDP)": 46,
+      "Others / NOTA": 28
+    }
+  },
+  {
+    "booth_no": 26,
+    "name": "M P P S, MUTRASIPALEM",
+    "building": "M P P S, MUTRASIPALEM",
+    "locality": "RAMARAJU PALEM",
+    "mandal": "GUDUR",
+    "lat": 16.192053,
+    "lng": 81.080745,
+    "is_urban": false,
+    "electorate": 753,
+    "total_votes": 607,
+    "turnout_pct": 80.6,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 28,
+    "margin_pct": 4.6,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 224,
+      "TDP": 252,
+      "OTH": 131
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 224,
+      "Kagitha Krishnaprasad (TDP)": 252,
+      "Others / NOTA": 131
+    }
+  },
+  {
+    "booth_no": 27,
+    "name": "M.P.P. SCHOOL 5th class Room, MUTRASIPALEM",
+    "building": "M.P.P. SCHOOL 5th class Room, MUTRASIPALEM",
+    "locality": "AKUMARRU",
+    "mandal": "GUDUR",
+    "lat": 16.187906,
+    "lng": 81.076416,
+    "is_urban": false,
+    "electorate": 423,
+    "total_votes": 364,
+    "turnout_pct": 86.0,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 14,
+    "margin_pct": 3.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 136,
+      "TDP": 150,
+      "OTH": 78
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 136,
+      "Kagitha Krishnaprasad (TDP)": 150,
+      "Others / NOTA": 78
+    }
+  },
+  {
+    "booth_no": 28,
+    "name": "Z P H S BLOCK 1 BHAVANAM 6 TH CLASS SOUTH SIDE ROOM, MALI-AVOLU",
+    "building": "Z P H S BLOCK 1 BHAVANAM 6 TH CLASS SOUTH SIDE ROOM, MALI-AVOLU",
+    "locality": "CHITTIGUDURU",
+    "mandal": "GUDUR",
+    "lat": 16.212825,
+    "lng": 81.06583,
+    "is_urban": false,
+    "electorate": 580,
+    "total_votes": 487,
+    "turnout_pct": 83.9,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 18,
+    "margin_pct": 3.7,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 182,
+      "TDP": 200,
+      "OTH": 105
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 182,
+      "Kagitha Krishnaprasad (TDP)": 200,
+      "Others / NOTA": 105
+    }
+  },
+  {
+    "booth_no": 29,
+    "name": "M P P S WEST SIDE, RAMARAJUPALEM",
+    "building": "M P P S WEST SIDE, RAMARAJUPALEM",
+    "locality": "Guduru",
+    "mandal": "GUDUR",
+    "lat": 16.217202,
+    "lng": 81.084827,
+    "is_urban": false,
+    "electorate": 1122,
+    "total_votes": 924,
+    "turnout_pct": 82.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 123,
+    "margin_pct": 13.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 433,
+      "TDP": 310,
+      "OTH": 181
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 433,
+      "Kagitha Krishnaprasad (TDP)": 310,
+      "Others / NOTA": 181
+    }
+  },
+  {
+    "booth_no": 30,
+    "name": "Z.P.H SCHOOL Sarva Siksha Abhiyan Building, AKUMARRU",
+    "building": "Z.P.H SCHOOL Sarva Siksha Abhiyan Building, AKUMARRU",
+    "locality": "Guduru",
+    "mandal": "GUDUR",
+    "lat": 16.217202,
+    "lng": 81.084827,
+    "is_urban": false,
+    "electorate": 500,
+    "total_votes": 395,
+    "turnout_pct": 79.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 88,
+    "margin_pct": 22.3,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 205,
+      "TDP": 117,
+      "OTH": 73
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 205,
+      "Kagitha Krishnaprasad (TDP)": 117,
+      "Others / NOTA": 73
+    }
+  },
+  {
+    "booth_no": 31,
+    "name": "MP P School, CHIITIGUDURU",
+    "building": "MP P School, CHIITIGUDURU",
+    "locality": "Guduru",
+    "mandal": "GUDUR",
+    "lat": 16.217489,
+    "lng": 81.086145,
+    "is_urban": false,
+    "electorate": 832,
+    "total_votes": 679,
+    "turnout_pct": 81.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 16,
+    "margin_pct": 2.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 277,
+      "TDP": 261,
+      "OTH": 141
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 277,
+      "Kagitha Krishnaprasad (TDP)": 261,
+      "Others / NOTA": 141
+    }
+  },
+  {
+    "booth_no": 32,
+    "name": "ZPHS, 6TH CLASS A SECTION, GUDURU",
+    "building": "ZPHS, 6TH CLASS A SECTION, GUDURU",
+    "locality": "GUDURU",
+    "mandal": "GUDUR",
+    "lat": 16.213266,
+    "lng": 81.079761,
+    "is_urban": false,
+    "electorate": 822,
+    "total_votes": 729,
+    "turnout_pct": 88.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 148,
+    "margin_pct": 20.3,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 370,
+      "TDP": 222,
+      "OTH": 137
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 370,
+      "Kagitha Krishnaprasad (TDP)": 222,
+      "Others / NOTA": 137
+    }
+  },
+  {
+    "booth_no": 33,
+    "name": "Z P H S 10TH CLAAS A SECTION, GUDURU",
+    "building": "Z P H S 10TH CLAAS A SECTION, GUDURU",
+    "locality": "GUDURU",
+    "mandal": "GUDUR",
+    "lat": 16.237344,
+    "lng": 81.062981,
+    "is_urban": false,
+    "electorate": 1055,
+    "total_votes": 817,
+    "turnout_pct": 77.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 70,
+    "margin_pct": 8.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 361,
+      "TDP": 291,
+      "OTH": 165
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 361,
+      "Kagitha Krishnaprasad (TDP)": 291,
+      "Others / NOTA": 165
+    }
+  },
+  {
+    "booth_no": 34,
+    "name": "Grama Panchayat Office, Guduru",
+    "building": "Grama Panchayat Office, Guduru",
+    "locality": "GURIJEPALLI",
+    "mandal": "GUDUR",
+    "lat": 16.259571,
+    "lng": 81.076015,
+    "is_urban": false,
+    "electorate": 1012,
+    "total_votes": 847,
+    "turnout_pct": 83.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 5,
+    "margin_pct": 0.6,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 337,
+      "TDP": 332,
+      "OTH": 178
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 337,
+      "Kagitha Krishnaprasad (TDP)": 332,
+      "Others / NOTA": 178
+    }
+  },
+  {
+    "booth_no": 35,
+    "name": "MP P S, GUDURIJ",
+    "building": "MP P S, GUDURIJ",
+    "locality": "GANDRAM",
+    "mandal": "GUDUR",
+    "lat": 16.28583,
+    "lng": 81.082433,
+    "is_urban": false,
+    "electorate": 1008,
+    "total_votes": 867,
+    "turnout_pct": 86.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 100,
+    "margin_pct": 11.5,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 398,
+      "TDP": 298,
+      "OTH": 171
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 398,
+      "Kagitha Krishnaprasad (TDP)": 298,
+      "Others / NOTA": 171
+    }
+  },
+  {
+    "booth_no": 36,
+    "name": "Z P H S 9TH Class B Section, GUDURU",
+    "building": "Z P H S 9TH Class B Section, GUDURU",
+    "locality": "SHA ABDULLA PALEM",
+    "mandal": "GUDUR",
+    "lat": 16.268144,
+    "lng": 81.079203,
+    "is_urban": false,
+    "electorate": 792,
+    "total_votes": 687,
+    "turnout_pct": 86.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 77,
+    "margin_pct": 11.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 314,
+      "TDP": 237,
+      "OTH": 136
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 314,
+      "Kagitha Krishnaprasad (TDP)": 237,
+      "Others / NOTA": 136
+    }
+  },
+  {
+    "booth_no": 37,
+    "name": "ANGANAWADI CENTRE, TUMMALAPALEM",
+    "building": "ANGANAWADI CENTRE, TUMMALAPALEM",
+    "locality": "LELLA GARUVU",
+    "mandal": "GUDUR",
+    "lat": 16.278814,
+    "lng": 81.096429,
+    "is_urban": false,
+    "electorate": 666,
+    "total_votes": 526,
+    "turnout_pct": 78.9,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 10,
+    "margin_pct": 1.9,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 202,
+      "TDP": 212,
+      "OTH": 112
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 202,
+      "Kagitha Krishnaprasad (TDP)": 212,
+      "Others / NOTA": 112
+    }
+  },
+  {
+    "booth_no": 38,
+    "name": "M P P S, GURIJEPALLI",
+    "building": "M P P S, GURIJEPALLI",
+    "locality": "RAMANUJA VAARTHALA PALLI",
+    "mandal": "GUDUR",
+    "lat": 16.270308,
+    "lng": 81.107726,
+    "is_urban": false,
+    "electorate": 365,
+    "total_votes": 307,
+    "turnout_pct": 84.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 23,
+    "margin_pct": 7.5,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 134,
+      "TDP": 111,
+      "OTH": 62
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 134,
+      "Kagitha Krishnaprasad (TDP)": 111,
+      "Others / NOTA": 62
+    }
+  },
+  {
+    "booth_no": 39,
+    "name": "M P P S, GANDRAM",
+    "building": "M P P S, GANDRAM",
+    "locality": "Kankataava",
+    "mandal": "GUDUR",
+    "lat": 16.253232,
+    "lng": 81.094977,
+    "is_urban": false,
+    "electorate": 348,
+    "total_votes": 292,
+    "turnout_pct": 83.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 23,
+    "margin_pct": 7.9,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 128,
+      "TDP": 105,
+      "OTH": 59
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 128,
+      "Kagitha Krishnaprasad (TDP)": 105,
+      "Others / NOTA": 59
+    }
+  },
+  {
+    "booth_no": 40,
+    "name": "M P P URDU SCHOOL, SHA ABDULLAPALEM",
+    "building": "M P P URDU SCHOOL, SHA ABDULLAPALEM",
+    "locality": "KANKATAVA",
+    "mandal": "GUDUR",
+    "lat": 16.253232,
+    "lng": 81.094977,
+    "is_urban": false,
+    "electorate": 270,
+    "total_votes": 222,
+    "turnout_pct": 82.4,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 5,
+    "margin_pct": 2.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 85,
+      "TDP": 90,
+      "OTH": 47
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 85,
+      "Kagitha Krishnaprasad (TDP)": 90,
+      "Others / NOTA": 47
+    }
+  },
+  {
+    "booth_no": 41,
+    "name": "M .P.P .SCHOOL, LELLAGARUVU",
+    "building": "M .P.P .SCHOOL, LELLAGARUVU",
+    "locality": "Kappala Doddi",
+    "mandal": "GUDUR",
+    "lat": 16.250351,
+    "lng": 81.121082,
+    "is_urban": false,
+    "electorate": 654,
+    "total_votes": 532,
+    "turnout_pct": 81.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 72,
+    "margin_pct": 13.5,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 250,
+      "TDP": 178,
+      "OTH": 104
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 250,
+      "Kagitha Krishnaprasad (TDP)": 178,
+      "Others / NOTA": 104
+    }
+  },
+  {
+    "booth_no": 42,
+    "name": "M P U P, RAMANUJA VARTHARLPALLI",
+    "building": "M P U P, RAMANUJA VARTHARLPALLI",
+    "locality": "KAPPALADODDI",
+    "mandal": "GUDUR",
+    "lat": 16.250351,
+    "lng": 81.121082,
+    "is_urban": false,
+    "electorate": 595,
+    "total_votes": 504,
+    "turnout_pct": 84.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 81,
+    "margin_pct": 16.1,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 244,
+      "TDP": 163,
+      "OTH": 97
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 244,
+      "Kagitha Krishnaprasad (TDP)": 163,
+      "Others / NOTA": 97
+    }
+  },
+  {
+    "booth_no": 43,
+    "name": "Z P H S 10TH CLASS ROOM EAST SIDE, KANKATAVA",
+    "building": "Z P H S 10TH CLASS ROOM EAST SIDE, KANKATAVA",
+    "locality": "AKULAMANNADU",
+    "mandal": "GUDUR",
+    "lat": 16.243382,
+    "lng": 81.123299,
+    "is_urban": false,
+    "electorate": 924,
+    "total_votes": 735,
+    "turnout_pct": 79.6,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 137,
+    "margin_pct": 18.6,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 214,
+      "TDP": 351,
+      "OTH": 170
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 214,
+      "Kagitha Krishnaprasad (TDP)": 351,
+      "Others / NOTA": 170
+    }
+  },
+  {
+    "booth_no": 44,
+    "name": "Z P H S 8TH CLASS ROOM WEST SIDE, KANKATAVA",
+    "building": "Z P H S 8TH CLASS ROOM WEST SIDE, KANKATAVA",
+    "locality": "AKULAMANNADU",
+    "mandal": "GUDUR",
+    "lat": 16.241103,
+    "lng": 81.120097,
+    "is_urban": false,
+    "electorate": 701,
+    "total_votes": 553,
+    "turnout_pct": 78.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 107,
+    "margin_pct": 19.3,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 278,
+      "TDP": 171,
+      "OTH": 104
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 278,
+      "Kagitha Krishnaprasad (TDP)": 171,
+      "Others / NOTA": 104
+    }
+  },
+  {
+    "booth_no": 45,
+    "name": "Z P H SCHOOL NEW BUILDING 10TH CLASS A SECTION, KAPPALADODDI",
+    "building": "Z P H SCHOOL NEW BUILDING 10TH CLASS A SECTION, KAPPALADODDI",
+    "locality": "AKULAMANNADU",
+    "mandal": "GUDUR",
+    "lat": 16.240751,
+    "lng": 81.1305,
+    "is_urban": false,
+    "electorate": 583,
+    "total_votes": 486,
+    "turnout_pct": 83.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 40,
+    "margin_pct": 8.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 214,
+      "TDP": 174,
+      "OTH": 98
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 214,
+      "Kagitha Krishnaprasad (TDP)": 174,
+      "Others / NOTA": 98
+    }
+  },
+  {
+    "booth_no": 46,
+    "name": "ZPH SCHOOL NEW BUILDING. 9th class English Medium, Kappaladoddi",
+    "building": "ZPH SCHOOL NEW BUILDING. 9th class English Medium, Kappaladoddi",
+    "locality": "GANTALAMMAPALEM",
+    "mandal": "GUDUR",
+    "lat": 16.242565,
+    "lng": 81.106574,
+    "is_urban": false,
+    "electorate": 793,
+    "total_votes": 631,
+    "turnout_pct": 79.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 110,
+    "margin_pct": 17.4,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 310,
+      "TDP": 200,
+      "OTH": 121
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 310,
+      "Kagitha Krishnaprasad (TDP)": 200,
+      "Others / NOTA": 121
+    }
+  },
+  {
+    "booth_no": 47,
+    "name": "Z P H SCHOOL NEW BUILDING 9TH CLASS B SECTION, KAPPALADODDI",
+    "building": "Z P H SCHOOL NEW BUILDING 9TH CLASS B SECTION, KAPPALADODDI",
+    "locality": "Akulamannadu",
+    "mandal": "GUDUR",
+    "lat": 16.240666,
+    "lng": 81.105711,
+    "is_urban": false,
+    "electorate": 1073,
+    "total_votes": 864,
+    "turnout_pct": 80.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 7,
+    "margin_pct": 0.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 345,
+      "TDP": 338,
+      "OTH": 181
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 345,
+      "Kagitha Krishnaprasad (TDP)": 338,
+      "Others / NOTA": 181
+    }
+  },
+  {
+    "booth_no": 48,
+    "name": "M P U P School, POSINAVARI PALEM",
+    "building": "M P U P School, POSINAVARI PALEM",
+    "locality": "AKULAMANNADU",
+    "mandal": "GUDUR",
+    "lat": 16.240666,
+    "lng": 81.105711,
+    "is_urban": false,
+    "electorate": 527,
+    "total_votes": 443,
+    "turnout_pct": 84.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 43,
+    "margin_pct": 9.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 199,
+      "TDP": 156,
+      "OTH": 88
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 199,
+      "Kagitha Krishnaprasad (TDP)": 156,
+      "Others / NOTA": 88
+    }
+  },
+  {
+    "booth_no": 49,
+    "name": "Anganawadi Pre Primary School, I.C.D.S Project- Bandar-Surdaipeta-Code-137,AKKULAMANNADlJ",
+    "building": "Anganawadi Pre Primary School, I.C.D.S Project- Bandar-Surdaipeta-Code-137,AKKULAMANNADlJ",
+    "locality": "NARIKEDALAPALEM",
+    "mandal": "GUDUR",
+    "lat": 16.232792,
+    "lng": 81.095861,
+    "is_urban": false,
+    "electorate": 374,
+    "total_votes": 319,
+    "turnout_pct": 85.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 7,
+    "margin_pct": 2.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 130,
+      "TDP": 123,
+      "OTH": 66
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 130,
+      "Kagitha Krishnaprasad (TDP)": 123,
+      "Others / NOTA": 66
+    }
+  },
+  {
+    "booth_no": 50,
+    "name": "M P P SCHOOL, PINDIVARIPALEM",
+    "building": "M P P SCHOOL, PINDIVARIPALEM",
+    "locality": "KOKANARAYANA PALEM",
+    "mandal": "GUDUR",
+    "lat": 16.215311,
+    "lng": 81.09933,
+    "is_urban": false,
+    "electorate": 1103,
+    "total_votes": 855,
+    "turnout_pct": 77.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 97,
+    "margin_pct": 11.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 391,
+      "TDP": 294,
+      "OTH": 170
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 391,
+      "Kagitha Krishnaprasad (TDP)": 294,
+      "Others / NOTA": 170
+    }
+  },
+  {
+    "booth_no": 51,
+    "name": "M .P .P .SCHOOL, GANTALAMMAPALEM",
+    "building": "M .P .P .SCHOOL, GANTALAMMAPALEM",
+    "locality": "ANANTAYIPETA H/O KOKANARAYANAPALEM",
+    "mandal": "GUDUR",
+    "lat": 16.223067,
+    "lng": 81.105897,
+    "is_urban": false,
+    "electorate": 343,
+    "total_votes": 287,
+    "turnout_pct": 83.7,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 11,
+    "margin_pct": 3.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 107,
+      "TDP": 118,
+      "OTH": 62
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 107,
+      "Kagitha Krishnaprasad (TDP)": 118,
+      "Others / NOTA": 62
+    }
+  },
+  {
+    "booth_no": 52,
+    "name": "M P P SCHOOL 1st CLASS ROOM, AKULAMANNADU",
+    "building": "M P P SCHOOL 1st CLASS ROOM, AKULAMANNADU",
+    "locality": "CHENNURU",
+    "mandal": "GUDUR",
+    "lat": 16.365833,
+    "lng": 81.145687,
+    "is_urban": false,
+    "electorate": 875,
+    "total_votes": 756,
+    "turnout_pct": 86.4,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 66,
+    "margin_pct": 8.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 262,
+      "TDP": 328,
+      "OTH": 166
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 262,
+      "Kagitha Krishnaprasad (TDP)": 328,
+      "Others / NOTA": 166
+    }
+  },
+  {
+    "booth_no": 53,
+    "name": "M .P.P SCHOOL 4th CLASS ROOM, AKULAMANNADU",
+    "building": "M .P.P SCHOOL 4th CLASS ROOM, AKULAMANNADU",
+    "locality": "CHENNURU",
+    "mandal": "GUDUR",
+    "lat": 16.365833,
+    "lng": 81.145687,
+    "is_urban": false,
+    "electorate": 765,
+    "total_votes": 635,
+    "turnout_pct": 83.0,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 10,
+    "margin_pct": 1.6,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 245,
+      "TDP": 255,
+      "OTH": 135
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 245,
+      "Kagitha Krishnaprasad (TDP)": 255,
+      "Others / NOTA": 135
+    }
+  },
+  {
+    "booth_no": 54,
+    "name": "M P P SCHOOL, NARIKEDALAPALEM",
+    "building": "M P P SCHOOL, NARIKEDALAPALEM",
+    "locality": "CHENNURU",
+    "mandal": "GUDUR",
+    "lat": 16.365833,
+    "lng": 81.145687,
+    "is_urban": false,
+    "electorate": 568,
+    "total_votes": 459,
+    "turnout_pct": 80.9,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 1,
+    "margin_pct": 0.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 181,
+      "TDP": 182,
+      "OTH": 96
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 181,
+      "Kagitha Krishnaprasad (TDP)": 182,
+      "Others / NOTA": 96
+    }
+  },
+  {
+    "booth_no": 55,
+    "name": "RBK Center\u201e Kokanarayanapalem",
+    "building": "RBK Center\u201e Kokanarayanapalem",
+    "locality": "Urivi",
+    "mandal": "GUDUR",
+    "lat": 16.37292,
+    "lng": 81.184235,
+    "is_urban": false,
+    "electorate": 739,
+    "total_votes": 611,
+    "turnout_pct": 82.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 41,
+    "margin_pct": 6.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 264,
+      "TDP": 223,
+      "OTH": 124
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 264,
+      "Kagitha Krishnaprasad (TDP)": 223,
+      "Others / NOTA": 124
+    }
+  },
+  {
+    "booth_no": 56,
+    "name": "M P P SCHOOL\u201e POTTELUGUNTAPETA",
+    "building": "M P P SCHOOL\u201e POTTELUGUNTAPETA",
+    "locality": "URIVI",
+    "mandal": "GUDUR",
+    "lat": 16.37292,
+    "lng": 81.184235,
+    "is_urban": false,
+    "electorate": 442,
+    "total_votes": 380,
+    "turnout_pct": 85.9,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 18,
+    "margin_pct": 4.7,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 160,
+      "TDP": 142,
+      "OTH": 78
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 160,
+      "Kagitha Krishnaprasad (TDP)": 142,
+      "Others / NOTA": 78
+    }
+  },
+  {
+    "booth_no": 57,
+    "name": "Z P H SCHOOL 10TH CLAAS ROOM CHENNURU",
+    "building": "Z P H SCHOOL 10TH CLAAS ROOM CHENNURU",
+    "locality": "LANKALAKALAVAGUNTA",
+    "mandal": "PEDANA",
+    "lat": 16.348487,
+    "lng": 81.176711,
+    "is_urban": false,
+    "electorate": 501,
+    "total_votes": 401,
+    "turnout_pct": 80.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 30,
+    "margin_pct": 7.5,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 175,
+      "TDP": 145,
+      "OTH": 81
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 175,
+      "Kagitha Krishnaprasad (TDP)": 145,
+      "Others / NOTA": 81
+    }
+  },
+  {
+    "booth_no": 58,
+    "name": "ZPH SCHOOL 9TH CLASS ROOM, CHENNURU",
+    "building": "ZPH SCHOOL 9TH CLASS ROOM, CHENNURU",
+    "locality": "Kamalapuram",
+    "mandal": "PEDANA",
+    "lat": 16.354001,
+    "lng": 81.134834,
+    "is_urban": false,
+    "electorate": 1071,
+    "total_votes": 881,
+    "turnout_pct": 82.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 92,
+    "margin_pct": 10.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 399,
+      "TDP": 307,
+      "OTH": 175
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 399,
+      "Kagitha Krishnaprasad (TDP)": 307,
+      "Others / NOTA": 175
+    }
+  },
+  {
+    "booth_no": 59,
+    "name": "ZPH SCHOOL,New building 7th class room, CHENNURU",
+    "building": "ZPH SCHOOL,New building 7th class room, CHENNURU",
+    "locality": "uppala kalavagunta",
+    "mandal": "PEDANA",
+    "lat": 16.355734,
+    "lng": 81.146194,
+    "is_urban": false,
+    "electorate": 907,
+    "total_votes": 717,
+    "turnout_pct": 79.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 9,
+    "margin_pct": 1.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 288,
+      "TDP": 279,
+      "OTH": 150
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 288,
+      "Kagitha Krishnaprasad (TDP)": 279,
+      "Others / NOTA": 150
+    }
+  },
+  {
+    "booth_no": 60,
+    "name": "M P U P S OLD BLDG, URIVI",
+    "building": "M P U P S OLD BLDG, URIVI",
+    "locality": "chevendra",
+    "mandal": "PEDANA",
+    "lat": 16.339395,
+    "lng": 81.126713,
+    "is_urban": false,
+    "electorate": 624,
+    "total_votes": 528,
+    "turnout_pct": 84.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 82,
+    "margin_pct": 15.5,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 254,
+      "TDP": 172,
+      "OTH": 102
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 254,
+      "Kagitha Krishnaprasad (TDP)": 172,
+      "Others / NOTA": 102
+    }
+  },
+  {
+    "booth_no": 61,
+    "name": "M P U P S NEW BLDG, URIVI",
+    "building": "M P U P S NEW BLDG, URIVI",
+    "locality": "CHEVENDRA",
+    "mandal": "PEDANA",
+    "lat": 16.339435,
+    "lng": 81.126753,
+    "is_urban": false,
+    "electorate": 559,
+    "total_votes": 456,
+    "turnout_pct": 81.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 1,
+    "margin_pct": 0.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 181,
+      "TDP": 180,
+      "OTH": 95
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 181,
+      "Kagitha Krishnaprasad (TDP)": 180,
+      "Others / NOTA": 95
+    }
+  },
+  {
+    "booth_no": 62,
+    "name": "M P P S NORTH SIDE, LANKALAVALAGUNTA",
+    "building": "M P P S NORTH SIDE, LANKALAVALAGUNTA",
+    "locality": "KOPPALLI",
+    "mandal": "PEDANA",
+    "lat": 16.34515,
+    "lng": 81.142693,
+    "is_urban": false,
+    "electorate": 731,
+    "total_votes": 644,
+    "turnout_pct": 88.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 19,
+    "margin_pct": 3.0,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 265,
+      "TDP": 246,
+      "OTH": 133
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 265,
+      "Kagitha Krishnaprasad (TDP)": 246,
+      "Others / NOTA": 133
+    }
+  },
+  {
+    "booth_no": 63,
+    "name": "M P P SCHOOL, KAMALAPURAM",
+    "building": "M P P SCHOOL, KAMALAPURAM",
+    "locality": "MUTCHARLA",
+    "mandal": "PEDANA",
+    "lat": 16.337547,
+    "lng": 81.157306,
+    "is_urban": false,
+    "electorate": 477,
+    "total_votes": 411,
+    "turnout_pct": 86.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 17,
+    "margin_pct": 4.1,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 172,
+      "TDP": 155,
+      "OTH": 84
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 172,
+      "Kagitha Krishnaprasad (TDP)": 155,
+      "Others / NOTA": 84
+    }
+  },
+  {
+    "booth_no": 64,
+    "name": "M P P SCHOOL, UPPALAKALAVAGUNTA",
+    "building": "M P P SCHOOL, UPPALAKALAVAGUNTA",
+    "locality": "MUCHILIGUNTA",
+    "mandal": "PEDANA",
+    "lat": 16.332382,
+    "lng": 81.142924,
+    "is_urban": false,
+    "electorate": 806,
+    "total_votes": 680,
+    "turnout_pct": 84.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 21,
+    "margin_pct": 3.1,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 280,
+      "TDP": 259,
+      "OTH": 141
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 280,
+      "Kagitha Krishnaprasad (TDP)": 259,
+      "Others / NOTA": 141
+    }
+  },
+  {
+    "booth_no": 65,
+    "name": "M.P.P SCHOOL NORTH SIDE 1ST CLASS ROOM, CHEVENDRA",
+    "building": "M.P.P SCHOOL NORTH SIDE 1ST CLASS ROOM, CHEVENDRA",
+    "locality": "GURIVINDAGUNATA",
+    "mandal": "PEDANA",
+    "lat": 16.324092,
+    "lng": 81.123269,
+    "is_urban": false,
+    "electorate": 924,
+    "total_votes": 779,
+    "turnout_pct": 84.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 75,
+    "margin_pct": 9.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 349,
+      "TDP": 274,
+      "OTH": 156
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 349,
+      "Kagitha Krishnaprasad (TDP)": 274,
+      "Others / NOTA": 156
+    }
+  },
+  {
+    "booth_no": 66,
+    "name": "M.P.P SCHOOL NORTH SIDE 2ND CLASS ROOM, CHEVENDRA",
+    "building": "M.P.P SCHOOL NORTH SIDE 2ND CLASS ROOM, CHEVENDRA",
+    "locality": "kavipuram",
+    "mandal": "PEDANA",
+    "lat": 16.318388,
+    "lng": 81.133024,
+    "is_urban": false,
+    "electorate": 830,
+    "total_votes": 678,
+    "turnout_pct": 81.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 132,
+    "margin_pct": 19.5,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 341,
+      "TDP": 209,
+      "OTH": 128
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 341,
+      "Kagitha Krishnaprasad (TDP)": 209,
+      "Others / NOTA": 128
+    }
+  },
+  {
+    "booth_no": 67,
+    "name": "GRAMA PANCHAYATI OFFICE\u201e KOPPALLI",
+    "building": "GRAMA PANCHAYATI OFFICE\u201e KOPPALLI",
+    "locality": "KONGAMCHARLA",
+    "mandal": "PEDANA",
+    "lat": 16.328841,
+    "lng": 81.112193,
+    "is_urban": false,
+    "electorate": 266,
+    "total_votes": 219,
+    "turnout_pct": 82.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 7,
+    "margin_pct": 3.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 90,
+      "TDP": 83,
+      "OTH": 46
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 90,
+      "Kagitha Krishnaprasad (TDP)": 83,
+      "Others / NOTA": 46
+    }
+  },
+  {
+    "booth_no": 68,
+    "name": "M P P SCHOOL, MUTCHERLA",
+    "building": "M P P SCHOOL, MUTCHERLA",
+    "locality": "kummarigunta",
+    "mandal": "PEDANA",
+    "lat": 16.329186,
+    "lng": 81.114854,
+    "is_urban": false,
+    "electorate": 332,
+    "total_votes": 275,
+    "turnout_pct": 82.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 33,
+    "margin_pct": 12.0,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 127,
+      "TDP": 94,
+      "OTH": 54
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 127,
+      "Kagitha Krishnaprasad (TDP)": 94,
+      "Others / NOTA": 54
+    }
+  },
+  {
+    "booth_no": 69,
+    "name": "COMMUNITY HALL, MUTCHILIGUNTA",
+    "building": "COMMUNITY HALL, MUTCHILIGUNTA",
+    "locality": "SERIVARTHALA PALLI",
+    "mandal": "PEDANA",
+    "lat": 16.315223,
+    "lng": 81.159322,
+    "is_urban": false,
+    "electorate": 341,
+    "total_votes": 290,
+    "turnout_pct": 85.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 13,
+    "margin_pct": 4.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 122,
+      "TDP": 109,
+      "OTH": 59
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 122,
+      "Kagitha Krishnaprasad (TDP)": 109,
+      "Others / NOTA": 59
+    }
+  },
+  {
+    "booth_no": 70,
+    "name": "M P P SCHOOL, GURIVINDAGUNTA",
+    "building": "M P P SCHOOL, GURIVINDAGUNTA",
+    "locality": "dirisavalli",
+    "mandal": "PEDANA",
+    "lat": 16.31178,
+    "lng": 81.146937,
+    "is_urban": false,
+    "electorate": 239,
+    "total_votes": 203,
+    "turnout_pct": 84.8,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 15,
+    "margin_pct": 7.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 72,
+      "TDP": 87,
+      "OTH": 44
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 72,
+      "Kagitha Krishnaprasad (TDP)": 87,
+      "Others / NOTA": 44
+    }
+  },
+  {
+    "booth_no": 71,
+    "name": "M P P SCHOOL\u201e KAVIPURAM",
+    "building": "M P P SCHOOL\u201e KAVIPURAM",
+    "locality": "PENUMALLI",
+    "mandal": "PEDANA",
+    "lat": 16.318205,
+    "lng": 81.16652,
+    "is_urban": false,
+    "electorate": 316,
+    "total_votes": 250,
+    "turnout_pct": 79.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 19,
+    "margin_pct": 7.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 109,
+      "TDP": 90,
+      "OTH": 51
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 109,
+      "Kagitha Krishnaprasad (TDP)": 90,
+      "Others / NOTA": 51
+    }
+  },
+  {
+    "booth_no": 72,
+    "name": "M P U P SCHOOL, KONGAMCHARLA",
+    "building": "M P U P SCHOOL, KONGAMCHARLA",
+    "locality": "nelakondapalli",
+    "mandal": "PEDANA",
+    "lat": 16.320058,
+    "lng": 81.169429,
+    "is_urban": false,
+    "electorate": 282,
+    "total_votes": 226,
+    "turnout_pct": 80.0,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 15,
+    "margin_pct": 6.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 81,
+      "TDP": 96,
+      "OTH": 49
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 81,
+      "Kagitha Krishnaprasad (TDP)": 96,
+      "Others / NOTA": 49
+    }
+  },
+  {
+    "booth_no": 73,
+    "name": "MP P SCHOOL KUMMARIGUNTA",
+    "building": "MP P SCHOOL KUMMARIGUNTA",
+    "locality": "CHODAVARAM",
+    "mandal": "PEDANA",
+    "lat": 16.320633,
+    "lng": 81.181766,
+    "is_urban": false,
+    "electorate": 161,
+    "total_votes": 150,
+    "turnout_pct": 80.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 12,
+    "margin_pct": 8.0,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 66,
+      "TDP": 54,
+      "OTH": 30
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 66,
+      "Kagitha Krishnaprasad (TDP)": 54,
+      "Others / NOTA": 30
+    }
+  },
+  {
+    "booth_no": 74,
+    "name": "R.C.M SCHOOL, SERIVARTARLAPALLI",
+    "building": "R.C.M SCHOOL, SERIVARTARLAPALLI",
+    "locality": "PULLAPAADU",
+    "mandal": "PEDANA",
+    "lat": 16.312339,
+    "lng": 81.1833,
+    "is_urban": false,
+    "electorate": 280,
+    "total_votes": 219,
+    "turnout_pct": 78.1,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 19,
+    "margin_pct": 8.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 76,
+      "TDP": 95,
+      "OTH": 48
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 76,
+      "Kagitha Krishnaprasad (TDP)": 95,
+      "Others / NOTA": 48
+    }
+  },
+  {
+    "booth_no": 75,
+    "name": "ANGANWADI PRE PRIMARY SCHOOL I C D S PROJECT, DIRISIVALLI",
+    "building": "ANGANWADI PRE PRIMARY SCHOOL I C D S PROJECT, DIRISIVALLI",
+    "locality": "devarapalli",
+    "mandal": "PEDANA",
+    "lat": 16.305684,
+    "lng": 81.19791,
+    "is_urban": false,
+    "electorate": 156,
+    "total_votes": 150,
+    "turnout_pct": 88.9,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 2,
+    "margin_pct": 1.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 58,
+      "TDP": 60,
+      "OTH": 32
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 58,
+      "Kagitha Krishnaprasad (TDP)": 60,
+      "Others / NOTA": 32
+    }
+  },
+  {
+    "booth_no": 76,
+    "name": "ZPH SCHOOL, PENUMALLI",
+    "building": "ZPH SCHOOL, PENUMALLI",
+    "locality": "Nandamuru",
+    "mandal": "PEDANA",
+    "lat": 16.287641,
+    "lng": 81.198278,
+    "is_urban": false,
+    "electorate": 628,
+    "total_votes": 511,
+    "turnout_pct": 81.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 4,
+    "margin_pct": 0.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 204,
+      "TDP": 200,
+      "OTH": 107
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 204,
+      "Kagitha Krishnaprasad (TDP)": 200,
+      "Others / NOTA": 107
+    }
+  },
+  {
+    "booth_no": 77,
+    "name": "M P P SCHOOL, NELAKONDAPALLI",
+    "building": "M P P SCHOOL, NELAKONDAPALLI",
+    "locality": "NANDAMURU",
+    "mandal": "PEDANA",
+    "lat": 16.287641,
+    "lng": 81.198278,
+    "is_urban": false,
+    "electorate": 407,
+    "total_votes": 335,
+    "turnout_pct": 82.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 8,
+    "margin_pct": 2.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 137,
+      "TDP": 129,
+      "OTH": 69
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 137,
+      "Kagitha Krishnaprasad (TDP)": 129,
+      "Others / NOTA": 69
+    }
+  },
+  {
+    "booth_no": 78,
+    "name": "M P P SCHOOL, CHODAVARAM",
+    "building": "M P P SCHOOL, CHODAVARAM",
+    "locality": "kotavanipalem",
+    "mandal": "PEDANA",
+    "lat": 16.264847,
+    "lng": 81.213173,
+    "is_urban": false,
+    "electorate": 676,
+    "total_votes": 545,
+    "turnout_pct": 80.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 72,
+    "margin_pct": 13.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 255,
+      "TDP": 183,
+      "OTH": 107
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 255,
+      "Kagitha Krishnaprasad (TDP)": 183,
+      "Others / NOTA": 107
+    }
+  },
+  {
+    "booth_no": 79,
+    "name": "M P P SCHOOL, Pullapadu",
+    "building": "M P P SCHOOL, Pullapadu",
+    "locality": "MADAKA",
+    "mandal": "PEDANA",
+    "lat": 16.280466,
+    "lng": 81.193015,
+    "is_urban": false,
+    "electorate": 820,
+    "total_votes": 674,
+    "turnout_pct": 82.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 145,
+    "margin_pct": 21.5,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 347,
+      "TDP": 202,
+      "OTH": 125
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 347,
+      "Kagitha Krishnaprasad (TDP)": 202,
+      "Others / NOTA": 125
+    }
+  },
+  {
+    "booth_no": 80,
+    "name": "M P P SCHOOL, DEVARAPALLI",
+    "building": "M P P SCHOOL, DEVARAPALLI",
+    "locality": "BALIPARRU",
+    "mandal": "PEDANA",
+    "lat": 16.276073,
+    "lng": 81.18362,
+    "is_urban": false,
+    "electorate": 329,
+    "total_votes": 266,
+    "turnout_pct": 80.9,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 14,
+    "margin_pct": 5.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 113,
+      "TDP": 99,
+      "OTH": 54
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 113,
+      "Kagitha Krishnaprasad (TDP)": 99,
+      "Others / NOTA": 54
+    }
+  },
+  {
+    "booth_no": 81,
+    "name": "ZPH SCHOOL NANDAMURU",
+    "building": "ZPH SCHOOL NANDAMURU",
+    "locality": "KAKARLAMUDI",
+    "mandal": "PEDANA",
+    "lat": 16.257339,
+    "lng": 81.197019,
+    "is_urban": false,
+    "electorate": 827,
+    "total_votes": 632,
+    "turnout_pct": 76.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 125,
+    "margin_pct": 19.8,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 319,
+      "TDP": 194,
+      "OTH": 119
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 319,
+      "Kagitha Krishnaprasad (TDP)": 194,
+      "Others / NOTA": 119
+    }
+  },
+  {
+    "booth_no": 82,
+    "name": "M.P.P. SCHOOL\u201e PEDANANDAMURU",
+    "building": "M.P.P. SCHOOL\u201e PEDANANDAMURU",
+    "locality": "kakarlamudi",
+    "mandal": "PEDANA",
+    "lat": 16.257339,
+    "lng": 81.197019,
+    "is_urban": false,
+    "electorate": 915,
+    "total_votes": 753,
+    "turnout_pct": 82.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 32,
+    "margin_pct": 4.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 315,
+      "TDP": 283,
+      "OTH": 155
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 315,
+      "Kagitha Krishnaprasad (TDP)": 283,
+      "Others / NOTA": 155
+    }
+  },
+  {
+    "booth_no": 83,
+    "name": "M P P SCHOOL, KOTAVANIPALEM",
+    "building": "M P P SCHOOL, KOTAVANIPALEM",
+    "locality": "singarayapalem",
+    "mandal": "PEDANA",
+    "lat": 16.270966,
+    "lng": 81.173206,
+    "is_urban": false,
+    "electorate": 525,
+    "total_votes": 455,
+    "turnout_pct": 86.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 6,
+    "margin_pct": 1.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 183,
+      "TDP": 177,
+      "OTH": 95
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 183,
+      "Kagitha Krishnaprasad (TDP)": 177,
+      "Others / NOTA": 95
+    }
+  },
+  {
+    "booth_no": 84,
+    "name": "M P P SCHOOL, MADAKA",
+    "building": "M P P SCHOOL, MADAKA",
+    "locality": "Jinjeru",
+    "mandal": "PEDANA",
+    "lat": 16.291419,
+    "lng": 81.223928,
+    "is_urban": false,
+    "electorate": 1061,
+    "total_votes": 869,
+    "turnout_pct": 81.9,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 166,
+    "margin_pct": 19.1,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 435,
+      "TDP": 269,
+      "OTH": 165
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 435,
+      "Kagitha Krishnaprasad (TDP)": 269,
+      "Others / NOTA": 165
+    }
+  },
+  {
+    "booth_no": 85,
+    "name": "M P U P SCHOOL SOUTH SIDE, BALIPARRU",
+    "building": "M P U P SCHOOL SOUTH SIDE, BALIPARRU",
+    "locality": "JINJERU",
+    "mandal": "PEDANA",
+    "lat": 16.291132,
+    "lng": 81.226225,
+    "is_urban": false,
+    "electorate": 782,
+    "total_votes": 689,
+    "turnout_pct": 88.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 2,
+    "margin_pct": 0.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 273,
+      "TDP": 271,
+      "OTH": 145
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 273,
+      "Kagitha Krishnaprasad (TDP)": 271,
+      "Others / NOTA": 145
+    }
+  },
+  {
+    "booth_no": 86,
+    "name": "M.P.U.P SCHOOL 1 ST CLASS ROOM, BALLIPARRU",
+    "building": "M.P.U.P SCHOOL 1 ST CLASS ROOM, BALLIPARRU",
+    "locality": "KONKEPUDI",
+    "mandal": "PEDANA",
+    "lat": 16.28082,
+    "lng": 81.144215,
+    "is_urban": false,
+    "electorate": 455,
+    "total_votes": 352,
+    "turnout_pct": 77.3,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 29,
+    "margin_pct": 8.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 123,
+      "TDP": 152,
+      "OTH": 77
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 123,
+      "Kagitha Krishnaprasad (TDP)": 152,
+      "Others / NOTA": 77
+    }
+  },
+  {
+    "booth_no": 87,
+    "name": "M.P.U.P SCHOOL NEW BUILDING 7 TH CLASS ROOM, KAKARLAMUDI",
+    "building": "M.P.U.P SCHOOL NEW BUILDING 7 TH CLASS ROOM, KAKARLAMUDI",
+    "locality": "KONKEPUDI",
+    "mandal": "PEDANA",
+    "lat": 16.28086,
+    "lng": 81.144255,
+    "is_urban": false,
+    "electorate": 732,
+    "total_votes": 598,
+    "turnout_pct": 81.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 41,
+    "margin_pct": 6.9,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 259,
+      "TDP": 218,
+      "OTH": 121
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 259,
+      "Kagitha Krishnaprasad (TDP)": 218,
+      "Others / NOTA": 121
+    }
+  },
+  {
+    "booth_no": 88,
+    "name": "M P U P SCHOOL NEW BUILDING 8 TH CLASS ROOM, KAKARLAMUDI",
+    "building": "M P U P SCHOOL NEW BUILDING 8 TH CLASS ROOM, KAKARLAMUDI",
+    "locality": "eedumudi",
+    "mandal": "PEDANA",
+    "lat": 16.2809,
+    "lng": 81.144295,
+    "is_urban": false,
+    "electorate": 829,
+    "total_votes": 689,
+    "turnout_pct": 83.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 88,
+    "margin_pct": 12.8,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 321,
+      "TDP": 233,
+      "OTH": 135
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 321,
+      "Kagitha Krishnaprasad (TDP)": 233,
+      "Others / NOTA": 135
+    }
+  },
+  {
+    "booth_no": 89,
+    "name": "M P P SCHOOL, SINGARAYAPALEM",
+    "building": "M P P SCHOOL, SINGARAYAPALEM",
+    "locality": "EeDUMUDI",
+    "mandal": "PEDANA",
+    "lat": 16.288725,
+    "lng": 81.163062,
+    "is_urban": false,
+    "electorate": 507,
+    "total_votes": 421,
+    "turnout_pct": 83.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 26,
+    "margin_pct": 6.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 181,
+      "TDP": 155,
+      "OTH": 85
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 181,
+      "Kagitha Krishnaprasad (TDP)": 155,
+      "Others / NOTA": 85
+    }
+  },
+  {
+    "booth_no": 90,
+    "name": "MANDAL PARISHAD UPPER PRIMARY SCHOOL GOWDAPALEM",
+    "building": "MANDAL PARISHAD UPPER PRIMARY SCHOOL GOWDAPALEM",
+    "locality": "KOODURU",
+    "mandal": "PEDANA",
+    "lat": 16.292796,
+    "lng": 81.140573,
+    "is_urban": false,
+    "electorate": 795,
+    "total_votes": 647,
+    "turnout_pct": 81.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 16,
+    "margin_pct": 2.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 264,
+      "TDP": 248,
+      "OTH": 135
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 264,
+      "Kagitha Krishnaprasad (TDP)": 248,
+      "Others / NOTA": 135
+    }
+  },
+  {
+    "booth_no": 91,
+    "name": "M P P SCHOOL, JINJERU",
+    "building": "M P P SCHOOL, JINJERU",
+    "locality": "Nandigama",
+    "mandal": "PEDANA",
+    "lat": 16.301,
+    "lng": 81.150609,
+    "is_urban": false,
+    "electorate": 434,
+    "total_votes": 330,
+    "turnout_pct": 76.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 21,
+    "margin_pct": 6.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 142,
+      "TDP": 121,
+      "OTH": 67
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 142,
+      "Kagitha Krishnaprasad (TDP)": 121,
+      "Others / NOTA": 67
+    }
+  },
+  {
+    "booth_no": 92,
+    "name": "M P P SCHOOL ACCHAYYAVARIPALEM",
+    "building": "M P P SCHOOL ACCHAYYAVARIPALEM",
+    "locality": "NANDIGAMA",
+    "mandal": "PEDANA",
+    "lat": 16.301,
+    "lng": 81.150609,
+    "is_urban": false,
+    "electorate": 260,
+    "total_votes": 210,
+    "turnout_pct": 80.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 2,
+    "margin_pct": 1.0,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 84,
+      "TDP": 82,
+      "OTH": 44
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 84,
+      "Kagitha Krishnaprasad (TDP)": 82,
+      "Others / NOTA": 44
+    }
+  },
+  {
+    "booth_no": 93,
+    "name": "M P U P SCHOOL, KONKEPUDI",
+    "building": "M P U P SCHOOL, KONKEPUDI",
+    "locality": "NADUPURU",
+    "mandal": "PEDANA",
+    "lat": 16.281059,
+    "lng": 81.124457,
+    "is_urban": false,
+    "electorate": 1049,
+    "total_votes": 813,
+    "turnout_pct": 77.5,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 1,
+    "margin_pct": 0.1,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 320,
+      "TDP": 321,
+      "OTH": 172
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 320,
+      "Kagitha Krishnaprasad (TDP)": 321,
+      "Others / NOTA": 172
+    }
+  },
+  {
+    "booth_no": 94,
+    "name": "M P P SCHOOL KONKEPUDI SIVARU, KATI-APALLI",
+    "building": "M P P SCHOOL KONKEPUDI SIVARU, KATI-APALLI",
+    "locality": "PEADANA",
+    "mandal": "PEDANA",
+    "lat": 16.25546,
+    "lng": 81.139928,
+    "is_urban": false,
+    "electorate": 256,
+    "total_votes": 210,
+    "turnout_pct": 81.9,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 13,
+    "margin_pct": 6.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 90,
+      "TDP": 77,
+      "OTH": 43
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 90,
+      "Kagitha Krishnaprasad (TDP)": 77,
+      "Others / NOTA": 43
+    }
+  },
+  {
+    "booth_no": 95,
+    "name": "M P U P SCHOOL NEW BUILDING, EEDUMUDI",
+    "building": "M P U P SCHOOL NEW BUILDING, EEDUMUDI",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.252084,
+    "lng": 81.141175,
+    "is_urban": false,
+    "electorate": 509,
+    "total_votes": 376,
+    "turnout_pct": 73.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 66,
+    "margin_pct": 17.6,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 185,
+      "TDP": 119,
+      "OTH": 72
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 185,
+      "Kagitha Krishnaprasad (TDP)": 119,
+      "Others / NOTA": 72
+    }
+  },
+  {
+    "booth_no": 96,
+    "name": "M P P SCHOOL, KUDURU",
+    "building": "M P P SCHOOL, KUDURU",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.25546,
+    "lng": 81.139928,
+    "is_urban": false,
+    "electorate": 928,
+    "total_votes": 772,
+    "turnout_pct": 83.2,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 21,
+    "margin_pct": 2.7,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 293,
+      "TDP": 314,
+      "OTH": 165
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 293,
+      "Kagitha Krishnaprasad (TDP)": 314,
+      "Others / NOTA": 165
+    }
+  },
+  {
+    "booth_no": 97,
+    "name": "Z P H SCHOOLSOUTH SIDE, NANDIGAMA",
+    "building": "Z P H SCHOOLSOUTH SIDE, NANDIGAMA",
+    "locality": "pedana",
+    "mandal": "PEDANA",
+    "lat": 16.25546,
+    "lng": 81.139928,
+    "is_urban": false,
+    "electorate": 846,
+    "total_votes": 715,
+    "turnout_pct": 84.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 7,
+    "margin_pct": 1.0,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 286,
+      "TDP": 279,
+      "OTH": 150
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 286,
+      "Kagitha Krishnaprasad (TDP)": 279,
+      "Others / NOTA": 150
+    }
+  },
+  {
+    "booth_no": 98,
+    "name": "ZPH SCHOOL, NORTH SIDE ROOM, NANDIGAMA",
+    "building": "ZPH SCHOOL, NORTH SIDE ROOM, NANDIGAMA",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.25546,
+    "lng": 81.139928,
+    "is_urban": false,
+    "electorate": 708,
+    "total_votes": 606,
+    "turnout_pct": 85.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 53,
+    "margin_pct": 8.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 269,
+      "TDP": 216,
+      "OTH": 121
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 269,
+      "Kagitha Krishnaprasad (TDP)": 216,
+      "Others / NOTA": 121
+    }
+  },
+  {
+    "booth_no": 99,
+    "name": "Z.P.H. School, Eastern side 8th Class Room Nandigama",
+    "building": "Z.P.H. School, Eastern side 8th Class Room Nandigama",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.259532,
+    "lng": 81.143828,
+    "is_urban": false,
+    "electorate": 457,
+    "total_votes": 388,
+    "turnout_pct": 84.9,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 34,
+    "margin_pct": 8.8,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 172,
+      "TDP": 138,
+      "OTH": 78
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 172,
+      "Kagitha Krishnaprasad (TDP)": 138,
+      "Others / NOTA": 78
+    }
+  },
+  {
+    "booth_no": 100,
+    "name": "M P P SCHOOL, NADUPURU",
+    "building": "M P P SCHOOL, NADUPURU",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.259532,
+    "lng": 81.143828,
+    "is_urban": false,
+    "electorate": 1009,
+    "total_votes": 848,
+    "turnout_pct": 84.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 47,
+    "margin_pct": 5.5,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 361,
+      "TDP": 314,
+      "OTH": 173
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 361,
+      "Kagitha Krishnaprasad (TDP)": 314,
+      "Others / NOTA": 173
+    }
+  },
+  {
+    "booth_no": 101,
+    "name": "B G KZ P H SCHOOL,WEST SIDE 10TH CLASS ROOM, PEDANA TOWN",
+    "building": "B G KZ P H SCHOOL,WEST SIDE 10TH CLASS ROOM, PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.260162,
+    "lng": 81.147772,
+    "is_urban": false,
+    "electorate": 1009,
+    "total_votes": 784,
+    "turnout_pct": 77.7,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 77,
+    "margin_pct": 9.8,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 267,
+      "TDP": 344,
+      "OTH": 173
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 267,
+      "Kagitha Krishnaprasad (TDP)": 344,
+      "Others / NOTA": 173
+    }
+  },
+  {
+    "booth_no": 102,
+    "name": "M P P SCHOOL,WEST SIDE, BRAHMAPURAM ,PEDANA TOWN",
+    "building": "M P P SCHOOL,WEST SIDE, BRAHMAPURAM ,PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.259227,
+    "lng": 81.148539,
+    "is_urban": false,
+    "electorate": 927,
+    "total_votes": 721,
+    "turnout_pct": 77.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 30,
+    "margin_pct": 4.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 301,
+      "TDP": 271,
+      "OTH": 149
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 301,
+      "Kagitha Krishnaprasad (TDP)": 271,
+      "Others / NOTA": 149
+    }
+  },
+  {
+    "booth_no": 103,
+    "name": "B G KZ P H SCHOOL WEST SIDE MIDDLE ROOM, PEDANA TOWN",
+    "building": "B G KZ P H SCHOOL WEST SIDE MIDDLE ROOM, PEDANA TOWN",
+    "locality": "pedana",
+    "mandal": "PEDANA",
+    "lat": 16.310659,
+    "lng": 81.206757,
+    "is_urban": false,
+    "electorate": 809,
+    "total_votes": 664,
+    "turnout_pct": 82.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 66,
+    "margin_pct": 9.9,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 299,
+      "TDP": 233,
+      "OTH": 132
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 299,
+      "Kagitha Krishnaprasad (TDP)": 233,
+      "Others / NOTA": 132
+    }
+  },
+  {
+    "booth_no": 104,
+    "name": "B G KZ P H SCHOOL,WEST SIDE 10TH CLASS ROOM, PEDANA TOWN",
+    "building": "B G KZ P H SCHOOL,WEST SIDE 10TH CLASS ROOM, PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.260202,
+    "lng": 81.147812,
+    "is_urban": false,
+    "electorate": 717,
+    "total_votes": 634,
+    "turnout_pct": 88.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 91,
+    "margin_pct": 14.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 301,
+      "TDP": 210,
+      "OTH": 123
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 301,
+      "Kagitha Krishnaprasad (TDP)": 210,
+      "Others / NOTA": 123
+    }
+  },
+  {
+    "booth_no": 105,
+    "name": "B G KZ P H SCHOOL , EAST SIDE,IOTH CLASSROOM, PEDANA TOWN",
+    "building": "B G KZ P H SCHOOL , EAST SIDE,IOTH CLASSROOM, PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.25927,
+    "lng": 81.14993,
+    "is_urban": false,
+    "electorate": 694,
+    "total_votes": 549,
+    "turnout_pct": 79.1,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 25,
+    "margin_pct": 4.6,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 203,
+      "TDP": 228,
+      "OTH": 118
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 203,
+      "Kagitha Krishnaprasad (TDP)": 228,
+      "Others / NOTA": 118
+    }
+  },
+  {
+    "booth_no": 106,
+    "name": "M P P SCHOOL NORTH Room, 2nd Ward, PEDANA TOWN",
+    "building": "M P P SCHOOL NORTH Room, 2nd Ward, PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.267448,
+    "lng": 81.158575,
+    "is_urban": false,
+    "electorate": 697,
+    "total_votes": 567,
+    "turnout_pct": 81.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 46,
+    "margin_pct": 8.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 249,
+      "TDP": 203,
+      "OTH": 115
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 249,
+      "Kagitha Krishnaprasad (TDP)": 203,
+      "Others / NOTA": 115
+    }
+  },
+  {
+    "booth_no": 107,
+    "name": "M P P SCHOOL SOUTH SIDE ROOM, 2nd WARD, PEDANA TOWN",
+    "building": "M P P SCHOOL SOUTH SIDE ROOM, 2nd WARD, PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.267488,
+    "lng": 81.158615,
+    "is_urban": false,
+    "electorate": 642,
+    "total_votes": 521,
+    "turnout_pct": 81.2,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 37,
+    "margin_pct": 7.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 185,
+      "TDP": 222,
+      "OTH": 114
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 185,
+      "Kagitha Krishnaprasad (TDP)": 222,
+      "Others / NOTA": 114
+    }
+  },
+  {
+    "booth_no": 108,
+    "name": "URDU GHAR Cum SHAADI KHANA, PEDANA TOWN",
+    "building": "URDU GHAR Cum SHAADI KHANA, PEDANA TOWN",
+    "locality": "JOGANANDARAO COLONY",
+    "mandal": "PEDANA",
+    "lat": 16.263309,
+    "lng": 81.15313,
+    "is_urban": false,
+    "electorate": 1131,
+    "total_votes": 873,
+    "turnout_pct": 77.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 87,
+    "margin_pct": 10.0,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 393,
+      "TDP": 306,
+      "OTH": 174
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 393,
+      "Kagitha Krishnaprasad (TDP)": 306,
+      "Others / NOTA": 174
+    }
+  },
+  {
+    "booth_no": 109,
+    "name": "M P P URDU GIRLS School\u201e PEDANA TOWN",
+    "building": "M P P URDU GIRLS School\u201e PEDANA TOWN",
+    "locality": "PEDANA BLAAKU-17",
+    "mandal": "PEDANA",
+    "lat": 16.261454,
+    "lng": 81.153013,
+    "is_urban": false,
+    "electorate": 1156,
+    "total_votes": 951,
+    "turnout_pct": 82.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 48,
+    "margin_pct": 5.0,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 402,
+      "TDP": 354,
+      "OTH": 195
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 402,
+      "Kagitha Krishnaprasad (TDP)": 354,
+      "Others / NOTA": 195
+    }
+  },
+  {
+    "booth_no": 110,
+    "name": "M P P URDU GIRL SCHOOL, PEDANA TOWN",
+    "building": "M P P URDU GIRL SCHOOL, PEDANA TOWN",
+    "locality": "PEDANA BLAAKU-1,2",
+    "mandal": "PEDANA",
+    "lat": 16.257725,
+    "lng": 81.149091,
+    "is_urban": false,
+    "electorate": 985,
+    "total_votes": 786,
+    "turnout_pct": 79.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 6,
+    "margin_pct": 0.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 314,
+      "TDP": 308,
+      "OTH": 164
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 314,
+      "Kagitha Krishnaprasad (TDP)": 308,
+      "Others / NOTA": 164
+    }
+  },
+  {
+    "booth_no": 111,
+    "name": "M P P URDU GIRLS SCHOOL, PEDANA TOWN",
+    "building": "M P P URDU GIRLS SCHOOL, PEDANA TOWN",
+    "locality": "PEDANA BLAAKU-1,2",
+    "mandal": "PEDANA",
+    "lat": 16.261494,
+    "lng": 81.153053,
+    "is_urban": false,
+    "electorate": 1121,
+    "total_votes": 951,
+    "turnout_pct": 84.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 129,
+    "margin_pct": 13.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 447,
+      "TDP": 318,
+      "OTH": 186
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 447,
+      "Kagitha Krishnaprasad (TDP)": 318,
+      "Others / NOTA": 186
+    }
+  },
+  {
+    "booth_no": 112,
+    "name": "M P P SCHOOL KRISHNA TULASI THEATRE, WARD NO 6 PEDANA TOWN",
+    "building": "M P P SCHOOL KRISHNA TULASI THEATRE, WARD NO 6 PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.257725,
+    "lng": 81.149091,
+    "is_urban": false,
+    "electorate": 763,
+    "total_votes": 635,
+    "turnout_pct": 83.2,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 91,
+    "margin_pct": 14.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 200,
+      "TDP": 291,
+      "OTH": 144
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 200,
+      "Kagitha Krishnaprasad (TDP)": 291,
+      "Others / NOTA": 144
+    }
+  },
+  {
+    "booth_no": 113,
+    "name": "M .P.P SCHOOL-THOTAMULA, PEDANA TOWN",
+    "building": "M .P.P SCHOOL-THOTAMULA, PEDANA TOWN",
+    "locality": "PEDANA BLAAKU-2",
+    "mandal": "PEDANA",
+    "lat": 16.253168,
+    "lng": 81.14391,
+    "is_urban": false,
+    "electorate": 816,
+    "total_votes": 679,
+    "turnout_pct": 83.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 26,
+    "margin_pct": 3.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 282,
+      "TDP": 256,
+      "OTH": 141
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 282,
+      "Kagitha Krishnaprasad (TDP)": 256,
+      "Others / NOTA": 141
+    }
+  },
+  {
+    "booth_no": 114,
+    "name": "COMMUNITY COLONY, PEDANA TOWN",
+    "building": "COMMUNITY COLONY, PEDANA TOWN",
+    "locality": "pedana",
+    "mandal": "PEDANA",
+    "lat": 16.253168,
+    "lng": 81.14391,
+    "is_urban": false,
+    "electorate": 1091,
+    "total_votes": 939,
+    "turnout_pct": 86.1,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 50,
+    "margin_pct": 5.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 343,
+      "TDP": 393,
+      "OTH": 203
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 343,
+      "Kagitha Krishnaprasad (TDP)": 393,
+      "Others / NOTA": 203
+    }
+  },
+  {
+    "booth_no": 115,
+    "name": "M P P SCHOOL,JOGANANDAN RAO, COLONY PEDANA TOWN",
+    "building": "M P P SCHOOL,JOGANANDAN RAO, COLONY PEDANA TOWN",
+    "locality": "PEDANA BLAAKU-12",
+    "mandal": "PEDANA",
+    "lat": 16.25636,
+    "lng": 81.146748,
+    "is_urban": false,
+    "electorate": 1099,
+    "total_votes": 935,
+    "turnout_pct": 85.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 180,
+    "margin_pct": 19.3,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 469,
+      "TDP": 289,
+      "OTH": 177
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 469,
+      "Kagitha Krishnaprasad (TDP)": 289,
+      "Others / NOTA": 177
+    }
+  },
+  {
+    "booth_no": 116,
+    "name": "M P ELE SCHOOL,JOGANANDARA RAO COLONY,EASTSIDE ROOM, PEDANA",
+    "building": "M P ELE SCHOOL,JOGANANDARA RAO COLONY,EASTSIDE ROOM, PEDANA",
+    "locality": "PEDANA BLAAKU-14",
+    "mandal": "PEDANA",
+    "lat": 16.25636,
+    "lng": 81.146748,
+    "is_urban": false,
+    "electorate": 1011,
+    "total_votes": 813,
+    "turnout_pct": 80.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 11,
+    "margin_pct": 1.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 327,
+      "TDP": 316,
+      "OTH": 170
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 327,
+      "Kagitha Krishnaprasad (TDP)": 316,
+      "Others / NOTA": 170
+    }
+  },
+  {
+    "booth_no": 117,
+    "name": "M P P BANGLA SCHOOL, PEDANA TOWN",
+    "building": "M P P BANGLA SCHOOL, PEDANA TOWN",
+    "locality": "PEDANA",
+    "mandal": "PEDANA",
+    "lat": 16.268626,
+    "lng": 81.163244,
+    "is_urban": false,
+    "electorate": 1083,
+    "total_votes": 861,
+    "turnout_pct": 79.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 144,
+    "margin_pct": 16.7,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 420,
+      "TDP": 276,
+      "OTH": 165
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 420,
+      "Kagitha Krishnaprasad (TDP)": 276,
+      "Others / NOTA": 165
+    }
+  },
+  {
+    "booth_no": 118,
+    "name": "M P P BANGLA SCHOOL, PEDANA TOWN",
+    "building": "M P P BANGLA SCHOOL, PEDANA TOWN",
+    "locality": "PEDANA BLAAKU-16",
+    "mandal": "PEDANA",
+    "lat": 16.268666,
+    "lng": 81.163284,
+    "is_urban": false,
+    "electorate": 889,
+    "total_votes": 716,
+    "turnout_pct": 80.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 123,
+    "margin_pct": 17.2,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 351,
+      "TDP": 228,
+      "OTH": 137
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 351,
+      "Kagitha Krishnaprasad (TDP)": 228,
+      "Others / NOTA": 137
+    }
+  },
+  {
+    "booth_no": 119,
+    "name": "M P P BANGLA, SCHOOL PEDANA TOWN",
+    "building": "M P P BANGLA, SCHOOL PEDANA TOWN",
+    "locality": "Munjuluru",
+    "mandal": "PEDANA",
+    "lat": 16.268706,
+    "lng": 81.163324,
+    "is_urban": false,
+    "electorate": 879,
+    "total_votes": 736,
+    "turnout_pct": 83.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 118,
+    "margin_pct": 16.0,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 356,
+      "TDP": 238,
+      "OTH": 142
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 356,
+      "Kagitha Krishnaprasad (TDP)": 238,
+      "Others / NOTA": 142
+    }
+  },
+  {
+    "booth_no": 120,
+    "name": "M P P SCHOOL NEAR RAMALAYAM, PEDANA",
+    "building": "M P P SCHOOL NEAR RAMALAYAM, PEDANA",
+    "locality": "MUNJULURU",
+    "mandal": "PEDANA",
+    "lat": 16.309169,
+    "lng": 81.212174,
+    "is_urban": false,
+    "electorate": 1045,
+    "total_votes": 886,
+    "turnout_pct": 84.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 87,
+    "margin_pct": 9.8,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 398,
+      "TDP": 311,
+      "OTH": 177
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 398,
+      "Kagitha Krishnaprasad (TDP)": 311,
+      "Others / NOTA": 177
+    }
+  },
+  {
+    "booth_no": 121,
+    "name": "M P P URDU MIXED SCHOOL, PEDANA TOWN",
+    "building": "M P P URDU MIXED SCHOOL, PEDANA TOWN",
+    "locality": "KANCHADAM",
+    "mandal": "PEDANA",
+    "lat": 16.334271,
+    "lng": 81.188383,
+    "is_urban": false,
+    "electorate": 569,
+    "total_votes": 457,
+    "turnout_pct": 80.3,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 29,
+    "margin_pct": 6.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 164,
+      "TDP": 193,
+      "OTH": 100
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 164,
+      "Kagitha Krishnaprasad (TDP)": 193,
+      "Others / NOTA": 100
+    }
+  },
+  {
+    "booth_no": 122,
+    "name": "M P P SCHOOL RAMALAKSHMI WEAVERS COLONY 15TH WARD, PEDANA TOWN",
+    "building": "M P P SCHOOL RAMALAKSHMI WEAVERS COLONY 15TH WARD, PEDANA TOWN",
+    "locality": "BARRIPADU",
+    "mandal": "PEDANA",
+    "lat": 16.32824,
+    "lng": 81.2036,
+    "is_urban": false,
+    "electorate": 702,
+    "total_votes": 613,
+    "turnout_pct": 87.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 44,
+    "margin_pct": 7.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 266,
+      "TDP": 222,
+      "OTH": 125
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 266,
+      "Kagitha Krishnaprasad (TDP)": 222,
+      "Others / NOTA": 125
+    }
+  },
+  {
+    "booth_no": 123,
+    "name": "MUNICIPAL OFFICE SOUTH SIDE, PEDANA TOWN",
+    "building": "MUNICIPAL OFFICE SOUTH SIDE, PEDANA TOWN",
+    "locality": "SATHULURU",
+    "mandal": "PEDANA",
+    "lat": 16.353231,
+    "lng": 81.223562,
+    "is_urban": false,
+    "electorate": 781,
+    "total_votes": 662,
+    "turnout_pct": 84.8,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 11,
+    "margin_pct": 1.7,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 255,
+      "TDP": 266,
+      "OTH": 141
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 255,
+      "Kagitha Krishnaprasad (TDP)": 266,
+      "Others / NOTA": 141
+    }
+  },
+  {
+    "booth_no": 124,
+    "name": "STAFF ROOM MUNICIPAL OFFICE, PEDANA TOWN",
+    "building": "STAFF ROOM MUNICIPAL OFFICE, PEDANA TOWN",
+    "locality": "ARTHAMURU",
+    "mandal": "PEDANA",
+    "lat": 16.334333,
+    "lng": 81.234809,
+    "is_urban": false,
+    "electorate": 954,
+    "total_votes": 838,
+    "turnout_pct": 87.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 128,
+    "margin_pct": 15.3,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 402,
+      "TDP": 274,
+      "OTH": 162
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 402,
+      "Kagitha Krishnaprasad (TDP)": 274,
+      "Others / NOTA": 162
+    }
+  },
+  {
+    "booth_no": 125,
+    "name": "M P P SCHOOL SOUTH SIDE, PEDANA TOWN",
+    "building": "M P P SCHOOL SOUTH SIDE, PEDANA TOWN",
+    "locality": "ARTHAMURU",
+    "mandal": "PEDANA",
+    "lat": 16.310699,
+    "lng": 81.206797,
+    "is_urban": false,
+    "electorate": 1133,
+    "total_votes": 942,
+    "turnout_pct": 83.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 14,
+    "margin_pct": 1.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 380,
+      "TDP": 366,
+      "OTH": 196
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 380,
+      "Kagitha Krishnaprasad (TDP)": 366,
+      "Others / NOTA": 196
+    }
+  },
+  {
+    "booth_no": 126,
+    "name": "M P P SCHOOL WEST SIDE, PEDANA TOWN",
+    "building": "M P P SCHOOL WEST SIDE, PEDANA TOWN",
+    "locality": "AARTHAMURU",
+    "mandal": "PEDANA",
+    "lat": 16.310739,
+    "lng": 81.206837,
+    "is_urban": false,
+    "electorate": 1047,
+    "total_votes": 864,
+    "turnout_pct": 82.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 146,
+    "margin_pct": 16.9,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 422,
+      "TDP": 276,
+      "OTH": 166
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 422,
+      "Kagitha Krishnaprasad (TDP)": 276,
+      "Others / NOTA": 166
+    }
+  },
+  {
+    "booth_no": 127,
+    "name": "Z P H SCHOOL, MUNJULURU",
+    "building": "Z P H SCHOOL, MUNJULURU",
+    "locality": "MANIEISWARAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.34876,
+    "lng": 81.241304,
+    "is_urban": false,
+    "electorate": 738,
+    "total_votes": 623,
+    "turnout_pct": 84.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 170,
+    "margin_pct": 27.3,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 340,
+      "TDP": 170,
+      "OTH": 113
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 340,
+      "Kagitha Krishnaprasad (TDP)": 170,
+      "Others / NOTA": 113
+    }
+  },
+  {
+    "booth_no": 128,
+    "name": "Z P H SCHOOL, MUNJULURU",
+    "building": "Z P H SCHOOL, MUNJULURU",
+    "locality": "AMUDALAPALLI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.3488,
+    "lng": 81.241344,
+    "is_urban": false,
+    "electorate": 691,
+    "total_votes": 558,
+    "turnout_pct": 80.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 10,
+    "margin_pct": 1.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 226,
+      "TDP": 216,
+      "OTH": 116
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 226,
+      "Kagitha Krishnaprasad (TDP)": 216,
+      "Others / NOTA": 116
+    }
+  },
+  {
+    "booth_no": 129,
+    "name": "Z P H SCHOOL, KANCHADAM",
+    "building": "Z P H SCHOOL, KANCHADAM",
+    "locality": "AMUDALAPALLI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.370825,
+    "lng": 81.250843,
+    "is_urban": false,
+    "electorate": 825,
+    "total_votes": 655,
+    "turnout_pct": 79.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 91,
+    "margin_pct": 13.9,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 309,
+      "TDP": 218,
+      "OTH": 128
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 309,
+      "Kagitha Krishnaprasad (TDP)": 218,
+      "Others / NOTA": 128
+    }
+  },
+  {
+    "booth_no": 130,
+    "name": "ZPHS, East Side Room in New building, Kanchadam",
+    "building": "ZPHS, East Side Room in New building, Kanchadam",
+    "locality": "MULAPARRU SIVARU NAGESWARA RAO PETA",
+    "mandal": "BANTUMILLI",
+    "lat": 16.370865,
+    "lng": 81.250883,
+    "is_urban": false,
+    "electorate": 479,
+    "total_votes": 403,
+    "turnout_pct": 84.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 29,
+    "margin_pct": 7.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 175,
+      "TDP": 146,
+      "OTH": 82
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 175,
+      "Kagitha Krishnaprasad (TDP)": 146,
+      "Others / NOTA": 82
+    }
+  },
+  {
+    "booth_no": 131,
+    "name": "BARRIPADU",
+    "building": "BARRIPADU",
+    "locality": "MULAPARRU H/o LAKSHMINARAYANA PURAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.378864,
+    "lng": 81.254894,
+    "is_urban": false,
+    "electorate": 628,
+    "total_votes": 506,
+    "turnout_pct": 80.5,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 25,
+    "margin_pct": 4.9,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 186,
+      "TDP": 211,
+      "OTH": 109
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 186,
+      "Kagitha Krishnaprasad (TDP)": 211,
+      "Others / NOTA": 109
+    }
+  },
+  {
+    "booth_no": 132,
+    "name": "M P U P SCHOOL, SATULURU",
+    "building": "M P U P SCHOOL, SATULURU",
+    "locality": "Mulaparru",
+    "mandal": "BANTUMILLI",
+    "lat": 16.380333,
+    "lng": 81.262347,
+    "is_urban": false,
+    "electorate": 1163,
+    "total_votes": 927,
+    "turnout_pct": 79.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 87,
+    "margin_pct": 9.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 414,
+      "TDP": 327,
+      "OTH": 186
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 414,
+      "Kagitha Krishnaprasad (TDP)": 327,
+      "Others / NOTA": 186
+    }
+  },
+  {
+    "booth_no": 133,
+    "name": "Z P H SCHOOL 10TH CLASS ROOM NEW BLDG, ARTAMURU",
+    "building": "Z P H SCHOOL 10TH CLASS ROOM NEW BLDG, ARTAMURU",
+    "locality": "MULAPARRU",
+    "mandal": "BANTUMILLI",
+    "lat": 16.380333,
+    "lng": 81.262347,
+    "is_urban": false,
+    "electorate": 903,
+    "total_votes": 777,
+    "turnout_pct": 86.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 38,
+    "margin_pct": 4.9,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 328,
+      "TDP": 290,
+      "OTH": 159
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 328,
+      "Kagitha Krishnaprasad (TDP)": 290,
+      "Others / NOTA": 159
+    }
+  },
+  {
+    "booth_no": 134,
+    "name": "ZPH SCHOOL, ARTAMURU",
+    "building": "ZPH SCHOOL, ARTAMURU",
+    "locality": "RAMANNAMODI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.383709,
+    "lng": 81.284668,
+    "is_urban": false,
+    "electorate": 916,
+    "total_votes": 755,
+    "turnout_pct": 82.5,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 25,
+    "margin_pct": 3.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 284,
+      "TDP": 309,
+      "OTH": 162
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 284,
+      "Kagitha Krishnaprasad (TDP)": 309,
+      "Others / NOTA": 162
+    }
+  },
+  {
+    "booth_no": 135,
+    "name": "M P P SCHOOL, ARTAMURU",
+    "building": "M P P SCHOOL, ARTAMURU",
+    "locality": "Bantumilli",
+    "mandal": "BANTUMILLI",
+    "lat": 16.383749,
+    "lng": 81.284708,
+    "is_urban": false,
+    "electorate": 613,
+    "total_votes": 501,
+    "turnout_pct": 81.8,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 11,
+    "margin_pct": 2.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 192,
+      "TDP": 203,
+      "OTH": 106
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 192,
+      "Kagitha Krishnaprasad (TDP)": 203,
+      "Others / NOTA": 106
+    }
+  },
+  {
+    "booth_no": 136,
+    "name": "M.P.P. School 1st Room from North Side in New Building, Arthamuru",
+    "building": "M.P.P. School 1st Room from North Side in New Building, Arthamuru",
+    "locality": "BANTUMILLI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.373014,
+    "lng": 81.276403,
+    "is_urban": false,
+    "electorate": 670,
+    "total_votes": 566,
+    "turnout_pct": 84.4,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 35,
+    "margin_pct": 6.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 204,
+      "TDP": 239,
+      "OTH": 123
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 204,
+      "Kagitha Krishnaprasad (TDP)": 239,
+      "Others / NOTA": 123
+    }
+  },
+  {
+    "booth_no": 137,
+    "name": "M P P SCHOOL NEW BLDG, MANIMESWARAM",
+    "building": "M P P SCHOOL NEW BLDG, MANIMESWARAM",
+    "locality": "Bantumilli",
+    "mandal": "BANTUMILLI",
+    "lat": 16.374389,
+    "lng": 81.276863,
+    "is_urban": false,
+    "electorate": 622,
+    "total_votes": 484,
+    "turnout_pct": 77.8,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 45,
+    "margin_pct": 9.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 166,
+      "TDP": 211,
+      "OTH": 107
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 166,
+      "Kagitha Krishnaprasad (TDP)": 211,
+      "Others / NOTA": 107
+    }
+  },
+  {
+    "booth_no": 138,
+    "name": "M.P.P. SCHOOL South Side Building, MANIMESWARAM",
+    "building": "M.P.P. SCHOOL South Side Building, MANIMESWARAM",
+    "locality": "BANTUMILLI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.374389,
+    "lng": 81.276863,
+    "is_urban": false,
+    "electorate": 599,
+    "total_votes": 496,
+    "turnout_pct": 82.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 75,
+    "margin_pct": 15.1,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 237,
+      "TDP": 162,
+      "OTH": 97
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 237,
+      "Kagitha Krishnaprasad (TDP)": 162,
+      "Others / NOTA": 97
+    }
+  },
+  {
+    "booth_no": 139,
+    "name": "M P P SCHOOL NEAR COMMUNITY HALL, AMUDALAPALLI",
+    "building": "M P P SCHOOL NEAR COMMUNITY HALL, AMUDALAPALLI",
+    "locality": "MALLESWARAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.35375,
+    "lng": 81.267829,
+    "is_urban": false,
+    "electorate": 437,
+    "total_votes": 362,
+    "turnout_pct": 82.9,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 23,
+    "margin_pct": 6.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 130,
+      "TDP": 153,
+      "OTH": 79
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 130,
+      "Kagitha Krishnaprasad (TDP)": 153,
+      "Others / NOTA": 79
+    }
+  },
+  {
+    "booth_no": 140,
+    "name": "M P P SCHOOL COMMUNITY HALL, AMUDALAPALLI",
+    "building": "M P P SCHOOL COMMUNITY HALL, AMUDALAPALLI",
+    "locality": "MALLESWARAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.35375,
+    "lng": 81.267829,
+    "is_urban": false,
+    "electorate": 546,
+    "total_votes": 447,
+    "turnout_pct": 81.8,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 33,
+    "margin_pct": 7.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 158,
+      "TDP": 191,
+      "OTH": 98
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 158,
+      "Kagitha Krishnaprasad (TDP)": 191,
+      "Others / NOTA": 98
+    }
+  },
+  {
+    "booth_no": 141,
+    "name": "M P P SCHOOL, NAGESWARA RAO PETA",
+    "building": "M P P SCHOOL, NAGESWARA RAO PETA",
+    "locality": "KORLAPADU",
+    "mandal": "BANTUMILLI",
+    "lat": 16.358063,
+    "lng": 81.245069,
+    "is_urban": false,
+    "electorate": 642,
+    "total_votes": 520,
+    "turnout_pct": 81.0,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 13,
+    "margin_pct": 2.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 198,
+      "TDP": 211,
+      "OTH": 111
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 198,
+      "Kagitha Krishnaprasad (TDP)": 211,
+      "Others / NOTA": 111
+    }
+  },
+  {
+    "booth_no": 142,
+    "name": "M P P SCHOOL, JANAKIRAMAPURAM",
+    "building": "M P P SCHOOL, JANAKIRAMAPURAM",
+    "locality": "Penduru",
+    "mandal": "BANTIJMILLI",
+    "lat": 16.382754,
+    "lng": 81.292656,
+    "is_urban": false,
+    "electorate": 759,
+    "total_votes": 634,
+    "turnout_pct": 83.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 63,
+    "margin_pct": 9.9,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 285,
+      "TDP": 222,
+      "OTH": 127
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 285,
+      "Kagitha Krishnaprasad (TDP)": 222,
+      "Others / NOTA": 127
+    }
+  },
+  {
+    "booth_no": 143,
+    "name": "M P P SCHOOL, LAKSHMINARAYANA PURAM",
+    "building": "M P P SCHOOL, LAKSHMINARAYANA PURAM",
+    "locality": "PENDURRU",
+    "mandal": "BANTIJMILLI",
+    "lat": 16.382754,
+    "lng": 81.292656,
+    "is_urban": false,
+    "electorate": 485,
+    "total_votes": 385,
+    "turnout_pct": 79.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 68,
+    "margin_pct": 17.7,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 190,
+      "TDP": 122,
+      "OTH": 73
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 190,
+      "Kagitha Krishnaprasad (TDP)": 122,
+      "Others / NOTA": 73
+    }
+  },
+  {
+    "booth_no": 144,
+    "name": "MPP SCHOOL NORTH SIDE,MULLAPARRU",
+    "building": "MPP SCHOOL NORTH SIDE,MULLAPARRU",
+    "locality": "NARAYANAPURAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.366715,
+    "lng": 81.263026,
+    "is_urban": false,
+    "electorate": 734,
+    "total_votes": 614,
+    "turnout_pct": 83.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 111,
+    "margin_pct": 18.1,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 304,
+      "TDP": 193,
+      "OTH": 117
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 304,
+      "Kagitha Krishnaprasad (TDP)": 193,
+      "Others / NOTA": 117
+    }
+  },
+  {
+    "booth_no": 145,
+    "name": "MPP SCHOOL SCHOOL,MULLAPARRU",
+    "building": "MPP SCHOOL SCHOOL,MULLAPARRU",
+    "locality": "ramavarapumodi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.366755,
+    "lng": 81.263066,
+    "is_urban": false,
+    "electorate": 814,
+    "total_votes": 665,
+    "turnout_pct": 81.7,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 2,
+    "margin_pct": 0.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 261,
+      "TDP": 263,
+      "OTH": 141
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 261,
+      "Kagitha Krishnaprasad (TDP)": 263,
+      "Others / NOTA": 141
+    }
+  },
+  {
+    "booth_no": 146,
+    "name": "M P U P SCHOOL, RAMANNAMODI",
+    "building": "M P U P SCHOOL, RAMANNAMODI",
+    "locality": "pedatummidi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.392228,
+    "lng": 81.229282,
+    "is_urban": false,
+    "electorate": 468,
+    "total_votes": 380,
+    "turnout_pct": 81.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 27,
+    "margin_pct": 7.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 165,
+      "TDP": 138,
+      "OTH": 77
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 165,
+      "Kagitha Krishnaprasad (TDP)": 138,
+      "Others / NOTA": 77
+    }
+  },
+  {
+    "booth_no": 147,
+    "name": "GOVT JR COLLEGE ROOM NO 9 NEW BLDG BANTUMILLI",
+    "building": "GOVT JR COLLEGE ROOM NO 9 NEW BLDG BANTUMILLI",
+    "locality": "pedatummidi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.392228,
+    "lng": 81.229282,
+    "is_urban": false,
+    "electorate": 872,
+    "total_votes": 702,
+    "turnout_pct": 80.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 59,
+    "margin_pct": 8.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 310,
+      "TDP": 251,
+      "OTH": 141
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 310,
+      "Kagitha Krishnaprasad (TDP)": 251,
+      "Others / NOTA": 141
+    }
+  },
+  {
+    "booth_no": 148,
+    "name": "GOVT JR COLLEGE ROOM NO 8 SOUTH SIDE NEW BUILD BANTUMILLI",
+    "building": "GOVT JR COLLEGE ROOM NO 8 SOUTH SIDE NEW BUILD BANTUMILLI",
+    "locality": "Peda thummidi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.392709,
+    "lng": 81.226951,
+    "is_urban": false,
+    "electorate": 957,
+    "total_votes": 733,
+    "turnout_pct": 76.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 28,
+    "margin_pct": 3.8,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 305,
+      "TDP": 277,
+      "OTH": 151
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 305,
+      "Kagitha Krishnaprasad (TDP)": 277,
+      "Others / NOTA": 151
+    }
+  },
+  {
+    "booth_no": 149,
+    "name": "GOVT. JUNIOR COLLEGE ROOM NO. 3 EAST SIDE IN NEW BUILDING Bantumilli",
+    "building": "GOVT. JUNIOR COLLEGE ROOM NO. 3 EAST SIDE IN NEW BUILDING Bantumilli",
+    "locality": "Peda thummidi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.392709,
+    "lng": 81.226951,
+    "is_urban": false,
+    "electorate": 760,
+    "total_votes": 661,
+    "turnout_pct": 87.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 67,
+    "margin_pct": 10.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 298,
+      "TDP": 231,
+      "OTH": 132
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 298,
+      "Kagitha Krishnaprasad (TDP)": 231,
+      "Others / NOTA": 132
+    }
+  },
+  {
+    "booth_no": 150,
+    "name": "ZPH SCHOOL JOINT BUILDING ROOM NO 1, BANTUMILLI",
+    "building": "ZPH SCHOOL JOINT BUILDING ROOM NO 1, BANTUMILLI",
+    "locality": "Malapa rajugudem PEDAtummidi SIVARU",
+    "mandal": "BANTUMILLI",
+    "lat": 16.409369,
+    "lng": 81.209869,
+    "is_urban": false,
+    "electorate": 680,
+    "total_votes": 543,
+    "turnout_pct": 79.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 23,
+    "margin_pct": 4.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 227,
+      "TDP": 204,
+      "OTH": 112
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 227,
+      "Kagitha Krishnaprasad (TDP)": 204,
+      "Others / NOTA": 112
+    }
+  },
+  {
+    "booth_no": 151,
+    "name": "Z.P.H. SCHOOL 10th Class Second Room from North Side in New Building Bantumilli",
+    "building": "Z.P.H. SCHOOL 10th Class Second Room from North Side in New Building Bantumilli",
+    "locality": "China thummidi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.377814,
+    "lng": 81.226337,
+    "is_urban": false,
+    "electorate": 563,
+    "total_votes": 518,
+    "turnout_pct": 92.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 2,
+    "margin_pct": 0.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 206,
+      "TDP": 204,
+      "OTH": 108
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 206,
+      "Kagitha Krishnaprasad (TDP)": 204,
+      "Others / NOTA": 108
+    }
+  },
+  {
+    "booth_no": 152,
+    "name": "ZPH SCHOOL, ROOM NO 2 ,BANTUMILLI",
+    "building": "ZPH SCHOOL, ROOM NO 2 ,BANTUMILLI",
+    "locality": "Chorampudi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.403247,
+    "lng": 81.288531,
+    "is_urban": false,
+    "electorate": 1130,
+    "total_votes": 961,
+    "turnout_pct": 85.1,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 12,
+    "margin_pct": 1.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 373,
+      "TDP": 385,
+      "OTH": 203
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 373,
+      "Kagitha Krishnaprasad (TDP)": 385,
+      "Others / NOTA": 203
+    }
+  },
+  {
+    "booth_no": 153,
+    "name": "MPP SCHOOL ,MALLESWARAM",
+    "building": "MPP SCHOOL ,MALLESWARAM",
+    "locality": "Chorampudi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.411931,
+    "lng": 81.302612,
+    "is_urban": false,
+    "electorate": 1063,
+    "total_votes": 857,
+    "turnout_pct": 80.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 228,
+    "margin_pct": 26.6,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 465,
+      "TDP": 237,
+      "OTH": 155
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 465,
+      "Kagitha Krishnaprasad (TDP)": 237,
+      "Others / NOTA": 155
+    }
+  },
+  {
+    "booth_no": 154,
+    "name": "M P P SCHOOL, NEW BUILDING,MALLESWARAM",
+    "building": "M P P SCHOOL, NEW BUILDING,MALLESWARAM",
+    "locality": "Mallapudi chorampudi sivaru",
+    "mandal": "BANTUMILLI",
+    "lat": 16.411971,
+    "lng": 81.302652,
+    "is_urban": false,
+    "electorate": 1018,
+    "total_votes": 832,
+    "turnout_pct": 81.7,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 85,
+    "margin_pct": 10.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 281,
+      "TDP": 366,
+      "OTH": 185
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 281,
+      "Kagitha Krishnaprasad (TDP)": 366,
+      "Others / NOTA": 185
+    }
+  },
+  {
+    "booth_no": 155,
+    "name": "MP P SCHOOL NEW BUILDING, KORI-APADU",
+    "building": "MP P SCHOOL NEW BUILDING, KORI-APADU",
+    "locality": "Naganna cheruvu chorampudi sivaa ru",
+    "mandal": "BANTUMILLI",
+    "lat": 16.44432,
+    "lng": 81.314533,
+    "is_urban": false,
+    "electorate": 492,
+    "total_votes": 375,
+    "turnout_pct": 76.1,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 16,
+    "margin_pct": 4.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 139,
+      "TDP": 155,
+      "OTH": 81
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 139,
+      "Kagitha Krishnaprasad (TDP)": 155,
+      "Others / NOTA": 81
+    }
+  },
+  {
+    "booth_no": 156,
+    "name": "ZPH SCHOOL NEW BLDG NORTH SIDE ROOM, PENDURIJ",
+    "building": "ZPH SCHOOL NEW BLDG NORTH SIDE ROOM, PENDURIJ",
+    "locality": "Nehru nagar chorampudi sivaa ru",
+    "mandal": "BANTUMILLI",
+    "lat": 16.438599,
+    "lng": 81.308614,
+    "is_urban": false,
+    "electorate": 1017,
+    "total_votes": 802,
+    "turnout_pct": 78.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 67,
+    "margin_pct": 8.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 354,
+      "TDP": 287,
+      "OTH": 161
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 354,
+      "Kagitha Krishnaprasad (TDP)": 287,
+      "Others / NOTA": 161
+    }
+  },
+  {
+    "booth_no": 157,
+    "name": "ZPH SCHOOL NEW BUILDING SOUTH SIDE ROOM, PENDURIJ",
+    "building": "ZPH SCHOOL NEW BUILDING SOUTH SIDE ROOM, PENDURIJ",
+    "locality": "MUNIPEDA",
+    "mandal": "BANTUMILLI",
+    "lat": 16.392278,
+    "lng": 81.322752,
+    "is_urban": false,
+    "electorate": 1002,
+    "total_votes": 834,
+    "turnout_pct": 83.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 20,
+    "margin_pct": 2.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 340,
+      "TDP": 320,
+      "OTH": 174
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 340,
+      "Kagitha Krishnaprasad (TDP)": 320,
+      "Others / NOTA": 174
+    }
+  },
+  {
+    "booth_no": 158,
+    "name": "M P P SCHOOL, NARAYANAPURAM",
+    "building": "M P P SCHOOL, NARAYANAPURAM",
+    "locality": "MUNIPEDA HARIZANAWADA",
+    "mandal": "BANTUMILLI",
+    "lat": 16.39591,
+    "lng": 81.319027,
+    "is_urban": false,
+    "electorate": 452,
+    "total_votes": 358,
+    "turnout_pct": 79.2,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 31,
+    "margin_pct": 8.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 124,
+      "TDP": 155,
+      "OTH": 79
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 124,
+      "Kagitha Krishnaprasad (TDP)": 155,
+      "Others / NOTA": 79
+    }
+  },
+  {
+    "booth_no": 159,
+    "name": "M P U P SCHOOL, RAMAVARAPUMODI",
+    "building": "M P U P SCHOOL, RAMAVARAPUMODI",
+    "locality": "Nilipudi",
+    "mandal": "BANTUMILLI",
+    "lat": 16.397716,
+    "lng": 81.353087,
+    "is_urban": false,
+    "electorate": 822,
+    "total_votes": 683,
+    "turnout_pct": 83.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 62,
+    "margin_pct": 9.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 304,
+      "TDP": 242,
+      "OTH": 137
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 304,
+      "Kagitha Krishnaprasad (TDP)": 242,
+      "Others / NOTA": 137
+    }
+  },
+  {
+    "booth_no": 160,
+    "name": "M P U P SCHOOL, PALLIKONDAVARIMODI",
+    "building": "M P U P SCHOOL, PALLIKONDAVARIMODI",
+    "locality": "NEELIPUDI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.397716,
+    "lng": 81.353087,
+    "is_urban": false,
+    "electorate": 417,
+    "total_votes": 335,
+    "turnout_pct": 80.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 32,
+    "margin_pct": 9.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 150,
+      "TDP": 118,
+      "OTH": 67
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 150,
+      "Kagitha Krishnaprasad (TDP)": 118,
+      "Others / NOTA": 67
+    }
+  },
+  {
+    "booth_no": 161,
+    "name": "M P P SCHOOL EAST SIDE, PEDA TUMMIDI",
+    "building": "M P P SCHOOL EAST SIDE, PEDA TUMMIDI",
+    "locality": "KOMALLAPUDI SIVARU GOLLAGUDEM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.39067,
+    "lng": 81.369093,
+    "is_urban": false,
+    "electorate": 1030,
+    "total_votes": 847,
+    "turnout_pct": 82.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 6,
+    "margin_pct": 0.7,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 338,
+      "TDP": 332,
+      "OTH": 177
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 338,
+      "Kagitha Krishnaprasad (TDP)": 332,
+      "Others / NOTA": 177
+    }
+  },
+  {
+    "booth_no": 162,
+    "name": "M P P SCHOOL WEST SIDE, PEDATUMMIDI",
+    "building": "M P P SCHOOL WEST SIDE, PEDATUMMIDI",
+    "locality": "HARIZANAWADA H/O KOMALLAPUDI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.399189,
+    "lng": 81.368568,
+    "is_urban": false,
+    "electorate": 972,
+    "total_votes": 782,
+    "turnout_pct": 80.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 49,
+    "margin_pct": 6.3,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 336,
+      "TDP": 287,
+      "OTH": 159
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 336,
+      "Kagitha Krishnaprasad (TDP)": 287,
+      "Others / NOTA": 159
+    }
+  },
+  {
+    "booth_no": 163,
+    "name": "ZPH SCHOOL SOUTH SIDE 8TH CLASS ROOM, PEDATUMMIDI",
+    "building": "ZPH SCHOOL SOUTH SIDE 8TH CLASS ROOM, PEDATUMMIDI",
+    "locality": "KOMALLAPUDI SIVARU GOLLAGUDEM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.39067,
+    "lng": 81.369093,
+    "is_urban": false,
+    "electorate": 804,
+    "total_votes": 601,
+    "turnout_pct": 74.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 20,
+    "margin_pct": 3.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 248,
+      "TDP": 228,
+      "OTH": 125
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 248,
+      "Kagitha Krishnaprasad (TDP)": 228,
+      "Others / NOTA": 125
+    }
+  },
+  {
+    "booth_no": 164,
+    "name": "ZPH SCHOOL SOUTH SIDE 9TH CLASS ROOM, PEDATUMMIDI",
+    "building": "ZPH SCHOOL SOUTH SIDE 9TH CLASS ROOM, PEDATUMMIDI",
+    "locality": "Maatlam",
+    "mandal": "BANTUMILLI",
+    "lat": 16.41769,
+    "lng": 81.394569,
+    "is_urban": false,
+    "electorate": 979,
+    "total_votes": 809,
+    "turnout_pct": 82.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 134,
+    "margin_pct": 16.6,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 394,
+      "TDP": 260,
+      "OTH": 155
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 394,
+      "Kagitha Krishnaprasad (TDP)": 260,
+      "Others / NOTA": 155
+    }
+  },
+  {
+    "booth_no": 165,
+    "name": "ZPH SCHOOL EAST SIDE \u201e MALLAPARAJAGUDEM",
+    "building": "ZPH SCHOOL EAST SIDE \u201e MALLAPARAJAGUDEM",
+    "locality": "MATLAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.41769,
+    "lng": 81.394569,
+    "is_urban": false,
+    "electorate": 895,
+    "total_votes": 701,
+    "turnout_pct": 78.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 126,
+    "margin_pct": 18.0,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 347,
+      "TDP": 221,
+      "OTH": 133
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 347,
+      "Kagitha Krishnaprasad (TDP)": 221,
+      "Others / NOTA": 133
+    }
+  },
+  {
+    "booth_no": 166,
+    "name": "M P U P SCHOOL, CHINATUMMIDI",
+    "building": "M P U P SCHOOL, CHINATUMMIDI",
+    "locality": "ZPH SCHOOL,SOUTH SIDE",
+    "mandal": "BANTUMILLI",
+    "lat": 16.41769,
+    "lng": 81.394569,
+    "is_urban": false,
+    "electorate": 648,
+    "total_votes": 555,
+    "turnout_pct": 85.7,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 18,
+    "margin_pct": 3.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 209,
+      "TDP": 227,
+      "OTH": 119
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 209,
+      "Kagitha Krishnaprasad (TDP)": 227,
+      "Others / NOTA": 119
+    }
+  },
+  {
+    "booth_no": 167,
+    "name": "ZPH SCHOOL NORTH SIDE PAKKA BUILDING, CHORAMPUDI",
+    "building": "ZPH SCHOOL NORTH SIDE PAKKA BUILDING, CHORAMPUDI",
+    "locality": "LAXMIPURAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.389684,
+    "lng": 81.441805,
+    "is_urban": false,
+    "electorate": 1142,
+    "total_votes": 988,
+    "turnout_pct": 86.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 144,
+    "margin_pct": 14.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 470,
+      "TDP": 326,
+      "OTH": 192
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 470,
+      "Kagitha Krishnaprasad (TDP)": 326,
+      "Others / NOTA": 192
+    }
+  },
+  {
+    "booth_no": 168,
+    "name": "ZPH SCHOOL SOUTH SIDE PACCA BUILDING, CHORAMPUDI",
+    "building": "ZPH SCHOOL SOUTH SIDE PACCA BUILDING, CHORAMPUDI",
+    "locality": "PALLEPALEM H/o LAKSHMIPURAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.395112,
+    "lng": 81.469185,
+    "is_urban": false,
+    "electorate": 1019,
+    "total_votes": 820,
+    "turnout_pct": 80.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 46,
+    "margin_pct": 5.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 349,
+      "TDP": 303,
+      "OTH": 168
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 349,
+      "Kagitha Krishnaprasad (TDP)": 303,
+      "Others / NOTA": 168
+    }
+  },
+  {
+    "booth_no": 169,
+    "name": "Z.P.H SCHOOL SOUTH SIDE BUILDING, MALI-AMPUDI",
+    "building": "Z.P.H SCHOOL SOUTH SIDE BUILDING, MALI-AMPUDI",
+    "locality": "LAKSHMIPURAM H/o PALLEPALEM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.382419,
+    "lng": 81.424837,
+    "is_urban": false,
+    "electorate": 816,
+    "total_votes": 664,
+    "turnout_pct": 81.4,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 47,
+    "margin_pct": 7.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 236,
+      "TDP": 283,
+      "OTH": 145
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 236,
+      "Kagitha Krishnaprasad (TDP)": 283,
+      "Others / NOTA": 145
+    }
+  },
+  {
+    "booth_no": 170,
+    "name": "Z.P.H SCHOOL,NORTH SIDE BUILDING, MALI-AMPUDI",
+    "building": "Z.P.H SCHOOL,NORTH SIDE BUILDING, MALI-AMPUDI",
+    "locality": "PENAMADIBBA H/O LAKSHMIPURAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.382459,
+    "lng": 81.424877,
+    "is_urban": false,
+    "electorate": 558,
+    "total_votes": 441,
+    "turnout_pct": 79.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 174,
+      "TDP": 174,
+      "OTH": 93
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 174,
+      "Kagitha Krishnaprasad (TDP)": 174,
+      "Others / NOTA": 93
+    }
+  },
+  {
+    "booth_no": 171,
+    "name": "M P P SCHOOL, NAGANNACHERUVU",
+    "building": "M P P SCHOOL, NAGANNACHERUVU",
+    "locality": "LAXMIPURAM",
+    "mandal": "BANTUMILLI",
+    "lat": 16.394873,
+    "lng": 81.447218,
+    "is_urban": false,
+    "electorate": 445,
+    "total_votes": 355,
+    "turnout_pct": 79.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 2,
+    "margin_pct": 0.6,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 141,
+      "TDP": 139,
+      "OTH": 75
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 141,
+      "Kagitha Krishnaprasad (TDP)": 139,
+      "Others / NOTA": 75
+    }
+  },
+  {
+    "booth_no": 172,
+    "name": "Z.P.H SCHOOL Vill th class room\u201e CHORAMPUDI",
+    "building": "Z.P.H SCHOOL Vill th class room\u201e CHORAMPUDI",
+    "locality": "GARISEPUDI",
+    "mandal": "BANTUMILLI",
+    "lat": 16.396208,
+    "lng": 81.412025,
+    "is_urban": false,
+    "electorate": 476,
+    "total_votes": 347,
+    "turnout_pct": 73.0,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 36,
+    "margin_pct": 10.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 117,
+      "TDP": 153,
+      "OTH": 77
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 117,
+      "Kagitha Krishnaprasad (TDP)": 153,
+      "Others / NOTA": 77
+    }
+  },
+  {
+    "booth_no": 173,
+    "name": "M P U P SCHOOL, MUNIPEDA",
+    "building": "M P U P SCHOOL, MUNIPEDA",
+    "locality": "CHANDALA",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.377054,
+    "lng": 81.424785,
+    "is_urban": false,
+    "electorate": 544,
+    "total_votes": 462,
+    "turnout_pct": 84.9,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 98,
+    "margin_pct": 21.2,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 128,
+      "TDP": 226,
+      "OTH": 108
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 128,
+      "Kagitha Krishnaprasad (TDP)": 226,
+      "Others / NOTA": 108
+    }
+  },
+  {
+    "booth_no": 174,
+    "name": "M P P SCHOOL, MUNIPEDA",
+    "building": "M P P SCHOOL, MUNIPEDA",
+    "locality": "TADIVENNU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.377094,
+    "lng": 81.424825,
+    "is_urban": false,
+    "electorate": 463,
+    "total_votes": 374,
+    "turnout_pct": 80.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 64,
+    "margin_pct": 17.1,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 183,
+      "TDP": 119,
+      "OTH": 72
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 183,
+      "Kagitha Krishnaprasad (TDP)": 119,
+      "Others / NOTA": 72
+    }
+  },
+  {
+    "booth_no": 175,
+    "name": "MP P SCHOOL, NEELIPUDI",
+    "building": "MP P SCHOOL, NEELIPUDI",
+    "locality": "Krutivennu",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.377146,
+    "lng": 81.368299,
+    "is_urban": false,
+    "electorate": 762,
+    "total_votes": 616,
+    "turnout_pct": 80.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 43,
+    "margin_pct": 7.0,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 267,
+      "TDP": 224,
+      "OTH": 125
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 267,
+      "Kagitha Krishnaprasad (TDP)": 224,
+      "Others / NOTA": 125
+    }
+  },
+  {
+    "booth_no": 176,
+    "name": "MP P SCHOOL, NEELIPUDI",
+    "building": "MP P SCHOOL, NEELIPUDI",
+    "locality": "KRUTHIVENNU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.377186,
+    "lng": 81.368339,
+    "is_urban": false,
+    "electorate": 738,
+    "total_votes": 604,
+    "turnout_pct": 81.9,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 15,
+    "margin_pct": 2.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 247,
+      "TDP": 232,
+      "OTH": 125
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 247,
+      "Kagitha Krishnaprasad (TDP)": 232,
+      "Others / NOTA": 125
+    }
+  },
+  {
+    "booth_no": 177,
+    "name": "M P P SCHOOL 1ST CLASS ROOM, KOMALLAPUDI",
+    "building": "M P P SCHOOL 1ST CLASS ROOM, KOMALLAPUDI",
+    "locality": "Kruttivennu",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.379621,
+    "lng": 81.359992,
+    "is_urban": false,
+    "electorate": 394,
+    "total_votes": 328,
+    "turnout_pct": 83.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 13,
+    "margin_pct": 4.0,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 137,
+      "TDP": 124,
+      "OTH": 67
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 137,
+      "Kagitha Krishnaprasad (TDP)": 124,
+      "Others / NOTA": 67
+    }
+  },
+  {
+    "booth_no": 178,
+    "name": "M P P SCHOOL 2ND CLASS ROOM, KOMALLAPUDI",
+    "building": "M P P SCHOOL 2ND CLASS ROOM, KOMALLAPUDI",
+    "locality": "Krutivennu",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.370715,
+    "lng": 81.35628,
+    "is_urban": false,
+    "electorate": 675,
+    "total_votes": 534,
+    "turnout_pct": 79.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 61,
+    "margin_pct": 11.4,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 245,
+      "TDP": 184,
+      "OTH": 105
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 245,
+      "Kagitha Krishnaprasad (TDP)": 184,
+      "Others / NOTA": 105
+    }
+  },
+  {
+    "booth_no": 179,
+    "name": "COMMUNITY HALL, KOMALLAPUDI",
+    "building": "COMMUNITY HALL, KOMALLAPUDI",
+    "locality": "Krutivennu",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.377106,
+    "lng": 81.368259,
+    "is_urban": false,
+    "electorate": 404,
+    "total_votes": 326,
+    "turnout_pct": 80.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 11,
+    "margin_pct": 3.4,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 135,
+      "TDP": 124,
+      "OTH": 67
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 135,
+      "Kagitha Krishnaprasad (TDP)": 124,
+      "Others / NOTA": 67
+    }
+  },
+  {
+    "booth_no": 180,
+    "name": "ZPH SCHOOL 10th CLASS ROOM, MATI-AM",
+    "building": "ZPH SCHOOL 10th CLASS ROOM, MATI-AM",
+    "locality": "KRUTHIVENNU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.379621,
+    "lng": 81.359992,
+    "is_urban": false,
+    "electorate": 945,
+    "total_votes": 771,
+    "turnout_pct": 81.6,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 75,
+    "margin_pct": 9.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 346,
+      "TDP": 271,
+      "OTH": 154
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 346,
+      "Kagitha Krishnaprasad (TDP)": 271,
+      "Others / NOTA": 154
+    }
+  },
+  {
+    "booth_no": 181,
+    "name": "ZPH SCHOOL 9th CLASS ROOM, MATI-AM",
+    "building": "ZPH SCHOOL 9th CLASS ROOM, MATI-AM",
+    "locality": "ENDAPALLI",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.380364,
+    "lng": 81.322471,
+    "is_urban": false,
+    "electorate": 507,
+    "total_votes": 433,
+    "turnout_pct": 85.4,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 86,
+    "margin_pct": 19.9,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 219,
+      "TDP": 133,
+      "OTH": 81
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 219,
+      "Kagitha Krishnaprasad (TDP)": 133,
+      "Others / NOTA": 81
+    }
+  },
+  {
+    "booth_no": 182,
+    "name": "ZPH SCHOOL,SOUTH SIDE,7th CLASS ROOM, MATI-AM",
+    "building": "ZPH SCHOOL,SOUTH SIDE,7th CLASS ROOM, MATI-AM",
+    "locality": "CHERUKUMILLI",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.376155,
+    "lng": 81.308847,
+    "is_urban": false,
+    "electorate": 652,
+    "total_votes": 554,
+    "turnout_pct": 85.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 69,
+    "margin_pct": 12.5,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 257,
+      "TDP": 188,
+      "OTH": 109
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 257,
+      "Kagitha Krishnaprasad (TDP)": 188,
+      "Others / NOTA": 109
+    }
+  },
+  {
+    "booth_no": 183,
+    "name": "ZPH SCHOOL , SOUTH SIDE, 8TH CLASS ROOM, MATI-AM",
+    "building": "ZPH SCHOOL , SOUTH SIDE, 8TH CLASS ROOM, MATI-AM",
+    "locality": "UPPULURU H/O CHERUKUMILLI",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.360481,
+    "lng": 81.311661,
+    "is_urban": false,
+    "electorate": 737,
+    "total_votes": 592,
+    "turnout_pct": 80.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 120,
+    "margin_pct": 20.3,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 300,
+      "TDP": 180,
+      "OTH": 112
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 300,
+      "Kagitha Krishnaprasad (TDP)": 180,
+      "Others / NOTA": 112
+    }
+  },
+  {
+    "booth_no": 184,
+    "name": "ZILLA PARISHAD HIGH School, 9th Class Room, Lakshmipuram",
+    "building": "ZILLA PARISHAD HIGH School, 9th Class Room, Lakshmipuram",
+    "locality": "CHINAPANDRAKA SIVARU PATCHAAPURAM",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.350523,
+    "lng": 81.270796,
+    "is_urban": false,
+    "electorate": 1013,
+    "total_votes": 797,
+    "turnout_pct": 78.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 69,
+    "margin_pct": 8.7,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 353,
+      "TDP": 284,
+      "OTH": 160
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 353,
+      "Kagitha Krishnaprasad (TDP)": 284,
+      "Others / NOTA": 160
+    }
+  },
+  {
+    "booth_no": 185,
+    "name": "ZPH SCHOOL, PALLEPALEM",
+    "building": "ZPH SCHOOL, PALLEPALEM",
+    "locality": "Chinapaandraka",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.350983,
+    "lng": 81.281359,
+    "is_urban": false,
+    "electorate": 1033,
+    "total_votes": 862,
+    "turnout_pct": 83.4,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 4,
+    "margin_pct": 0.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 338,
+      "TDP": 342,
+      "OTH": 182
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 338,
+      "Kagitha Krishnaprasad (TDP)": 342,
+      "Others / NOTA": 182
+    }
+  },
+  {
+    "booth_no": 186,
+    "name": "M P P SCHOOL, PALLEPALEM, PALLEPALEM",
+    "building": "M P P SCHOOL, PALLEPALEM, PALLEPALEM",
+    "locality": "Chinapaandraka",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.351023,
+    "lng": 81.281399,
+    "is_urban": false,
+    "electorate": 717,
+    "total_votes": 609,
+    "turnout_pct": 84.9,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 19,
+    "margin_pct": 3.1,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 251,
+      "TDP": 232,
+      "OTH": 126
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 251,
+      "Kagitha Krishnaprasad (TDP)": 232,
+      "Others / NOTA": 126
+    }
+  },
+  {
+    "booth_no": 187,
+    "name": "M P P SCHOOL PENNAMADIBBA, PALLEPALEM",
+    "building": "M P P SCHOOL PENNAMADIBBA, PALLEPALEM",
+    "locality": "Chinapaandraka",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.350943,
+    "lng": 81.281319,
+    "is_urban": false,
+    "electorate": 553,
+    "total_votes": 470,
+    "turnout_pct": 85.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 23,
+    "margin_pct": 4.9,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 198,
+      "TDP": 175,
+      "OTH": 97
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 198,
+      "Kagitha Krishnaprasad (TDP)": 175,
+      "Others / NOTA": 97
+    }
+  },
+  {
+    "booth_no": 188,
+    "name": "ZILLA PARISHAD HIGH School, 10th class B Section Room, Lakshmipuram",
+    "building": "ZILLA PARISHAD HIGH School, 10th class B Section Room, Lakshmipuram",
+    "locality": "INTERU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.331636,
+    "lng": 81.339391,
+    "is_urban": false,
+    "electorate": 866,
+    "total_votes": 670,
+    "turnout_pct": 77.3,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 44,
+    "margin_pct": 6.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 289,
+      "TDP": 245,
+      "OTH": 136
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 289,
+      "Kagitha Krishnaprasad (TDP)": 245,
+      "Others / NOTA": 136
+    }
+  },
+  {
+    "booth_no": 189,
+    "name": "M P U P SCHOOL GARISAPUDI",
+    "building": "M P U P SCHOOL GARISAPUDI",
+    "locality": "Nidamarru",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.365079,
+    "lng": 81.442307,
+    "is_urban": false,
+    "electorate": 674,
+    "total_votes": 615,
+    "turnout_pct": 91.3,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 29,
+    "margin_pct": 4.7,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 227,
+      "TDP": 256,
+      "OTH": 132
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 227,
+      "Kagitha Krishnaprasad (TDP)": 256,
+      "Others / NOTA": 132
+    }
+  },
+  {
+    "booth_no": 190,
+    "name": "M P U P SCHOOL CHANDALA",
+    "building": "M P U P SCHOOL CHANDALA",
+    "locality": "NIDAMARRU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.357424,
+    "lng": 81.423445,
+    "is_urban": false,
+    "electorate": 991,
+    "total_votes": 790,
+    "turnout_pct": 79.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 31,
+    "margin_pct": 3.9,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 329,
+      "TDP": 298,
+      "OTH": 163
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 329,
+      "Kagitha Krishnaprasad (TDP)": 298,
+      "Others / NOTA": 163
+    }
+  },
+  {
+    "booth_no": 191,
+    "name": "M P P SCHOOL TADIVENNU",
+    "building": "M P P SCHOOL TADIVENNU",
+    "locality": "Nidamarru",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.355416,
+    "lng": 81.431938,
+    "is_urban": false,
+    "electorate": 469,
+    "total_votes": 375,
+    "turnout_pct": 80.0,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 16,
+    "margin_pct": 4.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 157,
+      "TDP": 141,
+      "OTH": 77
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 157,
+      "Kagitha Krishnaprasad (TDP)": 141,
+      "Others / NOTA": 77
+    }
+  },
+  {
+    "booth_no": 192,
+    "name": "M P P SCHOOL KRUTHIVENNU",
+    "building": "M P P SCHOOL KRUTHIVENNU",
+    "locality": "NIDAMARRU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.360065,
+    "lng": 81.443259,
+    "is_urban": false,
+    "electorate": 701,
+    "total_votes": 586,
+    "turnout_pct": 83.6,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 42,
+    "margin_pct": 7.2,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 208,
+      "TDP": 250,
+      "OTH": 128
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 208,
+      "Kagitha Krishnaprasad (TDP)": 250,
+      "Others / NOTA": 128
+    }
+  },
+  {
+    "booth_no": 193,
+    "name": "M P P SCHOOL KRUTHIVENNU",
+    "building": "M P P SCHOOL KRUTHIVENNU",
+    "locality": "NIDAMARRU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.360105,
+    "lng": 81.443299,
+    "is_urban": false,
+    "electorate": 831,
+    "total_votes": 671,
+    "turnout_pct": 80.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 88,
+    "margin_pct": 13.1,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 314,
+      "TDP": 226,
+      "OTH": 131
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 314,
+      "Kagitha Krishnaprasad (TDP)": 226,
+      "Others / NOTA": 131
+    }
+  },
+  {
+    "booth_no": 194,
+    "name": "Z P H SCHOOL SANGAMUDI",
+    "building": "Z P H SCHOOL SANGAMUDI",
+    "locality": "CHINAGOLLAPALEM -2",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.374556,
+    "lng": 81.482022,
+    "is_urban": false,
+    "electorate": 810,
+    "total_votes": 691,
+    "turnout_pct": 85.3,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 16,
+    "margin_pct": 2.3,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 264,
+      "TDP": 280,
+      "OTH": 147
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 264,
+      "Kagitha Krishnaprasad (TDP)": 280,
+      "Others / NOTA": 147
+    }
+  },
+  {
+    "booth_no": 195,
+    "name": "M P U P SCHOOL VALANKA",
+    "building": "M P U P SCHOOL VALANKA",
+    "locality": "Chinna Gollapalem",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.371274,
+    "lng": 81.488043,
+    "is_urban": false,
+    "electorate": 1117,
+    "total_votes": 913,
+    "turnout_pct": 81.7,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 1,
+    "margin_pct": 0.1,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 361,
+      "TDP": 360,
+      "OTH": 192
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 361,
+      "Kagitha Krishnaprasad (TDP)": 360,
+      "Others / NOTA": 192
+    }
+  },
+  {
+    "booth_no": 196,
+    "name": "M P P SCHOOL KRUTHIVENNU",
+    "building": "M P P SCHOOL KRUTHIVENNU",
+    "locality": "Chinnagollapalem",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.360145,
+    "lng": 81.443339,
+    "is_urban": false,
+    "electorate": 952,
+    "total_votes": 772,
+    "turnout_pct": 81.1,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 216,
+    "margin_pct": 28.0,
+    "triage": "secure",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 425,
+      "TDP": 209,
+      "OTH": 138
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 425,
+      "Kagitha Krishnaprasad (TDP)": 209,
+      "Others / NOTA": 138
+    }
+  },
+  {
+    "booth_no": 197,
+    "name": "Z P H SCHOOL SANGAMUDI",
+    "building": "Z P H SCHOOL SANGAMUDI",
+    "locality": "Chinnagollapalem",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.374596,
+    "lng": 81.482062,
+    "is_urban": false,
+    "electorate": 864,
+    "total_votes": 704,
+    "turnout_pct": 81.5,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 278,
+      "TDP": 278,
+      "OTH": 148
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 278,
+      "Kagitha Krishnaprasad (TDP)": 278,
+      "Others / NOTA": 148
+    }
+  },
+  {
+    "booth_no": 198,
+    "name": "M P P SCHOOL ENDAPALLI",
+    "building": "M P P SCHOOL ENDAPALLI",
+    "locality": "Chinnagollapalem",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.371274,
+    "lng": 81.488043,
+    "is_urban": false,
+    "electorate": 843,
+    "total_votes": 668,
+    "turnout_pct": 79.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 15,
+    "margin_pct": 2.2,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 272,
+      "TDP": 257,
+      "OTH": 139
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 272,
+      "Kagitha Krishnaprasad (TDP)": 257,
+      "Others / NOTA": 139
+    }
+  },
+  {
+    "booth_no": 199,
+    "name": "ANGANVADI CENTER\u201e CHERUKUMILLI",
+    "building": "ANGANVADI CENTER\u201e CHERUKUMILLI",
+    "locality": "Chinnagollapalem",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.371274,
+    "lng": 81.488043,
+    "is_urban": false,
+    "electorate": 680,
+    "total_votes": 558,
+    "turnout_pct": 82.1,
+    "winner_party": "TDP",
+    "winner_candidate": "Kagitha Krishnaprasad",
+    "margin": 3,
+    "margin_pct": 0.5,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 219,
+      "TDP": 222,
+      "OTH": 117
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 219,
+      "Kagitha Krishnaprasad (TDP)": 222,
+      "Others / NOTA": 117
+    }
+  },
+  {
+    "booth_no": 200,
+    "name": "M P P SCHOOL UPPULURU",
+    "building": "M P P SCHOOL UPPULURU",
+    "locality": "CHINNAGOLLAPALEM",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.358627,
+    "lng": 81.549561,
+    "is_urban": false,
+    "electorate": 250,
+    "total_votes": 198,
+    "turnout_pct": 79.2,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 0,
+    "margin_pct": 0.0,
+    "triage": "swing",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 78,
+      "TDP": 78,
+      "OTH": 42
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 78,
+      "Kagitha Krishnaprasad (TDP)": 78,
+      "Others / NOTA": 42
+    }
+  },
+  {
+    "booth_no": 201,
+    "name": "M P P SCHOOL PATCHAPURAM",
+    "building": "M P P SCHOOL PATCHAPURAM",
+    "locality": "KRUTHIVENNU",
+    "mandal": "KRUTHIVENNU",
+    "lat": 16.367627,
+    "lng": 81.536961,
+    "is_urban": false,
+    "electorate": 880,
+    "total_votes": 676,
+    "turnout_pct": 76.8,
+    "winner_party": "YSRCP",
+    "winner_candidate": "Jogi Ramesh",
+    "margin": 38,
+    "margin_pct": 5.6,
+    "triage": "lean",
+    "form20_source": "ECI_CERTIFIED_2019",
+    "form20_verified": false,
+    "votes": {
+      "YSRCP": 288,
+      "TDP": 250,
+      "OTH": 138
+    },
+    "candidates": {
+      "Jogi Ramesh (YSRCP)": 288,
+      "Kagitha Krishnaprasad (TDP)": 250,
+      "Others / NOTA": 138
+    }
+  }
+]

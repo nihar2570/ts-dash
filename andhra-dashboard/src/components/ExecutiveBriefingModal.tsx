@@ -11,6 +11,12 @@ import {
   Users,
 } from 'lucide-react';
 
+const TODAY_STR = new Date().toLocaleDateString('en-IN', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+});
+
 interface ExecutiveBriefingModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -30,11 +36,7 @@ export const ExecutiveBriefingModal: React.FC<ExecutiveBriefingModalProps> = ({
     window.print();
   };
 
-  const todayStr = new Date().toLocaleDateString('en-IN', {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-  });
+  const todayStr = TODAY_STR;
 
   const isNda = targetParty === 'NDA';
 
